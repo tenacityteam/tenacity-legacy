@@ -432,6 +432,8 @@ list( APPEND SOURCES PRIVATE
   effects/ClickRemoval.h
   effects/Compressor.cpp
   effects/Compressor.h
+  effects/Compressor2.cpp
+  effects/Compressor2.h
   effects/Contrast.cpp
   effects/Contrast.h
   effects/Distortion.cpp
