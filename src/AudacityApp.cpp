@@ -110,6 +110,7 @@ It handles initialization and termination by subclassing wxApp.
 #include "tracks/ui/Scrubbing.h"
 #include "widgets/FileConfig.h"
 #include "widgets/FileHistory.h"
+#include "widgets/wxWidgetsBasicUI.h"
 
 #ifdef EXPERIMENTAL_EASY_CHANGE_KEY_BINDINGS
 #include "prefs/KeyConfigPrefs.h"
@@ -975,17 +976,22 @@ bool AudacityApp::OnInit() {
     // Ensure we have an event loop during initialization
     wxEventLoopGuarantor eventLoop;
 
-    // Fire up SQLite
-    if (!ProjectFileIO::InitializeSQL())
-        this->CallAfter([] {
-        ::AudacityMessageBox(
-            XO("SQLite library failed to initialize.  Audacity cannot continue."));
-        QuitAudacity(true);
-                        });
+   // Inject basic GUI services behind the facade
+   {
+      static wxWidgetsBasicUI uiServices;
+      (void)BasicUI::Install(&uiServices);
+   }
 
+   // Fire up SQLite
+   if ( !ProjectFileIO::InitializeSQL() )
+      this->CallAfter([]{
+         ::AudacityMessageBox(
+            XO("SQLite library failed to initialize.  Audacity cannot continue.") );
+         QuitAudacity( true );
+      });
 
-    // cause initialization of wxWidgets' global logger target
-    (void)AudacityLogger::Get();
+   // cause initialization of wxWidgets' global logger target
+   (void)AudacityLogger::Get();
 
 #if defined(__WXMAC__)
     // Disable window animation

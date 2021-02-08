@@ -7,6 +7,7 @@ set( LIBRARIES
    lib-strings
    lib-utility
    lib-components
+   lib-basic-ui
 )
 
 foreach( LIBRARY ${LIBRARIES} )
