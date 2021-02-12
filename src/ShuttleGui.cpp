@@ -618,7 +618,7 @@ wxSlider * ShuttleGuiBase::AddSlider(
 
 SliderTextCtrl* ShuttleGuiBase::AddSliderTextCtrl(
    const TranslatableString &Prompt, double pos, double Max, double Min,
-   int precision, double* value, double scale)
+   int precision, double* value, double scale, double offset)
 {
    HandleOptionality( Prompt );
    AddPrompt( Prompt );
@@ -627,7 +627,7 @@ SliderTextCtrl* ShuttleGuiBase::AddSliderTextCtrl(
       return wxDynamicCast(wxWindow::FindWindowById( miId, mpDlg), SliderTextCtrl);
    SliderTextCtrl * pSlider;
    mpWind = pSlider = safenew SliderTextCtrl(GetParent(), miId,
-      pos, Min, Max, precision, scale, wxDefaultPosition, wxDefaultSize,
+      pos, Min, Max, precision, scale, offset, wxDefaultPosition, wxDefaultSize,
       GetStyle( SliderTextCtrl::HORIZONTAL ),
       value
    );
