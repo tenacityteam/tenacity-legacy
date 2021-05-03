@@ -681,7 +681,7 @@ IMPLEMENT_WX_THEME_SUPPORT
 int main(int argc, char* argv[]) {
     wxDISABLE_DEBUG_SUPPORT();
 
-    // Bug #1986 workaround - This doesn't actually reduce the number of 
+    // Bug #1986 workaround - This doesn't actually reduce the number of
     // messages, it simply hides them in Release builds. We'll probably
     // never be able to get rid of the messages entirely, but we should
     // look into what's causing them, so allow them to show in Debug
@@ -1048,6 +1048,9 @@ bool AudacityApp::OnInit() {
     // AddHandler takes ownership
     wxFileSystem::AddHandler(safenew wxZipFSHandler);
 
+    // encouraged by wxwidgets
+    wxStandardPaths::Get().SetFileLayout(wxStandardPaths::FileLayout::FileLayout_XDG);
+
     //
     // Paths: set search path and temp dir path
     //
@@ -1197,7 +1200,7 @@ bool AudacityApp::OnInit() {
 
     // Initialize preferences and language
     {
-        wxFileName configFileName(FileNames::DataDir(), wxT("tenacity.cfg"));
+        wxFileName configFileName(FileNames::ConfigDir(), wxT("tenacity.cfg"));
         auto appName = wxTheApp->GetAppName();
         InitPreferences(AudacityFileConfig::Create(
             appName, wxEmptyString,
@@ -1309,7 +1312,7 @@ bool AudacityApp::InitPart2() {
 
     AudacityProject* project;
     {
-        // Bug 718: Position splash screen on same screen 
+        // Bug 718: Position splash screen on same screen
         // as where Audacity project will appear.
         wxRect wndRect;
         bool bMaximized = false;
@@ -1326,11 +1329,11 @@ bool AudacityApp::InitPart2() {
             wxDefaultSize,
             wxSTAY_ON_TOP);
 
-        // Unfortunately with the Windows 10 Creators update, the splash screen 
+        // Unfortunately with the Windows 10 Creators update, the splash screen
         // now appears before setting its position.
-        // On a dual monitor screen it will appear on one screen and then 
+        // On a dual monitor screen it will appear on one screen and then
         // possibly jump to the second.
-        // We could fix this by writing our own splash screen and using Hide() 
+        // We could fix this by writing our own splash screen and using Hide()
         // until the splash scren was correctly positioned, then Show()
 
         // Possibly move it on to the second screen...
