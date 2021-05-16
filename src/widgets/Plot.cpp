@@ -14,8 +14,6 @@
 *//*******************************************************************/
 
 
-#include "../Audacity.h"
-#include "audacity/Types.h"
 #include "Plot.h"
 #include "Ruler.h"
 #include "../AColor.h"

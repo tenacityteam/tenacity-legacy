@@ -14,8 +14,6 @@
 *//*******************************************************************/
 
 
-#include "../Audacity.h"
-#include "audacity/Types.h"
 #include "SliderTextCtrl.h"
 
 #include <wx/defs.h>
