@@ -30,7 +30,7 @@ public:
       const TranslatableString & dlogTitle,
       const TranslatableString & message,
       const ManualPageID & helpPage,
-      const std::wstring & log,
+      const wxString & log,
       const bool Close = true, const bool modal = true);
 
    virtual ~ErrorDialog(){}
