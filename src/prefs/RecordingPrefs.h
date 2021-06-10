@@ -12,8 +12,6 @@
 #ifndef __AUDACITY_RECORDING_PREFS__
 #define __AUDACITY_RECORDING_PREFS__
 
-
-
 #include <wx/defs.h>
 
 #include "PrefsPanel.h"
