@@ -97,17 +97,6 @@ Some example strings are also given first, to document the syntax.
 #endif
 
 
-// i18n-hint Scheme refers to a color scheme for spectrogram colors
-XC("Sche&me",            "spectrum prefs"),
-// i18n-hint Choice of spectrogram colors
-XC("Color (default)",   "spectrum prefs"),
-// i18n-hint Choice of spectrogram colors
-XC("Color (classic)",   "spectrum prefs"),
-// i18n-hint Choice of spectrogram colors
-XC("Grayscale",         "spectrum prefs"),
-// i18n-hint Choice of spectrogram colors
-XC("Inverse grayscale", "spectrum prefs"),
-
 // See three occurrences of this XC in comments elsewhere;
 // to be uncommented, replacing an XO; and the i18n-hint comment to be moved
 // to one of them (one is enough)
