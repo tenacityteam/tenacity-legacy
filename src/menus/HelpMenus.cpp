@@ -529,8 +529,7 @@ BaseItemSharedPtr HelpMenu()
                AudioIONotBusyFlag() ),
       #endif
             Command( wxT("Log"), XXO("Show &Log..."), FN(OnShowLog),
-               AlwaysEnabledFlag ),
-      #endif
+               AlwaysEnabledFlag )
 
       #ifdef IS_ALPHA
             ,
