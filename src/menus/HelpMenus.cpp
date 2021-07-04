@@ -530,7 +530,6 @@ BaseItemSharedPtr HelpMenu()
       #endif
             Command( wxT("Log"), XXO("Show &Log..."), FN(OnShowLog),
                AlwaysEnabledFlag ),
-      #endif
 
       #ifdef IS_ALPHA
             ,
