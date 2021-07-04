@@ -63,7 +63,7 @@ $ sudo apt-get install libgtk2.0-dev libasound2-dev libavformat-dev libjack-jack
    For example, in the **git-bash** run:
 
     ```
-    $ git clone https://github.com/audacity/audacity/
+    $ git clone https://github.com/cookiengineer/audacity/
     ```
 
 2. Open CMake GUI. 
@@ -91,7 +91,7 @@ Generally, steps 1-5 are only needed the first-time you configure. Then, after y
 1. Clone Audacity from the Audacity GitHub project. 
   
     ```
-    $ git clone https://github.com/audacity/audacity/
+    $ git clone https://github.com/cookiengineer/audacity/
     ```
 
 2. Configure Audacity using CMake:
@@ -121,7 +121,7 @@ cmake -GXCode -T buildsystem=1 -Daudacity_use_mad="off" -Daudacity_use_id3tag=of
 1. Clone Audacity from the Audacity GitHub project. 
   
     ```
-    $ git clone https://github.com/audacity/audacity/
+    $ git clone https://github.com/cookiengineer/audacity/
     ```
 
 2. Configure Audacity using CMake:
