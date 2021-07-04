@@ -14,11 +14,19 @@
 - **Accessibility** for VI users.
 - **Analysis and visualization** tools to analyze audio, or other signal data.
 
+## This repository
+
+This repository is a fork of Audacity that tries to revert all the sketchy changes made to the software in recent months, mostly related to data collection. You can find more informations on what happened in these Github issues on the original Audacity repository :
+
+- [**Privacy policy that doesn't respect the GPL**](https://github.com/audacity/audacity/issues/1213)
+- [**Discussion on the Contributer's License Agreement (CLA), goes against the GPL**](https://github.com/audacity/audacity/discussions/932)
+- [**Pull request trying to implement telemetry using Google's services (did not pass)**](https://github.com/audacity/audacity/pull/835)
+
 ## Getting Started
 
-For end users, the latest Windows and macOS release version of Audacity is available from the [Audacity website](https://www.audacityteam.org/download/).
-Help with using Audacity is available from the [Audacity Forum](https://forum.audacityteam.org/).
+For end users, the latest Windows and macOS release of the *original* version of Audacity is available from the *original* [Audacity website](https://www.audacityteam.org/download/). Note that this is the unmodified version which still contains some sketchy code.
+Help with using Audacity is available from the original [Audacity Forum](https://forum.audacityteam.org/).
 
 Build instructions are available [here](BUILDING.md).
 
-More information for developers is available from the [Audacity Wiki](https://wiki.audacityteam.org/wiki/For_Developers).
+More information for developers is available from the original [Audacity Wiki](https://wiki.audacityteam.org/wiki/For_Developers).
