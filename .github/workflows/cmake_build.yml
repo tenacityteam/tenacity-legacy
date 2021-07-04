@@ -80,8 +80,6 @@ jobs:
 
     - name: Configure
       env:
-        # Error reporing
-        CRASH_REPORT_URL: ${{ secrets.CRASH_REPORT_URL }}
         # Apple code signing
         APPLE_CODESIGN_IDENTITY: ${{ secrets.APPLE_CODESIGN_IDENTITY }}
         APPLE_NOTARIZATION_USER_NAME: ${{ secrets.APPLE_NOTARIZATION_USER_NAME }}
