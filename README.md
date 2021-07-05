@@ -4,7 +4,7 @@ Fork of audacity/audacity
 ### This repository is a fork of the audacity repository that tries to revert all the changes that some members of the community felt didn't take the Audacity software project in a direction they desire.
 
 
-This fork of **audacity** is an easy-to-use, cross-platform multi-track audio editor/recorder for Windows, Mac OS X, GNU/Linux and other operating systems and is developed by a group of volunteers as open source software.
+This fork of **audacity** is an easy-to-use, cross-platform multi-track audio editor/recorder for Windows, macOS, GNU/Linux and other operating systems and is developed by a group of volunteers as open source software.
 
 - **Recording** from audio devices (real or virtual)
 - **Export / Import** a wide range of audio formats (extendible with FFmpeg)
