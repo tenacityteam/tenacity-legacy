@@ -29,5 +29,4 @@ Developers may find information for the pre-fork releases available at the [Auda
 
 ## Getting Started
 
-Build instructions for Tenacity are available [here in the BUILDING.md file](BUILDING.md).
-
+Build instructions for Tenacity are available in the [BUILDING.md file](BUILDING.md).
