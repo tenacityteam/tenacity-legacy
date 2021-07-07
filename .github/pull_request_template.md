@@ -4,6 +4,7 @@ Resolves: *(direct link to the issue)*
 
 <!-- Use "x" to fill the checkboxes below like [x] -->
 
+- [ ] The code in this pull request is licensed under "GPLv2 or any later version"
 - [ ] I made sure the code compiles on my machine
 - [ ] I made sure there are no unnecessary changes in the code
 - [ ] I made sure the title of the PR reflects the core meaning of the issue you are solving
