@@ -1,7 +1,7 @@
 Tenacity
 =========================
 
-Tenacity is an easy-to-use, cross-platform multi-track audio editor/recorder for Windows, Mac OS X, GNU/Linux and other operating systems and is developed by a group of volunteers as open source software.
+Tenacity is an easy-to-use, cross-platform multi-track audio editor/recorder for Windows, MacOS, GNU/Linux and other operating systems and is developed by a group of volunteers as open source software.
 
 - **Recording** from audio devices (real or virtual)
 - **Export / Import** a wide range of audio formats (extendible with FFmpeg)
