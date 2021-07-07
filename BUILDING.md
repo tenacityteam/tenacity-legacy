@@ -100,11 +100,11 @@ Generally, steps 1-5 are only needed the first-time you configure. Then, after y
    $ cmake -GXcode -T buildsystem=1 ../tenacity
    ```
 
-3. Open Tenacity XCode project:
+3. Open the created XCode project:
    ```
-   $ open Tenacity.xcodeproj
+   $ open Audacity.xcodeproj
    ```
-   and build Tenacity using the IDE. 
+   and build using the XCode IDE. 
 
 Steps 1 and 2 are only required for first-time builds. 
 
@@ -113,7 +113,7 @@ Alternatively, you can use **CLion**. If you chose to do so, open the directory 
 At the moment we only support **x86_64** builds. It is possible to build using AppleSilicon hardware but **mad** and **id3tag** should be disabled:
 
 ```
-cmake -GXCode -T buildsystem=1 -Dtenacity_use_mad="off" -Dtenacity_use_id3tag=off ../tenacity
+cmake -GXCode -T buildsystem=1 -Daudacity_use_mad="off" -Daudacity_use_id3tag=off ../tenacity
 ```
 
 ## Linux & Other OS
@@ -127,7 +127,7 @@ cmake -GXCode -T buildsystem=1 -Dtenacity_use_mad="off" -Dtenacity_use_id3tag=of
 2. Configure Tenacity using CMake:
    ```
    $ mkdir build && cd build
-   $ cmake -G "Unix Makefiles" -Dtenacity_use_ffmpeg=loaded ../tenacity
+   $ cmake -G "Unix Makefiles" -Daudacity_use_ffmpeg=loaded ../tenacity
    ```
    By default, Debug build will be configured. To change that, pass `-DCMAKE_BUILD_TYPE=Release` to CMake.
 
@@ -141,7 +141,7 @@ cmake -GXCode -T buildsystem=1 -Dtenacity_use_mad="off" -Dtenacity_use_id3tag=of
    ```
    $ cd bin/Debug
    $ mkdir "Portable Settings"
-   $ ./tenacity
+   $ ./audacity
    ```
 
 5. Installing Tenacity
@@ -163,16 +163,16 @@ On Linux it is possible to build Tenacity using (almost) only the libraries prov
 ```
 $ mkdir build && cd build
 $ cmake -G "Unix Makefiles" \
-        -Dtenacity_use_ffmpeg=loaded \
-        -Dtenacity_lib_preference=system \
-        -Dtenacity_obey_system_dependencies=On \
+        -Daudacity_use_ffmpeg=loaded \
+        -Daudacity_lib_preference=system \
+        -Daudacity_obey_system_dependencies=On \
          ../tenacity
 ```
 
 There are a few cases when the local library build is preferred:
 
 1. **wxWidgets**: While Tenacity on **Linux** uses vanilla version of wxWidgets, we **require** that version **3.1.3** is used. This version is not available in most of the distributions.
-2. **portaudio-v19**: Tenacity currently uses [some private APIs](https://github.com/tenacity/tenacity/issues/871), so using system portaudio is not yet possible.
+2. **portaudio-v19**: Tenacity currently uses [some private APIs](https://github.com/audacity/audacity/issues/871), so using system portaudio is not yet possible.
 3. **vamp-host-sdk**: Development packages are not available in Ubuntu 20.04.
 4. **libnyquist** & **portmixer**: Libraries are not available in Ubuntu 20.04.
 5. **sqlite3** & **libsmbs**: Libraries are very outdated in Ubuntu 20.04.
