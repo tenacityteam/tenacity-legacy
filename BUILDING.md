@@ -97,7 +97,7 @@ Generally, steps 1-5 are only needed the first-time you configure. Then, after y
 2. Configure Audacity using CMake:
    ```
    $ mkdir build && cd build
-   $ cmake -GXcode -T buildsystem=1 ../audacity
+   $ cmake -GXcode -T buildsystem=1 ..
    ```
 
 3. Open Audacity XCode project:
@@ -113,7 +113,7 @@ Alternatively, you can use **CLion**. If you chose to do so, open the directory 
 At the moment we only support **x86_64** builds. It is possible to build using AppleSilicon hardware but **mad** and **id3tag** should be disabled:
 
 ```
-cmake -GXCode -T buildsystem=1 -Daudacity_use_mad="off" -Daudacity_use_id3tag=off ../audacity
+cmake -GXCode -T buildsystem=1 -Daudacity_use_mad="off" -Daudacity_use_id3tag=off ..
 ```
 
 ## Linux & Other OS
@@ -127,7 +127,7 @@ cmake -GXCode -T buildsystem=1 -Daudacity_use_mad="off" -Daudacity_use_id3tag=of
 2. Configure Audacity using CMake:
    ```
    $ mkdir build && cd build
-   $ cmake -G "Unix Makefiles" -Daudacity_use_ffmpeg=loaded ../audacity
+   $ cmake -G "Unix Makefiles" -Daudacity_use_ffmpeg=loaded ..
    ```
    By default, Debug build will be configured. To change that, pass `-DCMAKE_BUILD_TYPE=Release` to CMake.
 
