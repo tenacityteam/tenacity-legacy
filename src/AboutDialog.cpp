@@ -1,27 +1,18 @@
 /**********************************************************************
-
   Audacity: A Digital Audio Editor
-
   AboutDialog.cpp
-
   Dominic Mazzoni
   Vaughan Johnson
   James Crook
-
 ********************************************************************//**
-
 \class AboutDialog
 \brief The AboutDialog shows the program version and developer credits.
-
 It is a simple scrolling window with an 'OK... Audacious!' button to
 close it.
-
 *//*****************************************************************//**
-
 \class AboutDialogCreditItem
 \brief AboutDialogCreditItem is a structure used by the AboutDialog to
 hold information about one contributor to Audacity.
-
 *//********************************************************************/
 
 
@@ -76,8 +67,8 @@ hold information about one contributor to Audacity.
 
 // To substitute into many other translatable strings
 static const auto ProgramName =
-   //XO("Audacity");
-   Verbatim("Audacity");
+   //XO("Tenacity");
+   Verbatim("Tenacity");
 
 void AboutDialog::CreateCreditsList()
 {
@@ -127,99 +118,25 @@ void AboutDialog::CreateCreditsList()
    /* i18n-hint: For "About Audacity..." credits, substituting a person's proper name */
       XO("%s, graphics");
 
-   // The Audacity Team: developers and support
-   AddCredit(wxT("James Crook"), developerFormat, roleTeamMember);
-   AddCredit(wxT("Roger Dannenberg"), coFounderFormat, roleTeamMember);
-   AddCredit(wxT("Steve Daulton"), roleTeamMember);
-   AddCredit(wxT("Anton Gerasimov"), developerFormat, roleTeamMember);
-   AddCredit(wxT("Greg Kozikowski"), documentationAndSupportFormat, roleTeamMember);
-   AddCredit(wxT("Paul Licameli"), developerFormat, roleTeamMember);
-   AddCredit(wxT("Vitaly Sverchinsky"), developerFormat, roleTeamMember);
-   AddCredit(wxT("Dmitry Vedenko"), developerFormat, roleTeamMember);
 
+   //Example
+   // AddCredit(wxT("name"),qualityAssuranceFormat, roleEmeritusTeam);
+   // I left the section titles as comments, so people could get added at a later point in time
+
+   // The Audacity Team: developers and support
+ 
    // Emeritus: people who were "lead developers" or made an
    // otherwise distinguished contribution, but who are no
    // longer active.
-   AddCredit(
-      wxT("[[https://wiki.audacityteam.org/wiki/User:Galeandrews|Gale Andrews]]"),
-      qualityAssuranceFormat, roleEmeritusTeam);
-   AddCredit(wxT("Richard Ash"), developerFormat, roleEmeritusTeam);
-   AddCredit(wxT("Christian Brochec"),
-      documentationAndSupportFrenchFormat, roleEmeritusTeam);
-   AddCredit(wxT("Matt Brubeck"), developerFormat, roleEmeritusTeam);
-   AddCredit(wxT("Arturo \"Buanzo\" Busleiman"), sysAdminFormat, roleEmeritusTeam);
-   AddCredit(wxT("Michael Chinen"), developerFormat, roleEmeritusTeam);
-   AddCredit(wxT("Al Dimond"), developerFormat, roleEmeritusTeam);
-   AddCredit(wxT("Benjamin Drung"), developerFormat, roleEmeritusTeam);
-   AddCredit(wxT("Joshua Haberman"), developerFormat, roleEmeritusTeam);
-   AddCredit(wxT("Ruslan Ijbulatov"), developerFormat, roleEmeritusTeam);
-   AddCredit(wxT("Vaughan Johnson"), developerFormat, roleEmeritusTeam);
-   AddCredit(wxT("Leland Lucius"), developerFormat, roleEmeritusTeam);
-   AddCredit(wxT("Dominic Mazzoni"), coFounderFormat, roleEmeritusTeam);
-   AddCredit(wxT("Markus Meyer"), developerFormat, roleEmeritusTeam);
-   AddCredit(wxT("Monty Montgomery"), developerFormat, roleEmeritusTeam);
-   AddCredit(wxT("Shane Mueller"), developerFormat, roleEmeritusTeam);
-   AddCredit(wxT("Tony Oetzmann"), documentationAndSupportFormat, roleEmeritusTeam);
-   AddCredit(wxT("Alexandre Prokoudine"), documentationAndSupportFormat, roleEmeritusTeam);
-   AddCredit(wxT("Peter Sampson"), qaDocumentationAndSupportFormat, roleEmeritusTeam);
-   AddCredit(wxT("Martyn Shaw"), developerFormat, roleEmeritusTeam);
-   AddCredit(wxT("Bill Wharrie"), documentationAndSupportFormat, roleEmeritusTeam);
 
+   
    // Contributors
-   AddCredit(wxT("Lynn Allan"), developerFormat, roleContributor);
-   AddCredit(wxT("Brian Armstrong"), developerFormat, roleContributor);
-   AddCredit(wxT("David Avery"), developerFormat, roleContributor);
-   AddCredit(wxT("David Bailes"), accessibilityAdvisorFormat, roleContributor);
-   AddCredit(wxT("William Bland"), developerFormat, roleContributor);
-   AddCredit(wxT("Sami Boukortt"), developerFormat, roleContributor);
-   AddCredit(wxT("Jeremy R. Brown"), developerFormat, roleContributor);
-   AddCredit(wxT("Alex S. Brown"), developerFormat, roleContributor);
-   AddCredit(wxT("Chris Cannam"), developerFormat, roleContributor);
-   AddCredit(wxT("Cory Cook"), developerFormat, roleContributor);
-   AddCredit(wxT("Craig DeForest"), developerFormat, roleContributor);
-   AddCredit(wxT("Edgar Franke (Edgar-RFT)"), developerFormat, roleContributor);
-   AddCredit(wxT("Mitch Golden"), developerFormat, roleContributor);
-   AddCredit(wxT("Brian Gunlogson"), developerFormat, roleContributor);
-   AddCredit(wxT("Andrew Hallendorff"), developerFormat, roleContributor);
-   AddCredit(wxT("Robert H\u00E4nggi"), developerFormat, roleContributor);
-   AddCredit(wxT("Daniel Horgan"), developerFormat, roleContributor);
-   AddCredit(wxT("David Hostetler"), developerFormat, roleContributor);
-   AddCredit(wxT("Steve Jolly"), developerFormat, roleContributor);
-   AddCredit(wxT("Steven Jones"), developerFormat, roleContributor);
-   AddCredit(wxT("Henric Jungheim"), developerFormat, roleContributor);
-   AddCredit(wxT("Myungchul Keum"), developerFormat, roleContributor);
-   AddCredit(wxT("Arun Kishore"), developerFormat, roleContributor);
-   AddCredit(wxT("Paul Livesey"), developerFormat, roleContributor);
-   AddCredit(wxT("Harvey Lubin"), graphicArtistFormat, roleContributor);
-   AddCredit(wxT("Max Maisel"), developerFormat, roleContributor);
-   AddCredit(wxT("Greg Mekkes"), developerFormat, roleContributor);
-   AddCredit(wxT("Abe Milde"), developerFormat, roleContributor);
-   AddCredit(wxT("Paul Nasca"), developerFormat, roleContributor);
-   AddCredit(wxT("Clayton Otey"), developerFormat, roleContributor);
-   AddCredit(wxT("Mark Phillips"), developerFormat, roleContributor);
-   AddCredit(wxT("Andr\u00E9 Pinto"), developerFormat, roleContributor);
-   AddCredit(wxT("Jean Claude Risset"), composerFormat, roleContributor);
-   AddCredit(wxT("Augustus Saunders"), developerFormat, roleContributor);
-   AddCredit(wxT("Benjamin Schwartz"), developerFormat, roleContributor);
-   AddCredit(wxT("Cliff Scott"), testerFormat, roleContributor);
-   AddCredit(wxT("David R. Sky"), NyquistPluginsFormat, roleContributor);
-   AddCredit(wxT("Rob Sykes"), developerFormat, roleContributor);
-   AddCredit(wxT("Mike Underwood"), developerFormat, roleContributor);
-   AddCredit(wxT("Philip Van Baren"), developerFormat, roleContributor);
-   AddCredit(wxT("Salvo Ventura"), developerFormat, roleContributor);
-   AddCredit(wxT("Darrell Walisser"), developerFormat, roleContributor);
-   AddCredit(wxT("Jun Wan"), developerFormat, roleContributor);
-   AddCredit(wxT("Daniel Winzen"), developerFormat, roleContributor);
-   AddCredit(wxT("Tom Woodhams"), developerFormat, roleContributor);
-   AddCredit(wxT("Mark Young"), developerFormat, roleContributor);
-   AddCredit(wxT("Wing Yu"), developerFormat, roleContributor);
-
+ 
    // Website and Graphics
-   AddCredit(wxT("Shinta Carolinasari"), webDeveloperFormat, roleGraphics);
-   AddCredit(wxT("Bayu Rizaldhan Rayes"), graphicsFormat, roleGraphics);
+
 
    // Libraries
-
+   AddCredit(wxT("[[https://www.audacityteam.org/|Audacity]]"), roleLibrary);
    AddCredit(wxT("[[https://libexpat.github.io/|expat]]"), roleLibrary);
    AddCredit(wxT("[[https://xiph.org/flac/|FLAC]]"), roleLibrary);
    AddCredit(wxT("[[http://lame.sourceforge.net/|LAME]]"), roleLibrary);
@@ -250,27 +167,8 @@ void AboutDialog::CreateCreditsList()
 
    // Thanks
 
-   AddCredit(wxT("Dave Beydler"), roleThanks);
-   AddCredit(wxT("Brian Cameron"), roleThanks);
-   AddCredit(wxT("Jason Cohen"), roleThanks);
-   AddCredit(wxT("Dave Fancella"), roleThanks);
-   AddCredit(wxT("Steve Harris"), roleThanks);
-   AddCredit(wxT("Daniel James"), roleThanks);
-   AddCredit(wxT("Daniil Kolpakov"), roleThanks);
-   AddCredit(wxT("Robert Leidle"), roleThanks);
-   AddCredit(wxT("Logan Lewis"), roleThanks);
-   AddCredit(wxT("David Luff"), roleThanks);
-   AddCredit(wxT("Jason Pepas"), roleThanks);
-   AddCredit(wxT("Jonathan Ryshpan"), roleThanks);
-   AddCredit(wxT("Michael Schwendt"), roleThanks);
-   AddCredit(wxT("Patrick Shirkey"), roleThanks);
-   AddCredit(wxT("Tuomas Suutari"), roleThanks);
-   AddCredit(wxT("Mark Tomlinson"), roleThanks);
-   AddCredit(wxT("David Topper"), roleThanks);
-   AddCredit(wxT("Rudy Trubitt"), roleThanks);
-   AddCredit(wxT("StreetIQ.com"), roleThanks);
-   AddCredit(wxT("UmixIt Technologies, LLC"), roleThanks);
-   AddCredit(wxT("Verilogix, Inc."), roleThanks);
+
+   
 }
 
 // ----------------------------------------------------------------------------
@@ -410,7 +308,7 @@ visit our %s.")
       << wxString(AUDACITY_VERSION_STRING)
       << wxT("</center></h3>")
       /* i18n-hint: The program's name substitutes for %s */
-      << XO("%s the free, open source, cross-platform software for recording and editing sounds.")
+      << XO("%s is an easy-to-use, cross-platform multi-track audio editor/recorder for Windows, MacOS, GNU/Linux and other operating systems and is developed by a group of volunteers as open source software.")
             .Format(ProgramName)
 #endif
 
@@ -431,30 +329,30 @@ visit our %s.")
       << wxT("James Crook, art, coding &amp; design<br>")
 #endif
 
-      << wxT("<p><b>")
-      /* i18n-hint: The program's name substitutes for %s */
-      << XO("%s Team Members").Format( ProgramName )
-      << wxT("</b><br>")
-      << GetCreditsByRole(roleTeamMember)
+      // << wxT("<p><b>")
+      // /* i18n-hint: The program's name substitutes for %s */
+      // << XO("%s Team Members").Format( ProgramName )
+      // << wxT("</b><br>")
+      // << GetCreditsByRole(roleTeamMember)
 
-      << wxT("<p><b> ")
-      << XO("Emeritus:")
-      << wxT("</b><br>")
-      /* i18n-hint: The program's name substitutes for %s */
-      << XO("Distinguished %s Team members, not currently active")
-         .Format( ProgramName )
-      << wxT("<br><br>")
-      << GetCreditsByRole(roleEmeritusTeam)
+      // << wxT("<p><b> ")
+      // << XO("Emeritus:")
+      // << wxT("</b><br>")
+      // /* i18n-hint: The program's name substitutes for %s */
+      // << XO("Distinguished %s Team members, not currently active")
+      //    .Format( ProgramName )
+      // << wxT("<br><br>")
+      // << GetCreditsByRole(roleEmeritusTeam)
 
-      << wxT("<p><b>")
-      << XO("Contributors")
-      << wxT("</b><br>")
-      << GetCreditsByRole(roleContributor)
+      // << wxT("<p><b>")
+      // << XO("Contributors")
+      // << wxT("</b><br>")
+      // << GetCreditsByRole(roleContributor)
 
-      << wxT("<p><b>")
-      << XO("Website and Graphics")
-      << wxT("</b><br>")
-      << GetCreditsByRole(roleGraphics)
+      // << wxT("<p><b>")
+      // << XO("Website and Graphics")
+      // << wxT("</b><br>")
+      // << GetCreditsByRole(roleGraphics)
    ;
 
    if(!translatorCredits.empty()) informationStr
@@ -473,35 +371,27 @@ visit our %s.")
       << wxT("<br><br>")
       << GetCreditsByRole(roleLibrary)
 
-      << wxT("<p><b>")
-      << XO("Special thanks:")
-      << wxT("</b><br>")
-      << GetCreditsByRole(roleThanks)
+      // << wxT("<p><b>")
+      // << XO("Special thanks:")
+      // << wxT("</b><br>")
+      // << GetCreditsByRole(roleThanks)
 
       << wxT("<p><br>")
       /* i18n-hint: The program's name substitutes for %s */
       << XO("%s website: ").Format( ProgramName )
-      << wxT("[[https://www.audacityteam.org/|https://www.audacityteam.org/]]")
+      << wxT("[[https://tenacityaudio.org/|https://tenacityaudio.org/]]")
 
 // DA: Link for DA url too
 #ifdef EXPERIMENTAL_DA
       << wxT("<br>DarkAudacity website: [[http://www.darkaudacity.com/|https://www.darkaudacity.com/]]")
 #else
-      << wxT("<p><br>&nbsp; &nbsp; ")
-      /* i18n-hint Audacity's name substitutes for first and third %s,
-       and a "copyright" symbol for the second */
-      << XO("%s software is copyright %s 1999-2021 %s Team.")
-         .Format(
-            Verbatim("<b>%s<sup>&reg;</sup></b>").Format( ProgramName ),
-            wxT("&copy;"),
-            ProgramName )
       << wxT("<br>")
-
-      << wxT("&nbsp; &nbsp; ")
       /* i18n-hint Audacity's name substitutes for %s */
-      << XO("The name %s is a registered trademark.")
-         .Format( Verbatim("<b>%s</b>").Format( ProgramName ) )
+      << XO("%s was based on ")
+         .Format( ProgramName)
+      << wxT("[[https://www.audacityteam.org/|https://www.audacityteam.org/]]")   
       << wxT("<br><br>")
+
 #endif
 
       << wxT("</center>")
@@ -510,31 +400,31 @@ visit our %s.")
    auto pPage = S.StartNotebookPage( ProgramName );
    S.StartVerticalLay(1);
    {
-      //v For now, change to AudacityLogoWithName via old-fashioned way, not Theme.
-      wxBitmap logo(AudacityLogoWithName_xpm); //v
+      // //v For now, change to AudacityLogoWithName via old-fashioned way, not Theme.
+      // wxBitmap logo(AudacityLogoWithName_xpm); //v
 
-      // JKC: Resize to 50% of size.  Later we may use a smaller xpm as
-      // our source, but this allows us to tweak the size - if we want to.
-      // It also makes it easier to revert to full size if we decide to.
-      const float fScale = 0.5f;// smaller size.
-      wxImage RescaledImage(logo.ConvertToImage());
-      wxColour MainColour( 
-         RescaledImage.GetRed(1,1), 
-         RescaledImage.GetGreen(1,1), 
-         RescaledImage.GetBlue(1,1));
-      pPage->SetBackgroundColour(MainColour);
-      // wxIMAGE_QUALITY_HIGH not supported by wxWidgets 2.6.1, or we would use it here.
-      RescaledImage.Rescale((int)(LOGOWITHNAME_WIDTH * fScale), (int)(LOGOWITHNAME_HEIGHT *fScale));
-      wxBitmap RescaledBitmap(RescaledImage);
+      // // JKC: Resize to 50% of size.  Later we may use a smaller xpm as
+      // // our source, but this allows us to tweak the size - if we want to.
+      // // It also makes it easier to revert to full size if we decide to.
+      // const float fScale = 0.5f;// smaller size.
+      // wxImage RescaledImage(logo.ConvertToImage());
+      // wxColour MainColour( 
+      //    RescaledImage.GetRed(1,1), 
+      //    RescaledImage.GetGreen(1,1), 
+      //    RescaledImage.GetBlue(1,1));
+      // pPage->SetBackgroundColour(MainColour);
+      // // wxIMAGE_QUALITY_HIGH not supported by wxWidgets 2.6.1, or we would use it here.
+      // RescaledImage.Rescale((int)(LOGOWITHNAME_WIDTH * fScale), (int)(LOGOWITHNAME_HEIGHT *fScale));
+      // wxBitmap RescaledBitmap(RescaledImage);
 
-      icon =
-         safenew wxStaticBitmap(S.GetParent(), -1,
-         //*logo, //v
-         //v theTheme.Bitmap(bmpAudacityLogo), wxPoint(93, 10), wxSize(215, 190));
-         //v theTheme.Bitmap(bmpAudacityLogoWithName),
-         RescaledBitmap,
-         wxDefaultPosition,
-         wxSize((int)(LOGOWITHNAME_WIDTH*fScale), (int)(LOGOWITHNAME_HEIGHT*fScale)));
+      // icon =
+      //    safenew wxStaticBitmap(S.GetParent(), -1,
+      //    //*logo, //v
+      //    //v theTheme.Bitmap(bmpAudacityLogo), wxPoint(93, 10), wxSize(215, 190));
+      //    //v theTheme.Bitmap(bmpAudacityLogoWithName),
+      //    RescaledBitmap,
+      //    wxDefaultPosition,
+      //    wxSize((int)(LOGOWITHNAME_WIDTH*fScale), (int)(LOGOWITHNAME_HEIGHT*fScale)));
    }
    S.Prop(0).AddWindow( icon );
 
