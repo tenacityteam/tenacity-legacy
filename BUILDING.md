@@ -96,7 +96,7 @@ Generally, steps 1-5 are only needed the first-time you configure. Then, after y
 
 2. Configure Tenacity using CMake:
    ```
-   $ mkdir build && cd build
+   $ cd tenacity && mkdir build && cd build
    $ cmake -GXcode -T buildsystem=1 ..
    ```
 
@@ -126,7 +126,7 @@ cmake -GXCode -T buildsystem=1 -Daudacity_use_mad="off" -Daudacity_use_id3tag=of
 
 2. Configure Tenacity using CMake:
    ```
-   $ mkdir build && cd build
+   $ cd tenacity && mkdir build && cd build
    $ cmake -G "Unix Makefiles" -Daudacity_use_ffmpeg=loaded ..
    ```
    By default, Debug build will be configured. To change that, pass `-DCMAKE_BUILD_TYPE=Release` to CMake.
