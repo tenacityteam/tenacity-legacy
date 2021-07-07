@@ -1,10 +1,7 @@
-Fork of audacity/audacity
+Tenacity
 =========================
 
-### This repository is a fork of the audacity repository that tries to revert all the changes that some members of the community felt didn't take the Audacity software project in a direction they desire.
-
-
-This fork of **audacity** is an easy-to-use, cross-platform multi-track audio editor/recorder for Windows, macOS, GNU/Linux and other operating systems and is developed by a group of volunteers as open source software.
+Tenacity is an easy-to-use, cross-platform multi-track audio editor/recorder for Windows, MacOS, GNU/Linux and other operating systems and is developed by a group of volunteers as open source software.
 
 - **Recording** from audio devices (real or virtual)
 - **Export / Import** a wide range of audio formats (extendible with FFmpeg)
@@ -32,5 +29,4 @@ Developers may find information for the pre-fork releases available at the [Auda
 
 ## Getting Started
 
-Build instructions for this forked version of Audacity is available [here](BUILDING.md).
-
+Build instructions for Tenacity are available in the [BUILDING.md file](BUILDING.md).
