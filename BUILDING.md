@@ -121,13 +121,13 @@ cmake -GXCode -T buildsystem=1 -Daudacity_use_mad="off" -Daudacity_use_id3tag=of
 1. Clone Audacity from the Audacity GitHub project. 
   
     ```
-    $ git clone https://github.com/cookiengineer/audacity/
+    $ git clone https://github.com/tenacityteam/tenacity/
     ```
 
 2. Configure Audacity using CMake:
    ```
    $ mkdir build && cd build
-   $ cmake -G "Unix Makefiles" -Daudacity_use_ffmpeg=loaded ../audacity
+   $ cmake -G "Unix Makefiles" -Daudacity_use_ffmpeg=loaded ../tenacity
    ```
    By default, Debug build will be configured. To change that, pass `-DCMAKE_BUILD_TYPE=Release` to CMake.
 
