@@ -1,5 +1,5 @@
 /**********************************************************************
-  Audacity: A Digital Audio Editor
+  Tenacity: A Digital Audio Editor
   AboutDialog.cpp
   Dominic Mazzoni
   Vaughan Johnson
@@ -12,7 +12,7 @@ close it.
 *//*****************************************************************//**
 \class AboutDialogCreditItem
 \brief AboutDialogCreditItem is a structure used by the AboutDialog to
-hold information about one contributor to Audacity.
+hold information about one contributor to Tenacity.
 *//********************************************************************/
 
 
@@ -73,49 +73,35 @@ static const auto ProgramName =
 void AboutDialog::CreateCreditsList()
 {
    const auto sysAdminFormat =
-   /* i18n-hint: For "About Audacity..." credits, substituting a person's proper name */
+   /* i18n-hint: For "About Tenacity..." credits, substituting a person's proper name */
       XO("%s, system administration");
    const auto coFounderFormat =
-   /* i18n-hint: For "About Audacity..." credits, substituting a person's proper name */
       XO("%s, co-founder and developer");
    const auto developerFormat =
-   /* i18n-hint: For "About Audacity..." credits, substituting a person's proper name */
       XO("%s, developer");
    const auto developerAndSupprtFormat =
-   /* i18n-hint: For "About Audacity..." credits, substituting a person's proper name */
       XO("%s, developer and support");
    const auto documentationAndSupportFormat =
-   /* i18n-hint: For "About Audacity..." credits, substituting a person's proper name */
       XO("%s, documentation and support");
    const auto qaDocumentationAndSupportFormat =
-   /* i18n-hint: For "About Audacity..." credits, substituting a person's proper name */
       XO("%s, QA tester, documentation and support");
    const auto documentationAndSupportFrenchFormat =
-   /* i18n-hint: For "About Audacity..." credits, substituting a person's proper name */
       XO("%s, documentation and support, French");
    const auto qualityAssuranceFormat =
-   /* i18n-hint: For "About Audacity..." credits, substituting a person's proper name */
       XO("%s, quality assurance");
    const auto accessibilityAdvisorFormat =
-   /* i18n-hint: For "About Audacity..." credits, substituting a person's proper name */
       XO("%s, accessibility advisor");
    const auto graphicArtistFormat =
-   /* i18n-hint: For "About Audacity..." credits, substituting a person's proper name */
       XO("%s, graphic artist");
    const auto composerFormat =
-   /* i18n-hint: For "About Audacity..." credits, substituting a person's proper name */
       XO("%s, composer");
    const auto testerFormat =
-   /* i18n-hint: For "About Audacity..." credits, substituting a person's proper name */
       XO("%s, tester");
    const auto NyquistPluginsFormat =
-   /* i18n-hint: For "About Audacity..." credits, substituting a person's proper name */
       XO("%s, Nyquist plug-ins");
    const auto webDeveloperFormat =
-   /* i18n-hint: For "About Audacity..." credits, substituting a person's proper name */
       XO("%s, web developer");
    const auto graphicsFormat =
-   /* i18n-hint: For "About Audacity..." credits, substituting a person's proper name */
       XO("%s, graphics");
 
 
@@ -123,7 +109,7 @@ void AboutDialog::CreateCreditsList()
    // AddCredit(wxT("name"),qualityAssuranceFormat, roleEmeritusTeam);
    // I left the section titles as comments, so people could get added at a later point in time
 
-   // The Audacity Team: developers and support
+   // The Tenacity Team: developers and support
  
    // Emeritus: people who were "lead developers" or made an
    // otherwise distinguished contribution, but who are no
@@ -204,7 +190,7 @@ AboutDialog::AboutDialog(wxWindow * parent)
    ShuttleGui S( this, eIsCreating );
    S.StartNotebook();
    {
-      PopulateAudacityPage( S );
+      PopulateTenacityPage( S );
       PopulateInformationPage( S );
       PopulateLicensePage( S );
    }
@@ -220,7 +206,7 @@ AboutDialog::AboutDialog(wxWindow * parent)
 
 #define ABOUT_DIALOG_WIDTH 506
 
-void AboutDialog::PopulateAudacityPage( ShuttleGui & S )
+void AboutDialog::PopulateTenacityPage( ShuttleGui & S )
 {
    CreateCreditsList();
 
@@ -228,24 +214,21 @@ void AboutDialog::PopulateAudacityPage( ShuttleGui & S )
 // DA: Says that it is a customised version.
 #ifdef EXPERIMENTAL_DA
       wxT(
-"Audacity, which this is a customised version of, is a free program written by a worldwide team of [[https://www.audacityteam.org/about/credits|volunteers]]. \
-Audacity is [[https://www.audacityteam.org/download|available]] for Windows, Mac, and GNU/Linux (and other Unix-like systems).")
+"Tenacity is a FLOSS, easy-to-use, cross-platform multi-track audio editor/recorder. [[https://tenacityaudio.org/|https://tenacityaudio.org/]]. \
+Tenacity is [[https://git.sr.ht/~tenacity/tenacity/refs|available]] for Windows, Mac, and GNU/Linux (and other Unix-like systems).")
 #else
 /* Do the i18n of a string with markup carefully with hints.
  (Remember languages with cases.) */
       XO(
 /* i18n-hint: First and third %s will be the program's name,
   second %s will be "volunteers", fourth "available" */
-"%s is a free program written by a worldwide team of %s. \
+"%s is a free program written by a worldwide team of volunteers. \
 %s is %s for Windows, Mac, and GNU/Linux (and other Unix-like systems).")
          .Format(
             ProgramName,
-            Verbatim("[[https://www.audacityteam.org/about/credits|%s]]")
-               /* i18n-hint: substitutes into "a worldwide team of %s" */
-               .Format( XO("volunteers") ),
             ProgramName,
-            Verbatim("[[https://www.audacityteam.org/download|%s]]")
-               /* i18n-hint: substitutes into "Audacity is %s" */
+            Verbatim("[[https://git.sr.ht/~tenacity/tenacity/refs|%s]]")
+               /* i18n-hint: substitutes into "Tenacity is %s" */
                .Format( XO("available") ) )
 #endif
    ;
@@ -254,26 +237,25 @@ Audacity is [[https://www.audacityteam.org/download|available]] for Windows, Mac
    // English, whereas all translated versions will.
    auto par2Str = XO(
 /* i18n-hint first and third %s will be "forum", second "wiki" */
-"If you find a bug or have a suggestion for us, please write, in English, to our %s. \
-For help, view the tips and tricks on our %s or \
-visit our %s.")
+"If you find a bug or have a suggestion for us, please open an issue, in English, to our %s. \
+For help you can join our %s or  %s.")
       .Format(
-         Verbatim("[[https://forum.audacityteam.org/|%s]]")
+         Verbatim("[[https://github.com/tenacityteam/tenacity/issues|%s]]")
             /* i18n-hint substitutes into "write to our %s" */
-            .Format( XC("forum", "dative") ),
-         Verbatim("[[https://wiki.audacityteam.org/|%s]]")
+            .Format( XC("github", "dative") ),
+         Verbatim("[[https://web.libera.chat/gamja/?channels=tenacity|%s]]")
             /* i18n-hint substitutes into "view the tips and tricks on our %s" */
             .Format( XO("wiki") ),
-         Verbatim("[[https://forum.audacityteam.org/|%s]]")
+         Verbatim("[[https://matrix.to/#/#tenacity:libera.chat|%s]]")
             /* i18n-hint substitutes into "visit our %s" */
-            .Format( XC("forum", "accusative") ) );
+            .Format( XO("Matrix") ) );
    auto par2StrTranslated = par2Str.Translation();
 
    if( par2StrTranslated == par2Str.MSGID().GET() )
       par2StrTranslated.Replace( wxT(", in English,"), wxT("") );
 
    /* i18n-hint: The translation of "translator_credits" will appear
-    *  in the credits in the About Audacity window.  Use this to add
+    *  in the credits in the About Tenacity window.  Use this to add
     *  your own name(s) to the credits.
     *
     *  For example:  "English translation by Dominic Mazzoni." */
@@ -293,13 +275,12 @@ visit our %s.")
 #ifdef EXPERIMENTAL_DA
       #undef _
       #define _(s) wxGetTranslation((s))
-      << wxT("<h3>DarkAudacity ")
+      << wxT("<h3>DarkTenacity ")
       << wxString(AUDACITY_VERSION_STRING)
       << wxT("</center></h3>")
-      << wxT("Customised version of the Audacity free, open source, cross-platform software " )
+      << wxT("Customised version of the Tenacity free, open source, cross-platform software " )
       << wxT("for recording and editing sounds.")
-      << wxT("<p><br>&nbsp; &nbsp; <b>Audacity<sup>&reg;</sup></b> software is copyright &copy; 1999-2021 Audacity Team.<br>")
-      << wxT("&nbsp; &nbsp; The name <b>Audacity</b> is a registered trademark of Dominic Mazzoni.<br><br>")
+
 
 #else
       << XO("<h3>")
@@ -324,7 +305,7 @@ visit our %s.")
 // DA: Customisation credit
 #ifdef EXPERIMENTAL_DA
       << wxT("<p><b>")
-      << XO("DarkAudacity Customisation")
+      << XO("DarkTenacityCustomisation")
       << wxT("</b><br>")
       << wxT("James Crook, art, coding &amp; design<br>")
 #endif
@@ -383,10 +364,10 @@ visit our %s.")
 
 // DA: Link for DA url too
 #ifdef EXPERIMENTAL_DA
-      << wxT("<br>DarkAudacity website: [[http://www.darkaudacity.com/|https://www.darkaudacity.com/]]")
+      << wxT("<br>This dark version of Tenacity is based on: [[http://www.darkaudacity.com/|https://www.darkaudacity.com/]]")
 #else
       << wxT("<br>")
-      /* i18n-hint Audacity's name substitutes for %s */
+      /* i18n-hint Tenacity's name substitutes for %s */
       << XO("%s was based on ")
          .Format( ProgramName)
       << wxT("[[https://www.audacityteam.org/|https://www.audacityteam.org/]]")   
@@ -470,7 +451,7 @@ void AboutDialog::PopulateInformationPage( ShuttleGui & S )
  
    informationStr
       << wxT("<h3>")
-   /* i18n-hint: Information about when audacity was compiled follows */
+   /* i18n-hint: Information about when tenacity was compiled follows */
       << XO("The Build")
       << wxT("</h3>\n<table>"); // start build info table
 
@@ -514,7 +495,7 @@ void AboutDialog::PopulateInformationPage( ShuttleGui & S )
 
    // Install prefix
 #ifdef __WXGTK__
-   /* i18n-hint: The directory audacity is installed into (on *nix systems) */
+   /* i18n-hint: The directory tenacity is installed into (on *nix systems) */
    AddBuildinfoRow(&informationStr, XO("Installation Prefix:"), \
          wxT(INSTALL_PREFIX));
 #endif
@@ -528,7 +509,7 @@ void AboutDialog::PopulateInformationPage( ShuttleGui & S )
 
    informationStr
       << wxT("<h3>")
-      /* i18n-hint: Libraries that are essential to audacity */
+      /* i18n-hint: Libraries that are essential to tenacity */
       << XO("Core Libraries")
       << wxT("</h3>\n<table>");  // start table of core libraries
 
