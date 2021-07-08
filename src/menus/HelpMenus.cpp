@@ -558,7 +558,7 @@ BaseItemSharedPtr HelpMenu()
       ,
 #endif
 
-         Command( wxT("About"), XXO("&About Audacity..."), FN(OnAbout),
+         Command( wxT("About"), XXO("&About Tenacity..."), FN(OnAbout),
             AlwaysEnabledFlag )
       )
    ) ) };
