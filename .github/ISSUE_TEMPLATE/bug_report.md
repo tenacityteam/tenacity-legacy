@@ -16,16 +16,6 @@ Please post **confirmed** bugs when possible.
 Please mark the checkbox below (Use "x" to fill the checkboxes, example: [x])
 -->
 - [ ] I have read the specified guidelines for issues
-<!--
-
-
-
-
-
-
-
-
--->
 
 **Describe the bug**
 A clear and concise description of what the bug is.

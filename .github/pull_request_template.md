@@ -4,13 +4,7 @@ IMPORTANT! READ
 
 Any spam PRs will be closed.
 Please make sure your PR
-complies with the requirements
-
-
-
-
-
-
+complies with the requirements.
 -->
 
 Resolves: *(direct link to the issue)*

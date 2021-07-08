@@ -11,22 +11,12 @@ IMPORTANT! READ
 Any spam issues will be deleted.
 Issues are not a place to go ask support questions.
 
-Please make sure your feature request contains sufficient details
-to be implemented.
+Please make sure your feature request contains as many details
+as possible.
 
 Please mark the checkbox below (Use "x" to fill the checkboxes, example: [x])
 -->
 - [ ] I have read the specified guidelines for issues
-<!--
-
-
-
-
-
-
-
-
--->
 
 **Is your feature request related to a problem? Please describe.**
 A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
