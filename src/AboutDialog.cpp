@@ -368,9 +368,12 @@ For help you can join our %s or  %s.")
 #else
       << wxT("<br>")
       /* i18n-hint Tenacity's name substitutes for %s */
-      << XO("%s was based on ")
-         .Format( ProgramName)
-      << wxT("[[https://www.audacityteam.org/|https://www.audacityteam.org/]]")   
+      << XO("%s was based on %s")
+         .Format( 
+            ProgramName, 
+            "[[https://www.audacityteam.org/|https://www.audacityteam.org/]]"
+            )
+
       << wxT("<br><br>")
 
 #endif
@@ -709,6 +712,7 @@ void AboutDialog::PopulateLicensePage( ShuttleGui & S )
 //
 // The GPL is not to be translated....
    wxString PageText= FormatHtmlText(
+wxT("Tenacity is based upon Audacity, Copyright (c) 1999-2021 The Audacity Team\n\n")
 wxT("		    <center>GNU GENERAL PUBLIC LICENSE\n</center>")
 wxT("		       <center>Version 2, June 1991\n</center>")
 wxT("<p><p>")

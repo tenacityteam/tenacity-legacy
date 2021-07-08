@@ -552,7 +552,7 @@ BaseItemSharedPtr HelpMenu()
          )
    #ifndef __WXMAC__
       ),
-
+   
       Section( "",
 #else
       ,
