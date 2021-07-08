@@ -4,6 +4,19 @@ about: Create a report to help us improve
 
 ---
 
+<!--
+
+IMPORTANT! READ
+
+Any spam issues will be deleted.
+Issues are not a place to go ask support questions.
+
+Please post **confirmed** bugs when possible.
+
+Please mark the checkbox below (Use "x" to fill the checkboxes, example: [x])
+-->
+- [ ] I have read the specified guidelines for issues
+
 **Describe the bug**
 A clear and concise description of what the bug is.
 
