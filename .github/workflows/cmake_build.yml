@@ -43,13 +43,19 @@ jobs:
 
         - name: Windows_32bit
           os: windows-latest
-          arch: 32bit # as reported by Windows Settings > System > About
-          generator: Visual Studio 16 2019
+          arch: x86
+          # required so CMake uses MSVC rather than MinGW
+          cc: cl
+          cxx: cl
+          generator: Ninja
 
         - name: Windows_64bit
           os: windows-latest
-          arch: 64bit # as reported by Windows Settings > System > About
-          generator: Visual Studio 16 2019
+          arch: amd64
+          # required so CMake uses MSVC rather than MinGW
+          cc: cl
+          cxx: cl
+          generator: Ninja
 
     steps:
 
@@ -63,13 +69,20 @@ jobs:
     - name: Environment
       run: |
         source "scripts/ci/environment.sh"
-    
+
     - name: Install Apple codesigning certificates
       uses: apple-actions/import-codesign-certs@v1
       if: startswith( matrix.config.os, 'macos' ) && github.event_name == 'push' && github.repository_owner == 'audacity'
       with: 
         p12-file-base64: ${{ secrets.APPLE_CERTIFICATE }}
         p12-password: ${{ secrets.APPLE_CERTIFICATE_PASSWORD }}
+
+    # required for CMake to find Ninja
+    - name: "[Windows] Set up MSVC Developer Command Prompt"
+      if: runner.os == 'Windows'
+      uses: seanmiddleditch/gha-setup-vsdevenv@v3
+      with:
+        arch: ${{ matrix.config.arch }}
 
     - name: Cache for .conan
       id: cache-conan
@@ -88,6 +101,8 @@ jobs:
         APPLE_CODESIGN_IDENTITY: ${{ secrets.APPLE_CODESIGN_IDENTITY }}
         APPLE_NOTARIZATION_USER_NAME: ${{ secrets.APPLE_NOTARIZATION_USER_NAME }}
         APPLE_NOTARIZATION_PASSWORD: ${{ secrets.APPLE_NOTARIZATION_PASSWORD }}
+        CC: ${{ matrix.config.cc }}
+        CXX: ${{ matrix.config.cxx }}
       run: |
         exec bash "scripts/ci/configure.sh"
 
