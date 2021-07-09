@@ -35,21 +35,35 @@ jobs:
           os: ubuntu-18.04
           arch: x86_64 # as reported by `arch` or `uname -m`
           generator: Unix Makefiles
+          compiler_cache: ccache
+          compiler_cache_path: ~/.ccache
 
         - name: macOS_Intel
           os: macos-latest
           arch: Intel # as reported by Apple menu > About This Mac
           generator: Unix Makefiles
+          compiler_cache: ccache
+          compiler_cache_path: /Users/runner/Library/Caches/ccache
 
         - name: Windows_32bit
           os: windows-latest
           arch: 32bit # as reported by Windows Settings > System > About
           generator: Visual Studio 16 2019
+          # Required so CMake doesn't choose MinGW
+          cc: cl
+          cxx: cl
+          compiler_cache: sccache
+          compiler_cache_path: C:\Users\runneradmin\AppData\Local\Mozilla\sccache\cache
 
         - name: Windows_64bit
           os: windows-latest
           arch: 64bit # as reported by Windows Settings > System > About
           generator: Visual Studio 16 2019
+          # Required so CMake doesn't choose MinGW
+          cc: cl
+          cxx: cl
+          compiler_cache: sccache
+          compiler_cache_path: C:\Users\runneradmin\AppData\Local\Mozilla\sccache\cache
 
     steps:
 
@@ -71,6 +85,27 @@ jobs:
         p12-file-base64: ${{ secrets.APPLE_CERTIFICATE }}
         p12-password: ${{ secrets.APPLE_CERTIFICATE_PASSWORD }}
 
+    - name: "[Windows] Set up MSVC Developer Command Prompt"
+      if: runner.os == 'Windows'
+      uses: seanmiddleditch/gha-setup-vsdevenv@v3
+      with:
+        arch: ${{ matrix.config.arch }}
+
+    # FIXME: sccache fails with MSVC rc file https://github.com/mozilla/sccache/issues/947
+    #- name: "[Windows] Install sccache"
+      #if: runner.os == 'Windows'
+      #run: choco install sccache
+
+    - name: "Compiler cache"
+      uses: actions/cache@v2
+      if: runner.os != 'Windows'
+      with:
+        path: ${{ matrix.config.compiler_cache_path }}
+        key: ${{ matrix.config.os }}-${{ matrix.config.arch }}-${{ github.head_ref }}-${{ github.run_number }}
+        restore-keys: |
+          ${{ matrix.config.os }}-${{ matrix.config.arch }}-${{ github.head_ref }}
+          ${{ matrix.config.os }}-${{ matrix.config.arch }}
+
     - name: Cache for .conan
       id: cache-conan
       uses: actions/cache@v2
@@ -84,6 +119,8 @@ jobs:
 
     - name: Configure
       env:
+        CC: ${{ matrix.config.cc }}
+        CXX: ${{ matrix.config.cxx }}
         # Apple code signing
         APPLE_CODESIGN_IDENTITY: ${{ secrets.APPLE_CODESIGN_IDENTITY }}
         APPLE_NOTARIZATION_USER_NAME: ${{ secrets.APPLE_NOTARIZATION_USER_NAME }}
@@ -94,6 +131,11 @@ jobs:
     - name: Build
       run: |
         exec bash "scripts/ci/build.sh"
+
+    - name: "Print compiler cache stats"
+      run: ${{ matrix.config.compiler_cache }} -s
+      # FIXME remove when sccache is working
+      if: runner.os != 'Windows'
 
     - name: Install
       run: |
