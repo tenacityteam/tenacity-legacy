@@ -144,11 +144,7 @@ cmake -GXCode -T buildsystem=1 -Daudacity_use_mad="off" -Daudacity_use_id3tag=of
    $ ./audacity
    ```
 
-5. Installing Tenacity
-   ```
-   $ cd <build directory>
-   $ sudo make install
-   ```
+In the moment, you are unable to install tenacity system-wide due conflits with libraries. You have to run Step 4 to use Tenacity. We are trying to fix that for the first stable release.
 
 ## Advanced
 
