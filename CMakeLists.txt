@@ -123,6 +123,7 @@ find_program( CCACHE_PROGRAM ccache )
 mark_as_advanced( FORCE CCACHE_PROGRAM )
 
 if( CCACHE_PROGRAM )
+   message( STATUS "Found ccache: ${CCACHE_PROGRAM}" )
    set_property( GLOBAL PROPERTY RULE_LAUNCH_COMPILE "${CCACHE_PROGRAM}" )
 endif()
 
