@@ -25,12 +25,6 @@ if [[ "${AUDACITY_CMAKE_GENERATOR}" == "Visual Studio"* ]]; then
     64bit)  cmake_args+=( -A x64 ) ;;
     *)      echo >&2 "$0: Unrecognised arch label '${AUDACITY_ARCH_LABEL}'" ; exit 1 ;;
     esac
-elif [[ "${AUDACITY_CMAKE_GENERATOR}" == Xcode* ]]; then
-    cmake_args+=(
-        # skip unneeded configurations
-        -D CMAKE_CONFIGURATION_TYPES="${AUDACITY_BUILD_TYPE}"
-        -T buildsystem=1
-    )
 fi
 
 if [[ -n "${APPLE_CODESIGN_IDENTITY}" && "${OSTYPE}" == darwin* ]]; then
