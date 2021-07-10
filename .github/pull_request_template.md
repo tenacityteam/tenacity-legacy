@@ -15,6 +15,7 @@ Resolves: *(direct link to the issue)*
 an asterisk (*) after the entry indicates required
 -->
 
+
 - [ ] I have signed off my commits using `-s` or `Signed-off-by`\* (See: [Contributing § DCO](https://github.com/tenacityteam/tenacity/blob/master/CONTRIBUTING.md#developer-certificate-of-origin))
 - [ ] I made sure the code compiles on my machine
 - [ ] I made sure there are no unnecessary changes in the code\*
