@@ -108,6 +108,7 @@ set( CMAKE_MODULE_PATH
 set( CMAKE_PREFIX_PATH
    ${CMAKE_BINARY_DIR}
    ${CMAKE_PREFIX_PATH}
+   ${libsrc}
 )
 
 # This "is a good thing" but greatly increases link time on Linux
