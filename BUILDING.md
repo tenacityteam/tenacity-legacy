@@ -58,12 +58,12 @@ $ sudo apt-get install libgtk2.0-dev libasound2-dev libavformat-dev libjack-jack
 
 ## Building on Windows
 
-1. Clone Tenacity from the Tenacity GitHub project. 
+1. Clone Tenacity from the Tenacity GitHub project and download submodules.
   
    For example, in the **git-bash** run:
 
     ```
-    $ git clone https://github.com/tenacityteam/tenacity/
+    $ git clone --recurse-submodules https://github.com/tenacityteam/tenacity/
     ```
 
 2. Open CMake GUI. 
@@ -88,10 +88,10 @@ Generally, steps 1-5 are only needed the first-time you configure. Then, after y
 
 ## macOS
 
-1. Clone Tenacity from the Tenacity GitHub project. 
+1. Clone Tenacity from the Tenacity GitHub project and download submodules.
   
     ```
-    $ git clone https://github.com/tenacityteam/tenacity/
+    $ git clone --recurse-submodules https://github.com/tenacityteam/tenacity/
     ```
 
 2. Configure Tenacity using CMake:
@@ -118,10 +118,10 @@ cmake -GXCode -T buildsystem=1 -Daudacity_use_mad="off" -Daudacity_use_id3tag=of
 
 ## Linux & Other OS
 
-1. Clone Tenacity from the Tenacity GitHub project. 
+1. Clone Tenacity from the Tenacity GitHub project and download submodules.
   
     ```
-    $ git clone https://github.com/tenacityteam/tenacity/
+    $ git clone --recurse-submodules https://github.com/tenacityteam/tenacity/
     ```
 
 2. Configure Tenacity using CMake:
