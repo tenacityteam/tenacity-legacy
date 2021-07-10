@@ -9,7 +9,7 @@ cd build
 if [[ "${OSTYPE}" == msys* && ${GIT_BRANCH} == release* ]]; then # Windows
     cmake --build . --target innosetup --config "${AUDACITY_BUILD_TYPE}"
 else
-    export CPACK_COMMAND_HDIUTIL="$PWD/macos/repeat_hdiutil.sh"
+    export CPACK_COMMAND_HDIUTIL="./macos/repeat_hdiutil.sh"
     cpack -C "${AUDACITY_BUILD_TYPE}" --verbose
 fi
 
