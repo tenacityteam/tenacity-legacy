@@ -4,13 +4,12 @@
 
 set -uxo pipefail
 
-cmd_string="/usr/bin/hdiutil ""$*"" -debug"
 max_retry=5
 counter=0
+wait_before_retry=1
 
-until $cmd_string
-do
-   sleep 1
+until /usr/bin/hdiutil ""$*"" -debug; do
+   sleep $wait_before_retry
    if [[ $counter -eq $max_retry ]]; then
         echo "CPack failed despite retry attempts!"
         exit 1
