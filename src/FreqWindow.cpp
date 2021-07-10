@@ -98,6 +98,8 @@ enum {
 
    FreqVZoomSliderID,
    FreqVPanScrollerID,
+   FreqHZoomSliderID,
+   FreqHPanScrollerID,
    FreqExportButtonID,
    FreqAlgChoiceID,
    FreqSizeChoiceID,
@@ -171,6 +173,8 @@ BEGIN_EVENT_TABLE(FrequencyPlotDialog, wxDialogWrapper)
    EVT_SIZE(FrequencyPlotDialog::OnSize)
    EVT_SLIDER(FreqVZoomSliderID, FrequencyPlotDialog::OnZoomSlider)
    EVT_COMMAND_SCROLL(FreqVPanScrollerID, FrequencyPlotDialog::OnPanScroller)
+   EVT_SLIDER(FreqHZoomSliderID, FrequencyPlotDialog::OnZoomSlider)
+   EVT_COMMAND_SCROLL(FreqHPanScrollerID, FrequencyPlotDialog::OnPanScroller)
    EVT_CHOICE(FreqAlgChoiceID, FrequencyPlotDialog::OnAlgChoice)
    EVT_CHOICE(FreqSizeChoiceID, FrequencyPlotDialog::OnSizeChoice)
    EVT_CHOICE(FreqFuncChoiceID, FrequencyPlotDialog::OnFuncChoice)
@@ -366,35 +370,87 @@ void FrequencyPlotDialog::Populate()
       S.EndHorizontalLay();
 
       // -------------------------------------------------------------------
-      // ROW 2: Frequency ruler
+      // ROW 2: Frequency ruler, pan, and zoom
       // -------------------------------------------------------------------
 
+      // col0
       S.AddSpace(1);
 
-      S.StartHorizontalLay(wxEXPAND, 0);
+      // col1
+      S.StartVerticalLay(0);  // do not expand vertically
       {
-         hRuler  = safenew RulerPanel(
-            S.GetParent(), wxID_ANY, wxHORIZONTAL,
-            wxSize{ 100, 100 }, // Ruler can't handle small sizes
-            RulerPanel::Range{ 10, 20000 },
-            Ruler::RealFormat,
-            XO("Hz"),
-            RulerPanel::Options{}
-               .Log(true)
-               .Flip(true)
-               .LabelEdges(true)
-               .TickColour( theTheme.Colour( clrGraphLabels ) )
-         );
+         S.StartHorizontalLay(wxEXPAND, 0);  // expand horizontally, not vertically
+         {
+            hRuler  = safenew RulerPanel(
+               S.GetParent(), wxID_ANY, wxHORIZONTAL,
+               wxSize{ 100, 100 }, // Ruler can't handle small sizes
+               RulerPanel::Range{ 10, 20000 },
+               Ruler::RealFormat,
+               XO("Hz"),
+               RulerPanel::Options{}
+                  .Log(true)
+                  .Flip(true)
+                  .LabelEdges(true)
+                  .TickColour( theTheme.Colour( clrGraphLabels ) )
+            );
 
-         S.AddSpace(1, wxDefaultCoord);
-         S.Prop(1)
-            .Position(wxALIGN_LEFT | wxALIGN_TOP)
-            .AddWindow(hRuler);
-         S.AddSpace(1, wxDefaultCoord);
+            S.AddSpace(1, wxDefaultCoord);
+            S.Prop(1)
+               .Position(wxALIGN_LEFT | wxALIGN_TOP)
+               .AddWindow(hRuler);
+            S.AddSpace(1, wxDefaultCoord);
+         }
+         S.EndHorizontalLay();
+
+         S.StartHorizontalLay(wxEXPAND, 0);
+         {
+            hPanScroller = safenew wxScrollBar(S.GetParent(), FreqHPanScrollerID,
+               wxDefaultPosition, wxDefaultSize, wxSB_HORIZONTAL);
+#if wxUSE_ACCESSIBILITY
+            // so that name can be set on a standard control
+            hPanScroller->SetAccessible(safenew WindowAccessible(hPanScroller));
+#endif
+            S.Prop(1);
+            S
+               .Name(XO("Scroll Horizontal"))
+               .Position( wxALIGN_LEFT | wxTOP)
+               .AddWindow(hPanScroller);
+         }
+         S.EndHorizontalLay();
+
+         S.StartHorizontalLay(wxEXPAND, 0);
+         {
+            wxStaticBitmap *zi = safenew wxStaticBitmap(S.GetParent(), wxID_ANY, wxBitmap(ZoomOut));
+            S.Position(wxALIGN_CENTER)
+               .AddWindow(zi);
+
+            S.AddSpace(5);
+
+            hZoomSlider = safenew wxSliderWrapper(S.GetParent(), FreqHZoomSliderID, 100, 1, 100,
+               wxDefaultPosition, wxDefaultSize, wxSL_HORIZONTAL);
+            S.Prop(1);
+            S
+               .Name(XO("Zoom Horizontal"))
+               .Position(wxALIGN_CENTER_VERTICAL)
+               .AddWindow(hZoomSlider);
+#if wxUSE_ACCESSIBILITY
+            // so that name can be set on a standard control
+            hZoomSlider->SetAccessible(safenew WindowAccessible(hZoomSlider));
+#endif
+
+            S.AddSpace(5);
+
+            wxStaticBitmap *zo = safenew wxStaticBitmap(S.GetParent(), wxID_ANY, wxBitmap(ZoomIn));
+            S.Position(wxALIGN_CENTER)
+               .AddWindow(zo);
+         }
+         S.EndHorizontalLay();
       }
-      S.EndHorizontalLay();
+      S.EndVerticalLay();
 
+      // col2
       S.AddSpace(1);
+      // next row
 
       // -------------------------------------------------------------------
       // ROW 3: Spacer
