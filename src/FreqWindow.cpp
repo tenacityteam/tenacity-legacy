@@ -753,16 +753,22 @@ void FrequencyPlotDialog::DrawPlot()
       return;
    }
 
-   float yRange = mYMax - mYMin;
-   float yTotal = yRange * ((float) vZoomSlider->GetValue() / 100.0f);
+   // Compute y axis ruler range, given current zoom level
+   float yTotal, yMax, yMin;
+   {
+      float yRange = mYMax - mYMin;
+      yTotal = yRange * ((float) vZoomSlider->GetValue() / 100.0f);
 
-   int sTotal = yTotal * 100;
-   int sRange = yRange * 100;
-   int sPos = vPanScroller->GetThumbPosition() + ((vPanScroller->GetThumbSize() - sTotal) / 2);
-    vPanScroller->SetScrollbar(sPos, sTotal, sRange, sTotal);
+      int sTotal = yTotal * 100;
+      int sRange = yRange * 100;
+      int sPos = vPanScroller->GetThumbPosition() + ((vPanScroller->GetThumbSize() - sTotal) / 2);
 
-   float yMax = mYMax - ((float)sPos / 100);
-   float yMin = yMax - yTotal;
+      // Set scrollbar size
+      vPanScroller->SetScrollbar(sPos, sTotal, sRange, sTotal);
+
+      yMax = mYMax - ((float)sPos / 100);
+      yMin = yMax - yTotal;
+   }
 
    // Set up y axis ruler
 
