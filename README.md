@@ -1,5 +1,10 @@
-Tenacity
-=========================
+# Tenacity
+
+[![Chat on IRC](https://badgen.net/badge/irc/%23tenacity/green)](https://web.libera.chat/gamja/?channels=tenacity)
+[![License](https://badgen.net/badge/license/GPLv2/blue)](LICENSE.txt)
+[![Open issues](https://badgen.net/github/open-issues/tenacityteam/tenacity)](https://github.com/tenacityteam/tenacity/issues)
+[![GitHub builds](https://badgen.net/github/checks/tenacityteam/tenacity/master?label=github)](https://github.com/tenacityteam/tenacity/actions?query=branch%3Amaster)
+[![builds.sr.ht](https://builds.sr.ht/~tenacity/tenacity/.svg)](https://builds.sr.ht/~tenacity/tenacity/?)
 
 Tenacity is an easy-to-use, cross-platform multi-track audio editor/recorder for Windows, MacOS, GNU/Linux and other operating systems and is developed by a group of volunteers as open source software.
 
