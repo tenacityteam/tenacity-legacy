@@ -4,7 +4,7 @@
 
 set -euxo pipefail
 
-cmd_string=/usr/bin/hdiutil "$@"
+cmd_string=/usr/bin/hdiutil "$@" -debug
 
 max_retry=5
 
