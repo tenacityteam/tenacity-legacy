@@ -35,3 +35,7 @@ Developers may find information for the pre-fork releases available at the [Auda
 ## Getting Started
 
 Build instructions for Tenacity are available in the [BUILDING.md file](BUILDING.md).
+
+### Translation
+
+Thank you to Weblate for providing translation SaaS hosting at [weblate.org](https://hosted.weblate.org/projects/tenacity/tenacity/).
