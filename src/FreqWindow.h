@@ -130,8 +130,8 @@ private:
    wxChoice *mSizeChoice;
    wxChoice *mFuncChoice;
    wxChoice *mAxisChoice;
-   wxScrollBar *mPanScroller;
-   wxSlider *mZoomSlider;
+   wxScrollBar *vPanScroller;
+   wxSlider *vZoomSlider;
    wxTextCtrl *mCursorText;
    wxTextCtrl *mPeakText;
 
