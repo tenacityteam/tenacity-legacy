@@ -763,9 +763,11 @@ void FrequencyPlotDialog::DrawPlot()
       int sRange = yRange * 100;
       int sPos = vPanScroller->GetThumbPosition() + ((vPanScroller->GetThumbSize() - sTotal) / 2);
 
-      // Set scrollbar size
+      // Set scrollbar size and position
       vPanScroller->SetScrollbar(sPos, sTotal, sRange, sTotal);
 
+      // Recompute sPos, taking into account SetScrollbar() clamping the position.
+      sPos = vPanScroller->GetThumbPosition();
       yMax = mYMax - ((float)sPos / 100);
       yMin = yMax - yTotal;
    }
