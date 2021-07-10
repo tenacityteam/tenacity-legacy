@@ -96,8 +96,8 @@ DEFINE_EVENT_TYPE(EVT_FREQWINDOW_RECALC);
 enum {
    FirstID = 7000,
 
-   FreqZoomSliderID,
-   FreqPanScrollerID,
+   FreqVZoomSliderID,
+   FreqVPanScrollerID,
    FreqExportButtonID,
    FreqAlgChoiceID,
    FreqSizeChoiceID,
@@ -169,8 +169,8 @@ static const char * ZoomOut[] = {
 BEGIN_EVENT_TABLE(FrequencyPlotDialog, wxDialogWrapper)
    EVT_CLOSE(FrequencyPlotDialog::OnCloseWindow)
    EVT_SIZE(FrequencyPlotDialog::OnSize)
-   EVT_SLIDER(FreqZoomSliderID, FrequencyPlotDialog::OnZoomSlider)
-   EVT_COMMAND_SCROLL(FreqPanScrollerID, FrequencyPlotDialog::OnPanScroller)
+   EVT_SLIDER(FreqVZoomSliderID, FrequencyPlotDialog::OnZoomSlider)
+   EVT_COMMAND_SCROLL(FreqVPanScrollerID, FrequencyPlotDialog::OnPanScroller)
    EVT_CHOICE(FreqAlgChoiceID, FrequencyPlotDialog::OnAlgChoice)
    EVT_CHOICE(FreqSizeChoiceID, FrequencyPlotDialog::OnSizeChoice)
    EVT_CHOICE(FreqFuncChoiceID, FrequencyPlotDialog::OnFuncChoice)
@@ -319,17 +319,17 @@ void FrequencyPlotDialog::Populate()
       {
          S.StartVerticalLay();
          {
-            mPanScroller = safenew wxScrollBar(S.GetParent(), FreqPanScrollerID,
+            vPanScroller = safenew wxScrollBar(S.GetParent(), FreqVPanScrollerID,
                wxDefaultPosition, wxDefaultSize, wxSB_VERTICAL);
 #if wxUSE_ACCESSIBILITY
             // so that name can be set on a standard control
-            mPanScroller->SetAccessible(safenew WindowAccessible(mPanScroller));
+            vPanScroller->SetAccessible(safenew WindowAccessible(vPanScroller));
 #endif
             S.Prop(1);
             S
                .Name(XO("Scroll"))
                .Position( wxALIGN_LEFT | wxTOP)
-               .AddWindow(mPanScroller);
+               .AddWindow(vPanScroller);
          }
          S.EndVerticalLay();
 
@@ -341,16 +341,16 @@ void FrequencyPlotDialog::Populate()
 
             S.AddSpace(5);
 
-            mZoomSlider = safenew wxSliderWrapper(S.GetParent(), FreqZoomSliderID, 100, 1, 100,
+            vZoomSlider = safenew wxSliderWrapper(S.GetParent(), FreqVZoomSliderID, 100, 1, 100,
                wxDefaultPosition, wxDefaultSize, wxSL_VERTICAL);
             S.Prop(1);
             S
                .Name(XO("Zoom"))
                .Position(wxALIGN_CENTER_HORIZONTAL)
-               .AddWindow(mZoomSlider);
+               .AddWindow(vZoomSlider);
 #if wxUSE_ACCESSIBILITY
             // so that name can be set on a standard control
-            mZoomSlider->SetAccessible(safenew WindowAccessible(mZoomSlider));
+            vZoomSlider->SetAccessible(safenew WindowAccessible(vZoomSlider));
 #endif
 
             S.AddSpace(5);
@@ -542,7 +542,7 @@ void FrequencyPlotDialog::Populate()
    //
    // I guess the only way round it would be to handle key actions
    // ourselves, but we'll leave that for a future date.
-//   gtk_widget_set_can_focus(mPanScroller->m_widget, true);
+//   gtk_widget_set_can_focus(vPanScroller->m_widget, true);
 #endif
 }
 
@@ -698,12 +698,12 @@ void FrequencyPlotDialog::DrawPlot()
    }
 
    float yRange = mYMax - mYMin;
-   float yTotal = yRange * ((float) mZoomSlider->GetValue() / 100.0f);
+   float yTotal = yRange * ((float) vZoomSlider->GetValue() / 100.0f);
 
    int sTotal = yTotal * 100;
    int sRange = yRange * 100;
-   int sPos = mPanScroller->GetThumbPosition() + ((mPanScroller->GetThumbSize() - sTotal) / 2);
-    mPanScroller->SetScrollbar(sPos, sTotal, sRange, sTotal);
+   int sPos = vPanScroller->GetThumbPosition() + ((vPanScroller->GetThumbSize() - sTotal) / 2);
+    vPanScroller->SetScrollbar(sPos, sTotal, sRange, sTotal);
 
    float yMax = mYMax - ((float)sPos / 100);
    float yMin = yMax - yTotal;
@@ -1046,7 +1046,7 @@ void FrequencyPlotDialog::Recalc()
    }
 
    // Prime the scrollbar
-   mPanScroller->SetScrollbar(0, (mYMax - mYMin) * 100, (mYMax - mYMin) * 100, 1);
+   vPanScroller->SetScrollbar(0, (mYMax - mYMin) * 100, (mYMax - mYMin) * 100, 1);
 
    DrawPlot();
 }
@@ -1123,7 +1123,7 @@ void FrequencyPlotDialog::UpdatePrefs()
       Show(false);
    }
 
-   auto zoomSlider = mZoomSlider->GetValue();
+   auto zoomSlider = vZoomSlider->GetValue();
    auto drawGrid = mGridOnOff->GetValue();
    auto sizeChoice = mSizeChoice->GetStringSelection();
    auto algChoice = mAlgChoice->GetSelection();
@@ -1135,7 +1135,7 @@ void FrequencyPlotDialog::UpdatePrefs()
 
    Populate();
 
-   mZoomSlider->SetValue(zoomSlider);
+   vZoomSlider->SetValue(zoomSlider);
 
    mDrawGrid = drawGrid;
    mGridOnOff->SetValue(drawGrid);
