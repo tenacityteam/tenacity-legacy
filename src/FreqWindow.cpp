@@ -220,6 +220,23 @@ FrequencyPlotDialog::~FrequencyPlotDialog()
 {
 }
 
+/// The vertical zoom slider stores a value between 1 and MAX_ZOOMED_OUT_V inclusive.
+/// The value is converted to a zoom level by computing
+/// value / MAX_ZOOMED_OUT_V and showing that amount of the total area.
+///
+/// This is confusing because "min zoom is max slider value".
+/// On Linux, the blue fill is *above* the slider, which is ugly.
+/// The blue fill can be moved to the bottom (and the math made consistent with
+/// horizontal zoom sliders) using wxSL_INVERSE.
+/// However, it causes Home to move the slider down
+/// and End to move the slider up. This is inconsistent with prior behavior,
+/// my intuition, scrollable documents, default GTK3 vertical sliders,
+/// and Windows volume control, but consistent with HTML range inputs.
+///
+/// Because I dislike the new behavior and don't want to change behavior,
+/// I chose to not use wxSL_INVERSE and retain "min zoom is max slider value".
+constexpr int MAX_ZOOMED_OUT_V = 100;
+
 void FrequencyPlotDialog::Populate()
 {
    SetTitle(FrequencyAnalysisTitle);
@@ -345,7 +362,8 @@ void FrequencyPlotDialog::Populate()
 
             S.AddSpace(5);
 
-            vZoomSlider = safenew wxSliderWrapper(S.GetParent(), FreqVZoomSliderID, 100, 1, 100,
+            vZoomSlider = safenew wxSliderWrapper(S.GetParent(), FreqVZoomSliderID,
+               MAX_ZOOMED_OUT_V, 1, MAX_ZOOMED_OUT_V,
                wxDefaultPosition, wxDefaultSize, wxSL_VERTICAL);
             S.Prop(1);
             S
@@ -757,7 +775,10 @@ void FrequencyPlotDialog::DrawPlot()
    float yTotal, yMax, yMin;
    {
       float yRange = mYMax - mYMin;
-      yTotal = yRange * ((float) vZoomSlider->GetValue() / 100.0f);
+
+      // How much of the entire graph to show vertically.
+      float showAmount = float(vZoomSlider->GetValue()) / float(MAX_ZOOMED_OUT_V);
+      yTotal = yRange * showAmount;
 
       int sTotal = yTotal * 100;
       int sRange = yRange * 100;
