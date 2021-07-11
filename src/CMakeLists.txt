@@ -1355,6 +1355,9 @@ else()
       install( TARGETS ${TARGET}
                DESTINATION "."
                RESOURCE DESTINATION "${_APPDIR}/Resources" )
+   elseif( CMAKE_SYSTEM_NAME MATCHES "Windows" )
+      install( TARGETS ${TARGET}
+               DESTINATION "." )
    else()
       install( TARGETS ${TARGET} RUNTIME )
       install( DIRECTORY "${_DEST}/${_LIBDIR}/"
