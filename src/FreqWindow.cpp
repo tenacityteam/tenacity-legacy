@@ -956,6 +956,30 @@ void FrequencyPlotDialog::PlotMouseEvent(wxMouseEvent & event)
       else
          mFreqPlot->SetCursor(*mArrowCursor);
 
+      wxRect r = mPlotRect;
+      int width = r.width - 2;
+      if (
+         hNumberScale != NumberScale() &&
+         r.Contains(mMouseX, mMouseY) &&
+         (mMouseX!=0) &&
+         (mMouseX!=r.width-1)
+      ) {
+         auto calcXPosFromMouseX = [&r, &width, &hNumberScale = this->hNumberScale](
+            int mouseX
+         ) -> float {
+            float relativeMouseX = float(mouseX - (r.x + 1)) / float(width);
+            return hNumberScale.PositionToValue(relativeMouseX);
+         };
+
+         /// Frequency of the mouse pixel
+         mCursorXLeft = calcXPosFromMouseX(mMouseX);
+         /// Frequency at 1 pixel to the right
+         mCursorXRight = calcXPosFromMouseX(mMouseX + 1);
+      } else {
+         mCursorXLeft = NO_CURSOR;
+         mCursorXRight = NO_CURSOR;
+      }
+
       mFreqPlot->Refresh(false);
    }
 }
@@ -1023,18 +1047,11 @@ void FrequencyPlotDialog::PlotPaint(wxPaintEvent & event)
    int width = r.width - 2;
 
    // Find the peak nearest the cursor and plot it
-   if ( r.Contains(mMouseX, mMouseY) & (mMouseX!=0) & (mMouseX!=r.width-1) ) {
-      auto calcXPosFromMouseX = [&r, &width, &hNumberScale = this->hNumberScale](
-         int mouseX
-      ) -> float {
-         float relativeMouseX = float(mouseX - (r.x + 1)) / float(width);
-         return hNumberScale.PositionToValue(relativeMouseX);
-      };
-
+   if ( mCursorXLeft != NO_CURSOR ) {
       /// Frequency of the mouse pixel
-      float xPos = calcXPosFromMouseX(mMouseX);
+      float xPos = mCursorXLeft;
       /// Frequency at 1 pixel to the right
-      float xPosNext = calcXPosFromMouseX(mMouseX + 1);
+      float xPosNext = mCursorXRight;
 
       float peakAmplitude = 0;
       float peakPos = mAnalyst->FindPeak(xPos, &peakAmplitude);

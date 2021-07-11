@@ -158,6 +158,12 @@ private:
    int mMouseX;
    int mMouseY;
 
+   static constexpr float NO_CURSOR = -1.f;
+   /// Frequency/period under the mouse cursor, if present.
+   float mCursorXLeft = NO_CURSOR;
+   /// Frequency/period 1 pixel to the right of the mouse cursor, if present.
+   float mCursorXRight = NO_CURSOR;
+
    std::unique_ptr<SpectrumAnalyst> mAnalyst;
 
    DECLARE_EVENT_TABLE()
