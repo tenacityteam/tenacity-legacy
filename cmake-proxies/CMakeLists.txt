@@ -78,11 +78,10 @@ add_conan_lib(
 )
 
 add_conan_lib(
-   libmp3lame
+   mp3lame
    libmp3lame/3.100
    REQUIRED
-   INTERFACE_NAME libmp3lame::libmp3lame
-   PKG_CONFIG "lame >= 3.100"
+   INTERFACE_NAME mp3lame::mp3lame
 )
 
 add_conan_lib(

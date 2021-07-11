@@ -30,6 +30,9 @@ else # Linux & others
     # Distribution packages
     if which apt-get; then
         apt_packages=(
+            # dependencies
+            libmp3lame-dev
+
             # Docker image
             file
             g++
