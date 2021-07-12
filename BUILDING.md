@@ -125,15 +125,24 @@ cmake -GXCode -T buildsystem=1 -Duse_mad="off" -Duse_id3tag=off ../tenacity
     ```
 
 2. Configure Tenacity using CMake:
-   ```
+   ```bash
    $ mkdir build && cd build
-   $ cmake -G "Unix Makefiles" -Duse_ffmpeg=loaded ../tenacity
+   $ cmake -G "Unix Makefiles" -Duse_ffmpeg=loaded ..
    ```
    By default, Debug build will be configured. To change that, pass `-DCMAKE_BUILD_TYPE=Release` to CMake.
 
 3. Build Tenacity:
-   ```
+   ```bash
    $ make -j`nproc`
+   ```
+   Note that this may slow your computer down quite a bit. To avoid this, you can use the alternate command:
+   ```bash
+   $ make -j`let numcores=$(nproc)-2 ; echo $numcores`
+   ```
+   Or, you can manually specify the number of CPU cores to use:
+   ```bash
+   $ make -j2
+   # Uses only 2 cores
    ```
 
 4. Testing the build:
