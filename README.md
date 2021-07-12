@@ -5,6 +5,7 @@
 [![Open issues](https://badgen.net/github/open-issues/tenacityteam/tenacity)](https://github.com/tenacityteam/tenacity/issues)
 [![GitHub builds](https://badgen.net/github/checks/tenacityteam/tenacity/master?label=github)](https://github.com/tenacityteam/tenacity/actions?query=branch%3Amaster)
 [![builds.sr.ht](https://builds.sr.ht/~tenacity/tenacity/.svg)](https://builds.sr.ht/~tenacity/tenacity/?)
+[![Translation status](https://hosted.weblate.org/widgets/tenacity/-/tenacity/svg-badge.svg)](https://hosted.weblate.org/engage/tenacity/)
 
 Tenacity is an easy-to-use, cross-platform multi-track audio editor/recorder for Windows, MacOS, GNU/Linux and other operating systems and is developed by a group of volunteers as open source software.
 
@@ -35,3 +36,7 @@ Developers may find information for the pre-fork releases available at the [Auda
 ## Getting Started
 
 Build instructions for Tenacity are available in the [BUILDING.md file](BUILDING.md).
+
+### Translation
+
+Thank you to Weblate for providing translation SaaS hosting at [weblate.org](https://hosted.weblate.org/projects/tenacity/tenacity/).

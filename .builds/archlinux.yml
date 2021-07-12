@@ -1,0 +1,19 @@
+image: archlinux
+packages:
+  - alsa-lib
+  - cmake
+  - ffmpeg
+  - gtk2
+  - jack2
+  - python-pip
+sources:
+  - https://git.sr.ht/~tenacity/tenacity
+tasks:
+  - conan: |
+      sudo pip install conan
+  - build: |
+      mkdir build
+      cd build
+      cmake -G "Unix Makefiles" \
+            -Daudacity_use_ffmpeg=loaded \
+            ../tenacity
