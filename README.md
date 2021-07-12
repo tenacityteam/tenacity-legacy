@@ -23,7 +23,7 @@ Tenacity is an easy-to-use, cross-platform multi-track audio editor/recorder for
 You can find more information on the causes of the fork here:
 
 - [**Privacy policy which may violate the original project's GPL license**](https://github.com/audacity/audacity/issues/1213)
-- [**Contributer's License Agreement (CLA) which may violate the same GPL license**](https://github.com/audacity/audacity/discussions/932)
+- [**Contributor's License Agreement (CLA) which may violate the same GPL license**](https://github.com/audacity/audacity/discussions/932)
 - [**Attempts at adding telemetry using Google services for data collection**](https://github.com/audacity/audacity/pull/835)
 
 ## Pre-fork Access
