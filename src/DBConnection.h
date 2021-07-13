@@ -1,6 +1,6 @@
 /*!********************************************************************
 
-Audacity: A Digital Audio Editor
+Tenacity
 
 @file DBConnection.h
 @brief Declare DBConnection, which maintains database connection and associated status and background thread

@@ -1,6 +1,6 @@
 /**********************************************************************
 
-   Audacity: A Digital Audio Editor
+   Tenacity
 
    RealFFT48x.cpp
 
