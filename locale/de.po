@@ -22,21 +22,23 @@
 # Tobias Frei <tobias@freiwuppertal.de>, 2012
 # 6f148e04118603d5c67a618be9006666, 2012
 # valsu <valsu@hylia.de>, 2015
+# fossdd <fossdd@tutanota.com>, 2021.
+# Sebastian Rüth <sebirueth@gmx.de>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: Audacity\n"
 "Report-Msgid-Bugs-To: audacity-translation@lists.sourceforge.net\n"
 "POT-Creation-Date: 2021-06-07 08:17-0400\n"
-"PO-Revision-Date: 2021-06-10 20:28+0200\n"
-"Last-Translator: jhuffer <joachim.huffer@gmail.com>\n"
-"Language-Team: German (http://www.transifex.com/klyok/audacity/language/"
-"de/)\n"
+"PO-Revision-Date: 2021-07-13 16:55+0000\n"
+"Last-Translator: Sebastian Rüth <sebirueth@gmx.de>\n"
+"Language-Team: German <https://hosted.weblate.org/projects/tenacity/tenacity/"
+"de/>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.0\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.7.2-dev\n"
 
 #: libraries/lib-strings/Internat.cpp
 msgid "Unable to determine"
@@ -45,7 +47,7 @@ msgstr "Kann nicht bestimmt werden"
 #: libraries/lib-strings/Internat.cpp
 #, c-format
 msgid "%s bytes"
-msgstr "%s bytes"
+msgstr "%s Bytes"
 
 #. i18n-hint: Abbreviation for Kilo bytes
 #: libraries/lib-strings/Internat.cpp
@@ -107,12 +109,12 @@ msgstr "&Nicht senden"
 #: libraries/lib-strings/UnusedStrings.h
 #, c-format
 msgid "Exception code 0x%x"
-msgstr "Ausnahmecode 0x%x"
+msgstr "Fehlercode 0x%x"
 
 #. i18n-hint C++ programming exception
 #: libraries/lib-strings/UnusedStrings.h
 msgid "Unknown exception"
-msgstr "Unbekannte Ausnahme"
+msgstr "Unbekannter Fehler"
 
 #. i18n-hint C++ programming assertion
 #: libraries/lib-strings/UnusedStrings.h
@@ -155,12 +157,12 @@ msgstr "Graustufen"
 #: libraries/lib-strings/UnusedStrings.h
 msgctxt "spectrum prefs"
 msgid "Inverse grayscale"
-msgstr "Inverse Graustufen"
+msgstr "Umgekehrte Graustufen"
 
 #: libraries/lib-strings/UnusedStrings.h
 msgctxt "update dialog"
 msgid "Update Audacity"
-msgstr "Audacity aktualisieren"
+msgstr "Tenacity aktualisieren"
 
 #: libraries/lib-strings/UnusedStrings.h
 msgctxt "update dialog"
@@ -740,7 +742,8 @@ msgstr "Forum"
 msgid "translator_credits"
 msgstr ""
 "Deutsche Übersetzung von Andreas Klug, Heiko Abler, Pennywize, Edgar M. "
-"Franke, Daniel Winzen, Ralf Gebauer und Joachim Huffer"
+"Franke, Daniel Winzen, Ralf Gebauer und Joachim Huffer, Sebastian Rüth, "
+"fossdd"
 
 #: src/AboutDialog.cpp
 msgid "<h3>"
@@ -772,13 +775,13 @@ msgstr "%s-Teammitglieder"
 
 #: src/AboutDialog.cpp
 msgid "Emeritus:"
-msgstr "Im Ruhestand"
+msgstr "Inaktiv:"
 
 #. i18n-hint: The program's name substitutes for %s
 #: src/AboutDialog.cpp
 #, c-format
 msgid "Distinguished %s Team members, not currently active"
-msgstr "Bedeutende %s-Teammitglieder, zur Zeit nicht aktiv"
+msgstr "Bedeutende %s-Teammitglieder, zur Zeit inaktiv"
 
 #: src/AboutDialog.cpp
 msgid "Contributors"
@@ -804,7 +807,7 @@ msgstr "%s beinhaltet Code aus den folgenden Projekten:"
 
 #: src/AboutDialog.cpp
 msgid "Special thanks:"
-msgstr "Besonderer Dank"
+msgstr "Besonderen Dank an:"
 
 #. i18n-hint: The program's name substitutes for %s
 #: src/AboutDialog.cpp
@@ -827,7 +830,7 @@ msgstr "Der Name %s ist ein registriertes Warenzeichen."
 
 #: src/AboutDialog.cpp
 msgid "Build Information"
-msgstr "Erstellungs-Informationen"
+msgstr "Build-Informationen"
 
 #: src/AboutDialog.cpp src/PluginManager.cpp src/prefs/ModulePrefs.cpp
 msgid "Enabled"
@@ -841,11 +844,11 @@ msgstr "Deaktiviert"
 #. i18n-hint: Information about when audacity was compiled follows
 #: src/AboutDialog.cpp
 msgid "The Build"
-msgstr "Die Build"
+msgstr "Build Informationen"
 
 #: src/AboutDialog.cpp
 msgid "Program build date:"
-msgstr "Programm-Erstelldatum:"
+msgstr "Programm-Builddatum:"
 
 #: src/AboutDialog.cpp
 msgid "Commit Id:"
@@ -864,11 +867,11 @@ msgstr "Release-Build (Debuglevel %d)"
 #: src/AboutDialog.cpp
 #, c-format
 msgid "%s, 64 bits"
-msgstr "%s, 64 Bit"
+msgstr "%s, 64-Bit"
 
 #: src/AboutDialog.cpp
 msgid "Build type:"
-msgstr "Erstelltyp:"
+msgstr "Buildtyp:"
 
 #: src/AboutDialog.cpp
 msgid "Compiler:"
