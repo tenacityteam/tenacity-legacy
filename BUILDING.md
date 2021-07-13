@@ -167,8 +167,9 @@ You can use `cmake -LH` to get a list of the options available (or use CMake GUI
 
 On Linux it is possible to build Tenacity using (almost) only the libraries provided by the package manager. Please, see the list of required libraries [here](linux/required_libraries.md).
 
+Follow the steps from [Linux & Other OS](#linux--other-os) section but run CMake with the following arguments:
+
 ```
-$ mkdir build && cd build
 $ cmake -G "Unix Makefiles" \
         -Duse_ffmpeg=loaded \
         -Dlib_preference=system \
