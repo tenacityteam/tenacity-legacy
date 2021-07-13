@@ -1,6 +1,6 @@
 /*!********************************************************************
 
-Audacity: A Digital Audio Editor
+Tenacity
 
 @file AttachedVirtualFunction.h
 @brief Utility for non-intrusive definition of a new method on a base class

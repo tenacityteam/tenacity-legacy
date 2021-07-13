@@ -1,6 +1,6 @@
 /*!********************************************************************
 
-  Audacity: A Digital Audio Editor
+  Tenacity
 
   @file Track.h
   @brief declares abstract base class Track, TrackList, and iterators over TrackList

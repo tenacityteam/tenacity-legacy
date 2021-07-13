@@ -1,6 +1,6 @@
 /*!********************************************************************
 
-Audacity: A Digital Audio Editor
+Tenacity
 
 @file ClientDataHelpers.h
 @brief Some implementation details for ClientData
