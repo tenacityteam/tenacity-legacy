@@ -122,6 +122,7 @@ cmake -GXCode -T buildsystem=1 -Duse_mad="off" -Duse_id3tag=off ../tenacity
   
     ```
     $ git clone https://github.com/tenacityteam/tenacity/
+    $ cd tenacity
     ```
 
 2. Configure Tenacity using CMake:
