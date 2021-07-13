@@ -138,9 +138,10 @@ cmake -GXCode -T buildsystem=1 -Duse_mad="off" -Duse_id3tag=off ../tenacity
    ```
    Note that this may slow your computer down quite a bit. To avoid this, you can use the alternate command:
    ```bash
-   $ make -j`let numcores=$(nproc)-2 ; echo $numcores`
+   $ make -j$(($(nproc)-2))
    ```
-   Or, you can manually specify the number of CPU cores to use:
+   This will use 2 fewer CPU cores than the default, which is to use the absolute maximum number of cores. Feel free to change this to `make -j$(($(nproc)-3))` if you want to use (MAX-3) cores, or any other custom values.
+   Alternatively, you can manually specify the number of CPU cores to use:
    ```bash
    $ make -j2
    # Uses only 2 cores
