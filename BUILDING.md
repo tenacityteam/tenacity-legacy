@@ -113,7 +113,7 @@ Alternatively, you can use **CLion**. If you chose to do so, open the directory 
 At the moment we only support **x86_64** builds. It is possible to build using AppleSilicon hardware but **mad** and **id3tag** should be disabled:
 
 ```
-cmake -GXCode -T buildsystem=1 -Daudacity_use_mad="off" -Daudacity_use_id3tag=off ../tenacity
+cmake -GXCode -T buildsystem=1 -Duse_mad="off" -Duse_id3tag=off ../tenacity
 ```
 
 ## Linux & Other OS
@@ -122,18 +122,29 @@ cmake -GXCode -T buildsystem=1 -Daudacity_use_mad="off" -Daudacity_use_id3tag=of
   
     ```
     $ git clone https://github.com/tenacityteam/tenacity/
+    $ cd tenacity
     ```
 
 2. Configure Tenacity using CMake:
-   ```
+   ```bash
    $ mkdir build && cd build
-   $ cmake -G "Unix Makefiles" -Daudacity_use_ffmpeg=loaded ../tenacity
+   $ cmake -G "Unix Makefiles" -Duse_ffmpeg=loaded ..
    ```
    By default, Debug build will be configured. To change that, pass `-DCMAKE_BUILD_TYPE=Release` to CMake.
 
 3. Build Tenacity:
-   ```
+   ```bash
    $ make -j`nproc`
+   ```
+   Note that this may slow your computer down quite a bit. To avoid this, you can use the alternate command:
+   ```bash
+   $ make -j$(($(nproc)-2))
+   ```
+   This will use 2 fewer CPU cores than the default, which is to use the absolute maximum number of cores. Feel free to change this to `make -j$(($(nproc)-3))` if you want to use (MAX-3) cores, or any other custom values.
+   Alternatively, you can manually specify the number of CPU cores to use:
+   ```bash
+   $ make -j2
+   # Uses only 2 cores
    ```
 
 4. Testing the build:
@@ -144,11 +155,7 @@ cmake -GXCode -T buildsystem=1 -Daudacity_use_mad="off" -Daudacity_use_id3tag=of
    $ ./audacity
    ```
 
-5. Installing Tenacity
-   ```
-   $ cd <build directory>
-   $ sudo make install
-   ```
+At the moment, you are unable to install tenacity system-wide due conflits with libraries. You have to run Step 4 to use Tenacity. We are trying to fix that for the first stable release.
 
 ## Advanced
 
@@ -160,12 +167,13 @@ You can use `cmake -LH` to get a list of the options available (or use CMake GUI
 
 On Linux it is possible to build Tenacity using (almost) only the libraries provided by the package manager. Please, see the list of required libraries [here](linux/required_libraries.md).
 
+Follow the steps from [Linux & Other OS](#linux--other-os) section but run CMake with the following arguments:
+
 ```
-$ mkdir build && cd build
 $ cmake -G "Unix Makefiles" \
-        -Daudacity_use_ffmpeg=loaded \
-        -Daudacity_lib_preference=system \
-        -Daudacity_obey_system_dependencies=On \
+        -Duse_ffmpeg=loaded \
+        -Dlib_preference=system \
+        -Dobey_system_dependencies=On \
          ../tenacity
 ```
 
