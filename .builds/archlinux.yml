@@ -11,9 +11,13 @@ sources:
 tasks:
   - conan: |
       sudo pip install conan
-  - build: |
+  - configure: |
       mkdir build
       cd build
       cmake -G "Unix Makefiles" \
             -Daudacity_use_ffmpeg=loaded \
             ../tenacity
+  - make: |
+      cd build
+      make -j4
+      # TODO: Add artifacts

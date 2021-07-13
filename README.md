@@ -4,7 +4,7 @@
 [![License](https://badgen.net/badge/license/GPLv2/blue)](LICENSE.txt)
 [![Open issues](https://badgen.net/github/open-issues/tenacityteam/tenacity)](https://github.com/tenacityteam/tenacity/issues)
 [![GitHub builds](https://badgen.net/github/checks/tenacityteam/tenacity/master?label=github)](https://github.com/tenacityteam/tenacity/actions?query=branch%3Amaster)
-[![builds.sr.ht](https://builds.sr.ht/~tenacity/tenacity/.svg)](https://builds.sr.ht/~tenacity/tenacity/?)
+[![builds.sr.ht](https://builds.sr.ht/~tenacity/tenacity/commits/.svg)](https://builds.sr.ht/~tenacity/tenacity/commits/?)
 [![Translation status](https://hosted.weblate.org/widgets/tenacity/-/tenacity/svg-badge.svg)](https://hosted.weblate.org/engage/tenacity/)
 
 Tenacity is an easy-to-use, cross-platform multi-track audio editor/recorder for Windows, MacOS, GNU/Linux and other operating systems and is developed by a group of volunteers as open source software.
@@ -23,7 +23,7 @@ Tenacity is an easy-to-use, cross-platform multi-track audio editor/recorder for
 You can find more information on the causes of the fork here:
 
 - [**Privacy policy which may violate the original project's GPL license**](https://github.com/audacity/audacity/issues/1213)
-- [**Contributer's License Agreement (CLA) which may violate the same GPL license**](https://github.com/audacity/audacity/discussions/932)
+- [**Contributor's License Agreement (CLA) which may violate the same GPL license**](https://github.com/audacity/audacity/discussions/932)
 - [**Attempts at adding telemetry using Google services for data collection**](https://github.com/audacity/audacity/pull/835)
 
 ## Pre-fork Access
