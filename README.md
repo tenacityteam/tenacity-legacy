@@ -1,4 +1,4 @@
-[![Tenacity](https://raw.githubusercontent.com/tenacityteam/assets/master/PNG/tenacity-logo-light-300.png)](https://tenacityaudio.org)
+[![Tenacity](https://raw.githubusercontent.com/tenacityteam/assets/master/PNG/tenacity-logo-dark-readme.png)](https://tenacityaudio.org)
 
 [![Chat on IRC](https://badgen.net/badge/irc/%23tenacity/green)](https://web.libera.chat/gamja/?channels=tenacity)
 [![License](https://badgen.net/badge/license/GPLv2/blue)](LICENSE.txt)
