@@ -124,7 +124,7 @@ IDENT=$(plist "${DSTROOT}/Audacity.app/Contents/Info.plist" "CFBundleIdentifier"
 #   https://support.apple.com/guide/keychain-access/add-a-password-to-a-keychain-kyca1120/mac
 #
 # You generate the app-specific password in your Apple developer account and you must specify
-# "org.audacityteam.audacity" as the application identifier.
+# "org.tenacityteam.tenacity" as the application identifier.
 #
 SIGNING=
 if [ -r ~/.audacity_signing ]
