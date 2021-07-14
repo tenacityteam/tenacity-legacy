@@ -46,9 +46,9 @@ most commonly asked questions about Audacity.
 
 // DA: Logo for Splash Dialog (welcome dialog)
 #ifdef EXPERIMENTAL_DA
-#include "../images/DarkAudacityLogoWithName.xpm"
+#include "../images/DarkTenacityLogoWithName.xpm"
 #else
-#include "../images/AudacityLogoWithName.xpm"
+#include "../images/TenacityLogoWithName.xpm"
 #endif
 
 SplashDialog * SplashDialog::pSelf=NULL;
@@ -71,7 +71,7 @@ void SplashDialog::DoHelpWelcome( AudacityProject &project )
 }
 
 SplashDialog::SplashDialog(wxWindow * parent)
-   :  wxDialogWrapper(parent, -1, XO("Welcome to Audacity!"),
+   :  wxDialogWrapper(parent, -1, XO("Welcome to Tenacity!"),
       wxPoint( -1, 60 ), // default x position, y position 60 pixels from top of screen.
       wxDefaultSize, wxDEFAULT_DIALOG_STYLE | wxRESIZE_BORDER)
 {
@@ -89,7 +89,7 @@ SplashDialog::SplashDialog(wxWindow * parent)
 void SplashDialog::OnChar(wxMouseEvent &event)
 {
    if ( event.ShiftDown() && event.ControlDown() )
-      wxLaunchDefaultBrowser("https://www.audacityteam.org");
+      wxLaunchDefaultBrowser("https://www.m.org");
 }
 
 void SplashDialog::Populate( ShuttleGui & S )
@@ -107,9 +107,9 @@ void SplashDialog::Populate( ShuttleGui & S )
    // It also makes it easier to revert to full size if we decide to.
    const float fScale=0.5f;// smaller size.
    wxImage RescaledImage( m_pLogo->ConvertToImage() );
-   wxColour MainColour( 
-      RescaledImage.GetRed(1,1), 
-      RescaledImage.GetGreen(1,1), 
+   wxColour MainColour(
+      RescaledImage.GetRed(1,1),
+      RescaledImage.GetGreen(1,1),
       RescaledImage.GetBlue(1,1));
    this->SetBackgroundColour(MainColour);
 
