@@ -1073,12 +1073,7 @@ bool AudacityApp::OnInit()
    // Don't use AUDACITY_NAME here.
    // We want Audacity with a capital 'A'
 
-// DA: App name
-#ifndef EXPERIMENTAL_DA
-   wxString appName = wxT("Audacity");
-#else
-   wxString appName = wxT("DarkAudacity");
-#endif
+   wxString appName = wxT("Tenacity");
 
    wxTheApp->SetAppName(appName);
    // Explicitly set since OSX will use it for the "Quit" menu item
@@ -1102,8 +1097,8 @@ bool AudacityApp::OnInit()
    /* Search path (for plug-ins, translations etc) is (in this order):
       * The AUDACITY_PATH environment variable
       * The current directory
-      * The user's "~/.audacity-data" or "Portable Settings" directory
-      * The user's "~/.audacity-files" directory
+      * The user's "~/.tenacity-data" or "Portable Settings" directory
+      * The user's "~/.tenacity-files" directory
       * The "share" and "share/doc" directories in their install path */
    wxString home = wxGetHomeDir();
 
@@ -1112,11 +1107,11 @@ bool AudacityApp::OnInit()
       /* On Unix systems, the environment variable TMPDIR may point to
          an unusual path when /tmp and /var/tmp are not desirable. */
       TempDirectory::SetDefaultTempDir( wxString::Format(
-         wxT("%s/audacity-%s"), envTempDir, wxGetUserId() ) );
+         wxT("%s/tenacity-%s"), envTempDir, wxGetUserId() ) );
    } else {
       /* On Unix systems, the default temp dir is in /var/tmp. */
       TempDirectory::SetDefaultTempDir( wxString::Format(
-         wxT("/var/tmp/audacity-%s"), wxGetUserId() ) );
+         wxT("/var/tmp/tenacity-%s"), wxGetUserId() ) );
    }
 
 // DA: Path env variable.
@@ -1132,7 +1127,7 @@ bool AudacityApp::OnInit()
    wxString progPath = wxPathOnly(argv[0]);
    FileNames::AddUniquePathToPathList(progPath, audacityPathList);
    // Add the path to modules:
-   FileNames::AddUniquePathToPathList(progPath + L"/lib/audacity", audacityPathList);
+   FileNames::AddUniquePathToPathList(progPath + L"/lib/tenacity", audacityPathList);
 
    FileNames::AddUniquePathToPathList(FileNames::DataDir(), audacityPathList);
 
@@ -1149,15 +1144,15 @@ bool AudacityApp::OnInit()
       wxT(INSTALL_PREFIX), wxT(AUDACITY_NAME)),
       audacityPathList);
 #else //AUDACITY_NAME
-   FileNames::AddUniquePathToPathList(wxString::Format(wxT("%s/.audacity-files"),
+   FileNames::AddUniquePathToPathList(wxString::Format(wxT("%s/.tenacity-files"),
       home),
       audacityPathList)
    FileNames::AddUniquePathToPathList(FileNames::ModulesDir(),
       audacityPathList);
-   FileNames::AddUniquePathToPathList(wxString::Format(wxT("%s/share/audacity"),
+   FileNames::AddUniquePathToPathList(wxString::Format(wxT("%s/share/tenacity"),
       wxT(INSTALL_PREFIX)),
       audacityPathList);
-   FileNames::AddUniquePathToPathList(wxString::Format(wxT("%s/share/doc/audacity"),
+   FileNames::AddUniquePathToPathList(wxString::Format(wxT("%s/share/doc/tenacity"),
       wxT(INSTALL_PREFIX)),
       audacityPathList);
 #endif //AUDACITY_NAME
@@ -1185,7 +1180,7 @@ bool AudacityApp::OnInit()
 
 
 
-   // On Mac and Windows systems, use the directory which contains Audacity.
+   // On Mac and Windows systems, use the directory which contains Tenacity.
 #ifdef __WXMSW__
    // On Windows, the path to the Audacity program is in argv[0]
    wxString progPath = wxPathOnly(argv[0]);
@@ -1216,10 +1211,10 @@ bool AudacityApp::OnInit()
    // JKC Bug 1220: Using an actual temp directory for session data on Mac was
    // wrong because it would get cleared out on a reboot.
    TempDirectory::SetDefaultTempDir( wxString::Format(
-      wxT("%s/Library/Application Support/audacity/SessionData"), tmpDirLoc) );
+      wxT("%s/Library/Application Support/tenacity/SessionData"), tmpDirLoc) );
 
    //TempDirectory::SetDefaultTempDir( wxString::Format(
-   //   wxT("%s/audacity-%s"),
+   //   wxT("%s/tenacity-%s"),
    //   tmpDirLoc,
    //   wxGetUserId() ) );
 #endif //__WXMAC__
@@ -1240,7 +1235,7 @@ bool AudacityApp::OnInit()
 
    // Initialize preferences and language
    {
-      wxFileName configFileName(FileNames::DataDir(), wxT("audacity.cfg"));
+      wxFileName configFileName(FileNames::DataDir(), wxT("tenacity.cfg"));
       auto appName = wxTheApp->GetAppName();
       InitPreferences( AudacityFileConfig::Create(
          appName, wxEmptyString,
@@ -1332,7 +1327,7 @@ bool AudacityApp::InitPart2()
 
    if (parser->Found(wxT("v")))
    {
-      wxPrintf("Audacity v%s\n", AUDACITY_VERSION_STRING);
+      wxPrintf("Tenacity v%s\n", AUDACITY_VERSION_STRING);
       exit(0);
    }
 
@@ -1411,7 +1406,7 @@ bool AudacityApp::InitPart2()
       fileMenu->Append(wxID_NEW, wxString(_("&New")) + wxT("\tCtrl+N"));
       fileMenu->Append(wxID_OPEN, wxString(_("&Open...")) + wxT("\tCtrl+O"));
       fileMenu->AppendSubMenu(urecentMenu.release(), _("Open &Recent..."));
-      fileMenu->Append(wxID_ABOUT, _("&About Audacity..."));
+      fileMenu->Append(wxID_ABOUT, _("&About Tenacity..."));
       fileMenu->Append(wxID_PREFERENCES, wxString(_("&Preferences...")) + wxT("\tCtrl+,"));
 
       {
@@ -1688,7 +1683,7 @@ bool AudacityApp::InitTempDir()
 
 bool AudacityApp::CreateSingleInstanceChecker(const wxString &dir)
 {
-   wxString name = wxString::Format(wxT("audacity-lock-%s"), wxGetUserId());
+   wxString name = wxString::Format(wxT("tenacity-lock-%s"), wxGetUserId());
    mChecker.reset();
    auto checker = std::make_unique<wxSingleInstanceChecker>();
 
@@ -1700,7 +1695,7 @@ bool AudacityApp::CreateSingleInstanceChecker(const wxString &dir)
       // whether there is another instance running or not.
 
       auto prompt = XO(
-"Audacity was not able to lock the temporary files directory.\nThis folder may be in use by another copy of Audacity.\n")
+"Tenacity was not able to lock the temporary files directory.\nThis folder may be in use by another copy of Audacity.\n")
          + runningTwoCopiesStr
          + XO("Do you still want to start Audacity?");
       int action = AudacityMessageBox(
@@ -1722,7 +1717,7 @@ bool AudacityApp::CreateSingleInstanceChecker(const wxString &dir)
 
       if (parser->Found(wxT("v")))
       {
-         wxPrintf("Audacity v%s\n", AUDACITY_VERSION_STRING);
+         wxPrintf("Tenacity v%s\n", AUDACITY_VERSION_STRING);
          return false;
       }
 
@@ -1779,7 +1774,7 @@ bool AudacityApp::CreateSingleInstanceChecker(const wxString &dir)
          + XO(
 "Use the New or Open commands in the currently running Audacity\nprocess to open multiple projects simultaneously.\n");
       AudacityMessageBox(
-         prompt, XO("Audacity is already running"),
+         prompt, XO("Tenacity is already running"),
          wxOK | wxICON_ERROR);
 
       return false;
@@ -1853,7 +1848,7 @@ bool AudacityApp::CreateSingleInstanceChecker(const wxString &dir)
             XO("Unable to acquire semaphores.\n\n"
                "This is likely due to a resource shortage\n"
                "and a reboot may be required."),
-            XO("Audacity Startup Failure"),
+            XO("Tenacity Startup Failure"),
             wxOK | wxICON_ERROR);
 
          return false;
@@ -1892,7 +1887,7 @@ bool AudacityApp::CreateSingleInstanceChecker(const wxString &dir)
             XO("Unable to acquire lock semaphore.\n\n"
                "This is likely due to a resource shortage\n"
                "and a reboot may be required."),
-            XO("Audacity Startup Failure"),
+            XO("Tenacity Startup Failure"),
             wxOK | wxICON_ERROR);
 
          return false;
@@ -1914,7 +1909,7 @@ bool AudacityApp::CreateSingleInstanceChecker(const wxString &dir)
             XO("Unable to acquire server semaphore.\n\n"
                "This is likely due to a resource shortage\n"
                "and a reboot may be required."),
-            XO("Audacity Startup Failure"),
+            XO("Tenacity Startup Failure"),
             wxOK | wxICON_ERROR);
 
          return false;
@@ -1957,7 +1952,7 @@ bool AudacityApp::CreateSingleInstanceChecker(const wxString &dir)
             XO("The Audacity IPC server failed to initialize.\n\n"
                "This is likely due to a resource shortage\n"
                "and a reboot may be required."),
-            XO("Audacity Startup Failure"),
+            XO("Tenacity Startup Failure"),
             wxOK | wxICON_ERROR);
 
          return false;
@@ -1996,7 +1991,7 @@ bool AudacityApp::CreateSingleInstanceChecker(const wxString &dir)
       // Audacity is already running.
       AudacityMessageBox(
          XO("An unrecoverable error has occurred during startup"),
-         XO("Audacity Startup Failure"),
+         XO("Tenacity Startup Failure"),
          wxOK | wxICON_ERROR);
 
       return false;
@@ -2014,7 +2009,7 @@ bool AudacityApp::CreateSingleInstanceChecker(const wxString &dir)
    // Display Audacity's version if requested
    if (parser->Found(wxT("v")))
    {
-      wxPrintf("Audacity v%s\n", AUDACITY_VERSION_STRING);
+      wxPrintf("Tenacity v%s\n", AUDACITY_VERSION_STRING);
 
       return false;
    }
