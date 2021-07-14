@@ -29,11 +29,10 @@ set( AUDACITY_RELEASE 0 )
 set( AUDACITY_REVISION 4 )
 set( AUDACITY_MODLEVEL 0 )
 
-string( TIMESTAMP __TDATE__ "%Y%m%d" )
 if( AUDACITY_BUILD_LEVEL EQUAL 0 )
-   set( AUDACITY_SUFFIX "-alpha-${__TDATE__}" )
+   set( AUDACITY_SUFFIX "-alpha" )
 elseif(  AUDACITY_BUILD_LEVEL EQUAL 1 )
-   set( AUDACITY_SUFFIX "-beta-${__TDATE__}" )
+   set( AUDACITY_SUFFIX "-beta" )
 else()
    set( AUDACITY_SUFFIX "" )
 endif()
@@ -127,8 +126,10 @@ if( CCACHE_PROGRAM )
    set_property( GLOBAL PROPERTY RULE_LAUNCH_COMPILE "${CCACHE_PROGRAM}" )
 endif()
 
-# Define option() prefix
-set( _OPT "audacity_" )
+# Audacity sets this `audacity_` to prefix all CMake options which is not needed and this is not Audacity.
+# Keep this CMake variable here instead of removing it from the rest of the CMake code to minimize merge
+# conflicts with Audacity.
+set( _OPT "" )
 
 # Our very own project
 project( Audacity )
@@ -257,18 +258,17 @@ if( CMAKE_GENERATOR MATCHES "Visual Studio" )
    include( InstallRequiredSystemLibraries )
 endif()
 
-# Where the final product is stored
-set( CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin )
-
 set ( _SHARED_PROXY_BASE "shared" )
 set ( _SHARED_PROXY_BASE_PATH "${CMAKE_BINARY_DIR}/${_SHARED_PROXY_BASE}")
 
-# Define the non-install and executable paths
+# Define the non-install and executable paths and where the final product is stored
 if( CMAKE_CONFIGURATION_TYPES )
+   set( CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin )
    set( _DESTDIR "${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/${CMAKE_CFG_INTDIR}" )
    set( _SHARED_PROXY_PATH "${_SHARED_PROXY_BASE_PATH}/${CMAKE_CFG_INTDIR}")
 else()
-   set( _DESTDIR "${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/${CMAKE_BUILD_TYPE}" )
+   set( CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin/${CMAKE_BUILD_TYPE} )
+   set( _DESTDIR "${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/" )
    set( _SHARED_PROXY_PATH "${_SHARED_PROXY_BASE_PATH}/${CMAKE_BUILD_TYPE}")
 endif()
 

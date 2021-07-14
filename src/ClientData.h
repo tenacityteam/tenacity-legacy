@@ -1,6 +1,6 @@
 /*!********************************************************************
 
-Audacity: A Digital Audio Editor
+Tenacity
 
 @file ClientData.h
 @brief Utility ClientData::Site to register hooks into a host class that attach client data
