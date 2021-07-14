@@ -1149,15 +1149,15 @@ bool AudacityApp::OnInit()
       wxT(INSTALL_PREFIX), wxT(AUDACITY_NAME)),
       audacityPathList);
 #else //AUDACITY_NAME
-   FileNames::AddUniquePathToPathList(wxString::Format(wxT("%s/.audacity-files"),
+   FileNames::AddUniquePathToPathList(wxString::Format(wxT("%s/.tenacity-files"),
       home),
       audacityPathList)
    FileNames::AddUniquePathToPathList(FileNames::ModulesDir(),
       audacityPathList);
-   FileNames::AddUniquePathToPathList(wxString::Format(wxT("%s/share/audacity"),
+   FileNames::AddUniquePathToPathList(wxString::Format(wxT("%s/share/tenacity"),
       wxT(INSTALL_PREFIX)),
       audacityPathList);
-   FileNames::AddUniquePathToPathList(wxString::Format(wxT("%s/share/doc/audacity"),
+   FileNames::AddUniquePathToPathList(wxString::Format(wxT("%s/share/doc/tenacity"),
       wxT(INSTALL_PREFIX)),
       audacityPathList);
 #endif //AUDACITY_NAME

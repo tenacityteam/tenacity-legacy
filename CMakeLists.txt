@@ -442,9 +442,9 @@ endif()
 
 # Define Audacity's name
 if( CMAKE_SYSTEM_NAME MATCHES "Darwin|Windows" )
-   set( AUDACITY_NAME "Audacity" )
+   set( AUDACITY_NAME "Tenacity" )
 else()
-   set( AUDACITY_NAME "audacity" )
+   set( AUDACITY_NAME "tenacity" )
 endif()
 
 # Create short and full version strings
