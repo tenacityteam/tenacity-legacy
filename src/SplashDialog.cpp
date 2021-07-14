@@ -1,22 +1,15 @@
 /**********************************************************************
-
   Tenacity
-
   SplashDialog.cpp
-
   James Crook
-
 ********************************************************************//**
-
 \class SplashDialog
 \brief The SplashDialog shows help information for Audacity when
 Audacity starts up.
-
 It was written for the benefit of NEW users who do not want to
 read the manual.  The text of the dialog is kept short to increase the
 chance of it being read.  The content is designed to reduce the
 most commonly asked questions about Audacity.
-
 *//********************************************************************/
 
 
@@ -46,9 +39,9 @@ most commonly asked questions about Audacity.
 
 // DA: Logo for Splash Dialog (welcome dialog)
 #ifdef EXPERIMENTAL_DA
-#include "../images/DarkTenacityLogoWithName.xpm"
+#include "../images/DarkAudacityLogoWithName.xpm"
 #else
-#include "../images/TenacityLogoWithName.xpm"
+#include "../images/AudacityLogoWithName.xpm"
 #endif
 
 SplashDialog * SplashDialog::pSelf=NULL;
@@ -71,7 +64,7 @@ void SplashDialog::DoHelpWelcome( AudacityProject &project )
 }
 
 SplashDialog::SplashDialog(wxWindow * parent)
-   :  wxDialogWrapper(parent, -1, XO("Welcome to Tenacity!"),
+   :  wxDialogWrapper(parent, -1, XO("Welcome to Audacity!"),
       wxPoint( -1, 60 ), // default x position, y position 60 pixels from top of screen.
       wxDefaultSize, wxDEFAULT_DIALOG_STYLE | wxRESIZE_BORDER)
 {
@@ -89,7 +82,7 @@ SplashDialog::SplashDialog(wxWindow * parent)
 void SplashDialog::OnChar(wxMouseEvent &event)
 {
    if ( event.ShiftDown() && event.ControlDown() )
-      wxLaunchDefaultBrowser("https://www.tenacityaudio.org");
+      wxLaunchDefaultBrowser("https://www.audacityteam.org");
 }
 
 void SplashDialog::Populate( ShuttleGui & S )
@@ -99,7 +92,7 @@ void SplashDialog::Populate( ShuttleGui & S )
    S.StartVerticalLay(1);
 
    //v For now, change to AudacityLogoWithName via old-fashioned ways, not Theme.
-   m_pLogo = std::make_unique<wxBitmap>((const char **) TenacityLogoWithName_xpm); //v
+   m_pLogo = std::make_unique<wxBitmap>((const char **) AudacityLogoWithName_xpm); //v
 
 
    // JKC: Resize to 50% of size.  Later we may use a smaller xpm as
