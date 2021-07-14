@@ -89,7 +89,7 @@ SplashDialog::SplashDialog(wxWindow * parent)
 void SplashDialog::OnChar(wxMouseEvent &event)
 {
    if ( event.ShiftDown() && event.ControlDown() )
-      wxLaunchDefaultBrowser("https://www.m.org");
+      wxLaunchDefaultBrowser("https://www.tenacityaudio.org");
 }
 
 void SplashDialog::Populate( ShuttleGui & S )
@@ -99,7 +99,7 @@ void SplashDialog::Populate( ShuttleGui & S )
    S.StartVerticalLay(1);
 
    //v For now, change to AudacityLogoWithName via old-fashioned ways, not Theme.
-   m_pLogo = std::make_unique<wxBitmap>((const char **) AudacityLogoWithName_xpm); //v
+   m_pLogo = std::make_unique<wxBitmap>((const char **) TenacityLogoWithName_xpm); //v
 
 
    // JKC: Resize to 50% of size.  Later we may use a smaller xpm as
