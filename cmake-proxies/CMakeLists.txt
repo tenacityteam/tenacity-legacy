@@ -116,17 +116,6 @@ add_conan_lib(
    ALWAYS_ALLOW_CONAN_FALLBACK
 )
 
-if( NOT CMAKE_SYSTEM_NAME MATCHES "Darwin|Windows")
-   add_conan_lib(
-      libuuid
-      libuuid/1.0.3
-      REQUIRED
-      OPTION_NAME uuid
-      PKG_CONFIG "uuid"
-      INTERFACE_NAME libuuid::libuuid
-   )
-endif()
-
 add_conan_lib(
    RapidJSON
    rapidjson/1.1.0

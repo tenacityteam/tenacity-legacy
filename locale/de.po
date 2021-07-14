@@ -22,6 +22,8 @@
 # Tobias Frei <tobias@freiwuppertal.de>, 2012
 # 6f148e04118603d5c67a618be9006666, 2012
 # valsu <valsu@hylia.de>, 2015
+# fossdd <fossdd@tutanota.com>, 2021.
+# Sebastian Rüth <sebirueth@gmx.de>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: tenacity 3.0.3\n"
@@ -34,8 +36,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.0\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.7.2-dev\n"
 
 #: libraries/lib-strings/Internat.cpp
 msgid "Unable to determine"
@@ -44,7 +46,7 @@ msgstr "Kann nicht bestimmt werden"
 #: libraries/lib-strings/Internat.cpp
 #, c-format
 msgid "%s bytes"
-msgstr "%s bytes"
+msgstr "%s Bytes"
 
 #. i18n-hint: Abbreviation for Kilo bytes
 #: libraries/lib-strings/Internat.cpp
@@ -104,12 +106,12 @@ msgstr "&Nicht senden"
 #: libraries/lib-strings/UnusedStrings.h
 #, c-format
 msgid "Exception code 0x%x"
-msgstr "Ausnahmecode 0x%x"
+msgstr "Fehlercode 0x%x"
 
 #. i18n-hint C++ programming exception
 #: libraries/lib-strings/UnusedStrings.h
 msgid "Unknown exception"
-msgstr "Unbekannte Ausnahme"
+msgstr "Unbekannter Fehler"
 
 #. i18n-hint C++ programming assertion
 #: libraries/lib-strings/UnusedStrings.h
@@ -152,7 +154,7 @@ msgstr "Graustufen"
 #: libraries/lib-strings/UnusedStrings.h
 msgctxt "spectrum prefs"
 msgid "Inverse grayscale"
-msgstr "Inverse Graustufen"
+msgstr "Umgekehrte Graustufen"
 
 #: libraries/lib-strings/UnusedStrings.h
 #, fuzzy
@@ -725,7 +727,10 @@ msgstr "Forum"
 #. *  For example:  "English translation by Dominic Mazzoni."
 #: src/AboutDialog.cpp
 msgid "translator_credits"
-msgstr "Deutsche Übersetzung von Andreas Klug, Heiko Abler, Pennywize, Edgar M. Franke, Daniel Winzen, Ralf Gebauer und Joachim Huffer"
+msgstr ""
+"Deutsche Übersetzung von Andreas Klug, Heiko Abler, Pennywize, Edgar M. "
+"Franke, Daniel Winzen, Ralf Gebauer und Joachim Huffer, Sebastian Rüth, "
+"fossdd"
 
 #: src/AboutDialog.cpp
 msgid "<h3>"
@@ -753,13 +758,13 @@ msgstr "%s-Teammitglieder"
 
 #: src/AboutDialog.cpp
 msgid "Emeritus:"
-msgstr "Im Ruhestand"
+msgstr "Inaktiv:"
 
 #. i18n-hint: The program's name substitutes for %s
 #: src/AboutDialog.cpp
 #, c-format
 msgid "Distinguished %s Team members, not currently active"
-msgstr "Bedeutende %s-Teammitglieder, zur Zeit nicht aktiv"
+msgstr "Bedeutende %s-Teammitglieder, zur Zeit inaktiv"
 
 #: src/AboutDialog.cpp
 msgid "Contributors"
@@ -785,7 +790,7 @@ msgstr "%s beinhaltet Code aus den folgenden Projekten:"
 
 #: src/AboutDialog.cpp
 msgid "Special thanks:"
-msgstr "Besonderer Dank"
+msgstr "Besonderen Dank an:"
 
 #. i18n-hint: The program's name substitutes for %s
 #: src/AboutDialog.cpp
@@ -808,7 +813,7 @@ msgstr "Der Name %s ist ein registriertes Warenzeichen."
 
 #: src/AboutDialog.cpp
 msgid "Build Information"
-msgstr "Erstellungs-Informationen"
+msgstr "Build-Informationen"
 
 #: src/AboutDialog.cpp src/PluginManager.cpp src/prefs/ModulePrefs.cpp
 msgid "Enabled"
@@ -822,11 +827,11 @@ msgstr "Deaktiviert"
 #. i18n-hint: Information about when tenacity was compiled follows
 #: src/AboutDialog.cpp
 msgid "The Build"
-msgstr "Die Build"
+msgstr "Build Informationen"
 
 #: src/AboutDialog.cpp
 msgid "Program build date:"
-msgstr "Programm-Erstelldatum:"
+msgstr "Programm-Builddatum:"
 
 #: src/AboutDialog.cpp
 msgid "Commit Id:"
@@ -845,11 +850,11 @@ msgstr "Release-Build (Debuglevel %d)"
 #: src/AboutDialog.cpp
 #, c-format
 msgid "%s, 64 bits"
-msgstr "%s, 64 Bit"
+msgstr "%s, 64-Bit"
 
 #: src/AboutDialog.cpp
 msgid "Build type:"
-msgstr "Erstelltyp:"
+msgstr "Buildtyp:"
 
 #: src/AboutDialog.cpp
 msgid "Compiler:"
@@ -1154,8 +1159,8 @@ msgid ""
 "Tenacity needs a place where automatic cleanup programs won't delete the temporary files.\n"
 "Please enter an appropriate directory in the preferences dialog."
 msgstr ""
-"Audacity konnte keinen sicheren Ort zum Speichern temporärer Dateien finden.\n"
-"Audacity benötigt einen Ort an dem automatische Aufräum-Programme die temporären Dateien nicht löschen.\n"
+"Tenacity konnte keinen sicheren Ort zum Speichern temporärer Dateien finden.\n"
+"Tenacity benötigt einen Ort an dem automatische Aufräum-Programme die temporären Dateien nicht löschen.\n"
 "Bitte geben sie ein geeignetes Verzeichnis im Einstellungsdialog ein."
 
 #: src/AudacityApp.cpp
@@ -1164,7 +1169,7 @@ msgid ""
 "Tenacity could not find a place to store temporary files.\n"
 "Please enter an appropriate directory in the preferences dialog."
 msgstr ""
-"Audacity konnte keinen Platz zum Speichern der temporären Dateien finden.\n"
+"Tenacity konnte keinen Platz zum Speichern der temporären Dateien finden.\n"
 "Bitte geben sie ein geeignetes Verzeichnis im Einstellungsdialog ein."
 
 #: src/AudacityApp.cpp
@@ -1179,7 +1184,7 @@ msgid ""
 "data loss or cause your system to crash.\n"
 "\n"
 msgstr ""
-"Audacity mehrfach zu starten kann zu Datenverlusten\n"
+"Tenacity mehrfach zu starten kann zu Datenverlusten\n"
 "führen oder Ihr System instabil werden lassen.\n"
 "\n"
 
@@ -1189,7 +1194,7 @@ msgid ""
 "Tenacity was not able to lock the temporary files directory.\n"
 "This folder may be in use by another copy of Tenacity.\n"
 msgstr ""
-"Audacity konnte das temporäre Verzeichnis nicht sperren.\n"
+"Tenacity konnte das temporäre Verzeichnis nicht sperren.\n"
 "Es kann sein, dass es anderweitig verwendet wird.\n"
 
 #: src/AudacityApp.cpp
@@ -1212,7 +1217,7 @@ msgid ""
 "Use the New or Open commands in the currently running Tenacity\n"
 "process to open multiple projects simultaneously.\n"
 msgstr ""
-"Benutzen Sie die „Neu“ oder „Öffnen“ Befehle im aktuell laufenden Audacity-Prozess,\n"
+"Benutzen Sie die „Neu“ oder „Öffnen“ Befehle im aktuell laufenden Tenacity-Prozess,\n"
 "um mehrere Projekte gleichzeitig zu öffnen.\n"
 
 #: src/AudacityApp.cpp
@@ -1281,7 +1286,7 @@ msgid ""
 "This is likely due to a resource shortage\n"
 "and a reboot may be required."
 msgstr ""
-"Der Audacity IPC-Server konnte nicht initialisiert werden.\n"
+"Der Tenacity IPC-Server konnte nicht initialisiert werden.\n"
 "\n"
 "Dies resultiert wahrscheinlich aus einer Ressourcenknappheit\n"
 "und ein Neustart könnte erforderlich sein."
@@ -1326,8 +1331,8 @@ msgid ""
 "\n"
 "Associate them, so they open on double-click?"
 msgstr ""
-"Audacity-Projektdateien (.aup3) sind momentan nicht\n"
-"mit Audacity verknüpft.\n"
+"Tenacity-Projektdateien (.aup3) sind momentan nicht\n"
+"mit Tenacity verknüpft.\n"
 "\n"
 "Verknüpfen, damit diese per Doppelklick geöffnet werden können?"
 
@@ -1367,7 +1372,7 @@ msgstr ""
 "\n"
 "Sie können versuchen, das Problem zu beheben und dann \"Erneut\" klicken, um fortzufahren.\n"
 "\n"
-"Wenn Sie \"Audacity beenden\" wählen, befindet sich Ihr Projekt möglicherweise in einem nicht gespeicherten Zustand, der beim nächsten Öffnen wiederhergestellt wird."
+"Wenn Sie \"Tenacity beenden\" wählen, befindet sich Ihr Projekt möglicherweise in einem nicht gespeicherten Zustand, der beim nächsten Öffnen wiederhergestellt wird."
 
 #: src/AudacityFileConfig.cpp src/ShuttleGui.cpp src/commands/HelpCommand.cpp
 #: src/effects/Equalization.cpp src/export/Export.cpp src/menus/HelpMenus.cpp
@@ -1695,7 +1700,7 @@ msgid ""
 "\n"
 "After recovery, save the projects to ensure changes are written to disk."
 msgstr ""
-"Die folgenden Projekte wurden nicht korrekt gespeichert, als Audacity zuletzt ausgeführt wurde und können automatisch wiederhergestellt werden.\n"
+"Die folgenden Projekte wurden nicht korrekt gespeichert, als Tenacity zuletzt ausgeführt wurde und können automatisch wiederhergestellt werden.\n"
 "\n"
 "Speichern Sie die Projekte nach der Wiederherstellung, um sicherzustellen, dass Änderungen auf die Festplatte geschrieben werden."
 
@@ -2482,7 +2487,7 @@ msgid ""
 msgstr ""
 "Ihr Projekt ist eigenständig; es hängt nicht von externen Audiodateien ab. \n"
 "\n"
-"Einige ältere Audacity-Projekte sind möglicherweise nicht eigenständig -\n"
+"Einige ältere Tenacity-Projekte sind möglicherweise nicht eigenständig -\n"
 "Sorgfalt ist nötig um deren externe Abhängigkeiten am richtigen Platz zu halten.\n"
 "Neue Projekte sind eigenständig und weniger riskant."
 
@@ -2571,7 +2576,7 @@ msgid ""
 "You may want to go back to Preferences > Libraries and re-configure it."
 msgstr ""
 "FFmpeg wurde in den Einstellungen konfiguriert und wurde auch bereits erfolgreich geladen,\n"
-"aber dieses Mal konnte Audacity es beim Start nicht laden. \n"
+"aber dieses Mal konnte Tenacity es beim Start nicht laden. \n"
 "\n"
 "Sie können zu „Einstellungen“ > „Bibliotheken“ gehen und es nachkonfigurieren."
 
@@ -2637,7 +2642,7 @@ msgid ""
 "To use FFmpeg import, go to Edit > Preferences > Libraries\n"
 "to download or locate the FFmpeg libraries."
 msgstr ""
-"Audacity versuchte FFmpeg für den Import einer Audiodatei zu verwenden,\n"
+"Tenacity versuchte FFmpeg für den Import einer Audiodatei zu verwenden,\n"
 "konnte die Bibliotheken aber nicht finden.\n"
 "\n"
 "Um den FFmpeg-Import zu verwenden, gehen Sie zu 'Bearbeiten > Einstellungen > Bibliotheken'\n"
@@ -2682,7 +2687,7 @@ msgid ""
 "Perhaps %s is not writable or the disk is full.\n"
 "For tips on freeing up space, click the help button."
 msgstr ""
-"Audacity konnte nicht in eine Datei schreiben.\n"
+"Tenacity konnte nicht in eine Datei schreiben.\n"
 "Vielleicht ist %s nicht schreibbar oder die Festplatte ist voll.\n"
 "Um Tipps zu erhalten, wie Platz freigemacht werden kann, klicken Sie den Hilfe-Knopf."
 
@@ -3133,7 +3138,7 @@ msgid ""
 "Please inform the Tenacity team at https://forum.audacityteam.org/."
 msgstr ""
 "Interner Fehler in %s bei %s Zeile %d.\n"
-"Bitte das Audacity-Team informieren unter https://forum.audacityteam.org/."
+"Bitte das Tenacity-Team informieren unter https://forum.audacityteam.org/."
 
 #: src/InconsistencyException.cpp
 #, fuzzy, c-format
@@ -3142,7 +3147,7 @@ msgid ""
 "Please inform the Tenacity team at https://forum.audacityteam.org/."
 msgstr ""
 "Interner Fehler bei %s Zeile %d.\n"
-"Bitte das Audacity-Team informieren unter https://forum.audacityteam.org/."
+"Bitte das Tenacity-Team informieren unter https://forum.audacityteam.org/."
 
 #: src/InconsistencyException.h
 msgid "Internal Error"
@@ -3426,7 +3431,7 @@ msgid ""
 "\n"
 "It will not be loaded."
 msgstr ""
-"Das Modul \"%s\" passt zu Audacity-Version \"%s\".\n"
+"Das Modul \"%s\" passt zu Tenacity-Version \"%s\".\n"
 "\n"
 "Es wird nicht geladen."
 
@@ -3796,7 +3801,7 @@ msgid ""
 "each stereo track)"
 msgstr ""
 "Für Aufnahme mit dieser Abtastrate sind zu wenige Spuren gewählt.\n"
-"(Audacity benötigt zwei Kanäle mit der selben Abtastrate für\n"
+"(Tenacity benötigt zwei Kanäle mit der selben Abtastrate für\n"
 "jede Stereospur)"
 
 #: src/ProjectAudioManager.cpp src/menus/TransportMenus.cpp
@@ -3831,7 +3836,7 @@ msgid ""
 msgstr ""
 "Aufgezeichneter Ton ging an den gekennzeichneten Stellen verloren. Mögliche Ursachen:\n"
 "\n"
-"Andere Anwendungen lassen Audacity nicht genügend Prozessorzeit übrig\n"
+"Andere Anwendungen lassen Tenacity nicht genügend Prozessorzeit übrig\n"
 "\n"
 "Sie speichern direkt auf ein langsames externes Speichermedium\n"
 
@@ -3885,7 +3890,7 @@ msgid ""
 msgstr ""
 "Projekt-Überprüfung des Ordners „%s“ ergab, dass \n"
 "%lld externe Audiodatei(en) ('verknüpfte Dateien') fehlen. \n"
-"Audacity kann diese Dateien nicht automatisch \n"
+"Tenacity kann diese Dateien nicht automatisch \n"
 "wiederherstellen. \n"
 "\n"
 "Wenn Sie unten eine der ersten beiden Optionen wählen, \n"
@@ -3921,7 +3926,7 @@ msgid ""
 msgstr ""
 "Projekt-Überprüfung des Ordners „%s“ \n"
 "fand %lld fehlende verknüpfte (.auf) Blockdatei(en). \n"
-"Audacity kann diese Dateien vollständig aus dem \n"
+"Tenacity kann diese Dateien vollständig aus dem \n"
 "im Projekt vorhandenen Audio wiederherstellen."
 
 #: src/ProjectFSCK.cpp
@@ -3959,7 +3964,7 @@ msgstr ""
 "Projekt-Überprüfung des Ordners „%s“ \n"
 "ergab, dass %lld Audio-Blockdatei(en) (.au) fehlen. \n"
 "Ursache könnte ein Fehler sein, ein Systemabsturz oder \n"
-"versehentliches Löschen. Audacity kann die fehlenden \n"
+"versehentliches Löschen. Tenacity kann die fehlenden \n"
 "Dateien nicht automatisch wiederherstellen. \n"
 "\n"
 "Wenn Sie die erste oder zweite Option wählen, \n"
@@ -4115,7 +4120,7 @@ msgid ""
 "\n"
 "You will need to upgrade to open it."
 msgstr ""
-"Dieses Projekt wurde mit einer neueren Version von Audacity erstellt.\n"
+"Dieses Projekt wurde mit einer neueren Version von Tenacity erstellt.\n"
 "\n"
 "Sie müssen upgraden, um es öffnen zu können"
 
@@ -4249,7 +4254,7 @@ msgid ""
 "Perhaps disk is full or not writable.\n"
 "For tips on freeing up space, click the help button."
 msgstr ""
-"Audacity konnte die Datei %s nicht schreiben.\n"
+"Tenacity konnte die Datei %s nicht schreiben.\n"
 "Vielleicht ist die Festplatte voll oder nicht schreibbar.\n"
 "Um Tipps zu erhalten, wie Platz freigemacht werden kann, klicken Sie den Hilfe-Knopf."
 
@@ -4275,8 +4280,8 @@ msgid ""
 "This file was saved using Tenacity %s.\n"
 "You are using Tenacity %s. You may need to upgrade to a newer version to open this file."
 msgstr ""
-"Diese Datei wurde mit Audacity %s gespeichert.\n"
-"Sie nutzen Audacity %s. Bitte verwenden Sie eine neuere Version, um diese Datei zu öffnen."
+"Diese Datei wurde mit Tenacity %s gespeichert.\n"
+"Sie nutzen Tenacity %s. Bitte verwenden Sie eine neuere Version, um diese Datei zu öffnen."
 
 #: src/ProjectFileIO.cpp
 msgid "Can't open project file"
@@ -4349,7 +4354,7 @@ msgid ""
 "\n"
 "It has been recovered to the last snapshot."
 msgstr ""
-"Dieses Projekt wurde bei der letzten Audacity-Ausführung nicht korrekt gespeichert.\n"
+"Dieses Projekt wurde bei der letzten Tenacity-Ausführung nicht korrekt gespeichert.\n"
 "\n"
 "Es wurde bis zum letzten Snapshot wiederhergestellt."
 
@@ -4361,7 +4366,7 @@ msgid ""
 "It has been recovered to the last snapshot, but you must save it\n"
 "to preserve its contents."
 msgstr ""
-"Dieses Projekt wurde bei der letzten Audacity-Ausführung nicht korrekt gespeichert.\n"
+"Dieses Projekt wurde bei der letzten Tenacity-Ausführung nicht korrekt gespeichert.\n"
 "\n"
 "Es wurde bis zum letzten Snapshot wiederhergestellt. Sie müssen es aber speichern, um seine Inhalte zu bewahren."
 
@@ -4439,7 +4444,7 @@ msgid ""
 "'Save Project' is for an Tenacity project, not an audio file.\n"
 "For an audio file that will open in other apps, use 'Export'.\n"
 msgstr ""
-"„Projekt speichern“ ist nicht für Audiodateien, sondern für Audacity-Projekte.\n"
+"„Projekt speichern“ ist nicht für Audiodateien, sondern für Tenacity-Projekte.\n"
 "Um Audiodateien zu erhalten, die in anderen Anwendungen geöffnet werden können, \n"
 "verwenden Sie „Exportieren“.\n"
 
@@ -4532,7 +4537,7 @@ msgstr ""
 "Sie versuchen, eine automatisch erzeugte Sicherungsdatei zu öffnen.\n"
 "Das kann zu ernsthaftem Datenverlust führen.\n"
 "\n"
-"Bitte öffnen Sie stattdessen die Audacity-Projektdatei."
+"Bitte öffnen Sie stattdessen die Tenacity-Projektdatei."
 
 #: src/ProjectFileManager.cpp
 msgid "Warning - Backup File Detected"
@@ -4693,8 +4698,8 @@ msgid ""
 "This recovery file was saved by Tenacity 2.3.0 or before.\n"
 "You need to run that version of Tenacity to recover the project."
 msgstr ""
-"Diese Wiederherstellungsdatei wurde von Audacity 2.3.0 oder älter gespeichert.\n"
-"Sie müssen diese Version von Audacity benutzen, um das Projekt wiederherzustellen."
+"Diese Wiederherstellungsdatei wurde von Tenacity 2.3.0 oder älter gespeichert.\n"
+"Sie müssen diese Version von Tenacity benutzen, um das Projekt wiederherzustellen."
 
 #. i18n-hint: This is an experimental feature where the main panel in
 #. Tenacity is put on a notebook tab, and this is the name on that tab.
@@ -5180,7 +5185,7 @@ msgid ""
 "Tenacity could not write file:\n"
 "  %s."
 msgstr ""
-"Audacity konnte die Datei nicht schreiben:\n"
+"Tenacity konnte die Datei nicht schreiben:\n"
 "  %s."
 
 #. i18n-hint: A theme is a consistent visual style across an application's
@@ -5203,7 +5208,7 @@ msgid ""
 "  %s\n"
 "for writing."
 msgstr ""
-"Audacity konnte die Datei nicht öffnen:\n"
+"Tenacity konnte die Datei nicht öffnen:\n"
 "  %s\n"
 "(schreibgeschützt)."
 
@@ -5213,7 +5218,7 @@ msgid ""
 "Tenacity could not write images to file:\n"
 "  %s."
 msgstr ""
-"Audacity konnte die Grafiken nicht in die Datei schreiben:\n"
+"Tenacity konnte die Grafiken nicht in die Datei schreiben:\n"
 "  %s."
 
 #. i18n-hint "Cee" means the C computer programming language
@@ -5233,7 +5238,7 @@ msgid ""
 "  %s.\n"
 "Theme not loaded."
 msgstr ""
-"Audacity konnte die Datei nicht finden:\n"
+"Tenacity konnte die Datei nicht finden:\n"
 "  %s.\n"
 "Thema nicht geladen."
 
@@ -5245,7 +5250,7 @@ msgid ""
 "  %s.\n"
 "Bad png format perhaps?"
 msgstr ""
-"Audacity konnte die Datei nicht laden:\n"
+"Tenacity konnte die Datei nicht laden:\n"
 "  %s.\n"
 "Vielleicht falsches PNG-Format?"
 
@@ -5255,7 +5260,7 @@ msgid ""
 "Tenacity could not read its default theme.\n"
 "Please report the problem."
 msgstr ""
-"Audacity konnte sein Standard-Thema nicht lesen.\n"
+"Tenacity konnte sein Standard-Thema nicht lesen.\n"
 "Bitte melden Sie das Problem."
 
 #: src/Theme.cpp
@@ -5295,7 +5300,7 @@ msgid ""
 "Tenacity could not save file:\n"
 "  %s"
 msgstr ""
-"Audacity konnte die Datei nicht speichern:\n"
+"Tenacity konnte die Datei nicht speichern:\n"
 "  %s"
 
 #. i18n-hint: describing the "classic" or traditional
@@ -8792,7 +8797,7 @@ msgid ""
 "Select a few seconds of just noise so Tenacity knows what to filter out,\n"
 "then click Get Noise Profile:"
 msgstr ""
-"Wählen Sie ein paar Sekunden Rauschen aus, damit Audacity weiß, was zu heraus zu filtern ist.\n"
+"Wählen Sie ein paar Sekunden Rauschen aus, damit Tenacity weiß, was zu heraus zu filtern ist.\n"
 "Danach „Rauschprofil ermitteln“ wählen:"
 
 #: src/effects/NoiseReduction.cpp src/effects/NoiseRemoval.cpp
@@ -11518,8 +11523,8 @@ msgid ""
 "You are linking to lame_enc.dll v%d.%d. This version is not compatible with Tenacity %d.%d.%d.\n"
 "Please download the latest version of 'LAME for Tenacity'."
 msgstr ""
-"Sie möchten lame_enc.dll v%d.%d einsetzen. Diese Version ist nicht kompatibel mit Audacity %d.%d.%d.\n"
-"Bitte laden Sie die neueste Version von 'LAME für Audacity' herunter."
+"Sie möchten lame_enc.dll v%d.%d einsetzen. Diese Version ist nicht kompatibel mit Tenacity %d.%d.%d.\n"
+"Bitte laden Sie die neueste Version von 'LAME für Tenacity' herunter."
 
 #: src/export/ExportMP3.cpp
 msgid "Only lame_enc.dll"
@@ -11848,7 +11853,7 @@ msgid ""
 "Tenacity cannot do this, the Export was abandoned."
 msgstr ""
 "Sie haben versucht, eine WAV oder AIFF-Datei zu exportieren, die größer als 4GB wäre.\n"
-"Audacity kann dies nicht. Der Export wurde abgebrochen."
+"Tenacity kann dies nicht. Der Export wurde abgebrochen."
 
 #: src/export/ExportPCM.cpp
 msgid "Error Exporting"
@@ -11860,7 +11865,7 @@ msgid ""
 "Your exported WAV file has been truncated as Tenacity cannot export WAV\n"
 "files bigger than 4GB."
 msgstr ""
-"Ihre exportierte WAV-Datei wurde abgeschnitten, da Audacity keine WAV-Dateien\n"
+"Ihre exportierte WAV-Datei wurde abgeschnitten, da Tenacity keine WAV-Dateien\n"
 "exportieren kann, die größer als 4GB sind."
 
 #: src/export/ExportPCM.cpp
@@ -11906,7 +11911,7 @@ msgid ""
 msgstr ""
 "„%s“ \n"
 "ist eine MIDI-, keine Audiodatei. \n"
-"Audacity kann diesen Dateityp nicht wiedergeben, aber Sie können\n"
+"Tenacity kann diesen Dateityp nicht wiedergeben, aber Sie können\n"
 "sie über \"Datei > Import > MIDI\" bearbeiten."
 
 #: src/import/Import.cpp
@@ -11918,7 +11923,7 @@ msgid ""
 msgstr ""
 "\"%s\"\n"
 "ist keine Audiodatei.\n"
-"Audacity kann diesen Dateityp nicht öffnen."
+"Tenacity kann diesen Dateityp nicht öffnen."
 
 #: src/import/Import.cpp
 msgid "Select stream(s) to import"
@@ -11939,9 +11944,9 @@ msgid ""
 "Tenacity can import, such as WAV or AIFF."
 msgstr ""
 "„%s“ ist eine Audio-CD-Spur. \n"
-"Audacity kann Audio-CDs nicht direkt öffnen. \n"
+"Tenacity kann Audio-CDs nicht direkt öffnen. \n"
 "Extrahieren („rippen“) Sie die CD-Spuren in ein Audioformat, das \n"
-"Audacity importieren kann, wie WAV oder AIFF."
+"Tenacity importieren kann, wie WAV oder AIFF."
 
 #. i18n-hint: %s will be the filename
 #: src/import/Import.cpp
@@ -11952,7 +11957,7 @@ msgid ""
 "You may be able to open it in a text editor and download the actual audio files."
 msgstr ""
 "„%s“ ist eine Wiedergabeliste.\n"
-"Audacity kann diese Datei nicht öffnen, weil sie nur Verweise auf andere Dateien enthält.\n"
+"Tenacity kann diese Datei nicht öffnen, weil sie nur Verweise auf andere Dateien enthält.\n"
 "\n"
 "Diese Dateien können sie eventuell ausfindig machen,\n"
 "indem Sie die Wiedergabeliste mit einem Texteditor öffnen."
@@ -11966,7 +11971,7 @@ msgid ""
 "You need to convert it to a supported audio format, such as WAV or AIFF."
 msgstr ""
 "„%s“ ist eine Windows-Media-Audiodatei. \n"
-"Aufgrund von Patent-Beschränkungen kann Audacity diesen Dateityp nicht öffnen. \n"
+"Aufgrund von Patent-Beschränkungen kann Tenacity diesen Dateityp nicht öffnen. \n"
 "Sie müssen die Datei zunächst in ein unterstütztes Audioformat wie WAV oder AIFF umwandeln."
 
 #. i18n-hint: %s will be the filename
@@ -11978,7 +11983,7 @@ msgid ""
 "Otherwise, you need to convert it to a supported audio format, such as WAV or AIFF."
 msgstr ""
 "\"%s\" ist eine Advanced-Audio-Coding-Datei. \n"
-"Audacity kann diesen Dateityp ohne der optionalen FFmpeg-Bibliothek nicht öffnen. \n"
+"Tenacity kann diesen Dateityp ohne der optionalen FFmpeg-Bibliothek nicht öffnen. \n"
 "Sie müssen die Datei ansonsten in ein unterstütztes Audioformat wie WAV oder AIFF umwandeln."
 
 #. i18n-hint: %s will be the filename
@@ -11993,8 +11998,8 @@ msgid ""
 msgstr ""
 "„%s“ ist eine verschlüsselte Audiodatei. \n"
 "Vermutlich stammt sie von einem Online-Musikladen. \n"
-"Wegen der Verschlüsselung kann Audacity die Datei nicht öffnen. \n"
-"Versuchen Sie, die Datei mit Audacity aufzunehmen, oder brennen Sie sie als Audio-CD, \n"
+"Wegen der Verschlüsselung kann Tenacity die Datei nicht öffnen. \n"
+"Versuchen Sie, die Datei mit Tenacity aufzunehmen, oder brennen Sie sie als Audio-CD, \n"
 "dann extrahieren und in ein unterstütztes Audioformat wie WAV oder AIFF umwandeln."
 
 #. i18n-hint: %s will be the filename
@@ -12006,7 +12011,7 @@ msgid ""
 "You need to convert it to a supported audio format, such as WAV or AIFF."
 msgstr ""
 "„%s“ ist eine RealPlayer-Mediendatei. \n"
-"Audacity kann dieses proprietäre Format nicht öffnen. \n"
+"Tenacity kann dieses proprietäre Format nicht öffnen. \n"
 "Sie müssen die Datei zunächst in ein unterstütztes Audioformat wie WAV oder AIFF umwandeln."
 
 #. i18n-hint: %s will be the filename
@@ -12019,9 +12024,9 @@ msgid ""
 "then import it, or record it into Tenacity."
 msgstr ""
 "„%s“ ist eine notenbasierte Datei, keine Audiodatei. \n"
-"Audacity kann diesen Dateityp nicht öffnen. \n"
+"Tenacity kann diesen Dateityp nicht öffnen. \n"
 "Versuchen Sie die Datei zunächst in ein unterstütztes Audioformat wie WAV oder AIFF umzuwandeln und \n"
-"sie dann zu importieren oder sie in Audacity aufzunehmen."
+"sie dann zu importieren oder sie in Tenacity aufzunehmen."
 
 #. i18n-hint: %s will be the filename
 #: src/import/Import.cpp
@@ -12034,7 +12039,7 @@ msgid ""
 "format, such as WAV or AIFF."
 msgstr ""
 "„%s“ ist eine Musepack-Audiodatei. \n"
-"Audacity kann diesen Dateityp nicht öffnen. \n"
+"Tenacity kann diesen Dateityp nicht öffnen. \n"
 "Falls Sie denken, dass es sich um eine MP3-Datei handelt, geben Sie ihr die Endung „.mp3“ \n"
 "und versuchen Sie erneut, zu importieren. Andernfalls müssen Sie sie in ein unterstütztes Format wie WAV oder AIFF \n"
 "umwandeln."
@@ -12048,7 +12053,7 @@ msgid ""
 "You need to convert it to a supported audio format, such as WAV or AIFF."
 msgstr ""
 "„%s“ ist eine Wavpack-Audiodatei. \n"
-"Audacity kann diesen Dateityp nicht öffnen. \n"
+"Tenacity kann diesen Dateityp nicht öffnen. \n"
 "Wandeln Sie die Datei in ein unterstütztes Audioformat wie WAV oder AIFF um."
 
 #. i18n-hint: %s will be the filename
@@ -12060,7 +12065,7 @@ msgid ""
 "You need to convert it to a supported audio format, such as WAV or AIFF."
 msgstr ""
 "„%s“ ist eine Dolby-Digital-Audiodatei. \n"
-"Audacity kann diesen Dateityp gegenwärtig nicht öffnen. \n"
+"Tenacity kann diesen Dateityp gegenwärtig nicht öffnen. \n"
 "Wandeln Sie die Datei in ein unterstütztes Audioformat wie WAV oder AIFF um."
 
 #. i18n-hint: %s will be the filename
@@ -12072,7 +12077,7 @@ msgid ""
 "You need to convert it to a supported audio format, such as WAV or AIFF."
 msgstr ""
 "„%s“ ist eine Ogg-Speex-Audiodatei. \n"
-"Audacity kann diesen Dateityp gegenwärtig nicht öffnen. \n"
+"Tenacity kann diesen Dateityp gegenwärtig nicht öffnen. \n"
 "Wandeln Sie die Datei in ein unterstütztes Audioformat wie WAV oder AIFF um."
 
 #. i18n-hint: %s will be the filename
@@ -12084,7 +12089,7 @@ msgid ""
 "You need to extract the audio to a supported format, such as WAV or AIFF."
 msgstr ""
 "„%s“ ist eine Videodatei. \n"
-"Audacity kann diesen Dateityp gegenwärtig nicht öffnen. \n"
+"Tenacity kann diesen Dateityp gegenwärtig nicht öffnen. \n"
 "Extrahieren Sie das Audio in ein unterstütztes Audioformat wie WAV oder AIFF."
 
 #: src/import/Import.cpp
@@ -12100,7 +12105,7 @@ msgid ""
 "\n"
 "%sFor uncompressed files, also try File > Import > Raw Data."
 msgstr ""
-"Audacity hat den Typ der Datei '%s' nicht erkannt.\n"
+"Tenacity hat den Typ der Datei '%s' nicht erkannt.\n"
 "\n"
 "%sVersuchen Sie auch Datei > Importieren > Rohdaten bei unkomprimierte Dateien."
 
@@ -12126,7 +12131,7 @@ msgid ""
 "%s,\n"
 "but none of them understood this file format."
 msgstr ""
-"Audacity hat den Typ der Datei „%s“ erkannt.\n"
+"Tenacity hat den Typ der Datei „%s“ erkannt.\n"
 "Folgende Importer unterstützen wohlmöglich solche Dateien:\n"
 "%s,\n"
 "aber keiner von ihnen hat das Dateiformat verstanden."
@@ -12159,10 +12164,10 @@ msgid ""
 "Use a version of Tenacity prior to v3.0.0 to upgrade the project and then\n"
 "you may import it with this version of Tenacity."
 msgstr ""
-"Dieses Projekt wurde von Audacity Version 1.0 oder früher gespeichert. Das Format hat sich geändert und diese Version von Audacity kann das Projekt nicht importieren.\n"
+"Dieses Projekt wurde von Tenacity Version 1.0 oder früher gespeichert. Das Format hat sich geändert und diese Version von Tenacity kann das Projekt nicht importieren.\n"
 "\n"
-"Verwenden Sie eine Audacity-Version vor 3.0.0, um das Projekt zu aktualisieren.\n"
-"Anschließend können Sie es mit dieser Version von Audacity importieren."
+"Verwenden Sie eine Tenacity-Version vor 3.0.0, um das Projekt zu aktualisieren.\n"
+"Anschließend können Sie es mit dieser Version von Tenacity importieren."
 
 #: src/import/ImportAUP.cpp
 msgid "Internal error in importer...tag not recognized"
@@ -15726,7 +15731,7 @@ msgid ""
 "Tenacity has automatically detected valid FFmpeg libraries.\n"
 "Do you still want to locate them manually?"
 msgstr ""
-"Audacity hat automatisch geeignete FFmpeg-Bibliotheken gefunden.\n"
+"Tenacity hat automatisch geeignete FFmpeg-Bibliotheken gefunden.\n"
 "Möchten Sie sie dennoch manuell danach suchen?"
 
 #: src/prefs/LibraryPrefs.cpp
@@ -15787,7 +15792,7 @@ msgid ""
 "These are experimental modules. Enable them only if you've read the Tenacity Manual\n"
 "and know what you are doing."
 msgstr ""
-"Dies sind experimentelle Module. Aktivieren Sie diese nur, wenn Sie die Audacity Anleitung\n"
+"Dies sind experimentelle Module. Aktivieren Sie diese nur, wenn Sie die Tenacity Anleitung\n"
 "gelesen haben und Sie wissen, was Sie tun."
 
 #. i18n-hint preserve the leading spaces
@@ -16515,7 +16520,7 @@ msgstr ""
 "Um sie auszuprobieren, klicken Sie auf „Thema-Cache speichern“, danach finden und ändern Sie die Bilder und Farben in\n"
 "ImageCacheVxx.png mit einem Bildbearbeitungsprogramm, wie Gimp.\n"
 "\n"
-"Klicken Sie auf „Thema-Cache laden“ um die geänderten Bilder und Farben wieder in Audacity zu laden.\n"
+"Klicken Sie auf „Thema-Cache laden“ um die geänderten Bilder und Farben wieder in Tenacity zu laden.\n"
 "\n"
 "(Nur die Transport-Werkzeugleiste und die Farben in der Wellenspur sind zur Zeit änderbar, obwohl\n"
 "die Bilddatei auch andere Symbole anzeigt.)"
@@ -20153,7 +20158,7 @@ msgid ""
 "Daulton"
 msgstr ""
 "Erzeugt mit <span>Sample-Datenexport</span> für\n"
-"<a href=\"~a\">Audacity</a> von Steve\n"
+"<a href=\"~a\">Tenacity</a> von Steve\n"
 "Daulton"
 
 #: plug-ins/sample-data-export.ny

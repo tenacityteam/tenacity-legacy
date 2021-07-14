@@ -8,6 +8,7 @@
 # Mers Ng <mersoit792@gmail.com>, 2020-2021
 # hong cuong <hongcuongvn282@gmail.com>, 2021
 # Nguyen Mien <Hamien0604@gmail.com>, 2020-2021
+# Duc M. Le <leduc1712@gmail.com>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: tenacity 3.0.3\n"
@@ -21,6 +22,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.7.2-dev\n"
 
 #: libraries/lib-strings/Internat.cpp
 msgid "Unable to determine"
@@ -101,7 +103,7 @@ msgstr ""
 
 #: libraries/lib-strings/UnusedStrings.h
 msgid "Unknown error"
-msgstr ""
+msgstr "Lỗi chưa xác định"
 
 #: libraries/lib-strings/UnusedStrings.h
 msgid "Failed to send crash report"
@@ -1134,8 +1136,8 @@ msgid ""
 "Tenacity needs a place where automatic cleanup programs won't delete the temporary files.\n"
 "Please enter an appropriate directory in the preferences dialog."
 msgstr ""
-"Audacity đã không tìm thấy nơi an toàn nào để chứa các tệp tin tạm thời.\n"
-"Audacity cần tìm vùng đĩa trong máy không bị xóa bỏ bởi phần mềm dọn rác để lưu tệp tin tạm thời.\n"
+"Tenacity đã không tìm thấy nơi an toàn nào để chứa các tệp tin tạm thời.\n"
+"Tenacity cần tìm vùng đĩa trong máy không bị xóa bỏ bởi phần mềm dọn rác để lưu tệp tin tạm thời.\n"
 "Hãy nhập vào một địa chỉ thư mục trong các hộp thoại cài đặt ưu tiên."
 
 #: src/AudacityApp.cpp
@@ -1144,7 +1146,7 @@ msgid ""
 "Tenacity could not find a place to store temporary files.\n"
 "Please enter an appropriate directory in the preferences dialog."
 msgstr ""
-"Audacity không tìm được nơi nào để chứa các tập tin tạm thời.\n"
+"Tenacity không tìm được nơi nào để chứa các tập tin tạm thời.\n"
 "Xin hãy nhập vào địa chỉ thích hợp và chọn thư mục chứa các tập tin tạm thời."
 
 #: src/AudacityApp.cpp
@@ -1169,8 +1171,8 @@ msgid ""
 "Tenacity was not able to lock the temporary files directory.\n"
 "This folder may be in use by another copy of Tenacity.\n"
 msgstr ""
-"Audacity không thể sử dụng thư mục chứa các tệp tạm thời,\n"
-"có lẽ thư mục này đang được sử dùng bỡi 1 bản Audacity khác.\n"
+"Tenacity không thể sử dụng thư mục chứa các tệp tạm thời,\n"
+"có lẽ thư mục này đang được sử dùng bỡi 1 bản Tenacity khác.\n"
 
 #: src/AudacityApp.cpp
 #, fuzzy
@@ -1192,7 +1194,7 @@ msgid ""
 "Use the New or Open commands in the currently running Tenacity\n"
 "process to open multiple projects simultaneously.\n"
 msgstr ""
-"Dùng lệnh Mới hoặc Mở trên bản Audacity đang chạy \n"
+"Dùng lệnh Mới hoặc Mở trên bản Tenacity đang chạy \n"
 "để mở nhiều dự án cùng lúc.\n"
 
 #: src/AudacityApp.cpp
@@ -1261,7 +1263,7 @@ msgid ""
 "This is likely due to a resource shortage\n"
 "and a reboot may be required."
 msgstr ""
-"Máy chủ Audacity IPC bị lỗi khởi động. \n"
+"Máy chủ Tenacity IPC bị lỗi khởi động. \n"
 "\n"
 "Điều này có thể vì thiếu tài nguyên.\n"
 "Bạn có thể thử khởi động lại chương trình."
@@ -1306,9 +1308,9 @@ msgid ""
 "\n"
 "Associate them, so they open on double-click?"
 msgstr ""
-"Các tập tin dự án (.aup3) chưa được liên kết với Audacity\n"
+"Các tập tin dự án (.aup3) chưa được liên kết với Tenacity\n"
 "\n"
-"Hãy liên kết chúng lại để mở chúng bằng Audacity chỉ với một lần click đúp?"
+"Hãy liên kết chúng lại để mở chúng bằng Tenacity chỉ với một lần click đúp?"
 
 #: src/AudacityApp.cpp
 #, fuzzy
@@ -1346,7 +1348,7 @@ msgstr ""
 "\n"
 "Bạn cũng có thể thử điều chỉnh thông tin rồi click vào nút \"thử lại\" để tiếp tục.\n"
 "\n"
-"Nếu bạn click vào \"thoát Audacity. dự án của bạn sẽ được tạm thời lưu vào hệ thống, nó sẽ được khôi phục ở lần tiếp theo bạn mở Audacity."
+"Nếu bạn click vào \"thoát Tenacity. dự án của bạn sẽ được tạm thời lưu vào hệ thống, nó sẽ được khôi phục ở lần tiếp theo bạn mở Tenacity."
 
 #: src/AudacityFileConfig.cpp src/ShuttleGui.cpp src/commands/HelpCommand.cpp
 #: src/effects/Equalization.cpp src/export/Export.cpp src/menus/HelpMenus.cpp
@@ -1666,7 +1668,7 @@ msgid ""
 "\n"
 "After recovery, save the projects to ensure changes are written to disk."
 msgstr ""
-"Các dự án sau đây chưa được lưu lại kể từ lần cuối bạn mở Audacity, và chúng sẽ được tự động khôi phục.\n"
+"Các dự án sau đây chưa được lưu lại kể từ lần cuối bạn mở Tenacity, và chúng sẽ được tự động khôi phục.\n"
 "\n"
 "Sau khi khôi phục, bạn hãy lưu lại thêm một lần nữa để đảm bảo tất cả thay đổi đã được ghi lại."
 
@@ -2447,7 +2449,7 @@ msgid ""
 msgstr ""
 "Dự án của bạn hiện đang hoàn toàn độc lập; và không phụ thuộc vào bất kỳ tập tin audio bên ngoài nào.\n"
 "\n"
-"Một số dự án Audacity khác có thể không gói gọn độc lập, và cần \n"
+"Một số dự án Tenacity khác có thể không gói gọn độc lập, và cần \n"
 "phải được để ý đến và giữ các tập tin phụ thuộc ngoại này ở đúng nơi.\n"
 "Các dự án mới sẽ luôn gói gọn độc lập và ít có rủi ro hơn."
 
@@ -2536,7 +2538,7 @@ msgid ""
 "You may want to go back to Preferences > Libraries and re-configure it."
 msgstr ""
 "FFmpeg đã được cấu hình trong Tùy chọn Ưu tiên và đã tải thành công trước đõ,\n"
-"nhưng lần này Audacity đã thất bại trong việc tải lên lúc khởi động.\n"
+"nhưng lần này Tenacity đã thất bại trong việc tải lên lúc khởi động.\n"
 "\n"
 "Bạn có thể vào mục Tùy chọn Ưu tiên > Thư viện và cấu hình lại nó."
 
@@ -2602,7 +2604,7 @@ msgid ""
 "To use FFmpeg import, go to Edit > Preferences > Libraries\n"
 "to download or locate the FFmpeg libraries."
 msgstr ""
-"Audacity đã thử sử dụng FFmpeg để thêm vào một tập tin audio,\n"
+"Tenacity đã thử sử dụng FFmpeg để thêm vào một tập tin audio,\n"
 "nhưng các thư viện đã không được tìm thấy.\n"
 "\n"
 "Để sử dụng chức năng nhập bằng FFmpeg, hãy vào Chỉnh sửa > Tùy chọn Ưu tiên > Thư viện để tải về hoặc định vị các thư viện FFmpeg."
@@ -2646,7 +2648,7 @@ msgid ""
 "Perhaps %s is not writable or the disk is full.\n"
 "For tips on freeing up space, click the help button."
 msgstr ""
-"Audacity không thể ghi được tập tin.\n"
+"Tenacity không thể ghi được tập tin.\n"
 "Có thể %s không ghi được hoặc ổ đĩa đã đầy.\n"
 "để có nhiều mẹo giải phóng ổ đĩa hơn, hãy click vào nút \"trợ giúp\"."
 
@@ -3101,7 +3103,7 @@ msgid ""
 "Please inform the Tenacity team at https://forum.audacityteam.org/."
 msgstr ""
 "Lỗi %s ở %s line %d.\n"
-"Vui lòng thông báo cho nhóm Audacity: https://forum.audacityteam.org/."
+"Vui lòng thông báo cho nhóm Tenacity: https://forum.audacityteam.org/."
 
 #: src/InconsistencyException.cpp
 #, fuzzy, c-format
@@ -3110,7 +3112,7 @@ msgid ""
 "Please inform the Tenacity team at https://forum.audacityteam.org/."
 msgstr ""
 "Lỗi ở %s line %d.\n"
-"Vui lòng thông báo cho nhóm Audacity: https://forum.audacityteam.org/."
+"Vui lòng thông báo cho nhóm Tenacity: https://forum.audacityteam.org/."
 
 #: src/InconsistencyException.h
 msgid "Internal Error"
@@ -3393,7 +3395,7 @@ msgid ""
 "\n"
 "It will not be loaded."
 msgstr ""
-"Mô-đun \"%s\" là phiên bản Audacity \"%s\".\n"
+"Mô-đun \"%s\" là phiên bản Tenacity \"%s\".\n"
 "\n"
 "Không tải được Mô-đun."
 
@@ -3759,7 +3761,7 @@ msgid ""
 "each stereo track)"
 msgstr ""
 "Quá ít đoạn âm được lựa chọn để ghi tỷ lệ tốc độ mẫu này.\n"
-"(Audacity yêu cầu hai kênh sử dụng chung tỷ lệ tốc độ mẫu cho \n"
+"(Tenacity yêu cầu hai kênh sử dụng chung tỷ lệ tốc độ mẫu cho \n"
 "mỗi đoạn stereo)"
 
 #: src/ProjectAudioManager.cpp src/menus/TransportMenus.cpp
@@ -3794,7 +3796,7 @@ msgid ""
 msgstr ""
 "Audio thu âm bị mất ở vị trí được đánh dấu. Có thể do:\n"
 "\n"
-"Một vài ứng dụng khác đang xung đột với Audacity trong quá trình xử lý. \n"
+"Một vài ứng dụng khác đang xung đột với Tenacity trong quá trình xử lý. \n"
 "\n"
 "Bạn đã lưu tập tin audio vào một thiết bị bộ nhớ ngoài.\n"
 
@@ -3848,7 +3850,7 @@ msgid ""
 msgstr ""
 "Kiểm tra thư mục dự án \"%s\"\n"
 "phát hienj thấy %lld (một số) tập tin audio ngoài bị thiếu\n"
-"('tập tin có biệt danh'). Không có cách nào để Audacity\n"
+"('tập tin có biệt danh'). Không có cách nào để Tenacity\n"
 "có thẻ phục hồi được các tập tin này tự động.\n"
 "\n"
 "Nếu bạn chọn lựa chọn đầu tiên hoặc thứ hai bên dưới,\n"
@@ -3884,7 +3886,7 @@ msgid ""
 msgstr ""
 "Kiểm tra thư mục \"%s\"\n"
 "và phát hiện %lld thiếu tên bí danh  (.auf) của khối tập tin. \n"
-"Audacity có thể tạo lại các tập tin này \n"
+"Tenacity có thể tạo lại các tập tin này \n"
 "từ những audio hiện tại "
 
 #: src/ProjectFSCK.cpp
@@ -3922,7 +3924,7 @@ msgstr ""
 "Kiểm tra dự án thư  mục %s\n"
 "phát hiện %lld thiếu audio data của các khối tập tin (.au)\n"
 "có thể là do lỗi phần mềm, lỗi hệ thống hoặc vô tình bị xoá\n"
-"Audacity không thể khôi phục \n"
+"Tenacity không thể khôi phục \n"
 "những tập tin này một cách tự động \n"
 "\n"
 "Nếu bạn chọn tuỳ chọn thứ nhất hoặc thứ hai bên dưới \n"
@@ -4208,7 +4210,7 @@ msgid ""
 "Perhaps disk is full or not writable.\n"
 "For tips on freeing up space, click the help button."
 msgstr ""
-"Audacity không thể ghi được tập tin%s\n"
+"Tenacity không thể ghi được tập tin%s\n"
 "Có thể không ghi được hoặc ổ đĩa đã đầy\n"
 "để có nhiều mẹo giải phóng ổ đĩa hơn, hãy click vào nút \"trợ giúp\"."
 
@@ -4235,7 +4237,7 @@ msgid ""
 "You are using Tenacity %s. You may need to upgrade to a newer version to open this file."
 msgstr ""
 "Tập tin này được lưu lại bởi Audicity bản %s.\n"
-"Bạn đang dùng Audacity bản %s. Bạn có thể nâng cấp lên phien bản mới hơn để mở tập tin này."
+"Bạn đang dùng Tenacity bản %s. Bạn có thể nâng cấp lên phien bản mới hơn để mở tập tin này."
 
 #: src/ProjectFileIO.cpp
 msgid "Can't open project file"
@@ -4310,7 +4312,7 @@ msgid ""
 "\n"
 "It has been recovered to the last snapshot."
 msgstr ""
-"Dự án này đã không được lưu lại đúng cách lần gần đây nhất Audacity được mở\n"
+"Dự án này đã không được lưu lại đúng cách lần gần đây nhất Tenacity được mở\n"
 "\n"
 "Nó đã được phục hồi ở thao tác cuối cùng được lưu."
 
@@ -4322,7 +4324,7 @@ msgid ""
 "It has been recovered to the last snapshot, but you must save it\n"
 "to preserve its contents."
 msgstr ""
-"Dự án này đã không được lưu lại đúng cách lần gần đây nhất Audacity được mở\n"
+"Dự án này đã không được lưu lại đúng cách lần gần đây nhất Tenacity được mở\n"
 "\n"
 "Nó đã được phục hồi ở thao tác cuối cùng được lưu, nhưng bạn phải lưu nó lại lần nữa\n"
 "để giữ được tất cả nội dung."
@@ -4400,7 +4402,7 @@ msgid ""
 "'Save Project' is for an Tenacity project, not an audio file.\n"
 "For an audio file that will open in other apps, use 'Export'.\n"
 msgstr ""
-"Lưu lại Dự án' dành cho dự án Audacity, không phải là tập tin audio.\n"
+"Lưu lại Dự án' dành cho dự án Tenacity, không phải là tập tin audio.\n"
 "Nếu dùng cho tập tin audio với các chương trình ứng dụng khác, hãy dùng 'Xuất tập'.\n"
 
 #. i18n-hint: In each case, %s is the name
@@ -4649,8 +4651,8 @@ msgid ""
 "This recovery file was saved by Tenacity 2.3.0 or before.\n"
 "You need to run that version of Tenacity to recover the project."
 msgstr ""
-"Tập tin hồi phục này được lưu lại bởi Audacity 2.3.0 hoặc các phiên bản trước đo.\n"
-"Bạn cần phiên bản Audacity đó để khôi phục dự án."
+"Tập tin hồi phục này được lưu lại bởi Tenacity 2.3.0 hoặc các phiên bản trước đo.\n"
+"Bạn cần phiên bản Tenacity đó để khôi phục dự án."
 
 #. i18n-hint: This is an experimental feature where the main panel in
 #. Tenacity is put on a notebook tab, and this is the name on that tab.
@@ -5136,7 +5138,7 @@ msgid ""
 "Tenacity could not write file:\n"
 "  %s."
 msgstr ""
-"Audacity không ghi được tập tin:\n"
+"Tenacity không ghi được tập tin:\n"
 "  %s."
 
 #. i18n-hint: A theme is a consistent visual style across an application's
@@ -5159,7 +5161,7 @@ msgid ""
 "  %s\n"
 "for writing."
 msgstr ""
-"Audacity không mở được tập tin:\n"
+"Tenacity không mở được tập tin:\n"
 "  %s\n"
 "để ghi."
 
@@ -5169,7 +5171,7 @@ msgid ""
 "Tenacity could not write images to file:\n"
 "  %s."
 msgstr ""
-"Audacity không thể ghi ảnh minh hoạ vào tập tin:\n"
+"Tenacity không thể ghi ảnh minh hoạ vào tập tin:\n"
 "  %s."
 
 #. i18n-hint "Cee" means the C computer programming language
@@ -5189,7 +5191,7 @@ msgid ""
 "  %s.\n"
 "Theme not loaded."
 msgstr ""
-"Audacity không tìm thấy tập tin:\n"
+"Tenacity không tìm thấy tập tin:\n"
 "  %s.\n"
 "Chưa nạp sắc thái giao diện."
 
@@ -5201,7 +5203,7 @@ msgid ""
 "  %s.\n"
 "Bad png format perhaps?"
 msgstr ""
-"Audacity không thể nạp tập tin:\n"
+"Tenacity không thể nạp tập tin:\n"
 "  %s.\n"
 "Có lẽ do lỗi định dạng png?"
 
@@ -5211,7 +5213,7 @@ msgid ""
 "Tenacity could not read its default theme.\n"
 "Please report the problem."
 msgstr ""
-"Audacity không hiển thị được sắc thái giao diện mặc định.\n"
+"Tenacity không hiển thị được sắc thái giao diện mặc định.\n"
 "Xin hãy thông báo lại lỗi này."
 
 #: src/Theme.cpp
@@ -11704,7 +11706,7 @@ msgid ""
 msgstr ""
 "\"%s\"\n"
 "đây là một tập tin MIDI, không phải tập tin âm thanh.\n"
-"Audacity không thể chạy định dạng tập tin này, nhưng bạn vẫn có thể chạy nó. \n"
+"Tenacity không thể chạy định dạng tập tin này, nhưng bạn vẫn có thể chạy nó. \n"
 "chỉnh sửa tệp này bằng cách click vào Tệp>Nhập>MIDI."
 
 #: src/import/Import.cpp
@@ -11716,7 +11718,7 @@ msgid ""
 msgstr ""
 "\"%s\"\n"
 "đây là một tập tin MIDI, không phải tập tin âm thanh.\n"
-"Audacity không thể chạy định dạng tập tin này, nhưng bạn vẫn có thể chạy nó. \n"
+"Tenacity không thể chạy định dạng tập tin này, nhưng bạn vẫn có thể chạy nó. \n"
 "chỉnh sửa tệp này bằng cách click vào Tệp>Nhập>MIDI."
 
 #: src/import/Import.cpp
@@ -11738,9 +11740,9 @@ msgid ""
 "Tenacity can import, such as WAV or AIFF."
 msgstr ""
 "\"%s\" là một bài hát trong CD âm thanh.\n"
-"Audacity không thể trực tiếp mở nó.\n"
+"Tenacity không thể trực tiếp mở nó.\n"
 "Bạn phải xuất (rip) nó thành một định dạng mà\n"
-"Audacity có thể mở, như WAV hay AIFF."
+"Tenacity có thể mở, như WAV hay AIFF."
 
 #. i18n-hint: %s will be the filename
 #: src/import/Import.cpp
@@ -11751,7 +11753,7 @@ msgid ""
 "You may be able to open it in a text editor and download the actual audio files."
 msgstr ""
 "\"%s\" là một danh sách bài hát.\n"
-"Audacity không thể mở nó vì nó chỉ chứa liên kết tới các tập tin khác.\n"
+"Tenacity không thể mở nó vì nó chỉ chứa liên kết tới các tập tin khác.\n"
 "Bạn có thể mở nó trong một bộ soạn thảo văn bản và tải các tập tin trong đó về."
 
 #. i18n-hint: %s will be the filename
@@ -11763,8 +11765,8 @@ msgid ""
 "You need to convert it to a supported audio format, such as WAV or AIFF."
 msgstr ""
 "\"%s\" là một tập tin Windows Media Audio.\n"
-"Audacity không thể mở định dạng này vì lỗi vi phạm bản quyền.\n"
-"Bạn phải tự mình chuyển nó về 1 định dạng Audacity hỗ trợ, như WAV hay AIFF."
+"Tenacity không thể mở định dạng này vì lỗi vi phạm bản quyền.\n"
+"Bạn phải tự mình chuyển nó về 1 định dạng Tenacity hỗ trợ, như WAV hay AIFF."
 
 #. i18n-hint: %s will be the filename
 #: src/import/Import.cpp
@@ -11775,8 +11777,8 @@ msgid ""
 "Otherwise, you need to convert it to a supported audio format, such as WAV or AIFF."
 msgstr ""
 "\"%s\" là một tập tin Wavpack.\n"
-"Audacity không thể mở loại tập tin này.\n"
-"Bạn phải tự mình chuyển nó về 1 định dạng Audacity hỗ trợ, như WAV hay AIFF."
+"Tenacity không thể mở loại tập tin này.\n"
+"Bạn phải tự mình chuyển nó về 1 định dạng Tenacity hỗ trợ, như WAV hay AIFF."
 
 #. i18n-hint: %s will be the filename
 #: src/import/Import.cpp
@@ -11789,8 +11791,8 @@ msgid ""
 "extract the CD track to a supported audio format such as WAV or AIFF."
 msgstr ""
 "\"%s\" là một tập tin Windows Media Audio.\n"
-"Audacity không thể mở định dạng này vì lỗi vi phạm bản quyền.\n"
-"Bạn phải tự mình chuyển nó về 1 định dạng Audacity hỗ trợ, như WAV hay AIFF."
+"Tenacity không thể mở định dạng này vì lỗi vi phạm bản quyền.\n"
+"Bạn phải tự mình chuyển nó về 1 định dạng Tenacity hỗ trợ, như WAV hay AIFF."
 
 #. i18n-hint: %s will be the filename
 #: src/import/Import.cpp
@@ -11801,8 +11803,8 @@ msgid ""
 "You need to convert it to a supported audio format, such as WAV or AIFF."
 msgstr ""
 "\"%s\" là một tập tin RealPlayer.\n"
-"Audacity không mở được loại tập tin này.\n"
-"Bạn phải tự mình chuyển nó về định dạng được Audacity hỗ trợ, như WAV hay AIFF."
+"Tenacity không mở được loại tập tin này.\n"
+"Bạn phải tự mình chuyển nó về định dạng được Tenacity hỗ trợ, như WAV hay AIFF."
 
 #. i18n-hint: %s will be the filename
 #: src/import/Import.cpp
@@ -11814,9 +11816,9 @@ msgid ""
 "then import it, or record it into Tenacity."
 msgstr ""
 "\"%s\" là một tập tin giữ liệu gốc, không phải tập tin âm thanh.\n"
-"Audacity không thể mở loại tập tin này.\n"
-"Bạn phải tự mình chuyển nó về 1 định dạng Audacity hỗ trợ,\n"
-"như WAV hay AIFF, hoặc ghi âm nó trực tiếp trên Audacity."
+"Tenacity không thể mở loại tập tin này.\n"
+"Bạn phải tự mình chuyển nó về 1 định dạng Tenacity hỗ trợ,\n"
+"như WAV hay AIFF, hoặc ghi âm nó trực tiếp trên Tenacity."
 
 #. i18n-hint: %s will be the filename
 #: src/import/Import.cpp
@@ -11829,9 +11831,9 @@ msgid ""
 "format, such as WAV or AIFF."
 msgstr ""
 "\"%s\" là một tập tin Musepack.\n"
-"Audacity không thể mở định dạng này.\n"
+"Tenacity không thể mở định dạng này.\n"
 "Nếu bạn nghĩ đây là tập tin mp3, hãy đổi đuôi nó thành \".mp3\"\n"
-"và thử nhập lại xem sao. Nếu không, bạn phải tự mình chuyển nó về 1 định dạng Audacity hỗ trợ\n"
+"và thử nhập lại xem sao. Nếu không, bạn phải tự mình chuyển nó về 1 định dạng Tenacity hỗ trợ\n"
 "như WAV hay AIFF."
 
 #. i18n-hint: %s will be the filename
@@ -11843,8 +11845,8 @@ msgid ""
 "You need to convert it to a supported audio format, such as WAV or AIFF."
 msgstr ""
 "\"%s\" là một tập tin Wavpack.\n"
-"Audacity không thể mở loại tập tin này.\n"
-"Bạn phải tự mình chuyển nó về 1 định dạng Audacity hỗ trợ, như WAV hay AIFF."
+"Tenacity không thể mở loại tập tin này.\n"
+"Bạn phải tự mình chuyển nó về 1 định dạng Tenacity hỗ trợ, như WAV hay AIFF."
 
 #. i18n-hint: %s will be the filename
 #: src/import/Import.cpp
@@ -11855,8 +11857,8 @@ msgid ""
 "You need to convert it to a supported audio format, such as WAV or AIFF."
 msgstr ""
 "\"%s\" là một tập tin Dolby Digital.\n"
-"Audacity không thể mở loại tập tin này.\n"
-"Bạn phải tự mình chuyển nó về 1 định dạng Audacity hỗ trợ, như WAV hay AIFF."
+"Tenacity không thể mở loại tập tin này.\n"
+"Bạn phải tự mình chuyển nó về 1 định dạng Tenacity hỗ trợ, như WAV hay AIFF."
 
 #. i18n-hint: %s will be the filename
 #: src/import/Import.cpp
@@ -11867,8 +11869,8 @@ msgid ""
 "You need to convert it to a supported audio format, such as WAV or AIFF."
 msgstr ""
 "\"%s\" là một tập tin Ogg Speex.\n"
-"Audacity không thể mở loại tập tin này.\n"
-"Bạn phải tự mình chuyển nó về 1 định dạng Audacity hỗ trợ, như WAV hay AIFF."
+"Tenacity không thể mở loại tập tin này.\n"
+"Bạn phải tự mình chuyển nó về 1 định dạng Tenacity hỗ trợ, như WAV hay AIFF."
 
 #. i18n-hint: %s will be the filename
 #: src/import/Import.cpp
@@ -11879,8 +11881,8 @@ msgid ""
 "You need to extract the audio to a supported format, such as WAV or AIFF."
 msgstr ""
 "\"%s\" là một tập tin Ogg Speex.\n"
-"Audacity không thể mở loại tập tin này.\n"
-"Bạn phải tự mình chuyển nó về 1 định dạng Audacity hỗ trợ, như WAV hay AIFF."
+"Tenacity không thể mở loại tập tin này.\n"
+"Bạn phải tự mình chuyển nó về 1 định dạng Tenacity hỗ trợ, như WAV hay AIFF."
 
 #: src/import/Import.cpp
 #, c-format
@@ -11895,7 +11897,7 @@ msgid ""
 "\n"
 "%sFor uncompressed files, also try File > Import > Raw Data."
 msgstr ""
-"Audacity không thể nhận dạng được đuôi tập tin.%s\n"
+"Tenacity không thể nhận dạng được đuôi tập tin.%s\n"
 "\n"
 "%s để tìm các tập tin chưa nén, hãy thử chọn Tệp>Nhập>dữ liệu thô."
 
@@ -11919,7 +11921,7 @@ msgid ""
 "%s,\n"
 "but none of them understood this file format."
 msgstr ""
-"Audacity đã nhận dạng tệp tin '%s'.\n"
+"Tenacity đã nhận dạng tệp tin '%s'.\n"
 "Các trình nhập đã được cho là sẽ hổ trợ những định dạng tệp này:\n"
 "%s.\n"
 "nhưng không có trình nhập nào hiểu được định dạng tệp này."
