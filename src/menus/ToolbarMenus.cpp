@@ -21,6 +21,19 @@ void OnResetToolBars(const CommandContext &context)
    ToolManager::OnResetToolBars(context);
 }
 
+void OnEditMode(const CommandContext &context)
+{
+   auto &project = context.project;
+   auto &commandManager = CommandManager::Get( project );
+
+   bool checked = !gPrefs->Read(wxT("/GUI/Toolbars/EditMode"), false);
+   gPrefs->Write(wxT("/GUI/Toolbars/EditMode"), checked);
+   gPrefs->Flush();
+   commandManager.Check(wxT("EditMode"), checked);
+
+   wxTheApp->AddPendingEvent(wxCommandEvent{ EVT_PREFS_UPDATE });
+}
+
 }; // struct Handler
 
 
@@ -48,8 +61,11 @@ BaseItemSharedPtr ToolbarsMenu()
    ( FinderScope{ findCommandHandler },
    Section( wxT("Toolbars"),
       Menu( wxT("Toolbars"), XXO("&Toolbars"),
-         Section( "Reset",
+         Section( "Manage",
             /* i18n-hint: (verb)*/
+			Command( wxT("EditMode"), XXO("&Edit Mode (on/off)"),
+				FN(OnEditMode), AlwaysEnabledFlag,
+				Options{}.CheckTest( wxT("/GUI/Toolbars/EditMode"), false ) ),
             Command( wxT("ResetToolbars"), XXO("Reset Toolb&ars"),
                FN(OnResetToolBars), AlwaysEnabledFlag )
          ),
