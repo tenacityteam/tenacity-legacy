@@ -1177,7 +1177,7 @@ void ToolManager::OnMouse( wxMouseEvent & event )
          DoneDragging();
          return;
       }
-      else if( mDragDock && !event.ShiftDown() )
+      else if( mDragDock && !event.ShiftDown() && mDragBar->GetEditMode() )
       {
          // Trip over...everyone ashore that's going ashore...
          mDragDock->Dock( mDragBar, true, mDragBefore );
@@ -1249,7 +1249,7 @@ void ToolManager::OnMouse( wxMouseEvent & event )
          dock = mBotDock;
 
       // Looks like we have a winner...
-      if( dock )
+      if( dock && mDragBar->GetEditMode() )
       {
          wxPoint p;
          wxRect r;
