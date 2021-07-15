@@ -976,8 +976,8 @@ void AdornedRulerPanel::UpdatePrefs()
    
    if ( mode != mEditMode )
    {
-	   mEditMode = mode;
-	   ReCreateButtons();
+      mEditMode = mode;
+      ReCreateButtons();
    }else if (mNeedButtonUpdate) {
       // Visit this block once only in the lifetime of this panel
       mNeedButtonUpdate = false;

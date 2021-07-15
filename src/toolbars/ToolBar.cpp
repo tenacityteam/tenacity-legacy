@@ -542,11 +542,11 @@ void ToolBar::ReCreateButtons()
       // Grabber is created only when editing, or when it's undocked
       // (as otherwise the undocked toolbar can't be moved around)
       if (mEditMode || !IsDocked())
-	  {
+      {
          // Create the grabber and add it to the main sizer
          mGrabber = safenew Grabber(this, mType);
          ms->Add(mGrabber, 0, wxEXPAND | wxALIGN_LEFT | wxALIGN_TOP | wxRIGHT, 1);
-	  }
+      }
       // Use a box sizer for laying out controls
       ms->Add((mHSizer = safenew wxBoxSizer(wxHORIZONTAL)), 1, wxEXPAND);
 
@@ -631,14 +631,14 @@ void ToolBar::UpdatePrefs()
 
    if ( editing != mEditMode )
    {
-	   mEditMode = editing;
-	   updated = true;
+      mEditMode = editing;
+      updated = true;
    }
 
    if ( updated )
    {
-	   ReCreateButtons();
-	   Updated();
+      ReCreateButtons();
+      Updated();
    }
 
    return;
