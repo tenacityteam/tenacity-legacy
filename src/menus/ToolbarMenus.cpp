@@ -27,7 +27,7 @@ void OnEditMode(const CommandContext &context)
    auto &project = context.project;
    auto &commandManager = CommandManager::Get( project );
 
-   bool checked = !gPrefs->Read(wxT("/GUI/Toolbars/EditMode"), false);
+   bool checked = !gPrefs->Read(wxT("/GUI/Toolbars/EditMode"), true);
    gPrefs->Write(wxT("/GUI/Toolbars/EditMode"), checked);
    gPrefs->Flush();
    commandManager.Check(wxT("EditMode"), checked);
@@ -66,7 +66,7 @@ BaseItemSharedPtr ToolbarsMenu()
             /* i18n-hint: (verb)*/
 			Command( wxT("EditMode"), XXO("&Edit Mode (on/off)"),
 				FN(OnEditMode), AudioIONotBusyFlag(),
-				Options{}.CheckTest( wxT("/GUI/Toolbars/EditMode"), false ) ),
+				Options{}.CheckTest( wxT("/GUI/Toolbars/EditMode"), true ) ),
             Command( wxT("ResetToolbars"), XXO("Reset Toolb&ars"),
                FN(OnResetToolBars), AlwaysEnabledFlag )
          ),
