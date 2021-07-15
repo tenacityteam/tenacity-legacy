@@ -13,6 +13,7 @@
 
 #include "CellularPanel.h"
 #include "widgets/Ruler.h" // member variable
+#include "widgets/Grabber.h" // mGrabber
 #include "Prefs.h"
 #include "ViewInfo.h" // for PlayRegion
 
@@ -142,6 +143,9 @@ private:
    double mQuickPlayPos;
 
    bool mIsSnapped;
+   bool mEditMode;
+
+   Grabber *mGrabber;
 
    PlayRegion mOldPlayRegion;
 
