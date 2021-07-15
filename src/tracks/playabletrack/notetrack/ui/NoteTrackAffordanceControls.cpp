@@ -93,4 +93,5 @@ bool NoteTrackAffordanceControls::IsSelected() const
     }
     return false;
 }
+
 #endif // USE_MIDI
