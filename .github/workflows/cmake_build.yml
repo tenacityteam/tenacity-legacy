@@ -35,21 +35,35 @@ jobs:
           os: ubuntu-18.04
           arch: x86_64 # as reported by `arch` or `uname -m`
           generator: Unix Makefiles
+          compiler_cache: ccache
+          compiler_cache_path: ~/.ccache
 
         - name: macOS_Intel
           os: macos-latest
           arch: Intel # as reported by Apple menu > About This Mac
-          generator: Xcode
+          generator: Unix Makefiles
+          compiler_cache: ccache
+          compiler_cache_path: ~/Library/Caches/ccache
 
         - name: Windows_32bit
           os: windows-latest
-          arch: 32bit # as reported by Windows Settings > System > About
-          generator: Visual Studio 16 2019
+          arch: x86
+          # required so CMake uses MSVC rather than MinGW
+          cc: cl
+          cxx: cl
+          generator: Ninja
+          compiler_cache: sccache
+          compiler_cache_path: C:\Users\runneradmin\AppData\Local\Mozilla\sccache\cache
 
         - name: Windows_64bit
           os: windows-latest
-          arch: 64bit # as reported by Windows Settings > System > About
-          generator: Visual Studio 16 2019
+          arch: amd64
+          # required so CMake uses MSVC rather than MinGW
+          cc: cl
+          cxx: cl
+          generator: Ninja
+          compiler_cache: sccache
+          compiler_cache_path: C:\Users\runneradmin\AppData\Local\Mozilla\sccache\cache
 
     steps:
 
@@ -63,13 +77,33 @@ jobs:
     - name: Environment
       run: |
         source "scripts/ci/environment.sh"
-    
+
     - name: Install Apple codesigning certificates
       uses: apple-actions/import-codesign-certs@v1
       if: startswith( matrix.config.os, 'macos' ) && github.event_name == 'push' && github.repository_owner == 'audacity'
-      with: 
+      with:
         p12-file-base64: ${{ secrets.APPLE_CERTIFICATE }}
         p12-password: ${{ secrets.APPLE_CERTIFICATE_PASSWORD }}
+
+    # required for CMake to find Ninja
+    - name: "[Windows] Set up MSVC Developer Command Prompt"
+      if: runner.os == 'Windows'
+      uses: seanmiddleditch/gha-setup-vsdevenv@v3
+      with:
+        arch: ${{ matrix.config.arch }}
+
+    - name: "[Windows] Install sccache"
+      if: runner.os == 'Windows'
+      run: choco install sccache
+
+    - name: "Set up compiler cache"
+      uses: actions/cache@v2
+      with:
+        path: ${{ matrix.config.compiler_cache_path }}
+        key: ${{ matrix.config.os }}-${{ matrix.config.arch }}-${{ github.head_ref }}-${{ github.run_number }}
+        restore-keys: |
+          ${{ matrix.config.os }}-${{ matrix.config.arch }}-${{ github.head_ref }}-
+          ${{ matrix.config.os }}-${{ matrix.config.arch }}-
 
     - name: Cache for .conan
       id: cache-conan
@@ -88,12 +122,17 @@ jobs:
         APPLE_CODESIGN_IDENTITY: ${{ secrets.APPLE_CODESIGN_IDENTITY }}
         APPLE_NOTARIZATION_USER_NAME: ${{ secrets.APPLE_NOTARIZATION_USER_NAME }}
         APPLE_NOTARIZATION_PASSWORD: ${{ secrets.APPLE_NOTARIZATION_PASSWORD }}
+        CC: ${{ matrix.config.cc }}
+        CXX: ${{ matrix.config.cxx }}
       run: |
         exec bash "scripts/ci/configure.sh"
 
     - name: Build
       run: |
         exec bash "scripts/ci/build.sh"
+
+    - name: "Print compiler cache stats"
+      run: ${{ matrix.config.compiler_cache }} -s
 
     - name: Install
       run: |
