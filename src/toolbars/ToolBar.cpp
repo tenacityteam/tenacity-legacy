@@ -346,7 +346,7 @@ ToolBar::ToolBar( AudacityProject &project,
    mHSizer = NULL;
    mVisible = false;
    mPositioned = false;
-   mEditMode = false;
+   mEditMode = gPrefs->Read(wxT("/GUI/Toolbars/EditMode"), false);
 
    mGrabber = NULL;
    mResizer = NULL;
