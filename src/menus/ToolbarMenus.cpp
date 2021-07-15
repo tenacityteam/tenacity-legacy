@@ -64,7 +64,7 @@ BaseItemSharedPtr ToolbarsMenu()
       Menu( wxT("Toolbars"), XXO("&Toolbars"),
          Section( "Manage",
             /* i18n-hint: (verb)*/
-            Command( wxT("EditMode"), XXO("&Edit Mode (on/off)"),
+            Command( wxT("EditMode"), XXO("Edit &Mode (on/off)"),
                 FN(OnEditMode), AudioIONotBusyFlag(),
                 Options{}.CheckTest( wxT("/GUI/Toolbars/EditMode"), true ) ),
             Command( wxT("ResetToolbars"), XXO("Reset Toolb&ars"),
