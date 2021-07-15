@@ -8,8 +8,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_ABOUT_DLG__
-#define __AUDACITY_ABOUT_DLG__
+#ifndef __TENACITY_ABOUT_DLG__
+#define __TENACITY_ABOUT_DLG__
 
 #include <vector>
 #include "widgets/wxPanelWrapper.h" // to inherit
@@ -56,7 +56,7 @@ class AUDACITY_DLL_API AboutDialog final : public wxDialogWrapper {
    };
 
    AboutDialogCreditItemsList creditItems;
-   void PopulateAudacityPage( ShuttleGui & S );
+   void PopulateTenacityPage( ShuttleGui & S );
    void PopulateLicensePage( ShuttleGui & S );
    void PopulateInformationPage (ShuttleGui & S );
 

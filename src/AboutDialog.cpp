@@ -77,7 +77,7 @@ hold information about one contributor to Audacity.
 // To substitute into many other translatable strings
 static const auto ProgramName =
    //XO("Audacity");
-   Verbatim("Audacity");
+   Verbatim("Tenacity");
 
 void AboutDialog::CreateCreditsList()
 {
@@ -306,7 +306,7 @@ AboutDialog::AboutDialog(wxWindow * parent)
    ShuttleGui S( this, eIsCreating );
    S.StartNotebook();
    {
-      PopulateAudacityPage( S );
+      PopulateTenacityPage( S );
       PopulateInformationPage( S );
       PopulateLicensePage( S );
    }
@@ -322,7 +322,7 @@ AboutDialog::AboutDialog(wxWindow * parent)
 
 #define ABOUT_DIALOG_WIDTH 506
 
-void AboutDialog::PopulateAudacityPage( ShuttleGui & S )
+void AboutDialog::PopulateTenacityPage( ShuttleGui & S )
 {
    CreateCreditsList();
 
@@ -330,8 +330,8 @@ void AboutDialog::PopulateAudacityPage( ShuttleGui & S )
 // DA: Says that it is a customised version.
 #ifdef EXPERIMENTAL_DA
       wxT(
-"Audacity, which this is a customised version of, is a free program written by a worldwide team of [[https://www.audacityteam.org/about/credits|volunteers]]. \
-Audacity is [[https://www.audacityteam.org/download|available]] for Windows, Mac, and GNU/Linux (and other Unix-like systems).")
+"Tenacity, which this is a customised version of, is a free program written by a worldwide team of [[https://github.com/tenacityteam/tenacity/|volunteers]]. \
+Tenacity is [[https://tenacityaudio.org/|available]] for Windows, Mac, and GNU/Linux (and other Unix-like systems).")
 #else
 /* Do the i18n of a string with markup carefully with hints.
  (Remember languages with cases.) */
@@ -342,11 +342,11 @@ Audacity is [[https://www.audacityteam.org/download|available]] for Windows, Mac
 %s is %s for Windows, Mac, and GNU/Linux (and other Unix-like systems).")
          .Format(
             ProgramName,
-            Verbatim("[[https://www.audacityteam.org/about/credits|%s]]")
+            Verbatim("[[https://github.com/tenacityteam/tenacity/]]")
                /* i18n-hint: substitutes into "a worldwide team of %s" */
                .Format( XO("volunteers") ),
             ProgramName,
-            Verbatim("[[https://www.audacityteam.org/download|%s]]")
+            Verbatim("[[https://tenacityaudio.org/]]")
                /* i18n-hint: substitutes into "Audacity is %s" */
                .Format( XO("available") ) )
 #endif
@@ -360,13 +360,13 @@ Audacity is [[https://www.audacityteam.org/download|available]] for Windows, Mac
 For help, view the tips and tricks on our %s or \
 visit our %s.")
       .Format(
-         Verbatim("[[https://forum.audacityteam.org/|%s]]")
+         Verbatim("[[https://tenacityaudio.org/|%s]]")
             /* i18n-hint substitutes into "write to our %s" */
             .Format( XC("forum", "dative") ),
-         Verbatim("[[https://wiki.audacityteam.org/|%s]]")
+         Verbatim("[[https://tenacityaudio.org/|%s]]")
             /* i18n-hint substitutes into "view the tips and tricks on our %s" */
             .Format( XO("wiki") ),
-         Verbatim("[[https://forum.audacityteam.org/|%s]]")
+         Verbatim("[[https://tenacityaudio.org/|%s]]")
             /* i18n-hint substitutes into "visit our %s" */
             .Format( XC("forum", "accusative") ) );
    auto par2StrTranslated = par2Str.Translation();
@@ -395,13 +395,11 @@ visit our %s.")
 #ifdef EXPERIMENTAL_DA
       #undef _
       #define _(s) wxGetTranslation((s))
-      << wxT("<h3>DarkAudacity ")
+      << wxT("<h3>DarkTenacity ")
       << wxString(AUDACITY_VERSION_STRING)
       << wxT("</center></h3>")
-      << wxT("Customised version of the Audacity free, open source, cross-platform software " )
+      << wxT("Customised version of the Tenacity free, open source, cross-platform software " )
       << wxT("for recording and editing sounds.")
-      << wxT("<p><br>&nbsp; &nbsp; <b>Audacity<sup>&reg;</sup></b> software is copyright &copy; 1999-2021 Audacity Team.<br>")
-      << wxT("&nbsp; &nbsp; The name <b>Audacity</b> is a registered trademark of Dominic Mazzoni.<br><br>")
 
 #else
       << XO("<h3>")
@@ -426,7 +424,7 @@ visit our %s.")
 // DA: Customisation credit
 #ifdef EXPERIMENTAL_DA
       << wxT("<p><b>")
-      << XO("DarkAudacity Customisation")
+      << XO("DarkTenacity Customisation")
       << wxT("</b><br>")
       << wxT("James Crook, art, coding &amp; design<br>")
 #endif
@@ -481,14 +479,14 @@ visit our %s.")
       << wxT("<p><br>")
       /* i18n-hint: The program's name substitutes for %s */
       << XO("%s website: ").Format( ProgramName )
-      << wxT("[[https://www.audacityteam.org/|https://www.audacityteam.org/]]")
+      << wxT("[[https://tenacityaudio.org/|https://tenacityaudio.org/]]")
 
 // DA: Link for DA url too
 #ifdef EXPERIMENTAL_DA
-      << wxT("<br>DarkAudacity website: [[http://www.darkaudacity.com/|https://www.darkaudacity.com/]]")
+      << wxT("<br>DarkTenacity website: [[https://tenacityaudio.org/|https://tenacityaudio.org/]]")
 #else
       << wxT("<p><br>&nbsp; &nbsp; ")
-      /* i18n-hint Audacity's name substitutes for first and third %s,
+      /* i18n-hint Tenacity's name substitutes for first and third %s,
        and a "copyright" symbol for the second */
       << XO("%s software is copyright %s 1999-2021 %s Team.")
          .Format(
@@ -498,7 +496,7 @@ visit our %s.")
       << wxT("<br>")
 
       << wxT("&nbsp; &nbsp; ")
-      /* i18n-hint Audacity's name substitutes for %s */
+      /* i18n-hint Tenacity's name substitutes for %s */
       << XO("The name %s is a registered trademark.")
          .Format( Verbatim("<b>%s</b>").Format( ProgramName ) )
       << wxT("<br><br>")
