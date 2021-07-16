@@ -6,8 +6,8 @@
   
 **********************************************************************/
 
-#ifndef __TENACITY_ABOUT_DLG__
-#define __TENACITY_ABOUT_DLG__
+#ifndef TENACITY_ABOUT_DLG
+#define TENACITY_ABOUT_DLG
 
 #include <vector>
 #include "widgets/wxPanelWrapper.h" // to inherit
