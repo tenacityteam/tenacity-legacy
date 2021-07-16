@@ -33,15 +33,13 @@ class AUDACITY_DLL_API AboutDialog final : public wxDialogWrapper {
    AboutDialog(wxWindow * parent);
    virtual ~ AboutDialog();
 
-   static AboutDialog *ActiveInstance();
-
    void OnOK(wxCommandEvent & event);
-
-   wxStaticBitmap *icon;
 
    DECLARE_EVENT_TABLE()
 
  private:
+    wxStaticBitmap* icon;
+
    enum Role {
       roleTenacityTeamMember,
       rolePreforkTeamMember,
@@ -53,12 +51,10 @@ class AUDACITY_DLL_API AboutDialog final : public wxDialogWrapper {
       rolePreforkThanks
    };
 
-
-
    AboutDialogCreditItemsList creditItems;
-   void GenerateTenacityPage( ShuttleGui & S );
-   void PopulateLicensePage( ShuttleGui & S );
-   void PopulateInformationPage (ShuttleGui & S );
+   void CreateTenacityTab( ShuttleGui & S );
+   void CreateLicenseTab( ShuttleGui & S );
+   void CreateInformationTab (ShuttleGui & S );
 
    static wxImage GenerateTenacityLogoRescaledImage(const float fScale);
    void GenerateTenacityPageDescription(wxTextOutputStream & tos);
