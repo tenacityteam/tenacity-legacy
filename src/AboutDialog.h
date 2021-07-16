@@ -61,7 +61,7 @@ class AUDACITY_DLL_API AboutDialog final : public wxDialogWrapper {
    void CreateCreditsList();
    void AddCredit( const wxString &name, Role role );
    void AddCredit( const wxString &name, TranslatableString format, Role role );
-   wxString GetCreditsByRole(AboutDialog::Role role);
+   wxString GetCreditsByRole(Role role);
 
    static void AddBuildInfoRow( wxTextOutputStream *str, const wxChar * libname,
                                 const TranslatableString &libdesc, const TranslatableString &status);
