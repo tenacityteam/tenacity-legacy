@@ -13,7 +13,7 @@
 
 \class AboutDialogCreditItem
 \brief AboutDialogCreditItem is a structure used by the AboutDialog to
-hold information about a contributor.
+hold information about a credit item in the Credits list
 
 *//********************************************************************/
 
@@ -44,14 +44,7 @@ hold information about a contributor.
 #include "../images/AudacityLogoWithName.xpm"
 #endif
 
-// Notice this is a "system include".  This is on purpose and only until
-// we convert over to CMake.  Once converted, the "RevisionIndent.h" file
-// should be deleted and this can be changed back to a user include if
-// desired.
-//
-// RevisionIdent.h may contain #defines like these ones:
-//#define REV_LONG "28864acb238cb3ca71dda190a2d93242591dd80e"
-//#define REV_TIME "Sun Apr 12 12:40:22 2015 +0100"
+// RevisionIdent contains the REV_TIME and REV_LONG defines from git commit information
 #include "RevisionIdent.h"
 
 #ifndef REV_TIME
@@ -125,7 +118,7 @@ void AboutDialog::CreateTenacityTab(ShuttleGui& AboutDialogGUI) {
     tenacityPageContent << wxT("</center>");
 
     auto pPage = AboutDialogGUI.StartNotebookPage(ProgramName);
-    AboutDialogGUI.StartVerticalLay(1);
+    AboutDialogGUI.StartVerticalLay(GROWING_PROPORTION);
     {
         const float fScale = 0.5f;// smaller size.
         const wxImage RescaledImage = GenerateTenacityLogoRescaledImage(fScale);
@@ -134,8 +127,8 @@ void AboutDialog::CreateTenacityTab(ShuttleGui& AboutDialogGUI) {
 
         const wxBitmap RescaledBitmap(RescaledImage);
         const wxSize RescaleBitmapSize((int)(LOGOWITHNAME_WIDTH * fScale), (int)(LOGOWITHNAME_HEIGHT * fScale));
-        AboutDialog::icon = safenew wxStaticBitmap (AboutDialogGUI.GetParent(), -1, RescaledBitmap, wxDefaultPosition, RescaleBitmapSize);
-        AboutDialogGUI.Prop(0).AddWindow(AboutDialog::icon);
+        AboutDialog::icon = safenew wxStaticBitmap(AboutDialogGUI.GetParent(), -1, RescaledBitmap, wxDefaultPosition, RescaleBitmapSize);
+        AboutDialogGUI.Prop(MINIMUM_PROPORTION).AddWindow(AboutDialog::icon);
     }
 
     HtmlWindow* html = safenew LinkingHtmlWindow(AboutDialogGUI.GetParent(), -1,
@@ -149,6 +142,42 @@ void AboutDialog::CreateTenacityTab(ShuttleGui& AboutDialogGUI) {
     AboutDialogGUI.EndNotebookPage();
 }
 
+static const wxString getCompilerVersion() {
+#if defined(_MSC_FULL_VER)
+    return wxString::Format(wxT("MSVC %02d.%02d.%05d.%02d"), _MSC_VER / 100, _MSC_VER % 100, _MSC_FULL_VER % 100000, _MSC_BUILD);
+#elif defined(__GNUC_PATCHLEVEL__) AND defined(__MINGW32__)
+    return wxT("MinGW ") wxMAKE_VERSION_DOT_STRING_T(__GNUC__, __GNUC_MINOR__, __GNUC_PATCHLEVEL__);
+#elif defined(__GNUC_PATCHLEVEL__)
+    return wxT("GCC ") wxMAKE_VERSION_DOT_STRING_T(__GNUC__, __GNUC_MINOR__, __GNUC_PATCHLEVEL__);
+#elif defined(__clang_version__)
+    return wxT("clang ") __clang_version__;
+#else
+    return wxt("Unknown!!!");
+#endif
+}
+
+static const TranslatableString getBuildType() {
+
+    auto buildType = Verbatim("Unknown Build Type!!!");
+
+#ifdef _DEBUG
+    buildType = XO("Debug build (debug level %d)").Format(wxDEBUG_LEVEL);
+#else
+    buildType = XO("Release build (debug level %d)").Format(wxDEBUG_LEVEL);
+#endif
+
+    if ((sizeof(void*) == 8)) {
+        buildType = XO("%s, 64 bits").Format(buildType);
+    }
+
+    // Remove this once the transition to CMake is complete
+#ifdef CMAKE
+    buildType = Verbatim("CMake %s").Format(buildType);
+#endif
+
+    return buildType;
+}
+
 /** \brief: Fills out the "Information" tab of the preferences dialogue
  *
  * Provides as much information as possible about build-time options and
@@ -156,9 +185,11 @@ void AboutDialog::CreateTenacityTab(ShuttleGui& AboutDialogGUI) {
  * about the build we might wish to know should be visible here */
 void AboutDialog::CreateInformationTab(ShuttleGui& AboutDialogGUI) {
     wxStringOutputStream o;
-    wxTextOutputStream informationStr(o);   // string to build up list of information in
-    AboutDialogGUI.StartNotebookPage(XO("Build Information"));  // start the tab
-    AboutDialogGUI.StartVerticalLay(2);  // create the window
+    wxTextOutputStream informationStr(o);
+
+    AboutDialogGUI.StartNotebookPage(XO("Build Information"));
+    AboutDialogGUI.StartVerticalLay(GROWING_PROPORTION);
+
     HtmlWindow* html = safenew LinkingHtmlWindow(AboutDialogGUI.GetParent(), -1, wxDefaultPosition,
                                                  wxSize(ABOUT_DIALOG_WIDTH, 264),
                                                  wxHW_SCROLLBAR_AUTO | wxSUNKEN_BORDER);
@@ -180,74 +211,34 @@ void AboutDialog::CreateInformationTab(ShuttleGui& AboutDialogGUI) {
         << XO("The Build")
         << wxT("</h3>\n<table>"); // start build info table
 
-     // Current date
     AddBuildInfoRow(&informationStr, XO("Program build date:"), __TDATE__);
     AddBuildInfoRow(&informationStr, XO("Commit Id:"), REV_IDENT);
-
-    auto buildType =
-    #ifdef _DEBUG
-        XO("Debug build (debug level %d)").Format(wxDEBUG_LEVEL);
-#else
-        XO("Release build (debug level %d)").Format(wxDEBUG_LEVEL);
-#endif
-    ;
-    if ((sizeof(void*) == 8))
-        buildType = XO("%s, 64 bits").Format(buildType);
-
-    // Remove this once the transition to CMake is complete
-#if defined(CMAKE)
-    buildType = Verbatim("CMake %s").Format(buildType);
-#endif
-
-    AddBuildInfoRow(&informationStr, XO("Build type:"), buildType.Translation());
-
-#ifdef _MSC_FULL_VER
-    AddBuildInfoRow(&informationStr, XO("Compiler:"),
-                    wxString::Format(wxT("MSVC %02d.%02d.%05d.%02d"), _MSC_VER / 100, _MSC_VER % 100, _MSC_FULL_VER % 100000, _MSC_BUILD));
-#endif
-
-#ifdef __GNUC_PATCHLEVEL__
-#ifdef __MINGW32__
-    AddBuildInfoRow(&informationStr, XO("Compiler:"), wxT("MinGW ") wxMAKE_VERSION_DOT_STRING_T(__GNUC__, __GNUC_MINOR__, __GNUC_PATCHLEVEL__));
-#else
-    AddBuildInfoRow(&informationStr, XO("Compiler:"), wxT("GCC ") wxMAKE_VERSION_DOT_STRING_T(__GNUC__, __GNUC_MINOR__, __GNUC_PATCHLEVEL__));
-#endif
-#endif
-
-#ifdef __clang_version__
-    AddBuildInfoRow(&informationStr, XO("Compiler:"), wxT("clang ") __clang_version__);
-#endif
+    AddBuildInfoRow(&informationStr, XO("Build type:"), getBuildType().Translation());
+    AddBuildInfoRow(&informationStr, XO("Compiler:"), getCompilerVersion());
 
     // Install prefix
 #ifdef __WXGTK__
-   /* i18n-hint: The directory audacity is installed into (on *nix systems) */
-    AddBuildInfoRow(&informationStr, XO("Installation Prefix:"), \
-                    wxT(INSTALL_PREFIX));
+    /* i18n-hint: The directory audacity is installed into (on *nix systems) */
+    AddBuildInfoRow(&informationStr, XO("Installation Prefix:"), wxT(INSTALL_PREFIX));
 #endif
 
     // Location of settings
-    AddBuildInfoRow(&informationStr, XO("Settings folder:"), \
-                    FileNames::DataDir());
+    AddBuildInfoRow(&informationStr, XO("Settings folder:"), FileNames::DataDir());
 
+    /*
     informationStr << wxT("</table>\n"); // end of build info table
-
-
     informationStr
         << wxT("<h3>")
-        /* i18n-hint: Libraries that are essential Tenacity */
+        /* i18n-hint: Libraries that are essential to Tenacity *//*
         << XO("Core Libraries")
         << wxT("</h3>\n<table>");  // start table of core libraries
 
-    AddBuildInfoRow(&informationStr, wxT("wxWidgets"),
-                    XO("Cross-platform GUI library"), Verbatim(wxVERSION_NUM_DOT_STRING_T));
-
-    AddBuildInfoRow(&informationStr, wxT("PortAudio"),
-                    XO("Audio playback and recording"), Verbatim(wxT("v19")));
-
-    AddBuildInfoRow(&informationStr, wxT("libsoxr"),
-                    XO("Sample rate conversion"), enabled);
+    AddBuildInfoRow(&informationStr, wxT("wxWidgets"), XO("Cross-platform GUI library"), Verbatim(wxVERSION_NUM_DOT_STRING_T));
+    AddBuildInfoRow(&informationStr, wxT("PortAudio"), XO("Audio playback and recording"), Verbatim(wxT("v19")));
+    AddBuildInfoRow(&informationStr, wxT("libsoxr"), XO("Sample rate conversion"), enabled);
 
     informationStr << wxT("</table>\n"); // end table of core libraries
+    */
 
     informationStr
         << wxT("<h3>")
@@ -257,70 +248,20 @@ void AboutDialog::CreateInformationTab(ShuttleGui& AboutDialogGUI) {
     informationStr
         << wxT("<table>");   // start table of file formats supported
 
-
-#ifdef USE_LIBMAD
-/* i18n-hint: This is what the library (libmad) does - imports MP3 files */
-    AddBuildInfoRow(&informationStr, wxT("libmad"), XO("MP3 Importing"), enabled);
-#else
-    AddBuildInfoRow(&informationStr, wxT("libmad"), XO("MP3 Importing"), disabled);
-#endif
-
-#ifdef USE_LIBVORBIS
-    AddBuildInfoRow(&informationStr, wxT("libvorbis"),
-                    /* i18n-hint: Ogg is the container format. Vorbis is the compression codec.
-                     * Both are proper nouns and shouldn't be translated */
-                    XO("Ogg Vorbis Import and Export"), enabled);
-#else
-    AddBuildInfoRow(&informationStr, wxT("libvorbis"),
-                    XO("Ogg Vorbis Import and Export"), disabled);
-#endif
-
-#ifdef USE_LIBID3TAG
-    AddBuildInfoRow(&informationStr, wxT("libid3tag"), XO("ID3 tag support"),
-                    enabled);
-#else
-    AddBuildInfoRow(&informationStr, wxT("libid3tag"), XO("ID3 tag support"),
-                    disabled);
-#endif
-
-# if USE_LIBFLAC
-    /* i18n-hint: FLAC stands for Free Lossless Audio Codec, but is effectively
-     * a proper noun and so shouldn't be translated */
-    AddBuildInfoRow(&informationStr, wxT("libflac"), XO("FLAC import and export"),
-                    enabled);
-# else
-    AddBuildInfoRow(&informationStr, wxT("libflac"), XO("FLAC import and export"),
-                    disabled);
-# endif
-
-# if USE_LIBTWOLAME
-    AddBuildInfoRow(&informationStr, wxT("libtwolame"), XO("MP2 export"),
-                    enabled);
-# else
-    AddBuildInfoRow(&informationStr, wxT("libtwolame"), XO("MP2 export"),
-                    disabled);
-# endif
-
-# if USE_QUICKTIME
-    AddBuildInfoRow(&informationStr, wxT("QuickTime"), XO("Import via QuickTime"),
-                    enabled);
-# else
-    AddBuildInfoRow(&informationStr, wxT("QuickTime"), XO("Import via QuickTime"),
-                    disabled);
-# endif
-
-#ifdef USE_FFMPEG
-    AddBuildInfoRow(&informationStr, wxT("ffmpeg"), XO("FFmpeg Import/Export"), enabled);
-#else
-    AddBuildInfoRow(&informationStr, wxT("ffmpeg"), XO("FFmpeg Import/Export"), disabled);
-#endif
-
-#ifdef USE_GSTREAMER
-    AddBuildInfoRow(&informationStr, wxT("gstreamer"), XO("Import via GStreamer"), enabled);
-#else
-    AddBuildInfoRow(&informationStr, wxT("gstreamer"), XO("Import via GStreamer"), disabled);
-#endif
-
+    AddBuildInfoRow(&informationStr, wxT("libmad"), XO("MP3 Importing"), USE_LIBMAD ? enabled : disabled);
+    /* i18n-hint: Ogg is the container format. Vorbis is the compression codec. Both are proper nouns and shouldn't be translated */
+    AddBuildInfoRow(&informationStr, wxT("libvorbis"), XO("Ogg Vorbis Import and Export"), USE_LIBVORBIS ? enabled : disabled);
+    AddBuildInfoRow(&informationStr, wxT("libid3tag"), XO("ID3 tag support"), USE_LIBID3TAG ? enabled : disabled);
+    /* i18n-hint: FLAC stands for Free Lossless Audio Codec, but is effectively a proper noun and so shouldn't be translated */
+    AddBuildInfoRow(&informationStr, wxT("libflac"), XO("FLAC import and export"), USE_LIBFLAC ? enabled : disabled);
+    AddBuildInfoRow(&informationStr, wxT("libtwolame"), XO("MP2 export"), USE_LIBTWOLAME ? enabled : disabled);
+    #ifdef USE_QUICKTIME
+        AddBuildInfoRow(&informationStr, wxT("QuickTime"), XO("Import via QuickTime"), USE_QUICKTIME ? enabled : disabled);
+    #endif
+    AddBuildInfoRow(&informationStr, wxT("ffmpeg"), XO("FFmpeg Import/Export"), USE_FFMPEG ? enabled : disabled);
+    #ifdef USE_GSTREAMER
+        AddBuildInfoRow(&informationStr, wxT("gstreamer"), XO("Import via GStreamer"), USE_GSTREAMER ? enabled : disabled);
+    #endif
     informationStr << wxT("</table>\n");  //end table of file formats supported
 
     informationStr
@@ -329,14 +270,18 @@ void AboutDialog::CreateInformationTab(ShuttleGui& AboutDialogGUI) {
         << wxT("</h3>\n<table>");  // start table of features
 
     //AddBuildInfoRow(&informationStr, wxT("Theme"), XO("Dark Theme Extras"),  DA_EXPERIMENTAL ? enabled : disabled);
-    AddBuildInfoRow(&informationStr, wxT("Nyquist"), XO("Plug-in support"),  USE_NYQUIST ? enabled : disabled);
-    AddBuildInfoRow(&informationStr, wxT("LADSPA"), XO("Plug-in support"),  USE_LADSPA ? enabled : disabled);
+
+    AddBuildInfoRow(&informationStr, wxT("Nyquist"), XO("Plug-in support"), USE_NYQUIST ? enabled : disabled);
+    AddBuildInfoRow(&informationStr, wxT("LADSPA"), XO("Plug-in support"), USE_LADSPA ? enabled : disabled);
     AddBuildInfoRow(&informationStr, wxT("Vamp"), XO("Plug-in support"), USE_VAMP ? enabled : disabled);
-    //AddBuildInfoRow(&informationStr, wxT("Audio Units"), XO("Plug-in support"), USE_AUDIO_UNITS ? enabled : disabled);
-    
-    AddBuildInfoRow(&informationStr, wxT("VST"), XO("Plug-in support"),  USE_VST ? enabled : disabled);
+
+    #ifdef USE_AUDIO_UNITS
+        AddBuildInfoRow(&informationStr, wxT("Audio Units"), XO("Plug-in support"), USE_AUDIO_UNITS ? enabled : disabled);
+    #endif
+
+    AddBuildInfoRow(&informationStr, wxT("VST"), XO("Plug-in support"), USE_VST ? enabled : disabled);
     AddBuildInfoRow(&informationStr, wxT("LV2"), XO("Plug-in support"), USE_LV2 ? enabled : disabled);
-    
+
     AddBuildInfoRow(&informationStr, wxT("PortMixer"), XO("Sound card mixer support"), USE_PORTMIXER ? enabled : disabled);
     AddBuildInfoRow(&informationStr, wxT("SoundTouch"), XO("Pitch and Tempo Change support"), USE_SOUNDTOUCH ? enabled : disabled);
     AddBuildInfoRow(&informationStr, wxT("SBSMS"), XO("Extreme Pitch and Tempo Change support"), USE_SBSMS ? enabled : disabled);
@@ -352,7 +297,7 @@ void AboutDialog::CreateInformationTab(ShuttleGui& AboutDialogGUI) {
 
 void AboutDialog::CreateLicenseTab(ShuttleGui& AboutDialogGUI) {
     AboutDialogGUI.StartNotebookPage(XO("GPL License"));
-    AboutDialogGUI.StartVerticalLay(1);
+    AboutDialogGUI.StartVerticalLay(GROWING_PROPORTION);
     HtmlWindow* html = safenew LinkingHtmlWindow(AboutDialogGUI.GetParent(), -1,
                                                  wxDefaultPosition,
                                                  wxSize(ABOUT_DIALOG_WIDTH, 264),
