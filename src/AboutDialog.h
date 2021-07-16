@@ -3,9 +3,7 @@
   Tenacity
 
   AboutDialog.h
-
-  Dominic Mazzoni
-
+  
 **********************************************************************/
 
 #ifndef __TENACITY_ABOUT_DLG__
@@ -65,9 +63,9 @@ class AUDACITY_DLL_API AboutDialog final : public wxDialogWrapper {
    void AddCredit( const wxString &name, TranslatableString format, Role role );
    wxString GetCreditsByRole(AboutDialog::Role role);
 
-   void AddBuildinfoRow( wxTextOutputStream *str, const wxChar * libname,
-      const TranslatableString &libdesc, const TranslatableString &status);
-   void AddBuildinfoRow( wxTextOutputStream *str,
+   static void AddBuildInfoRow( wxTextOutputStream *str, const wxChar * libname,
+                                const TranslatableString &libdesc, const TranslatableString &status);
+   static void AddBuildInfoRow( wxTextOutputStream *str,
       const TranslatableString &description, const wxChar *spec);
 };
 

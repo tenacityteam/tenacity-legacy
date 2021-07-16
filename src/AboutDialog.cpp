@@ -13,22 +13,16 @@
 \class AboutDialog
 \brief The AboutDialog shows the program version and developer credits.
 
-It is a simple scrolling window with an 'OK... Audacious!' button to
-close it.
-
 *//*****************************************************************//**
 
 \class AboutDialogCreditItem
 \brief AboutDialogCreditItem is a structure used by the AboutDialog to
-hold information about one contributor to Audacity.
+hold information about a contributor.
 
 *//********************************************************************/
 
 
-
 #include "AboutDialog.h"
-
-
 
 #include <wx/dialog.h>
 #include <wx/html/htmlwin.h>
@@ -75,58 +69,80 @@ hold information about one contributor to Audacity.
 #endif
 
 // To substitute into many other translatable strings
-static const auto ProgramName =
-   //XO("Audacity");
-   Verbatim("Tenacity");
+static const auto ProgramName = Verbatim("Tenacity");
 
 void AboutDialog::CreateCreditsList()
 {
+    /* BEGIN PRE-FORK Formats*/
    const auto sysAdminFormat =
-   /* i18n-hint: For "About Audacity..." credits, substituting a person's proper name */
+   /* i18n-hint: For "About Tenacity..." credits, substituting a person's proper name */
       XO("%s, system administration");
    const auto coFounderFormat =
-   /* i18n-hint: For "About Audacity..." credits, substituting a person's proper name */
+   /* i18n-hint: For "About Tenacity..." credits, substituting a person's proper name */
       XO("%s, co-founder and developer");
    const auto developerFormat =
-   /* i18n-hint: For "About Audacity..." credits, substituting a person's proper name */
+   /* i18n-hint: For "About Tenacity..." credits, substituting a person's proper name */
       XO("%s, developer");
-   const auto developerAndSupprtFormat =
-   /* i18n-hint: For "About Audacity..." credits, substituting a person's proper name */
+   const auto developerAndSupportFormat =
+   /* i18n-hint: For "About Tenacity..." credits, substituting a person's proper name */
       XO("%s, developer and support");
    const auto documentationAndSupportFormat =
-   /* i18n-hint: For "About Audacity..." credits, substituting a person's proper name */
+   /* i18n-hint: For "About Tenacity..." credits, substituting a person's proper name */
       XO("%s, documentation and support");
    const auto qaDocumentationAndSupportFormat =
-   /* i18n-hint: For "About Audacity..." credits, substituting a person's proper name */
+   /* i18n-hint: For "About Tenacity..." credits, substituting a person's proper name */
       XO("%s, QA tester, documentation and support");
    const auto documentationAndSupportFrenchFormat =
-   /* i18n-hint: For "About Audacity..." credits, substituting a person's proper name */
+   /* i18n-hint: For "About Tenacity..." credits, substituting a person's proper name */
       XO("%s, documentation and support, French");
    const auto qualityAssuranceFormat =
-   /* i18n-hint: For "About Audacity..." credits, substituting a person's proper name */
+   /* i18n-hint: For "About Tenacity..." credits, substituting a person's proper name */
       XO("%s, quality assurance");
    const auto accessibilityAdvisorFormat =
-   /* i18n-hint: For "About Audacity..." credits, substituting a person's proper name */
+   /* i18n-hint: For "About Tenacity..." credits, substituting a person's proper name */
       XO("%s, accessibility advisor");
    const auto graphicArtistFormat =
-   /* i18n-hint: For "About Audacity..." credits, substituting a person's proper name */
+   /* i18n-hint: For "About Tenacity..." credits, substituting a person's proper name */
       XO("%s, graphic artist");
    const auto composerFormat =
-   /* i18n-hint: For "About Audacity..." credits, substituting a person's proper name */
+   /* i18n-hint: For "About Tenacity..." credits, substituting a person's proper name */
       XO("%s, composer");
    const auto testerFormat =
-   /* i18n-hint: For "About Audacity..." credits, substituting a person's proper name */
+   /* i18n-hint: For "About Tenacity..." credits, substituting a person's proper name */
       XO("%s, tester");
    const auto NyquistPluginsFormat =
-   /* i18n-hint: For "About Audacity..." credits, substituting a person's proper name */
+   /* i18n-hint: For "About Tenacity..." credits, substituting a person's proper name */
       XO("%s, Nyquist plug-ins");
    const auto webDeveloperFormat =
-   /* i18n-hint: For "About Audacity..." credits, substituting a person's proper name */
+   /* i18n-hint: For "About Tenacity..." credits, substituting a person's proper name */
       XO("%s, web developer");
    const auto graphicsFormat =
-   /* i18n-hint: For "About Audacity..." credits, substituting a person's proper name */
+   /* i18n-hint: For "About Tenacity..." credits, substituting a person's proper name */
       XO("%s, graphics");
 
+    /* END PRE-FORK FORMATS*/
+
+    /* BEGIN TENACITY FORMATS */
+
+   const auto tenacity_leadDeveloperFormat =
+      /* i18n-hint: For "About Tenacity..." credits, substituting a person's proper name */
+      XO("%s, lead Tenacity developer");
+
+   const auto tenacity_developerFormat =
+      /* i18n-hint: For "About Tenacity..." credits, substituting a person's proper name */
+      XO("%s, Tenacity developer");
+
+    /* END TENACITY FORMATS*/
+
+   AddCredit(wxT("Emily Mabrey [[https://github.com/emabrey|<emabrey>]]"), tenacity_leadDeveloperFormat, roleTeamMember);
+    
+   AddCredit(wxT("Semisol [[https://github.com/Semisol|<Semisol>]]"), tenacity_developerFormat, roleTeamMember);
+    
+   AddCredit(wxT("Be [[https://github.com/Be-ing/|<Be-ing>]]"), tenacity_developerFormat, roleTeamMember);
+
+
+   
+   
    // The Audacity Team: developers and support
    AddCredit(wxT("James Crook"), developerFormat, roleTeamMember);
    AddCredit(wxT("Roger Dannenberg"), coFounderFormat, roleTeamMember);
@@ -137,15 +153,13 @@ void AboutDialog::CreateCreditsList()
    AddCredit(wxT("Vitaly Sverchinsky"), developerFormat, roleTeamMember);
    AddCredit(wxT("Dmitry Vedenko"), developerFormat, roleTeamMember);
 
+   
    // Emeritus: people who were "lead developers" or made an
    // otherwise distinguished contribution, but who are no
    // longer active.
-   AddCredit(
-      wxT("[[https://wiki.audacityteam.org/wiki/User:Galeandrews|Gale Andrews]]"),
-      qualityAssuranceFormat, roleEmeritusTeam);
+   AddCredit(wxT("Gale Andrews"),qualityAssuranceFormat, roleEmeritusTeam);
    AddCredit(wxT("Richard Ash"), developerFormat, roleEmeritusTeam);
-   AddCredit(wxT("Christian Brochec"),
-      documentationAndSupportFrenchFormat, roleEmeritusTeam);
+   AddCredit(wxT("Christian Brochec"), documentationAndSupportFrenchFormat, roleEmeritusTeam);
    AddCredit(wxT("Matt Brubeck"), developerFormat, roleEmeritusTeam);
    AddCredit(wxT("Arturo \"Buanzo\" Busleiman"), sysAdminFormat, roleEmeritusTeam);
    AddCredit(wxT("Michael Chinen"), developerFormat, roleEmeritusTeam);
@@ -217,6 +231,7 @@ void AboutDialog::CreateCreditsList()
    // Website and Graphics
    AddCredit(wxT("Shinta Carolinasari"), webDeveloperFormat, roleGraphics);
    AddCredit(wxT("Bayu Rizaldhan Rayes"), graphicsFormat, roleGraphics);
+   
 
    // Libraries
 
@@ -583,8 +598,8 @@ void AboutDialog::PopulateInformationPage( ShuttleGui & S )
       << wxT("</h3>\n<table>"); // start build info table
 
    // Current date
-   AddBuildinfoRow(&informationStr, XO("Program build date:"), __TDATE__);
-   AddBuildinfoRow(&informationStr, XO("Commit Id:"), REV_IDENT );
+   AddBuildInfoRow(&informationStr, XO("Program build date:"), __TDATE__);
+   AddBuildInfoRow(&informationStr, XO("Commit Id:"), REV_IDENT );
 
    auto buildType =
 #ifdef _DEBUG
@@ -601,34 +616,34 @@ void AboutDialog::PopulateInformationPage( ShuttleGui & S )
    buildType = Verbatim("CMake %s").Format( buildType );
 #endif
 
-   AddBuildinfoRow(&informationStr, XO("Build type:"), buildType.Translation());
+   AddBuildInfoRow(&informationStr, XO("Build type:"), buildType.Translation());
 
 #ifdef _MSC_FULL_VER
-   AddBuildinfoRow(&informationStr, XO("Compiler:"),
+   AddBuildInfoRow(&informationStr, XO("Compiler:"),
 	   wxString::Format(wxT("MSVC %02d.%02d.%05d.%02d"), _MSC_VER / 100, _MSC_VER % 100, _MSC_FULL_VER % 100000, _MSC_BUILD));
 #endif
 
 #ifdef __GNUC_PATCHLEVEL__
 #ifdef __MINGW32__
-   AddBuildinfoRow(&informationStr, XO("Compiler:"), wxT("MinGW ") wxMAKE_VERSION_DOT_STRING_T(__GNUC__, __GNUC_MINOR__, __GNUC_PATCHLEVEL__));
+   AddBuildInfoRow(&informationStr, XO("Compiler:"), wxT("MinGW ") wxMAKE_VERSION_DOT_STRING_T(__GNUC__, __GNUC_MINOR__, __GNUC_PATCHLEVEL__));
 #else
-   AddBuildinfoRow(&informationStr, XO("Compiler:"), wxT("GCC ") wxMAKE_VERSION_DOT_STRING_T(__GNUC__, __GNUC_MINOR__, __GNUC_PATCHLEVEL__));
+   AddBuildInfoRow(&informationStr, XO("Compiler:"), wxT("GCC ") wxMAKE_VERSION_DOT_STRING_T(__GNUC__, __GNUC_MINOR__, __GNUC_PATCHLEVEL__));
 #endif
 #endif
 
 #ifdef __clang_version__
-   AddBuildinfoRow(&informationStr, XO("Compiler:"), wxT("clang ") __clang_version__);
+   AddBuildInfoRow(&informationStr, XO("Compiler:"), wxT("clang ") __clang_version__);
 #endif
 
    // Install prefix
 #ifdef __WXGTK__
    /* i18n-hint: The directory audacity is installed into (on *nix systems) */
-   AddBuildinfoRow(&informationStr, XO("Installation Prefix:"), \
+   AddBuildInfoRow(&informationStr, XO("Installation Prefix:"), \
          wxT(INSTALL_PREFIX));
 #endif
 
    // Location of settings
-   AddBuildinfoRow(&informationStr, XO("Settings folder:"), \
+   AddBuildInfoRow(&informationStr, XO("Settings folder:"), \
       FileNames::DataDir());
 
    informationStr << wxT("</table>\n"); // end of build info table
@@ -640,13 +655,13 @@ void AboutDialog::PopulateInformationPage( ShuttleGui & S )
       << XO("Core Libraries")
       << wxT("</h3>\n<table>");  // start table of core libraries
 
-   AddBuildinfoRow(&informationStr, wxT("wxWidgets"),
+   AddBuildInfoRow(&informationStr, wxT("wxWidgets"),
          XO("Cross-platform GUI library"), Verbatim(wxVERSION_NUM_DOT_STRING_T));
 
-   AddBuildinfoRow(&informationStr, wxT("PortAudio"),
+   AddBuildInfoRow(&informationStr, wxT("PortAudio"),
          XO("Audio playback and recording"), Verbatim(wxT("v19")));
 
-   AddBuildinfoRow(&informationStr, wxT("libsoxr"),
+   AddBuildInfoRow(&informationStr, wxT("libsoxr"),
          XO("Sample rate conversion"), enabled);
 
    informationStr << wxT("</table>\n"); // end table of core libraries
@@ -662,65 +677,65 @@ void AboutDialog::PopulateInformationPage( ShuttleGui & S )
 
    #ifdef USE_LIBMAD
    /* i18n-hint: This is what the library (libmad) does - imports MP3 files */
-   AddBuildinfoRow(&informationStr, wxT("libmad"), XO("MP3 Importing"), enabled);
+   AddBuildInfoRow(&informationStr, wxT("libmad"), XO("MP3 Importing"), enabled);
    #else
-   AddBuildinfoRow(&informationStr, wxT("libmad"), XO("MP3 Importing"), disabled);
+   AddBuildInfoRow(&informationStr, wxT("libmad"), XO("MP3 Importing"), disabled);
    #endif
 
    #ifdef USE_LIBVORBIS
-   AddBuildinfoRow(&informationStr, wxT("libvorbis"),
+   AddBuildInfoRow(&informationStr, wxT("libvorbis"),
    /* i18n-hint: Ogg is the container format. Vorbis is the compression codec.
     * Both are proper nouns and shouldn't be translated */
          XO("Ogg Vorbis Import and Export"), enabled);
    #else
-   AddBuildinfoRow(&informationStr, wxT("libvorbis"),
+   AddBuildInfoRow(&informationStr, wxT("libvorbis"),
          XO("Ogg Vorbis Import and Export"), disabled);
    #endif
 
    #ifdef USE_LIBID3TAG
-   AddBuildinfoRow(&informationStr, wxT("libid3tag"), XO("ID3 tag support"),
+   AddBuildInfoRow(&informationStr, wxT("libid3tag"), XO("ID3 tag support"),
          enabled);
    #else
-   AddBuildinfoRow(&informationStr, wxT("libid3tag"), XO("ID3 tag support"),
+   AddBuildInfoRow(&informationStr, wxT("libid3tag"), XO("ID3 tag support"),
          disabled);
    #endif
 
    # if USE_LIBFLAC
    /* i18n-hint: FLAC stands for Free Lossless Audio Codec, but is effectively
     * a proper noun and so shouldn't be translated */
-   AddBuildinfoRow(&informationStr, wxT("libflac"), XO("FLAC import and export"),
+   AddBuildInfoRow(&informationStr, wxT("libflac"), XO("FLAC import and export"),
          enabled);
    # else
-   AddBuildinfoRow(&informationStr, wxT("libflac"), XO("FLAC import and export"),
+   AddBuildInfoRow(&informationStr, wxT("libflac"), XO("FLAC import and export"),
          disabled);
    # endif
 
    # if USE_LIBTWOLAME
-   AddBuildinfoRow(&informationStr, wxT("libtwolame"), XO("MP2 export"),
+   AddBuildInfoRow(&informationStr, wxT("libtwolame"), XO("MP2 export"),
          enabled);
    # else
-   AddBuildinfoRow(&informationStr, wxT("libtwolame"), XO("MP2 export"),
+   AddBuildInfoRow(&informationStr, wxT("libtwolame"), XO("MP2 export"),
          disabled);
    # endif
 
    # if USE_QUICKTIME
-   AddBuildinfoRow(&informationStr, wxT("QuickTime"), XO("Import via QuickTime"),
+   AddBuildInfoRow(&informationStr, wxT("QuickTime"), XO("Import via QuickTime"),
          enabled);
    # else
-   AddBuildinfoRow(&informationStr, wxT("QuickTime"), XO("Import via QuickTime"),
+   AddBuildInfoRow(&informationStr, wxT("QuickTime"), XO("Import via QuickTime"),
          disabled);
    # endif
 
    #ifdef USE_FFMPEG
-   AddBuildinfoRow(&informationStr, wxT("ffmpeg"), XO("FFmpeg Import/Export"), enabled);
+   AddBuildInfoRow(&informationStr, wxT("ffmpeg"), XO("FFmpeg Import/Export"), enabled);
    #else
-   AddBuildinfoRow(&informationStr, wxT("ffmpeg"), XO("FFmpeg Import/Export"), disabled);
+   AddBuildInfoRow(&informationStr, wxT("ffmpeg"), XO("FFmpeg Import/Export"), disabled);
    #endif
 
    #ifdef USE_GSTREAMER
-   AddBuildinfoRow(&informationStr, wxT("gstreamer"), XO("Import via GStreamer"), enabled);
+   AddBuildInfoRow(&informationStr, wxT("gstreamer"), XO("Import via GStreamer"), enabled);
    #else
-   AddBuildinfoRow(&informationStr, wxT("gstreamer"), XO("Import via GStreamer"), disabled);
+   AddBuildInfoRow(&informationStr, wxT("gstreamer"), XO("Import via GStreamer"), disabled);
    #endif
 
    informationStr << wxT("</table>\n");  //end table of file formats supported
@@ -731,80 +746,80 @@ void AboutDialog::PopulateInformationPage( ShuttleGui & S )
       << wxT("</h3>\n<table>");  // start table of features
 
 #ifdef EXPERIMENTAL_DA
-   AddBuildinfoRow(&informationStr, wxT("Theme"), XO("Dark Theme Extras"), enabled);
+   AddBuildInfoRow(&informationStr, wxT("Theme"), XO("Dark Theme Extras"), enabled);
 #else
-   AddBuildinfoRow(&informationStr, wxT("Theme"), XO("Dark Theme Extras"), disabled);
+   AddBuildInfoRow(&informationStr, wxT("Theme"), XO("Dark Theme Extras"), disabled);
 #endif
 
    # if USE_NYQUIST
-   AddBuildinfoRow(&informationStr, wxT("Nyquist"), XO("Plug-in support"),
+   AddBuildInfoRow(&informationStr, wxT("Nyquist"), XO("Plug-in support"),
          enabled);
    # else
-   AddBuildinfoRow(&informationStr, wxT("Nyquist"), XO("Plug-in support"),
+   AddBuildInfoRow(&informationStr, wxT("Nyquist"), XO("Plug-in support"),
          disabled);
    # endif
 
    # if USE_LADSPA
-   AddBuildinfoRow(&informationStr, wxT("LADSPA"), XO("Plug-in support"),
+   AddBuildInfoRow(&informationStr, wxT("LADSPA"), XO("Plug-in support"),
          enabled);
    # else
-   AddBuildinfoRow(&informationStr, wxT("LADSPA"), XO("Plug-in support"),
+   AddBuildInfoRow(&informationStr, wxT("LADSPA"), XO("Plug-in support"),
          disabled);
    # endif
 
    # if USE_VAMP
-   AddBuildinfoRow(&informationStr, wxT("Vamp"), XO("Plug-in support"),
+   AddBuildInfoRow(&informationStr, wxT("Vamp"), XO("Plug-in support"),
          enabled);
    # else
-   AddBuildinfoRow(&informationStr, wxT("Vamp"), XO("Plug-in support"),
+   AddBuildInfoRow(&informationStr, wxT("Vamp"), XO("Plug-in support"),
          disabled);
    # endif
 
    # if USE_AUDIO_UNITS
-   AddBuildinfoRow(&informationStr, wxT("Audio Units"), XO("Plug-in support"),
+   AddBuildInfoRow(&informationStr, wxT("Audio Units"), XO("Plug-in support"),
          enabled);
    # else
-   AddBuildinfoRow(&informationStr, wxT("Audio Units"), XO("Plug-in support"),
+   AddBuildInfoRow(&informationStr, wxT("Audio Units"), XO("Plug-in support"),
          disabled);
    # endif
 
    # if USE_VST
-   AddBuildinfoRow(&informationStr, wxT("VST"), XO("Plug-in support"),
+   AddBuildInfoRow(&informationStr, wxT("VST"), XO("Plug-in support"),
          enabled);
    # else
-   AddBuildinfoRow(&informationStr, wxT("VST"), XO("Plug-in support"),
+   AddBuildInfoRow(&informationStr, wxT("VST"), XO("Plug-in support"),
          disabled);
    # endif
 
    # if USE_LV2
-   AddBuildinfoRow(&informationStr, wxT("LV2"), XO("Plug-in support"),
+   AddBuildInfoRow(&informationStr, wxT("LV2"), XO("Plug-in support"),
          enabled);
    # else
-   AddBuildinfoRow(&informationStr, wxT("LV2"), XO("Plug-in support"),
+   AddBuildInfoRow(&informationStr, wxT("LV2"), XO("Plug-in support"),
          disabled);
    # endif
 
    # if USE_PORTMIXER
-   AddBuildinfoRow(&informationStr, wxT("PortMixer"), XO("Sound card mixer support"),
+   AddBuildInfoRow(&informationStr, wxT("PortMixer"), XO("Sound card mixer support"),
          enabled);
    # else
-   AddBuildinfoRow(&informationStr, wxT("PortMixer"), XO("Sound card mixer support"),
+   AddBuildInfoRow(&informationStr, wxT("PortMixer"), XO("Sound card mixer support"),
          disabled);
    # endif
 
    # if USE_SOUNDTOUCH
-   AddBuildinfoRow(&informationStr, wxT("SoundTouch"), XO("Pitch and Tempo Change support"),
+   AddBuildInfoRow(&informationStr, wxT("SoundTouch"), XO("Pitch and Tempo Change support"),
          enabled);
    # else
-   AddBuildinfoRow(&informationStr, wxT("SoundTouch"), XO("Pitch and Tempo Change support"),
+   AddBuildInfoRow(&informationStr, wxT("SoundTouch"), XO("Pitch and Tempo Change support"),
          disabled);
    # endif
 
    # if USE_SBSMS
-   AddBuildinfoRow(&informationStr, wxT("SBSMS"), XO("Extreme Pitch and Tempo Change support"),
+   AddBuildInfoRow(&informationStr, wxT("SBSMS"), XO("Extreme Pitch and Tempo Change support"),
          enabled);
    # else
-   AddBuildinfoRow(&informationStr, wxT("SBSMS"), XO("Extreme Pitch and Tempo Change support"),
+   AddBuildInfoRow(&informationStr, wxT("SBSMS"), XO("Extreme Pitch and Tempo Change support"),
          disabled);
    # endif
 
@@ -835,7 +850,7 @@ void AboutDialog::PopulateLicensePage( ShuttleGui & S )
 // better proportionally spaced.
 //
 // The GPL is not to be translated....
-   wxString PageText= FormatHtmlText(
+   const wxString PageText= FormatHtmlText(
 wxT("		    <center>GNU GENERAL PUBLIC LICENSE\n</center>")
 wxT("		       <center>Version 2, June 1991\n</center>")
 wxT("<p><p>")
@@ -1167,7 +1182,7 @@ wxString AboutDialog::GetCreditsByRole(AboutDialog::Role role)
  *
  * Used when creating the build information tab to show if each optional
  * library is enabled or not, and what it does */
-void AboutDialog::AddBuildinfoRow(
+void AboutDialog::AddBuildInfoRow(
    wxTextOutputStream *str, const wxChar * libname,
    const TranslatableString &libdesc, const TranslatableString &status)
 {
@@ -1185,7 +1200,7 @@ void AboutDialog::AddBuildinfoRow(
  *
  * Used when creating the build information tab to show build dates and
  * file paths */
-void AboutDialog::AddBuildinfoRow(
+void AboutDialog::AddBuildInfoRow(
    wxTextOutputStream *str,
    const TranslatableString &description, const wxChar *spec)
 {
