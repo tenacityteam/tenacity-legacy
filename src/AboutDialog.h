@@ -18,9 +18,8 @@ class wxTextOutputStream;
 class ShuttleGui;
 
 struct AboutDialogCreditItem {
-   AboutDialogCreditItem( TranslatableString str, int r )
-      : description{ std::move( str ) }, role{ r }
-   {}
+   AboutDialogCreditItem( TranslatableString str, int r ): description{ std::move( str ) },
+   role{ r }{ }
    TranslatableString description;
    int role;
 };
@@ -34,7 +33,7 @@ class AUDACITY_DLL_API AboutDialog final : public wxDialogWrapper {
    AboutDialog(wxWindow * parent);
    virtual ~ AboutDialog();
 
-   static AboutDialog *ActiveIntance();
+   static AboutDialog *ActiveInstance();
 
    void OnOK(wxCommandEvent & event);
 
@@ -44,21 +43,37 @@ class AUDACITY_DLL_API AboutDialog final : public wxDialogWrapper {
 
  private:
    enum Role {
-      roleTeamMember,
-      roleEmeritusTeam,
-      roleDeceased,
-      roleContributor,
-      roleGraphics,
+      roleTenacityTeamMember,
+      rolePreforkTeamMember,
+      rolePreforkEmeritusTeam,
+      rolePreforkDeceased,
+      rolePreforkContributor,
+      rolePreforkGraphics,
       roleLibrary,
-      roleThanks
+      rolePreforkThanks
    };
 
+
+
    AboutDialogCreditItemsList creditItems;
-   void PopulateTenacityPage( ShuttleGui & S );
+   void GenerateTenacityPage( ShuttleGui & S );
    void PopulateLicensePage( ShuttleGui & S );
    void PopulateInformationPage (ShuttleGui & S );
 
-   void CreateCreditsList();
+   static wxImage GenerateTenacityLogoRescaledImage(const float fScale);
+   void GenerateTenacityPageDescription(wxTextOutputStream & tos);
+   void GenerateTenacityTeamMembersInfo(wxTextOutputStream & tos);
+   void GenerateTenacityLibsInfo(wxTextOutputStream & tos);
+
+   void GeneratePreforkTeamMembersInfo(wxTextOutputStream & tos);
+   void GeneratePreforkEmeritusInfo(wxTextOutputStream & tos);
+   void GeneratePreforkContributorInfo(wxTextOutputStream & tos);
+   void GeneratePreforkGraphicsInfo(wxTextOutputStream & tos);
+   void GeneratePreforkTranslatorsInfo(wxTextOutputStream & tos);
+   void GeneratePreforkSpecialThanksInfo(wxTextOutputStream & tos);
+   void GeneratePreforkWebsiteInfo(wxTextOutputStream & tos);
+
+   void PopulateCreditsList();
    void AddCredit( const wxString &name, Role role );
    void AddCredit( const wxString &name, TranslatableString format, Role role );
    wxString GetCreditsByRole(Role role);

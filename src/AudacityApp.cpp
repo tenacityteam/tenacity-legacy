@@ -2219,7 +2219,7 @@ void AudacityApp::OnMenuAbout(wxCommandEvent & /*event*/)
 #ifdef __WXMAC__
    // Modeless dialog, consistent with other Mac applications
    // Not more than one at once!
-   const auto instance = AboutDialog::ActiveIntance();
+   const auto instance = AboutDialog::ActiveInstance();
    if (instance)
       instance->Raise();
    else
