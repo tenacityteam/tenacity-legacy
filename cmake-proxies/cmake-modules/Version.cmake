@@ -4,7 +4,7 @@
 
 execute_process(
    COMMAND
-      ${GIT} show -s "--format=#define REV_LONG \"%H\"%n#define REV_TIME \"%cd\"%n"
+      ${GIT} show -s "--format=#define REV_LONG \"%H\"%n#define REV_TIME \"%cd\"%n" --no-notes --no-show-signature
    OUTPUT_FILE
       ${_PRVDIR}/RevisionIdent.h.in
    OUTPUT_STRIP_TRAILING_WHITESPACE

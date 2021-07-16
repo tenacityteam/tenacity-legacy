@@ -1,6 +1,6 @@
 /**********************************************************************
 
-Audacity: A Digital Audio Editor
+Tenacity
 
 AudioIOBase.h
 
@@ -20,6 +20,8 @@ Paul Licameli split from AudioIO.h
 #include <wx/string.h>
 #include <wx/weakref.h> // member variable
 #include "MemoryX.h"
+
+#include <portaudio.h>
 
 struct PaDeviceInfo;
 typedef void PaStream;

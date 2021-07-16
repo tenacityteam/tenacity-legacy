@@ -1137,13 +1137,16 @@ if( CMAKE_SYSTEM_NAME MATCHES "Windows" )
    )
 
    # Copy the VC runtime libraries as well
-   add_custom_command(
-      TARGET
-         ${TARGET}
-      COMMAND
-         ${CMAKE_COMMAND} -E copy ${CMAKE_INSTALL_SYSTEM_RUNTIME_LIBS} ${_DEST}
-      POST_BUILD
-   )
+   if(NOT "_X${CMAKE_INSTALL_SYSTEM_RUNTIME_LIBS}" STREQUAL "_X")
+      add_custom_command(
+         TARGET
+            ${TARGET}
+         COMMAND
+            ${CMAKE_COMMAND} -E copy ${CMAKE_INSTALL_SYSTEM_RUNTIME_LIBS} ${_DEST}
+         POST_BUILD
+      )
+   endif()
+
 elseif( CMAKE_SYSTEM_NAME MATCHES "Darwin" )
    # Bug 2400 workaround
    #
@@ -1352,6 +1355,9 @@ else()
       install( TARGETS ${TARGET}
                DESTINATION "."
                RESOURCE DESTINATION "${_APPDIR}/Resources" )
+   elseif( CMAKE_SYSTEM_NAME MATCHES "Windows" )
+      install( TARGETS ${TARGET}
+               DESTINATION "." )
    else()
       install( TARGETS ${TARGET} RUNTIME )
       install( DIRECTORY "${_DEST}/${_LIBDIR}/"
@@ -1360,7 +1366,7 @@ else()
                FILES_MATCHING PATTERN "*.so*" )
       install( FILES "${_INTDIR}/audacity.desktop"
                DESTINATION "${_DATADIR}/applications" )
-      install( FILES "${topdir}/LICENSE.txt" "${topdir}/README.txt"
+      install( FILES "${topdir}/LICENSE.txt" "${topdir}/README.md"
                DESTINATION "${_DATADIR}/doc/${AUDACITY_NAME}" )
       install( FILES "${_SRCDIR}/audacity.xml"
                DESTINATION "${_DATADIR}/mime/packages" )

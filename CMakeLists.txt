@@ -29,11 +29,10 @@ set( AUDACITY_RELEASE 0 )
 set( AUDACITY_REVISION 4 )
 set( AUDACITY_MODLEVEL 0 )
 
-string( TIMESTAMP __TDATE__ "%Y%m%d" )
 if( AUDACITY_BUILD_LEVEL EQUAL 0 )
-   set( AUDACITY_SUFFIX "-alpha-${__TDATE__}" )
+   set( AUDACITY_SUFFIX "-alpha" )
 elseif(  AUDACITY_BUILD_LEVEL EQUAL 1 )
-   set( AUDACITY_SUFFIX "-beta-${__TDATE__}" )
+   set( AUDACITY_SUFFIX "-beta" )
 else()
    set( AUDACITY_SUFFIX "" )
 endif()
@@ -123,12 +122,25 @@ set( CMAKE_CXX_STANDARD_REQUIRED ON )
 find_program( CCACHE_PROGRAM ccache )
 mark_as_advanced( FORCE CCACHE_PROGRAM )
 
+find_program( SCCACHE_PROGRAM sccache )
+mark_as_advanced( FORCE SCCACHE_PROGRAM )
+
 if( CCACHE_PROGRAM )
-   set_property( GLOBAL PROPERTY RULE_LAUNCH_COMPILE "${CCACHE_PROGRAM}" )
+   message( STATUS "Found ccache: ${CCACHE_PROGRAM}" )
+   set( CMAKE_C_COMPILER_LAUNCHER "${CCACHE_PROGRAM}" )
+   set( CMAKE_CXX_COMPILER_LAUNCHER "${CCACHE_PROGRAM}" )
+elseif( SCCACHE_PROGRAM )
+   message( STATUS "Found sccache: ${SCCACHE_PROGRAM}" )
+   set( CMAKE_C_COMPILER_LAUNCHER "${SCCACHE_PROGRAM}" )
+   set( CMAKE_CXX_COMPILER_LAUNCHER "${SCCACHE_PROGRAM}" )
+else()
+   message( STATUS "Could NOT find ccache nor sccache, no compiler caching enabled" )
 endif()
 
-# Define option() prefix
-set( _OPT "audacity_" )
+# Audacity sets this `audacity_` to prefix all CMake options which is not needed and this is not Audacity.
+# Keep this CMake variable here instead of removing it from the rest of the CMake code to minimize merge
+# conflicts with Audacity.
+set( _OPT "" )
 
 # Our very own project
 project( Audacity )
@@ -257,18 +269,17 @@ if( CMAKE_GENERATOR MATCHES "Visual Studio" )
    include( InstallRequiredSystemLibraries )
 endif()
 
-# Where the final product is stored
-set( CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin )
-
 set ( _SHARED_PROXY_BASE "shared" )
 set ( _SHARED_PROXY_BASE_PATH "${CMAKE_BINARY_DIR}/${_SHARED_PROXY_BASE}")
 
-# Define the non-install and executable paths
+# Define the non-install and executable paths and where the final product is stored
 if( CMAKE_CONFIGURATION_TYPES )
+   set( CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin )
    set( _DESTDIR "${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/${CMAKE_CFG_INTDIR}" )
    set( _SHARED_PROXY_PATH "${_SHARED_PROXY_BASE_PATH}/${CMAKE_CFG_INTDIR}")
 else()
-   set( _DESTDIR "${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/${CMAKE_BUILD_TYPE}" )
+   set( CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin/${CMAKE_BUILD_TYPE} )
+   set( _DESTDIR "${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/" )
    set( _SHARED_PROXY_PATH "${_SHARED_PROXY_BASE_PATH}/${CMAKE_BUILD_TYPE}")
 endif()
 
@@ -344,6 +355,18 @@ elseif( CMAKE_CXX_COMPILER_ID MATCHES "MSVC" )
    if( NOT IS_64BIT )
       set( SSE_FLAG "/arch:SSE2" )
    endif()
+
+   # required for sccache
+   if(CMAKE_BUILD_TYPE STREQUAL "Debug")
+      string(REPLACE "/Zi" "/Z7" CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG}")
+      string(REPLACE "/Zi" "/Z7" CMAKE_C_FLAGS_DEBUG "${CMAKE_C_FLAGS_DEBUG}")
+    elseif(CMAKE_BUILD_TYPE STREQUAL "Release")
+      string(REPLACE "/Zi" "/Z7" CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE}")
+      string(REPLACE "/Zi" "/Z7" CMAKE_C_FLAGS_RELEASE "${CMAKE_C_FLAGS_RELEASE}")
+    elseif(CMAKE_BUILD_TYPE STREQUAL "RelWithDebInfo")
+      string(REPLACE "/Zi" "/Z7" CMAKE_CXX_FLAGS_RELWITHDEBINFO "${CMAKE_CXX_FLAGS_RELWITHDEBINFO}")
+      string(REPLACE "/Zi" "/Z7" CMAKE_C_FLAGS_RELWITHDEBINFO "${CMAKE_C_FLAGS_RELWITHDEBINFO}")
+    endif()
 endif()
 
 check_include_files( "float.h;stdarg.h;stdlib.h;string.h" STDC_HEADERS )
