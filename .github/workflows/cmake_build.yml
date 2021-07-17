@@ -95,6 +95,11 @@ jobs:
       with:
         arch: ${{ matrix.config.arch }}
 
+    # Having this in PATH breaks building LAME in Conan when not using Visual Studio CMake generator
+    - name: "[Windows] Remove MinGW link"
+      if: runner.os == 'Windows'
+      run: rm "C:/Program Files/Git/usr/bin/link.EXE"
+
     - name: "[Windows] Install sccache"
       if: runner.os == 'Windows'
       run: choco install sccache
