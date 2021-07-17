@@ -1,21 +1,21 @@
 .\" Process this file with
-.\" groff -man -Tascii audacity.1
+.\" groff -man -Tascii tenacity.1
 .\"
-.TH audacity 1
+.TH tenacity 1
 .SH NAME
-audacity \- Graphical cross-platform audio editor
+tenacity \- Graphical cross-platform audio editor
 .SH SYNOPSIS
-.B audacity
+.B tenacity
 \-help
 .br
-.B audacity
+.B tenacity
 \-version
 .br
 
-.B audacity
+.B tenacity
 [\-blocksize nnn] \-test
 .br
-.B audacity
+.B tenacity
 [\-blocksize nnn] [
 .I AUDIO-FILE
 ]
@@ -68,12 +68,12 @@ run self diagnostics tests (only present in development builds)
 set the tenacity block size for writing files to disk to nnn bytes
 
 .SH FILES
-.I ~/.audacity\-data/audacity.cfg
+.I ~/.audacity\-data/tenacity.cfg
 .RS
 Per user configuration file.
 .RE
 
-.I /var/tmp/audacity\-<user>/
+.I /var/tmp/tenacity\-<user>/
 .RS
 Default location of Tenacity's temp directory, where <user> is your
 username.  If this location is not suitable (not enough space in
@@ -111,13 +111,13 @@ The current working directory when Tenacity is started.
 
 .I ~/.audacity-data/Plug-Ins
 
-.I <prefix>/share/audacity
+.I <prefix>/share/tenacity
 .RS
 The system-wide Tenacity directory, where <prefix> is usually
 /usr or /usr/local, depending on where the program was installed.
 .RE
 
-.I <prefix>/share/doc/audacity
+.I <prefix>/share/doc/tenacity
 .RS
 The system-wide Tenacity documentation directory, where <prefix> is usually
 /usr or /usr/local, depending on where the program was installed.
@@ -167,14 +167,18 @@ To report a bug, see the instructions at
 http://wiki.audacityteam.org/wiki/Reporting_Bugs
 
 .SH AUTHORS
-Project leaders include Dominic Mazzoni, Matt Brubeck,
+Tenacity would not be possible without the Audacity project,
+wxWidgets, libsndfile, and many of the other libraries it is
+built upon. You can find a full list of contributors on GitHub:
+
+https://github.com/tenacityteam/tenacity/graphs/contributors
+
+The Audacity project leaders include Dominic Mazzoni, Matt Brubeck,
 James Crook, Vaughan Johnson, Leland Lucius, and Markus Meyer,
-but dozens of others have contributed, and Tenacity would not
-be possible without wxWidgets, libsndfile, and many of
-the other libraries it is built upon.  For the most recent list
-of contributors and current email addresses, see our website:
+but dozens of others have contributed.
 
 http://www.audacityteam.org/about/credits/
+
 
 .\" arch-tag: 204d77ab-73cf-42b1-b5bd-e6f07e660496
 
