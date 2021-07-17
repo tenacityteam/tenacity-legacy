@@ -93,6 +93,18 @@ AboutDialog::AboutDialog(wxWindow* parent)
     Centre();
 }
 
+AboutDialog::~AboutDialog() {
+    if(this->IsShown()){
+        EndModal(wxID_CLOSE);
+    }
+    Destroy();
+}
+
+void AboutDialog::OnOK(wxCommandEvent& WXUNUSED(event)) {
+    EndModal(wxID_OK);
+}
+
+
 #define ABOUT_DIALOG_WIDTH 506
 #define ABOUT_DIALOG_HEIGHT 359
 
@@ -1008,12 +1020,4 @@ void AboutDialog::AddBuildInfoRow(
         << wxT("</td><td>")
         << spec
         << wxT("</td></tr>");
-}
-
-AboutDialog::~AboutDialog() {
-    Destroy();
-}
-
-void AboutDialog::OnOK(wxCommandEvent& WXUNUSED(event)) {
-    EndModal(wxID_OK);
 }
