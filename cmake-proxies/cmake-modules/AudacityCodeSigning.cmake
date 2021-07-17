@@ -26,7 +26,7 @@ elseif( CMAKE_SYSTEM_NAME MATCHES "Darwin")
 
    install( CODE "set( APP_IDENTIFIER \"org.tenacityaudio.tenacity\" )" )
    install( CODE "get_filename_component( APP_LOCATION \${CMAKE_INSTALL_PREFIX}/Tenacity.app ABSOLUTE )" )
-   install( CODE "set( APPLE_CODESIGN_ENTITLEMENTS ${CMAKE_SOURCE_DIR}/mac/Audacity.entitlements )")
+   install( CODE "set( APPLE_CODESIGN_ENTITLEMENTS ${CMAKE_SOURCE_DIR}/mac/Tenacity.entitlements )")
 
    install( SCRIPT "scripts/build/macOS/SignMacos.cmake" )
 

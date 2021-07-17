@@ -89,8 +89,8 @@ then
       echo "Usage: ${0} srcroot dstroot"
       echo
       echo "  srcroot   path to the 'mac' subdirectory of your source tree"
-      echo "  dstroot   path to where Audacity was built:"
-      echo "            legacy build = /tmp/Audacity.dst"
+      echo "  dstroot   path to where Tenacity was built:"
+      echo "            legacy build = /tmp/Tenacity.dst"
       echo "            cmake build = <build directory/bin/Release"
       exit 1
    fi
@@ -110,7 +110,7 @@ VERSION=$VERSION.$RELEASE.$REVISION
 IDENT=$(plist "${DSTROOT}/Tenacity.app/Contents/Info.plist" "CFBundleIdentifier")
 
 #
-# This depends on a file in the builders HOME directory called ".audacity_signing" that
+# This depends on a file in the builders HOME directory called ".tenacity_signing" that
 # contains the following four lines with the appropriate values specified.  If the file
 # doesn't exist or one of the values is missing the distribution will be built unsigned
 # and unnotarized.
@@ -127,19 +127,19 @@ IDENT=$(plist "${DSTROOT}/Tenacity.app/Contents/Info.plist" "CFBundleIdentifier"
 # "org.tenacityaudio.tenacity" as the application identifier.
 #
 SIGNING=
-if [ -r ~/.audacity_signing ]
+if [ -r ~/.tenacity_signing ]
 then
-   source ~/.audacity_signing
+   source ~/.tenacity_signing
    if [ -n "${CODESIGN_APP_IDENTITY}" -a -n "${NOTARIZE_USERNAME}" -a -n "${NOTARIZE_PASSWORD}" ]
    then
       SIGNING="y"
    fi
 fi
 
-VOL="Audacity $VERSION"
-DMG="audacity-macos-$VERSION"
+VOL="Tenacity $VERSION"
+DMG="tenacity-macos-$VERSION"
 
-echo "Audacity has been installed to: ${DSTROOT}"
+echo "Tenacity has been installed to: ${DSTROOT}"
 cd "${DSTROOT}/.."
 
 # Make sure we have consistent ownership and permissions
@@ -156,7 +156,7 @@ then
                   --timestamp \
                   --identifier "${IDENT}" \
                   --options runtime \
-                  --entitlements "${SRCROOT}/Audacity.entitlements" \
+                  --entitlements "${SRCROOT}/Tenacity.entitlements" \
                   --sign "${CODESIGN_APP_IDENTITY}" \
                   ${DSTROOT}/Tenacity.app/Contents/modules/*
 
@@ -164,7 +164,7 @@ then
                   --timestamp \
                   --identifier "${IDENT}" \
                   --options runtime \
-                  --entitlements "${SRCROOT}/Audacity.entitlements" \
+                  --entitlements "${SRCROOT}/Tenacity.entitlements" \
                   --sign "${CODESIGN_APP_IDENTITY}" \
                   ${DSTROOT}/Tenacity.app/Contents/plug-ins/*
 
