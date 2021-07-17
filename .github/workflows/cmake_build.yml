@@ -41,6 +41,8 @@ jobs:
         - name: macOS_Intel
           os: macos-latest
           arch: Intel # as reported by Apple menu > About This Mac
+          cc: clang
+          cxx: clang++
           generator: Unix Makefiles
           compiler_cache: ccache
           compiler_cache_path: ~/Library/Caches/ccache
