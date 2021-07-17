@@ -5,7 +5,7 @@ add_conan_lib(
    PKG_CONFIG "zlib >= 1.2.11"
    INTERFACE_NAME ZLIB::ZLIB
    OPTION_NAME zlib
-   CONAN_OPTIONS 
+   CONAN_OPTIONS
       zlib:shared=True
 )
 
@@ -14,7 +14,7 @@ add_conan_lib(
    expat/2.2.9@audacity/stable
    REQUIRED
    PKG_CONFIG "expat >= 2.1.0"
-   CONAN_OPTIONS 
+   CONAN_OPTIONS
       expat:shared=True
 )
 
@@ -45,15 +45,15 @@ if (${_OPT}use_expat STREQUAL "system")
    set(wx_expat "sys")
 endif()
 
-add_conan_lib( 
-   wxWidgets 
-   wxwidgets/3.1.3.1-audacity 
-   REQUIRED 
+add_conan_lib(
+   wxWidgets
+   wxwidgets/3.1.3.1-audacity
+   REQUIRED
    ALWAYS_ALLOW_CONAN_FALLBACK
    OPTION_NAME wxwidgets
    FIND_PACKAGE_OPTIONS COMPONENTS adv base core html qa xml net
    INTERFACE_NAME wxwidgets::wxwidgets
-   CONAN_OPTIONS 
+   CONAN_OPTIONS
       wxwidgets:shared=True
       wxwidgets:zlib=${wx_zlib}
       wxwidgets:expat=${wx_expat}
@@ -74,16 +74,16 @@ add_conan_lib(
       wxwidgets:protocol=False
       # Building with SIMD requires a huge number of build dependencies
       # Probably this will be enabled in the future
-      libjpeg-turbo:SIMD=False 
+      libjpeg-turbo:SIMD=False
 )
 
-add_conan_lib(
-   libmp3lame
-   libmp3lame/3.100
-   REQUIRED
-   INTERFACE_NAME libmp3lame::libmp3lame
-   PKG_CONFIG "lame >= 3.100"
-)
+#add_conan_lib(
+   #libmp3lame
+   #libmp3lame/3.100
+   #REQUIRED
+   #INTERFACE_NAME libmp3lame::libmp3lame
+   #PKG_CONFIG "lame >= 3.100"
+#)
 
 add_conan_lib(
    libid3tag
