@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: audacity 3.0.3\n"
 "Report-Msgid-Bugs-To: audacity-translation@lists.sourceforge.net\n"
 "POT-Creation-Date: 2021-06-07 08:17-0400\n"
-"PO-Revision-Date: 2021-07-13 16:55+0000\n"
+"PO-Revision-Date: 2021-07-18 07:33+0000\n"
 "Last-Translator: Adolfo Jayme Barrientos <fitojb@ubuntu.com>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/tenacity/"
 "tenacity/es/>\n"
@@ -31,7 +31,7 @@ msgstr "%s bytes"
 #: libraries/lib-strings/Internat.cpp
 #, c-format
 msgid "%s KB"
-msgstr "%s KB"
+msgstr "%s kB"
 
 #. i18n-hint: Abbreviation for Mega bytes
 #: libraries/lib-strings/Internat.cpp
@@ -197,11 +197,11 @@ msgstr "Audacity %s está disponible"
 
 #: modules/mod-null/ModNullCallback.cpp
 msgid "1st Experimental Command..."
-msgstr "Primer Comando Experimental..."
+msgstr "1.ª orden experimental…"
 
 #: modules/mod-null/ModNullCallback.cpp
 msgid "2nd Experimental Command"
-msgstr "Segundo Comando Experimental"
+msgstr "2.ª orden experimental"
 
 #: modules/mod-nyq-bench/NyqBench.cpp
 msgid "&Nyquist Workbench..."
@@ -265,7 +265,7 @@ msgstr "&Ir a"
 
 #: modules/mod-nyq-bench/NyqBench.cpp
 msgid "Select &Font..."
-msgstr "Seleccionar tipogr&fia..."
+msgstr "Seleccionar tipo de &letra…"
 
 #: modules/mod-nyq-bench/NyqBench.cpp
 msgid "Split &Vertically"
@@ -560,7 +560,7 @@ msgstr "No hay ningún identificador de revisión"
 #: src/AboutDialog.cpp
 #, c-format
 msgid "%s, system administration"
-msgstr "%s, administración del sistema"
+msgstr "%s, administración de sistemas"
 
 #. i18n-hint: For "About Audacity..." credits, substituting a person's proper name
 #: src/AboutDialog.cpp
@@ -671,8 +671,8 @@ msgid ""
 "%s is a free program written by a worldwide team of %s. %s is %s for "
 "Windows, Mac, and GNU/Linux (and other Unix-like systems)."
 msgstr ""
-"%s es una aplicación libre, escrita por un equipo de %s. Audacity está %s "
-"para Windows, Mac y GNU/Linux (y otros sistemas operativos tipo Unix)."
+"%s es un programa libre, escrito por un equipo global de %s. %s está %s para "
+"Windows, macOS y Linux (y otros sistemas operativos tipo Unix)."
 
 #. i18n-hint: substitutes into "a worldwide team of %s"
 #: src/AboutDialog.cpp
@@ -719,7 +719,8 @@ msgstr "foro"
 #. *  For example:  "English translation by Dominic Mazzoni."
 #: src/AboutDialog.cpp
 msgid "translator_credits"
-msgstr "Traducción al Español por Antonio Paniagua Navarro."
+msgstr ""
+"Traducción al español por Antonio Paniagua Navarro y Adolfo Jayme Barrientos."
 
 #: src/AboutDialog.cpp
 msgid "<h3>"
@@ -790,7 +791,7 @@ msgstr "Agradecimientos especiales:"
 #: src/AboutDialog.cpp
 #, c-format
 msgid "%s website: "
-msgstr "Sitio web de %s:"
+msgstr "Sitio web de %s: "
 
 #. i18n-hint Audacity's name substitutes for first and third %s,
 #. and a "copyright" symbol for the second
@@ -811,12 +812,12 @@ msgstr "Información de compilación"
 
 #: src/AboutDialog.cpp src/PluginManager.cpp src/prefs/ModulePrefs.cpp
 msgid "Enabled"
-msgstr "Habilitado"
+msgstr "Activado"
 
 #: src/AboutDialog.cpp src/PluginManager.cpp src/export/ExportFFmpegDialogs.cpp
 #: src/prefs/ModulePrefs.cpp
 msgid "Disabled"
-msgstr "Deshabilitado"
+msgstr "Desactivado"
 
 #. i18n-hint: Information about when audacity was compiled follows
 #: src/AboutDialog.cpp
@@ -829,17 +830,17 @@ msgstr "Fecha de compilación:"
 
 #: src/AboutDialog.cpp
 msgid "Commit Id:"
-msgstr "Commit Id:"
+msgstr "Id. de consigna:"
 
 #: src/AboutDialog.cpp
 #, c-format
 msgid "Debug build (debug level %d)"
-msgstr "Compilación de debug (nivel debug %d)"
+msgstr "Generación de depuración (nivel de depuración %d)"
 
 #: src/AboutDialog.cpp
 #, c-format
 msgid "Release build (debug level %d)"
-msgstr "Compilación de distribución (nivel de debug %d)"
+msgstr "Generación de distribución (nivel de depuración %d)"
 
 #: src/AboutDialog.cpp
 #, c-format
@@ -870,7 +871,7 @@ msgstr "Bibliotecas principales"
 
 #: src/AboutDialog.cpp
 msgid "Cross-platform GUI library"
-msgstr "Librería de entorno gráfico multiplataforma"
+msgstr "Biblioteca de interfaz gráfica multiplataforma"
 
 #: src/AboutDialog.cpp
 msgid "Audio playback and recording"
@@ -1447,7 +1448,7 @@ msgid ""
 "You will not be able to play midi.\n"
 "\n"
 msgstr ""
-"No será posible reproducir sonido midi. \n"
+"No será posible reproducir sonido MIDI.\n"
 "\n"
 
 #: src/AudioIO.cpp
@@ -1469,7 +1470,7 @@ msgstr ""
 
 #: src/AudioIO.cpp
 msgid "Out of memory!"
-msgstr "Sin memoria"
+msgstr "Se agotó la memoria"
 
 #: src/AudioIO.cpp
 msgid ""
@@ -1548,7 +1549,7 @@ msgstr "Información del dispositivo no disponible para: %d\n"
 #: src/AudioIOBase.cpp
 #, c-format
 msgid "Device ID: %d\n"
-msgstr "Dispositivo ID: %d\n"
+msgstr "Identificador de dispositivo: %d\n"
 
 #: src/AudioIOBase.cpp
 #, c-format
@@ -1603,7 +1604,7 @@ msgstr "Dispositivo de grabación seleccionado: %d - %s\n"
 #: src/AudioIOBase.cpp
 #, c-format
 msgid "No recording device found for '%s'.\n"
-msgstr "No se ha encontrado ningún dispositivo de grabación para '%s'.\n"
+msgstr "No se encontró ningún dispositivo de grabación para «%s».\n"
 
 #: src/AudioIOBase.cpp
 #, c-format
@@ -1613,7 +1614,7 @@ msgstr "Dispositivo de reproducción seleccionado: %d - %s\n"
 #: src/AudioIOBase.cpp
 #, c-format
 msgid "No playback device found for '%s'.\n"
-msgstr "No se ha encontrado ningún dispositivo de reproducción para '%s'.\n"
+msgstr "No se encontró ningún dispositivo de reproducción para «%s».\n"
 
 #: src/AudioIOBase.cpp
 msgid "Cannot check mutual sample rates without both devices.\n"
@@ -1644,7 +1645,7 @@ msgstr "Fuentes de grabación disponibles:\n"
 
 #: src/AudioIOBase.cpp
 msgid "Available playback volumes:\n"
-msgstr "Volumen de reproducción disponible:\n"
+msgstr "Volúmenes de reproducción disponibles:\n"
 
 #: src/AudioIOBase.cpp
 msgid "Recording volume is emulated\n"
@@ -1687,7 +1688,7 @@ msgstr "Dispositivo de grabación MIDI seleccionado: %d - %s\n"
 #: src/AudioIOBase.cpp
 #, c-format
 msgid "No MIDI recording device found for '%s'.\n"
-msgstr "No se ha encontrado ningún dispositivo de grabación MIDI para '%s'.\n"
+msgstr "No se encontró ningún dispositivo de grabación MIDI para «%s».\n"
 
 #: src/AudioIOBase.cpp
 #, c-format
@@ -1697,8 +1698,7 @@ msgstr "Dispositivo de reproducción MIDI seleccionado: %d - %s\n"
 #: src/AudioIOBase.cpp
 #, c-format
 msgid "No MIDI playback device found for '%s'.\n"
-msgstr ""
-"No se ha encontrado ningún dispositivo de reproducción MIDI para '%s'.\n"
+msgstr "No se encontró ningún dispositivo de reproducción MIDI para «%s».\n"
 
 #: src/AutoRecoveryDialog.cpp
 msgid "Automatic Crash Recovery"
@@ -1754,18 +1754,18 @@ msgid ""
 "\n"
 "Choosing \"Yes\" permanently deletes the selected projects immediately."
 msgstr ""
-"¿Está seguro de que descartar los proyectos seleccionados?\n"
+"¿Confirma que quiere descartar los proyectos seleccionados?\n"
 "\n"
-"Haciendo clic en \"Sí\" se borrarán todos los proyectos seleccionados "
-"inmediatamente."
+"Al elegir «Sí» se eliminarán todos los proyectos seleccionados inmediata y "
+"permanentemente."
 
 #: src/BatchCommandDialog.cpp
 msgid "Select Command"
-msgstr "Seleccione un comando"
+msgstr "Seleccione una orden"
 
 #: src/BatchCommandDialog.cpp
 msgid "&Command"
-msgstr "&Comando"
+msgstr "&Orden"
 
 #: src/BatchCommandDialog.cpp
 msgid "&Edit Parameters"
@@ -1785,7 +1785,7 @@ msgstr "&Detalles"
 
 #: src/BatchCommandDialog.cpp
 msgid "Choose command"
-msgstr "Seleccionar comando"
+msgstr "Seleccionar orden"
 
 #: src/BatchCommands.cpp
 msgid "MP3 Conversion"
@@ -1802,7 +1802,7 @@ msgstr "Importar macro"
 #: src/BatchCommands.cpp
 #, c-format
 msgid "Macro %s already exists. Would you like to replace it?"
-msgstr "Ya existe la macro %s. ¿Desea reemplazarla?"
+msgstr "Ya existe la macro %s. ¿Quiere reemplazarla?"
 
 #: src/BatchCommands.cpp
 msgid "Export Macro"
@@ -1814,7 +1814,7 @@ msgstr "Efecto"
 
 #: src/BatchCommands.cpp
 msgid "Menu Command (With Parameters)"
-msgstr "Menú Comando (con parámetros)"
+msgstr "Menú Orden (con parámetros)"
 
 #: src/BatchCommands.cpp src/FileNames.cpp
 #, c-format
@@ -1823,18 +1823,18 @@ msgstr "(%s)"
 
 #: src/BatchCommands.cpp
 msgid "Menu Command (No Parameters)"
-msgstr "Menú Comando (sin parámetros)"
+msgstr "Menú Orden (sin parámetros)"
 
 #. i18n-hint: %s will be replaced by the name of an action, such as "Remove Tracks".
 #: src/BatchCommands.cpp src/CommonCommandFlags.cpp
 #, c-format
 msgid "\"%s\" requires one or more tracks to be selected."
-msgstr "\"%s\" necesita que se seleccione una o más pistas."
+msgstr "«%s» necesita que se seleccione una o más pistas."
 
 #: src/BatchCommands.cpp
 #, c-format
 msgid "Your batch command of %s was not recognized."
-msgstr "La secuencia de comandos de %s no fue reconocida."
+msgstr "No se reconoció la orden por lotes %s."
 
 #. i18n-hint: active verb in past tense
 #: src/BatchCommands.cpp
@@ -1849,12 +1849,12 @@ msgstr "Aplicar macro"
 #: src/BatchCommands.cpp
 #, c-format
 msgid "Applied Macro '%s'"
-msgstr "Macro '%s' aplicada"
+msgstr "Se aplicó la macro «%s»"
 
 #: src/BatchCommands.cpp
 #, c-format
 msgid "Apply '%s'"
-msgstr "Aplicar '%s'"
+msgstr "Aplicar «%s»"
 
 #: src/BatchCommands.cpp
 #, c-format
@@ -1878,11 +1878,11 @@ msgstr "Aplicar %s"
 
 #: src/BatchProcessDialog.cpp
 msgid "Macros Palette"
-msgstr "Seleccionar macro"
+msgstr "Paleta de macros"
 
 #: src/BatchProcessDialog.cpp
 msgid "Manage Macros"
-msgstr "Administrar macros"
+msgstr "Gestionar macros"
 
 #. i18n-hint: A macro is a sequence of commands that can be applied
 #. * to one or more audio files.
@@ -1922,12 +1922,12 @@ msgstr "&Expandir"
 
 #: src/BatchProcessDialog.cpp
 msgid "No macro selected"
-msgstr "No se ha seleccionado ninguna macro"
+msgstr "No se seleccionó ninguna macro"
 
 #: src/BatchProcessDialog.cpp
 #, c-format
 msgid "Applying '%s' to current project"
-msgstr "Aplicando '%s' al proyecto actual"
+msgstr "Aplicando «%s» al proyecto actual"
 
 #: src/BatchProcessDialog.cpp
 msgid "Please save and close the current project first."
@@ -1951,11 +1951,11 @@ msgstr "&Cancelar"
 
 #: src/BatchProcessDialog.cpp
 msgid "Remo&ve"
-msgstr "E&liminar"
+msgstr "&Quitar"
 
 #: src/BatchProcessDialog.cpp src/effects/Equalization.cpp
 msgid "&Rename..."
-msgstr "&Renombrar..."
+msgstr "Cambia&r nombre…"
 
 #: src/BatchProcessDialog.cpp
 msgid "Re&store"
@@ -1963,7 +1963,7 @@ msgstr "Re&staurar"
 
 #: src/BatchProcessDialog.cpp src/LabelDialog.cpp src/effects/Equalization.cpp
 msgid "I&mport..."
-msgstr "I&mportar..."
+msgstr "I&mportar…"
 
 #: src/BatchProcessDialog.cpp src/effects/Contrast.cpp
 #: src/effects/Equalization.cpp
@@ -1981,7 +1981,7 @@ msgstr "Num"
 
 #: src/BatchProcessDialog.cpp
 msgid "Command  "
-msgstr "Comando"
+msgstr "Orden  "
 
 #: src/BatchProcessDialog.cpp src/effects/Contrast.cpp
 msgid "Parameters"
@@ -1997,7 +1997,7 @@ msgstr "&Editar..."
 
 #: src/BatchProcessDialog.cpp src/LabelDialog.cpp
 msgid "De&lete"
-msgstr "&Borrar"
+msgstr "E&liminar"
 
 #: src/BatchProcessDialog.cpp src/effects/Equalization.cpp
 msgid "Move &Up"
@@ -2047,13 +2047,13 @@ msgstr "No se puede dejar el nombre vacío"
 #: src/BatchProcessDialog.cpp
 #, c-format
 msgid "Names may not contain '%c' and '%c'"
-msgstr "Los nombres no pueden contener '%c' y '%c'"
+msgstr "Los nombres no pueden contener «%c» ni «%c»"
 
 #. i18n-hint: %s will be replaced by the name of a file.
 #: src/BatchProcessDialog.cpp
 #, c-format
 msgid "Are you sure you want to delete %s?"
-msgstr "¿Está seguro de que desea borrar %s?"
+msgstr "¿Confirma que quiere eliminar «%s»?"
 
 #. i18n-hint: Benchmark means a software speed test
 #: src/Benchmark.cpp
@@ -2241,9 +2241,9 @@ msgid ""
 "\n"
 "Ctrl + A selects all audio."
 msgstr ""
-"Primero debe seleccionar audio para que '%s' pueda operar.\n"
+"Primero debe seleccionar audio para que «%s» pueda operar.\n"
 "\n"
-"Pulse Ctrl+A para seleccionar todo el audio."
+"Presione Ctrl + A para seleccionar todo el audio."
 
 #. i18n-hint: %s will be replaced by the name of an action, such as Normalize, Cut, Fade.
 #: src/CommonCommandFlags.cpp
@@ -2366,8 +2366,8 @@ msgid ""
 msgstr ""
 "El disco está lleno.\n"
 "%s\n"
-"Haga clic en el botón de ayuda para obtener recomendaciones sobre cómo "
-"liberar espacio."
+"Pulse en el botón de ayuda para obtener recomendaciones sobre cómo liberar "
+"espacio."
 
 #: src/DBConnection.cpp
 #, c-format
@@ -2424,8 +2424,8 @@ msgid ""
 msgstr ""
 "\n"
 "\n"
-"Los archivos mostrados como MISSING han sido movidos o borrados y no se "
-"pueden copiar.\n"
+"Los archivos mostrados como MISSING se han movido o eliminado y no se pueden "
+"copiar.\n"
 "Para que sea posible copiarlos dentro del proyecto es necesario que los "
 "restaure a su posición original."
 
@@ -2475,7 +2475,7 @@ msgstr "Preguntar"
 #. * Audacity finds a project depends on another file.
 #: src/Dependencies.cpp
 msgid "Always copy all files (safest)"
-msgstr "Copiar siempre todos los archivos (el más seguro)"
+msgstr "Copiar siempre todos los archivos (lo más seguro)"
 
 #. i18n-hint: One of the choices of what you want Audacity to do when
 #. * Audacity finds a project depends on another file.
@@ -2618,7 +2618,7 @@ msgstr "No se ha podido arrancar FFmpeg"
 
 #: src/FFmpeg.cpp
 msgid "FFmpeg library not found"
-msgstr "Biblioteca FFmpeg no encontrada"
+msgstr "No se encontró la biblioteca FFmpeg"
 
 #: src/FFmpeg.cpp
 msgid "Locate FFmpeg"
@@ -2634,12 +2634,12 @@ msgstr ""
 #: src/FFmpeg.cpp
 #, c-format
 msgid "Location of '%s':"
-msgstr "Ubicación de '%s':"
+msgstr "Ubicación de «%s»:"
 
 #: src/FFmpeg.cpp
 #, c-format
 msgid "To find '%s', click here -->"
-msgstr "Para encontrar '%s', haga clic aquí -->"
+msgstr "Para encontrar «%s», pulse aquí →"
 
 #: src/FFmpeg.cpp src/export/ExportCL.cpp src/export/ExportMP3.cpp
 #: plug-ins/nyquist-plug-in-installer.ny
@@ -2648,7 +2648,7 @@ msgstr "Explorar..."
 
 #: src/FFmpeg.cpp
 msgid "To get a free copy of FFmpeg, click here -->"
-msgstr "Para obtener una copia gratuita de FFmpeg, haga clic aquí -->"
+msgstr "Para obtener una copia gratuita de FFmpeg, pulse aquí →"
 
 #. i18n-hint: (verb)
 #: src/FFmpeg.cpp src/export/ExportMP3.cpp
@@ -2661,11 +2661,11 @@ msgstr "Descargar"
 #: src/FFmpeg.cpp
 #, c-format
 msgid "Where is '%s'?"
-msgstr "¿Dónde está '%s'?"
+msgstr "¿Dónde está «%s»?"
 
 #: src/FFmpeg.cpp
 msgid "FFmpeg not found"
-msgstr "FFmpeg no encontrada"
+msgstr "No se encontró FFmpeg"
 
 #: src/FFmpeg.cpp
 msgid ""
@@ -2693,11 +2693,11 @@ msgstr "No se ha podido encontrar bibliotecas compatibles con FFmpeg"
 #. i18n-hint: do not translate avformat.  Preserve the computer gibberish.
 #: src/FFmpeg.h
 msgid "Only avformat.dll"
-msgstr "Sólo avformat.dll"
+msgstr "Solo avformat.dll"
 
 #: src/FFmpeg.h
 msgid "Only libavformat.so"
-msgstr "Sólo libavformat.so"
+msgstr "Solo libavformat.so"
 
 #: src/FileException.cpp
 #, c-format
@@ -2736,13 +2736,11 @@ msgstr "Error de archivo"
 #: src/FileFormats.cpp
 #, c-format
 msgid "Error (file may not have been written): %s"
-msgstr "Error (el archivo puede no haber sido escrito): %s"
+msgstr "Error (el archivo puede no haberse escrito): %s"
 
 #: src/FileFormats.cpp
 msgid "&Copy uncompressed files into the project (safer)"
-msgstr ""
-"&Copia el archivo de audio descomprimido dentro del proyecto (método más "
-"seguro)"
+msgstr "&Copiar archivos descomprimidos en el proyecto (más seguro)"
 
 #: src/FileFormats.cpp
 msgid "&Read uncompressed files from original location (faster)"
@@ -2751,7 +2749,7 @@ msgstr ""
 
 #: src/FileFormats.cpp
 msgid "&Copy all audio into project (safest)"
-msgstr "&Copiar todo dentro del proyecto (método más seguro)"
+msgstr "&Copiar todo el audio en el proyecto (lo más seguro)"
 
 #: src/FileFormats.cpp
 msgid "Do &not copy any audio"
@@ -3559,7 +3557,7 @@ msgstr ""
 #: src/ModuleManager.cpp
 #, c-format
 msgid "Module \"%s\" found."
-msgstr "No se ha encontrado el módulo \"%s\"."
+msgstr "Se encontró el módulo «%s»."
 
 #: src/ModuleManager.cpp
 msgid ""
@@ -3596,9 +3594,9 @@ msgid ""
 "\n"
 "It will not be loaded."
 msgstr ""
-"El módulo \"%s\" no tiene alguna de las funciones requeridas.\n"
+"El módulo «%s» no brinda ninguna de las funciones requeridas.\n"
 "\n"
-"No será cargado."
+"No se cargará."
 
 #. i18n-hint: This is for screen reader software and indicates that
 #. this is a Note track.
@@ -3614,7 +3612,7 @@ msgstr "Do"
 #. i18n-hint: Name of a musical note in the 12-tone chromatic scale
 #: src/PitchName.cpp
 msgid "C♯"
-msgstr "Do#"
+msgstr "Do♯"
 
 #. i18n-hint: Name of a musical note in the 12-tone chromatic scale
 #: src/PitchName.cpp
@@ -3624,7 +3622,7 @@ msgstr "Re"
 #. i18n-hint: Name of a musical note in the 12-tone chromatic scale
 #: src/PitchName.cpp
 msgid "D♯"
-msgstr "Re#"
+msgstr "Re♯"
 
 #. i18n-hint: Name of a musical note in the 12-tone chromatic scale
 #: src/PitchName.cpp
@@ -3639,7 +3637,7 @@ msgstr "Fa"
 #. i18n-hint: Name of a musical note in the 12-tone chromatic scale
 #: src/PitchName.cpp
 msgid "F♯"
-msgstr "Fa#"
+msgstr "Fa♯"
 
 #. i18n-hint: Name of a musical note in the 12-tone chromatic scale
 #: src/PitchName.cpp
@@ -3649,7 +3647,7 @@ msgstr "Sol"
 #. i18n-hint: Name of a musical note in the 12-tone chromatic scale
 #: src/PitchName.cpp
 msgid "G♯"
-msgstr "Sol#"
+msgstr "Sol♯"
 
 #. i18n-hint: Name of a musical note in the 12-tone chromatic scale
 #: src/PitchName.cpp
@@ -3659,7 +3657,7 @@ msgstr "La"
 #. i18n-hint: Name of a musical note in the 12-tone chromatic scale
 #: src/PitchName.cpp
 msgid "A♯"
-msgstr "La#"
+msgstr "La♯"
 
 #. i18n-hint: Name of a musical note in the 12-tone chromatic scale
 #: src/PitchName.cpp
@@ -3718,7 +3716,7 @@ msgstr "La♯/Si♭"
 
 #: src/PluginManager.cpp
 msgid "Manage Plug-ins"
-msgstr "Administrar complementos"
+msgstr "Gestionar complementos"
 
 #: src/PluginManager.cpp
 msgid "Select effects, click the Enable or Disable button, then click OK."
@@ -3801,7 +3799,7 @@ msgid ""
 "\n"
 "%s"
 msgstr ""
-"Habilitando efectos o comandos:\n"
+"Activando efectos u órdenes:\n"
 "\n"
 "%s"
 
@@ -3812,7 +3810,7 @@ msgid ""
 "\n"
 "%s"
 msgstr ""
-"Habilitando efecto o comando:\n"
+"Activando efecto u orden:\n"
 "\n"
 "%s"
 
@@ -3822,7 +3820,7 @@ msgid ""
 "Effect or Command at %s failed to register:\n"
 "%s"
 msgstr ""
-"No se ha podido registrar el efecto o comando en %s:\n"
+"No se pudo registrar el efecto o la orden en %s:\n"
 "%s"
 
 #: src/PluginManager.cpp
@@ -3853,12 +3851,12 @@ msgstr ""
 msgctxt "plug-ins"
 msgid "Enable this plug-in?\n"
 msgid_plural "Enable these plug-ins?\n"
-msgstr[0] "¿Habilitar este complemento?\n"
-msgstr[1] "¿Habilitar estos complementos?\n"
+msgstr[0] "¿Quiere activar este complemento?\n"
+msgstr[1] "¿Quiere activar estos complementos?\n"
 
 #: src/PluginManager.cpp
 msgid "Enable new plug-ins"
-msgstr "Habilitar nuevos complementos"
+msgstr "Activar complementos nuevos"
 
 #: src/PluginManager.h
 msgid "Nyquist Prompt"
@@ -4119,11 +4117,13 @@ msgstr ""
 
 #: src/ProjectFSCK.cpp
 msgid "Continue without deleting; ignore the extra files this session"
-msgstr "Continuar sin borrar; evitar discretamente los archivos extra"
+msgstr ""
+"Continuar sin eliminar; pasar por alto los archivos adicionales por esta "
+"sesión"
 
 #: src/ProjectFSCK.cpp
 msgid "Delete orphan files (permanent immediately)"
-msgstr "Borrar archivos huérfanos (inmediatamente)"
+msgstr "Eliminar archivos huérfanos (inmediata y permanentemente)"
 
 #: src/ProjectFSCK.cpp
 msgid "Warning - Orphan Block File(s)"
@@ -6042,7 +6042,7 @@ msgstr "FALLO"
 
 #: src/commands/BatchEvalCommand.cpp
 msgid "Batch Command"
-msgstr "Secuencia de comando"
+msgstr "Orden por lotes"
 
 #: src/commands/Command.cpp
 #, c-format
@@ -6633,7 +6633,7 @@ msgstr "Tiempo:"
 
 #: src/commands/SetEnvelopeCommand.cpp src/menus/EditMenus.cpp
 msgid "Delete"
-msgstr "Borrar"
+msgstr "Eliminar"
 
 #: src/commands/SetEnvelopeCommand.cpp
 msgid "Edited Envelope"
@@ -8163,7 +8163,7 @@ msgstr "Latencia: %4d"
 
 #: src/effects/EffectUI.cpp
 msgid "Some Command"
-msgstr "Algún comando"
+msgstr "Alguna orden"
 
 #: src/effects/EffectUI.cpp
 msgid "Manage presets and options"
@@ -8209,7 +8209,7 @@ msgstr "Saltar hacia a&delante"
 
 #: src/effects/EffectUI.cpp
 msgid "Enable"
-msgstr "Habilitado"
+msgstr "Activar"
 
 #: src/effects/EffectUI.cpp
 msgid "Save Preset..."
@@ -8267,7 +8267,7 @@ msgstr "Acerca de"
 #: src/effects/EffectUI.cpp
 #, c-format
 msgid "Are you sure you want to delete \"%s\"?"
-msgstr "¿Está seguro de desea borrar \"%s\"?"
+msgstr "¿Confirma que quiere eliminar «%s»?"
 
 #: src/effects/EffectUI.cpp src/export/ExportFFmpegDialogs.cpp
 msgid "Save Preset"
@@ -9400,29 +9400,29 @@ msgstr "Repite la selección el numero de veces indicado"
 
 #: src/effects/Repeat.cpp
 msgid "&Number of repeats to add:"
-msgstr "&Número de repeticiones a agregar:"
+msgstr "&Número de repeticiones que añadir:"
 
 #: src/effects/Repeat.cpp
 msgid "Current selection length: dd:hh:mm:ss"
-msgstr "Duración de la selección: dd:hh:mm:ss"
+msgstr "Duración de selección actual: dd:hh:mm:ss"
 
 #: src/effects/Repeat.cpp
 msgid "New selection length: dd:hh:mm:ss"
-msgstr "Nueva duración de selección: dd:hh:mm:ss"
+msgstr "Duración de selección nueva: dd:hh:mm:ss"
 
 #: src/effects/Repeat.cpp
 #, c-format
 msgid "Current selection length: %s"
-msgstr "Duración de la selección actual: %s"
+msgstr "Duración de selección actual: %s"
 
 #: src/effects/Repeat.cpp
 #, c-format
 msgid "New selection length: %s"
-msgstr "Nueva duración de selección: %s"
+msgstr "Duración de selección nueva: %s"
 
 #: src/effects/Repeat.cpp
 msgid "Warning: No repeats."
-msgstr "Advertencia: No hay repeticiones."
+msgstr "Atención: no hay repeticiones."
 
 #: src/effects/Reverb.cpp
 msgid "Vocal I"
@@ -15298,7 +15298,7 @@ msgstr "Mostrar mesa de efectos"
 
 #: src/menus/WindowMenus.cpp
 msgid "&Window"
-msgstr "&ventana"
+msgstr "&Ventana"
 
 #. i18n-hint: Standard Macintosh Window menu item:  Make (the current
 #. * window) shrink to an icon on the dock
@@ -15320,24 +15320,24 @@ msgstr "Minimizar todos los proyectos"
 
 #: src/ondemand/ODComputeSummaryTask.h
 msgid "Import complete. Calculating waveform"
-msgstr "Importación completa. Calculando la forma de onda"
+msgstr "Importación completa. Calculando la onda"
 
 #: src/ondemand/ODDecodeTask.h
 msgid "Decoding Waveform"
-msgstr "Decodificando la forma de onda"
+msgstr "Descodificando onda"
 
 #: src/ondemand/ODWaveTrackTaskQueue.cpp
 #, c-format
 msgid "%s %2.0f%% complete. Click to change task focal point."
-msgstr "%s %2.0f%% completado.  Haga clic para cambiar el foco de la tarea."
+msgstr "%s %2.0f %% completado. Pulse para cambiar el foco de la tarea."
 
 #: src/prefs/BatchPrefs.cpp src/prefs/BatchPrefs.h
 msgid "Batch"
-msgstr "Secuencia"
+msgstr "Lote"
 
 #: src/prefs/BatchPrefs.cpp
 msgid "Preferences for Batch"
-msgstr "Preferencias de la secuencia"
+msgstr "Preferencias del lote"
 
 #: src/prefs/BatchPrefs.cpp src/prefs/TracksBehaviorsPrefs.cpp
 msgid "Behaviors"
@@ -15345,7 +15345,7 @@ msgstr "Comportamientos"
 
 #: src/prefs/BatchPrefs.cpp
 msgid "&Don't apply effects in batch mode"
-msgstr "No ap&licar efectos en modo de secuencia"
+msgstr "No ap&licar efectos en modo por lotes"
 
 #: src/prefs/DevicePrefs.cpp
 msgid "Devices"
@@ -16007,9 +16007,9 @@ msgid ""
 "and \"%s\".\n"
 "Nothing is imported."
 msgstr ""
-"El archivo con los atajos de teclado contiene combinaciones duplicadas para "
-"\"%s\"y \"%s\".\n"
-"No se ha importado nada."
+"El archivo con los atajos de teclado contiene duplicados inaceptables para "
+"«%s» y «%s».\n"
+"No se importó nada."
 
 #: src/prefs/KeyConfigPrefs.cpp
 #, c-format
@@ -16432,7 +16432,7 @@ msgstr "Mayús-Rueda del ratón"
 
 #: src/prefs/MousePrefs.cpp
 msgid "Scroll waveform"
-msgstr "Desplazar forma de onda"
+msgstr "Desplazar onda"
 
 #: src/prefs/MousePrefs.cpp
 msgid "-Wheel-Rotate"
@@ -17745,7 +17745,7 @@ msgstr "Edición de etiqueta"
 
 #: src/tracks/labeltrack/ui/LabelTextHandle.cpp
 msgid "Click to edit label text"
-msgstr "Haga clic para editar el texto"
+msgstr "Pulse para editar el texto de la etiqueta"
 
 #: src/tracks/labeltrack/ui/LabelTrackControls.cpp
 msgid "&Font..."
@@ -17759,12 +17759,12 @@ msgstr "Tipo de letra de la pista de etiqueta"
 #. i18n-hint: (noun) The name of the typeface
 #: src/tracks/labeltrack/ui/LabelTrackControls.cpp
 msgid "Face name"
-msgstr "Nombre de tipografía"
+msgstr "Nombre de tipofaz"
 
 #. i18n-hint: (noun) The size of the typeface
 #: src/tracks/labeltrack/ui/LabelTrackControls.cpp
 msgid "Face size"
-msgstr "Tamaño de tipografía"
+msgstr "Tamaño de letra"
 
 #: src/tracks/labeltrack/ui/LabelTrackView.cpp
 msgid "Cu&t Label text"
@@ -17776,15 +17776,15 @@ msgstr "&Copiar texto de la etiqueta"
 
 #: src/tracks/labeltrack/ui/LabelTrackView.cpp
 msgid "&Delete Label"
-msgstr "&Borrar etiqueta"
+msgstr "&Eliminar etiqueta"
 
 #: src/tracks/labeltrack/ui/LabelTrackView.cpp
 msgid "&Edit Label..."
-msgstr "&Editar etiqueta..."
+msgstr "&Editar etiqueta…"
 
 #: src/tracks/labeltrack/ui/LabelTrackView.cpp
 msgid "Deleted Label"
-msgstr "Etiqueta borrada"
+msgstr "Etiqueta eliminada"
 
 #: src/tracks/labeltrack/ui/LabelTrackView.cpp
 msgid "Edited labels"
@@ -17792,7 +17792,7 @@ msgstr "Etiquetas editadas"
 
 #: src/tracks/labeltrack/ui/LabelTrackView.cpp
 msgid "New label"
-msgstr "Nueva etiqueta"
+msgstr "Etiqueta nueva"
 
 #: src/tracks/playabletrack/notetrack/ui/NoteTrackControls.cpp
 #: src/tracks/playabletrack/notetrack/ui/NoteTrackVZoomHandle.cpp
@@ -19160,7 +19160,7 @@ msgstr "Error: %s en la línea %lu"
 #: src/xml/XMLFileReader.cpp
 #, c-format
 msgid "Could not load file: \"%s\""
-msgstr "No se ha podido abrir el archivo: \"%s\""
+msgstr "No se pudo cargar el archivo: «%s»"
 
 #: src/xml/XMLFileReader.cpp
 msgid "Could not parse XML"
@@ -19633,12 +19633,12 @@ msgstr "Error.~%No se puede abrir el archivo~%~s"
 #: plug-ins/eq-xml-to-txt-converter.ny
 #, lisp-format
 msgid "Error.~%File overwrite disallowed:~%\"~a.txt\""
-msgstr "Error.~%No ha permitido la sobreescritura:~%\"~a.txt\""
+msgstr "Error.~%No se permite la sobrescritura del archivo:~%«~a.txt»"
 
 #: plug-ins/eq-xml-to-txt-converter.ny
 #, lisp-format
 msgid "Error.~%File cannot be written:~%\"~a.txt\""
-msgstr "Error.~%No se puede escribir el archivo:~%\"~a.txt\""
+msgstr "Error.~%No se puede escribir el archivo:~%«~a.txt»"
 
 #: plug-ins/equalabel.ny
 msgid "Regular Interval Labels"
@@ -20679,7 +20679,7 @@ msgstr "Orden de canales sin especificar"
 #: plug-ins/sample-data-export.ny
 #, lisp-format
 msgid "Error.~%\"~a\" cannot be written."
-msgstr "Error.~%No se puede escribir en \"~a\"."
+msgstr "Error.~%No se puede escribir «~a»."
 
 #: plug-ins/sample-data-import.ny
 msgid "Sample Data Import"
@@ -20699,7 +20699,7 @@ msgstr "Controlador de datos inválido"
 
 #: plug-ins/sample-data-import.ny
 msgid "Throw Error"
-msgstr "Lanzar error"
+msgstr "Emitir error"
 
 #: plug-ins/sample-data-import.ny
 msgid "Read as Zero"
@@ -20713,7 +20713,7 @@ msgid ""
 "                        Check that file exists."
 msgstr ""
 "Error~%~\n"
-"                        No se puede abrir '~a'.~%~\n"
+"                        No se puede abrir «~a».~%~\n"
 "                        Compruebe que el archivo existe."
 
 #: plug-ins/sample-data-import.ny
@@ -20724,8 +20724,8 @@ msgid ""
 "              (Invalid byte '~a' at byte number: ~a)"
 msgstr ""
 "Error:~%~\n"
-"              El archivo debe contener sólo texto ASCII plano.~%~\n"
-"              (Valor inválido '~a' en la posición: ~a)"
+"              El archivo debe contener solo texto ASCII sencillo.~%~\n"
+"              (Byte no válido «~a» en la posición n.º: ~a)"
 
 #: plug-ins/sample-data-import.ny
 #, lisp-format
@@ -20735,8 +20735,8 @@ msgid ""
 "              '~a' is not a numeric value."
 msgstr ""
 "Error~%~\n"
-"              Los datos deben ser números en formato ASCII plano.~%~\n"
-"              '~a' no es un valor numérico."
+"              Los datos deben ser números en texto ASCII sencillo.~%~\n"
+"              «~a» no es un valor numérico."
 
 #: plug-ins/sample-data-import.ny
 #, lisp-format
@@ -20745,7 +20745,7 @@ msgstr "Error.~%No se puede abrir el archivo"
 
 #: plug-ins/spectral-delete.ny
 msgid "Spectral Delete"
-msgstr "Borrar espectrograma"
+msgstr "Eliminación espectral"
 
 #: plug-ins/spectral-delete.ny
 #, lisp-format
@@ -20783,7 +20783,7 @@ msgstr "Reducción vocal y aislamiento"
 
 #: plug-ins/vocalrediso.ny
 msgid "Applying Action..."
-msgstr "Aplicando acción..."
+msgstr "Aplicando acción…"
 
 #: plug-ins/vocalrediso.ny
 msgid "Robert Haenggi"
