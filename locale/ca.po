@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: audacity 3.0.3\n"
 "Report-Msgid-Bugs-To: audacity-translation@lists.sourceforge.net\n"
 "POT-Creation-Date: 2021-06-07 08:17-0400\n"
-"PO-Revision-Date: 2021-07-13 16:55+0000\n"
+"PO-Revision-Date: 2021-07-18 07:33+0000\n"
 "Last-Translator: Adolfo Jayme Barrientos <fitojb@ubuntu.com>\n"
 "Language-Team: Catalan <https://hosted.weblate.org/projects/tenacity/"
 "tenacity/ca/>\n"
@@ -716,7 +716,8 @@ msgstr "fòrum"
 #. *  For example:  "English translation by Dominic Mazzoni."
 #: src/AboutDialog.cpp
 msgid "translator_credits"
-msgstr "Traducció al català: Francesc Busquets, Robert Buj i Pau Bosch"
+msgstr ""
+"Traducció al català: Francesc Busquets, Robert Buj, Pau Bosch i Adolfo Jayme"
 
 #: src/AboutDialog.cpp
 msgid "<h3>"
@@ -803,7 +804,7 @@ msgstr "El nom «%s» és una marca registrada."
 
 #: src/AboutDialog.cpp
 msgid "Build Information"
-msgstr "Informació de la construcció"
+msgstr "Informació del muntatge"
 
 #: src/AboutDialog.cpp src/PluginManager.cpp src/prefs/ModulePrefs.cpp
 msgid "Enabled"
@@ -817,12 +818,11 @@ msgstr "Inhabilitat"
 #. i18n-hint: Information about when audacity was compiled follows
 #: src/AboutDialog.cpp
 msgid "The Build"
-msgstr "La construcció"
+msgstr "El muntatge"
 
 #: src/AboutDialog.cpp
-#, fuzzy
 msgid "Program build date:"
-msgstr "Data de construcció del programa: "
+msgstr "Data de muntatge del programa:"
 
 #: src/AboutDialog.cpp
 msgid "Commit Id:"
@@ -831,12 +831,12 @@ msgstr "Id. de consignació:"
 #: src/AboutDialog.cpp
 #, c-format
 msgid "Debug build (debug level %d)"
-msgstr ""
+msgstr "Muntatge de depuració (nivell de depuració %d)"
 
 #: src/AboutDialog.cpp
-#, fuzzy, c-format
+#, c-format
 msgid "Release build (debug level %d)"
-msgstr "Construcció de llançament"
+msgstr "Muntatge de llançament (nivell de depuració %d)"
 
 #: src/AboutDialog.cpp
 #, c-format
@@ -853,9 +853,8 @@ msgstr "Compilador:"
 
 #. i18n-hint: The directory audacity is installed into (on *nix systems)
 #: src/AboutDialog.cpp
-#, fuzzy
 msgid "Installation Prefix:"
-msgstr "Directori base d'instal·lació: "
+msgstr "Prefix de la instal·lació:"
 
 #: src/AboutDialog.cpp
 msgid "Settings folder:"
@@ -876,7 +875,7 @@ msgstr "Reproducció i enregistrament d'àudio"
 
 #: src/AboutDialog.cpp
 msgid "Sample rate conversion"
-msgstr "Conversió de la freqüència de mostreig"
+msgstr "Conversió de la freqüència de mostratge"
 
 #: src/AboutDialog.cpp
 msgid "File Format Support"
@@ -2621,16 +2620,16 @@ msgstr "Ubicació de «%s»:"
 #: src/FFmpeg.cpp
 #, c-format
 msgid "To find '%s', click here -->"
-msgstr "Per trobar «%s», feu clic aquí —>"
+msgstr "Per a trobar «%s», feu clic aquí →"
 
 #: src/FFmpeg.cpp src/export/ExportCL.cpp src/export/ExportMP3.cpp
 #: plug-ins/nyquist-plug-in-installer.ny
 msgid "Browse..."
-msgstr "Navega..."
+msgstr "Navega…"
 
 #: src/FFmpeg.cpp
 msgid "To get a free copy of FFmpeg, click here -->"
-msgstr "Per obtenir una còpia gratuïta de FFmpeg, feu clic aquí —>"
+msgstr "Per a obtenir una còpia gratuïta del FFmpeg, feu clic aquí →"
 
 #. i18n-hint: (verb)
 #: src/FFmpeg.cpp src/export/ExportMP3.cpp
@@ -3491,12 +3490,15 @@ msgid "&Mixer Board..."
 msgstr "&Taula de mescles..."
 
 #: src/ModuleManager.cpp
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Unable to load the \"%s\" module.\n"
 "\n"
 "Error: %s"
-msgstr "No es pot carregar el fitxer dels valors predefinits."
+msgstr ""
+"No s’ha pogut carregar el mòdul «%s».\n"
+"\n"
+"Error: %s"
 
 #: src/ModuleManager.cpp
 msgid "Module Unsuitable"
@@ -3536,7 +3538,7 @@ msgstr ""
 #: src/ModuleManager.cpp
 #, c-format
 msgid "Module \"%s\" found."
-msgstr "S'ha trobat el mòdul «%s»."
+msgstr "S’ha trobat el mòdul «%s»."
 
 #: src/ModuleManager.cpp
 msgid ""
@@ -3564,7 +3566,7 @@ msgstr "Carregador de mòduls d'Audacity"
 
 #: src/ModuleManager.cpp
 msgid "Try and load this module?"
-msgstr "Voleu provar i carregar aquest mòdul?"
+msgstr "Voleu provar de carregar aquest mòdul?"
 
 #: src/ModuleManager.cpp
 #, fuzzy, c-format
@@ -3950,7 +3952,7 @@ msgstr ""
 #: src/ProjectFSCK.cpp
 msgid "Warning - Problems Reading Sequence Tags"
 msgstr ""
-"Advertència - Hi ha hagut problemes mentre es llegia la seqüència d'etiquetes"
+"Avís: hi ha hagut problemes mentre es llegien les etiquetes de seqüència"
 
 #: src/ProjectFSCK.cpp
 msgid "Inspecting project file data"
@@ -4827,9 +4829,8 @@ msgid "32-bit float"
 msgstr "Coma flotant de 32 bits"
 
 #: src/SampleFormat.cpp
-#, fuzzy
 msgid "Unknown format"
-msgstr "Desconegut"
+msgstr "Format desconegut"
 
 #: src/Screenshot.cpp
 msgid "Screen Capture Frame"
@@ -5069,11 +5070,11 @@ msgstr ""
 
 #: src/ShuttleGui.cpp src/effects/EffectUI.cpp
 msgid "&Preview"
-msgstr "Vista &prèvia"
+msgstr "&Previsualitza"
 
 #: src/ShuttleGui.cpp
 msgid "Dry Previe&w"
-msgstr "Vista prèvia ei&xuta"
+msgstr "Previsualitza en ei&xut"
 
 #: src/ShuttleGui.cpp
 msgid "&Settings"
@@ -6792,7 +6793,7 @@ msgstr "Llindar:"
 
 #: src/effects/AutoDuck.cpp
 msgid "Preview not available"
-msgstr "La vista prèvia no està disponible"
+msgstr "La previsualització no està disponible"
 
 #: src/effects/BassTreble.cpp
 msgid "Bass and Treble"
@@ -7897,15 +7898,14 @@ msgid "Presets"
 msgstr "Valor predefinit"
 
 #: src/effects/Effect.cpp
-#, fuzzy
 msgid "Export Effect Parameters"
-msgstr "Paràmetres d'&edició"
+msgstr "Exporta els paràmetres de l’efecte"
 
 #: src/effects/Effect.cpp src/effects/VST/VSTEffect.cpp
 #: src/xml/XMLFileReader.cpp
 #, c-format
 msgid "Could not open file: \"%s\""
-msgstr "No s'ha pogut obrir el fitxer: «%s»"
+msgstr "No s’ha pogut obrir el fitxer: «%s»"
 
 #: src/effects/Effect.cpp src/effects/VST/VSTEffect.cpp
 msgid "Error Saving Effect Presets"
@@ -7935,11 +7935,11 @@ msgstr ""
 
 #: src/effects/Effect.cpp
 msgid "Preparing preview"
-msgstr "S'està preparant la vista prèvia"
+msgstr "S’està preparant la previsualització"
 
 #: src/effects/Effect.cpp
 msgid "Previewing"
-msgstr "Vista prèvia"
+msgstr "Previsualització"
 
 #. i18n-hint: "Nyquist" is an embedded interpreted programming language in
 #. Audacity, named in honor of the Swedish-American Harry Nyquist (or Nyqvist).
@@ -7952,12 +7952,12 @@ msgstr "Nyquist"
 #: src/effects/EffectManager.cpp
 #, c-format
 msgid "Applied effect: %s"
-msgstr "S'ha aplicat l'efecte: %s"
+msgstr "S’ha aplicat l’efecte: %s"
 
 #: src/effects/EffectManager.cpp
 #, c-format
 msgid "Applied command: %s"
-msgstr "S'ha aplicat l'ordre: %s"
+msgstr "S’ha aplicat l’ordre: %s"
 
 #: src/effects/EffectManager.cpp
 msgid "Select Preset"
@@ -7977,7 +7977,7 @@ msgstr "Valors predefinits originals"
 
 #: src/effects/EffectManager.cpp
 msgid "Current Settings"
-msgstr "Ajusts actuals"
+msgstr "Paràmetres actuals"
 
 #: src/effects/EffectManager.cpp
 msgid "Factory Defaults"
@@ -8114,11 +8114,11 @@ msgstr "Inicia la re&producció"
 
 #: src/effects/EffectUI.cpp
 msgid "Preview effect"
-msgstr "Vista prèvia de l'efecte"
+msgstr "Previsualitza l’efecte"
 
 #: src/effects/EffectUI.cpp
 msgid "&Preview effect"
-msgstr "Vista &prèvia de l'efecte"
+msgstr "&Previsualitza l’efecte"
 
 #: src/effects/EffectUI.cpp
 msgid "Skip backward"
@@ -8993,7 +8993,7 @@ msgstr "Resid&u"
 
 #: src/effects/NoiseReduction.cpp
 msgid "Advanced Settings"
-msgstr "Ajusts avançats"
+msgstr "Paràmetres avançats"
 
 #: src/effects/NoiseReduction.cpp
 #, fuzzy
@@ -9343,9 +9343,8 @@ msgid "Repeats the selection the specified number of times"
 msgstr "Repeteix la selecció tantes vegades com s'indiqui"
 
 #: src/effects/Repeat.cpp
-#, fuzzy
 msgid "&Number of repeats to add:"
-msgstr "Nombre de repeticions a afegir:"
+msgstr "&Nombre de repeticions a afegir:"
 
 #: src/effects/Repeat.cpp
 msgid "Current selection length: dd:hh:mm:ss"
@@ -9367,7 +9366,7 @@ msgstr ""
 
 #: src/effects/Repeat.cpp
 msgid "Warning: No repeats."
-msgstr "Advertència: Sense repeticions."
+msgstr "Avís: no hi ha cap repetició."
 
 #: src/effects/Reverb.cpp
 msgid "Vocal I"
@@ -9411,7 +9410,7 @@ msgstr "Reverberació"
 
 #: src/effects/Reverb.cpp
 msgid "Adds ambience or a \"hall effect\""
-msgstr "Afegeix ambient o \"efecte de sala gran\""
+msgstr "Afegeix ambient o «efecte de sala gran»"
 
 #: src/effects/Reverb.cpp
 msgid "&Room Size (%):"
@@ -9954,7 +9953,7 @@ msgstr "No es pot carregar el fitxer dels valors predefinits."
 #: src/effects/VST/VSTEffect.cpp src/effects/ladspa/LadspaEffect.cpp
 #: src/effects/lv2/LV2Effect.cpp
 msgid "Effect Settings"
-msgstr "Ajusts de l'efecte"
+msgstr "Paràmetres de l’efecte"
 
 #: src/effects/VST/VSTEffect.cpp
 msgid "Unable to allocate memory when loading presets file."
@@ -10223,7 +10222,7 @@ msgstr "%s: %s"
 
 #: src/effects/ladspa/LadspaEffect.cpp
 msgid "Effect Output"
-msgstr "Sortida de l'efecte"
+msgstr "Sortida de l’efecte"
 
 #. i18n-hint: abbreviates "Linux Audio Developer's Simple Plugin API"
 #. (Application programming interface)
@@ -10234,7 +10233,7 @@ msgstr "LADSPA"
 
 #: src/effects/lv2/LV2Effect.cpp
 msgid "LV2 Effect Settings"
-msgstr "Ajusts dels efectes LV2"
+msgstr "Paràmetres dels efectes LV2"
 
 #: src/effects/lv2/LV2Effect.cpp
 #, fuzzy, c-format
@@ -10329,6 +10328,8 @@ msgstr ""
 #, c-format
 msgid "error: File \"%s\" specified in header but not found in plug-in path.\n"
 msgstr ""
+"error: el fitxer «%s» s’ha especificat a la capçalera però no és al camí del "
+"connector.\n"
 
 #: src/effects/nyquist/Nyquist.cpp
 msgid "Audio selection required."
@@ -10687,8 +10688,8 @@ msgid ""
 "Data will be piped to standard in. \"%f\" uses the file name in the export "
 "window."
 msgstr ""
-"Les dades seran canalitzades cap al canal d'entrada estàndard. \"%f\" "
-"utilitza el nom del fitxer definit a la finestra d'exportació."
+"Les dades es canalitzaran cap al canal d’entrada estàndard. «%f» utilitza el "
+"nom del fitxer definit a la finestra d’exportació."
 
 #. i18n-hint files that can be run as programs
 #: src/export/ExportCL.cpp
@@ -16433,7 +16434,7 @@ msgstr "Preferències: "
 
 #: src/prefs/PlaybackPrefs.cpp
 msgid "Effects Preview"
-msgstr "Vista prèvia dels efectes"
+msgstr "Previsualització dels efectes"
 
 #: src/prefs/PlaybackPrefs.cpp
 msgid "&Length:"
@@ -16442,7 +16443,7 @@ msgstr "&Durada:"
 #. i18n-hint: (noun) this is a preview of the cut
 #: src/prefs/PlaybackPrefs.cpp
 msgid "Cut Preview"
-msgstr "Vista prèvia del retall"
+msgstr "Previsualització del retall"
 
 #: src/prefs/PlaybackPrefs.cpp
 msgid "&Before cut region:"
@@ -17747,7 +17748,7 @@ msgstr "Edita l'etiqueta"
 
 #: src/tracks/labeltrack/ui/LabelTextHandle.cpp
 msgid "Click to edit label text"
-msgstr "Feu clic per editar el text de l'etiqueta"
+msgstr "Feu clic per a editar el text de l’etiqueta"
 
 #: src/tracks/labeltrack/ui/LabelTrackControls.cpp
 msgid "&Font..."
@@ -17761,12 +17762,12 @@ msgstr "Lletra de la pista d'etiquetes"
 #. i18n-hint: (noun) The name of the typeface
 #: src/tracks/labeltrack/ui/LabelTrackControls.cpp
 msgid "Face name"
-msgstr "Nom de la portada"
+msgstr "Nom de la pòlissa"
 
 #. i18n-hint: (noun) The size of the typeface
 #: src/tracks/labeltrack/ui/LabelTrackControls.cpp
 msgid "Face size"
-msgstr "Mida de la portada"
+msgstr "Mida de la lletra"
 
 #: src/tracks/labeltrack/ui/LabelTrackView.cpp
 #, fuzzy
@@ -17774,26 +17775,24 @@ msgid "Cu&t Label text"
 msgstr "Text de l'etiqueta"
 
 #: src/tracks/labeltrack/ui/LabelTrackView.cpp
-#, fuzzy
 msgid "&Copy Label text"
-msgstr "Text de l'etiqueta"
+msgstr "&Copia el text de l’etiqueta"
 
 #: src/tracks/labeltrack/ui/LabelTrackView.cpp
 msgid "&Delete Label"
-msgstr "&Suprimeix l'etiqueta"
+msgstr "&Suprimeix l’etiqueta"
 
 #: src/tracks/labeltrack/ui/LabelTrackView.cpp
-#, fuzzy
 msgid "&Edit Label..."
-msgstr "&Edita les etiquetes..."
+msgstr "&Edita l’etiqueta…"
 
 #: src/tracks/labeltrack/ui/LabelTrackView.cpp
 msgid "Deleted Label"
-msgstr "S'ha eliminat l'etiqueta"
+msgstr "S’ha suprimit l’etiqueta"
 
 #: src/tracks/labeltrack/ui/LabelTrackView.cpp
 msgid "Edited labels"
-msgstr "S'han editat les etiquetes"
+msgstr "S’han editat les etiquetes"
 
 #: src/tracks/labeltrack/ui/LabelTrackView.cpp
 msgid "New label"
@@ -20748,9 +20747,8 @@ msgid "Error.~%Unable to open file"
 msgstr "Error.~%No es pot obrir el fitxer"
 
 #: plug-ins/spectral-delete.ny
-#, fuzzy
 msgid "Spectral Delete"
-msgstr "Selecció espectral"
+msgstr "Supressió espectral"
 
 #: plug-ins/spectral-delete.ny
 #, lisp-format
