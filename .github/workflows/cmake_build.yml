@@ -42,6 +42,9 @@ jobs:
           os: macos-latest
           arch: Intel # as reported by Apple menu > About This Mac
           generator: Unix Makefiles
+          # LAME only builds in Conan when not using the Xcode generator if explicitly setting GCC
+          cc: gcc
+          cxx: g++
           compiler_cache: ccache
           compiler_cache_path: ~/Library/Caches/ccache
 
@@ -91,6 +94,11 @@ jobs:
       uses: seanmiddleditch/gha-setup-vsdevenv@v3
       with:
         arch: ${{ matrix.config.arch }}
+
+    # Having this in PATH breaks building LAME in Conan when not using Visual Studio CMake generator
+    - name: "[Windows] Remove MinGW link"
+      if: runner.os == 'Windows'
+      run: rm "C:/Program Files/Git/usr/bin/link.EXE"
 
     - name: "[Windows] Install sccache"
       if: runner.os == 'Windows'
