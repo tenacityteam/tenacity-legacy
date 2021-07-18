@@ -45,11 +45,7 @@ most commonly asked questions about Audacity.
 #include "HelpText.h"
 
 // DA: Logo for Splash Dialog (welcome dialog)
-#ifdef EXPERIMENTAL_DA
-#include "../images/DarkAudacityLogoWithName.xpm"
-#else
-#include "../images/AudacityLogoWithName.xpm"
-#endif
+#include "../images/tenacity-logo-light.xpm"
 
 SplashDialog * SplashDialog::pSelf=NULL;
 
@@ -71,7 +67,7 @@ void SplashDialog::DoHelpWelcome( AudacityProject &project )
 }
 
 SplashDialog::SplashDialog(wxWindow * parent)
-   :  wxDialogWrapper(parent, -1, XO("Welcome to Audacity!"),
+   :  wxDialogWrapper(parent, -1, XO("Welcome to Tenacity!"),
       wxPoint( -1, 60 ), // default x position, y position 60 pixels from top of screen.
       wxDefaultSize, wxDEFAULT_DIALOG_STYLE | wxRESIZE_BORDER)
 {
@@ -89,7 +85,7 @@ SplashDialog::SplashDialog(wxWindow * parent)
 void SplashDialog::OnChar(wxMouseEvent &event)
 {
    if ( event.ShiftDown() && event.ControlDown() )
-      wxLaunchDefaultBrowser("https://www.audacityteam.org");
+      wxLaunchDefaultBrowser("https://tenacityaudio.org");
 }
 
 void SplashDialog::Populate( ShuttleGui & S )
@@ -99,7 +95,7 @@ void SplashDialog::Populate( ShuttleGui & S )
    S.StartVerticalLay(1);
 
    //v For now, change to AudacityLogoWithName via old-fashioned ways, not Theme.
-   m_pLogo = std::make_unique<wxBitmap>((const char **) AudacityLogoWithName_xpm); //v
+   m_pLogo = std::make_unique<wxBitmap>((const char **) tenacity_logo_light); //v
 
 
    // JKC: Resize to 50% of size.  Later we may use a smaller xpm as

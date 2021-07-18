@@ -24,9 +24,9 @@
 #include <wx/settings.h>
 
 #ifdef __WXMSW__
-   #include "../images/AudacityLogo.xpm"
+   #include "../images/TenacityLogo.xpm"
 #else
-   #include "../images/AudacityLogo48x48.xpm"
+   #include "../images/TenacityLogo48x48.xpm"
 #endif
 
 #ifdef __WXMAC__
@@ -77,9 +77,9 @@ LyricsWindow::LyricsWindow(AudacityProject *parent)
 #if !defined(__WXMAC__) && !defined(__WXX11__)
    {
 #ifdef __WXMSW__
-      wxIcon ic{ wxICON(AudacityLogo) };
+      wxIcon ic{ wxICON(TenacityLogo) };
 #else
-      wxIcon ic{wxICON(AudacityLogo48x48)};
+      wxIcon ic{wxICON(TenacityLogo48x48)};
 #endif
       SetIcon(ic);
    }

@@ -48,11 +48,7 @@ hold information about one contributor to Audacity.
 #include "Theme.h"
 
 // DA: Logo for About box.
-#ifdef EXPERIMENTAL_DA
-#include "../images/DarkAudacityLogoWithName.xpm"
-#else
-#include "../images/AudacityLogoWithName.xpm"
-#endif
+#include "../images/tenacity-logo-light.xpm"
 
 // Notice this is a "system include".  This is on purpose and only until
 // we convert over to CMake.  Once converted, the "RevisionIndent.h" file
@@ -511,7 +507,7 @@ visit our %s.")
    S.StartVerticalLay(1);
    {
       //v For now, change to AudacityLogoWithName via old-fashioned way, not Theme.
-      wxBitmap logo(AudacityLogoWithName_xpm); //v
+      wxBitmap logo(tenacity_logo_light); //v
 
       // JKC: Resize to 50% of size.  Later we may use a smaller xpm as
       // our source, but this allows us to tweak the size - if we want to.

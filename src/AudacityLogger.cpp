@@ -33,7 +33,7 @@ Provides thread-safe logging based on the wxWidgets log facility.
 #include <wx/textctrl.h>
 #include <wx/tokenzr.h>
 
-#include "../images/AudacityLogoAlpha.xpm"
+#include "../images/TenacityLogoAlpha.xpm"
 #include "widgets/AudacityMessageBox.h"
 
 //
@@ -167,9 +167,9 @@ void AudacityLogger::Show(bool show)
    {
 #if !defined(__WXMAC__) && !defined(__WXX11__)
 #if defined(__WXMSW__)
-      wxIcon ic{wxICON(AudacityLogo)};
+      wxIcon ic{wxICON(TenacityLogo)};
 #elif defined(__WXGTK__)
-      wxIcon ic{wxICON(AudacityLogoAlpha)};
+      wxIcon ic{wxICON(TenacityLogoAlpha)};
 #else
       wxIcon ic{};
       ic.CopyFromBitmap(theTheme.Bitmap(bmpAudacityLogo48x48));

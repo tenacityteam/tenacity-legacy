@@ -137,11 +137,7 @@ It handles initialization and termination by subclassing wxApp.
 #endif
 
 // DA: Logo for Splash Screen
-#ifdef EXPERIMENTAL_DA
-#include "../images/DarkAudacityLogoWithName.xpm"
-#else
-#include "../images/AudacityLogoWithName.xpm"
-#endif
+#include "../images/tenacity-logo-light.xpm"
 
 #include <thread>
 
@@ -178,7 +174,7 @@ void PopulatePreferences()
    bool writeLang = false;
 
    const wxFileName fn(
-      FileNames::ResourcesDir(), 
+      FileNames::ResourcesDir(),
       wxT("FirstTime.ini"));
    if (fn.FileExists())   // it will exist if the (win) installer put it there
    {
@@ -1349,7 +1345,7 @@ bool AudacityApp::InitPart2()
    }
 
    // BG: Create a temporary window to set as the top window
-   wxImage logoimage((const char **)AudacityLogoWithName_xpm);
+   wxImage logoimage((const char **)tenacity_logo_light);
    logoimage.Rescale(logoimage.GetWidth() / 2, logoimage.GetHeight() / 2);
    if( GetLayoutDirection() == wxLayout_RightToLeft)
       logoimage = logoimage.Mirror();

@@ -53,7 +53,7 @@ Paul Licameli split from AudacityProject.cpp
 #include <wx/sizer.h>
 
 #ifdef __WXGTK__
-#include "../images/AudacityLogoAlpha.xpm"
+#include "../images/TenacityLogoAlpha.xpm"
 #endif
 
 const int AudacityProjectTimerID = 5200;
@@ -502,9 +502,9 @@ void InitProjectWindow( ProjectWindow &window )
 #if !defined(__WXMAC__) && !defined(__WXX11__)
    {
 #if defined(__WXMSW__)
-      wxIcon ic{ wxICON(AudacityLogo) };
+      wxIcon ic{ wxICON(TenacityLogo) };
 #elif defined(__WXGTK__)
-      wxIcon ic{wxICON(AudacityLogoAlpha)};
+      wxIcon ic{wxICON(TenacityLogoAlpha)};
 #else
       wxIcon ic{};
       ic.CopyFromBitmap(theTheme.Bitmap(bmpAudacityLogo48x48));
