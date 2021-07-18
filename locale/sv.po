@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: audacity 3.0.3\n"
 "Report-Msgid-Bugs-To: audacity-translation@lists.sourceforge.net\n"
 "POT-Creation-Date: 2021-06-07 08:17-0400\n"
-"PO-Revision-Date: 2021-07-18 17:01+0000\n"
+"PO-Revision-Date: 2021-07-18 20:29+0000\n"
 "Last-Translator: Snakecharmer <floup@gmx.com>\n"
 "Language-Team: Swedish <https://hosted.weblate.org/projects/tenacity/"
 "tenacity/sv/>\n"
@@ -1531,65 +1531,64 @@ msgid "Device name: %s\n"
 msgstr "Enhetsnamn: %s\n"
 
 #: src/AudioIOBase.cpp
-#, fuzzy, c-format
+#, c-format
 msgid "Host name: %s\n"
-msgstr "Namn: %s"
+msgstr "Värdnamn: %s\n"
 
 #: src/AudioIOBase.cpp
-#, fuzzy, c-format
+#, c-format
 msgid "Recording channels: %d\n"
-msgstr "Inspelningskanaler"
+msgstr "Inspelningskanaler: %d\n"
 
 #: src/AudioIOBase.cpp
-#, fuzzy, c-format
+#, c-format
 msgid "Playback channels: %d\n"
-msgstr "Uppspelningsvolym: %s"
+msgstr "Uppspelningskanaler: %d\n"
 
 #: src/AudioIOBase.cpp
-#, fuzzy, c-format
+#, c-format
 msgid "Low Recording Latency: %g\n"
-msgstr "Inspelningens slut:"
+msgstr "Låg inspelningslatens: %g\n"
 
 #: src/AudioIOBase.cpp
 #, c-format
 msgid "Low Playback Latency: %g\n"
-msgstr ""
+msgstr "Låg uppspelningslatens: %g\n"
 
 #: src/AudioIOBase.cpp
-#, fuzzy, c-format
+#, c-format
 msgid "High Recording Latency: %g\n"
-msgstr "Inspelningens slut:"
+msgstr "Hög inspelningslatens: %g\n"
 
 #: src/AudioIOBase.cpp
 #, c-format
 msgid "High Playback Latency: %g\n"
-msgstr ""
+msgstr "Hög uppspelningslatens: %g\n"
 
 #. i18n-hint: Supported, meaning made available by the system
 #: src/AudioIOBase.cpp
-#, fuzzy
 msgid "Supported Rates:\n"
-msgstr "Samplingsfrekvenser"
+msgstr "Tillgänglig samplingskvalité:\n"
 
 #: src/AudioIOBase.cpp
-#, fuzzy, c-format
+#, c-format
 msgid "Selected recording device: %d - %s\n"
-msgstr "Välj inspelningsenhet"
+msgstr "Vald inspelningsenhet: %d - %s\n"
 
 #: src/AudioIOBase.cpp
 #, c-format
 msgid "No recording device found for '%s'.\n"
-msgstr ""
+msgstr "Ingen inspelningsenhet funnen för '%s'.\n"
 
 #: src/AudioIOBase.cpp
-#, fuzzy, c-format
+#, c-format
 msgid "Selected playback device: %d - %s\n"
-msgstr "Välj uppspelningsenhet"
+msgstr "Vald uppspelningsenhet: %d - %s\n"
 
 #: src/AudioIOBase.cpp
 #, c-format
 msgid "No playback device found for '%s'.\n"
-msgstr ""
+msgstr "Ingen uppspelningsenhet funnen för '%s'.\n"
 
 #: src/AudioIOBase.cpp
 msgid "Cannot check mutual sample rates without both devices.\n"
@@ -1598,88 +1597,81 @@ msgstr ""
 #: src/AudioIOBase.cpp
 #, c-format
 msgid "Received %d while opening devices\n"
-msgstr ""
+msgstr "Fick %d medan enheterna öppnades\n"
 
 #: src/AudioIOBase.cpp
-#, fuzzy
 msgid "Unable to open Portmixer\n"
-msgstr "Kunde inte öppna genrefil."
+msgstr "Kunde inte öppna Portmixer\n"
 
 #: src/AudioIOBase.cpp
 msgid "Available mixers:\n"
-msgstr ""
+msgstr "Tillgängliga mixers:\n"
 
 #: src/AudioIOBase.cpp
-#, fuzzy, c-format
+#, c-format
 msgid "%d - %s\n"
-msgstr "%s - %s"
+msgstr "%d - %s\n"
 
 #: src/AudioIOBase.cpp
-#, fuzzy
 msgid "Available recording sources:\n"
-msgstr "Simulera inspelningsfel"
+msgstr "Tillgängliga inspelningskällor:\n"
 
 #: src/AudioIOBase.cpp
-#, fuzzy
 msgid "Available playback volumes:\n"
-msgstr "Uppspelningsvolym"
+msgstr "Tillgänglig uppspelningsvolymer:\n"
 
 #: src/AudioIOBase.cpp
-#, fuzzy
 msgid "Recording volume is emulated\n"
-msgstr "Inspelningsvolym"
+msgstr "Inspelningsvolymen är emulerad\n"
 
 #: src/AudioIOBase.cpp
-#, fuzzy
 msgid "Recording volume is native\n"
-msgstr "Inspelningsvolym"
+msgstr "Inspelningsvolymen är ursprunglig\n"
 
 #: src/AudioIOBase.cpp
-#, fuzzy
 msgid "Playback volume is emulated\n"
-msgstr "Uppspelningsvolym: %s (emulerad)"
+msgstr "Uppspelningsvolymen är emulerad\n"
 
 #: src/AudioIOBase.cpp
-#, fuzzy
 msgid "Playback volume is native\n"
-msgstr "Uppspelningsvolym: %s (emulerad)"
+msgstr "Uppspelningsvolym är ursprunglig\n"
 
 #. i18n-hint: Supported, meaning made available by the system
 #: src/AudioIOBase.cpp
 #, c-format
 msgid "Supports output: %d\n"
-msgstr ""
+msgstr "Stödjer utmatning: %d\n"
 
 #. i18n-hint: Supported, meaning made available by the system
 #: src/AudioIOBase.cpp
 #, c-format
 msgid "Supports input: %d\n"
-msgstr ""
+msgstr "Stödjer inmatning: %d\n"
 
 #: src/AudioIOBase.cpp
 #, c-format
 msgid "Opened: %d\n"
-msgstr ""
+msgstr "Öppnade: %d\n"
 
 #: src/AudioIOBase.cpp
-#, fuzzy, c-format
+#, c-format
 msgid "Selected MIDI recording device: %d - %s\n"
-msgstr "Välj inspelningsenhet"
+msgstr "Vald MIDI-inspelningsenhet: %d - %s\n"
 
 #: src/AudioIOBase.cpp
 #, c-format
 msgid "No MIDI recording device found for '%s'.\n"
-msgstr ""
+msgstr "Ingen MIDI-inspelningsenhet funnen för '%s'.\n"
 
 #: src/AudioIOBase.cpp
-#, fuzzy, c-format
+#, c-format
 msgid "Selected MIDI playback device: %d - %s\n"
-msgstr "Välj uppspelningsenhet"
+msgstr "Vald MIDI-uppspelningsenhet: %d - %s\n"
 
 #: src/AudioIOBase.cpp
 #, c-format
 msgid "No MIDI playback device found for '%s'.\n"
-msgstr ""
+msgstr "Ingen MIDI-uppspelningsenhet funnen för '%s'.\n"
 
 #: src/AutoRecoveryDialog.cpp
 msgid "Automatic Crash Recovery"
