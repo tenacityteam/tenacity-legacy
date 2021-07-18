@@ -1351,13 +1351,16 @@ if( "${CMAKE_GENERATOR}" MATCHES "Xcode|Visual Studio*" )
       PATTERN "*.ilk" EXCLUDE
    )
 else()
-   if( CMAKE_SYSTEM_NAME MATCHES "Darwin" )
+   if( APPLE )
       install( TARGETS ${TARGET}
                DESTINATION "."
                RESOURCE DESTINATION "${_APPDIR}/Resources" )
-   elseif( CMAKE_SYSTEM_NAME MATCHES "Windows" )
-      install( TARGETS ${TARGET}
-               DESTINATION "." )
+   elseif( WIN32 )
+      install( DIRECTORY "${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/"
+               DESTINATION "."
+               USE_SOURCE_PERMISSIONS
+               PATTERN "*.pdb" EXCLUDE
+               PATTERN "*.ilk" EXCLUDE )
    else()
       install( TARGETS ${TARGET} RUNTIME )
       install( DIRECTORY "${_DEST}/${_LIBDIR}/"

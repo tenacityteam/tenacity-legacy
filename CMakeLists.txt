@@ -205,7 +205,7 @@ message( STATUS "  Compiler Standard Required: ${CMAKE_CXX_STANDARD_REQUIRED}" )
 message( STATUS "  Compiler Extensions: ${CMAKE_CXX_EXTENSIONS}" )
 message( STATUS )
 
-if( CMAKE_GENERATOR MATCHES "Visual Studio" )
+if( MSVC )
    message( STATUS "  MSVC Version: ${MSVC_VERSION}" )
    message( STATUS "  MSVC Toolset: ${MSVC_TOOLSET_VERSION}" )
    message( STATUS ) 
