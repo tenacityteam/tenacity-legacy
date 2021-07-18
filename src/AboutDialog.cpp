@@ -145,7 +145,7 @@ void AboutDialog::CreateTenacityTab(ShuttleGui& AboutDialogGUI) {
 static const wxString getCompilerVersion() {
 #if defined(_MSC_FULL_VER)
     return wxString::Format(wxT("MSVC %02d.%02d.%05d.%02d"), _MSC_VER / 100, _MSC_VER % 100, _MSC_FULL_VER % 100000, _MSC_BUILD);
-#elif defined(__GNUC_PATCHLEVEL__) AND defined(__MINGW32__)
+#elif defined(__GNUC_PATCHLEVEL__) && defined(__MINGW32__)
     return wxT("MinGW ") wxMAKE_VERSION_DOT_STRING_T(__GNUC__, __GNUC_MINOR__, __GNUC_PATCHLEVEL__);
 #elif defined(__GNUC_PATCHLEVEL__)
     return wxT("GCC ") wxMAKE_VERSION_DOT_STRING_T(__GNUC__, __GNUC_MINOR__, __GNUC_PATCHLEVEL__);
