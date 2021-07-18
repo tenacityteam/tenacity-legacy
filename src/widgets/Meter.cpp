@@ -471,6 +471,16 @@ void MeterPanel::OnErase(wxEraseEvent & WXUNUSED(event))
    // Ignore it to prevent flashing
 }
 
+static double GetColourLuminance(wxColour color)
+{
+#if wxCHECK_VERSION(3, 1, 0)
+    return color.GetLuminance();
+#else
+    // Standard RGB to YIQ conversion for the luma (Y) part, used also by wx3.1
+    return (0.299*color.Red() + 0.587*color.Green() + 0.114*color.Blue()) / 255.0;
+#endif
+}
+
 void MeterPanel::OnPaint(wxPaintEvent & WXUNUSED(event))
 {
 #if defined(__WXMAC__)
@@ -533,13 +543,13 @@ void MeterPanel::OnPaint(wxPaintEvent & WXUNUSED(event))
       // Bug #2473 - (Sort of) Hack to make text on meters more
       // visible with darker backgrounds. It would be better to have
       // different colors entirely and as part of the theme.
-      if (GetBackgroundColour().GetLuminance() < 0.25)
+      if (GetColourLuminance(GetBackgroundColour()) < 0.25)
       {
          green = wxColor(117-100, 215-100, 112-100);
          yellow = wxColor(255-100, 255-100, 0);
          red = wxColor(255-100, 0, 0);
       }
-      else if (GetBackgroundColour().GetLuminance() < 0.50)
+      else if (GetColourLuminance(GetBackgroundColour()) < 0.50)
       {
          green = wxColor(117-50, 215-50, 112-50);
          yellow = wxColor(255-50, 255-50, 0);
