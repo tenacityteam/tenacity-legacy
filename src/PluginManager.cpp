@@ -1608,7 +1608,7 @@ wxString PluginManager::GetPluginTypeString(PluginType type)
       str = wxT("Effect");
       break;
    case PluginTypeAudacityCommand:
-      str = wxT("Generic");
+      str = wxT("Module");
       break;
    case PluginTypeExporter:
       str = wxT("Exporter");
