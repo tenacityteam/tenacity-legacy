@@ -113,7 +113,7 @@ Alternatively, you can use **CLion**. If you chose to do so, open the directory 
 At the moment we only support **x86_64** builds. It is possible to build using AppleSilicon hardware but **mad** and **id3tag** should be disabled:
 
 ```
-cmake -GXCode -T buildsystem=1 -Duse_mad="off" -Duse_id3tag=off ../tenacity
+cmake -GXcode -T buildsystem=1 -Duse_mad="off" -Duse_id3tag=off ../tenacity
 ```
 
 ## Linux & Other OS
