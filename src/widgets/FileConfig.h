@@ -30,22 +30,22 @@ public:
    void Init();
    virtual ~FileConfig();
 
-   virtual void SetPath(const wxString& strPath) wxOVERRIDE;
-   virtual const wxString& GetPath() const wxOVERRIDE;
-   virtual bool GetFirstGroup(wxString& str, long& lIndex) const wxOVERRIDE;
-   virtual bool GetNextGroup(wxString& str, long& lIndex) const wxOVERRIDE;
-   virtual bool GetFirstEntry(wxString& str, long& lIndex) const wxOVERRIDE;
-   virtual bool GetNextEntry(wxString& str, long& lIndex) const wxOVERRIDE;
-   virtual size_t GetNumberOfEntries(bool bRecursive = false) const wxOVERRIDE;
-   virtual size_t GetNumberOfGroups(bool bRecursive = false) const wxOVERRIDE;
-   virtual bool HasGroup(const wxString& strName) const wxOVERRIDE;
-   virtual bool HasEntry(const wxString& strName) const wxOVERRIDE;
-   virtual bool Flush(bool bCurrentOnly = false) wxOVERRIDE;
-   virtual bool RenameEntry(const wxString& oldName, const wxString& newName) wxOVERRIDE;
-   virtual bool RenameGroup(const wxString& oldName, const wxString& newName) wxOVERRIDE;
-   virtual bool DeleteEntry(const wxString& key, bool bDeleteGroupIfEmpty = true) wxOVERRIDE;
-   virtual bool DeleteGroup(const wxString& key) wxOVERRIDE;
-   virtual bool DeleteAll() wxOVERRIDE;
+   virtual void SetPath(const wxString& strPath) override;
+   virtual const wxString& GetPath() const override;
+   virtual bool GetFirstGroup(wxString& str, long& lIndex) const override;
+   virtual bool GetNextGroup(wxString& str, long& lIndex) const override;
+   virtual bool GetFirstEntry(wxString& str, long& lIndex) const override;
+   virtual bool GetNextEntry(wxString& str, long& lIndex) const override;
+   virtual size_t GetNumberOfEntries(bool bRecursive = false) const override;
+   virtual size_t GetNumberOfGroups(bool bRecursive = false) const override;
+   virtual bool HasGroup(const wxString& strName) const override;
+   virtual bool HasEntry(const wxString& strName) const override;
+   virtual bool Flush(bool bCurrentOnly = false) override;
+   virtual bool RenameEntry(const wxString& oldName, const wxString& newName) override;
+   virtual bool RenameGroup(const wxString& oldName, const wxString& newName) override;
+   virtual bool DeleteEntry(const wxString& key, bool bDeleteGroupIfEmpty = true) override;
+   virtual bool DeleteGroup(const wxString& key) override;
+   virtual bool DeleteAll() override;
 
    // Set and Get values of the version major/minor/micro keys in tenacity.cfg when Tenacity first opens
    void SetVersionKeysInit( int major, int minor, int micro)
@@ -62,16 +62,16 @@ public:
    }
 
 protected:
-   virtual bool DoReadString(const wxString& key, wxString *pStr) const wxOVERRIDE;
-   virtual bool DoReadLong(const wxString& key, long *pl) const wxOVERRIDE;
+   virtual bool DoReadString(const wxString& key, wxString *pStr) const override;
+   virtual bool DoReadLong(const wxString& key, long *pl) const override;
 #if wxUSE_BASE64
-   virtual bool DoReadBinary(const wxString& key, wxMemoryBuffer* buf) const wxOVERRIDE;
+   virtual bool DoReadBinary(const wxString& key, wxMemoryBuffer* buf) const override;
 #endif // wxUSE_BASE64
 
-   virtual bool DoWriteString(const wxString& key, const wxString& szValue) wxOVERRIDE;
-   virtual bool DoWriteLong(const wxString& key, long lValue) wxOVERRIDE;
+   virtual bool DoWriteString(const wxString& key, const wxString& szValue) override;
+   virtual bool DoWriteLong(const wxString& key, long lValue) override;
 #if wxUSE_BASE64
-   virtual bool DoWriteBinary(const wxString& key, const wxMemoryBuffer& buf) wxOVERRIDE;
+   virtual bool DoWriteBinary(const wxString& key, const wxMemoryBuffer& buf) override;
 #endif // wxUSE_BASE64
 
 protected:
