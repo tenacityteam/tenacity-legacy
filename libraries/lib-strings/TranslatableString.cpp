@@ -97,7 +97,12 @@ wxString TranslatableString::DoSubstitute( const Formatter &formatter,
    return formatter
       ? formatter( format, debug ? Request::DebugFormat : Request::Format )
       : // come here for most translatable strings, which have no formatting
-         ( debug ? format : wxGetTranslation( format, wxString{}, context ) );
+         ( debug ? format : wxGetTranslation(
+               format
+#if HAS_I18N_CONTEXTS
+               , wxString{}, context
+#endif
+            ) );
 }
 
 wxString TranslatableString::DoChooseFormat(
