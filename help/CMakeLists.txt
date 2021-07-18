@@ -49,7 +49,7 @@ if( ${_OPT}package_manual )
 endif()
 
 if( NOT CMAKE_SYSTEM_NAME MATCHES "Darwin" )
-   if( NOT "${CMAKE_GENERATOR}" MATCHES "Visual Studio*")
+   if( NOT WIN32)
       install( DIRECTORY "${dst}" OPTIONAL
                DESTINATION "${_DATADIR}/audacity/help" )
       install( FILES "${_SRCDIR}/audacity.1"
