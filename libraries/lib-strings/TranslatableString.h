@@ -18,6 +18,7 @@
 class Identifier;
 
 #include <vector>
+#include "Identifier.h"
 
 //! Holds a msgid for the translation catalog; may also bind format arguments
 /*!
