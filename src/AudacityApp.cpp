@@ -2111,10 +2111,7 @@ void AudacityApp::OnMenuAbout(wxCommandEvent& WXUNUSED(event)) {
     // This function shadows a similar function
     // in Menus.cpp, but should only be used on the Mac platform.
 #ifdef __WXMAC__
-    // Modeless dialog, consistent with other Mac applications
-   // Not more than one at once!
-
-    AboutDialog(&window).Show(true);
+    AboutDialog(&window).ShowModal(true);
 #else
     wxASSERT(false);
 #endif
