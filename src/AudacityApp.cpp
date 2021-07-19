@@ -1554,7 +1554,7 @@ void SetToExtantDirectory(wxString& result, const wxString& dir) {
 bool AudacityApp::InitTempDir() {
     // We need to find a temp directory location.
     auto tempFromPrefs = TempDirectory::TempDir();
-    auto tempDefaultLoc = TempDirectory::DefaultTempDir();
+    auto &tempDefaultLoc = TempDirectory::DefaultTempDir();
 
     wxString temp;
 
