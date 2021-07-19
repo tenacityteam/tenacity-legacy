@@ -18,6 +18,7 @@
 #include "SampleFormat.h"
 #include "SpectrumAnalyst.h"
 #include "widgets/wxPanelWrapper.h" // to inherit
+#include "NumberScale.h" // member variable
 
 class wxMemoryDC;
 class wxScrollBar;
@@ -130,8 +131,10 @@ private:
    wxChoice *mSizeChoice;
    wxChoice *mFuncChoice;
    wxChoice *mAxisChoice;
-   wxScrollBar *mPanScroller;
-   wxSlider *mZoomSlider;
+   wxScrollBar *vPanScroller;
+   wxSlider *vZoomSlider;
+   wxScrollBar *hPanScroller;
+   wxSlider *hZoomSlider;
    wxTextCtrl *mCursorText;
    wxTextCtrl *mPeakText;
 
@@ -141,15 +144,25 @@ private:
    Floats mData;
    size_t mWindowSize;
 
+   /// Whether x axis is in log-frequency.
    bool mLogAxis;
+   /// The minimum y value to plot.
    float mYMin;
+   /// The maximum y value to plot.
    float mYMax;
-   float mYStep;
+
+   NumberScale hNumberScale;
 
    std::unique_ptr<wxBitmap> mBitmap;
 
    int mMouseX;
    int mMouseY;
+
+   static constexpr float NO_CURSOR = -1.f;
+   /// Frequency/period under the mouse cursor, if present.
+   float mCursorXLeft = NO_CURSOR;
+   /// Frequency/period 1 pixel to the right of the mouse cursor, if present.
+   float mCursorXRight = NO_CURSOR;
 
    std::unique_ptr<SpectrumAnalyst> mAnalyst;
 
