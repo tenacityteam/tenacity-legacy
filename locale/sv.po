@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: audacity 3.0.3\n"
 "Report-Msgid-Bugs-To: audacity-translation@lists.sourceforge.net\n"
 "POT-Creation-Date: 2021-06-07 08:17-0400\n"
-"PO-Revision-Date: 2021-07-18 20:29+0000\n"
+"PO-Revision-Date: 2021-07-19 19:45+0000\n"
 "Last-Translator: Snakecharmer <floup@gmx.com>\n"
 "Language-Team: Swedish <https://hosted.weblate.org/projects/tenacity/"
 "tenacity/sv/>\n"
@@ -1224,6 +1224,10 @@ msgid ""
 "This is likely due to a resource shortage\n"
 "and a reboot may be required."
 msgstr ""
+"Kan inte allokera semaforer.\n"
+"\n"
+"Det beror förmodligen på resursbrist\n"
+"och en omstart kan krävas."
 
 #: src/AudacityApp.cpp
 msgid "Audacity Startup Failure"
@@ -1236,6 +1240,10 @@ msgid ""
 "This is likely due to a resource shortage\n"
 "and a reboot may be required."
 msgstr ""
+"Kan inte skapa semaforer.\n"
+"\n"
+"Det beror förmodligen på resursbrist\n"
+"och en omstart kan krävas."
 
 #: src/AudacityApp.cpp
 msgid ""
@@ -1244,6 +1252,10 @@ msgid ""
 "This is likely due to a resource shortage\n"
 "and a reboot may be required."
 msgstr ""
+"Kan inte allokera semafor för låsning.\n"
+"\n"
+"Det beror förmodligen på resursbrist\n"
+"och en omstart kan krävas."
 
 #: src/AudacityApp.cpp
 msgid ""
@@ -1252,6 +1264,10 @@ msgid ""
 "This is likely due to a resource shortage\n"
 "and a reboot may be required."
 msgstr ""
+"Kan inte allokera serversemafor.\n"
+"\n"
+"Det beror förmodligen på resursbrist\n"
+"och en omstart kan krävas."
 
 #: src/AudacityApp.cpp
 msgid ""
@@ -1260,6 +1276,10 @@ msgid ""
 "This is likely due to a resource shortage\n"
 "and a reboot may be required."
 msgstr ""
+"Audacitys IPC-server kunde inte startas.\n"
+"\n"
+"Det beror förmodligen på resursbrist\n"
+"och en omstart kan krävas."
 
 #: src/AudacityApp.cpp
 msgid "An unrecoverable error has occurred during startup"
@@ -1568,7 +1588,7 @@ msgstr "Hög uppspelningslatens: %g\n"
 #. i18n-hint: Supported, meaning made available by the system
 #: src/AudioIOBase.cpp
 msgid "Supported Rates:\n"
-msgstr "Tillgänglig samplingskvalité:\n"
+msgstr "Tillgängliga samplingsfrekvenser:\n"
 
 #: src/AudioIOBase.cpp
 #, c-format
@@ -1592,7 +1612,7 @@ msgstr "Ingen uppspelningsenhet funnen för '%s'.\n"
 
 #: src/AudioIOBase.cpp
 msgid "Cannot check mutual sample rates without both devices.\n"
-msgstr ""
+msgstr "Kan inte kontrollera gemensam samplingsfrekvens utan båda enheterna.\n"
 
 #: src/AudioIOBase.cpp
 #, c-format
@@ -2253,6 +2273,13 @@ msgid ""
 "change\n"
 "and use %s to change that audio."
 msgstr ""
+"Välj ljud som %s kan använda.\n"
+"\n"
+"1. Välj ljud som representerar brus och använd %s för att ladda din "
+"'brusprofil'.\n"
+"\n"
+"2. När du har din brusprofil, välj ljudet du vill ändra\n"
+"och använd %s för att ändra ljudet."
 
 #: src/CommonCommandFlags.cpp
 msgid ""
@@ -2284,7 +2311,7 @@ msgstr "Audacitys supportteam"
 
 #: src/CrashReport.cpp src/DBConnection.cpp src/ProjectFileIO.cpp
 msgid "This may take several seconds"
-msgstr ""
+msgstr "Det här kan ta flera sekunder"
 
 #: src/CrashReport.cpp
 msgid "Report generated to:"
@@ -2327,6 +2354,9 @@ msgid ""
 "%s\n"
 "For tips on freeing up space, click the help button."
 msgstr ""
+"Disken är full.\n"
+"%s\n"
+"Klicka på hjälpknappen för tips om hur du kan frigöra utrymme."
 
 #: src/DBConnection.cpp
 #, fuzzy, c-format
@@ -2350,7 +2380,7 @@ msgstr ""
 
 #: src/DBConnection.cpp
 msgid "Database error.  Sorry, but we don't have more details."
-msgstr ""
+msgstr "Databasfel.  Tyvärr saknas ytterligare detaljer."
 
 #: src/Dependencies.cpp
 msgid "Removing Dependencies"
@@ -2658,11 +2688,11 @@ msgstr "Misslyckades att hitta kompatibla FFmpeg-bibliotek."
 #. i18n-hint: do not translate avformat.  Preserve the computer gibberish.
 #: src/FFmpeg.h
 msgid "Only avformat.dll"
-msgstr ""
+msgstr "Endast avformat.dll"
 
 #: src/FFmpeg.h
 msgid "Only libavformat.so"
-msgstr ""
+msgstr "Endast libavformat.so"
 
 #: src/FileException.cpp
 #, c-format
@@ -2735,7 +2765,7 @@ msgstr "Spara projektdatafiler"
 
 #: src/FileNames.cpp
 msgid "Dynamically Linked Libraries"
-msgstr ""
+msgstr "Dynamiskt länkade bibliotek"
 
 #: src/FileNames.cpp
 #, fuzzy
@@ -3868,7 +3898,7 @@ msgstr ""
 
 #: src/ProjectAudioManager.cpp src/menus/TransportMenus.cpp
 msgid "Mismatched Sampling Rates"
-msgstr ""
+msgstr "Samplingsfrekvenserna passar inte ihop"
 
 #: src/ProjectAudioManager.cpp src/menus/TransportMenus.cpp
 msgid ""
@@ -3876,10 +3906,13 @@ msgid ""
 "(Audacity requires two channels at the same sample rate for\n"
 "each stereo track)"
 msgstr ""
+"För få kanaler är valda för att spela in vid den här samplingsfrekvenser.\n"
+"(Audacity behöver två kanaler med samma samplingsfrekvens för\n"
+"varje stereokanal)"
 
 #: src/ProjectAudioManager.cpp src/menus/TransportMenus.cpp
 msgid "Too Few Compatible Tracks Selected"
-msgstr ""
+msgstr "För få kompatibla spår är valda"
 
 #: src/ProjectAudioManager.cpp
 msgid "Recorded Audio"
