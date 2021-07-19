@@ -436,18 +436,6 @@ const PluginID & PluginManager::RegisterPlugin(ModuleInterface *provider, Effect
    return plug.GetID();
 }
 
-const PluginID & PluginManager::RegisterPlugin(ModuleInterface *provider, ImporterInterface *importer)
-{
-   PluginDescriptor & plug = CreatePlugin(GetID(importer), importer, PluginTypeImporter);
-
-   plug.SetProviderID(PluginManager::GetID(provider));
-
-   plug.SetImporterIdentifier(importer->GetPluginStringID());
-   plug.SetImporterExtensions(importer->GetSupportedExtensions());
-
-   return plug.GetID();
-}
-
 void PluginManager::FindFilesInPathList(const wxString & pattern,
                                         const FilePaths & pathList,
                                         FilePaths & files,
@@ -1559,6 +1547,11 @@ ComponentInterface *PluginManager::GetInstance(const PluginID & ID)
    }
 }
 
+PluginID PluginManager::GetID(ModuleInterface *module)
+{
+   return ModuleManager::GetID(module);
+}
+
 PluginID PluginManager::GetID(ComponentInterface *command)
 {
    return wxString::Format(wxT("%s_%s_%s_%s_%s"),
@@ -1577,16 +1570,6 @@ PluginID PluginManager::GetID(EffectDefinitionInterface *effect)
                            effect->GetVendor().Internal(),
                            effect->GetSymbol().Internal(),
                            effect->GetPath());
-}
-
-PluginID PluginManager::GetID(ImporterInterface *importer)
-{
-   return wxString::Format(wxT("%s_%s_%s_%s_%s"),
-                           GetPluginTypeString(PluginTypeImporter),
-                           wxEmptyString,
-                           importer->GetVendor().Internal(),
-                           importer->GetSymbol().Internal(),
-                           importer->GetPath());
 }
 
 // This string persists in configuration files

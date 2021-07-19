@@ -46,6 +46,7 @@
 
 #include "Identifier.h"
 #include "audacity/ComponentInterface.h"
+#include "ComponentInterfaceSymbol.h"
 #include "audacity/ConfigInterface.h"
 #include "audacity/EffectAutomationParameters.h" // for command automation
 
@@ -244,26 +245,6 @@ public:
 
    virtual bool HasOptions() = 0;
    virtual void ShowOptions() = 0;
-};
-
-
-/*************************************************************************************//**
-
-\class EffectManagerInterface
-
-\brief UNUSED.  EffectManagerInterface provides a single function to find files matching 
-a pattern in a list.
-
-*******************************************************************************************/
-class AUDACITY_DLL_API EffectManagerInterface
-{
-public:
-   virtual ~EffectManagerInterface() {};
-
-   virtual void FindFilesInPathList(const wxString & pattern,
-                                    const FilePaths & pathList,
-                                    FilePaths & files,
-                                    int searchFlags) = 0;
 };
 
 #endif // __AUDACITY_EFFECTINTERFACE_H__
