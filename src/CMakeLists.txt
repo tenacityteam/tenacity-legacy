@@ -794,6 +794,8 @@ list( APPEND SOURCES
       tracks/labeltrack/ui/LabelTrackVRulerControls.h
       tracks/labeltrack/ui/LabelTrackView.cpp
       tracks/labeltrack/ui/LabelTrackView.h
+      tracks/playabletrack/notetrack/ui/NoteTrackAffordanceControls.h
+      tracks/playabletrack/notetrack/ui/NoteTrackAffordanceControls.cpp
       tracks/playabletrack/notetrack/ui/NoteTrackButtonHandle.cpp
       tracks/playabletrack/notetrack/ui/NoteTrackButtonHandle.h
       tracks/playabletrack/notetrack/ui/NoteTrackControls.cpp
@@ -823,6 +825,8 @@ list( APPEND SOURCES
       tracks/playabletrack/wavetrack/ui/SpectrumVZoomHandle.h
       tracks/playabletrack/wavetrack/ui/SpectrumView.cpp
       tracks/playabletrack/wavetrack/ui/SpectrumView.h
+      tracks/playabletrack/wavetrack/ui/WaveTrackAffordanceControls.cpp
+      tracks/playabletrack/wavetrack/ui/WaveTrackAffordanceControls.h
       tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
       tracks/playabletrack/wavetrack/ui/WaveTrackControls.h
       tracks/playabletrack/wavetrack/ui/WaveTrackShifter.cpp
@@ -853,6 +857,8 @@ list( APPEND SOURCES
 
       # Tracks UI
 
+      tracks/ui/AffordanceHandle.cpp
+      tracks/ui/AffordanceHandle.h
       tracks/ui/BackgroundCell.cpp
       tracks/ui/BackgroundCell.h
       tracks/ui/ButtonHandle.cpp
@@ -891,6 +897,10 @@ list( APPEND SOURCES
       tracks/ui/TrackView.h
       tracks/ui/ZoomHandle.cpp
       tracks/ui/ZoomHandle.h
+
+      # ui helpers
+      ui/AccessibleLinksFormatter.h
+      ui/AccessibleLinksFormatter.cpp
 
       # Widgets
 
@@ -957,6 +967,8 @@ list( APPEND SOURCES
       widgets/ReadOnlyText.h
       widgets/Ruler.cpp
       widgets/Ruler.h
+      widgets/UnwritableLocationErrorDialog.cpp
+      widgets/UnwritableLocationErrorDialog.h
       widgets/Warning.cpp
       widgets/Warning.h
       widgets/WindowAccessible.cpp
@@ -992,7 +1004,6 @@ list( APPEND HEADERS
    ../include/audacity/PluginInterface.h
    ../include/audacity/ComponentInterface.h
    ../include/audacity/EffectAutomationParameters.h
-   ../include/audacity/ImporterInterface.h
 )
 
 #
@@ -1355,6 +1366,9 @@ else()
       install( TARGETS ${TARGET}
                DESTINATION "."
                RESOURCE DESTINATION "${_APPDIR}/Resources" )
+   elseif( CMAKE_SYSTEM_NAME MATCHES "Windows" )
+      install( TARGETS ${TARGET}
+               DESTINATION "." )
    else()
       install( TARGETS ${TARGET} RUNTIME )
       install( DIRECTORY "${_DEST}/${_LIBDIR}/"

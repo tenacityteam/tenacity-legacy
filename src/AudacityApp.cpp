@@ -2059,42 +2059,50 @@ void AudacityApp::OnEndSession(wxCloseEvent& event) {
     }
 }
 
-int AudacityApp::OnExit() {
-    gIsQuitting = true;
-    while (Pending()) {
-        Dispatch();
-    }
+int AudacityApp::OnExit()
+{
+   gIsQuitting = true;
+   while(Pending())
+   {
+      Dispatch();
+   }
 
-    Importer::Get().Terminate();
+   Importer::Get().Terminate();
 
-    if (gPrefs) {
-        bool bFalse = false;
-        //Should we change the commands.cfg location next startup?
-        if (gPrefs->Read(wxT("/QDeleteCmdCfgLocation"), &bFalse)) {
-            gPrefs->DeleteEntry(wxT("/QDeleteCmdCfgLocation"));
-            gPrefs->Write(wxT("/DeleteCmdCfgLocation"), true);
-            gPrefs->Flush();
-        }
-    }
+   if(gPrefs)
+   {
+      bool bFalse = false;
+      //Should we change the commands.cfg location next startup?
+      if(gPrefs->Read(wxT("/QDeleteCmdCfgLocation"), &bFalse))
+      {
+         gPrefs->DeleteEntry(wxT("/QDeleteCmdCfgLocation"));
+         gPrefs->Write(wxT("/DeleteCmdCfgLocation"), true);
+         gPrefs->Flush();
+      }
+   }
 
-    FileHistory::Global().Save(*gPrefs);
+   FileHistory::Global().Save(*gPrefs);
 
-    FinishPreferences();
+   FinishPreferences();
 
 #ifdef USE_FFMPEG
-    DropFFmpegLibs();
+   DropFFmpegLibs();
 #endif
 
-    DeinitFFT();
+   DeinitFFT();
 
-    AudioIO::Deinit();
+#ifdef HAS_NETWORKING
+   audacity::network_manager::NetworkManager::GetInstance().Terminate();
+#endif
 
-    MenuTable::DestroyRegistry();
+   AudioIO::Deinit();
 
-    // Terminate the PluginManager (must be done before deleting the locale)
-    PluginManager::Get().Terminate();
+   MenuTable::DestroyRegistry();
 
-    return 0;
+   // Terminate the PluginManager (must be done before deleting the locale)
+   PluginManager::Get().Terminate();
+
+   return 0;
 }
 
 // The following five methods are currently only used on Mac OS,

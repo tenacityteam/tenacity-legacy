@@ -926,6 +926,9 @@ AdornedRulerPanel::AdornedRulerPanel(AudacityProject* project,
    mTracks = &TrackList::Get( *project );
 
    mIsSnapped = false;
+   mEditMode = gPrefs->Read(wxT("/GUI/Toolbars/EditMode"), true);
+
+   mGrabber = nullptr;
 
    mIsRecording = false;
 
@@ -969,7 +972,13 @@ void AdornedRulerPanel::Refresh( bool eraseBackground, const wxRect *rect )
 
 void AdornedRulerPanel::UpdatePrefs()
 {
-   if (mNeedButtonUpdate) {
+   bool mode = gPrefs->Read(wxT("/GUI/Toolbars/EditMode"), true);
+   
+   if ( mode != mEditMode )
+   {
+      mEditMode = mode;
+      ReCreateButtons();
+   }else if (mNeedButtonUpdate) {
       // Visit this block once only in the lifetime of this panel
       mNeedButtonUpdate = false;
       // Do this first time setting of button status texts
@@ -1009,6 +1018,12 @@ void AdornedRulerPanel::ReCreateButtons()
       button = nullptr;
    }
 
+   if ( mGrabber )
+   {
+      mGrabber->Destroy();
+      mGrabber = nullptr;
+   }
+
    size_t iButton = 0;
    // Make the short row of time ruler pushbottons.
    // Don't bother with sizers.  Their sizes and positions are fixed.
@@ -1017,12 +1032,14 @@ void AdornedRulerPanel::ReCreateButtons()
 
    wxPoint position( 1, 0 );
 
-   Grabber * pGrabber = safenew Grabber(this, this->GetId());
-   pGrabber->SetAsSpacer( true );
-   //pGrabber->SetSize( 10, 27 ); // default is 10,27
-   pGrabber->SetPosition( position );
-
-   position.x = 12;
+   if ( mEditMode )
+   {
+      mGrabber = safenew Grabber(this, this->GetId());
+      mGrabber->SetAsSpacer( true );
+      //mGrabber->SetSize( 10, 27 ); // default is 10,27
+      mGrabber->SetPosition( position );
+      position.x = 12;
+   }else position.x = 0;
 
    auto size = theTheme.ImageSize( bmpRecoloredUpSmall );
    size.y = std::min(size.y, GetRulerHeight(false));

@@ -346,6 +346,7 @@ ToolBar::ToolBar( AudacityProject &project,
    mHSizer = NULL;
    mVisible = false;
    mPositioned = false;
+   mEditMode = gPrefs->Read(wxT("/GUI/Toolbars/EditMode"), true);
 
    mGrabber = NULL;
    mResizer = NULL;
@@ -538,10 +539,14 @@ void ToolBar::ReCreateButtons()
       // Create the main sizer
       auto ms = std::make_unique<wxBoxSizer>(wxHORIZONTAL);
 
-      // Create the grabber and add it to the main sizer
-      mGrabber = safenew Grabber(this, mType);
-      ms->Add(mGrabber, 0, wxEXPAND | wxALIGN_LEFT | wxALIGN_TOP | wxRIGHT, 1);
-
+      // Grabber is created only when editing, or when it's undocked
+      // (as otherwise the undocked toolbar can't be moved around)
+      if (mEditMode || !IsDocked())
+      {
+         // Create the grabber and add it to the main sizer
+         mGrabber = safenew Grabber(this, mType);
+         ms->Add(mGrabber, 0, wxEXPAND | wxALIGN_LEFT | wxALIGN_TOP | wxRIGHT, 1);
+      }
       // Use a box sizer for laying out controls
       ms->Add((mHSizer = safenew wxBoxSizer(wxHORIZONTAL)), 1, wxEXPAND);
 
@@ -549,7 +554,7 @@ void ToolBar::ReCreateButtons()
       Populate();
 
       // Add some space for the resize border
-      if (IsResizable())
+      if (mEditMode && IsResizable())
       {
          // Create the resizer and add it to the main sizer
          mResizer = safenew ToolBarResizer(this);
@@ -621,6 +626,21 @@ void ToolBar::UpdatePrefs()
    }
 #endif
 
+   bool updated = false;
+   bool editing = gPrefs->Read(wxT("/GUI/Toolbars/EditMode"), true);
+
+   if ( editing != mEditMode )
+   {
+      mEditMode = editing;
+      updated = true;
+   }
+
+   if ( updated )
+   {
+      ReCreateButtons();
+      Updated();
+   }
+
    return;
 }
 
@@ -633,6 +653,15 @@ ToolDock *ToolBar::GetDock()
 }
 
 //
+// Returns whether or not edit mode is enabled
+//
+bool ToolBar::GetEditMode()
+{
+   return mEditMode;
+}
+
+
+//
 // Toggle the docked/floating state
 //
 void ToolBar::SetDocked( ToolDock *dock, bool pushed )
@@ -640,13 +669,16 @@ void ToolBar::SetDocked( ToolDock *dock, bool pushed )
    // Remember it
 //   mDock = dock;
 
-   // Change the tooltip of the grabber
+   if ( mGrabber )
+   {
+      // Change the tooltip of the grabber
 #if wxUSE_TOOLTIPS
-   mGrabber->SetToolTip( GetTitle() );
+      mGrabber->SetToolTip( GetTitle() );
 #endif
 
-   // Set the grabber button state
-   mGrabber->PushButton( pushed );
+      // Set the grabber button state
+      mGrabber->PushButton( pushed );
+   }
 
    if (mResizer)
    {
