@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: audacity 3.0.3\n"
 "Report-Msgid-Bugs-To: audacity-translation@lists.sourceforge.net\n"
 "POT-Creation-Date: 2021-06-07 08:17-0400\n"
-"PO-Revision-Date: 2021-07-19 19:45+0000\n"
+"PO-Revision-Date: 2021-07-19 23:49+0000\n"
 "Last-Translator: Snakecharmer <floup@gmx.com>\n"
 "Language-Team: Swedish <https://hosted.weblate.org/projects/tenacity/"
 "tenacity/sv/>\n"
@@ -3233,7 +3233,7 @@ msgstr "&Kommando"
 #: src/HistoryWindow.cpp src/ProjectFileManager.cpp
 #, c-format
 msgid "Compacting actually freed %s of disk space."
-msgstr ""
+msgstr "Komprimering frigjorde %s diskutrymme."
 
 #. i18n-hint: Clicking this menu item shows the various editing steps
 #. that have been taken.
@@ -3906,9 +3906,9 @@ msgid ""
 "(Audacity requires two channels at the same sample rate for\n"
 "each stereo track)"
 msgstr ""
-"För få kanaler är valda för att spela in vid den här samplingsfrekvenser.\n"
+"För få spår är valda för att spela in vid den här samplingsfrekvenser.\n"
 "(Audacity behöver två kanaler med samma samplingsfrekvens för\n"
-"varje stereokanal)"
+"varje stereospår)"
 
 #: src/ProjectAudioManager.cpp src/menus/TransportMenus.cpp
 msgid "Too Few Compatible Tracks Selected"
@@ -4202,6 +4202,10 @@ msgid ""
 "\n"
 "%s"
 msgstr ""
+"Kunde inte läsa in data från projektfilen.\n"
+"Följande kommando misslyckades:\n"
+"\n"
+"%s"
 
 #. i18n-hint: An error message.
 #: src/ProjectFileIO.cpp
@@ -4209,6 +4213,8 @@ msgid ""
 "Project is in a read only directory\n"
 "(Unable to create the required temporary files)"
 msgstr ""
+"Projektet finns i en katalog som endast är läsbar\n"
+"(Kan inte skapa de nödvändiga tillfälliga filerna)"
 
 #: src/ProjectFileIO.cpp
 #, fuzzy
@@ -4221,6 +4227,9 @@ msgid ""
 "\n"
 "You will need to upgrade to open it."
 msgstr ""
+"Det här projektet skapades med en nyare version av Audacity.\n"
+"\n"
+"Du behöver uppgradera för att öppna den."
 
 #: src/ProjectFileIO.cpp
 #, fuzzy
@@ -4230,7 +4239,7 @@ msgstr "Kunde inte initialisera MP3-strömmen"
 #. i18n-hint: An error message.  Don't translate inset or blockids.
 #: src/ProjectFileIO.cpp
 msgid "Unable to add 'inset' function (can't verify blockids)"
-msgstr ""
+msgstr "Kan inte lägga till 'inset'-funktionen (kan inte verifiera blockids)"
 
 #. i18n-hint: An error message.  Don't translate blockfiles.
 #: src/ProjectFileIO.cpp
@@ -4238,6 +4247,8 @@ msgid ""
 "Project is read only\n"
 "(Unable to work with the blockfiles)"
 msgstr ""
+"Projektet är endast läsbart\n"
+"(Kan inte arbeta med blockfiles)"
 
 #. i18n-hint: An error message.  Don't translate blockfiles.
 #: src/ProjectFileIO.cpp
@@ -4245,6 +4256,8 @@ msgid ""
 "Project is locked\n"
 "(Unable to work with the blockfiles)"
 msgstr ""
+"Projektet är låst\n"
+"(Kan inte arbeta med blockfiles)"
 
 #. i18n-hint: An error message.  Don't translate blockfiles.
 #: src/ProjectFileIO.cpp
@@ -4252,6 +4265,8 @@ msgid ""
 "Project is busy\n"
 "(Unable to work with the blockfiles)"
 msgstr ""
+"Projektet är upptaget\n"
+"(Kan inte arbeta med blockfiles)"
 
 #. i18n-hint: An error message.  Don't translate blockfiles.
 #: src/ProjectFileIO.cpp
@@ -4259,6 +4274,8 @@ msgid ""
 "Project is corrupt\n"
 "(Unable to work with the blockfiles)"
 msgstr ""
+"Projektet är trasigt\n"
+"(Kan inte arbeta med blockfiles)"
 
 #. i18n-hint: An error message.  Don't translate blockfiles.
 #: src/ProjectFileIO.cpp
@@ -4266,6 +4283,8 @@ msgid ""
 "Some permissions issue\n"
 "(Unable to work with the blockfiles)"
 msgstr ""
+"Problem med nekad åtkomst\n"
+"(Kan inte arbeta med blockfiles)"
 
 #. i18n-hint: An error message.  Don't translate blockfiles.
 #: src/ProjectFileIO.cpp
@@ -4273,6 +4292,8 @@ msgid ""
 "A disk I/O error\n"
 "(Unable to work with the blockfiles)"
 msgstr ""
+"Ett läs/skrivfel\n"
+"(Kan inte arbeta med blockfiles)"
 
 #. i18n-hint: An error message.  Don't translate blockfiles.
 #: src/ProjectFileIO.cpp
@@ -4280,6 +4301,8 @@ msgid ""
 "Not authorized\n"
 "(Unable to work with the blockfiles)"
 msgstr ""
+"Tillstånd saknas\n"
+"(Kan inte arbeta med blockfiles)"
 
 #. i18n-hint: An error message.  Don't translate blockfiles.
 #: src/ProjectFileIO.cpp
@@ -4294,7 +4317,7 @@ msgstr "Föräldralös blockfil: \"%s\""
 
 #: src/ProjectFileIO.cpp
 msgid "Failed to rollback transaction during import"
-msgstr ""
+msgstr "Kunde inte rulla tillbaka transaktionen vid import"
 
 #: src/ProjectFileIO.cpp
 #, fuzzy
@@ -4303,7 +4326,7 @@ msgstr "Kunde inte ändra strömmens tillstånd till pausad."
 
 #: src/ProjectFileIO.cpp
 msgid "Unable to switch to fast journaling mode"
-msgstr ""
+msgstr "Kunde inte byta till snabbt journalläge"
 
 #: src/ProjectFileIO.cpp
 #, fuzzy
@@ -4318,10 +4341,14 @@ msgid ""
 "\n"
 "%s"
 msgstr ""
+"Kunde inte uppdatera projektfilen.\n"
+"Följande kommando misslyckades:\n"
+"\n"
+"%s"
 
 #: src/ProjectFileIO.cpp
 msgid "Destination project could not be detached"
-msgstr ""
+msgstr "Destinationsprojektet kunde inte stängas ner"
 
 #: src/ProjectFileIO.cpp
 #, fuzzy
@@ -4351,7 +4378,7 @@ msgstr "Projekt &sparas"
 #: src/ProjectFileIO.cpp
 #, c-format
 msgid "[Project %02i] Audacity \"%s\""
-msgstr ""
+msgstr "[Projekt %02i] Audacity \"%s\""
 
 #. i18n-hint: E.g this is recovered audio that had been lost.
 #: src/ProjectFileIO.cpp
