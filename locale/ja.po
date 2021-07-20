@@ -5,9 +5,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: audacity 3.0.3\n"
-"Report-Msgid-Bugs-To: audacity-translation@lists.sourceforge.net\n"
-"POT-Creation-Date: 2021-06-07 08:17-0400\n"
+"Project-Id-Version: audacity 3.0.4\n"
+"Report-Msgid-Bugs-To: emabrey@tenacityaudio.org\n"
+"POT-Creation-Date: 2021-07-20 03:55-0400\n"
 "PO-Revision-Date: 2021-06-16 02:35+0900\n"
 "Last-Translator: Phroneris <phroneris@gmail.com>\n"
 "Language-Team: Atsushi YOSHIDA, Phroneris\n"
@@ -21,6 +21,72 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SearchPath-0: .\n"
+
+#: libraries/lib-strings/FutureStrings.h
+msgctxt "update dialog"
+msgid "Update Audacity"
+msgstr "Audacity を更新"
+
+#: libraries/lib-strings/FutureStrings.h
+msgctxt "update dialog"
+msgid "&Skip"
+msgstr "スキップ(&S)"
+
+#: libraries/lib-strings/FutureStrings.h
+msgctxt "update dialog"
+msgid "&Install update"
+msgstr "更新をインストール(&I)"
+
+#: libraries/lib-strings/FutureStrings.h
+msgctxt "update dialog"
+msgid "Changelog"
+msgstr "更新履歴"
+
+#: libraries/lib-strings/FutureStrings.h
+msgctxt "update dialog"
+msgid "Read more on GitHub"
+msgstr "GitHub でもっと読む"
+
+#: libraries/lib-strings/FutureStrings.h
+msgctxt "update dialog"
+msgid "Error checking for update"
+msgstr "更新確認エラー"
+
+#: libraries/lib-strings/FutureStrings.h
+msgctxt "update dialog"
+msgid "Unable to connect to Audacity update server."
+msgstr "Audacity の更新サーバーに接続できません。"
+
+#: libraries/lib-strings/FutureStrings.h
+msgctxt "update dialog"
+msgid "Update data was corrupted."
+msgstr "更新データが破損しました。"
+
+#: libraries/lib-strings/FutureStrings.h
+msgctxt "update dialog"
+msgid "Error downloading update."
+msgstr "更新ダウンロードエラー。"
+
+#: libraries/lib-strings/FutureStrings.h
+msgctxt "update dialog"
+msgid "Can't open the Audacity download link."
+msgstr "Audacity のダウンロードリンクを開けません。"
+
+#. i18n-hint Substitution of version number for %s.
+#: libraries/lib-strings/FutureStrings.h
+#, c-format
+msgctxt "update dialog"
+msgid "Audacity %s is available!"
+msgstr "Audacity %s 始めました！"
+
+#. i18n-hint comment to be moved
+#. to one of them (one is enough)
+#. i18n-hint: modifier as in "Recording preferences", not progressive verb
+#: libraries/lib-strings/FutureStrings.h
+#, fuzzy
+msgctxt "preference"
+msgid "Recording"
+msgstr "録音"
 
 #: libraries/lib-strings/Internat.cpp
 msgid "Unable to determine"
@@ -56,143 +122,6 @@ msgstr ""
 #: libraries/lib-strings/Languages.cpp
 msgid "System"
 msgstr "システムの言語"
-
-#: libraries/lib-strings/UnusedStrings.h
-msgid "Problem Report for Audacity"
-msgstr "Audacity の障害を報告"
-
-#: libraries/lib-strings/UnusedStrings.h
-msgid "Click \"Send\" to submit the report to Audacity. This information is collected anonymously."
-msgstr "Audacity へ障害報告を提出するには、[送信] をクリックしてください。情報は匿名で収集されます。"
-
-#: libraries/lib-strings/UnusedStrings.h
-msgid "Problem details"
-msgstr "障害の詳細"
-
-#: libraries/lib-strings/UnusedStrings.h src/Tags.cpp src/prefs/MousePrefs.cpp
-msgid "Comments"
-msgstr "コメント"
-
-#: libraries/lib-strings/UnusedStrings.h
-msgctxt "crash reporter button"
-msgid "&Send"
-msgstr "送信(&S)"
-
-#: libraries/lib-strings/UnusedStrings.h
-msgctxt "crash reporter button"
-msgid "&Don't send"
-msgstr "送信しない(&D)"
-
-#. i18n-hint C++ programming exception
-#: libraries/lib-strings/UnusedStrings.h
-#, c-format
-msgid "Exception code 0x%x"
-msgstr "例外コード 0x%x"
-
-#. i18n-hint C++ programming exception
-#: libraries/lib-strings/UnusedStrings.h
-msgid "Unknown exception"
-msgstr "不明な例外 (Unknown exception)"
-
-#. i18n-hint C++ programming assertion
-#: libraries/lib-strings/UnusedStrings.h
-msgid "Unknown assertion"
-msgstr "不明なアサーション (Unknown assertion)"
-
-#: libraries/lib-strings/UnusedStrings.h
-msgid "Unknown error"
-msgstr "不明なエラー (Unknown error)"
-
-#: libraries/lib-strings/UnusedStrings.h
-msgid "Failed to send crash report"
-msgstr "クラッシュ報告の送信に失敗しました"
-
-#. i18n-hint Scheme refers to a color scheme for spectrogram colors
-#: libraries/lib-strings/UnusedStrings.h
-msgctxt "spectrum prefs"
-msgid "Sche&me"
-msgstr "配色(&M)"
-
-#. i18n-hint Choice of spectrogram colors
-#: libraries/lib-strings/UnusedStrings.h
-msgctxt "spectrum prefs"
-msgid "Color (default)"
-msgstr "色あり (デフォルト)"
-
-#. i18n-hint Choice of spectrogram colors
-#: libraries/lib-strings/UnusedStrings.h
-msgctxt "spectrum prefs"
-msgid "Color (classic)"
-msgstr "色あり (クラシック)"
-
-#. i18n-hint Choice of spectrogram colors
-#: libraries/lib-strings/UnusedStrings.h
-msgctxt "spectrum prefs"
-msgid "Grayscale"
-msgstr "グレースケール"
-
-#. i18n-hint Choice of spectrogram colors
-#: libraries/lib-strings/UnusedStrings.h
-msgctxt "spectrum prefs"
-msgid "Inverse grayscale"
-msgstr "反転グレースケール"
-
-#: libraries/lib-strings/UnusedStrings.h
-msgctxt "update dialog"
-msgid "Update Audacity"
-msgstr "Audacity を更新"
-
-#: libraries/lib-strings/UnusedStrings.h
-msgctxt "update dialog"
-msgid "&Skip"
-msgstr "スキップ(&S)"
-
-#: libraries/lib-strings/UnusedStrings.h
-msgctxt "update dialog"
-msgid "&Install update"
-msgstr "更新をインストール(&I)"
-
-#: libraries/lib-strings/UnusedStrings.h
-msgctxt "update dialog"
-msgid "Changelog"
-msgstr "更新履歴"
-
-#: libraries/lib-strings/UnusedStrings.h
-msgctxt "update dialog"
-msgid "Read more on GitHub"
-msgstr "GitHub でもっと読む"
-
-#: libraries/lib-strings/UnusedStrings.h
-msgctxt "update dialog"
-msgid "Error checking for update"
-msgstr "更新確認エラー"
-
-#: libraries/lib-strings/UnusedStrings.h
-msgctxt "update dialog"
-msgid "Unable to connect to Audacity update server."
-msgstr "Audacity の更新サーバーに接続できません。"
-
-#: libraries/lib-strings/UnusedStrings.h
-msgctxt "update dialog"
-msgid "Update data was corrupted."
-msgstr "更新データが破損しました。"
-
-#: libraries/lib-strings/UnusedStrings.h
-msgctxt "update dialog"
-msgid "Error downloading update."
-msgstr "更新ダウンロードエラー。"
-
-#: libraries/lib-strings/UnusedStrings.h
-msgctxt "update dialog"
-msgid "Can't open the Audacity download link."
-msgstr "Audacity のダウンロードリンクを開けません。"
-
-#. i18n-hint Substitution of version number for %s.
-#: libraries/lib-strings/UnusedStrings.h
-#, c-format
-msgctxt "update dialog"
-msgid "Audacity %s is available!"
-msgstr "Audacity %s 始めました！"
 
 #: modules/mod-null/ModNullCallback.cpp
 #, fuzzy
@@ -394,7 +323,7 @@ msgstr "無題"
 msgid "Nyquist Effect Workbench - "
 msgstr "Nyquist エフェクトワークベンチ - "
 
-#: modules/mod-nyq-bench/NyqBench.cpp src/PluginManager.cpp
+#: modules/mod-nyq-bench/NyqBench.cpp src/PluginRegistrationDialog.cpp
 #: src/prefs/ModulePrefs.cpp
 msgid "New"
 msgstr "新規"
@@ -563,101 +492,6 @@ msgstr "スクリプトの停止"
 msgid "No revision identifier was provided"
 msgstr "リビジョン識別子が提供されていません"
 
-#. i18n-hint: For "About Audacity..." credits, substituting a person's proper name
-#: src/AboutDialog.cpp
-#, c-format
-msgid "%s, system administration"
-msgstr "システム管理: %s"
-
-#. i18n-hint: For "About Audacity..." credits, substituting a person's proper name
-#: src/AboutDialog.cpp
-#, c-format
-msgid "%s, co-founder and developer"
-msgstr "共同創業、開発: %s"
-
-#. i18n-hint: For "About Audacity..." credits, substituting a person's proper name
-#: src/AboutDialog.cpp
-#, c-format
-msgid "%s, developer"
-msgstr "開発: %s"
-
-#. i18n-hint: For "About Audacity..." credits, substituting a person's proper name
-#: src/AboutDialog.cpp
-#, c-format
-msgid "%s, developer and support"
-msgstr "開発、サポート: %s"
-
-#. i18n-hint: For "About Audacity..." credits, substituting a person's proper name
-#: src/AboutDialog.cpp
-#, c-format
-msgid "%s, documentation and support"
-msgstr "ドキュメンテーション、サポート: %s"
-
-#. i18n-hint: For "About Audacity..." credits, substituting a person's proper name
-#: src/AboutDialog.cpp
-#, c-format
-msgid "%s, QA tester, documentation and support"
-msgstr "品質保証テスト、ドキュメンテーション、サポート: %s"
-
-#. i18n-hint: For "About Audacity..." credits, substituting a person's proper name
-#: src/AboutDialog.cpp
-#, c-format
-msgid "%s, documentation and support, French"
-msgstr "仏語ドキュメンテーション、仏語サポート: %s"
-
-#. i18n-hint: For "About Audacity..." credits, substituting a person's proper name
-#: src/AboutDialog.cpp
-#, c-format
-msgid "%s, quality assurance"
-msgstr "品質保証: %s"
-
-#. i18n-hint: For "About Audacity..." credits, substituting a person's proper name
-#: src/AboutDialog.cpp
-#, c-format
-msgid "%s, accessibility advisor"
-msgstr "アクセシビリティ・アドバイザー: %s"
-
-#. i18n-hint: For "About Audacity..." credits, substituting a person's proper name
-#: src/AboutDialog.cpp
-#, c-format
-msgid "%s, graphic artist"
-msgstr "グラフィックアーティスト: %s"
-
-#. i18n-hint: For "About Audacity..." credits, substituting a person's proper name
-#: src/AboutDialog.cpp
-#, c-format
-msgid "%s, composer"
-msgstr "コンポーザー: %s"
-
-#. i18n-hint: For "About Audacity..." credits, substituting a person's proper name
-#: src/AboutDialog.cpp
-#, c-format
-msgid "%s, tester"
-msgstr "テスター: %s"
-
-#. i18n-hint: For "About Audacity..." credits, substituting a person's proper name
-#: src/AboutDialog.cpp
-#, c-format
-msgid "%s, Nyquist plug-ins"
-msgstr "Nyquist プラグイン: %s"
-
-#. i18n-hint: For "About Audacity..." credits, substituting a person's proper name
-#: src/AboutDialog.cpp
-#, c-format
-msgid "%s, web developer"
-msgstr "Web 開発: %s"
-
-#. i18n-hint: For "About Audacity..." credits, substituting a person's proper name
-#: src/AboutDialog.cpp
-#, c-format
-msgid "%s, graphics"
-msgstr "グラフィック: %s"
-
-#: src/AboutDialog.cpp
-#, c-format
-msgid "%s (incorporating %s, %s, %s, %s and %s)"
-msgstr "%s (%s、%s、%s、%s、%s)"
-
 # ja: 独自アクセスキー
 #. i18n-hint: information about the program
 #: src/AboutDialog.cpp
@@ -670,162 +504,6 @@ msgstr "%s について"
 #: src/effects/nyquist/Nyquist.cpp src/widgets/MultiDialog.cpp
 msgid "OK"
 msgstr "OK"
-
-#. i18n-hint: First and third %s will be the program's name,
-#. second %s will be "volunteers", fourth "available"
-#: src/AboutDialog.cpp
-#, c-format
-msgid "%s is a free program written by a worldwide team of %s. %s is %s for Windows, Mac, and GNU/Linux (and other Unix-like systems)."
-msgstr "%s は世界中の%sチームによって開発された無料のプログラムです。%s は Windows、Mac、および GNU/Linux(その他 Unix 系システム含む) といった%sしています。"
-
-#. i18n-hint: substitutes into "a worldwide team of %s"
-#: src/AboutDialog.cpp
-msgid "volunteers"
-msgstr "ボランティア"
-
-#. i18n-hint: substitutes into "Audacity is %s"
-#: src/AboutDialog.cpp
-msgid "available"
-msgstr "様々な環境に対応"
-
-#. i18n-hint first and third %s will be "forum", second "wiki"
-#: src/AboutDialog.cpp
-#, c-format
-msgid "If you find a bug or have a suggestion for us, please write, in English, to our %s. For help, view the tips and tricks on our %s or visit our %s."
-msgstr "バグを発見した場合や、私たちへのご提案をお持ちの場合には、%sに（英語で！）書き込んでみてください。ヘルプが必要な場合は、%s でヒントや便利な使い方をご覧になるか、または %sまでお越しください。"
-
-#. i18n-hint substitutes into "write to our %s"
-#: src/AboutDialog.cpp
-msgctxt "dative"
-msgid "forum"
-msgstr "Audacity フォーラム"
-
-#. i18n-hint substitutes into "view the tips and tricks on our %s"
-#: src/AboutDialog.cpp
-msgid "wiki"
-msgstr "Audacity Wiki"
-
-#. i18n-hint substitutes into "visit our %s"
-#: src/AboutDialog.cpp
-msgctxt "accusative"
-msgid "forum"
-msgstr "Audacity フォーラム"
-
-#. i18n-hint: The translation of "translator_credits" will appear
-#. *  in the credits in the About Audacity window.  Use this to add
-#. *  your own name(s) to the credits.
-#. *
-#. *  For example:  "English translation by Dominic Mazzoni."
-#: src/AboutDialog.cpp
-msgid "translator_credits"
-msgstr "日本語訳:<br>Atsushi Yoshida (ayoshida.pub@gmail.com)<br>Phroneris (phroneris@gmail.com)"
-
-#: src/AboutDialog.cpp
-msgid "<h3>"
-msgstr ""
-
-#. i18n-hint: The program's name substitutes for %s
-#: src/AboutDialog.cpp
-#, c-format
-msgid "%s the free, open source, cross-platform software for recording and editing sounds."
-msgstr "%s は、録音と音声編集のために開発された<br>無料 &amp; オープンソース &amp; クロスプラットフォームなソフトウェアです。"
-
-#: src/AboutDialog.cpp
-msgid "Credits"
-msgstr "クレジット"
-
-#: src/AboutDialog.cpp
-msgid "DarkAudacity Customisation"
-msgstr "DarkAudacity カスタム"
-
-#. i18n-hint: The program's name substitutes for %s
-#: src/AboutDialog.cpp
-#, c-format
-msgid "%s Team Members"
-msgstr "%s チームメンバー"
-
-#: src/AboutDialog.cpp
-msgid "Emeritus:"
-msgstr "名誉メンバー:"
-
-#. i18n-hint: The program's name substitutes for %s
-#: src/AboutDialog.cpp
-#, c-format
-msgid "Distinguished %s Team members, not currently active"
-msgstr "現在はその席を退いた、功績ある %s チームメンバー達"
-
-#: src/AboutDialog.cpp
-msgid "Contributors"
-msgstr "支援者の方々"
-
-#: src/AboutDialog.cpp
-msgid "Website and Graphics"
-msgstr "ウェブサイトとグラフィック"
-
-#: src/AboutDialog.cpp
-msgid "Translators"
-msgstr "翻訳者"
-
-#: src/AboutDialog.cpp src/prefs/LibraryPrefs.cpp
-msgid "Libraries"
-msgstr "ライブラリ"
-
-#. i18n-hint: The program's name substitutes for %s
-#: src/AboutDialog.cpp
-#, c-format
-msgid "%s includes code from the following projects:"
-msgstr "%s は以下のプロジェクトのコードを含んでいます:"
-
-#: src/AboutDialog.cpp
-msgid "Special thanks:"
-msgstr "スペシャルサンクス:"
-
-#. i18n-hint: The program's name substitutes for %s
-#: src/AboutDialog.cpp
-#, c-format
-msgid "%s website: "
-msgstr "%s ウェブサイト: "
-
-# ja: 国際的な表記なので西暦の範囲は "-" のままにすべきかとも思ったが、（そもそも表示自体がもう無意味という話は別にして、）万国著作権条約が求める発行年は「最初の」ものだけなので後ろがどうなっていようと問題無いと判断した。
-#. i18n-hint Audacity's name substitutes for first and third %s,
-#. and a "copyright" symbol for the second
-#: src/AboutDialog.cpp
-#, c-format
-msgid "%s software is copyright %s 1999-2021 %s Team."
-msgstr "%s 著作権表示: %s 1999～2021 %s チーム"
-
-#. i18n-hint Audacity's name substitutes for %s
-#: src/AboutDialog.cpp
-#, c-format
-msgid "The name %s is a registered trademark."
-msgstr "%s の名称は登録商標です。"
-
-#: src/AboutDialog.cpp
-msgid "Build Information"
-msgstr "ビルド情報"
-
-# ja: 「無効」と見分けやすくするためにあえて文字数を増やす
-#: src/AboutDialog.cpp src/PluginManager.cpp src/prefs/ModulePrefs.cpp
-msgid "Enabled"
-msgstr "有効です"
-
-#: src/AboutDialog.cpp src/PluginManager.cpp src/export/ExportFFmpegDialogs.cpp
-#: src/prefs/ModulePrefs.cpp
-msgid "Disabled"
-msgstr "無効"
-
-#. i18n-hint: Information about when audacity was compiled follows
-#: src/AboutDialog.cpp
-msgid "The Build"
-msgstr "ビルド"
-
-#: src/AboutDialog.cpp
-msgid "Program build date:"
-msgstr "プログラムのビルド日:"
-
-#: src/AboutDialog.cpp
-msgid "Commit Id:"
-msgstr "コミット ID:"
 
 #: src/AboutDialog.cpp
 #, c-format
@@ -841,6 +519,34 @@ msgstr "リリースビルド (デバッグレベル %d)"
 #, c-format
 msgid "%s, 64 bits"
 msgstr "%s、64bit"
+
+#: src/AboutDialog.cpp
+msgid "Build Information"
+msgstr "ビルド情報"
+
+# ja: 「無効」と見分けやすくするためにあえて文字数を増やす
+#: src/AboutDialog.cpp src/PluginRegistrationDialog.cpp
+#: src/prefs/ModulePrefs.cpp
+msgid "Enabled"
+msgstr "有効です"
+
+#: src/AboutDialog.cpp src/PluginRegistrationDialog.cpp
+#: src/export/ExportFFmpegDialogs.cpp src/prefs/ModulePrefs.cpp
+msgid "Disabled"
+msgstr "無効"
+
+#. i18n-hint: Information about when audacity was compiled follows
+#: src/AboutDialog.cpp
+msgid "The Build"
+msgstr "ビルド"
+
+#: src/AboutDialog.cpp
+msgid "Program build date:"
+msgstr "プログラムのビルド日:"
+
+#: src/AboutDialog.cpp
+msgid "Commit Id:"
+msgstr "コミット ID:"
 
 #: src/AboutDialog.cpp
 msgid "Build type:"
@@ -859,34 +565,15 @@ msgstr "インストールプレフィックス:"
 msgid "Settings folder:"
 msgstr "設定フォルダー:"
 
-#. i18n-hint: Libraries that are essential to audacity
-#: src/AboutDialog.cpp
-msgid "Core Libraries"
-msgstr "コアライブラリ"
-
-#: src/AboutDialog.cpp
-msgid "Cross-platform GUI library"
-msgstr "クロスプラットフォームの GUI ライブラリ"
-
-#: src/AboutDialog.cpp
-msgid "Audio playback and recording"
-msgstr "音声再生と録音"
-
-#: src/AboutDialog.cpp
-msgid "Sample rate conversion"
-msgstr "サンプリング周波数変換"
-
 #: src/AboutDialog.cpp
 msgid "File Format Support"
 msgstr "サポートするファイル形式"
 
-#. i18n-hint: This is what the library (libmad) does - imports MP3 files
 #: src/AboutDialog.cpp
 msgid "MP3 Importing"
 msgstr "MP3 の取り込み"
 
-#. i18n-hint: Ogg is the container format. Vorbis is the compression codec.
-#. * Both are proper nouns and shouldn't be translated
+#. i18n-hint: Ogg is the container format. Vorbis is the compression codec. Both are proper nouns and shouldn't be translated
 #: src/AboutDialog.cpp
 msgid "Ogg Vorbis Import and Export"
 msgstr "Ogg Vorbis の取り込みと書き出し"
@@ -895,8 +582,7 @@ msgstr "Ogg Vorbis の取り込みと書き出し"
 msgid "ID3 tag support"
 msgstr "ID3 タグのサポート"
 
-#. i18n-hint: FLAC stands for Free Lossless Audio Codec, but is effectively
-#. * a proper noun and so shouldn't be translated
+#. i18n-hint: FLAC stands for Free Lossless Audio Codec, but is effectively a proper noun and so shouldn't be translated
 #: src/AboutDialog.cpp
 msgid "FLAC import and export"
 msgstr "FLAC の取り込みと書き出し"
@@ -922,10 +608,6 @@ msgid "Features"
 msgstr "機能"
 
 #: src/AboutDialog.cpp
-msgid "Dark Theme Extras"
-msgstr "ダークテーマ拡張"
-
-#: src/AboutDialog.cpp
 msgid "Plug-in support"
 msgstr "プラグインのサポート"
 
@@ -944,6 +626,198 @@ msgstr "急激なピッチとテンポの変化のサポート"
 #: src/AboutDialog.cpp
 msgid "GPL License"
 msgstr "GPL ライセンス"
+
+#. i18n-hint: For "About Tenacity..." credits, substituting a person's proper name
+#: src/AboutDialog.cpp
+#, c-format
+msgid "%s, system administration"
+msgstr "システム管理: %s"
+
+#. i18n-hint: For "About Tenacity..." credits, substituting a person's proper name
+#: src/AboutDialog.cpp
+#, c-format
+msgid "%s, co-founder and developer"
+msgstr "共同創業、開発: %s"
+
+#. i18n-hint: For "About Tenacity..." credits, substituting a person's proper name
+#: src/AboutDialog.cpp
+#, c-format
+msgid "%s, developer"
+msgstr "開発: %s"
+
+#. i18n-hint: For "About Tenacity..." credits, substituting a person's proper name
+#: src/AboutDialog.cpp
+#, c-format
+msgid "%s, developer and support"
+msgstr "開発、サポート: %s"
+
+#. i18n-hint: For "About Tenacity..." credits, substituting a person's proper name
+#: src/AboutDialog.cpp
+#, c-format
+msgid "%s, documentation and support"
+msgstr "ドキュメンテーション、サポート: %s"
+
+#. i18n-hint: For "About Tenacity..." credits, substituting a person's proper name
+#: src/AboutDialog.cpp
+#, c-format
+msgid "%s, QA tester, documentation and support"
+msgstr "品質保証テスト、ドキュメンテーション、サポート: %s"
+
+#. i18n-hint: For "About Tenacity..." credits, substituting a person's proper name
+#: src/AboutDialog.cpp
+#, c-format
+msgid "%s, documentation and support, French"
+msgstr "仏語ドキュメンテーション、仏語サポート: %s"
+
+#. i18n-hint: For "About Tenacity..." credits, substituting a person's proper name
+#: src/AboutDialog.cpp
+#, c-format
+msgid "%s, quality assurance"
+msgstr "品質保証: %s"
+
+#. i18n-hint: For "About Tenacity..." credits, substituting a person's proper name
+#: src/AboutDialog.cpp
+#, c-format
+msgid "%s, accessibility advisor"
+msgstr "アクセシビリティ・アドバイザー: %s"
+
+#. i18n-hint: For "About Tenacity..." credits, substituting a person's proper name
+#: src/AboutDialog.cpp
+#, c-format
+msgid "%s, graphic artist"
+msgstr "グラフィックアーティスト: %s"
+
+#. i18n-hint: For "About Tenacity..." credits, substituting a person's proper name
+#: src/AboutDialog.cpp
+#, c-format
+msgid "%s, composer"
+msgstr "コンポーザー: %s"
+
+#. i18n-hint: For "About Tenacity..." credits, substituting a person's proper name
+#: src/AboutDialog.cpp
+#, c-format
+msgid "%s, tester"
+msgstr "テスター: %s"
+
+#. i18n-hint: For "About Tenacity..." credits, substituting a person's proper name
+#: src/AboutDialog.cpp
+#, c-format
+msgid "%s, Nyquist plug-ins"
+msgstr "Nyquist プラグイン: %s"
+
+#. i18n-hint: For "About Tenacity..." credits, substituting a person's proper name
+#: src/AboutDialog.cpp
+#, c-format
+msgid "%s, web developer"
+msgstr "Web 開発: %s"
+
+#. i18n-hint: For "About Tenacity..." credits, substituting a person's proper name
+#: src/AboutDialog.cpp
+#, c-format
+msgid "%s, graphics"
+msgstr "グラフィック: %s"
+
+#. i18n-hint: For "About Tenacity..." credits, substituting a person's proper name
+#: src/AboutDialog.cpp
+#, fuzzy, c-format
+msgid "%s, lead Tenacity developer"
+msgstr "Web 開発: %s"
+
+#. i18n-hint: For "About Tenacity..." credits, substituting a person's proper name
+#: src/AboutDialog.cpp
+#, fuzzy, c-format
+msgid "%s, Tenacity developer"
+msgstr "Web 開発: %s"
+
+#: src/AboutDialog.cpp
+#, c-format
+msgid "%s (incorporating %s, %s, %s, %s and %s)"
+msgstr "%s (%s、%s、%s、%s、%s)"
+
+#: src/AboutDialog.cpp
+msgid "<h3>"
+msgstr ""
+
+#. i18n-hint: The program's name substitutes for %s
+#: src/AboutDialog.cpp
+#, c-format
+msgid "%s the free, open source, cross-platform software for recording and editing sounds."
+msgstr "%s は、録音と音声編集のために開発された<br>無料 &amp; オープンソース &amp; クロスプラットフォームなソフトウェアです。"
+
+#: src/AboutDialog.cpp
+msgid "Credits"
+msgstr "クレジット"
+
+#: src/AboutDialog.cpp
+#, fuzzy
+msgid "DarkTenacity Customisation"
+msgstr "DarkAudacity カスタム"
+
+#. i18n-hint: The program's name substitutes for %s
+#: src/AboutDialog.cpp
+#, c-format
+msgid "%s Team Members"
+msgstr "%s チームメンバー"
+
+#: src/AboutDialog.cpp src/prefs/LibraryPrefs.cpp
+msgid "Libraries"
+msgstr "ライブラリ"
+
+#. i18n-hint: The program's name substitutes for %s
+#: src/AboutDialog.cpp
+#, c-format
+msgid "%s includes code from the following projects:"
+msgstr "%s は以下のプロジェクトのコードを含んでいます:"
+
+#: src/AboutDialog.cpp
+msgid "Emeritus:"
+msgstr "名誉メンバー:"
+
+#: src/AboutDialog.cpp
+msgid "Contributors"
+msgstr "支援者の方々"
+
+#: src/AboutDialog.cpp
+msgid "Website and Graphics"
+msgstr "ウェブサイトとグラフィック"
+
+#. i18n-hint: The translation of "translator_credits" will appear
+#. *  in the credits in the About Audacity window.  Use this to add
+#. *  your own name(s) to the credits.
+#. *
+#. *  For example:  "English translation by Dominic Mazzoni."
+#.
+#: src/AboutDialog.cpp
+msgid "translator_credits"
+msgstr "日本語訳:<br>Atsushi Yoshida (ayoshida.pub@gmail.com)<br>Phroneris (phroneris@gmail.com)"
+
+#: src/AboutDialog.cpp
+msgid "Translators"
+msgstr "翻訳者"
+
+#: src/AboutDialog.cpp
+msgid "Special thanks:"
+msgstr "スペシャルサンクス:"
+
+#. i18n-hint: The program's name substitutes for %s
+#: src/AboutDialog.cpp
+#, c-format
+msgid "%s website: "
+msgstr "%s ウェブサイト: "
+
+# ja: 国際的な表記なので西暦の範囲は "-" のままにすべきかとも思ったが、（そもそも表示自体がもう無意味という話は別にして、）万国著作権条約が求める発行年は「最初の」ものだけなので後ろがどうなっていようと問題無いと判断した。
+#. i18n-hint Tenacity's name substitutes for first and third %s,
+#. and a "copyright" symbol for the second
+#: src/AboutDialog.cpp
+#, c-format
+msgid "%s software is copyright %s 1999-2021 %s Team."
+msgstr "%s 著作権表示: %s 1999～2021 %s チーム"
+
+#. i18n-hint Tenacity's name substitutes for %s
+#: src/AboutDialog.cpp
+#, c-format
+msgid "The name %s is a registered trademark."
+msgstr "%s の名称は登録商標です。"
 
 #: src/AdornedRulerPanel.cpp
 msgid "Timeline actions disabled during recording"
@@ -1060,14 +934,16 @@ msgstr ""
 "プロジェクトの最後より先の領域を\n"
 "ロックすることはできません。"
 
-#: src/AdornedRulerPanel.cpp src/AudioIO.cpp src/ProjectAudioManager.cpp
-#: src/TimerRecordDialog.cpp src/effects/Contrast.cpp src/effects/Effect.cpp
-#: src/effects/Generator.cpp src/effects/nyquist/Nyquist.cpp
-#: src/export/ExportFFmpeg.cpp src/export/ExportMP2.cpp
-#: src/menus/TrackMenus.cpp src/menus/TransportMenus.cpp
-#: src/prefs/DirectoriesPrefs.cpp src/prefs/KeyConfigPrefs.cpp
+#: src/AdornedRulerPanel.cpp src/AudioIO.cpp src/FileNames.cpp
+#: src/ProjectAudioManager.cpp src/TimerRecordDialog.cpp
+#: src/effects/Contrast.cpp src/effects/Effect.cpp src/effects/Generator.cpp
+#: src/effects/nyquist/Nyquist.cpp src/export/ExportFFmpeg.cpp
+#: src/export/ExportMP2.cpp src/menus/TrackMenus.cpp
+#: src/menus/TransportMenus.cpp src/prefs/DirectoriesPrefs.cpp
+#: src/prefs/KeyConfigPrefs.cpp
 #: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
 #: src/widgets/FileDialog/gtk/FileDialogPrivate.cpp
+#: src/widgets/UnwritableLocationErrorDialog.cpp
 #: plug-ins/eq-xml-to-txt-converter.ny
 msgid "Error"
 msgstr "エラー"
@@ -1117,7 +993,8 @@ msgid "Block size must be within 256 to 100000000\n"
 msgstr "ブロックサイズは 256～100000000 でなければなりません\n"
 
 #: src/AudacityApp.cpp
-msgid "Audacity is starting up..."
+#, fuzzy
+msgid "Tenacity is starting up..."
 msgstr "Audacity の起動中です..."
 
 #. i18n-hint: "New" is an action (verb) to create a NEW project
@@ -1134,8 +1011,9 @@ msgstr "開く(&O)..."
 msgid "Open &Recent..."
 msgstr "最近開いたファイル(&R)..."
 
-#: src/AudacityApp.cpp src/menus/HelpMenus.cpp
-msgid "&About Audacity..."
+#: src/AudacityApp.cpp
+#, fuzzy
+msgid "&About Tenacity..."
 msgstr "Audacity について(&A)..."
 
 #: src/AudacityApp.cpp
@@ -1687,7 +1565,8 @@ msgid "Select"
 msgstr "選択"
 
 #. i18n-hint: (noun).  It's the name of the project to recover.
-#: src/AutoRecoveryDialog.cpp src/PluginManager.cpp src/TrackInfo.cpp
+#: src/AutoRecoveryDialog.cpp src/PluginRegistrationDialog.cpp
+#: src/TrackInfo.cpp
 msgid "Name"
 msgstr "名前"
 
@@ -2272,18 +2151,6 @@ msgstr ""
 "この操作を適用する音声を最初に選択してください。\n"
 "(音声以外のトラックには利用できません)"
 
-#: src/CrashReport.cpp
-msgid "Audacity Support Data"
-msgstr "Audacity サポートデータ"
-
-#: src/CrashReport.cpp src/DBConnection.cpp src/ProjectFileIO.cpp
-msgid "This may take several seconds"
-msgstr "処理完了までしばらくお待ちください"
-
-#: src/CrashReport.cpp
-msgid "Report generated to:"
-msgstr "次の場所にレポートが作成されます:"
-
 #: src/DBConnection.cpp
 #, c-format
 msgid "(%d): %s"
@@ -2307,6 +2174,10 @@ msgstr "プロジェクトのチェックポイントを作成中"
 #, c-format
 msgid "Checkpointing %s"
 msgstr "「%s」のチェックポイントを作成中"
+
+#: src/DBConnection.cpp src/ProjectFileIO.cpp
+msgid "This may take several seconds"
+msgstr "処理完了までしばらくお待ちください"
 
 #: src/DBConnection.cpp
 #, c-format
@@ -2755,6 +2626,11 @@ msgstr "指定されたファイル名は Unicode 文字セットを使ってい
 msgid "Specify New Filename:"
 msgstr "新しいファイル名を指定してください:"
 
+#: src/FileNames.cpp
+#, fuzzy, c-format
+msgid "Directory %s does not have write permissions"
+msgstr "ディレクトリ %s はありません。作成しますか？"
+
 #: src/FreqWindow.cpp
 msgid "Frequency Analysis"
 msgstr "周波数解析"
@@ -2827,6 +2703,16 @@ msgstr "拡大"
 #: src/widgets/NumericTextCtrl.cpp
 msgid "Hz"
 msgstr "Hz"
+
+#: src/FreqWindow.cpp
+#, fuzzy
+msgid "Scroll Horizontal"
+msgstr "水平"
+
+#: src/FreqWindow.cpp
+#, fuzzy
+msgid "Zoom Horizontal"
+msgstr "水平"
 
 #: src/FreqWindow.cpp
 msgid "Cursor:"
@@ -3002,10 +2888,6 @@ msgid "<br><br>The version of Audacity you are using is a <b>Beta test version</
 msgstr "<br><br>あなたが今使っているこの Audacity は<b>βテスト版</b>です。"
 
 #: src/HelpText.cpp
-msgid "Get the Official Released Version of Audacity"
-msgstr "Audacity の公式リリース版をご利用ください"
-
-#: src/HelpText.cpp
 msgid "We strongly recommend that you use our latest stable released version, which has full documentation and support.<br><br>"
 msgstr "完全なドキュメンテーションとサポートを有する最新の安定リリース版のご利用を<br>強く推奨します。<br><br>"
 
@@ -3054,10 +2936,6 @@ msgstr "マニュアルがインストールされていないようです。<br
 #: src/HelpText.cpp
 msgid "The Manual does not appear to be installed. Please [[*URL*|view the Manual online]] or [[https://manual.audacityteam.org/man/unzipping_the_manual.html| download the Manual]].<br><br>To always view the Manual online, change \"Location of Manual\" in Interface Preferences to \"From Internet\"."
 msgstr "マニュアルがインストールされていないようです。<br>[[*URL*|オンライン]]でご覧になるか、[[https://manual.audacityteam.org/man/unzipping_the_manual.html|マニュアルをダウンロード]]してください。<br><br>マニュアルを常にオンラインで閲覧するには、<br>インターフェイス設定の「マニュアルの場所」を<br>「インターネットから」に変更してください。"
-
-#: src/HelpText.cpp
-msgid "Check Online"
-msgstr "オンラインで確認"
 
 #: src/HistoryWindow.cpp
 msgid "History"
@@ -3589,114 +3467,6 @@ msgid "A♯/B♭"
 msgstr "A♯/B♭"
 
 #: src/PluginManager.cpp
-msgid "Manage Plug-ins"
-msgstr "プラグインの管理"
-
-#: src/PluginManager.cpp
-msgid "Select effects, click the Enable or Disable button, then click OK."
-msgstr "エフェクトを選んで [有効化] または [無効化] をクリックし、[OK] をクリックしてください。"
-
-#. i18n-hint: This is before radio buttons selecting which effects to show
-#: src/PluginManager.cpp
-msgid "Show:"
-msgstr "表示:"
-
-#. i18n-hint: Radio button to show all effects
-#: src/PluginManager.cpp
-msgid "Show all"
-msgstr "すべて表示"
-
-#. i18n-hint: Radio button to show all effects
-#: src/PluginManager.cpp src/menus/SelectMenus.cpp
-msgid "&All"
-msgstr "すべて(&A)"
-
-#. i18n-hint: Radio button to show just the currently disabled effects
-#: src/PluginManager.cpp
-msgid "Show disabled"
-msgstr "無効のものを表示"
-
-#. i18n-hint: Radio button to show just the currently disabled effects
-#: src/PluginManager.cpp
-msgid "D&isabled"
-msgstr "無効(&I)"
-
-#. i18n-hint: Radio button to show just the currently enabled effects
-#: src/PluginManager.cpp
-msgid "Show enabled"
-msgstr "有効のものを表示"
-
-#. i18n-hint: Radio button to show just the currently enabled effects
-#: src/PluginManager.cpp
-msgid "E&nabled"
-msgstr "有効(&N)"
-
-#. i18n-hint: Radio button to show just the newly discovered effects
-#: src/PluginManager.cpp
-msgid "Show new"
-msgstr "新規のものを表示"
-
-#. i18n-hint: Radio button to show just the newly discovered effects
-#: src/PluginManager.cpp
-msgid "Ne&w"
-msgstr "新規(&W)"
-
-#: src/PluginManager.cpp
-msgid "State"
-msgstr "状態"
-
-#: src/PluginManager.cpp
-msgid "Path"
-msgstr "パス"
-
-#: src/PluginManager.cpp
-msgid "&Select All"
-msgstr "すべて選択(&S)"
-
-#: src/PluginManager.cpp
-msgid "C&lear All"
-msgstr "すべてクリア(&L)"
-
-#: src/PluginManager.cpp src/effects/EffectUI.cpp src/prefs/RecordingPrefs.cpp
-msgid "&Enable"
-msgstr "有効化(&E)"
-
-#: src/PluginManager.cpp
-msgid "&Disable"
-msgstr "無効化(&D)"
-
-#: src/PluginManager.cpp
-#, c-format
-msgid ""
-"Enabling effects or commands:\n"
-"\n"
-"%s"
-msgstr ""
-"エフェクトやコマンドの有効化:\n"
-"\n"
-"%s"
-
-#: src/PluginManager.cpp
-#, c-format
-msgid ""
-"Enabling effect or command:\n"
-"\n"
-"%s"
-msgstr ""
-"エフェクトやコマンドの有効化:\n"
-"\n"
-"%s"
-
-#: src/PluginManager.cpp
-#, c-format
-msgid ""
-"Effect or Command at %s failed to register:\n"
-"%s"
-msgstr ""
-"%s のエフェクトまたはコマンドを登録できませんでした:\n"
-"%s"
-
-#: src/PluginManager.cpp
 #, c-format
 msgid "Overwrite the plug-in file %s?"
 msgstr "プラグインファイル %s を上書きしますか？"
@@ -3735,6 +3505,115 @@ msgstr "新規プラグインを有効化"
 #: src/PluginManager.h
 msgid "Nyquist Prompt"
 msgstr "Nyquist プロンプト(&Q)"
+
+#: src/PluginRegistrationDialog.cpp
+msgid "Manage Plug-ins"
+msgstr "プラグインの管理"
+
+#: src/PluginRegistrationDialog.cpp
+msgid "Select effects, click the Enable or Disable button, then click OK."
+msgstr "エフェクトを選んで [有効化] または [無効化] をクリックし、[OK] をクリックしてください。"
+
+#. i18n-hint: This is before radio buttons selecting which effects to show
+#: src/PluginRegistrationDialog.cpp
+msgid "Show:"
+msgstr "表示:"
+
+#. i18n-hint: Radio button to show all effects
+#: src/PluginRegistrationDialog.cpp
+msgid "Show all"
+msgstr "すべて表示"
+
+#. i18n-hint: Radio button to show all effects
+#: src/PluginRegistrationDialog.cpp src/menus/SelectMenus.cpp
+msgid "&All"
+msgstr "すべて(&A)"
+
+#. i18n-hint: Radio button to show just the currently disabled effects
+#: src/PluginRegistrationDialog.cpp
+msgid "Show disabled"
+msgstr "無効のものを表示"
+
+#. i18n-hint: Radio button to show just the currently disabled effects
+#: src/PluginRegistrationDialog.cpp
+msgid "D&isabled"
+msgstr "無効(&I)"
+
+#. i18n-hint: Radio button to show just the currently enabled effects
+#: src/PluginRegistrationDialog.cpp
+msgid "Show enabled"
+msgstr "有効のものを表示"
+
+#. i18n-hint: Radio button to show just the currently enabled effects
+#: src/PluginRegistrationDialog.cpp
+msgid "E&nabled"
+msgstr "有効(&N)"
+
+#. i18n-hint: Radio button to show just the newly discovered effects
+#: src/PluginRegistrationDialog.cpp
+msgid "Show new"
+msgstr "新規のものを表示"
+
+#. i18n-hint: Radio button to show just the newly discovered effects
+#: src/PluginRegistrationDialog.cpp
+msgid "Ne&w"
+msgstr "新規(&W)"
+
+#: src/PluginRegistrationDialog.cpp
+msgid "State"
+msgstr "状態"
+
+#: src/PluginRegistrationDialog.cpp
+msgid "Path"
+msgstr "パス"
+
+#: src/PluginRegistrationDialog.cpp
+msgid "&Select All"
+msgstr "すべて選択(&S)"
+
+#: src/PluginRegistrationDialog.cpp
+msgid "C&lear All"
+msgstr "すべてクリア(&L)"
+
+#: src/PluginRegistrationDialog.cpp src/effects/EffectUI.cpp
+#: src/prefs/RecordingPrefs.cpp
+msgid "&Enable"
+msgstr "有効化(&E)"
+
+#: src/PluginRegistrationDialog.cpp
+msgid "&Disable"
+msgstr "無効化(&D)"
+
+#: src/PluginRegistrationDialog.cpp
+#, c-format
+msgid ""
+"Enabling effects or commands:\n"
+"\n"
+"%s"
+msgstr ""
+"エフェクトやコマンドの有効化:\n"
+"\n"
+"%s"
+
+#: src/PluginRegistrationDialog.cpp
+#, c-format
+msgid ""
+"Enabling effect or command:\n"
+"\n"
+"%s"
+msgstr ""
+"エフェクトやコマンドの有効化:\n"
+"\n"
+"%s"
+
+#: src/PluginRegistrationDialog.cpp
+#, c-format
+msgid ""
+"Effect or Command at %s failed to register:\n"
+"%s"
+msgstr ""
+"%s のエフェクトまたはコマンドを登録できませんでした:\n"
+"%s"
 
 #: src/Printing.cpp
 msgid "There was a problem printing."
@@ -4504,14 +4383,6 @@ msgstr "プロジェクトオープンエラー"
 
 #: src/ProjectFileManager.cpp
 msgid ""
-"Project resides on FAT formatted drive.\n"
-"Copy it to another drive to open it."
-msgstr ""
-"プロジェクトが FAT フォーマットのドライブに置かれています。\n"
-"プロジェクトを開くには、他のドライブにコピーしてください。"
-
-#: src/ProjectFileManager.cpp
-msgid ""
 "You are trying to open an automatically created backup file.\n"
 "Doing this may result in severe data loss.\n"
 "\n"
@@ -4546,6 +4417,14 @@ msgstr ""
 #: src/ProjectFileManager.cpp
 msgid "Error Opening File or Project"
 msgstr "ファイルまたはプロジェクトのオープンエラー"
+
+#: src/ProjectFileManager.cpp
+msgid ""
+"Project resides on FAT formatted drive.\n"
+"Copy it to another drive to open it."
+msgstr ""
+"プロジェクトが FAT フォーマットのドライブに置かれています。\n"
+"プロジェクトを開くには、他のドライブにコピーしてください。"
 
 #: src/ProjectFileManager.cpp
 msgid "Project was recovered"
@@ -5044,6 +4923,10 @@ msgstr "年"
 #: src/Tags.cpp
 msgid "Genre"
 msgstr "ジャンル"
+
+#: src/Tags.cpp src/prefs/MousePrefs.cpp
+msgid "Comments"
+msgstr "コメント"
 
 #: src/Tags.cpp
 msgid "Use arrow keys (or ENTER key after editing) to navigate fields."
@@ -5902,7 +5785,7 @@ msgstr "ドラッグ"
 msgid "Panel"
 msgstr "パネル"
 
-#: src/commands/DragCommand.cpp
+#: src/commands/DragCommand.cpp src/prefs/ApplicationPrefs.cpp
 msgid "Application"
 msgstr "アプリケーション"
 
@@ -6565,9 +6448,11 @@ msgstr "スペクトル環境設定を使用"
 msgid "Spectral Select"
 msgstr "スペクトル選択"
 
-#: src/commands/SetTrackInfoCommand.cpp
-msgid "Gray Scale"
-msgstr "グレースケール"
+#. i18n-hint Scheme refers to a color scheme for spectrogram colors
+#: src/commands/SetTrackInfoCommand.cpp src/prefs/SpectrumPrefs.cpp
+msgctxt "spectrum prefs"
+msgid "Sche&me"
+msgstr "配色(&M)"
 
 #: src/commands/SetTrackInfoCommand.cpp
 msgid "Set Track"
@@ -13442,10 +13327,6 @@ msgid "MIDI Device Info"
 msgstr "MIDI デバイス情報"
 
 #: src/menus/HelpMenus.cpp
-msgid "Menu Tree"
-msgstr "メニューツリー"
-
-#: src/menus/HelpMenus.cpp
 msgid "&Quick Fix..."
 msgstr "お手軽解決(&Q)..."
 
@@ -13482,17 +13363,8 @@ msgid "Show &Log..."
 msgstr "ログの表示(&L)..."
 
 #: src/menus/HelpMenus.cpp
-msgid "&Generate Support Data..."
-msgstr "サポートデータの生成(&G)..."
-
-# ja: 独自アクセスキー
-#: src/menus/HelpMenus.cpp
-msgid "Menu Tree..."
-msgstr "メニューツリー(&E)..."
-
-#: src/menus/HelpMenus.cpp
-msgid "&Check for Updates..."
-msgstr "更新の確認(&C)..."
+msgid "&About Audacity..."
+msgstr "Audacity について(&A)..."
 
 #: src/menus/LabelMenus.cpp src/toolbars/TranscriptionToolBar.cpp
 #: src/tracks/labeltrack/ui/LabelTrackView.cpp
@@ -14216,6 +14088,11 @@ msgstr "ツールバー(&T)"
 
 #. i18n-hint: (verb)
 #: src/menus/ToolbarMenus.cpp
+#, fuzzy
+msgid "Edit &Mode (on/off)"
+msgstr "拡張メニュー (オン/オフ) (&E)"
+
+#: src/menus/ToolbarMenus.cpp
 msgid "Reset Toolb&ars"
 msgstr "ツールバーをリセット(&A)"
 
@@ -14660,13 +14537,15 @@ msgid "Move Focused Track to &Bottom"
 msgstr "フォーカスしたトラックを最下段へ移動(&B)"
 
 #. i18n-hint: These are strings for the status bar, and indicate whether Audacity
-#. is playing or recording or stopped, and whether it is paused.
+#. is playing or recording or stopped, and whether it is paused;
+#. progressive verb form
 #: src/menus/TransportMenus.cpp src/toolbars/ControlToolBar.cpp
 msgid "Playing"
 msgstr "再生中"
 
 #. i18n-hint: These are strings for the status bar, and indicate whether Audacity
-#. is playing or recording or stopped, and whether it is paused.
+#. is playing or recording or stopped, and whether it is paused;
+#. progressive verb form
 #: src/menus/TransportMenus.cpp src/prefs/DevicePrefs.cpp
 #: src/prefs/MidiIOPrefs.cpp src/prefs/RecordingPrefs.cpp
 #: src/prefs/RecordingPrefs.h src/toolbars/ControlToolBar.cpp
@@ -15034,6 +14913,21 @@ msgstr "波形を復号中"
 msgid "%s %2.0f%% complete. Click to change task focal point."
 msgstr "%s %2.0f%% 完了。処理ポイントを変更するにはクリック。"
 
+#: src/prefs/ApplicationPrefs.cpp
+#, fuzzy
+msgid "Preferences for Application"
+msgstr "品質の環境設定"
+
+#: src/prefs/ApplicationPrefs.cpp
+#, fuzzy
+msgid "Update Audacity"
+msgstr "Audacity を更新"
+
+#: src/prefs/ApplicationPrefs.cpp
+#, fuzzy
+msgid "&Check for Updates"
+msgstr "更新の確認(&C)..."
+
 #: src/prefs/BatchPrefs.cpp src/prefs/BatchPrefs.h
 msgid "Batch"
 msgstr "自動実行"
@@ -15125,6 +15019,7 @@ msgstr "2 (ステレオ)"
 
 #. i18n-hint:  Directories, also called directories, in computer file systems
 #: src/prefs/DirectoriesPrefs.cpp src/prefs/DirectoriesPrefs.h
+#: src/widgets/UnwritableLocationErrorDialog.cpp
 msgid "Directories"
 msgstr "ディレクトリ"
 
@@ -16376,6 +16271,30 @@ msgstr "ERB"
 msgid "Period"
 msgstr "周期"
 
+#. i18n-hint: New color scheme for spectrograms
+#: src/prefs/SpectrogramSettings.cpp
+msgctxt "spectrum prefs"
+msgid "Color (default)"
+msgstr "色あり (デフォルト)"
+
+#. i18n-hint: Classic color scheme(from theme) for spectrograms
+#: src/prefs/SpectrogramSettings.cpp
+msgctxt "spectrum prefs"
+msgid "Color (classic)"
+msgstr "色あり (クラシック)"
+
+#. i18n-hint: Grayscale color scheme for spectrograms
+#: src/prefs/SpectrogramSettings.cpp
+msgctxt "spectrum prefs"
+msgid "Grayscale"
+msgstr "グレースケール"
+
+#. i18n-hint: Inverse grayscale color scheme for spectrograms
+#: src/prefs/SpectrogramSettings.cpp
+msgctxt "spectrum prefs"
+msgid "Inverse grayscale"
+msgstr "反転グレースケール"
+
 #: src/prefs/SpectrogramSettings.cpp
 msgid "Frequencies"
 msgstr "周波数"
@@ -16458,10 +16377,6 @@ msgstr "レンジ (dB) (&R):"
 #: src/prefs/SpectrumPrefs.cpp
 msgid "High &boost (dB/dec):"
 msgstr "高域ブースト (dB/dec) (&B):"
-
-#: src/prefs/SpectrumPrefs.cpp
-msgid "Gra&yscale"
-msgstr "グレースケール(&Y)"
 
 #: src/prefs/SpectrumPrefs.cpp
 msgid "Algorithm"
@@ -16895,7 +16810,8 @@ msgid "Waveform dB &range:"
 msgstr "波形 dB 表示範囲(&R):"
 
 #. i18n-hint: These are strings for the status bar, and indicate whether Audacity
-#. is playing or recording or stopped, and whether it is paused.
+#. is playing or recording or stopped, and whether it is paused;
+#. progressive verb form
 #: src/toolbars/ControlToolBar.cpp
 msgid "Stopped"
 msgstr "停止"
@@ -17918,6 +17834,12 @@ msgstr "範囲(&R)..."
 msgid "Logarithmic &Interpolation"
 msgstr "対数補間(&I)"
 
+#. i18n-hint Appears on hovering mouse over clip affordance
+#: src/tracks/ui/AffordanceHandle.cpp
+#, fuzzy
+msgid "Click and drag to move a clip in time, or click to select"
+msgstr "クリック＆ドラッグでトラックを時間移動"
+
 #: src/tracks/ui/CommonTrackControls.cpp
 msgid "&Name..."
 msgstr "名前(&N)..."
@@ -18727,6 +18649,31 @@ msgstr "本当に閉じますか？"
 #: src/widgets/ProgressDialog.cpp
 msgid "Confirm Close"
 msgstr "閉じる確認"
+
+#. i18n-hint: %s is replaced with a directory path.
+#: src/widgets/UnwritableLocationErrorDialog.cpp
+#, fuzzy, c-format
+msgid "Unable to write files to directory: %s."
+msgstr "「%s」からプリセットファイルを読み込めません"
+
+#. i18n-hint: This message describes the error in the Error dialog.
+#: src/widgets/UnwritableLocationErrorDialog.cpp
+msgid "Please check that the directory exists, has the necessary permissions, and the drive isn't full."
+msgstr ""
+
+#. i18n-hint: %s is replaced with 'Preferences > Directories'.
+#: src/widgets/UnwritableLocationErrorDialog.cpp
+#, fuzzy, c-format
+msgid "You can change the directory in %s."
+msgstr ""
+"ディレクトリを作成できませんでした:\n"
+"  %s"
+
+#. i18n-hint: Hyperlink title that opens Preferences dialog on Directories page.
+#: src/widgets/UnwritableLocationErrorDialog.cpp
+#, fuzzy
+msgid "Preferences > Directories"
+msgstr "ディレクトリの環境設定"
 
 #: src/widgets/Warning.cpp
 msgid "Don't show this warning again"
@@ -20639,6 +20586,107 @@ msgstr "くし歯の周波数 (Hz)"
 #, lisp-format
 msgid "Error.~%Stereo track required."
 msgstr "エラー。~%ステレオトラックが必要です。"
+
+#~ msgid "Problem Report for Audacity"
+#~ msgstr "Audacity の障害を報告"
+
+#~ msgid "Click \"Send\" to submit the report to Audacity. This information is collected anonymously."
+#~ msgstr "Audacity へ障害報告を提出するには、[送信] をクリックしてください。情報は匿名で収集されます。"
+
+#~ msgid "Problem details"
+#~ msgstr "障害の詳細"
+
+#~ msgctxt "crash reporter button"
+#~ msgid "&Send"
+#~ msgstr "送信(&S)"
+
+#~ msgctxt "crash reporter button"
+#~ msgid "&Don't send"
+#~ msgstr "送信しない(&D)"
+
+#~ msgid "Exception code 0x%x"
+#~ msgstr "例外コード 0x%x"
+
+#~ msgid "Unknown exception"
+#~ msgstr "不明な例外 (Unknown exception)"
+
+#~ msgid "Unknown assertion"
+#~ msgstr "不明なアサーション (Unknown assertion)"
+
+#~ msgid "Unknown error"
+#~ msgstr "不明なエラー (Unknown error)"
+
+#~ msgid "Failed to send crash report"
+#~ msgstr "クラッシュ報告の送信に失敗しました"
+
+#~ msgid "%s is a free program written by a worldwide team of %s. %s is %s for Windows, Mac, and GNU/Linux (and other Unix-like systems)."
+#~ msgstr "%s は世界中の%sチームによって開発された無料のプログラムです。%s は Windows、Mac、および GNU/Linux(その他 Unix 系システム含む) といった%sしています。"
+
+#~ msgid "volunteers"
+#~ msgstr "ボランティア"
+
+#~ msgid "available"
+#~ msgstr "様々な環境に対応"
+
+#~ msgid "If you find a bug or have a suggestion for us, please write, in English, to our %s. For help, view the tips and tricks on our %s or visit our %s."
+#~ msgstr "バグを発見した場合や、私たちへのご提案をお持ちの場合には、%sに（英語で！）書き込んでみてください。ヘルプが必要な場合は、%s でヒントや便利な使い方をご覧になるか、または %sまでお越しください。"
+
+#~ msgctxt "dative"
+#~ msgid "forum"
+#~ msgstr "Audacity フォーラム"
+
+#~ msgid "wiki"
+#~ msgstr "Audacity Wiki"
+
+#~ msgctxt "accusative"
+#~ msgid "forum"
+#~ msgstr "Audacity フォーラム"
+
+#~ msgid "Distinguished %s Team members, not currently active"
+#~ msgstr "現在はその席を退いた、功績ある %s チームメンバー達"
+
+#~ msgid "Core Libraries"
+#~ msgstr "コアライブラリ"
+
+#~ msgid "Cross-platform GUI library"
+#~ msgstr "クロスプラットフォームの GUI ライブラリ"
+
+#~ msgid "Audio playback and recording"
+#~ msgstr "音声再生と録音"
+
+#~ msgid "Sample rate conversion"
+#~ msgstr "サンプリング周波数変換"
+
+#~ msgid "Dark Theme Extras"
+#~ msgstr "ダークテーマ拡張"
+
+#~ msgid "Audacity Support Data"
+#~ msgstr "Audacity サポートデータ"
+
+#~ msgid "Report generated to:"
+#~ msgstr "次の場所にレポートが作成されます:"
+
+#~ msgid "Get the Official Released Version of Audacity"
+#~ msgstr "Audacity の公式リリース版をご利用ください"
+
+#~ msgid "Check Online"
+#~ msgstr "オンラインで確認"
+
+#~ msgid "Gray Scale"
+#~ msgstr "グレースケール"
+
+#~ msgid "Menu Tree"
+#~ msgstr "メニューツリー"
+
+#~ msgid "&Generate Support Data..."
+#~ msgstr "サポートデータの生成(&G)..."
+
+# ja: 独自アクセスキー
+#~ msgid "Menu Tree..."
+#~ msgstr "メニューツリー(&E)..."
+
+#~ msgid "Gra&yscale"
+#~ msgstr "グレースケール(&Y)"
 
 #~ msgid "Fast"
 #~ msgstr "高速"

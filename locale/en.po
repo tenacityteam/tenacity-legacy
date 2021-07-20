@@ -6,17 +6,83 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Tenacity 3.0.4\n"
-"Report-Msgid-Bugs-To: emilymabrey93@gmail.com\n"
-"POT-Creation-Date: 2021-06-12 20:33-0400\n"
+"Project-Id-Version: audacity 3.0.4\n"
+"Report-Msgid-Bugs-To: emabrey@tenacityaudio.org\n"
+"POT-Creation-Date: 2021-07-20 03:55-0400\n"
 "PO-Revision-Date: 2021-07-15 12:36+EST\n"
-"Last-Translator: Emily Mabrey <emilymabrey93@gmail.com>\n"
+"Last-Translator: Emily Mabrey <emabrey@tenacityaudio.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: libraries/lib-strings/FutureStrings.h
+msgctxt "update dialog"
+msgid "Update Audacity"
+msgstr "Update Tenacity"
+
+#: libraries/lib-strings/FutureStrings.h
+msgctxt "update dialog"
+msgid "&Skip"
+msgstr "&Skip"
+
+#: libraries/lib-strings/FutureStrings.h
+msgctxt "update dialog"
+msgid "&Install update"
+msgstr "&Install update"
+
+#: libraries/lib-strings/FutureStrings.h
+msgctxt "update dialog"
+msgid "Changelog"
+msgstr "Changelog"
+
+#: libraries/lib-strings/FutureStrings.h
+msgctxt "update dialog"
+msgid "Read more on GitHub"
+msgstr "Read more on GitHub"
+
+#: libraries/lib-strings/FutureStrings.h
+msgctxt "update dialog"
+msgid "Error checking for update"
+msgstr "Error checking for update"
+
+#: libraries/lib-strings/FutureStrings.h
+msgctxt "update dialog"
+msgid "Unable to connect to Audacity update server."
+msgstr "Unable to connect to Tenacity update server."
+
+#: libraries/lib-strings/FutureStrings.h
+msgctxt "update dialog"
+msgid "Update data was corrupted."
+msgstr "Update data was corrupted."
+
+#: libraries/lib-strings/FutureStrings.h
+msgctxt "update dialog"
+msgid "Error downloading update."
+msgstr "Error downloading update."
+
+#: libraries/lib-strings/FutureStrings.h
+msgctxt "update dialog"
+msgid "Can't open the Audacity download link."
+msgstr "Can't open the Tenacity download link."
+
+#. i18n-hint Substitution of version number for %s.
+#: libraries/lib-strings/FutureStrings.h
+#, c-format
+msgctxt "update dialog"
+msgid "Audacity %s is available!"
+msgstr "Tenacity %s is available!"
+
+#. i18n-hint comment to be moved
+#. to one of them (one is enough)
+#. i18n-hint: modifier as in "Recording preferences", not progressive verb
+#: libraries/lib-strings/FutureStrings.h
+#, fuzzy
+msgctxt "preference"
+msgid "Recording"
+msgstr "Record"
 
 #: libraries/lib-strings/Internat.cpp
 msgid "Unable to determine"
@@ -52,143 +118,6 @@ msgstr "Simplified"
 #: libraries/lib-strings/Languages.cpp
 msgid "System"
 msgstr "System"
-
-#: libraries/lib-strings/UnusedStrings.h
-msgid "Problem Report for Audacity"
-msgstr "Problem Report for Tenacity"
-
-#: libraries/lib-strings/UnusedStrings.h
-msgid "Click \"Send\" to submit the report to Audacity. This information is collected anonymously."
-msgstr "Click \"Send\" to submit the report to Tenacity. This information is collected anonymously."
-
-#: libraries/lib-strings/UnusedStrings.h
-msgid "Problem details"
-msgstr "Problem details"
-
-#: libraries/lib-strings/UnusedStrings.h src/Tags.cpp src/prefs/MousePrefs.cpp
-msgid "Comments"
-msgstr "Comments"
-
-#: libraries/lib-strings/UnusedStrings.h
-msgctxt "crash reporter button"
-msgid "&Send"
-msgstr "&Send"
-
-#: libraries/lib-strings/UnusedStrings.h
-msgctxt "crash reporter button"
-msgid "&Don't send"
-msgstr "&Don't send"
-
-#. i18n-hint C++ programming exception
-#: libraries/lib-strings/UnusedStrings.h
-#, c-format
-msgid "Exception code 0x%x"
-msgstr "Exception code 0x%x"
-
-#. i18n-hint C++ programming exception
-#: libraries/lib-strings/UnusedStrings.h
-msgid "Unknown exception"
-msgstr "Unknown exception"
-
-#. i18n-hint C++ programming assertion
-#: libraries/lib-strings/UnusedStrings.h
-msgid "Unknown assertion"
-msgstr "Unknown assertion"
-
-#: libraries/lib-strings/UnusedStrings.h
-msgid "Unknown error"
-msgstr "Unknown error"
-
-#: libraries/lib-strings/UnusedStrings.h
-msgid "Failed to send crash report"
-msgstr "Failed to send crash report"
-
-#. i18n-hint Scheme refers to a color scheme for spectrogram colors
-#: libraries/lib-strings/UnusedStrings.h
-msgctxt "spectrum prefs"
-msgid "Sche&me"
-msgstr "Sche&me"
-
-#. i18n-hint Choice of spectrogram colors
-#: libraries/lib-strings/UnusedStrings.h
-msgctxt "spectrum prefs"
-msgid "Color (default)"
-msgstr "Color (default)"
-
-#. i18n-hint Choice of spectrogram colors
-#: libraries/lib-strings/UnusedStrings.h
-msgctxt "spectrum prefs"
-msgid "Color (classic)"
-msgstr "Color (classic)"
-
-#. i18n-hint Choice of spectrogram colors
-#: libraries/lib-strings/UnusedStrings.h
-msgctxt "spectrum prefs"
-msgid "Grayscale"
-msgstr "Grayscale"
-
-#. i18n-hint Choice of spectrogram colors
-#: libraries/lib-strings/UnusedStrings.h
-msgctxt "spectrum prefs"
-msgid "Inverse grayscale"
-msgstr "Inverse grayscale"
-
-#: libraries/lib-strings/UnusedStrings.h
-msgctxt "update dialog"
-msgid "Update Audacity"
-msgstr "Update Tenacity"
-
-#: libraries/lib-strings/UnusedStrings.h
-msgctxt "update dialog"
-msgid "&Skip"
-msgstr "&Skip"
-
-#: libraries/lib-strings/UnusedStrings.h
-msgctxt "update dialog"
-msgid "&Install update"
-msgstr "&Install update"
-
-#: libraries/lib-strings/UnusedStrings.h
-msgctxt "update dialog"
-msgid "Changelog"
-msgstr "Changelog"
-
-#: libraries/lib-strings/UnusedStrings.h
-msgctxt "update dialog"
-msgid "Read more on GitHub"
-msgstr "Read more on GitHub"
-
-#: libraries/lib-strings/UnusedStrings.h
-msgctxt "update dialog"
-msgid "Error checking for update"
-msgstr "Error checking for update"
-
-#: libraries/lib-strings/UnusedStrings.h
-msgctxt "update dialog"
-msgid "Unable to connect to Audacity update server."
-msgstr "Unable to connect to Tenacity update server."
-
-#: libraries/lib-strings/UnusedStrings.h
-msgctxt "update dialog"
-msgid "Update data was corrupted."
-msgstr "Update data was corrupted."
-
-#: libraries/lib-strings/UnusedStrings.h
-msgctxt "update dialog"
-msgid "Error downloading update."
-msgstr "Error downloading update."
-
-#: libraries/lib-strings/UnusedStrings.h
-msgctxt "update dialog"
-msgid "Can't open the Audacity download link."
-msgstr "Can't open the Tenacity download link."
-
-#. i18n-hint Substitution of version number for %s.
-#: libraries/lib-strings/UnusedStrings.h
-#, c-format
-msgctxt "update dialog"
-msgid "Audacity %s is available!"
-msgstr "Tenacity %s is available!"
 
 #: modules/mod-null/ModNullCallback.cpp
 msgid "1st Experimental Command..."
@@ -381,7 +310,7 @@ msgstr "Untitled"
 msgid "Nyquist Effect Workbench - "
 msgstr "Nyquist Effect Workbench - "
 
-#: modules/mod-nyq-bench/NyqBench.cpp src/PluginManager.cpp
+#: modules/mod-nyq-bench/NyqBench.cpp src/PluginRegistrationDialog.cpp
 #: src/prefs/ModulePrefs.cpp
 msgid "New"
 msgstr "New"
@@ -546,6 +475,139 @@ msgstr "Stop script"
 msgid "No revision identifier was provided"
 msgstr "No revision identifier was provided"
 
+#. i18n-hint: information about the program
+#: src/AboutDialog.cpp
+#, c-format
+msgid "About %s"
+msgstr "About %s"
+
+#. i18n-hint: In most languages OK is to be translated as OK.  It appears on a button.
+#: src/AboutDialog.cpp src/Dependencies.cpp src/SplashDialog.cpp
+#: src/effects/nyquist/Nyquist.cpp src/widgets/MultiDialog.cpp
+msgid "OK"
+msgstr "OK"
+
+#: src/AboutDialog.cpp
+#, c-format
+msgid "Debug build (debug level %d)"
+msgstr "Debug build (debug level %d)"
+
+#: src/AboutDialog.cpp
+#, c-format
+msgid "Release build (debug level %d)"
+msgstr "Release build (debug level %d)"
+
+#: src/AboutDialog.cpp
+#, c-format
+msgid "%s, 64 bits"
+msgstr "%s, 64 bits"
+
+#: src/AboutDialog.cpp
+msgid "Build Information"
+msgstr "Build Information"
+
+#: src/AboutDialog.cpp src/PluginRegistrationDialog.cpp
+#: src/prefs/ModulePrefs.cpp
+msgid "Enabled"
+msgstr "Enabled"
+
+#: src/AboutDialog.cpp src/PluginRegistrationDialog.cpp
+#: src/export/ExportFFmpegDialogs.cpp src/prefs/ModulePrefs.cpp
+msgid "Disabled"
+msgstr "Disabled"
+
+#. i18n-hint: Information about when audacity was compiled follows
+#: src/AboutDialog.cpp
+msgid "The Build"
+msgstr "Build Information"
+
+#: src/AboutDialog.cpp
+msgid "Program build date:"
+msgstr "Program build date:"
+
+#: src/AboutDialog.cpp
+msgid "Commit Id:"
+msgstr "Commit Id:"
+
+#: src/AboutDialog.cpp
+msgid "Build type:"
+msgstr "Build type:"
+
+#: src/AboutDialog.cpp
+msgid "Compiler:"
+msgstr "Compiler:"
+
+#. i18n-hint: The directory audacity is installed into (on *nix systems)
+#: src/AboutDialog.cpp
+msgid "Installation Prefix:"
+msgstr "Installation Prefix:"
+
+#: src/AboutDialog.cpp
+msgid "Settings folder:"
+msgstr "Settings folder:"
+
+#: src/AboutDialog.cpp
+msgid "File Format Support"
+msgstr "File Format Support"
+
+#: src/AboutDialog.cpp
+msgid "MP3 Importing"
+msgstr "MP3 Importing"
+
+#. i18n-hint: Ogg is the container format. Vorbis is the compression codec. Both are proper nouns and shouldn't be translated
+#: src/AboutDialog.cpp
+msgid "Ogg Vorbis Import and Export"
+msgstr "Ogg Vorbis Import and Export"
+
+#: src/AboutDialog.cpp
+msgid "ID3 tag support"
+msgstr "ID3 tag support"
+
+#. i18n-hint: FLAC stands for Free Lossless Audio Codec, but is effectively a proper noun and so shouldn't be translated
+#: src/AboutDialog.cpp
+msgid "FLAC import and export"
+msgstr "FLAC import and export"
+
+#: src/AboutDialog.cpp
+msgid "MP2 export"
+msgstr "MP2 export"
+
+#: src/AboutDialog.cpp
+msgid "Import via QuickTime"
+msgstr "Import via QuickTime"
+
+#: src/AboutDialog.cpp
+msgid "FFmpeg Import/Export"
+msgstr "FFmpeg Import/Export"
+
+#: src/AboutDialog.cpp
+msgid "Import via GStreamer"
+msgstr "Import via GStreamer"
+
+#: src/AboutDialog.cpp
+msgid "Features"
+msgstr "Features"
+
+#: src/AboutDialog.cpp
+msgid "Plug-in support"
+msgstr "Plug-in support"
+
+#: src/AboutDialog.cpp
+msgid "Sound card mixer support"
+msgstr "Sound card mixer support"
+
+#: src/AboutDialog.cpp
+msgid "Pitch and Tempo Change support"
+msgstr "Pitch and Tempo Change support"
+
+#: src/AboutDialog.cpp
+msgid "Extreme Pitch and Tempo Change support"
+msgstr "Extreme Pitch and Tempo Change support"
+
+#: src/AboutDialog.cpp
+msgid "GPL License"
+msgstr "GPL License"
+
 #. i18n-hint: For "About Tenacity..." credits, substituting a person's proper name
 #: src/AboutDialog.cpp
 #, c-format
@@ -636,71 +698,22 @@ msgstr "%s, pre-fork web developer"
 msgid "%s, graphics"
 msgstr "%s, pre-fork graphics"
 
+#. i18n-hint: For "About Tenacity..." credits, substituting a person's proper name
+#: src/AboutDialog.cpp
+#, fuzzy, c-format
+msgid "%s, lead Tenacity developer"
+msgstr "%s, pre-fork web developer"
+
+#. i18n-hint: For "About Tenacity..." credits, substituting a person's proper name
+#: src/AboutDialog.cpp
+#, fuzzy, c-format
+msgid "%s, Tenacity developer"
+msgstr "%s, pre-fork web developer"
+
 #: src/AboutDialog.cpp
 #, c-format
 msgid "%s (incorporating %s, %s, %s, %s and %s)"
 msgstr "%s (incorporating %s, %s, %s, %s and %s)"
-
-#. i18n-hint: information about the program
-#: src/AboutDialog.cpp
-#, c-format
-msgid "About %s"
-msgstr "About %s"
-
-#. i18n-hint: In most languages OK is to be translated as OK.  It appears on a button.
-#: src/AboutDialog.cpp src/Dependencies.cpp src/SplashDialog.cpp
-#: src/effects/nyquist/Nyquist.cpp src/widgets/MultiDialog.cpp
-msgid "OK"
-msgstr "OK"
-
-#. i18n-hint: First and third %s will be the program's name,
-#. second %s will be "volunteers", fourth "available"
-#: src/AboutDialog.cpp
-#, c-format
-msgid "%s is a free program written by a worldwide team of %s. %s is %s for Windows, Mac, and GNU/Linux (and other Unix-like systems)."
-msgstr "%s is a free program written by a worldwide team of %s. %s is %s for Windows, Mac, and GNU/Linux (and other Unix-like systems)."
-
-#. i18n-hint: substitutes into "a worldwide team of %s"
-#: src/AboutDialog.cpp
-msgid "volunteers"
-msgstr "volunteers"
-
-#. i18n-hint: substitutes into "Tenacity is %s"
-#: src/AboutDialog.cpp
-msgid "available"
-msgstr "available"
-
-#. i18n-hint first and third %s will be "forum", second "wiki"
-#: src/AboutDialog.cpp
-#, c-format
-msgid "If you find a bug or have a suggestion for us, please write, in English, to our %s. For help, view the tips and tricks on our %s or visit our %s."
-msgstr "If you find a bug or have a suggestion for us, please write, in English, to our %s. For help, view the tips and tricks on our %s or visit our %s."
-
-#. i18n-hint substitutes into "write to our %s"
-#: src/AboutDialog.cpp
-msgctxt "dative"
-msgid "forum"
-msgstr "forum"
-
-#. i18n-hint substitutes into "view the tips and tricks on our %s"
-#: src/AboutDialog.cpp
-msgid "wiki"
-msgstr "wiki"
-
-#. i18n-hint substitutes into "visit our %s"
-#: src/AboutDialog.cpp
-msgctxt "accusative"
-msgid "forum"
-msgstr "forum"
-
-#. i18n-hint: The translation of "translator_credits" will appear
-#. *  in the credits in the About Tenacity window.  Use this to add
-#. *  your own name(s) to the credits.
-#. *
-#. *  For example:  "English translation by Dominic Mazzoni."
-#: src/AboutDialog.cpp
-msgid "translator_credits"
-msgstr "translator_credits"
 
 #: src/AboutDialog.cpp
 msgid "<h3>"
@@ -717,7 +730,8 @@ msgid "Credits"
 msgstr "Credits"
 
 #: src/AboutDialog.cpp
-msgid "DarkAudacity Customisation"
+#, fuzzy
+msgid "DarkTenacity Customisation"
 msgstr "DarkTenacity Customisation"
 
 #. i18n-hint: The program's name substitutes for %s
@@ -725,28 +739,6 @@ msgstr "DarkTenacity Customisation"
 #, c-format
 msgid "%s Team Members"
 msgstr "%s Team Members"
-
-#: src/AboutDialog.cpp
-msgid "Emeritus:"
-msgstr "Pre-fork Emeritus:"
-
-#. i18n-hint: The program's name substitutes for %s
-#: src/AboutDialog.cpp
-#, c-format
-msgid "Distinguished %s Team members, not currently active"
-msgstr "Distinguished %s Team members, not currently active"
-
-#: src/AboutDialog.cpp
-msgid "Contributors"
-msgstr "Pre-fork Contributors"
-
-#: src/AboutDialog.cpp
-msgid "Website and Graphics"
-msgstr "Pre-fork Website and Graphics"
-
-#: src/AboutDialog.cpp
-msgid "Translators"
-msgstr "Pre-fork Translators"
 
 #: src/AboutDialog.cpp src/prefs/LibraryPrefs.cpp
 msgid "Libraries"
@@ -757,6 +749,32 @@ msgstr "Libraries"
 #, c-format
 msgid "%s includes code from the following projects:"
 msgstr "%s includes code from the following projects:"
+
+#: src/AboutDialog.cpp
+msgid "Emeritus:"
+msgstr "Pre-fork Emeritus:"
+
+#: src/AboutDialog.cpp
+msgid "Contributors"
+msgstr "Pre-fork Contributors"
+
+#: src/AboutDialog.cpp
+msgid "Website and Graphics"
+msgstr "Pre-fork Website and Graphics"
+
+#. i18n-hint: The translation of "translator_credits" will appear
+#. *  in the credits in the About Audacity window.  Use this to add
+#. *  your own name(s) to the credits.
+#. *
+#. *  For example:  "English translation by Dominic Mazzoni."
+#.
+#: src/AboutDialog.cpp
+msgid "translator_credits"
+msgstr "translator_credits"
+
+#: src/AboutDialog.cpp
+msgid "Translators"
+msgstr "Pre-fork Translators"
 
 #: src/AboutDialog.cpp
 msgid "Special thanks:"
@@ -780,150 +798,6 @@ msgstr "%s software is copyright %s 1999-2021 %s Team."
 #, c-format
 msgid "The name %s is a registered trademark."
 msgstr "The name %s is a registered trademark."
-
-#: src/AboutDialog.cpp
-msgid "Build Information"
-msgstr "Build Information"
-
-#: src/AboutDialog.cpp src/PluginManager.cpp src/prefs/ModulePrefs.cpp
-msgid "Enabled"
-msgstr "Enabled"
-
-#: src/AboutDialog.cpp src/PluginManager.cpp src/export/ExportFFmpegDialogs.cpp
-#: src/prefs/ModulePrefs.cpp
-msgid "Disabled"
-msgstr "Disabled"
-
-#. i18n-hint: Information about when Tenacity was compiled follows
-#: src/AboutDialog.cpp
-msgid "The Build"
-msgstr "Build Information"
-
-#: src/AboutDialog.cpp
-msgid "Program build date:"
-msgstr "Program build date:"
-
-#: src/AboutDialog.cpp
-msgid "Commit Id:"
-msgstr "Commit Id:"
-
-#: src/AboutDialog.cpp
-#, c-format
-msgid "Debug build (debug level %d)"
-msgstr "Debug build (debug level %d)"
-
-#: src/AboutDialog.cpp
-#, c-format
-msgid "Release build (debug level %d)"
-msgstr "Release build (debug level %d)"
-
-#: src/AboutDialog.cpp
-#, c-format
-msgid "%s, 64 bits"
-msgstr "%s, 64 bits"
-
-#: src/AboutDialog.cpp
-msgid "Build type:"
-msgstr "Build type:"
-
-#: src/AboutDialog.cpp
-msgid "Compiler:"
-msgstr "Compiler:"
-
-#. i18n-hint: The directory Tenacity is installed into (on *nix systems)
-#: src/AboutDialog.cpp
-msgid "Installation Prefix:"
-msgstr "Installation Prefix:"
-
-#: src/AboutDialog.cpp
-msgid "Settings folder:"
-msgstr "Settings folder:"
-
-#. i18n-hint: Libraries that are essential to Tenacity
-#: src/AboutDialog.cpp
-msgid "Core Libraries"
-msgstr "Core Libraries"
-
-#: src/AboutDialog.cpp
-msgid "Cross-platform GUI library"
-msgstr "Cross-platform GUI library"
-
-#: src/AboutDialog.cpp
-msgid "Audio playback and recording"
-msgstr "Audio playback and recording"
-
-#: src/AboutDialog.cpp
-msgid "Sample rate conversion"
-msgstr "Sample rate conversion"
-
-#: src/AboutDialog.cpp
-msgid "File Format Support"
-msgstr "File Format Support"
-
-#. i18n-hint: This is what the library (libmad) does - imports MP3 files
-#: src/AboutDialog.cpp
-msgid "MP3 Importing"
-msgstr "MP3 Importing"
-
-#. i18n-hint: Ogg is the container format. Vorbis is the compression codec.
-#. * Both are proper nouns and shouldn't be translated
-#: src/AboutDialog.cpp
-msgid "Ogg Vorbis Import and Export"
-msgstr "Ogg Vorbis Import and Export"
-
-#: src/AboutDialog.cpp
-msgid "ID3 tag support"
-msgstr "ID3 tag support"
-
-#. i18n-hint: FLAC stands for Free Lossless Audio Codec, but is effectively
-#. * a proper noun and so shouldn't be translated
-#: src/AboutDialog.cpp
-msgid "FLAC import and export"
-msgstr "FLAC import and export"
-
-#: src/AboutDialog.cpp
-msgid "MP2 export"
-msgstr "MP2 export"
-
-#: src/AboutDialog.cpp
-msgid "Import via QuickTime"
-msgstr "Import via QuickTime"
-
-#: src/AboutDialog.cpp
-msgid "FFmpeg Import/Export"
-msgstr "FFmpeg Import/Export"
-
-#: src/AboutDialog.cpp
-msgid "Import via GStreamer"
-msgstr "Import via GStreamer"
-
-#: src/AboutDialog.cpp
-msgid "Features"
-msgstr "Features"
-
-#: src/AboutDialog.cpp
-msgid "Dark Theme Extras"
-msgstr "Dark Theme Extras"
-
-#: src/AboutDialog.cpp
-msgid "Plug-in support"
-msgstr "Plug-in support"
-
-#: src/AboutDialog.cpp
-msgid "Sound card mixer support"
-msgstr "Sound card mixer support"
-
-#: src/AboutDialog.cpp
-msgid "Pitch and Tempo Change support"
-msgstr "Pitch and Tempo Change support"
-
-#: src/AboutDialog.cpp
-msgid "Extreme Pitch and Tempo Change support"
-msgstr "Extreme Pitch and Tempo Change support"
-
-#: src/AboutDialog.cpp
-msgid "GPL License"
-msgstr "GPL License"
 
 #: src/AdornedRulerPanel.cpp
 msgid "Timeline actions disabled during recording"
@@ -1035,14 +909,16 @@ msgstr ""
 "Cannot lock region beyond\n"
 "end of project."
 
-#: src/AdornedRulerPanel.cpp src/AudioIO.cpp src/ProjectAudioManager.cpp
-#: src/TimerRecordDialog.cpp src/effects/Contrast.cpp src/effects/Effect.cpp
-#: src/effects/Generator.cpp src/effects/nyquist/Nyquist.cpp
-#: src/export/ExportFFmpeg.cpp src/export/ExportMP2.cpp
-#: src/menus/TrackMenus.cpp src/menus/TransportMenus.cpp
-#: src/prefs/DirectoriesPrefs.cpp src/prefs/KeyConfigPrefs.cpp
+#: src/AdornedRulerPanel.cpp src/AudioIO.cpp src/FileNames.cpp
+#: src/ProjectAudioManager.cpp src/TimerRecordDialog.cpp
+#: src/effects/Contrast.cpp src/effects/Effect.cpp src/effects/Generator.cpp
+#: src/effects/nyquist/Nyquist.cpp src/export/ExportFFmpeg.cpp
+#: src/export/ExportMP2.cpp src/menus/TrackMenus.cpp
+#: src/menus/TransportMenus.cpp src/prefs/DirectoriesPrefs.cpp
+#: src/prefs/KeyConfigPrefs.cpp
 #: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
 #: src/widgets/FileDialog/gtk/FileDialogPrivate.cpp
+#: src/widgets/UnwritableLocationErrorDialog.cpp
 #: plug-ins/eq-xml-to-txt-converter.ny
 msgid "Error"
 msgstr "Error"
@@ -1081,7 +957,6 @@ msgstr ""
 "\n"
 "It has been removed from the list of recent files."
 
-
 #: src/AudacityApp.cpp
 msgid "SQLite library failed to initialize.  Audacity cannot continue."
 msgstr "SQLite library failed to initialize.  Tenacity cannot continue."
@@ -1091,7 +966,8 @@ msgid "Block size must be within 256 to 100000000\n"
 msgstr "Block size must be within 256 to 100000000\n"
 
 #: src/AudacityApp.cpp
-msgid "Audacity is starting up..."
+#, fuzzy
+msgid "Tenacity is starting up..."
 msgstr "Tenacity is starting up..."
 
 #. i18n-hint: "New" is an action (verb) to create a NEW project
@@ -1108,8 +984,9 @@ msgstr "&Open..."
 msgid "Open &Recent..."
 msgstr "Open &Recent..."
 
-#: src/AudacityApp.cpp src/menus/HelpMenus.cpp
-msgid "&About Audacity..."
+#: src/AudacityApp.cpp
+#, fuzzy
+msgid "&About Tenacity..."
 msgstr "&About Tenacity..."
 
 #: src/AudacityApp.cpp
@@ -1252,7 +1129,7 @@ msgstr ""
 msgid "An unrecoverable error has occurred during startup"
 msgstr "An unrecoverable error has occurred during startup"
 
-#. i18n-hint: This controls the number of bytes that Tenacity will
+#. i18n-hint: This controls the number of bytes that Audacity will
 #. *           use when writing files to the disk
 #: src/AudacityApp.cpp
 msgid "set max disk block size in bytes"
@@ -1263,17 +1140,17 @@ msgstr "set max disk block size in bytes"
 msgid "this help message"
 msgstr "this help message"
 
-#. i18n-hint: This runs a set of automatic tests on Tenacity itself
+#. i18n-hint: This runs a set of automatic tests on Audacity itself
 #: src/AudacityApp.cpp
 msgid "run self diagnostics"
 msgstr "run self diagnostics"
 
-#. i18n-hint: This displays the Tenacity version
+#. i18n-hint: This displays the Audacity version
 #: src/AudacityApp.cpp
 msgid "display Audacity version"
 msgstr "display Tenacity version"
 
-#. i18n-hint: This is a list of one or more files that Tenacity
+#. i18n-hint: This is a list of one or more files that Audacity
 #. *           should open upon startup
 #: src/AudacityApp.cpp
 msgid "audio or project file name"
@@ -1290,7 +1167,6 @@ msgstr ""
 "associated with Tenacity. \n"
 "\n"
 "Associate them, so they open on double-click?"
-
 
 #: src/AudacityApp.cpp
 msgid "Audacity Project Files"
@@ -1327,7 +1203,6 @@ msgstr ""
 "You can attempt to correct the issue and then click \"Retry\" to continue.\n"
 "\n"
 "If you choose to \"Quit Tenacity\", your project may be left in an unsaved state which will be recovered the next time you open it."
-
 
 #: src/AudacityFileConfig.cpp src/ShuttleGui.cpp src/commands/HelpCommand.cpp
 #: src/effects/Equalization.cpp src/export/Export.cpp src/menus/HelpMenus.cpp
@@ -1385,7 +1260,6 @@ msgid ""
 msgstr ""
 "You will not be able to play or record audio.\n"
 "\n"
-
 
 #: src/AudioIO.cpp
 #, c-format
@@ -1661,7 +1535,8 @@ msgid "Select"
 msgstr "Select"
 
 #. i18n-hint: (noun).  It's the name of the project to recover.
-#: src/AutoRecoveryDialog.cpp src/PluginManager.cpp src/TrackInfo.cpp
+#: src/AutoRecoveryDialog.cpp src/PluginRegistrationDialog.cpp
+#: src/TrackInfo.cpp
 msgid "Name"
 msgstr "Name"
 
@@ -2235,18 +2110,6 @@ msgstr ""
 "You must first select some audio to perform this action.\n"
 "(Selecting other kinds of track won't work.)"
 
-#: src/CrashReport.cpp
-msgid "Audacity Support Data"
-msgstr "Tenacity Support Data"
-
-#: src/CrashReport.cpp src/DBConnection.cpp src/ProjectFileIO.cpp
-msgid "This may take several seconds"
-msgstr "This may take several seconds"
-
-#: src/CrashReport.cpp
-msgid "Report generated to:"
-msgstr "Report generated to:"
-
 #: src/DBConnection.cpp
 #, c-format
 msgid "(%d): %s"
@@ -2270,6 +2133,10 @@ msgstr "Checkpointing project"
 #, c-format
 msgid "Checkpointing %s"
 msgstr "Checkpointing %s"
+
+#: src/DBConnection.cpp src/ProjectFileIO.cpp
+msgid "This may take several seconds"
+msgstr "This may take several seconds"
 
 #: src/DBConnection.cpp
 #, c-format
@@ -2382,19 +2249,19 @@ msgid "Whenever a project depends on other files:"
 msgstr "Whenever a project depends on other files:"
 
 #. i18n-hint: One of the choices of what you want Audacity to do when
-#. * Tenacity finds a project depends on another file.
+#. * Audacity finds a project depends on another file.
 #: src/Dependencies.cpp
 msgid "Ask me"
 msgstr "Ask me"
 
-#. i18n-hint: One of the choices of what you want Tenacity to do when
-#. * Tenacity finds a project depends on another file.
+#. i18n-hint: One of the choices of what you want Audacity to do when
+#. * Audacity finds a project depends on another file.
 #: src/Dependencies.cpp
 msgid "Always copy all files (safest)"
 msgstr "Always copy all files (safest)"
 
-#. i18n-hint: One of the choices of what you want Tenacity to do when
-#. * Tenacity finds a project depends on another file.
+#. i18n-hint: One of the choices of what you want Audacity to do when
+#. * Audacity finds a project depends on another file.
 #: src/Dependencies.cpp
 msgid "Never copy any files"
 msgstr "Never copy any files"
@@ -2669,7 +2536,7 @@ msgstr "As&k"
 msgid "All files"
 msgstr "All files"
 
-#. i18n-hint an Tenacity project is the state of the program, stored as
+#. i18n-hint an Audacity project is the state of the program, stored as
 #. files that can be reopened to resume the session later
 #: src/FileNames.cpp
 msgid "AUP3 project files"
@@ -2709,6 +2576,11 @@ msgstr "The specified filename could not be converted due to Unicode character u
 #: src/FileNames.cpp
 msgid "Specify New Filename:"
 msgstr "Specify New Filename:"
+
+#: src/FileNames.cpp
+#, c-format
+msgid "Directory %s does not have write permissions"
+msgstr ""
 
 #: src/FreqWindow.cpp
 msgid "Frequency Analysis"
@@ -2780,6 +2652,16 @@ msgstr "Zoom"
 #: src/widgets/NumericTextCtrl.cpp
 msgid "Hz"
 msgstr "Hz"
+
+#: src/FreqWindow.cpp
+#, fuzzy
+msgid "Scroll Horizontal"
+msgstr "Split &Horizontally"
+
+#: src/FreqWindow.cpp
+#, fuzzy
+msgid "Zoom Horizontal"
+msgstr "Split &Horizontally"
 
 #: src/FreqWindow.cpp
 msgid "Cursor:"
@@ -2954,10 +2836,6 @@ msgid "<br><br>The version of Audacity you are using is a <b>Beta test version</
 msgstr "<br><br>The version of Tenacity you are using is a <b>Beta test version</b>."
 
 #: src/HelpText.cpp
-msgid "Get the Official Released Version of Audacity"
-msgstr "Get the Official Released Version of Tenacity"
-
-#: src/HelpText.cpp
 msgid "We strongly recommend that you use our latest stable released version, which has full documentation and support.<br><br>"
 msgstr "We strongly recommend that you use our latest stable released version, which has full documentation and support.<br><br>"
 
@@ -3006,10 +2884,6 @@ msgstr "The Manual does not appear to be installed. Please [[*URL*|view the Manu
 #: src/HelpText.cpp
 msgid "The Manual does not appear to be installed. Please [[*URL*|view the Manual online]] or [[https://manual.audacityteam.org/man/unzipping_the_manual.html| download the Manual]].<br><br>To always view the Manual online, change \"Location of Manual\" in Interface Preferences to \"From Internet\"."
 msgstr "The Manual does not appear to be installed. Please [[*URL*|view the Manual online]] or download the Manual.<br><br>To always view the Manual online, change \"Location of Manual\" in Interface Preferences to \"From Internet\"."
-
-#: src/HelpText.cpp
-msgid "Check Online"
-msgstr "Check Online"
 
 #: src/HistoryWindow.cpp
 msgid "History"
@@ -3171,7 +3045,7 @@ msgid "One or more saved labels could not be read."
 msgstr "One or more saved labels could not be read."
 
 #. i18n-hint: Title on a dialog indicating that this is the first
-#. * time Tenacity has been run.
+#. * time Audacity has been run.
 #: src/LangChoice.cpp
 msgid "Audacity First Run"
 msgstr "Tenacity First Run"
@@ -3520,106 +3394,6 @@ msgid "A♯/B♭"
 msgstr "A♯/B♭"
 
 #: src/PluginManager.cpp
-msgid "Manage Plug-ins"
-msgstr "Manage Plug-ins"
-
-#: src/PluginManager.cpp
-msgid "Select effects, click the Enable or Disable button, then click OK."
-msgstr "Select effects, click the Enable or Disable button, then click OK."
-
-#. i18n-hint: This is before radio buttons selecting which effects to show
-#: src/PluginManager.cpp
-msgid "Show:"
-msgstr "Show:"
-
-#. i18n-hint: Radio button to show all effects
-#: src/PluginManager.cpp
-msgid "Show all"
-msgstr "Show all"
-
-#. i18n-hint: Radio button to show all effects
-#: src/PluginManager.cpp src/menus/SelectMenus.cpp
-msgid "&All"
-msgstr "&All"
-
-#. i18n-hint: Radio button to show just the currently disabled effects
-#: src/PluginManager.cpp
-msgid "Show disabled"
-msgstr "Show disabled"
-
-#. i18n-hint: Radio button to show just the currently disabled effects
-#: src/PluginManager.cpp
-msgid "D&isabled"
-msgstr "D&isabled"
-
-#. i18n-hint: Radio button to show just the currently enabled effects
-#: src/PluginManager.cpp
-msgid "Show enabled"
-msgstr "Show enabled"
-
-#. i18n-hint: Radio button to show just the currently enabled effects
-#: src/PluginManager.cpp
-msgid "E&nabled"
-msgstr "E&nabled"
-
-#. i18n-hint: Radio button to show just the newly discovered effects
-#: src/PluginManager.cpp
-msgid "Show new"
-msgstr "Show new"
-
-#. i18n-hint: Radio button to show just the newly discovered effects
-#: src/PluginManager.cpp
-msgid "Ne&w"
-msgstr "Ne&w"
-
-#: src/PluginManager.cpp
-msgid "State"
-msgstr "State"
-
-#: src/PluginManager.cpp
-msgid "Path"
-msgstr "Path"
-
-#: src/PluginManager.cpp
-msgid "&Select All"
-msgstr "&Select All"
-
-#: src/PluginManager.cpp
-msgid "C&lear All"
-msgstr "C&lear All"
-
-#: src/PluginManager.cpp src/effects/EffectUI.cpp src/prefs/RecordingPrefs.cpp
-msgid "&Enable"
-msgstr "&Enable"
-
-#: src/PluginManager.cpp
-msgid "&Disable"
-msgstr "&Disable"
-
-#: src/PluginManager.cpp
-#, c-format
-msgid ""
-"Enabling effects or commands:\n"
-"\n"
-"%s"
-msgstr ""
-
-#: src/PluginManager.cpp
-#, c-format
-msgid ""
-"Enabling effect or command:\n"
-"\n"
-"%s"
-msgstr ""
-
-#: src/PluginManager.cpp
-#, c-format
-msgid ""
-"Effect or Command at %s failed to register:\n"
-"%s"
-msgstr ""
-
-#: src/PluginManager.cpp
 #, c-format
 msgid "Overwrite the plug-in file %s?"
 msgstr "Overwrite the plug-in file %s?"
@@ -3655,6 +3429,107 @@ msgstr "Enable new plug-ins"
 #: src/PluginManager.h
 msgid "Nyquist Prompt"
 msgstr "Nyquist Prompt"
+
+#: src/PluginRegistrationDialog.cpp
+msgid "Manage Plug-ins"
+msgstr "Manage Plug-ins"
+
+#: src/PluginRegistrationDialog.cpp
+msgid "Select effects, click the Enable or Disable button, then click OK."
+msgstr "Select effects, click the Enable or Disable button, then click OK."
+
+#. i18n-hint: This is before radio buttons selecting which effects to show
+#: src/PluginRegistrationDialog.cpp
+msgid "Show:"
+msgstr "Show:"
+
+#. i18n-hint: Radio button to show all effects
+#: src/PluginRegistrationDialog.cpp
+msgid "Show all"
+msgstr "Show all"
+
+#. i18n-hint: Radio button to show all effects
+#: src/PluginRegistrationDialog.cpp src/menus/SelectMenus.cpp
+msgid "&All"
+msgstr "&All"
+
+#. i18n-hint: Radio button to show just the currently disabled effects
+#: src/PluginRegistrationDialog.cpp
+msgid "Show disabled"
+msgstr "Show disabled"
+
+#. i18n-hint: Radio button to show just the currently disabled effects
+#: src/PluginRegistrationDialog.cpp
+msgid "D&isabled"
+msgstr "D&isabled"
+
+#. i18n-hint: Radio button to show just the currently enabled effects
+#: src/PluginRegistrationDialog.cpp
+msgid "Show enabled"
+msgstr "Show enabled"
+
+#. i18n-hint: Radio button to show just the currently enabled effects
+#: src/PluginRegistrationDialog.cpp
+msgid "E&nabled"
+msgstr "E&nabled"
+
+#. i18n-hint: Radio button to show just the newly discovered effects
+#: src/PluginRegistrationDialog.cpp
+msgid "Show new"
+msgstr "Show new"
+
+#. i18n-hint: Radio button to show just the newly discovered effects
+#: src/PluginRegistrationDialog.cpp
+msgid "Ne&w"
+msgstr "Ne&w"
+
+#: src/PluginRegistrationDialog.cpp
+msgid "State"
+msgstr "State"
+
+#: src/PluginRegistrationDialog.cpp
+msgid "Path"
+msgstr "Path"
+
+#: src/PluginRegistrationDialog.cpp
+msgid "&Select All"
+msgstr "&Select All"
+
+#: src/PluginRegistrationDialog.cpp
+msgid "C&lear All"
+msgstr "C&lear All"
+
+#: src/PluginRegistrationDialog.cpp src/effects/EffectUI.cpp
+#: src/prefs/RecordingPrefs.cpp
+msgid "&Enable"
+msgstr "&Enable"
+
+#: src/PluginRegistrationDialog.cpp
+msgid "&Disable"
+msgstr "&Disable"
+
+#: src/PluginRegistrationDialog.cpp
+#, c-format
+msgid ""
+"Enabling effects or commands:\n"
+"\n"
+"%s"
+msgstr ""
+
+#: src/PluginRegistrationDialog.cpp
+#, c-format
+msgid ""
+"Enabling effect or command:\n"
+"\n"
+"%s"
+msgstr ""
+
+#: src/PluginRegistrationDialog.cpp
+#, c-format
+msgid ""
+"Effect or Command at %s failed to register:\n"
+"%s"
+msgstr ""
 
 #: src/Printing.cpp
 msgid "There was a problem printing."
@@ -3740,7 +3615,7 @@ msgstr ""
 msgid "Turn off dropout detection"
 msgstr ""
 
-#. i18n-hint: The Tenacity project file is XML and has 'tags' in it,
+#. i18n-hint: The audacity project file is XML and has 'tags' in it,
 #. rather like html tags <something>some stuff</something>.
 #. This error message is about the tags that hold the sequence information.
 #. The error message is confusing to users in English, and could just say
@@ -4342,12 +4217,6 @@ msgstr "Error Opening Project"
 
 #: src/ProjectFileManager.cpp
 msgid ""
-"Project resides on FAT formatted drive.\n"
-"Copy it to another drive to open it."
-msgstr ""
-
-#: src/ProjectFileManager.cpp
-msgid ""
 "You are trying to open an automatically created backup file.\n"
 "Doing this may result in severe data loss.\n"
 "\n"
@@ -4380,6 +4249,12 @@ msgstr ""
 #: src/ProjectFileManager.cpp
 msgid "Error Opening File or Project"
 msgstr "Error Opening File or Project"
+
+#: src/ProjectFileManager.cpp
+msgid ""
+"Project resides on FAT formatted drive.\n"
+"Copy it to another drive to open it."
+msgstr ""
 
 #: src/ProjectFileManager.cpp
 msgid "Project was recovered"
@@ -4505,7 +4380,7 @@ msgstr ""
 "You need to run that version of Tenacity to recover the project."
 
 #. i18n-hint: This is an experimental feature where the main panel in
-#. Tenacity is put on a notebook tab, and this is the name on that tab.
+#. Audacity is put on a notebook tab, and this is the name on that tab.
 #. Other tabs in that notebook may have instruments, patch panels etc.
 #: src/ProjectWindow.cpp
 msgid "Main Mix"
@@ -4872,6 +4747,10 @@ msgstr ""
 msgid "Genre"
 msgstr ""
 
+#: src/Tags.cpp src/prefs/MousePrefs.cpp
+msgid "Comments"
+msgstr "Comments"
+
 #: src/Tags.cpp
 msgid "Use arrow keys (or ENTER key after editing) to navigate fields."
 msgstr ""
@@ -4985,7 +4864,7 @@ msgstr ""
 
 #. i18n-hint: A theme is a consistent visual style across an application's
 #. graphical user interface, including choices of colors, and similarity of images
-#. such as those on button controls.  Tenacity can load and save alternative
+#. such as those on button controls.  Audacity can load and save alternative
 #. themes.
 #: src/Theme.cpp
 #, c-format
@@ -5086,7 +4965,7 @@ msgstr ""
 "  %s"
 
 #. i18n-hint: describing the "classic" or traditional
-#. appearance of older versions of Tenacity
+#. appearance of older versions of Audacity
 #: src/Theme.cpp
 msgid "Classic"
 msgstr ""
@@ -5390,7 +5269,7 @@ msgstr "Tenacity Timer Record - Waiting for Start"
 msgid "Recording will commence in:"
 msgstr ""
 
-#. i18n-hint: %s is one of "Do nothing", "Exit Tenacity", "Restart system",
+#. i18n-hint: %s is one of "Do nothing", "Exit Audacity", "Restart system",
 #. or "Shutdown system", and
 #. "in" means after a duration of time, shown below this string
 #: src/TimerRecordDialog.cpp
@@ -5697,7 +5576,7 @@ msgstr ""
 msgid "Panel"
 msgstr ""
 
-#: src/commands/DragCommand.cpp
+#: src/commands/DragCommand.cpp src/prefs/ApplicationPrefs.cpp
 msgid "Application"
 msgstr ""
 
@@ -6359,9 +6238,11 @@ msgstr ""
 msgid "Spectral Select"
 msgstr ""
 
-#: src/commands/SetTrackInfoCommand.cpp
-msgid "Gray Scale"
-msgstr ""
+#. i18n-hint Scheme refers to a color scheme for spectrogram colors
+#: src/commands/SetTrackInfoCommand.cpp src/prefs/SpectrumPrefs.cpp
+msgctxt "spectrum prefs"
+msgid "Sche&me"
+msgstr "Sche&me"
 
 #: src/commands/SetTrackInfoCommand.cpp
 msgid "Set Track"
@@ -7555,7 +7436,7 @@ msgid "Previewing"
 msgstr ""
 
 #. i18n-hint: "Nyquist" is an embedded interpreted programming language in
-#. Tenacity, named in honor of the Swedish-American Harry Nyquist (or Nyqvist).
+#. Audacity, named in honor of the Swedish-American Harry Nyquist (or Nyqvist).
 #. In the translations of this and other strings, you may transliterate the
 #. name into another alphabet.
 #: src/effects/Effect.h
@@ -12911,12 +12792,8 @@ msgid "Show &Log..."
 msgstr ""
 
 #: src/menus/HelpMenus.cpp
-msgid "&Generate Support Data..."
-msgstr ""
-
-#: src/menus/HelpMenus.cpp
-msgid "&Check for Updates..."
-msgstr ""
+msgid "&About Audacity..."
+msgstr "&About Tenacity..."
 
 #: src/menus/LabelMenus.cpp src/toolbars/TranscriptionToolBar.cpp
 #: src/tracks/labeltrack/ui/LabelTrackView.cpp
@@ -12927,7 +12804,7 @@ msgstr ""
 msgid "Paste Text to New Label"
 msgstr ""
 
-#. i18n-hint: (verb) past tense.  Tenacity has just cut the labeled audio
+#. i18n-hint: (verb) past tense.  Audacity has just cut the labeled audio
 #. regions.
 #: src/menus/LabelMenus.cpp
 msgid "Cut labeled audio regions to clipboard"
@@ -12938,7 +12815,7 @@ msgstr ""
 msgid "Cut Labeled Audio"
 msgstr ""
 
-#. i18n-hint: (verb) Tenacity has just deleted the labeled audio regions
+#. i18n-hint: (verb) Audacity has just deleted the labeled audio regions
 #: src/menus/LabelMenus.cpp
 msgid "Deleted labeled audio regions"
 msgstr ""
@@ -12948,7 +12825,7 @@ msgstr ""
 msgid "Delete Labeled Audio"
 msgstr ""
 
-#. i18n-hint: (verb) Tenacity has just split cut the labeled audio
+#. i18n-hint: (verb) Audacity has just split cut the labeled audio
 #. regions
 #: src/menus/LabelMenus.cpp
 msgid "Split Cut labeled audio regions to clipboard"
@@ -12959,7 +12836,7 @@ msgstr ""
 msgid "Split Cut Labeled Audio"
 msgstr ""
 
-#. i18n-hint: (verb) Tenacity has just done a special kind of DELETE on
+#. i18n-hint: (verb) Audacity has just done a special kind of DELETE on
 #. the labeled audio regions
 #: src/menus/LabelMenus.cpp
 msgid "Split Deleted labeled audio regions"
@@ -12990,7 +12867,7 @@ msgstr ""
 msgid "Copy Labeled Audio"
 msgstr ""
 
-#. i18n-hint: (verb) past tense.  Tenacity has just split the labeled
+#. i18n-hint: (verb) past tense.  Audacity has just split the labeled
 #. audio (a point or a region)
 #: src/menus/LabelMenus.cpp
 msgid "Split labeled audio (points or regions)"
@@ -13001,7 +12878,7 @@ msgstr ""
 msgid "Split Labeled Audio"
 msgstr ""
 
-#. i18n-hint: (verb) Tenacity has just joined the labeled audio (points or
+#. i18n-hint: (verb) Audacity has just joined the labeled audio (points or
 #. regions)
 #: src/menus/LabelMenus.cpp
 msgid "Joined labeled audio (points or regions)"
@@ -13012,9 +12889,9 @@ msgstr ""
 msgid "Join Labeled Audio"
 msgstr ""
 
-#. i18n-hint: (verb) Tenacity has just detached the labeled audio regions.
+#. i18n-hint: (verb) Audacity has just detached the labeled audio regions.
 #. This message appears in history and tells you about something
-#. Tenacity has done.
+#. Audacity has done.
 #: src/menus/LabelMenus.cpp
 msgid "Detached labeled audio regions"
 msgstr ""
@@ -13636,6 +13513,10 @@ msgstr ""
 
 #. i18n-hint: (verb)
 #: src/menus/ToolbarMenus.cpp
+msgid "Edit &Mode (on/off)"
+msgstr ""
+
+#: src/menus/ToolbarMenus.cpp
 msgid "Reset Toolb&ars"
 msgstr ""
 
@@ -14077,14 +13958,16 @@ msgstr ""
 msgid "Move Focused Track to &Bottom"
 msgstr ""
 
-#. i18n-hint: These are strings for the status bar, and indicate whether Tenacity
-#. is playing or recording or stopped, and whether it is paused.
+#. i18n-hint: These are strings for the status bar, and indicate whether Audacity
+#. is playing or recording or stopped, and whether it is paused;
+#. progressive verb form
 #: src/menus/TransportMenus.cpp src/toolbars/ControlToolBar.cpp
 msgid "Playing"
 msgstr ""
 
-#. i18n-hint: These are strings for the status bar, and indicate whether Tenacity
-#. is playing or recording or stopped, and whether it is paused.
+#. i18n-hint: These are strings for the status bar, and indicate whether Audacity
+#. is playing or recording or stopped, and whether it is paused;
+#. progressive verb form
 #: src/menus/TransportMenus.cpp src/prefs/DevicePrefs.cpp
 #: src/prefs/MidiIOPrefs.cpp src/prefs/RecordingPrefs.cpp
 #: src/prefs/RecordingPrefs.h src/toolbars/ControlToolBar.cpp
@@ -14443,6 +14326,20 @@ msgstr ""
 msgid "%s %2.0f%% complete. Click to change task focal point."
 msgstr ""
 
+#: src/prefs/ApplicationPrefs.cpp
+msgid "Preferences for Application"
+msgstr ""
+
+#: src/prefs/ApplicationPrefs.cpp
+#, fuzzy
+msgid "Update Audacity"
+msgstr "Update Tenacity"
+
+#: src/prefs/ApplicationPrefs.cpp
+#, fuzzy
+msgid "&Check for Updates"
+msgstr "Error checking for update"
+
 #: src/prefs/BatchPrefs.cpp src/prefs/BatchPrefs.h
 msgid "Batch"
 msgstr ""
@@ -14534,6 +14431,7 @@ msgstr ""
 
 #. i18n-hint:  Directories, also called directories, in computer file systems
 #: src/prefs/DirectoriesPrefs.cpp src/prefs/DirectoriesPrefs.h
+#: src/widgets/UnwritableLocationErrorDialog.cpp
 msgid "Directories"
 msgstr ""
 
@@ -14684,7 +14582,7 @@ msgid "LV&2"
 msgstr ""
 
 #. i18n-hint: "Nyquist" is an embedded interpreted programming language in
-#. Tenacity, named in honor of the Swedish-American Harry Nyquist (or Nyqvist).
+#. Audacity, named in honor of the Swedish-American Harry Nyquist (or Nyqvist).
 #. In the translations of this and other strings, you may transliterate the
 #. name into another alphabet.
 #: src/prefs/EffectsPrefs.cpp
@@ -14817,7 +14715,7 @@ msgstr ""
 msgid "Ext Import"
 msgstr ""
 
-#. i18n-hint: refers to Tenacity's user interface settings
+#. i18n-hint: refers to Audacity's user interface settings
 #: src/prefs/GUIPrefs.cpp
 msgctxt "GUI"
 msgid "Interface"
@@ -15248,7 +15146,7 @@ msgstr ""
 msgid "Midi IO"
 msgstr ""
 
-#. i18n-hint: Modules are optional extensions to Tenacity that add NEW features.
+#. i18n-hint: Modules are optional extensions to Audacity that add NEW features.
 #: src/prefs/ModulePrefs.cpp
 msgid "Modules"
 msgstr ""
@@ -15760,6 +15658,30 @@ msgstr ""
 msgid "Period"
 msgstr ""
 
+#. i18n-hint: New color scheme for spectrograms
+#: src/prefs/SpectrogramSettings.cpp
+msgctxt "spectrum prefs"
+msgid "Color (default)"
+msgstr "Color (default)"
+
+#. i18n-hint: Classic color scheme(from theme) for spectrograms
+#: src/prefs/SpectrogramSettings.cpp
+msgctxt "spectrum prefs"
+msgid "Color (classic)"
+msgstr "Color (classic)"
+
+#. i18n-hint: Grayscale color scheme for spectrograms
+#: src/prefs/SpectrogramSettings.cpp
+msgctxt "spectrum prefs"
+msgid "Grayscale"
+msgstr "Grayscale"
+
+#. i18n-hint: Inverse grayscale color scheme for spectrograms
+#: src/prefs/SpectrogramSettings.cpp
+msgctxt "spectrum prefs"
+msgid "Inverse grayscale"
+msgstr "Inverse grayscale"
+
 #: src/prefs/SpectrogramSettings.cpp
 msgid "Frequencies"
 msgstr ""
@@ -15841,10 +15763,6 @@ msgstr ""
 
 #: src/prefs/SpectrumPrefs.cpp
 msgid "High &boost (dB/dec):"
-msgstr ""
-
-#: src/prefs/SpectrumPrefs.cpp
-msgid "Gra&yscale"
 msgstr ""
 
 #: src/prefs/SpectrumPrefs.cpp
@@ -15954,7 +15872,7 @@ msgstr ""
 
 #. i18n-hint: A theme is a consistent visual style across an application's
 #. graphical user interface, including choices of colors, and similarity of images
-#. such as those on button controls.  Tenacity can load and save alternative
+#. such as those on button controls.  Audacity can load and save alternative
 #. themes.
 #: src/prefs/ThemePrefs.cpp src/prefs/ThemePrefs.h
 msgid "Theme"
@@ -16271,8 +16189,9 @@ msgstr ""
 msgid "Waveform dB &range:"
 msgstr ""
 
-#. i18n-hint: These are strings for the status bar, and indicate whether Tenacity
-#. is playing or recording or stopped, and whether it is paused.
+#. i18n-hint: These are strings for the status bar, and indicate whether Audacity
+#. is playing or recording or stopped, and whether it is paused;
+#. progressive verb form
 #: src/toolbars/ControlToolBar.cpp
 msgid "Stopped"
 msgstr ""
@@ -16309,7 +16228,7 @@ msgstr ""
 msgid "Select to Start"
 msgstr ""
 
-#. i18n-hint: These are strings for the status bar, and indicate whether Tenacity
+#. i18n-hint: These are strings for the status bar, and indicate whether Audacity
 #. is playing or recording or stopped, and whether it is paused.
 #: src/toolbars/ControlToolBar.cpp src/tracks/ui/Scrubbing.cpp
 #, c-format
@@ -17293,6 +17212,12 @@ msgstr ""
 msgid "Logarithmic &Interpolation"
 msgstr ""
 
+#. i18n-hint Appears on hovering mouse over clip affordance
+#: src/tracks/ui/AffordanceHandle.cpp
+#, fuzzy
+msgid "Click and drag to move a clip in time, or click to select"
+msgstr "Click and drag to adjust, double-click to reset"
+
 #: src/tracks/ui/CommonTrackControls.cpp
 msgid "&Name..."
 msgstr ""
@@ -17334,7 +17259,7 @@ msgstr ""
 msgid "Click and drag to edit the amplitude envelope"
 msgstr ""
 
-#. i18n-hint: (verb) Tenacity has just adjusted the envelope .
+#. i18n-hint: (verb) Audacity has just adjusted the envelope .
 #: src/tracks/ui/EnvelopeHandle.cpp
 msgid "Adjusted envelope."
 msgstr ""
@@ -18097,6 +18022,28 @@ msgstr ""
 
 #: src/widgets/ProgressDialog.cpp
 msgid "Confirm Close"
+msgstr ""
+
+#. i18n-hint: %s is replaced with a directory path.
+#: src/widgets/UnwritableLocationErrorDialog.cpp
+#, fuzzy, c-format
+msgid "Unable to write files to directory: %s."
+msgstr "Unable to initialize the project file"
+
+#. i18n-hint: This message describes the error in the Error dialog.
+#: src/widgets/UnwritableLocationErrorDialog.cpp
+msgid "Please check that the directory exists, has the necessary permissions, and the drive isn't full."
+msgstr ""
+
+#. i18n-hint: %s is replaced with 'Preferences > Directories'.
+#: src/widgets/UnwritableLocationErrorDialog.cpp
+#, c-format
+msgid "You can change the directory in %s."
+msgstr ""
+
+#. i18n-hint: Hyperlink title that opens Preferences dialog on Directories page.
+#: src/widgets/UnwritableLocationErrorDialog.cpp
+msgid "Preferences > Directories"
 msgstr ""
 
 #: src/widgets/Warning.cpp
@@ -19886,3 +19833,88 @@ msgstr ""
 #, lisp-format
 msgid "Error.~%Stereo track required."
 msgstr ""
+
+#~ msgid "Problem Report for Audacity"
+#~ msgstr "Problem Report for Tenacity"
+
+#~ msgid "Click \"Send\" to submit the report to Audacity. This information is collected anonymously."
+#~ msgstr "Click \"Send\" to submit the report to Tenacity. This information is collected anonymously."
+
+#~ msgid "Problem details"
+#~ msgstr "Problem details"
+
+#~ msgctxt "crash reporter button"
+#~ msgid "&Send"
+#~ msgstr "&Send"
+
+#~ msgctxt "crash reporter button"
+#~ msgid "&Don't send"
+#~ msgstr "&Don't send"
+
+#~ msgid "Exception code 0x%x"
+#~ msgstr "Exception code 0x%x"
+
+#~ msgid "Unknown exception"
+#~ msgstr "Unknown exception"
+
+#~ msgid "Unknown assertion"
+#~ msgstr "Unknown assertion"
+
+#~ msgid "Unknown error"
+#~ msgstr "Unknown error"
+
+#~ msgid "Failed to send crash report"
+#~ msgstr "Failed to send crash report"
+
+#~ msgid "%s is a free program written by a worldwide team of %s. %s is %s for Windows, Mac, and GNU/Linux (and other Unix-like systems)."
+#~ msgstr "%s is a free program written by a worldwide team of %s. %s is %s for Windows, Mac, and GNU/Linux (and other Unix-like systems)."
+
+#~ msgid "volunteers"
+#~ msgstr "volunteers"
+
+#~ msgid "available"
+#~ msgstr "available"
+
+#~ msgid "If you find a bug or have a suggestion for us, please write, in English, to our %s. For help, view the tips and tricks on our %s or visit our %s."
+#~ msgstr "If you find a bug or have a suggestion for us, please write, in English, to our %s. For help, view the tips and tricks on our %s or visit our %s."
+
+#~ msgctxt "dative"
+#~ msgid "forum"
+#~ msgstr "forum"
+
+#~ msgid "wiki"
+#~ msgstr "wiki"
+
+#~ msgctxt "accusative"
+#~ msgid "forum"
+#~ msgstr "forum"
+
+#~ msgid "Distinguished %s Team members, not currently active"
+#~ msgstr "Distinguished %s Team members, not currently active"
+
+#~ msgid "Core Libraries"
+#~ msgstr "Core Libraries"
+
+#~ msgid "Cross-platform GUI library"
+#~ msgstr "Cross-platform GUI library"
+
+#~ msgid "Audio playback and recording"
+#~ msgstr "Audio playback and recording"
+
+#~ msgid "Sample rate conversion"
+#~ msgstr "Sample rate conversion"
+
+#~ msgid "Dark Theme Extras"
+#~ msgstr "Dark Theme Extras"
+
+#~ msgid "Audacity Support Data"
+#~ msgstr "Tenacity Support Data"
+
+#~ msgid "Report generated to:"
+#~ msgstr "Report generated to:"
+
+#~ msgid "Get the Official Released Version of Audacity"
+#~ msgstr "Get the Official Released Version of Tenacity"
+
+#~ msgid "Check Online"
+#~ msgstr "Check Online"
