@@ -41,7 +41,7 @@ cmake_options=(
     -Daudacity_use_curl=system
 )
 
-cmake "${cmake_options[@]}" ../audacity
+cmake "${cmake_options[@]}" ../tenacity
 
 exit_status=$?
 

@@ -6,7 +6,7 @@ LABEL version="3.0"
 
 RUN apt-get update && apt-get install -y dos2unix
 
-WORKDIR /audacity
+WORKDIR /tenacity
 
 COPY ["dependencies.sh", "/tenacity/"]
 # pkg-config is so broken
