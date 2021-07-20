@@ -547,7 +547,7 @@ class GnomeShutdown
 {
     public:
     GnomeShutdown() {
-        mArgv[0].reset(strdup("Audacity"));
+        mArgv[0].reset(strdup("Tenacity"));
 
         mGnomeui = dlopen("libgnomeui-2.so.0", RTLD_NOW);
         if (!mGnomeui) {
@@ -1657,7 +1657,7 @@ bool AudacityApp::CreateSingleInstanceChecker(const wxString& dir) {
         }
 
         if (parser->Found(wxT("v"))) {
-            wxPrintf("Audacity v%s\n", AUDACITY_VERSION_STRING);
+            wxPrintf("Tenacity v%s\n", AUDACITY_VERSION_STRING);
             return false;
         }
 
@@ -1926,7 +1926,7 @@ bool AudacityApp::CreateSingleInstanceChecker(const wxString& dir) {
 
     // Display Audacity's version if requested
     if (parser->Found(wxT("v"))) {
-        wxPrintf("Audacity v%s\n", AUDACITY_VERSION_STRING);
+        wxPrintf("Tenacity v%s\n", AUDACITY_VERSION_STRING);
 
         return false;
     }
