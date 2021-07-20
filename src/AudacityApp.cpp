@@ -618,7 +618,7 @@ static wxArrayString ofqueue;
 // of Audacity.
 //
 
-#define IPC_APPL wxT("audacity")
+#define IPC_APPL wxT("tenacity")
 #define IPC_TOPIC wxT("System")
 
 class IPCConn final : public wxConnection

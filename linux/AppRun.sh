@@ -15,7 +15,7 @@ export AUDACITY_MODULES_PATH="${AUDACITY_MODULES_PATH}:${APPDIR}/lib/modules"
 function help()
 {
     # Normal audacity help
-    "${APPDIR}/bin/audacity" --help
+    "${APPDIR}/bin/tenacity" --help
     # Special options handled by this script
     cat >&2 <<EOF
   --readme              display README
@@ -34,10 +34,10 @@ case "$1" in
     help
     ;;
 --readme )
-    exec less "${APPDIR}/share/doc/audacity/README.txt"
+    exec less "${APPDIR}/share/doc/tenacity/README.txt"
     ;;
 --license )
-    exec less "${APPDIR}/share/doc/audacity/LICENSE.txt"
+    exec less "${APPDIR}/share/doc/tenacity/LICENSE.txt"
     ;;
 --man|--manual|--manpage )
     exec man "${APPDIR}/share/man/man1/audacity.1"
@@ -47,6 +47,6 @@ case "$1" in
     ;;
 * )
     # Other arguments go to Audacity
-    exec "${APPDIR}/bin/audacity" "$@"
+    exec "${APPDIR}/bin/tenacity" "$@"
     ;;
 esac

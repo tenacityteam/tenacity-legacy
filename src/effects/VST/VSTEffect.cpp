@@ -94,7 +94,7 @@
 #include "../../widgets/WindowAccessible.h"
 #endif
 
-#include "audacity/ConfigInterface.h"
+#include "tenacity/ConfigInterface.h"
 
 #include <cstring>
 

@@ -6,7 +6,7 @@
 
    Leland Lucius
 
-   Copyright (c) 2014, Audacity Team 
+   Copyright (c) 2014, Audacity Team
    All rights reserved.
 
    Redistribution and use in source and binary forms, with or without
@@ -36,7 +36,7 @@
    LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
    ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
    POSSIBILITY OF SUCH DAMAGE.
-   
+
 **********************************************************************/
 
 #ifndef __AUDACITY_MODULEINTERFACE_H__
@@ -45,12 +45,12 @@
 #include <functional>
 #include <memory>
 #include "Identifier.h"
-#include "audacity/ComponentInterface.h"
-#include "audacity/PluginInterface.h"
+#include "tenacity/ComponentInterface.h"
+#include "tenacity/PluginInterface.h"
 
 // ============================================================================
 //
-// Don't even think about adding module types, like effect, importer, etc. in 
+// Don't even think about adding module types, like effect, importer, etc. in
 // here.  The module interface should not have to change when new types of
 // plugins are added to Audacity.
 //
@@ -60,7 +60,7 @@
 // ============================================================================
 ///
 /// ModuleInterface is a generic dll or so interface for Audacity, that is
-/// used for plug ins.  Classes derived from it can handle more specific plug 
+/// used for plug ins.  Classes derived from it can handle more specific plug
 /// in types.
 ///
 // ============================================================================

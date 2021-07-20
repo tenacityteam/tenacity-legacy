@@ -1,10 +1,10 @@
 
-set( TARGET Audacity )
+set( TARGET Tenacity )
 set( TARGET_ROOT ${topdir}/src )
 
 message( STATUS "========== Configuring ${TARGET} ==========" )
 
-# Allow modules to link against the Audacity executable
+# Allow modules to link against the Tenacity executable
 set( CMAKE_ENABLE_EXPORTS ON )
 
 add_executable( ${TARGET} )
@@ -997,13 +997,13 @@ list( APPEND SOURCES
 #
 #
 list( APPEND HEADERS
-   ../include/audacity/EffectInterface.h
-   ../include/audacity/Types.h
-   ../include/audacity/ConfigInterface.h
-   ../include/audacity/ModuleInterface.h
-   ../include/audacity/PluginInterface.h
-   ../include/audacity/ComponentInterface.h
-   ../include/audacity/EffectAutomationParameters.h
+   ../include/tenacity/EffectInterface.h
+   ../include/tenacity/Types.h
+   ../include/tenacity/ConfigInterface.h
+   ../include/tenacity/ModuleInterface.h
+   ../include/tenacity/PluginInterface.h
+   ../include/tenacity/ComponentInterface.h
+   ../include/tenacity/EffectAutomationParameters.h
 )
 
 #
@@ -1130,7 +1130,7 @@ if( CMAKE_SYSTEM_NAME MATCHES "Windows" )
 
    # Define the Windows specific resources
    list( APPEND WIN_RESOURCES
-      ../win/audacity.rc
+      ../win/tenacity.rc
    )
 
    # Copy over the wxWidgets DLLs
@@ -1177,6 +1177,7 @@ elseif( CMAKE_SYSTEM_NAME MATCHES "Darwin" )
    endif()
 
    # Define Mac specific resources
+   #TODO Remove Audacity from Mac resources
    list( APPEND MAC_RESOURCES
       ../mac/Resources/Audacity.icns
       ../mac/Resources/AudacityAIFF.icns
@@ -1228,7 +1229,7 @@ elseif( CMAKE_SYSTEM_NAME MATCHES "Darwin" )
       TARGET
          ${TARGET}
       COMMAND
-         ${CMAKE_COMMAND} -D SRC="${_EXEDIR}/Audacity"
+         ${CMAKE_COMMAND} -D SRC="${_EXEDIR}/Tenacity"
                           -D DST="${_PKGLIB}"
                           -D WXWIN="${_SHARED_PROXY_BASE_PATH}/$<CONFIG>"
                           -P ${AUDACITY_MODULE_PATH}/CopyLibs.cmake
@@ -1290,14 +1291,14 @@ else()
    endif()
 
    # Create the desktop file
-   configure_file( audacity.desktop.in ${_INTDIR}/audacity.desktop )
+   configure_file( audacity.desktop.in ${_INTDIR}/tenacity.desktop )
 
    # Copy the required wxWidgets libs into the bundle
    add_custom_command(
       TARGET
          ${TARGET}
       COMMAND
-         ${CMAKE_COMMAND} -D SRC="${_EXEDIR}/audacity"
+         ${CMAKE_COMMAND} -D SRC="${_EXEDIR}/tenacity"
                           -D DST="${_DEST}/${_PKGLIB}"
                           -D WXWIN="${_SHARED_PROXY_BASE_PATH}/$<CONFIG>"
                           -P ${AUDACITY_MODULE_PATH}/CopyLibs.cmake
@@ -1322,8 +1323,8 @@ source_group(
     PREFIX
         "CMake"
     FILES
-        ${_INTDIR}/CMakeFiles/Audacity.dir/cmake_pch.cxx
-        ${_INTDIR}/CMakeFiles/Audacity.dir/cmake_pch.hxx
+        ${_INTDIR}/CMakeFiles/Tenacity.dir/cmake_pch.cxx
+        ${_INTDIR}/CMakeFiles/Tenacity.dir/cmake_pch.hxx
 )
 
 # Define AUDACITY_DLL_API
@@ -1379,18 +1380,18 @@ else()
                DESTINATION "${_DATADIR}/applications" )
       install( FILES "${topdir}/LICENSE.txt" "${topdir}/README.md"
                DESTINATION "${_DATADIR}/doc/${AUDACITY_NAME}" )
-      install( FILES "${_SRCDIR}/audacity.xml"
+      install( FILES "${_SRCDIR}/tenacity.xml"
                DESTINATION "${_DATADIR}/mime/packages" )
       install( FILES "${topdir}/presets/EQDefaultCurves.xml"
                DESTINATION "${_PKGDATA}" )
-      install( PROGRAMS "${PROJECT_SOURCE_DIR}/linux/audacity.sh"
+      install( PROGRAMS "${PROJECT_SOURCE_DIR}/linux/tenacity.sh"
                DESTINATION "."
-               RENAME "audacity" )
+               RENAME "tenacity" )
    endif()
 endif()
 
 # collect dependency information for third party libraries
-list( APPEND GRAPH_EDGES "Audacity [shape=house]" )
+list( APPEND GRAPH_EDGES "Tenacity [shape=house]" )
 foreach( LIBRARY ${LIBRARIES} )
    if (NOT LIBRARY MATCHES "PUBLIC|PRIVATE|INTERFACE")
       canonicalize_node_name(LIBRARY "${LIBRARY}")

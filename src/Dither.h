@@ -10,7 +10,7 @@
 #ifndef __AUDACITY_DITHER_H__
 #define __AUDACITY_DITHER_H__
 
-#include "audacity/Types.h" // for samplePtr
+#include "tenacity/Types.h" // for samplePtr
 
 template< typename Enum > class EnumSetting;
 

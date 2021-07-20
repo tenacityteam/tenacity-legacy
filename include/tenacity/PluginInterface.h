@@ -6,7 +6,7 @@
 
    Leland Lucius
 
-   Copyright (c) 2014, Audacity Team 
+   Copyright (c) 2014, Audacity Team
    All rights reserved.
 
    Redistribution and use in source and binary forms, with or without
@@ -36,15 +36,15 @@
    LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
    ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
    POSSIBILITY OF SUCH DAMAGE.
-   
+
 **********************************************************************/
 
 #ifndef __AUDACITY_PLUGININTERFACE_H__
 #define __AUDACITY_PLUGININTERFACE_H__
 
-#include "audacity/ConfigInterface.h"
-#include "audacity/EffectInterface.h"
-#include "audacity/ComponentInterface.h"
+#include "tenacity/ConfigInterface.h"
+#include "tenacity/EffectInterface.h"
+#include "tenacity/ComponentInterface.h"
 
 
 class ModuleInterface;

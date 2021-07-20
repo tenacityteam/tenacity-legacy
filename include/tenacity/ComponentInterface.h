@@ -6,7 +6,7 @@
 
    Leland Lucius
 
-   Copyright (c) 2014, Audacity Team 
+   Copyright (c) 2014, Audacity Team
    All rights reserved.
 
    Redistribution and use in source and binary forms, with or without
@@ -36,14 +36,14 @@
    LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
    ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
    POSSIBILITY OF SUCH DAMAGE.
-   
+
 **********************************************************************/
 
 #ifndef __AUDACITY_COMPONENT_INTERFACE_H__
 #define __AUDACITY_COMPONENT_INTERFACE_H__
 
 #include "Identifier.h"
-#include "audacity/Types.h"
+#include "tenacity/Types.h"
 #include <wx/string.h> // member variables
 
 class ComponentInterfaceSymbol;
@@ -82,7 +82,7 @@ public:
    TranslatableString GetName();
 
    // Parameters, if defined.  false means no defined parameters.
-   virtual bool DefineParams( ShuttleParams & WXUNUSED(S) ){ return false;};   
+   virtual bool DefineParams( ShuttleParams & WXUNUSED(S) ){ return false;};
 };
 
 #endif // __AUDACITY_IDENTINTERFACE_H__

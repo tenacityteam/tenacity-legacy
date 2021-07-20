@@ -64,15 +64,15 @@ foreach( source ${SOURCES} )
    # Always make sure there's an empty English folder.  Otherwise, some menu
    # items will be translated to the next language listed in System
    # Preferences/Language & Text
-   if( CMAKE_SYSTEM_NAME MATCHES "Darwin" )
-      add_custom_command(
-         COMMAND
-            ${CMAKE_COMMAND} -E make_directory "${_DEST}/Resources/en.lproj"
-         OUTPUT
-            "${mo}"
-         APPEND
-      )
-   endif()
+#   if( CMAKE_SYSTEM_NAME MATCHES "Darwin" )
+#      add_custom_command(
+#         COMMAND
+#            ${CMAKE_COMMAND} -E make_directory "${_DEST}/Resources/en.lproj"
+#         OUTPUT
+#            "${mo}"
+#         APPEND
+#      )
+#   endif()
 
    list( APPEND OUTPUTS ${mo} )
 endforeach()

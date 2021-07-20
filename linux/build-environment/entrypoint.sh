@@ -2,9 +2,9 @@
 
 conan --version
 
-if [ ! -d "audacity" ]
+if [ ! -d "tenacity" ]
 then
-    git clone https://github.com/audacity/audacity
+    git clone https://github.com/tenacityteam/tenacity
 fi
 
 mkdir -p build
