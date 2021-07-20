@@ -1337,7 +1337,7 @@ bool AudacityApp::InitPart2() {
         temporarywindow.SetPosition(wndRect.GetTopLeft());
         // Centered on whichever screen it is on.
         temporarywindow.Center();
-        temporarywindow.SetTitle(_("Audacity is starting up..."));
+        temporarywindow.SetTitle(_("Tenacity is starting up..."));
         SetTopWindow(&temporarywindow);
         temporarywindow.Raise();
 
