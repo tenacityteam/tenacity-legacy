@@ -39,7 +39,7 @@ fi
 echo ";; Updating the .po files - Updating Project-Id-Version"
 for i in *.po; do
     sed -e '/^"Project-Id-Version:/c\
-    "Project-Id-Version: audacity 3.0.4\\n"' $i > TEMP; mv TEMP $i
+    "Project-Id-Version: tenacity 3.0.4\\n"' $i > TEMP; mv TEMP $i
 done
 echo ";; Updating the .po files"
 sed 's/.*/echo "msgmerge --lang=& &.po audacity.pot -o &.po";\
