@@ -1140,7 +1140,7 @@ if( CMAKE_SYSTEM_NAME MATCHES "Windows" )
       TARGET
          ${TARGET}
       COMMAND
-         ${CMAKE_COMMAND} -D SRC="${_EXEDIR}/Audacity.exe"
+         ${CMAKE_COMMAND} -D SRC="${_EXEDIR}/Tenacity.exe"
                           -D DST="${_EXEDIR}"
                           -D WXWIN="${_SHARED_PROXY_BASE_PATH}/$<CONFIG>/"
                           -P ${AUDACITY_MODULE_PATH}/CopyLibs.cmake
