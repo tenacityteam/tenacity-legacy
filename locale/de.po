@@ -24,12 +24,13 @@
 # valsu <valsu@hylia.de>, 2015
 # fossdd <fossdd@tutanota.com>, 2021.
 # Sebastian Rüth <sebirueth@gmx.de>, 2021.
+# Zero Dot <blindgrafix@googlemail.com>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: Audacity\n"
 "Report-Msgid-Bugs-To: audacity-translation@lists.sourceforge.net\n"
 "POT-Creation-Date: 2021-06-07 08:17-0400\n"
-"PO-Revision-Date: 2021-07-13 16:55+0000\n"
+"PO-Revision-Date: 2021-07-19 16:59+0000\n"
 "Last-Translator: Sebastian Rüth <sebirueth@gmx.de>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/tenacity/tenacity/"
 "de/>\n"
@@ -77,14 +78,14 @@ msgstr "System"
 
 #: libraries/lib-strings/UnusedStrings.h
 msgid "Problem Report for Audacity"
-msgstr "Problembericht für Audacity"
+msgstr "Problembericht für Tenacity"
 
 #: libraries/lib-strings/UnusedStrings.h
 msgid ""
 "Click \"Send\" to submit the report to Audacity. This information is "
 "collected anonymously."
 msgstr ""
-"Klicken Sie auf \"Senden\", um den Bericht an Audacity zu senden. Diese "
+"Klicken Sie auf \"Senden\", um den Bericht an Tenacity zu senden. Diese "
 "Informationen werden anonym erfasst."
 
 #: libraries/lib-strings/UnusedStrings.h
@@ -127,7 +128,7 @@ msgstr "Unbekannter Fehler"
 
 #: libraries/lib-strings/UnusedStrings.h
 msgid "Failed to send crash report"
-msgstr "Absturzbericht konnte nicht gesendet werden"
+msgstr "Der Absturzbericht konnte nicht gesendet werden"
 
 #. i18n-hint Scheme refers to a color scheme for spectrogram colors
 #: libraries/lib-strings/UnusedStrings.h
@@ -172,7 +173,7 @@ msgstr "&Überspringen"
 #: libraries/lib-strings/UnusedStrings.h
 msgctxt "update dialog"
 msgid "&Install update"
-msgstr "Update &installieren"
+msgstr "&Update installieren"
 
 #: libraries/lib-strings/UnusedStrings.h
 msgctxt "update dialog"
@@ -192,8 +193,7 @@ msgstr "Fehler bei der Suche nach Updates"
 #: libraries/lib-strings/UnusedStrings.h
 msgctxt "update dialog"
 msgid "Unable to connect to Audacity update server."
-msgstr ""
-"Es kann keine Verbindung zum Audacity-Update-Server hergestellt werden."
+msgstr "Es kann keine Verbindung zum Tenacity-Update-Server hergestellt werden."
 
 #: libraries/lib-strings/UnusedStrings.h
 msgctxt "update dialog"
@@ -208,14 +208,14 @@ msgstr "Fehler beim Herunterladen des Updates."
 #: libraries/lib-strings/UnusedStrings.h
 msgctxt "update dialog"
 msgid "Can't open the Audacity download link."
-msgstr "Der Download-Link von Audacity kann nicht geöffnet werden."
+msgstr "Der Download-Link von Tenacity kann nicht geöffnet werden."
 
 #. i18n-hint Substitution of version number for %s.
 #: libraries/lib-strings/UnusedStrings.h
 #, c-format
 msgctxt "update dialog"
 msgid "Audacity %s is available!"
-msgstr "Audacity %s ist verfügbar!"
+msgstr "Tenacity %s ist verfügbar!"
 
 #: modules/mod-null/ModNullCallback.cpp
 msgid "1st Experimental Command..."
@@ -875,7 +875,7 @@ msgstr "Buildtyp:"
 
 #: src/AboutDialog.cpp
 msgid "Compiler:"
-msgstr "Compiler:"
+msgstr "Kompilierer:"
 
 #. i18n-hint: The directory audacity is installed into (on *nix systems)
 #: src/AboutDialog.cpp
@@ -1117,7 +1117,7 @@ msgstr ""
 
 #: src/AudacityApp.cpp
 msgid "Reset Audacity Preferences"
-msgstr "Audacity-Einstellungen zurücksetzen"
+msgstr "Tenacity-Einstellungen zurücksetzen"
 
 #: src/AudacityApp.cpp
 #, c-format
@@ -1598,9 +1598,7 @@ msgstr "Wiedergabekanäle: %d\n"
 #: src/AudioIOBase.cpp
 #, c-format
 msgid "Low Recording Latency: %g\n"
-msgstr ""
-"Niedrige Aufnahmelatenz: %g\n"
-"\n"
+msgstr "Niedrige Aufnahmelatenz: %g\n"
 
 #: src/AudioIOBase.cpp
 #, c-format
@@ -1610,9 +1608,7 @@ msgstr "Niedrige Wiedergabelatenz: %g\n"
 #: src/AudioIOBase.cpp
 #, c-format
 msgid "High Recording Latency: %g\n"
-msgstr ""
-"Hohe Aufnahmelatenz: %g\n"
-"\n"
+msgstr "Hohe Aufnahmelatenz: %g\n"
 
 #: src/AudioIOBase.cpp
 #, c-format
@@ -1673,9 +1669,7 @@ msgstr "Verfügbare Aufnahmequellen:\n"
 
 #: src/AudioIOBase.cpp
 msgid "Available playback volumes:\n"
-msgstr ""
-"Verfügbare Wiedergabelautstärken:\n"
-"\n"
+msgstr "Verfügbare Wiedergabelautstärken:\n"
 
 #: src/AudioIOBase.cpp
 msgid "Recording volume is emulated\n"
@@ -2805,7 +2799,7 @@ msgstr "AUP3-Projektdateien"
 
 #: src/FileNames.cpp
 msgid "Dynamically Linked Libraries"
-msgstr "Dynamically Linked Libraries"
+msgstr "Dynamisch verknüpfte Bibliotheken (DLL)"
 
 #: src/FileNames.cpp
 msgid "Dynamic Libraries"
@@ -2914,7 +2908,7 @@ msgstr "Hz"
 
 #: src/FreqWindow.cpp
 msgid "Cursor:"
-msgstr "Cursor:"
+msgstr "Mauszeiger:"
 
 #: src/FreqWindow.cpp
 msgid "Peak:"
@@ -3912,8 +3906,8 @@ msgid ""
 "Directories Preferences."
 msgstr ""
 "Es ist nur noch sehr wenig Speicherplatz auf %s verfügbar.\n"
-"Bitte wählen Sie einen größeren temporären Verzeichnisort in den "
-"Verzeichniseinstellungen."
+"Bitte wählen Sie einen größeren temporären Verzeichnisort\n"
+"in den Verzeichniseinstellungen."
 
 #: src/ProjectAudioManager.cpp
 #, c-format
@@ -4274,9 +4268,9 @@ msgid ""
 "\n"
 "You will need to upgrade to open it."
 msgstr ""
-"Dieses Projekt wurde mit einer neueren Version von Audacity erstellt.\n"
+"Dieses Projekt wurde mit einer neueren Version von Tenacity erstellt.\n"
 "\n"
-"Sie müssen upgraden, um es öffnen zu können"
+"Sie müssen upgraden, um es öffnen zu können."
 
 #: src/ProjectFileIO.cpp
 msgid "Unable to initialize the project file"
@@ -4491,8 +4485,8 @@ msgid ""
 "\n"
 "%s"
 msgstr ""
-"Das Projekt konnte nicht geöffnet werden. Möglicherweise ist der Platz auf "
-"dem Datenträger unzureichend.\n"
+"Das Projekt konnte nicht geöffnet werden.\n"
+"Möglicherweise ist der Platz auf dem Datenträger unzureichend.\n"
 "\n"
 "%s"
 
@@ -4504,8 +4498,8 @@ msgid ""
 "\n"
 "%s"
 msgstr ""
-"Autospeicher-Information konnte nicht entfernt werden. Möglicherweise ist "
-"der Platz auf dem Datenträger unzureichend.\n"
+"Autospeicher-Information konnte nicht entfernt werden.\n"
+"Möglicherweise ist der Platz auf dem Datenträger unzureichend.\n"
 "\n"
 "%s"
 
@@ -4531,11 +4525,11 @@ msgid ""
 "It has been recovered to the last snapshot, but you must save it\n"
 "to preserve its contents."
 msgstr ""
-"Dieses Projekt wurde bei der letzten Audacity-Ausführung nicht korrekt "
+"Dieses Projekt wurde bei der letzten Tenacity-Ausführung nicht korrekt "
 "gespeichert.\n"
 "\n"
-"Es wurde bis zum letzten Snapshot wiederhergestellt. Sie müssen es aber "
-"speichern, um seine Inhalte zu bewahren."
+"Es wurde bis zum letzten Snapshot wiederhergestellt. \n"
+"Sie müssen es aber speichern, um seine Inhalte zu bewahren."
 
 #: src/ProjectFileManager.cpp
 msgid "Project Recovered"
@@ -4616,10 +4610,10 @@ msgid ""
 "'Save Project' is for an Audacity project, not an audio file.\n"
 "For an audio file that will open in other apps, use 'Export'.\n"
 msgstr ""
-"„Projekt speichern“ ist nicht für Audiodateien, sondern für Audacity-"
+"„Projekt speichern“ ist nicht für Audiodateien, sondern für Tenacity-"
 "Projekte.\n"
 "Um Audiodateien zu erhalten, die in anderen Anwendungen geöffnet werden "
-"können, \n"
+"können,\n"
 "verwenden Sie „Exportieren“.\n"
 
 #. i18n-hint: In each case, %s is the name
@@ -6038,7 +6032,7 @@ msgstr ""
 #: src/commands/AudacityCommand.cpp src/effects/Effect.cpp
 #: src/effects/nyquist/Nyquist.cpp src/prefs/PrefsPanel.cpp plug-ins/beat.ny
 msgid "Audacity"
-msgstr "Audacity"
+msgstr "Tenacity"
 
 #: src/commands/AudacityCommand.cpp src/effects/Effect.cpp
 #, c-format
@@ -8098,7 +8092,7 @@ msgstr ""
 "%s\n"
 "\n"
 "Weitere Informationen sind eventuell unter 'Hilfe > Diagnose > Protokoll "
-"anzeigen' verfügbar."
+"anzeigen' verfügbar"
 
 #: src/effects/EffectManager.cpp
 msgid "Effect failed to initialize"
@@ -12344,7 +12338,7 @@ msgid ""
 "files."
 msgstr ""
 "„%s“ ist eine Wiedergabeliste.\n"
-"Audacity kann diese Datei nicht öffnen, weil sie nur Verweise auf andere "
+"Tenacity kann diese Datei nicht öffnen, weil sie nur Verweise auf andere "
 "Dateien enthält.\n"
 "\n"
 "Diese Dateien können sie eventuell ausfindig machen,\n"
@@ -12565,13 +12559,13 @@ msgid ""
 "Use a version of Audacity prior to v3.0.0 to upgrade the project and then\n"
 "you may import it with this version of Audacity."
 msgstr ""
-"Dieses Projekt wurde von Audacity Version 1.0 oder früher gespeichert. Das "
-"Format hat sich geändert und diese Version von Audacity kann das Projekt "
+"Dieses Projekt wurde von Audacity Version 1.0 oder früher gespeichert.\n"
+"Das Format hat sich geändert und diese Version von Tenacity kann das Projekt "
 "nicht importieren.\n"
 "\n"
 "Verwenden Sie eine Audacity-Version vor 3.0.0, um das Projekt zu "
 "aktualisieren.\n"
-"Anschließend können Sie es mit dieser Version von Audacity importieren."
+"Anschließend können Sie es mit dieser Version von Tenacity importieren."
 
 #: src/import/ImportAUP.cpp
 msgid "Internal error in importer...tag not recognized"
@@ -14492,7 +14486,7 @@ msgstr "Cursor zu Projektende"
 
 #: src/menus/SelectMenus.cpp
 msgid "&Cursor"
-msgstr "&Cursor"
+msgstr "&Mauszeiger"
 
 #: src/menus/SelectMenus.cpp
 msgid "Cursor &Left"
@@ -15064,7 +15058,7 @@ msgstr "Bitte wählen Sie eine Stereospur oder zwei Monospuren aus."
 #: src/menus/TransportMenus.cpp
 #, c-format
 msgid "Please select at least %d channels."
-msgstr "Bitte wählen Sie mindestens % d-Kanäle aus."
+msgstr "Bitte wählen Sie mindestens %d-Kanäle aus."
 
 #: src/menus/TransportMenus.cpp
 msgid "Please select a time within a clip."
@@ -15747,7 +15741,7 @@ msgstr ""
 "Es sind Leerzeichen (Leerzeichen, Zeilenumbruch, Tabs oder Zeilenvorschübe) "
 "in einem der Elemente vorhanden. Sie werden voraussichtlich die "
 "Musterübereinstimmung verhindern. Außer, Sie wissen was Sie tun, wird es "
-"empfohlen, Leerzeichen zu kürzen. Soll Audacity die Leerzeichen für Sie "
+"empfohlen, Leerzeichen zu kürzen. Soll Tenacity die Leerzeichen für Sie "
 "kürzen?"
 
 #: src/prefs/ExtImportPrefs.cpp
@@ -20664,7 +20658,7 @@ msgid ""
 "Daulton"
 msgstr ""
 "Erzeugt mit <span>Sample-Datenexport</span> für\n"
-"<a href=\"~a\">Audacity</a> von Steve\n"
+"<a href=\"~a\">Tenacity</a> von Steve\n"
 "Daulton"
 
 #: plug-ins/sample-data-export.ny
