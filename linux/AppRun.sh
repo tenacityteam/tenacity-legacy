@@ -9,7 +9,7 @@ fi
 
 export LD_LIBRARY_PATH="${APPDIR}/lib:${LD_LIBRARY_PATH}"
 
-export AUDACITY_PATH="${AUDACITY_PATH}:${APPDIR}/share/audacity"
+export AUDACITY_PATH="${AUDACITY_PATH}:${APPDIR}/share/tenacity"
 export AUDACITY_MODULES_PATH="${AUDACITY_MODULES_PATH}:${APPDIR}/lib/modules"
 
 function help()
@@ -40,7 +40,7 @@ case "$1" in
     exec less "${APPDIR}/share/doc/tenacity/LICENSE.txt"
     ;;
 --man|--manual|--manpage )
-    exec man "${APPDIR}/share/man/man1/audacity.1"
+    exec man "${APPDIR}/share/man/man1/tenacity.1"
     ;;
 --check-depends|--check-dependencies )
     exec bash "${APPDIR}/bin/check_dependencies"
