@@ -686,7 +686,7 @@ void AboutDialog::PopulateCreditsList() {
     AddCredit(wxT("Dmitry Vedenko"), prefork_developerFormat, rolePreforkTeamMember);
 
 
-    //The Prefork Emertitus section
+    // The Prefork Emertitus section
     AddCredit(wxT("Gale Andrews"), prefork_qualityAssuranceFormat, rolePreforkEmeritusTeam);
     AddCredit(wxT("Richard Ash"), prefork_developerFormat, rolePreforkEmeritusTeam);
     AddCredit(wxT("Christian Brochec"), prefork_documentationAndSupportFrenchFormat, rolePreforkEmeritusTeam);
@@ -762,7 +762,7 @@ void AboutDialog::PopulateCreditsList() {
     AddCredit(wxT("Shinta Carolinasari"), prefork_webDeveloperFormat, rolePreforkGraphics);
     AddCredit(wxT("Bayu Rizaldhan Rayes"), prefork_graphicsFormat, rolePreforkGraphics);
 
-    //Prefork Thanks
+    // Prefork Thanks
     AddCredit(wxT("Dave Beydler"), rolePreforkThanks);
     AddCredit(wxT("Brian Cameron"), rolePreforkThanks);
     AddCredit(wxT("Jason Cohen"), rolePreforkThanks);
@@ -787,7 +787,7 @@ void AboutDialog::PopulateCreditsList() {
 }
 
 wxImage AboutDialog::GenerateTenacityLogoRescaledImage(const float fScale) {
-    //v For now, change to AudacityLogoWithName via old-fashioned way, not Theme.
+    // v For now, change to AudacityLogoWithName via old-fashioned way, not Theme.
     wxBitmap logo(AudacityLogoWithName_xpm); //v
 
     // JKC: Resize to 50% of size.  Later we may use a smaller xpm as
