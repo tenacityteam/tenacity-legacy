@@ -121,7 +121,7 @@ void EditCursorOverlay::Draw(OverlayPanel &panel, wxDC &dc)
    }
    else if (auto ruler = dynamic_cast<AdornedRulerPanel*>(&panel)) {
       wxASSERT(!mIsMaster);
-      dc.SetPen(*wxBLACK_PEN);
+      AColor::CursorColor(&dc);
       // AColor::Line includes both endpoints so use GetBottom()
       auto rect = ruler->GetInnerRect();
       AColor::Line(dc, mLastCursorX, rect.GetTop(), mLastCursorX, rect.GetBottom());
