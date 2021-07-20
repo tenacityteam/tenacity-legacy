@@ -79,9 +79,9 @@ linuxdeploy --list-plugins
 #============================================================================
 
 ln -sf --no-dereference . "${appdir}/usr"
-ln -sf share/applications/audacity.desktop "${appdir}/audacity.desktop"
-ln -sf share/icons/hicolor/scalable/apps/audacity.svg "${appdir}/audacity.svg"
-ln -sf share/icons/hicolor/scalable/apps/audacity.svg "${appdir}/.DirIcon"
+ln -sf share/applications/tenacity.desktop "${appdir}/tenacity.desktop"
+ln -sf share/icons/hicolor/scalable/apps/tenacity.svg "${appdir}/tenacity.svg"
+ln -sf share/icons/hicolor/scalable/apps/tenacity.svg "${appdir}/.DirIcon"
 
 #============================================================================
 # Bundle dependencies
@@ -89,7 +89,7 @@ ln -sf share/icons/hicolor/scalable/apps/audacity.svg "${appdir}/.DirIcon"
 
 # HACK: Some wxWidget libraries depend on themselves. Add
 # them to LD_LIBRARY_PATH so that linuxdeploy can find them.
-export LD_LIBRARY_PATH="${appdir}/usr/lib/audacity:${LD_LIBRARY_PATH-}"
+export LD_LIBRARY_PATH="${appdir}/usr/lib/tenacity:${LD_LIBRARY_PATH-}"
 
 linuxdeploy --appdir "${appdir}" # add all shared library dependencies
 

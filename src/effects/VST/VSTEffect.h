@@ -12,9 +12,9 @@
 
 #if USE_VST
 
-#include "audacity/EffectInterface.h"
-#include "audacity/ModuleInterface.h"
-#include "audacity/PluginInterface.h"
+#include "tenacity/EffectInterface.h"
+#include "tenacity/ModuleInterface.h"
+#include "tenacity/PluginInterface.h"
 
 #include "../../SampleFormat.h"
 #include "../../xml/XMLTagHandler.h"

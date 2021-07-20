@@ -1417,7 +1417,7 @@ void ProjectFileIO::SetProjectTitle(int number)
    if (number >= 0)
    {
       name =
-      /* i18n-hint: The %02i is the project number, the %s is the project name.*/
+      /* i18n-hint: The %02i is the project number. This is followed by the project name in quotes as a %s.*/
       XO("[Project %02i] Audacity \"%s\"")
          .Format( number + 1,
                  name.empty() ? XO("<untitled>") : Verbatim((const char *)name))
@@ -1426,7 +1426,7 @@ void ProjectFileIO::SetProjectTitle(int number)
    // If we are not showing numbers, then <untitled> shows as 'Audacity'.
    else if (name.empty())
    {
-      name = _TS("Audacity");
+      name = XO("Audacity").Translation();
    }
 
    if (mRecovered)

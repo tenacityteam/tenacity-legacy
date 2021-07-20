@@ -1,10 +1,9 @@
 /**********************************************************************
 
-  Audacity: A Digital Audio Editor
+  Tenacity: A Digital Audio Editor
 
   Wrapper.c
 
-  Audacity(R) is copyright (c) 2020-2020 Audacity Team.
   License: GPL v2.  See License.txt.
 
 *******************************************************************//**
@@ -28,7 +27,7 @@ executable.
 #include <string.h>
 #include <unistd.h>
 
-static const char audacity[] = "Audacity";
+static const char audacity[] = "Tenacity";
 extern char **environ;
 
 int main(int argc, char *argv[])

@@ -17,8 +17,8 @@
 #include <map>
 #include <memory>
 
-#include "audacity/EffectInterface.h"
-#include "audacity/PluginInterface.h"
+#include "tenacity/EffectInterface.h"
+#include "tenacity/PluginInterface.h"
 
 class wxArrayString;
 class FileConfig;

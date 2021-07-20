@@ -6,8 +6,13 @@
 #include <memory>
 #include <new> // align_val_t and hardware_destructive_interference_size
 #include <cstdlib> // Needed for free.
+
 #ifndef safenew
 #define safenew new
+#endif
+
+#ifndef safedelete
+#define safedelete(x) if(x != NULL){ delete x; x = NULL;}
 #endif
 
 #include <functional>

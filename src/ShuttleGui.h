@@ -621,6 +621,14 @@ enum
    eCloseID       = wxID_CANCEL
 };
 
+enum
+{
+    // Prop() sets the proportion value, defined as in wxSizer::Add().
+    // These are enum values for representing the magic values better
+    MINIMUM_PROPORTION = 0,
+    GROWING_PROPORTION = 1
+};
+
 AUDACITY_DLL_API std::unique_ptr<wxSizer> CreateStdButtonSizer( wxWindow *parent,
                                long buttons = eOkButton | eCancelButton,
                                wxWindow *extra = NULL );
@@ -722,7 +730,7 @@ public:
 
    // Prop() sets the proportion value, defined as in wxSizer::Add().
    ShuttleGui & Prop( int iProp ){ ShuttleGuiBase::Prop(iProp); return *this;}; // Has to be here too, to return a ShuttleGui and not a ShuttleGuiBase.
-
+   
    ShuttleGui & Style( long iStyle )
    {
       std::move( mItem ).Style( iStyle );

@@ -431,7 +431,7 @@ void OnMenuTree(const CommandContext &context)
 
 void OnCheckForUpdates(const CommandContext &WXUNUSED(context))
 {
-   ::OpenInDefaultBrowser("https://github.com/cookiengineer/audacity/releases");
+   ::OpenInDefaultBrowser("https://github.com/tenacityteam/tenacity/releases");
 }
 
 void OnAbout(const CommandContext &context)
@@ -446,8 +446,7 @@ void OnAbout(const CommandContext &context)
    auto &window = GetProjectFrame( project );
 
    // Windows and Linux still modal.
-   AboutDialog dlog( &window );
-   dlog.ShowModal();
+   AboutDialog(&window).ShowModal();
 #endif
 }
 
