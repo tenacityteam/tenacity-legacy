@@ -945,12 +945,12 @@ void AboutDialog::GeneratePreforkWebsiteInfo(wxTextOutputStream& tos) {
     tos << wxT("<br>DarkTenacity website: [[https://tenacityaudio.org/|https://tenacityaudio.org/]]");
 #else
     tos << wxT("<p><br>&nbsp; &nbsp; ")
-        /* i18n-hint Tenacity's name substitutes for first and third %s,
-         and a "copyright" symbol for the second */
-        << XO("%s software is copyright %s 1999-2021 %s Team.")
+        /* i18n-hint Tenacity's name substitutes for first and fourth %s, and the second and third %s are the copyright symbol and final year of copyright*/
+        << XO("%s %s 1999-%s %s contributors")
         .Format(
             Verbatim("<b>%s</b>").Format(ProgramName),
             wxT("&copy;"),
+            wxT("2021"),
             ProgramName)
         << wxT("<br>");
 #endif
