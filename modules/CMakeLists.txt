@@ -17,7 +17,7 @@ foreach( MODULE ${MODULES} )
 endforeach()
 
 if( NOT CMAKE_SYSTEM_NAME MATCHES "Darwin" )
-   if( NOT "${CMAKE_GENERATOR}" MATCHES "Visual Studio*")
+   if( NOT WIN32)
       install( DIRECTORY "${_DEST}/modules"
                DESTINATION "${_PKGLIB}" )
    endif()
