@@ -1033,9 +1033,9 @@ bool AudacityApp::OnInit() {
 
  // DA: App name
 #ifndef EXPERIMENTAL_DA
-    wxString appName = wxT("Audacity");
+    wxString appName = wxT("Tenacity");
 #else
-    wxString appName = wxT("DarkAudacity");
+    wxString appName = wxT("DarkTenacity");
 #endif
 
     wxTheApp->SetAppName(appName);
@@ -1286,7 +1286,7 @@ bool AudacityApp::InitPart2() {
     }
 
     if (parser->Found(wxT("v"))) {
-        wxPrintf("Audacity v%s\n", AUDACITY_VERSION_STRING);
+        wxPrintf("Tenacity v%s\n", AUDACITY_VERSION_STRING);
         exit(0);
     }
 
@@ -1363,7 +1363,7 @@ bool AudacityApp::InitPart2() {
         fileMenu->Append(wxID_NEW, wxString(_("&New")) + wxT("\tCtrl+N"));
         fileMenu->Append(wxID_OPEN, wxString(_("&Open...")) + wxT("\tCtrl+O"));
         fileMenu->AppendSubMenu(urecentMenu.release(), _("Open &Recent..."));
-        fileMenu->Append(wxID_ABOUT, _("&About Audacity..."));
+        fileMenu->Append(wxID_ABOUT, _("&About Tenacity..."));
         fileMenu->Append(wxID_PREFERENCES, wxString(_("&Preferences...")) + wxT("\tCtrl+,"));
 
         {
