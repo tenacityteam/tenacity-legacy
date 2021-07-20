@@ -1,6 +1,6 @@
 [![Tenacity](https://raw.githubusercontent.com/tenacityteam/assets/master/PNG/tenacity-logo-dark-readme.png)](https://tenacityaudio.org)
 
-[![Chat on IRC](https://badgen.net/badge/irc/%23tenacity/green)](https://web.libera.chat/gamja/?channels=tenacity)
+[![Chat on IRC](https://badgen.net/badge/irc/%23tenacity/green)](https://web.libera.chat/gamja/?channels=#tenacity)
 [![License](https://badgen.net/badge/license/GPLv2/blue)](LICENSE.txt)
 [![Open issues](https://badgen.net/github/open-issues/tenacityteam/tenacity)](https://github.com/tenacityteam/tenacity/issues)
 [![GitHub builds](https://badgen.net/github/checks/tenacityteam/tenacity/master?label=github)](https://github.com/tenacityteam/tenacity/actions?query=branch%3Amaster)
