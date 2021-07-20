@@ -2,9 +2,9 @@
 
 conan --version
 
-if [ ! -d "audacity" ]
+if [ ! -d "tenacity" ]
 then
-    git clone https://github.com/audacity/audacity
+    git clone https://github.com/tenacityteam/tenacity
 fi
 
 mkdir -p build
@@ -41,7 +41,7 @@ cmake_options=(
     -Daudacity_use_curl=system
 )
 
-cmake "${cmake_options[@]}" ../audacity
+cmake "${cmake_options[@]}" ../tenacity
 
 exit_status=$?
 

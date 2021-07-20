@@ -4,12 +4,10 @@
 
   AboutDialog.h
 
-  Dominic Mazzoni
-
 **********************************************************************/
 
-#ifndef __AUDACITY_ABOUT_DLG__
-#define __AUDACITY_ABOUT_DLG__
+#ifndef TENACITY_ABOUT_DLG
+#define TENACITY_ABOUT_DLG
 
 #include <vector>
 #include "widgets/wxPanelWrapper.h" // to inherit
@@ -19,56 +17,71 @@ class wxTextOutputStream;
 
 class ShuttleGui;
 
-struct AboutDialogCreditItem {
-   AboutDialogCreditItem( TranslatableString str, int r )
-      : description{ std::move( str ) }, role{ r }
-   {}
-   TranslatableString description;
-   int role;
+struct AboutDialogCreditItem
+{
+    AboutDialogCreditItem(TranslatableString str, int r) : description{std::move(str)},
+        role{r}{ }
+    TranslatableString description;
+    int role;
 };
 
 using AboutDialogCreditItemsList = std::vector<AboutDialogCreditItem>;
 
-class AUDACITY_DLL_API AboutDialog final : public wxDialogWrapper {
-   DECLARE_DYNAMIC_CLASS(AboutDialog)
+class AUDACITY_DLL_API AboutDialog final : public wxDialogWrapper{
+    DECLARE_DYNAMIC_CLASS(AboutDialog)
 
- public:
-   AboutDialog(wxWindow * parent);
-   virtual ~ AboutDialog();
+    public:
 
-   static AboutDialog *ActiveIntance();
+    AboutDialog() : AboutDialog(nullptr){};
+    AboutDialog(wxWindow * parent);
+    virtual ~AboutDialog();
+    void OnOK(wxCommandEvent& event);
 
-   void OnOK(wxCommandEvent & event);
+    DECLARE_EVENT_TABLE()
 
-   wxStaticBitmap *icon;
+    private:
 
-   DECLARE_EVENT_TABLE()
+    wxStaticBitmap* icon;
 
- private:
-   enum Role {
-      roleTeamMember,
-      roleEmeritusTeam,
-      roleDeceased,
-      roleContributor,
-      roleGraphics,
-      roleLibrary,
-      roleThanks
-   };
+    enum Role
+    {
+        roleTenacityTeamMember,
+        rolePreforkTeamMember,
+        rolePreforkEmeritusTeam,
+        rolePreforkDeceased,
+        rolePreforkContributor,
+        rolePreforkGraphics,
+        roleLibrary,
+        rolePreforkThanks
+    };
 
-   AboutDialogCreditItemsList creditItems;
-   void PopulateAudacityPage( ShuttleGui & S );
-   void PopulateLicensePage( ShuttleGui & S );
-   void PopulateInformationPage (ShuttleGui & S );
+    AboutDialogCreditItemsList creditItems;
+    void CreateTenacityTab(ShuttleGui & S);
+    void CreateLicenseTab(ShuttleGui & S);
+    void CreateInformationTab(ShuttleGui & S);
 
-   void CreateCreditsList();
-   void AddCredit( const wxString &name, Role role );
-   void AddCredit( const wxString &name, TranslatableString format, Role role );
-   wxString GetCreditsByRole(AboutDialog::Role role);
+    static wxImage GenerateTenacityLogoRescaledImage(const float fScale);
+    void GenerateTenacityPageDescription(wxTextOutputStream & tos);
+    void GenerateTenacityTeamMembersInfo(wxTextOutputStream & tos);
+    void GenerateTenacityLibsInfo(wxTextOutputStream & tos);
 
-   void AddBuildinfoRow( wxTextOutputStream *str, const wxChar * libname,
-      const TranslatableString &libdesc, const TranslatableString &status);
-   void AddBuildinfoRow( wxTextOutputStream *str,
-      const TranslatableString &description, const wxChar *spec);
+    void GeneratePreforkTeamMembersInfo(wxTextOutputStream & tos);
+    void GeneratePreforkEmeritusInfo(wxTextOutputStream & tos);
+    void GeneratePreforkContributorInfo(wxTextOutputStream & tos);
+    void GeneratePreforkGraphicsInfo(wxTextOutputStream & tos);
+    void GeneratePreforkTranslatorsInfo(wxTextOutputStream & tos);
+    void GeneratePreforkSpecialThanksInfo(wxTextOutputStream & tos);
+    void GeneratePreforkWebsiteInfo(wxTextOutputStream & tos);
+
+    void PopulateCreditsList();
+    void AddCredit(const wxString & name, Role role);
+    void AddCredit(const wxString & name, TranslatableString format, Role role);
+    wxString GetCreditsByRole(Role role);
+
+    static void AddBuildInfoRow(wxTextOutputStream * str, const wxChar * libname,
+                                const TranslatableString & libdesc, const TranslatableString & status);
+    static void AddBuildInfoRow(wxTextOutputStream * str,
+                                const TranslatableString & description, const wxChar * spec);
 };
 
 #endif
