@@ -3,7 +3,7 @@
 [![Chat on IRC](https://badgen.net/badge/irc/%23tenacity/green)](https://web.libera.chat/gamja/?channels=#tenacity)
 [![License](https://badgen.net/badge/license/GPLv2/blue)](LICENSE.txt)
 [![Open issues](https://badgen.net/github/open-issues/tenacityteam/tenacity)](https://github.com/tenacityteam/tenacity/issues)
-[![GitHub builds](https://badgen.net/github/checks/tenacityteam/tenacity/master?label=github)](https://github.com/tenacityteam/tenacity/actions?query=branch%3Amaster)
+[![GitHub builds](https://badgen.net/github/status/tenacityteam/tenacity)](https://github.com/tenacityteam/tenacity/actions?query=branch%3Amaster)
 [![builds.sr.ht](https://builds.sr.ht/~tenacity/tenacity/commits/.svg)](https://builds.sr.ht/~tenacity/tenacity/commits/?)
 [![Translation status](https://hosted.weblate.org/widgets/tenacity/-/tenacity/svg-badge.svg)](https://hosted.weblate.org/engage/tenacity/)
 [![Donators](https://opencollective.com/tenacity/tiers/badge.svg)](https://opencollective.com/tenacity#category-CONTRIBUTE)
