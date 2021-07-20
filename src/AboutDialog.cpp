@@ -949,16 +949,10 @@ void AboutDialog::GeneratePreforkWebsiteInfo(wxTextOutputStream& tos) {
          and a "copyright" symbol for the second */
         << XO("%s software is copyright %s 1999-2021 %s Team.")
         .Format(
-            Verbatim("<b>%s<sup>&reg;</sup></b>").Format(ProgramName),
+            Verbatim("<b>%s</b>").Format(ProgramName),
             wxT("&copy;"),
             ProgramName)
-        << wxT("<br>")
-
-        << wxT("&nbsp; &nbsp; ")
-        /* i18n-hint Tenacity's name substitutes for %s */
-        << XO("The name %s is a registered trademark.")
-        .Format(Verbatim("<b>%s</b>").Format(ProgramName))
-        << wxT("<br><br>");
+        << wxT("<br>");
 #endif
 }
 
