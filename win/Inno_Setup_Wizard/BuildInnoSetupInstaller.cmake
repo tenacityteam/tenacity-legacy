@@ -50,7 +50,7 @@ file(COPY "${SOURCE_DIR}/presets" DESTINATION "${OUTPUT_DIR}/Additional")
 
 file(COPY 
         "${SOURCE_DIR}/LICENSE.txt"
-        "${SOURCE_DIR}/README.txt"
+        "${SOURCE_DIR}/README.md"
         "${SOURCE_DIR}/win/audacity.ico"
     DESTINATION 
         "${OUTPUT_DIR}/Additional"
