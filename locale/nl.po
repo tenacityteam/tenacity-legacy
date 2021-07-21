@@ -8,19 +8,22 @@
 # Thomas De Rocker, 2012-2013
 # Thomas De Rocker, 2013-2021
 # Tino Meinen <a.t.meinen@chello.nl>, 2002-2008
+# fossdd <fossdd@tutanota.com>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: audacity 3.0.4\n"
 "Report-Msgid-Bugs-To: emabrey@tenacityaudio.org\n"
 "POT-Creation-Date: 2021-07-20 03:55-0400\n"
-"PO-Revision-Date: 2021-06-08 14:11+0000\n"
-"Last-Translator: Thomas De Rocker\n"
-"Language-Team: Dutch (http://www.transifex.com/klyok/audacity/language/nl/)\n"
+"PO-Revision-Date: 2021-07-21 10:56+0000\n"
+"Last-Translator: fossdd <fossdd@tutanota.com>\n"
+"Language-Team: Dutch <https://hosted.weblate.org/projects/tenacity/tenacity/"
+"nl/>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.7.2-dev\n"
 
 #: libraries/lib-strings/FutureStrings.h
 msgctxt "update dialog"
@@ -83,10 +86,9 @@ msgstr "Audacity %s is beschikbaar!"
 #. to one of them (one is enough)
 #. i18n-hint: modifier as in "Recording preferences", not progressive verb
 #: libraries/lib-strings/FutureStrings.h
-#, fuzzy
 msgctxt "preference"
 msgid "Recording"
-msgstr "Opnemen"
+msgstr "Opname"
 
 #: libraries/lib-strings/Internat.cpp
 msgid "Unable to determine"
@@ -704,15 +706,15 @@ msgstr "%s, afbeeldingen"
 
 #. i18n-hint: For "About Tenacity..." credits, substituting a person's proper name
 #: src/AboutDialog.cpp
-#, fuzzy, c-format
+#, c-format
 msgid "%s, lead Tenacity developer"
-msgstr "%s, web-ontwikkelaar"
+msgstr "%s, hoofd ontwikkelaar van Tenacity"
 
 #. i18n-hint: For "About Tenacity..." credits, substituting a person's proper name
 #: src/AboutDialog.cpp
-#, fuzzy, c-format
+#, c-format
 msgid "%s, Tenacity developer"
-msgstr "%s, web-ontwikkelaar"
+msgstr "%s, ontwikkelaar van Tenacity"
 
 #: src/AboutDialog.cpp
 #, c-format
@@ -734,7 +736,6 @@ msgid "Credits"
 msgstr "Met dank aan"
 
 #: src/AboutDialog.cpp
-#, fuzzy
 msgid "DarkTenacity Customisation"
 msgstr "DarkAudacity-aanpassing"
 
@@ -970,9 +971,8 @@ msgid "Block size must be within 256 to 100000000\n"
 msgstr "Blokgrootte moet liggen tussen 256 en 100 000 000\n"
 
 #: src/AudacityApp.cpp
-#, fuzzy
 msgid "Tenacity is starting up..."
-msgstr "Audacity is aan het starten..."
+msgstr "Tenacity is aan het starten..."
 
 #. i18n-hint: "New" is an action (verb) to create a NEW project
 #: src/AudacityApp.cpp src/BatchProcessDialog.cpp src/menus/FileMenus.cpp
@@ -989,9 +989,8 @@ msgid "Open &Recent..."
 msgstr "Recent openen..."
 
 #: src/AudacityApp.cpp
-#, fuzzy
 msgid "&About Tenacity..."
-msgstr "Over Audacity…"
+msgstr "Over Tenacity…"
 
 #: src/AudacityApp.cpp
 msgid "&Preferences..."
@@ -2578,9 +2577,9 @@ msgid "Specify New Filename:"
 msgstr "Voer nieuwe bestandsnaam in:"
 
 #: src/FileNames.cpp
-#, fuzzy, c-format
+#, c-format
 msgid "Directory %s does not have write permissions"
-msgstr "De map %s bestaat niet. Aanmaken?"
+msgstr "De map %s heeft geen schrijfrechten"
 
 #: src/FreqWindow.cpp
 msgid "Frequency Analysis"
@@ -2654,14 +2653,12 @@ msgid "Hz"
 msgstr "Hz"
 
 #: src/FreqWindow.cpp
-#, fuzzy
 msgid "Scroll Horizontal"
-msgstr "Horizontaal"
+msgstr "Horizontaal scroll"
 
 #: src/FreqWindow.cpp
-#, fuzzy
 msgid "Zoom Horizontal"
-msgstr "Horizontaal"
+msgstr "Horizontaal zoomen"
 
 #: src/FreqWindow.cpp
 msgid "Cursor:"
@@ -13882,9 +13879,8 @@ msgstr "Werkbalken"
 
 #. i18n-hint: (verb)
 #: src/menus/ToolbarMenus.cpp
-#, fuzzy
 msgid "Edit &Mode (on/off)"
-msgstr "Extra menu's (aan/uit)"
+msgstr "Bewerk &Mode (aan/uit)"
 
 #: src/menus/ToolbarMenus.cpp
 msgid "Reset Toolb&ars"
