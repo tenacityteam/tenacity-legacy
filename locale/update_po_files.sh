@@ -1,8 +1,8 @@
 #!/bin/sh
 # Run this script with locale as the current directory
 set -o errexit
-echo ";; Recreating audacity.pot using .h, .cpp and .mm files"
-for path in ../modules/mod-* ../libraries/lib-* ../include ../src ../crashreports ; do
+echo ";; Recreating tenacity.pot using .h, .cpp and .mm files"
+for path in ../modules/mod-* ../libraries/lib-* ../include ../src ; do
    find $path -name \*.h -o -name \*.cpp -o -name \*.mm
 done | LANG=c sort | \
 sed -E 's/\.\.\///g' |\
@@ -17,13 +17,13 @@ xargs xgettext \
 --package-name="tenacity" \
 --package-version='3.0.3' \
 --msgid-bugs-address="emabrey@tenacityaudio.org" \
---add-location=file -L C -o audacity.pot
-echo ";; Adding nyquist files to audacity.pot"
+--add-location=file -L C -o tenacity.pot
+echo ";; Adding nyquist files to tenacity.pot"
 for path in ../plug-ins ; do find $path -name \*.ny -not -name rms.ny; done | LANG=c sort | \
 sed -E 's/\.\.\///g' |\
 xargs xgettext \
 --no-wrap \
---default-domain=audacity \
+--default-domain=tenacity \
 --directory=.. \
 --keyword=_ --keyword=_C:1,2c --keyword=ngettext:1,2 --keyword=ngettextc:1,2,4c \
 --add-comments=" i18n" \
@@ -32,7 +32,7 @@ xargs xgettext \
 --package-name="tenacity" \
 --package-version='3.0.4' \
 --msgid-bugs-address="emabrey@tenacityaudio.org" \
---add-location=file -L Lisp -j -o audacity.pot
+--add-location=file -L Lisp -j -o tenacity.pot
 if test "${AUDACITY_ONLY_POT:-}" = 'y'; then
     return 0
 fi
@@ -42,8 +42,8 @@ for i in *.po; do
     "Project-Id-Version: tenacity 3.0.4\\n"' $i > TEMP; mv TEMP $i
 done
 echo ";; Updating the .po files"
-sed 's/.*/echo "msgmerge --lang=& &.po audacity.pot -o &.po";\
-msgmerge --no-wrap --lang=& &.po audacity.pot -o &.po;/g' LINGUAS | bash
+sed 's/.*/echo "msgmerge --lang=& &.po tenacity.pot -o &.po";\
+msgmerge --no-wrap --lang=& &.po tenacity.pot -o &.po;/g' LINGUAS | bash
 echo ";; Removing '#~|' (which confuse Windows version of msgcat)"
 for i in *.po; do
     sed '/^#~|/d' $i > TEMP; mv TEMP $i
@@ -51,5 +51,5 @@ done
 echo ""
 echo ";;Translation updated"
 echo ""
-head -n 11 audacity.pot | tail -n 3
-wc -l audacity.pot
+head -n 11 tenacity.pot | tail -n 3
+wc -l tenacity.pot
