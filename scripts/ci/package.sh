@@ -9,8 +9,11 @@ cd build
 if [[ "${OSTYPE}" == msys* && ${GIT_BRANCH} == release* ]]; then # Windows
     cmake --build . --target innosetup --config "${AUDACITY_BUILD_TYPE}"
 else
-    SCRIPT_DIR=$(dirname "$0")
-    cpack -C "${AUDACITY_BUILD_TYPE}" -D CPACK_COMMAND_HDIUTIL="${SCRIPT_DIR}/macos/repeat_hdiutil.sh" --verbose
+   # This will break if you move this script to a different directory
+   # because this searches for the current script's directory and the
+   # path is relative to that absolute path.
+   SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+   cpack -C "${AUDACITY_BUILD_TYPE}" -D CPACK_COMMAND_HDIUTIL="${SCRIPT_DIR}/macos/repeat_hdiutil.sh" --verbose
 fi
 
 # Remove the temporary directory
