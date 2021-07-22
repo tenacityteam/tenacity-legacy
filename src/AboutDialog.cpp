@@ -223,7 +223,6 @@ void AboutDialog::CreateInformationTab(ShuttleGui& AboutDialogGUI) {
         << XO("The Build")
         << wxT("</h3>\n<table>"); // start build info table
 
-    AddBuildInfoRow(&informationStr, XO("Program build date:"), __TDATE__);
     AddBuildInfoRow(&informationStr, XO("Commit Id:"), REV_IDENT);
     AddBuildInfoRow(&informationStr, XO("Build type:"), getBuildType().Translation());
     AddBuildInfoRow(&informationStr, XO("Compiler:"), getCompilerVersion());
