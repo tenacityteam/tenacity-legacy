@@ -46,12 +46,13 @@ class AUDACITY_DLL_API AboutDialog final : public wxDialogWrapper{
     enum Role
     {
         roleTenacityTeamMember,
+        roleThanks,
+        roleLibrary,
         rolePreforkTeamMember,
         rolePreforkEmeritusTeam,
         rolePreforkDeceased,
         rolePreforkContributor,
         rolePreforkGraphics,
-        roleLibrary,
         rolePreforkThanks
     };
 
@@ -63,6 +64,7 @@ class AUDACITY_DLL_API AboutDialog final : public wxDialogWrapper{
     static wxImage GenerateTenacityLogoRescaledImage(const float fScale);
     void GenerateTenacityPageDescription(wxTextOutputStream & tos);
     void GenerateTenacityTeamMembersInfo(wxTextOutputStream & tos);
+    void GenerateSpecialThanksInfo(wxTextOutputStream & tos);
     void GenerateTenacityLibsInfo(wxTextOutputStream & tos);
 
     void GeneratePreforkTeamMembersInfo(wxTextOutputStream & tos);
