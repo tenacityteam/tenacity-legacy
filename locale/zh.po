@@ -15,9 +15,10 @@ msgstr ""
 "Project-Id-Version: audacity 3.0.3\n"
 "Report-Msgid-Bugs-To: emabrey@tenacityaudio.org\n"
 "POT-Creation-Date: 2021-07-20 03:55-0400\n"
-"PO-Revision-Date: 2021-07-21 07:29+0000\n"
-"Last-Translator: Liu Tao <lyuutau@outlook.com>\n"
-"Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/tenacity/tenacity/zh_Hans/>\n"
+"PO-Revision-Date: 2021-07-22 02:43+0000\n"
+"Last-Translator: Eric <spice2wolf@gmail.com>\n"
+"Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
+"tenacity/tenacity/zh_Hans/>\n"
 "Language: zh\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1081,6 +1082,10 @@ msgid ""
 "This is likely due to a resource shortage\n"
 "and a reboot may be required."
 msgstr ""
+"无法获取信号量。\n"
+"\n"
+"可能原因是资源不足，\n"
+"也许需要重启一次。"
 
 #: src/AudacityApp.cpp
 msgid "Audacity Startup Failure"
@@ -1117,6 +1122,10 @@ msgid ""
 "This is likely due to a resource shortage\n"
 "and a reboot may be required."
 msgstr ""
+"无法获取服务器信号量。\n"
+"\n"
+"可能原因是资源不足，\n"
+"也许需要重启一次。"
 
 #: src/AudacityApp.cpp
 msgid ""
@@ -1125,6 +1134,10 @@ msgid ""
 "This is likely due to a resource shortage\n"
 "and a reboot may be required."
 msgstr ""
+"Tenacity IPC 服务器初始化失败。\n"
+"\n"
+"可能的原因是资源不足，\n"
+"可能需要重启一次。"
 
 #: src/AudacityApp.cpp
 msgid "An unrecoverable error has occurred during startup"
@@ -1195,6 +1208,15 @@ msgid ""
 "\n"
 "If you choose to \"Quit Audacity\", your project may be left in an unsaved state which will be recovered the next time you open it."
 msgstr ""
+"T无法访问下列配置文件:\n"
+"\n"
+"\t%s\n"
+"\n"
+"这可能是由许多原因造成的，但最有可能的是磁盘已满或您没有对文件的写入权限。点击下面的帮助按钮可以获得更多信息。\n"
+"\n"
+"您可以尝试纠正该问题，然后单击“重试”继续。\n"
+"\n"
+"如果您选择“退出 Tenacity”，您的工程可能会处于未保存状态，下次打开时将恢复。"
 
 #: src/AudacityFileConfig.cpp src/ShuttleGui.cpp src/commands/HelpCommand.cpp
 #: src/effects/Equalization.cpp src/export/Export.cpp src/menus/HelpMenus.cpp
@@ -2951,8 +2973,8 @@ msgid ""
 "Internal error at %s line %d.\n"
 "Please inform the Audacity team at https://forum.audacityteam.org/."
 msgstr ""
-"内部错误在 %s 行 %d。\n"
-"请通过 https://forum.audacityteam.org/ 来通知 Audacity 团队。"
+"%s 内部错误，位于第 %s 行 %d\n"
+"请通过 https://tenacityaudio.org/ 告知 Tenacity 团队。"
 
 #: src/InconsistencyException.h
 msgid "Internal Error"
@@ -3928,7 +3950,7 @@ msgstr "无法初始化工程文件"
 #. i18n-hint: An error message.  Don't translate inset or blockids.
 #: src/ProjectFileIO.cpp
 msgid "Unable to add 'inset' function (can't verify blockids)"
-msgstr ""
+msgstr "无法添加 'inset' 函数 (无法验证块 id)"
 
 #. i18n-hint: An error message.  Don't translate blockfiles.
 #: src/ProjectFileIO.cpp
@@ -4199,7 +4221,7 @@ msgstr ""
 
 #: src/ProjectFileManager.cpp
 msgid "The project exceeds the maximum size of 4GB when writing to a FAT32 formatted filesystem."
-msgstr ""
+msgstr "工程在写入 FAT32 格式化的文件系统时超过了4GB 的最大大小。"
 
 #: src/ProjectFileManager.cpp src/commands/ScreenshotCommand.cpp
 #, c-format
@@ -4367,7 +4389,7 @@ msgstr "导入时出错"
 
 #: src/ProjectFileManager.cpp
 msgid "Cannot import AUP3 format.  Use File > Open instead"
-msgstr ""
+msgstr "无法导入 AUP3 格式。使用文件>打开"
 
 # i18n hint: Copy the original database to a new database while pruning unused sample blocks
 #: src/ProjectFileManager.cpp
@@ -4392,7 +4414,7 @@ msgstr "压实的工程文件"
 
 #: src/ProjectFileManager.cpp
 msgid "Compact"
-msgstr ""
+msgstr "压实"
 
 #: src/ProjectHistory.cpp
 msgid "Created new project"
@@ -22520,3 +22542,14 @@ msgstr "错误。~%需要立体声轨。"
 
 #~ msgid "Playback Meter Preferences"
 #~ msgstr "回放仪表首选项"
+
+#: src/ProjectFileIO.cpp
+#, c-format
+msgid "[Project %02i] Audacity "
+msgstr "[工程 %02i] Tenacity "
+
+#. i18n-hint Tenacity's name substitutes for first and fourth %s, and the second and third %s are the copyright symbol and final year of copyright
+#: src/AboutDialog.cpp
+#, c-format
+msgid "%s %s 1999-%s %s contributors"
+msgstr "%s %s 1999-%s %s 贡献者"
