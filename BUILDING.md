@@ -152,7 +152,7 @@ cmake -GXcode -T buildsystem=1 -Duse_mad="off" -Duse_id3tag=off ../tenacity
    ```
    $ cd bin/Debug
    $ mkdir "Portable Settings"
-   $ ./audacity
+   $ ./tenacity
    ```
 
 At the moment, you are unable to install tenacity system-wide due conflits with libraries. You have to run Step 4 to use Tenacity. We are trying to fix that for the first stable release.
