@@ -9,11 +9,8 @@ cd build
 if [[ "${OSTYPE}" == msys* && ${GIT_BRANCH} == release* ]]; then # Windows
     cmake --build . --target innosetup --config "${AUDACITY_BUILD_TYPE}"
 else
-   # This will break if you move this script to a different directory
-   # because this searches for the current script's directory and the
-   # path is relative to that absolute path.
-   export CPACK_SCRIPT_DIR="$(cd "$(dirname "${0}")" && pwd)"
-   cpack -C "${AUDACITY_BUILD_TYPE}" -D CPACK_COMMAND_HDIUTIL="${CPACK_SCRIPT_DIR}/macos/repeat_hdiutil.sh" --verbose
+   # GITHUB_WORKSPACE is set by the checkout action in the action workflow configuration
+   cpack -C "${AUDACITY_BUILD_TYPE}" -D CPACK_COMMAND_HDIUTIL="${GITHUB_WORKSPACE}/scripts/ci/macos/repeat_hdiutil.sh" --verbose
 fi
 
 # Remove the temporary directory
