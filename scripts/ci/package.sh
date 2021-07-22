@@ -12,8 +12,8 @@ else
    # This will break if you move this script to a different directory
    # because this searches for the current script's directory and the
    # path is relative to that absolute path.
-   SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-   cpack -C "${AUDACITY_BUILD_TYPE}" -D CPACK_COMMAND_HDIUTIL="${SCRIPT_DIR}/macos/repeat_hdiutil.sh" --verbose
+   export CPACK_SCRIPT_DIR="$(cd "$(dirname "${0}")" && pwd)"
+   cpack -C "${AUDACITY_BUILD_TYPE}" -D CPACK_COMMAND_HDIUTIL="${CPACK_SCRIPT_DIR}/macos/repeat_hdiutil.sh" --verbose
 fi
 
 # Remove the temporary directory
