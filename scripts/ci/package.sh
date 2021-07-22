@@ -10,8 +10,7 @@ if [[ "${OSTYPE}" == msys* && ${GIT_BRANCH} == release* ]]; then # Windows
     cmake --build . --target innosetup --config "${AUDACITY_BUILD_TYPE}"
 else
     SCRIPT_DIR=$(dirname "$0")
-    export CPACK_COMMAND_HDIUTIL="$SCRIPT_DIR/macos/repeat_hdiutil.sh"
-    cpack -C "${AUDACITY_BUILD_TYPE}" --verbose
+    cpack -C "${AUDACITY_BUILD_TYPE}" -D CPACK_COMMAND_HDIUTIL="${SCRIPT_DIR}/macos/repeat_hdiutil.sh" --verbose
 fi
 
 # Remove the temporary directory
