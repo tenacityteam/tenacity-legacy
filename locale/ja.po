@@ -8,15 +8,16 @@ msgstr ""
 "Project-Id-Version: audacity 3.0.4\n"
 "Report-Msgid-Bugs-To: emabrey@tenacityaudio.org\n"
 "POT-Creation-Date: 2021-07-20 03:55-0400\n"
-"PO-Revision-Date: 2021-06-16 02:35+0900\n"
-"Last-Translator: Phroneris <phroneris@gmail.com>\n"
-"Language-Team: Atsushi YOSHIDA, Phroneris\n"
+"PO-Revision-Date: 2021-07-23 03:05+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Japanese <https://hosted.weblate.org/projects/tenacity/"
+"tenacity/ja/>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.0\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.7.2-dev\n"
 "X-Poedit-Bookmarks: 3966,3790,511,2745,1188,718,1435,-1,-1,-1\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-Basepath: ..\n"
@@ -124,12 +125,10 @@ msgid "System"
 msgstr "システムの言語"
 
 #: modules/mod-null/ModNullCallback.cpp
-#, fuzzy
 msgid "1st Experimental Command..."
 msgstr "特殊コマンド"
 
 #: modules/mod-null/ModNullCallback.cpp
-#, fuzzy
 msgid "2nd Experimental Command"
 msgstr "特殊コマンド"
 
@@ -170,32 +169,26 @@ msgid "&Find...\tCtrl+F"
 msgstr "検索(&F)...\tCtrl+F"
 
 #: modules/mod-nyq-bench/NyqBench.cpp
-#, fuzzy
 msgid "&Matching Paren\tF8"
 msgstr "Paren の整合(&M)\tF8"
 
 #: modules/mod-nyq-bench/NyqBench.cpp
-#, fuzzy
 msgid "&Top S-expr\tF9"
 msgstr "Top S-expr(&T)\tF9"
 
 #: modules/mod-nyq-bench/NyqBench.cpp
-#, fuzzy
 msgid "&Higher S-expr\tF10"
 msgstr "Higher S-expr(&H)\tF10"
 
 #: modules/mod-nyq-bench/NyqBench.cpp
-#, fuzzy
 msgid "&Previous S-expr\tF11"
 msgstr "一つ前の S-expr(&P)\tF11"
 
 #: modules/mod-nyq-bench/NyqBench.cpp
-#, fuzzy
 msgid "&Next S-expr\tF12"
 msgstr "次の S-expr(&N) \tF12"
 
 #: modules/mod-nyq-bench/NyqBench.cpp
-#, fuzzy
 msgid "&Go to"
 msgstr "Go to(&G)"
 
@@ -232,7 +225,6 @@ msgid "Toolbar"
 msgstr "ツールバー"
 
 #: modules/mod-nyq-bench/NyqBench.cpp
-#, fuzzy
 msgid "&Go\tF5"
 msgstr "Go(&G)\tF5"
 
@@ -433,7 +425,6 @@ msgid "Match"
 msgstr ""
 
 #: modules/mod-nyq-bench/NyqBench.cpp
-#, fuzzy
 msgid "Go to matching paren"
 msgstr "対応する paren へ"
 
@@ -804,14 +795,6 @@ msgstr "スペシャルサンクス:"
 #, c-format
 msgid "%s website: "
 msgstr "%s ウェブサイト: "
-
-# ja: 国際的な表記なので西暦の範囲は "-" のままにすべきかとも思ったが、（そもそも表示自体がもう無意味という話は別にして、）万国著作権条約が求める発行年は「最初の」ものだけなので後ろがどうなっていようと問題無いと判断した。
-#. i18n-hint Tenacity's name substitutes for first and third %s,
-#. and a "copyright" symbol for the second
-#: src/AboutDialog.cpp
-#, c-format
-msgid "%s software is copyright %s 1999-2021 %s Team."
-msgstr "%s 著作権表示: %s 1999～2021 %s チーム"
 
 #. i18n-hint Tenacity's name substitutes for %s
 #: src/AboutDialog.cpp
@@ -1626,13 +1609,11 @@ msgstr "コマンドを選択"
 
 # ja: デフォルトマクロ名だがファイル名でもある
 #: src/BatchCommands.cpp
-#, fuzzy
 msgid "MP3 Conversion"
 msgstr "MP3 変換"
 
 # ja: デフォルトマクロ名だがファイル名でもある
 #: src/BatchCommands.cpp
-#, fuzzy
 msgid "Fade Ends"
 msgstr "両端フェード"
 
@@ -2326,7 +2307,6 @@ msgstr ""
 
 # ja: もう使われなくなった要らない子
 #: src/Dependencies.cpp
-#, fuzzy
 msgid "Missing"
 msgstr "ファイルが見つかりません"
 
@@ -2524,12 +2504,12 @@ msgid "Only libavformat.so"
 msgstr "libavformat.so のみ"
 
 #: src/FileException.cpp
-#, fuzzy, c-format
+#, c-format
 msgid "Audacity failed to open a file in %s."
 msgstr "ファイル %s が書き込めません"
 
 #: src/FileException.cpp
-#, fuzzy, c-format
+#, c-format
 msgid "Audacity failed to read from a file in %s."
 msgstr "ファイル %s が書き込めません"
 
@@ -2627,7 +2607,7 @@ msgid "Specify New Filename:"
 msgstr "新しいファイル名を指定してください:"
 
 #: src/FileNames.cpp
-#, fuzzy, c-format
+#, c-format
 msgid "Directory %s does not have write permissions"
 msgstr "ディレクトリ %s はありません。作成しますか？"
 
@@ -3899,11 +3879,6 @@ msgstr "警告: 自動回復に問題が発生しています"
 #: src/ProjectFileIO.cpp src/menus/WindowMenus.cpp
 msgid "<untitled>"
 msgstr "<無題>"
-
-#: src/ProjectFileIO.cpp
-#, c-format
-msgid "[Project %02i] "
-msgstr "[プロジェクト %02i] "
 
 #: src/ProjectFileIO.cpp
 msgid "Failed to open the project's database"
@@ -7847,7 +7822,6 @@ msgid "Latency: %4d"
 msgstr "レイテンシー: %4d"
 
 #: src/effects/EffectUI.cpp
-#, fuzzy
 msgid "Some Command"
 msgstr "コマンドを選択"
 
@@ -9335,7 +9309,6 @@ msgid "Window Size"
 msgstr "ウィンドウサイズ"
 
 #: src/effects/ScoreAlignDialog.cpp
-#, fuzzy
 msgid "Force Final Alignment"
 msgstr "強制最終アラインメント"
 
@@ -13630,7 +13603,7 @@ msgid "&Repeat %s"
 msgstr "%s を再適用(&R)"
 
 #: src/menus/PluginMenus.cpp
-#, fuzzy, c-format
+#, c-format
 msgid "Plug-in %d to %d"
 msgstr "プラグイン %d～%d"
 
@@ -14088,7 +14061,6 @@ msgstr "ツールバー(&T)"
 
 #. i18n-hint: (verb)
 #: src/menus/ToolbarMenus.cpp
-#, fuzzy
 msgid "Edit &Mode (on/off)"
 msgstr "拡張メニュー (オン/オフ) (&E)"
 
@@ -14914,7 +14886,6 @@ msgid "%s %2.0f%% complete. Click to change task focal point."
 msgstr "%s %2.0f%% 完了。処理ポイントを変更するにはクリック。"
 
 #: src/prefs/ApplicationPrefs.cpp
-#, fuzzy
 msgid "Preferences for Application"
 msgstr "品質の環境設定"
 
@@ -18663,7 +18634,7 @@ msgstr ""
 
 #. i18n-hint: %s is replaced with 'Preferences > Directories'.
 #: src/widgets/UnwritableLocationErrorDialog.cpp
-#, fuzzy, c-format
+#, c-format
 msgid "You can change the directory in %s."
 msgstr ""
 "ディレクトリを作成できませんでした:\n"
@@ -18671,7 +18642,6 @@ msgstr ""
 
 #. i18n-hint: Hyperlink title that opens Preferences dialog on Directories page.
 #: src/widgets/UnwritableLocationErrorDialog.cpp
-#, fuzzy
 msgid "Preferences > Directories"
 msgstr "ディレクトリの環境設定"
 
@@ -19333,33 +19303,31 @@ msgstr "警告のみ"
 
 # ja: 文字化けする
 #: plug-ins/equalabel.ny
-#, fuzzy, lisp-format
+#, lisp-format
 msgid "Warning: Overlapping region labels.~%"
 msgstr "警告: ラベル領域が重なっています。~%"
 
 # ja: 文字化けする
 #. i18n-hint:  Type of label
 #: plug-ins/equalabel.ny
-#, fuzzy
 msgid "region labels"
 msgstr "本のラベル領域"
 
 # ja: 文字化けする
 #: plug-ins/equalabel.ny
-#, fuzzy
 msgid "point labels"
 msgstr "個のラベル"
 
 # ja: 文字化けする
 #. i18n-hint:  Number of labels produced at specified intervals.
 #: plug-ins/equalabel.ny
-#, fuzzy, lisp-format
+#, lisp-format
 msgid "~a~a ~a at intervals of ~a seconds.~%"
 msgstr "~a~a ~aを ~a 秒間隔で生成。~%"
 
 # ja: 文字化けする
 #: plug-ins/equalabel.ny
-#, fuzzy, lisp-format
+#, lisp-format
 msgid "~aRegion length = ~a seconds."
 msgstr "~aラベル領域長さ = ~a 秒。"
 
@@ -20322,8 +20290,10 @@ msgstr ""
 "(不正バイト値「~a」がバイト番号 ~a に見つかりました)~%~%~\n"
 "※訳註:~%~\n"
 "「サンプルデータの書き出し」機能で書き出したファイルの場合、日本語ヘッダーが原因となります。~%~\n"
-"また、Audacity の言語設定を変更して英数字のみで書かれたヘッダーを書き出したとしても、ヘッダー自体を行頭セミコロンでコメントアウトしないと別のエラーが出てしまいます。~%~\n"
-"他にも色々と制限があるので、詳細はマニュアルの「Sample Data Import」記事→「Obtaining suitable data」項を参照してください（英語）。"
+"また、Audacity の言語設定を変更して英数字のみで書かれたヘッダーを書き出したとしても、ヘッダー自体を行頭セミコロンでコメントアウトしないと別のエラ"
+"ーが出てしまいます。~%~\n"
+"他にも色々と制限があるので、詳細はマニュアルの「Sample Data Import」記事→「Obtaining suitable "
+"data」項を参照してください（英語）。"
 
 #: plug-ins/sample-data-import.ny
 #, lisp-format
@@ -20338,7 +20308,8 @@ msgstr ""
 "※訳註:~%~\n"
 "「サンプルデータの書き出し」機能で書き出したファイルの場合、ヘッダーが原因となります。~%~\n"
 "ヘッダーなどの非数値文字列は、行頭セミコロンでコメントアウトしないとダメです。~%~\n"
-"他にも色々と制限があるので、詳細はマニュアルの「Sample Data Import」記事→「Obtaining suitable data」項を参照してください（英語）。"
+"他にも色々と制限があるので、詳細はマニュアルの「Sample Data Import」記事→「Obtaining suitable "
+"data」項を参照してください（英語）。"
 
 #: plug-ins/sample-data-import.ny
 #, lisp-format
