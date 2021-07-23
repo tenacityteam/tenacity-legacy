@@ -1,5 +1,3 @@
-include( CMakeDependentOption )
-
 set( TARGET manual )
 set( TARGET_ROOT ${topdir}/manual )
 
