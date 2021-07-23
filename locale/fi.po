@@ -3,15 +3,16 @@ msgstr ""
 "Project-Id-Version: audacity 3.0.4\n"
 "Report-Msgid-Bugs-To: emabrey@tenacityaudio.org\n"
 "POT-Creation-Date: 2021-07-20 03:55-0400\n"
-"PO-Revision-Date: 2021-06-09 22:01+0300\n"
-"Last-Translator: Sampo Hippeläinen\n"
-"Language-Team: fi\n"
+"PO-Revision-Date: 2021-07-23 02:58+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Finnish <https://hosted.weblate.org/projects/tenacity/"
+"tenacity/fi/>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 2.4.2\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.7.2-dev\n"
 
 #: libraries/lib-strings/FutureStrings.h
 msgctxt "update dialog"
@@ -780,13 +781,6 @@ msgstr "Erityiskiitokset:"
 #, c-format
 msgid "%s website: "
 msgstr "%s-verkkosivusto: "
-
-#. i18n-hint Tenacity's name substitutes for first and third %s,
-#. and a "copyright" symbol for the second
-#: src/AboutDialog.cpp
-#, c-format
-msgid "%s software is copyright %s 1999-2021 %s Team."
-msgstr "%s-ohjelmiston tekijänoikeus %s 1999-2021 %s-tiimi."
 
 #. i18n-hint Tenacity's name substitutes for %s
 #: src/AboutDialog.cpp
@@ -2578,7 +2572,7 @@ msgid "Specify New Filename:"
 msgstr "Määritä uusi tiedostonimi:"
 
 #: src/FileNames.cpp
-#, fuzzy, c-format
+#, c-format
 msgid "Directory %s does not have write permissions"
 msgstr "Hakemistoa %s ei ole olemassa. Luodaanko se?"
 
@@ -3828,7 +3822,8 @@ msgid ""
 "\n"
 "Select 'Help > Diagnostics > Show Log...' to see details."
 msgstr ""
-"Projektin tarkistus löysi tiedoston epäjohdonmukaisuuksia automaattisen palautuksen aikana.\n"
+"Projektin tarkistus löysi tiedoston epäjohdonmukaisuuksia automaattisen "
+"palautuksen aikana.\n"
 "\n"
 "Valitse 'Ohje > Diagnostiikka > Näytä loki...' yksityiskohdat."
 
@@ -3839,11 +3834,6 @@ msgstr "Varoitus - Ongelmia automaattisessa palautuksessa"
 #: src/ProjectFileIO.cpp src/menus/WindowMenus.cpp
 msgid "<untitled>"
 msgstr "<nimetön>"
-
-#: src/ProjectFileIO.cpp
-#, c-format
-msgid "[Project %02i] "
-msgstr "[Projekti %02i] "
 
 #: src/ProjectFileIO.cpp
 msgid "Failed to open the project's database"
@@ -4233,7 +4223,8 @@ msgid ""
 "The project was not saved because the file name provided would overwrite another project.\n"
 "Please try again and select an original name."
 msgstr ""
-"Projektia ei tallennettu, koska tiedostonimi voisi päällekirjoittaa toisen projektin.\n"
+"Projektia ei tallennettu, koska tiedostonimi voisi päällekirjoittaa toisen "
+"projektin.\n"
 "Yritä uudelleen ja valitse alkuperäinen nimi."
 
 #: src/ProjectFileManager.cpp
@@ -4278,7 +4269,8 @@ msgid ""
 "The project was not saved because the selected project is open in another window.\n"
 "Please try again and select an original name."
 msgstr ""
-"Projektia ei tallennettu, koska valittu projekti on avoinna toisessa ikkunassa.\n"
+"Projektia ei tallennettu, koska valittu projekti on avoinna toisessa "
+"ikkunassa.\n"
 "Yritä uudelleen ja valitse jokin toinen nimi."
 
 #: src/ProjectFileManager.cpp
@@ -4408,11 +4400,13 @@ msgid ""
 "\n"
 "Do you want to continue?"
 msgstr ""
-"Projektin tiivistäminen vapauttaa levytilaa poistamalla siitä käyttämättömiä tavuja.\n"
+"Projektin tiivistäminen vapauttaa levytilaa poistamalla siitä käyttämättömiä "
+"tavuja.\n"
 "\n"
 "Vapaata levytilaa on tällä hetkellä %s ja projekti vie tilaa %s verran.\n"
 "\n"
-"Jos jatkat, kumoamishistoria ja leikepöydän sisältö menetetään, ja vapaata tilaa tulee noin %s verran lisää.\n"
+"Jos jatkat, kumoamishistoria ja leikepöydän sisältö menetetään, ja vapaata "
+"tilaa tulee noin %s verran lisää.\n"
 "\n"
 "Haluatko jatkaa?"
 
@@ -4791,7 +4785,8 @@ msgid ""
 "Sequence has block file exceeding maximum %s samples per block.\n"
 "Truncating to this maximum length."
 msgstr ""
-"Jaksossa on lohkotiedosto, joka ylittää maksimimäärän %s näytettä lohkoa kohti.\n"
+"Jaksossa on lohkotiedosto, joka ylittää maksimimäärän %s näytettä lohkoa "
+"kohti.\n"
 "Katkaistaan tähän enimmäispituuteen."
 
 #: src/Sequence.cpp
@@ -4876,7 +4871,9 @@ msgstr "Kommentit"
 
 #: src/Tags.cpp
 msgid "Use arrow keys (or ENTER key after editing) to navigate fields."
-msgstr "Liiku kenttien välillä nuolinäppäimillä (tai ENTER tallentaaksesi muokkauksen)."
+msgstr ""
+"Liiku kenttien välillä nuolinäppäimillä (tai ENTER tallentaaksesi "
+"muokkauksen)."
 
 #: src/Tags.cpp
 msgid "Tag"
@@ -5207,7 +5204,8 @@ msgid ""
 "Planned recording duration:   %s\n"
 "Recording time remaining on disk:   %s"
 msgstr ""
-"Levytila ei ehkä riitä tämän ajastetun tallennuksen suorittamiseen nykyisten asetusten perusteella.\n"
+"Levytila ei ehkä riitä tämän ajastetun tallennuksen suorittamiseen nykyisten "
+"asetusten perusteella.\n"
 "\n"
 "Haluatko jatkaa?\n"
 "\n"
@@ -5516,7 +5514,9 @@ msgstr " Valinta päällä"
 
 #: src/TrackPanelResizeHandle.cpp
 msgid "Click and drag to adjust relative size of stereo tracks, double-click to make heights equal"
-msgstr "Säädä stereoraitojen suhteellista kokoa napsauttamalla ja vetämällä, kaksoisnapsautus asettaa yhtä suuret korkeudet"
+msgstr ""
+"Säädä stereoraitojen suhteellista kokoa napsauttamalla ja vetämällä, "
+"kaksoisnapsautus asettaa yhtä suuret korkeudet"
 
 #: src/TrackPanelResizeHandle.cpp
 msgid "Click and drag to resize the track."
@@ -5706,7 +5706,10 @@ msgstr ""
 
 #: src/commands/CommandManager.cpp
 msgid "The following commands have had their shortcuts removed, because their default shortcut is new or changed, and is the same shortcut that you have assigned to another command."
-msgstr "Seuraavat komennot ovat poistaneet pikanäppäimensä, koska niiden oletuspikanäppäin on uusi tai muuttunut ja on sama, jonka olet määrittänyt toiselle komennolle."
+msgstr ""
+"Seuraavat komennot ovat poistaneet pikanäppäimensä, koska niiden "
+"oletuspikanäppäin on uusi tai muuttunut ja on sama, jonka olet määrittänyt "
+"toiselle komennolle."
 
 #: src/commands/CommandManager.cpp
 msgid "Shortcuts have been removed"
@@ -6454,21 +6457,27 @@ msgstr "Automaattinen voimakkuuden lasku"
 
 #: src/effects/AutoDuck.cpp
 msgid "Reduces (ducks) the volume of one or more tracks whenever the volume of a specified \"control\" track reaches a particular level"
-msgstr "Laskee yhden tai useamman raidan äänenvoimakkuutta aina, kun tietyn \"ohjausraidan\" äänenvoimakkuus saavuttaa tietyn tason"
+msgstr ""
+"Laskee yhden tai useamman raidan äänenvoimakkuutta aina, kun tietyn "
+"\"ohjausraidan\" äänenvoimakkuus saavuttaa tietyn tason"
 
 #. i18n-hint: Auto duck is the name of an effect that 'ducks' (reduces the volume)
 #. * of the audio automatically when there is sound on another track.  Not as
 #. * in 'Donald-Duck'!
 #: src/effects/AutoDuck.cpp
 msgid "You selected a track which does not contain audio. AutoDuck can only process audio tracks."
-msgstr "Valitsit raidan, joka ei sisällä ääntä. Automaattinen voimakkuuden lasku voi käsitellä vain ääniraitoja."
+msgstr ""
+"Valitsit raidan, joka ei sisällä ääntä. Automaattinen voimakkuuden lasku voi "
+"käsitellä vain ääniraitoja."
 
 #. i18n-hint: Auto duck is the name of an effect that 'ducks' (reduces the volume)
 #. * of the audio automatically when there is sound on another track.  Not as
 #. * in 'Donald-Duck'!
 #: src/effects/AutoDuck.cpp
 msgid "Auto Duck needs a control track which must be placed below the selected track(s)."
-msgstr "Automaattinen voimakkuuden lasku tarvitsee ohjausraidan, joka on sijoitettava valittujen raitojen alapuolelle."
+msgstr ""
+"Automaattinen voimakkuuden lasku tarvitsee ohjausraidan, joka on "
+"sijoitettava valittujen raitojen alapuolelle."
 
 #: src/effects/AutoDuck.cpp src/effects/TruncSilence.cpp
 msgid "db"
@@ -6823,7 +6832,8 @@ msgstr "Naksausten poisto"
 
 #: src/effects/ClickRemoval.cpp
 msgid "Click Removal is designed to remove clicks on audio tracks"
-msgstr "Naksauksen poistaminen on suunniteltu poistamaan ääniraitojen naksaukset"
+msgstr ""
+"Naksauksen poistaminen on suunniteltu poistamaan ääniraitojen naksaukset"
 
 #: src/effects/ClickRemoval.cpp
 msgid "Algorithm not effective on this audio. Nothing changed."
@@ -7000,7 +7010,9 @@ msgstr ""
 #. i18n-hint: RMS abbreviates root mean square, a certain averaging method
 #: src/effects/Contrast.cpp
 msgid "Contrast Analyzer, for measuring RMS volume differences between two selections of audio."
-msgstr "Kontrastianalysaattori RMS-äänenvoimakkuuden erojen mittaamiseksi kahden äänivalinnan välillä."
+msgstr ""
+"Kontrastianalysaattori RMS-äänenvoimakkuuden erojen mittaamiseksi kahden "
+"äänivalinnan välillä."
 
 #. i18n-hint noun
 #: src/effects/Contrast.cpp src/effects/ToneGen.cpp
@@ -7484,7 +7496,9 @@ msgstr "DTMF-äänet"
 
 #: src/effects/DtmfGen.cpp
 msgid "Generates dual-tone multi-frequency (DTMF) tones like those produced by the keypad on telephones"
-msgstr "Tuottaa kaksisävyisiä monitaajuusääniä (DTMF), kuten puhelimissa olevan näppäimistöäänet"
+msgstr ""
+"Tuottaa kaksisävyisiä monitaajuusääniä (DTMF), kuten puhelimissa olevan "
+"näppäimistöäänet"
 
 #: src/effects/DtmfGen.cpp
 msgid ""
@@ -7603,7 +7617,8 @@ msgstr "%s: ei ole kelvollinen esiasetustiedosto.\n"
 #: src/effects/Effect.cpp
 #, c-format
 msgid "%s: is for a different Effect, Generator or Analyzer.\n"
-msgstr "%s: on tarkoitettu eri tehosteille, generaattorille tai analysaattorille.\n"
+msgstr ""
+"%s: on tarkoitettu eri tehosteille, generaattorille tai analysaattorille.\n"
 
 #: src/effects/Effect.cpp
 msgid "Preparing preview"
@@ -7973,7 +7988,8 @@ msgid ""
 "Choose the 'Save/Manage Curves...' button and rename the 'unnamed' curve, then use that one."
 msgstr ""
 "Jos haluat käyttää tätä korjauskäyrää makrossa, valitse sille uusi nimi.\n"
-"Valitse 'Tallenna/hallitse käyriä...' -painiketta ja nimeä uudelleen \"nimetön\" käyrä, sitten käytä sitä."
+"Valitse 'Tallenna/hallitse käyriä...' -painiketta ja nimeä uudelleen "
+"\"nimetön\" käyrä, sitten käytä sitä."
 
 #: src/effects/Equalization.cpp
 msgid "Filter Curve EQ needs a different name"
@@ -7981,7 +7997,9 @@ msgstr "Käyrätaajuuskorjain tarvitsee eri nimen"
 
 #: src/effects/Equalization.cpp
 msgid "To apply Equalization, all selected tracks must have the same sample rate."
-msgstr "Jotta taajuuskorjaus voidaan suorittaa, kaikilla valituilla raidoilla täytyy olla sama näytetaajuus."
+msgstr ""
+"Jotta taajuuskorjaus voidaan suorittaa, kaikilla valituilla raidoilla täytyy "
+"olla sama näytetaajuus."
 
 #: src/effects/Equalization.cpp
 msgid "Track sample rate is too low for this effect."
@@ -8510,7 +8528,9 @@ msgstr "Askeleiden määrä lohkoa kohden ei voi ylittää ikkunan kokoa."
 
 #: src/effects/NoiseReduction.cpp
 msgid "Median method is not implemented for more than four steps per window."
-msgstr "Mediaanimenetelmää ei ole toteutettu enemmässä kuin neljässä askeleessa per ikkuna."
+msgstr ""
+"Mediaanimenetelmää ei ole toteutettu enemmässä kuin neljässä askeleessa per "
+"ikkuna."
 
 #: src/effects/NoiseReduction.cpp
 msgid "You must specify the same window size for steps 1 and 2."
@@ -8526,7 +8546,9 @@ msgstr "Kaikissa kohinanpoistomalleissa on oltava sama näytteenottotaajuus."
 
 #: src/effects/NoiseReduction.cpp
 msgid "The sample rate of the noise profile must match that of the sound to be processed."
-msgstr "Kohinaprofiilin näytteenottotaajuuden on vastattava käsiteltävän äänen taajuutta."
+msgstr ""
+"Kohinaprofiilin näytteenottotaajuuden on vastattava käsiteltävän äänen "
+"taajuutta."
 
 #: src/effects/NoiseReduction.cpp
 msgid "Selected noise profile is too short."
@@ -8709,7 +8731,8 @@ msgstr "Kohinan poisto"
 
 #: src/effects/NoiseRemoval.cpp
 msgid "Removes constant background noise such as fans, tape noise, or hums"
-msgstr "Poistaa jatkuvaa taustaääniä, kuten puhaltimen, nauhan ääntä tai huminaa"
+msgstr ""
+"Poistaa jatkuvaa taustaääniä, kuten puhaltimen, nauhan ääntä tai huminaa"
 
 #: src/effects/NoiseRemoval.cpp
 msgid ""
@@ -8814,7 +8837,8 @@ msgstr "Paulstretch"
 
 #: src/effects/Paulstretch.cpp
 msgid "Paulstretch is only for an extreme time-stretch or \"stasis\" effect"
-msgstr "Paulstretch on vain äärimmäiselle aikavenytykselle tai pysäytystehosteelle"
+msgstr ""
+"Paulstretch on vain äärimmäiselle aikavenytykselle tai pysäytystehosteelle"
 
 #. i18n-hint: This is how many times longer the sound will be, e.g. applying
 #. * the effect to a 1-second sample, with the default Stretch Factor of 10.0
@@ -8948,7 +8972,8 @@ msgid ""
 "\n"
 "Zoom in and select a tiny fraction of a second to repair."
 msgstr ""
-"Tätä korjaustoimintoa on tarkoitettu käytettäväksi vain hyvin lyhyihin vahingoittuneisiin äänen osiin (enintään 128 näytettä).\n"
+"Tätä korjaustoimintoa on tarkoitettu käytettäväksi vain hyvin lyhyihin "
+"vahingoittuneisiin äänen osiin (enintään 128 näytettä).\n"
 "\n"
 "Suurenna näkymää ja valitse vain sekunnin murto-osa korjattavaksesi."
 
@@ -9135,7 +9160,9 @@ msgstr "Suorittaa IIR-suodatuksen, joka emuloi analogisia suodattimia"
 
 #: src/effects/ScienFilter.cpp
 msgid "To apply a filter, all selected tracks must have the same sample rate."
-msgstr "Kaikilla valituilla raidoilla täytyy olla sama näytteenottotaajuus, jotta suodatinta voidaan käyttää."
+msgstr ""
+"Kaikilla valituilla raidoilla täytyy olla sama näytteenottotaajuus, jotta "
+"suodatinta voidaan käyttää."
 
 #: src/effects/ScienFilter.cpp
 msgid "&Filter Type:"
@@ -9411,11 +9438,15 @@ msgstr "Lyhennä hiljaisuus"
 
 #: src/effects/TruncSilence.cpp
 msgid "Automatically reduces the length of passages where the volume is below a specified level"
-msgstr "Lyhentää automaattisesti kappaleen osia, joissa äänenvoimakkuus on alle määrätyn rajan"
+msgstr ""
+"Lyhentää automaattisesti kappaleen osia, joissa äänenvoimakkuus on alle "
+"määrätyn rajan"
 
 #: src/effects/TruncSilence.cpp
 msgid "When truncating independently, there may only be one selected audio track in each Sync-Locked Track Group."
-msgstr "Kun katkaistaan itsenäisesti, kussakin tahtilukitussa raitaryhmässä voi olla vain yksi valittu ääniraita."
+msgstr ""
+"Kun katkaistaan itsenäisesti, kussakin tahtilukitussa raitaryhmässä voi olla "
+"vain yksi valittu ääniraita."
 
 #: src/effects/TruncSilence.cpp
 msgid "Detect Silence"
@@ -9469,7 +9500,12 @@ msgstr "Puskurin koko"
 
 #: src/effects/VST/VSTEffect.cpp src/effects/lv2/LV2Effect.cpp
 msgid "The buffer size controls the number of samples sent to the effect on each iteration. Smaller values will cause slower processing and some effects require 8192 samples or less to work properly. However most effects can accept large buffers and using them will greatly reduce processing time."
-msgstr "Puskurin koko määrittää kuhunkin iterointiin lähetettyjen näytteiden määrän. Pienemmät arvot johtavat hitaampaan käsittelyyn ja jotkut vaikutukset vaativat 8192 tai vähemmän näytteitä toimiakseen kunnolla. Useimmat tehosteet voivat kuitenkin hyväksyä suuria puskureita ja niiden käyttäminen vähentää huomattavasti käsittelyaikaa."
+msgstr ""
+"Puskurin koko määrittää kuhunkin iterointiin lähetettyjen näytteiden määrän. "
+"Pienemmät arvot johtavat hitaampaan käsittelyyn ja jotkut vaikutukset "
+"vaativat 8192 tai vähemmän näytteitä toimiakseen kunnolla. Useimmat "
+"tehosteet voivat kuitenkin hyväksyä suuria puskureita ja niiden käyttäminen "
+"vähentää huomattavasti käsittelyaikaa."
 
 #: src/effects/VST/VSTEffect.cpp
 msgid "&Buffer Size (8 to 1048576 samples):"
@@ -9495,7 +9531,10 @@ msgstr "Graafinen tila"
 
 #: src/effects/VST/VSTEffect.cpp
 msgid "Most VST effects have a graphical interface for setting parameter values. A basic text-only method is also available.  Reopen the effect for this to take effect."
-msgstr "Useimmilla VST-tehosteilla on graafinen käyttöliittymä parametriarvojen asettamiseen. Käytettävissä on myös vain teksti perusmenetelmä.  Avaa tehoste uudelleen, jotta tämä tulee voimaan."
+msgstr ""
+"Useimmilla VST-tehosteilla on graafinen käyttöliittymä parametriarvojen "
+"asettamiseen. Käytettävissä on myös vain teksti perusmenetelmä.  Avaa "
+"tehoste uudelleen, jotta tämä tulee voimaan."
 
 #: src/effects/VST/VSTEffect.cpp src/effects/lv2/LV2Effect.cpp
 msgid "Enable &graphical interface"
@@ -9576,7 +9615,9 @@ msgstr "Wah-wah"
 
 #: src/effects/Wahwah.cpp
 msgid "Rapid tone quality variations, like that guitar sound so popular in the 1970's"
-msgstr "Nopeat äänenkorkeuden vaihtelut, kuten 1970-luvulla suositussa kitaratehosteessa"
+msgstr ""
+"Nopeat äänenkorkeuden vaihtelut, kuten 1970-luvulla suositussa "
+"kitaratehosteessa"
 
 #: src/effects/Wahwah.cpp
 msgid "Dept&h (%):"
@@ -9629,7 +9670,11 @@ msgstr "Käyttöliittymä"
 
 #: src/effects/audiounits/AudioUnitEffect.cpp
 msgid "Select \"Full\" to use the graphical interface if supplied by the Audio Unit. Select \"Generic\" to use the system supplied generic interface. Select \"Basic\" for a basic text-only interface. Reopen the effect for this to take effect."
-msgstr "Valitse \"Täysi\", jos haluat käyttää graafista käyttöliittymää, jos Audio Units -tehoste toimittaa sen. Valitse \"Yleinen\", jos haluat käyttää yleistä käyttöliittymää. Valitse \"Perus\", jos haluat käyttää perustekstiliittymää. Avaa tehoste uudelleen, jotta tämä tulee voimaan."
+msgstr ""
+"Valitse \"Täysi\", jos haluat käyttää graafista käyttöliittymää, jos Audio "
+"Units -tehoste toimittaa sen. Valitse \"Yleinen\", jos haluat käyttää "
+"yleistä käyttöliittymää. Valitse \"Perus\", jos haluat käyttää "
+"perustekstiliittymää. Avaa tehoste uudelleen, jotta tämä tulee voimaan."
 
 #: src/effects/audiounits/AudioUnitEffect.cpp
 msgid "Select &interface"
@@ -9820,7 +9865,10 @@ msgstr "Joidenkin LV2-tehosteiden pitää käsittelyn takia viivästää äänen
 
 #: src/effects/lv2/LV2Effect.cpp
 msgid "LV2 effects can have a graphical interface for setting parameter values. A basic text-only method is also available.  Reopen the effect for this to take effect."
-msgstr "LV2-tehosteilla voi olla graafinen käyttöliittymä parametriarvojen asettamiseen. Käytettävissä on myös perustekstimenetelmä.  Avaa tehoste uudelleen, jotta tämä tulee voimaan."
+msgstr ""
+"LV2-tehosteilla voi olla graafinen käyttöliittymä parametriarvojen "
+"asettamiseen. Käytettävissä on myös perustekstimenetelmä.  Avaa tehoste "
+"uudelleen, jotta tämä tulee voimaan."
 
 #: src/effects/lv2/LV2Effect.cpp
 msgid "Couldn't instantiate effect"
@@ -9896,7 +9944,9 @@ msgstr ""
 #: src/effects/nyquist/Nyquist.cpp
 #, c-format
 msgid "error: File \"%s\" specified in header but not found in plug-in path.\n"
-msgstr "virhe: Otsikossa määritetty tiedosto %s, mutta sitä ei löydy laajennuspolusta.\n"
+msgstr ""
+"virhe: Otsikossa määritetty tiedosto %s, mutta sitä ei löydy "
+"laajennuspolusta.\n"
 
 #: src/effects/nyquist/Nyquist.cpp
 msgid "Audio selection required."
@@ -9908,7 +9958,8 @@ msgstr "Nyquist-virhe"
 
 #: src/effects/nyquist/Nyquist.cpp
 msgid "Sorry, cannot apply effect on stereo tracks where the tracks don't match."
-msgstr "Sorry, tehostetta ei voi käyttää stereoraidoille, joilla raidat eivät täsmää."
+msgstr ""
+"Sorry, tehostetta ei voi käyttää stereoraidoille, joilla raidat eivät täsmää."
 
 #: src/effects/nyquist/Nyquist.cpp
 #, c-format
@@ -9981,7 +10032,9 @@ msgstr "Nyquist palautti tyhjän äänen.\n"
 
 #: src/effects/nyquist/Nyquist.cpp
 msgid "[Warning: Nyquist returned invalid UTF-8 string, converted here as Latin-1]"
-msgstr "[Varoitus: Nyquist palautti virheellisen UTF-8-merkkijonon, joka muunnettiin tässä Latin-1-muotoon]"
+msgstr ""
+"[Varoitus: Nyquist palautti virheellisen UTF-8-merkkijonon, joka muunnettiin "
+"tässä Latin-1-muotoon]"
 
 #: src/effects/nyquist/Nyquist.cpp
 #, c-format
@@ -10102,7 +10155,9 @@ msgstr "Huolehtii Audacityn Vamp-tehostetuesta"
 
 #: src/effects/vamp/VampEffect.cpp
 msgid "Sorry, Vamp Plug-ins cannot be run on stereo tracks where the individual channels of the track do not match."
-msgstr "Vamp-laajennusta ei voida käyttää stereoraidoille, jossa kanavien yksittäiset raidat eivät täsmää."
+msgstr ""
+"Vamp-laajennusta ei voida käyttää stereoraidoille, jossa kanavien "
+"yksittäiset raidat eivät täsmää."
 
 #: src/effects/vamp/VampEffect.cpp
 msgid "Sorry, failed to load Vamp Plug-in."
@@ -10166,7 +10221,8 @@ msgid ""
 msgstr ""
 "Olet viemässä tiedostoa %s nimellä \"%s\".\n"
 "\n"
-"Normaalisti nämä tiedostot käyttävät päätettä \".%s\"  Jotkin ohjelmat eivät avaa tiedostoja, jos niillä on väärä tiedostopääte.\n"
+"Normaalisti nämä tiedostot käyttävät päätettä \".%s\"  Jotkin ohjelmat eivät "
+"avaa tiedostoja, jos niillä on väärä tiedostopääte.\n"
 "\n"
 "Haluatko varmasti viedä tiedoston tällä nimellä?"
 
@@ -10189,7 +10245,9 @@ msgstr "Raidat yhdistetään ja viedään yhtenä stereotiedostona."
 
 #: src/export/Export.cpp
 msgid "Your tracks will be mixed down to one exported file according to the encoder settings."
-msgstr "Raidat yhdistetään yhteen vietävään tiedostoon enkooderin asetusten mukaisesti."
+msgstr ""
+"Raidat yhdistetään yhteen vietävään tiedostoon enkooderin asetusten "
+"mukaisesti."
 
 #: src/export/Export.cpp
 msgid "Advanced Mixing Options"
@@ -10246,7 +10304,9 @@ msgstr "Näytä tuloste"
 #: src/export/ExportCL.cpp
 #, c-format
 msgid "Data will be piped to standard in. \"%f\" uses the file name in the export window."
-msgstr "Tiedot siirretään putkella standardisyötteeseen. \"%f\" vastaa vienti-ikkunan tiedostonimeä."
+msgstr ""
+"Tiedot siirretään putkella standardisyötteeseen. \"%f\" vastaa vienti-"
+"ikkunan tiedostonimeä."
 
 #. i18n-hint files that can be run as programs
 #: src/export/ExportCL.cpp
@@ -10338,7 +10398,9 @@ msgstr "FFmpeg : VIRHE - Tulostiedostoa \"%s\" ei voi avata. Virhekoodi on %d."
 #: src/export/ExportFFmpeg.cpp
 #, c-format
 msgid "FFmpeg : ERROR - Can't write headers to output file \"%s\". Error code is %d."
-msgstr "FFmpeg : VIRHE - Otsikoita ei voi kirjoittaa lähtötiedostoon \"%s\". Virhekoodi on %d."
+msgstr ""
+"FFmpeg : VIRHE - Otsikoita ei voi kirjoittaa lähtötiedostoon \"%s\". "
+"Virhekoodi on %d."
 
 #. i18n-hint: "codec" is short for a "coder-decoder" algorithm
 #: src/export/ExportFFmpeg.cpp
@@ -10396,7 +10458,8 @@ msgstr "FFmpeg: VIRHE - Liikaa jäljellä olevia tietoja."
 
 #: src/export/ExportFFmpeg.cpp
 msgid "FFmpeg : ERROR - Couldn't write last audio frame to output file."
-msgstr "FFmpeg: VIRHE - Tulostiedostoon ei voitu kirjoittaa viimeistä äänikehystä."
+msgstr ""
+"FFmpeg: VIRHE - Tulostiedostoon ei voitu kirjoittaa viimeistä äänikehystä."
 
 #: src/export/ExportFFmpeg.cpp
 msgid "FFmpeg : ERROR - nAudioFrameSizeOut too large."
@@ -10409,7 +10472,9 @@ msgstr "FFmpeg: VIRHE - Äänikehystä ei voitu koodata."
 #: src/export/ExportFFmpeg.cpp
 #, c-format
 msgid "Attempted to export %d channels, but maximum number of channels for selected output format is %d"
-msgstr "Yritettiin viedä %d kanavaa, mutta kanavien enimmäismäärä valitulle lähtömuodolle on %d"
+msgstr ""
+"Yritettiin viedä %d kanavaa, mutta kanavien enimmäismäärä valitulle "
+"lähtömuodolle on %d"
 
 #: src/export/ExportFFmpeg.cpp
 #, c-format
@@ -10729,7 +10794,9 @@ msgstr "Koodekki:"
 
 #: src/export/ExportFFmpegDialogs.cpp
 msgid "Not all formats and codecs are compatible. Nor are all option combinations compatible with all codecs."
-msgstr "Kaikki muodot ja koodekit eivät ole yhteensopivia, eivätkä kaikki valintayhdistelmät ole yhteensopivia kaikkien koodekkien kanssa."
+msgstr ""
+"Kaikki muodot ja koodekit eivät ole yhteensopivia, eivätkä kaikki "
+"valintayhdistelmät ole yhteensopivia kaikkien koodekkien kanssa."
 
 #: src/export/ExportFFmpegDialogs.cpp
 msgid "Show All Formats"
@@ -10787,8 +10854,10 @@ msgid ""
 "0 - automatic\n"
 "Recommended - 192000"
 msgstr ""
-"Bittinopeus (bittiä sekunnissa) - vaikuttaa tuloksen tiedostokokoon ja laatuun\n"
-"Jotkin koodekit saattavat hyväksyä vain tiettyjä arvoja (128k, 192k, 256k jne.)\n"
+"Bittinopeus (bittiä sekunnissa) - vaikuttaa tuloksen tiedostokokoon ja "
+"laatuun\n"
+"Jotkin koodekit saattavat hyväksyä vain tiettyjä arvoja (128k, 192k, 256k "
+"jne.)\n"
 "0 - automaattinen\n"
 "Suositus - 192000"
 
@@ -11563,7 +11632,8 @@ msgid ""
 "\n"
 "Suggested replacement:"
 msgstr ""
-"Merkki tai raita \"%s\" ei ole kelvollinen tiedostonimi. Et voi käyttää osaa \"%s\".\n"
+"Merkki tai raita \"%s\" ei ole kelvollinen tiedostonimi. Et voi käyttää osaa "
+"\"%s\".\n"
 "\n"
 "Korjausehdotus:"
 
@@ -11998,7 +12068,9 @@ msgstr "Projektin tuonti"
 
 #: src/import/ImportAUP.cpp
 msgid "The active project already has a time track and one was encountered in the project being imported, bypassing imported time track."
-msgstr "Projektissa on jo aikaraita ja tuotavasta projektista löytyi sellainen; tuotava aikaraita ohitetaan."
+msgstr ""
+"Projektissa on jo aikaraita ja tuotavasta projektista löytyi sellainen; "
+"tuotava aikaraita ohitetaan."
 
 #: src/import/ImportAUP.cpp
 msgid "Invalid sequence 'maxsamples' attribute."
@@ -12088,7 +12160,9 @@ msgstr "FFmpeg-yhteensopivat tiedostot"
 #: src/import/ImportFFmpeg.cpp
 #, c-format
 msgid "Index[%02x] Codec[%s], Language[%s], Bitrate[%s], Channels[%d], Duration[%d]"
-msgstr "Indeksi[%02x] Koodekki[%s], Kieli[%s], Bittinopeus[%s], Kanavat[%d], Kesto[%d]"
+msgstr ""
+"Indeksi[%02x] Koodekki[%s], Kieli[%s], Bittinopeus[%s], Kanavat[%d], "
+"Kesto[%d]"
 
 #: src/import/ImportFLAC.cpp
 msgid "FLAC files"
@@ -13897,7 +13971,6 @@ msgstr "&Työkalupalkit"
 
 #. i18n-hint: (verb)
 #: src/menus/ToolbarMenus.cpp
-#, fuzzy
 msgid "Edit &Mode (on/off)"
 msgstr "&Lisävalikot (päällä/pois)"
 
@@ -14129,7 +14202,9 @@ msgstr "Tahdista MIDI äänen kanssa"
 #: src/menus/TrackMenus.cpp
 #, c-format
 msgid "Alignment error: input too short: MIDI from %.2f to %.2f secs, Audio from %.2f to %.2f secs."
-msgstr "Tasausvirhe: tuonti liian lyhyt: MIDI kohdasta %.2f -> %.2f sek, Ääni kohdasta %.2f -> %.2f sek."
+msgstr ""
+"Tasausvirhe: tuonti liian lyhyt: MIDI kohdasta %.2f -> %.2f sek, Ääni "
+"kohdasta %.2f -> %.2f sek."
 
 #: src/menus/TrackMenus.cpp
 msgid "Internal error reported by alignment process."
@@ -14382,7 +14457,8 @@ msgid ""
 "\n"
 "Please close any additional projects and try again."
 msgstr ""
-"Ajastettua äänitystä ei voi käyttää useamman kuin yhden avoimen projektin kanssa.\n"
+"Ajastettua äänitystä ei voi käyttää useamman kuin yhden avoimen projektin "
+"kanssa.\n"
 "\n"
 "Sulje mahdolliset lisäprojektit ja yritä uudelleen."
 
@@ -14392,7 +14468,8 @@ msgid ""
 "\n"
 "Please save or close this project and try again."
 msgstr ""
-"Ajastettua äänitystä ei voi käyttää, kun sinulla on tallentamattomia muutoksia.\n"
+"Ajastettua äänitystä ei voi käyttää, kun sinulla on tallentamattomia "
+"muutoksia.\n"
 "\n"
 "Tallenna tai sulje tämä projekti ja yritä uudelleen."
 
@@ -14718,7 +14795,6 @@ msgid "%s %2.0f%% complete. Click to change task focal point."
 msgstr "%s %2.0f%% valmis. Muuta tehtävän painopistettä napsauttamalla tätä."
 
 #: src/prefs/ApplicationPrefs.cpp
-#, fuzzy
 msgid "Preferences for Application"
 msgstr "Laatuasetukset"
 
@@ -15391,7 +15467,8 @@ msgid ""
 "The file with the shortcuts contains illegal shortcut duplicates for \"%s\" and \"%s\".\n"
 "Nothing is imported."
 msgstr ""
-"Pikanäppäintiedosto sisältää samat pikanäppäimet toiminnoille \"%s\" ja \"%s\",\n"
+"Pikanäppäintiedosto sisältää samat pikanäppäimet toiminnoille \"%s\" ja \"%"
+"s\",\n"
 "mitä ei sallita. Mitään ei tuoda."
 
 #: src/prefs/KeyConfigPrefs.cpp
@@ -15405,7 +15482,8 @@ msgid ""
 "The following commands are not mentioned in the imported file, but have their shortcuts removed because of the conflict with other new shortcuts:\n"
 msgstr ""
 "\n"
-"Seuraavia komentoja ei mainita tuodussa tiedostossa. Niiden pikanäppäimet on poistettu, koska ne ovat ristiriidassa muiden uusien pikanäppäinten kanssa:\n"
+"Seuraavia komentoja ei mainita tuodussa tiedostossa. Niiden pikanäppäimet on "
+"poistettu, koska ne ovat ristiriidassa muiden uusien pikanäppäinten kanssa:\n"
 
 #: src/prefs/KeyConfigPrefs.cpp
 msgid "Loading Keyboard Shortcuts"
@@ -16327,7 +16405,8 @@ msgid ""
 "Saving and loading individual theme files uses a separate file for each image, but is\n"
 "otherwise the same idea."
 msgstr ""
-"Yksittäisten teematiedostojen tallentaminen ja lataaminen käyttää erillistä tiedostoa kullekin kuvalle, mutta\n"
+"Yksittäisten teematiedostojen tallentaminen ja lataaminen käyttää erillistä "
+"tiedostoa kullekin kuvalle, mutta\n"
 "muuten sama ajatus."
 
 #. i18n-hint: && in here is an escape character to get a single & on screen,
@@ -17187,7 +17266,9 @@ msgstr "Oktaa&vi alas"
 #: src/tracks/playabletrack/notetrack/ui/NoteTrackVZoomHandle.cpp
 #: src/tracks/playabletrack/wavetrack/ui/WaveTrackVZoomHandle.cpp
 msgid "Click to vertically zoom in. Shift-click to zoom out. Drag to specify a zoom region."
-msgstr "Napsautus lähentää pystysuunnassa. Vaihto + napsautus loitontaa. Raahaaminen määrittää suurennusalueen."
+msgstr ""
+"Napsautus lähentää pystysuunnassa. Vaihto + napsautus loitontaa. Raahaaminen "
+"määrittää suurennusalueen."
 
 #: src/tracks/playabletrack/notetrack/ui/NoteTrackVZoomHandle.cpp
 #: src/tracks/playabletrack/wavetrack/ui/WaveTrackVZoomHandle.cpp
@@ -17266,7 +17347,9 @@ msgstr "Napsautus ja raahaus muokkaa näytteitä"
 
 #: src/tracks/playabletrack/wavetrack/ui/SampleHandle.cpp
 msgid "To use Draw, zoom in further until you can see the individual samples."
-msgstr "Jos haluat käyttää piirtotyökalua, sinun tulee lähentää näkymää kunnes näet yksittäiset näytteet."
+msgstr ""
+"Jos haluat käyttää piirtotyökalua, sinun tulee lähentää näkymää kunnes näet "
+"yksittäiset näytteet."
 
 #: src/tracks/playabletrack/wavetrack/ui/SampleHandle.cpp
 msgid "Moved Samples"
@@ -17294,7 +17377,8 @@ msgid ""
 "To change Spectrogram Settings, stop any\n"
 " playing or recording first."
 msgstr ""
-"Jos haluat muuttaa spektrogrammin asetuksia, lopeta\\n\n"
+"Jos haluat muuttaa spektrogrammin asetuksia, lopeta\\n"
+"\n"
 "toistaminen tai äänittäminen ensin."
 
 #: src/tracks/playabletrack/wavetrack/ui/SpectrumView.cpp
@@ -17521,7 +17605,9 @@ msgstr "%.0f%% oikea"
 
 #: src/tracks/playabletrack/wavetrack/ui/WaveTrackView.cpp
 msgid "Click and drag to adjust sizes of sub-views, double-click to split evenly"
-msgstr "Säädä alinäkymien kokoa napsauttamalla ja raahaamalla, jaa ne tasaisesti kaksoisnapsauttamalla"
+msgstr ""
+"Säädä alinäkymien kokoa napsauttamalla ja raahaamalla, jaa ne tasaisesti "
+"kaksoisnapsauttamalla"
 
 #: src/tracks/playabletrack/wavetrack/ui/WaveTrackView.cpp
 msgid "Click and drag to rearrange sub-views"
@@ -17744,7 +17830,8 @@ msgstr "Napsautus ja raahaus siirtää valinnan ylätaajuutta."
 
 #: src/tracks/ui/SelectHandle.cpp
 msgid "Click and drag to move center selection frequency to a spectral peak."
-msgstr "Napsautus ja raahaus siirtää valinnan keskitaajuuden huippuun spektrissä."
+msgstr ""
+"Napsautus ja raahaus siirtää valinnan keskitaajuuden huippuun spektrissä."
 
 #: src/tracks/ui/SelectHandle.cpp
 msgid "Click and drag to move center selection frequency."
@@ -17834,7 +17921,9 @@ msgstr "Ctrl + napsautus"
 #: src/tracks/ui/TrackSelectHandle.cpp
 #, c-format
 msgid "%s to select or deselect track. Drag up or down to change track order."
-msgstr "%s valitsee raidan tai poistaa valinnan. Muuta raitojen järjestystä raahaamalla ylös- tai alaspäin."
+msgstr ""
+"%s valitsee raidan tai poistaa valinnan. Muuta raitojen järjestystä "
+"raahaamalla ylös- tai alaspäin."
 
 #. i18n-hint: %s is replaced by (translation of) 'Ctrl+Click' on windows, 'Command+Click' on Mac
 #: src/tracks/ui/TrackSelectHandle.cpp
@@ -18458,7 +18547,7 @@ msgstr ""
 
 #. i18n-hint: %s is replaced with 'Preferences > Directories'.
 #: src/widgets/UnwritableLocationErrorDialog.cpp
-#, fuzzy, c-format
+#, c-format
 msgid "You can change the directory in %s."
 msgstr ""
 "Ei voitu luoda hakemistoa:\n"
@@ -18466,7 +18555,6 @@ msgstr ""
 
 #. i18n-hint: Hyperlink title that opens Preferences dialog on Directories page.
 #: src/widgets/UnwritableLocationErrorDialog.cpp
-#, fuzzy
 msgid "Preferences > Directories"
 msgstr "Hakemistojen asetukset"
 
@@ -18876,7 +18964,8 @@ msgstr "Virhe.~%Virheellinen valinta.~%Tyhjä tila valinnan alussa/lopussa."
 #: plug-ins/crossfadeclips.ny
 #, lisp-format
 msgid "Error.~%Crossfade Clips may only be applied to one track."
-msgstr "Virhe.~%Leikkeiden ristihäivytystä voidaan käyttää vain yhdessä raidassa."
+msgstr ""
+"Virhe.~%Leikkeiden ristihäivytystä voidaan käyttää vain yhdessä raidassa."
 
 #: plug-ins/crossfadetracks.ny
 msgid "Crossfade Tracks"
@@ -19194,7 +19283,8 @@ msgid ""
 "                   Track sample rate is ~a Hz~%~\n"
 "                   Frequency must be less than ~a Hz."
 msgstr ""
-"Virhe:~%~%Taajuus (~a Hz) on liian korkea raidan näytteenottotaajuudelle.~%~%~\n"
+"Virhe:~%~%Taajuus (~a Hz) on liian korkea raidan "
+"näytteenottotaajuudelle.~%~%~\n"
 "                   Raidan näytteenottotaajuus on ~a Hz~%~\n"
 "                   Taajuuden on oltava pienempi kuin ~a Hz."
 
@@ -19205,7 +19295,9 @@ msgstr "Merkitse äänet"
 
 #: plug-ins/label-sounds.ny plug-ins/noisegate.ny
 msgid "Released under terms of the GNU General Public License version 2 or later."
-msgstr "Julkaistu GNU General Public License -version 2 tai uudemman ehtojen mukaisesti."
+msgstr ""
+"Julkaistu GNU General Public License -version 2 tai uudemman ehtojen "
+"mukaisesti."
 
 #: plug-ins/label-sounds.ny
 msgid "Threshold level (dB)"
@@ -19287,12 +19379,16 @@ msgstr "Virhe.~%Valinnan tulee olla alle ~a."
 #: plug-ins/label-sounds.ny
 #, lisp-format
 msgid "No sounds found.~%Try lowering the 'Threshold' or reduce 'Minimum sound duration'."
-msgstr "Ääniä ei löytynyt.ˇ%Yritä vähentää kynnysarvoa tai hiljaisuuden lyhintä kestoa."
+msgstr ""
+"Ääniä ei löytynyt.ˇ%Yritä vähentää kynnysarvoa tai hiljaisuuden lyhintä "
+"kestoa."
 
 #: plug-ins/label-sounds.ny
 #, lisp-format
 msgid "Labelling regions between sounds requires~%at least two sounds.~%Only one sound detected."
-msgstr "Äänien välisten alueiden merkitseminen vaatii~%vahintään kaksi ääntä.~%Niitä havaittiin vain yksi."
+msgstr ""
+"Äänien välisten alueiden merkitseminen vaatii~%vahintään kaksi ääntä.~%Niitä "
+"havaittiin vain yksi."
 
 #: plug-ins/limiter.ny
 msgid "Limiter"
@@ -19480,7 +19576,8 @@ msgid ""
 "                 Track sample rate is ~a Hz.~%~\n"
 "                 Frequency must be less than ~a Hz."
 msgstr ""
-"Virhe:~%~%Taajuus (~a Hz) on liian korkea raidan näytteenottotaajuudelle.~%~%~\n"
+"Virhe:~%~%Taajuus (~a Hz) on liian korkea raidan "
+"näytteenottotaajuudelle.~%~%~\n"
 "                   Raidan näytteenottotaajuus on ~a Hz~%~\n"
 "                   Taajuuden on oltava pienempi kuin ~a Hz."
 
@@ -19640,7 +19737,9 @@ msgstr "+/- 1"
 
 #: plug-ins/rhythmtrack.ny
 msgid "Set 'Number of bars' to zero to enable the 'Rhythm track duration'."
-msgstr "Aseta 'Palkkien määrä' -arvoksi nolla, jos haluat ottaa rytmiraidan keston käyttöön."
+msgstr ""
+"Aseta 'Palkkien määrä' -arvoksi nolla, jos haluat ottaa rytmiraidan keston "
+"käyttöön."
 
 #: plug-ins/rhythmtrack.ny
 msgid "Number of bars"
@@ -19864,7 +19963,9 @@ msgstr "Näytteenottotaajuus: ~a Hz.  Näytearvot ~a asteikolla. %~a~%~a"
 #: plug-ins/sample-data-export.ny
 #, lisp-format
 msgid "~a   ~a~%~aSample Rate: ~a Hz.~%Length processed: ~a samples ~a seconds.~a"
-msgstr "~a   ~a~%~aNäytteenottotaajuus: ~a Hz.~%Käsitelty pituus: ~a näytettä ~a sekuntia.~a"
+msgstr ""
+"~a   ~a~%~aNäytteenottotaajuus: ~a Hz.~%Käsitelty pituus: ~a näytettä ~a "
+"sekuntia.~a"
 
 #: plug-ins/sample-data-export.ny
 #, lisp-format
@@ -19882,8 +19983,10 @@ msgid ""
 "                  samples, ~a seconds.~%Peak amplitude: ~a (linear) ~a dB.  Unweighted RMS: ~a dB.~%~\n"
 "                  DC offset: ~a~a"
 msgstr ""
-"~a~%Näytteenottotaajuus: ~a Hz. Näytearvot ~a asteikolla. ~a.~%~aKäsitelty pituus: ~a ~\n"
-"                  näytteet, ~a sekuntia.~%Huippuamplitudi: ~a (lineaarinen) ~a dB.  Painottamaton RMS: ~a dB.~%~\n"
+"~a~%Näytteenottotaajuus: ~a Hz. Näytearvot ~a asteikolla. ~a.~%~aKäsitelty "
+"pituus: ~a ~\n"
+"                  näytteet, ~a sekuntia.~%Huippuamplitudi: ~a (lineaarinen) ~"
+"a dB.  Painottamaton RMS: ~a dB.~%~\n"
 "                  Tasajännitetaso: ~a~a"
 
 #: plug-ins/sample-data-export.ny
@@ -20215,7 +20318,9 @@ msgstr ""
 #: plug-ins/vocalrediso.ny
 #, lisp-format
 msgid "Pan position: ~a~%The left and right channels are correlated by about ~a %. This means:~%~a~%"
-msgstr "Panorointi: ~a~%Vasen ja oikea kanava korreloivat noin ~a %. Tämä tarkoittaa:~%~a~%"
+msgstr ""
+"Panorointi: ~a~%Vasen ja oikea kanava korreloivat noin ~a %. Tämä "
+"tarkoittaa:~%~a~%"
 
 #: plug-ins/vocalrediso.ny
 msgid ""
@@ -20225,14 +20330,16 @@ msgid ""
 msgstr ""
 " - Nämä kaksi kanavaa ovat identtiset eli kaksoismono.\n"
 "                Keskusta ei voi poistaa.\n"
-"                Mahdollinen jäljellä oleva ero voi johtua häviöllisestä koodauksesta."
+"                Mahdollinen jäljellä oleva ero voi johtua häviöllisestä "
+"koodauksesta."
 
 #: plug-ins/vocalrediso.ny
 msgid ""
 " - The two Channels are strongly related, i.e. nearly mono or extremely panned.\n"
 "                Most likely, the center extraction will be poor."
 msgstr ""
-" - Nämä kaksi kanavaa suhtautuvat vahvasti toisiinsa, eli lähes mono tai erittäin panoroitu.\n"
+" - Nämä kaksi kanavaa suhtautuvat vahvasti toisiinsa, eli lähes mono tai "
+"erittäin panoroitu.\n"
 "              Siten keskuksen poisto todennäköisesti toimii huonosti."
 
 #: plug-ins/vocalrediso.ny
@@ -20245,7 +20352,8 @@ msgid ""
 "                However, the center extraction depends also on the used reverb."
 msgstr ""
 " - Ihanteellinen arvo stereolle.\n"
-"               Keskuksen poistaminen kuitenkin riippuu myös käytetystä jälkikaiusta."
+"               Keskuksen poistaminen kuitenkin riippuu myös käytetystä "
+"jälkikaiusta."
 
 #: plug-ins/vocalrediso.ny
 msgid ""
@@ -20254,7 +20362,8 @@ msgid ""
 "                The center extraction can still be good though."
 msgstr ""
 " - Kaksi kanavaa eivät ole läheskään toisiinsa suhdassa.\n"
-"              Joko sinulla on vain kohinaa tai kappale on masteroitu epätasapainoisesti.\n"
+"              Joko sinulla on vain kohinaa tai kappale on masteroitu "
+"epätasapainoisesti.\n"
 "             Keskierotus voi silti olla hyvä."
 
 #: plug-ins/vocalrediso.ny
@@ -20276,7 +20385,8 @@ msgid ""
 msgstr ""
 " - Nämä kaksi kanavaa ovat lähes identtiset.\n"
 "                  Ilmeisesti pseudostereotehostusta on käytetty\n"
-"                  signaalin leventämiseen kaiuttimien välisen fyysisen etäisyyden poikki.\n"
+"                  signaalin leventämiseen kaiuttimien välisen fyysisen "
+"etäisyyden poikki.\n"
 "                  Keskuksen poistolta ei tulisi odottaa liikoja."
 
 #: plug-ins/vocalrediso.ny
