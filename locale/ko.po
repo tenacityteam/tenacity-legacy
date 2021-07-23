@@ -12,15 +12,16 @@ msgstr ""
 "Project-Id-Version: audacity 3.0.4\n"
 "Report-Msgid-Bugs-To: emabrey@tenacityaudio.org\n"
 "POT-Creation-Date: 2021-07-20 03:55-0400\n"
-"PO-Revision-Date: 2021-06-11 17:19+0900\n"
-"Last-Translator: Hwanyong Lee <hwan@ajou.ac.kr>\n"
-"Language-Team: Korean (http://www.transifex.com/klyok/audacity/language/ko/)\n"
+"PO-Revision-Date: 2021-07-23 03:07+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Korean <https://hosted.weblate.org/projects/tenacity/tenacity/"
+"ko/>\n"
 "Language: ko\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 2.4.1\n"
+"X-Generator: Weblate 4.7.2-dev\n"
 
 #: libraries/lib-strings/FutureStrings.h
 msgctxt "update dialog"
@@ -789,13 +790,6 @@ msgstr "특별히 감사할 분들:"
 #, c-format
 msgid "%s website: "
 msgstr "%s 웹사이트: "
-
-#. i18n-hint Tenacity's name substitutes for first and third %s,
-#. and a "copyright" symbol for the second
-#: src/AboutDialog.cpp
-#, c-format
-msgid "%s software is copyright %s 1999-2021 %s Team."
-msgstr "%s 소프트웨어의 저작권  %s 1999-2021 %s 팀."
 
 #. i18n-hint Tenacity's name substitutes for %s
 #: src/AboutDialog.cpp
@@ -2579,7 +2573,7 @@ msgid "Specify New Filename:"
 msgstr "새 파일 이름 지정:"
 
 #: src/FileNames.cpp
-#, fuzzy, c-format
+#, c-format
 msgid "Directory %s does not have write permissions"
 msgstr "%s 폴더가 없습니다. 새로 만들까요?"
 
@@ -3574,7 +3568,8 @@ msgid ""
 "There is very little free disk space left on %s\n"
 "Please select a bigger temporary directory location in\n"
 "Directories Preferences."
-msgstr "%s에 사용할 수 있는 공간이 거의 남아 있지 않습니다.좀더 가용 공간이 큰 곳에 임시 저장 공간을 지정하세요.디렉토리 환경설정 매뉴"
+msgstr ""
+"%s에 사용할 수 있는 공간이 거의 남아 있지 않습니다.좀더 가용 공간이 큰 곳에 임시 저장 공간을 지정하세요.디렉토리 환경설정 매뉴"
 
 #: src/ProjectAudioManager.cpp
 #, c-format
@@ -3836,11 +3831,6 @@ msgstr "경고: 자동 복구에 문제가 있습니다"
 #: src/ProjectFileIO.cpp src/menus/WindowMenus.cpp
 msgid "<untitled>"
 msgstr "<제목 없음>"
-
-#: src/ProjectFileIO.cpp
-#, c-format
-msgid "[Project %02i] "
-msgstr "[프로젝트 %02i] "
 
 #: src/ProjectFileIO.cpp
 msgid "Failed to open the project's database"
@@ -5698,7 +5688,9 @@ msgstr ""
 
 #: src/commands/CommandManager.cpp
 msgid "The following commands have had their shortcuts removed, because their default shortcut is new or changed, and is the same shortcut that you have assigned to another command."
-msgstr "다음 명령에 대한 단축키는 삭제되었습니다. 그 이유는 단축키의 기본값이 새롭게 정의되거나 변경되었고, 같은 단축키에 다른 명령을 지정하였기 때문입니다. "
+msgstr ""
+"다음 명령에 대한 단축키는 삭제되었습니다. 그 이유는 단축키의 기본값이 새롭게 정의되거나 변경되었고, 같은 단축키에 다른 명령을 "
+"지정하였기 때문입니다. "
 
 #: src/commands/CommandManager.cpp
 msgid "Shortcuts have been removed"
@@ -9458,7 +9450,9 @@ msgstr "버퍼 크기"
 
 #: src/effects/VST/VSTEffect.cpp src/effects/lv2/LV2Effect.cpp
 msgid "The buffer size controls the number of samples sent to the effect on each iteration. Smaller values will cause slower processing and some effects require 8192 samples or less to work properly. However most effects can accept large buffers and using them will greatly reduce processing time."
-msgstr "버퍼 크기는 각각의 반복 단계에서 효과에 보내질 샘플의 수를 결정한다. 값을 작게 설정할 경우 처리 속도가 늦고, 어떤 효과의 경우 최소 8192 이하를 요구함. 반면, 대부분의 효과는 큰 버퍼 크기를 허용하며, 이 경우 처리 속도가 빠름.    "
+msgstr ""
+"버퍼 크기는 각각의 반복 단계에서 효과에 보내질 샘플의 수를 결정한다. 값을 작게 설정할 경우 처리 속도가 늦고, 어떤 효과의 경우 최소 "
+"8192 이하를 요구함. 반면, 대부분의 효과는 큰 버퍼 크기를 허용하며, 이 경우 처리 속도가 빠름.    "
 
 #: src/effects/VST/VSTEffect.cpp
 msgid "&Buffer Size (8 to 1048576 samples):"
@@ -9484,7 +9478,9 @@ msgstr "그래픽 모드"
 
 #: src/effects/VST/VSTEffect.cpp
 msgid "Most VST effects have a graphical interface for setting parameter values. A basic text-only method is also available.  Reopen the effect for this to take effect."
-msgstr "대부분의 VST 효과들은 그래픽 인터페이스로 파라메터 값을  설정할 수 있습니다. 기본적인 텍스트 인터페이스도로 사용할 수 있습니다. 설정을 적용하려면 효과를 다시 열기 바랍니다."
+msgstr ""
+"대부분의 VST 효과들은 그래픽 인터페이스로 파라메터 값을  설정할 수 있습니다. 기본적인 텍스트 인터페이스도로 사용할 수 있습니다. "
+"설정을 적용하려면 효과를 다시 열기 바랍니다."
 
 #: src/effects/VST/VSTEffect.cpp src/effects/lv2/LV2Effect.cpp
 msgid "Enable &graphical interface"
@@ -9618,7 +9614,9 @@ msgstr "사용자 인터페이스"
 
 #: src/effects/audiounits/AudioUnitEffect.cpp
 msgid "Select \"Full\" to use the graphical interface if supplied by the Audio Unit. Select \"Generic\" to use the system supplied generic interface. Select \"Basic\" for a basic text-only interface. Reopen the effect for this to take effect."
-msgstr "\"전체\"를 선택하면 오디오 유니트가 지원하는 그래피 인터페이스를 사용할 수 있습니다. \"일반\"을 선택하면 시스템이 지원하는 일반 인터페이스를 사용하며, \"기본\"을 선택하면 텍스트로만 된 인터페이스를 사용합니다. 적용하려면 효과를 다시 열기 바랍니다."
+msgstr ""
+"\"전체\"를 선택하면 오디오 유니트가 지원하는 그래피 인터페이스를 사용할 수 있습니다. \"일반\"을 선택하면 시스템이 지원하는 일반 "
+"인터페이스를 사용하며, \"기본\"을 선택하면 텍스트로만 된 인터페이스를 사용합니다. 적용하려면 효과를 다시 열기 바랍니다."
 
 #: src/effects/audiounits/AudioUnitEffect.cpp
 msgid "Select &interface"
@@ -9809,7 +9807,9 @@ msgstr "처리의 일부 과정으로서, 일부 LV2 효과는 오데시티에 �
 
 #: src/effects/lv2/LV2Effect.cpp
 msgid "LV2 effects can have a graphical interface for setting parameter values. A basic text-only method is also available.  Reopen the effect for this to take effect."
-msgstr "LV2 효과들은 그래픽 인터페이스로 파라메터 값을 설정할 수 있습니다. 기본적인 텍스트 인터페이스도로 사용할 수 있습니다. 설정을 적용하려면 효과를 다시 열기 바랍니다."
+msgstr ""
+"LV2 효과들은 그래픽 인터페이스로 파라메터 값을 설정할 수 있습니다. 기본적인 텍스트 인터페이스도로 사용할 수 있습니다. 설정을 "
+"적용하려면 효과를 다시 열기 바랍니다."
 
 #: src/effects/lv2/LV2Effect.cpp
 msgid "Couldn't instantiate effect"
@@ -13879,7 +13879,6 @@ msgstr "도구모음(&T)"
 
 #. i18n-hint: (verb)
 #: src/menus/ToolbarMenus.cpp
-#, fuzzy
 msgid "Edit &Mode (on/off)"
 msgstr "추가 메뉴 (켬/끔)(&E)"
 
@@ -14700,7 +14699,6 @@ msgid "%s %2.0f%% complete. Click to change task focal point."
 msgstr "%s %2.0f%% 완료됨. 작업 포컬 포인트를 변경하려면 클릭하기 바랍니다. "
 
 #: src/prefs/ApplicationPrefs.cpp
-#, fuzzy
 msgid "Preferences for Application"
 msgstr "품질 환경설정"
 
@@ -18441,7 +18439,7 @@ msgstr ""
 
 #. i18n-hint: %s is replaced with 'Preferences > Directories'.
 #: src/widgets/UnwritableLocationErrorDialog.cpp
-#, fuzzy, c-format
+#, c-format
 msgid "You can change the directory in %s."
 msgstr ""
 "폴더를 만들 수 없습니다:\n"
@@ -18449,7 +18447,6 @@ msgstr ""
 
 #. i18n-hint: Hyperlink title that opens Preferences dialog on Directories page.
 #: src/widgets/UnwritableLocationErrorDialog.cpp
-#, fuzzy
 msgid "Preferences > Directories"
 msgstr "디렉토리 환경설정"
 
@@ -19866,7 +19863,8 @@ msgid ""
 "                  DC offset: ~a~a"
 msgstr ""
 "~a~%샘플링 주파수: ~a Hz. 샘플 값은 ~a 배율. ~a.~%~a처리된 길이: ~a ~\n"
-"                  샘플, ~a 초.~%피크 진폭: ~a (선형) ~a dB.  Unweighted RMS: ~a dB.~%~\n"
+"                  샘플, ~a 초.~%피크 진폭: ~a (선형) ~a dB.  Unweighted RMS: ~a dB.~%~"
+"\n"
 "                  DC 오프셋: ~a~a"
 
 #: plug-ins/sample-data-export.ny
