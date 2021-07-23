@@ -14,13 +14,13 @@ export AUDACITY_MODULES_PATH="${AUDACITY_MODULES_PATH}:${APPDIR}/lib/modules"
 
 function help()
 {
-    # Normal audacity help
+    # Normal tenacity help
     "${APPDIR}/bin/tenacity" --help
     # Special options handled by this script
     cat >&2 <<EOF
   --readme              display README
   --license             display LICENSE
-  --man[ual|page]       display audacity(1) manual page
+  --man[ual|page]       display tenacity(1) manual page
   --check-dependencies  check library dependency fulfillment (developer tool)
 
 EOF
@@ -46,7 +46,7 @@ case "$1" in
     exec bash "${APPDIR}/bin/check_dependencies"
     ;;
 * )
-    # Other arguments go to Audacity
+    # Other arguments go to tenacity
     exec "${APPDIR}/bin/tenacity" "$@"
     ;;
 esac

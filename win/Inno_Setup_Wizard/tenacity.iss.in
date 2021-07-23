@@ -1,14 +1,14 @@
-﻿;   Audacity: A Digital Audio Editor
-;   Audacity(R) is copyright (c) 1999-2021 Audacity Team.
+﻿;   Tenacity: A Digital Audio Editor
+;   Tenacity(R) is copyright (c) 1999-2021 Tenacity Team.
 ;   License: GPL v2.  See License.txt.
 ;
-;   audacity.iss
+;   tenacity.iss
 ;   Vaughan Johnson, Leland Lucius, Martyn Shaw, Richard Ash, & others
 ;
 
 ; This requires that the ISS Preprocessor be installed
 
-#define AppExe "Package\audacity.exe" 
+#define AppExe "Package\tenacity.exe" 
 #define AppMajor ""
 #define AppMinor ""
 #define AppRev ""
@@ -23,10 +23,10 @@ Filename: "{app}\unins*.*";
 
 [Setup]
 ; compiler-related directives
-OutputBaseFilename=audacity-win-{#AppVersion}-@INSTALLER_SUFFIX@
+OutputBaseFilename=tenacity-win-{#AppVersion}-@INSTALLER_SUFFIX@
 
-WizardImageFile=".\audacity_InnoWizardImage.bmp"
-WizardSmallImageFile=".\audacity_InnoWizardSmallImage.bmp"
+WizardImageFile=".\tenacity_InnoWizardImage.bmp"
+WizardSmallImageFile=".\tenacity_InnoWizardSmallImage.bmp"
 
 SolidCompression=yes
 
@@ -36,17 +36,17 @@ SolidCompression=yes
 DisableWelcomePage=no
 
 AppName={#AppName}
-AppVerName=Audacity {#AppVersion}
+AppVerName=Tenacity {#AppVersion}
 ; Specify AppVersion as well, so it appears in the Add/Remove Programs entry. 
 AppVersion={#AppVersion}
-AppPublisher="Audacity Team"
-AppPublisherURL=http://audacityteam.org
-AppSupportURL=http://audacityteam.org
-AppUpdatesURL=http://audacityteam.org
+AppPublisher="Tenacity Team"
+AppPublisherURL=https://tenacityaudio.org/
+AppSupportURL=https://tenacityaudio.org/
+AppUpdatesURL=https://tenacityaudio.org/
 ChangesAssociations=yes
 @INSTALLER_X64_MODE@
 
-DefaultDirName={commonpf}\Audacity
+DefaultDirName={commonpf}\Tenacity
 
 VersionInfoProductName={#AppName}
 VersionInfoProductTextVersion={#GetFileProductVersion(AppExe)}
@@ -55,17 +55,17 @@ VersionInfoVersion={#GetFileVersion(AppExe)}
 VersionInfoCopyright={#GetFileCopyright(AppExe)}
 
 ; Don't disable the "Select Destination Location" wizard, even if 
-; Audacity is already installed.
+; Tenacity is already installed.
 DisableDirPage=no
 
-; Always warn if dir exists, because we'll overwrite previous Audacity.
+; Always warn if dir exists, because we'll overwrite previous Tenacity.
 DirExistsWarning=yes
 DisableProgramGroupPage=yes
-UninstallDisplayIcon="{app}\audacity.exe"
+UninstallDisplayIcon="{app}\tenacity.exe"
 
 ; No longer force them to accept the license, just display it.   LicenseFile=..\LICENSE.txt
-InfoBeforeFile=".\audacity_InnoWizard_InfoBefore.rtf"
-InfoAfterFile=Additional\README.txt
+InfoBeforeFile=".\tenacity_InnoWizard_InfoBefore.rtf"
+InfoAfterFile=Additional\README.md
 
 ; We no longer produce new ANSI builds. 
 ; As we use Inno Setup (u), the Unicode version, to build this script, 
@@ -74,7 +74,7 @@ InfoAfterFile=Additional\README.txt
 ;   MinVersion=4.0,5.0
 
 ; cosmetic-related directives
-SetupIconFile="Additional\audacity.ico"
+SetupIconFile="Additional\tenacity.ico"
 
 @SIGN_TOOL@
 
@@ -85,20 +85,20 @@ Filename: "{app}\FirstTime.ini"; Section: "FromInno"; Key: "Language"; String: "
 [Tasks]
 Name: desktopicon; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"
 Name: resetPrefs; Description:  "{cm:ResetPrefs}"; Flags: unchecked
-; No longer allow user to choose whether to associate AUP file type with Audacity.
-; Name: associate_aup; Description: "&Associate Audacity project files"; GroupDescription: "Other tasks:"; Flags: checkedonce
+; No longer allow user to choose whether to associate AUP file type with Tenacity.
+; Name: associate_aup; Description: "&Associate Tenacity project files"; GroupDescription: "Other tasks:"; Flags: checkedonce
 
 [Files]
 ; Prime the first time .ini file so the permissions can be set
 Source: ".\FirstTimeModel.ini"; DestDir: "{app}"; DestName: "FirstTime.ini"; Permissions: users-modify
 
-; Don't display in separate window, rather as InfoAfterFile.   Source: "..\README.txt"; DestDir: "{app}"; Flags: ignoreversion isreadme
-Source: "Additional\README.txt"; DestDir: "{app}"; Flags: ignoreversion
+; Don't display in separate window, rather as InfoAfterFile.   Source: "..\README.md"; DestDir: "{app}"; Flags: ignoreversion isreadme
+Source: "Additional\README.md"; DestDir: "{app}"; Flags: ignoreversion
 
 Source: "Additional\LICENSE.txt"; DestDir: "{app}"; Flags: ignoreversion
 Source: "{#AppExe}"; DestDir: "{app}"; Flags: ignoreversion
 
-; Manual, which should be got from the manual wiki using ..\scripts\mw2html_audacity\wiki2htm.bat
+; Manual, which should be got from the manual wiki using ..\scripts\mw2html_tenacity\wiki2htm.bat
 @MANUAL@
 
 Source: "Additional\presets\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs
@@ -115,13 +115,13 @@ Source: "Package\plug-ins\*"; DestDir: "{app}\Plug-Ins\"; Flags: ignoreversion
 Source: "Package\modules\*"; DestDir: "{app}\modules\"; Flags: ignoreversion recursesubdirs
 
 [Icons]
-Name: "{commonprograms}\Audacity"; Filename: "{app}\audacity.exe"
-Name: "{commondesktop}\Audacity"; Filename: "{app}\audacity.exe"; Tasks: desktopicon
+Name: "{commonprograms}\Tenacity"; Filename: "{app}\tenacity.exe"
+Name: "{commondesktop}\Tenacity"; Filename: "{app}\tenacity.exe"; Tasks: desktopicon
 
 [InstallDelete]
-; Get rid of Audacity 1.0.0 stuff that's no longer used.
-Type: files; Name: "{app}\audacity-help.htb"
-Type: files; Name: "{app}\audacity-1.2-help.htb"
+; Get rid of Tenacity 1.0.0 stuff that's no longer used.
+Type: files; Name: "{app}\tenacity-help.htb"
+Type: files; Name: "{app}\tenacity-1.2-help.htb"
 
 ; Get rid of previous versions of MSVC runtimes.
 Type: files; Name: "{app}\Microsoft.VC80.CRT.manifest"
@@ -139,11 +139,11 @@ Type: filesandordirs; Name: "{app}\help"
 ; Don't want to do this because user may have stored their own.
 ;   Type: filesandordirs; Name: "{app}\vst"
 
-; We've switched from a folder in the start menu to just the Audacity.exe at the top level.
+; We've switched from a folder in the start menu to just the Tenacity.exe at the top level.
 ; Get rid of 1.0.0 folder and its icons.
-Type: files; Name: "{commonprograms}\Audacity\audacity.exe"
-Type: files; Name: "{commonprograms}\Audacity\unins000.exe"
-Type: dirifempty; Name: "{commonprograms}\Audacity"
+Type: files; Name: "{commonprograms}\Tenacity\tenacity.exe"
+Type: files; Name: "{commonprograms}\Tenacity\unins000.exe"
+Type: dirifempty; Name: "{commonprograms}\Tenacity"
 
 ;Get rid of previous uninstall item
 Type: files; Name: "{app}\unins*.*"
@@ -175,25 +175,25 @@ Type: files; Name: "{app}\Plug-Ins\crossfadeout.ny"
 Type: files; Name: "{app}\Plug-Ins\clicktrack.ny"
                                             
 [Registry]
-; No longer allow user to choose whether to associate AUP file type with Audacity.
+; No longer allow user to choose whether to associate AUP file type with Tenacity.
 ; Leaving this one commented out example of the old way.
-; Root: HKCR; Subkey: ".AUP"; ValueType: string; ValueData: "Audacity.Project"; Flags: createvalueifdoesntexist uninsdeletekey; Tasks: associate_aup
-Root: HKCR; Subkey: ".AUP"; ValueType: string; ValueData: "Audacity.Project"; Flags: createvalueifdoesntexist uninsdeletekey;
-Root: HKCR; Subkey: ".AUP3"; ValueType: string; ValueData: "Audacity.Project"; Flags: createvalueifdoesntexist uninsdeletekey;
-Root: HKCR; Subkey: "Audacity.Project\OpenWithList\audacity.exe"; Flags: createvalueifdoesntexist uninsdeletekey;
-Root: HKCR; Subkey: "Audacity.Project"; ValueType: string; ValueData: "Audacity Project File"; Flags: createvalueifdoesntexist uninsdeletekey;
-Root: HKCR; Subkey: "Audacity.Project\shell"; ValueType: string; ValueData: ""; Flags: createvalueifdoesntexist uninsdeletekey;
-Root: HKCR; Subkey: "Audacity.Project\shell\open"; Flags: createvalueifdoesntexist uninsdeletekey;
-Root: HKCR; Subkey: "Audacity.Project\shell\open\command"; ValueType: string; ValueData: """{app}\audacity.exe"" ""%1"""; Flags: uninsdeletekey;
+; Root: HKCR; Subkey: ".AUP"; ValueType: string; ValueData: "Tenacity.Project"; Flags: createvalueifdoesntexist uninsdeletekey; Tasks: associate_aup
+Root: HKCR; Subkey: ".AUP"; ValueType: string; ValueData: "Tenacity.Project"; Flags: createvalueifdoesntexist uninsdeletekey;
+Root: HKCR; Subkey: ".AUP3"; ValueType: string; ValueData: "Tenacity.Project"; Flags: createvalueifdoesntexist uninsdeletekey;
+Root: HKCR; Subkey: "Tenacity.Project\OpenWithList\tenacity.exe"; Flags: createvalueifdoesntexist uninsdeletekey;
+Root: HKCR; Subkey: "Tenacity.Project"; ValueType: string; ValueData: "Tenacity Project File"; Flags: createvalueifdoesntexist uninsdeletekey;
+Root: HKCR; Subkey: "Tenacity.Project\shell"; ValueType: string; ValueData: ""; Flags: createvalueifdoesntexist uninsdeletekey;
+Root: HKCR; Subkey: "Tenacity.Project\shell\open"; Flags: createvalueifdoesntexist uninsdeletekey;
+Root: HKCR; Subkey: "Tenacity.Project\shell\open\command"; ValueType: string; ValueData: """{app}\tenacity.exe"" ""%1"""; Flags: uninsdeletekey;
 
 ;The following would allow a following 'help' installer to know where to put the 'help' files.
-;Root: HKCR; Subkey: "Audacity.Project\Path";  ValueType: string; ValueData: {app}; Flags: createvalueifdoesntexist uninsdeletekey;
+;Root: HKCR; Subkey: "Tenacity.Project\Path";  ValueType: string; ValueData: {app}; Flags: createvalueifdoesntexist uninsdeletekey;
 
 [Run]
-Filename: "{app}\audacity.exe"; Description: "{cm:LaunchProgram,Audacity}"; Flags: nowait postinstall skipifsilent
+Filename: "{app}\tenacity.exe"; Description: "{cm:LaunchProgram,Tenacity}"; Flags: nowait postinstall skipifsilent
 
 [Languages]
-; NOTE: "0" in locale name will be translated to "@" when read by Audacity.
+; NOTE: "0" in locale name will be translated to "@" when read by Tenacity.
 
 ; Create subdirectories where we'll store the unofficial and dummy translation files
 {#expr Exec("cmd", "/c mkdir """ + "Languages\dummy""", '.\', , SW_HIDE), \

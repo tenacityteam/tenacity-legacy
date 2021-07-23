@@ -1390,28 +1390,6 @@ struct LabeledChannelGroup final : TrackPanelGroup {
    void Draw( TrackPanelDrawingContext &context,
       const wxRect &rect, unsigned iPass ) override
    {
-      if ( iPass == TrackArtist::PassBorders ) {
-         auto &dc = context.dc;
-         dc.SetBrush(*wxTRANSPARENT_BRUSH);
-         dc.SetPen(*wxBLACK_PEN);
-
-         // border
-         dc.DrawRectangle(
-            rect.x, rect.y,
-            rect.width - kShadowThickness, rect.height - kShadowThickness
-         );
-
-         // shadow
-         // Stroke lines along bottom and right, which are slightly short at
-         // bottom-left and top-right
-         const auto right = rect.GetRight();
-         const auto bottom = rect.GetBottom();
-
-         // bottom
-         AColor::Line(dc, rect.x + 2, bottom, right, bottom);
-         // right
-         AColor::Line(dc, right, rect.y + 2, right, bottom);
-      }
       if ( iPass == TrackArtist::PassFocus ) {
          // Sometimes highlight is not drawn on backing bitmap. I thought
          // it was because FindFocus did not return the TrackPanel on Mac, but

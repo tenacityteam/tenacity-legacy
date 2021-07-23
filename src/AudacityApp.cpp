@@ -1478,7 +1478,7 @@ bool AudacityApp::InitPart2() {
     bool permsReset = false;
     gPrefs->Read(wxT("/MicrophonePermissionsReset"), &permsReset, false);
     if (!permsReset) {
-        system("tccutil reset Microphone org.audacityteam.audacity");
+        system("tccutil reset Microphone org.tenacityaudio.tenacity");
         gPrefs->Write(wxT("/MicrophonePermissionsReset"), true);
     }
 #endif

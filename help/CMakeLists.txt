@@ -51,10 +51,10 @@ endif()
 if( NOT CMAKE_SYSTEM_NAME MATCHES "Darwin" )
    if( NOT WIN32)
       install( DIRECTORY "${dst}" OPTIONAL
-               DESTINATION "${_DATADIR}/audacity/help" )
-      install( FILES "${_SRCDIR}/audacity.1"
+               DESTINATION "${_DATADIR}/tenacity/help" )
+      install( FILES "${_SRCDIR}/tenacity.1"
                DESTINATION "${_MANDIR}/man1" )
-      install( FILES "${_SRCDIR}/audacity.appdata.xml"
+      install( FILES "${_SRCDIR}/tenacity.appdata.xml"
                DESTINATION "${_DATADIR}/metainfo" )
    endif()
 endif()

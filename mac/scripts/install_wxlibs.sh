@@ -38,7 +38,7 @@ update_paths()
 }
 
 # For testing
-# BUILT_PRODUCTS_DIR=/tmp/Audacity.app/Contents
+# BUILT_PRODUCTS_DIR=/tmp/Tenacity.app/Contents
 # EXECUTABLE_PATH=MacOS/audacity
 # FRAMEWORKS_FOLDER_PATH=Frameworks
 

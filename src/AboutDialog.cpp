@@ -47,14 +47,20 @@ hold information about a credit item in the Credits list
 // RevisionIdent contains the REV_TIME and REV_LONG defines from git commit information
 #include "RevisionIdent.h"
 
+//This needs to be outside the #ifdef or it won't end up in the POT file consistently
+static wxString NoDateTimeText = XO("Unknown date and time").Translation();
+
 #ifndef REV_TIME
-#define REV_TIME "unknown date and time"
+#define REV_TIME NoDateTimeText
 #endif
+
+//This needs to be outside the #ifdef or it won't end up in the POT file consistently
+static wxString NoRevisionText = XO("No revision identifier was provided").Translation();
 
 #ifdef REV_LONG
 #define REV_IDENT wxString( "[[https://github.com/tenacityteam/tenacity/commit/" )+ REV_LONG + "|" + wxString( REV_LONG ).Left(6) + "]] of " +  REV_TIME 
 #else
-#define REV_IDENT (XO("No revision identifier was provided").Translation())
+#define REV_IDENT (NoRevisionText)
 #endif
 
 // To substitute into many other translatable strings
@@ -223,7 +229,6 @@ void AboutDialog::CreateInformationTab(ShuttleGui& AboutDialogGUI) {
         << XO("The Build")
         << wxT("</h3>\n<table>"); // start build info table
 
-    AddBuildInfoRow(&informationStr, XO("Program build date:"), __TDATE__);
     AddBuildInfoRow(&informationStr, XO("Commit Id:"), REV_IDENT);
     AddBuildInfoRow(&informationStr, XO("Build type:"), getBuildType().Translation());
     AddBuildInfoRow(&informationStr, XO("Compiler:"), getCompilerVersion());

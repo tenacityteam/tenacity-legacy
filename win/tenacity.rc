@@ -1,7 +1,7 @@
 #ifdef EXPERIMENTAL_DA
 AudacityLogo ICON "darkaudacity.ico"
 #else
-AudacityLogo ICON "audacity.ico"
+AudacityLogo ICON "tenacity.ico"
 #endif
 
 #include <winres.h>
@@ -48,21 +48,21 @@ BEGIN
         BLOCK "040904b0"
         BEGIN
 #ifdef EXPERIMENTAL_DA
-            VALUE "CompanyName", "Extended Tenacity Team"
+            VALUE "CompanyName", "Extended Tenacity Contributors"
             VALUE "FileDescription", "A customised Tenacity Cross-Platform Sound Editor"
             VALUE "FileVersion", AUDACITY_FILE_VERSION
             VALUE "InternalName", "DarkTenacity"
-            VALUE "LegalCopyright", "Copyright © 2021. All rights reserved."
+            VALUE "LegalCopyright", "Copyright Â© 1999-2021 under GPLv2+"
             VALUE "LegalTrademarks", ""
             VALUE "OriginalFilename", "DarkTenacity.exe"
             VALUE "ProductName", "DarkTenacity"
             VALUE "ProductVersion", AUDACITY_FILE_VERSION
 #else
-            VALUE "CompanyName", "Tenacity Team"
+            VALUE "CompanyName", "Tenacity Contributors"
             VALUE "FileDescription", "Tenacity Cross-Platform Sound Editor"
             VALUE "FileVersion", AUDACITY_FILE_VERSION
             VALUE "InternalName", "Tenacity"
-            VALUE "LegalCopyright", "Copyright © 2021. All rights reserved."
+            VALUE "LegalCopyright", "Copyright Â© 1999-2021 under GPLv2+"
             VALUE "LegalTrademarks", ""
             VALUE "OriginalFilename", "Tenacity.exe"
             VALUE "ProductName", "Tenacity"
