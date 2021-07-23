@@ -3,6 +3,7 @@
  @brief headerless file injects method definitions for time shifting of NoteTrack
  */
 
+#ifdef USE_MIDI
 #include "../../../ui/TimeShiftHandle.h"
 #include "../../../../NoteTrack.h"
 #include "../../../../ViewInfo.h"
@@ -60,3 +61,4 @@ template<> template<> auto MakeNoteTrackShifter::Implementation() -> Function {
    };
 }
 static MakeNoteTrackShifter registerMakeNoteTrackShifter;
+#endif
