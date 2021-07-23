@@ -4,8 +4,6 @@
 
 set -uxo pipefail
 
-set +x
-
 max_retry=5
 counter=0
 num_secs_await_retry=1
