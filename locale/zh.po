@@ -15,8 +15,8 @@ msgstr ""
 "Project-Id-Version: audacity 3.0.3\n"
 "Report-Msgid-Bugs-To: emabrey@tenacityaudio.org\n"
 "POT-Creation-Date: 2021-07-20 03:55-0400\n"
-"PO-Revision-Date: 2021-07-23 03:18+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2021-07-23 07:06+0000\n"
+"Last-Translator: Eric <spice2wolf@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
 "tenacity/tenacity/zh_Hans/>\n"
 "Language: zh\n"
@@ -87,8 +87,6 @@ msgstr "Audacity %s 可用！"
 #. to one of them (one is enough)
 #. i18n-hint: modifier as in "Recording preferences", not progressive verb
 #: libraries/lib-strings/FutureStrings.h
-#, fuzzy
-#| msgid "Recording"
 msgctxt "preference"
 msgid "Recording"
 msgstr "录音"
@@ -709,17 +707,15 @@ msgstr "%s, 图形"
 
 #. i18n-hint: For "About Tenacity..." credits, substituting a person's proper name
 #: src/AboutDialog.cpp
-#, fuzzy, c-format
-#| msgid "%s, web developer"
+#, c-format
 msgid "%s, lead Tenacity developer"
-msgstr "%s, Web 开发者"
+msgstr "%s, fork 前的 Web 开发者"
 
 #. i18n-hint: For "About Tenacity..." credits, substituting a person's proper name
 #: src/AboutDialog.cpp
-#, fuzzy, c-format
-#| msgid "%s, web developer"
+#, c-format
 msgid "%s, Tenacity developer"
-msgstr "%s, Web 开发者"
+msgstr "%s, fork 前的 Web 开发者"
 
 #: src/AboutDialog.cpp
 #, c-format
@@ -741,10 +737,8 @@ msgid "Credits"
 msgstr "制作组"
 
 #: src/AboutDialog.cpp
-#, fuzzy
-#| msgid "DarkAudacity Customisation"
 msgid "DarkTenacity Customisation"
-msgstr "DarkAudacity 自定义"
+msgstr "DarkTenacity 自定义"
 
 #. i18n-hint: The program's name substitutes for %s
 #: src/AboutDialog.cpp
@@ -971,10 +965,8 @@ msgid "Block size must be within 256 to 100000000\n"
 msgstr "块大小必须在 256 到 100000000 之间\n"
 
 #: src/AudacityApp.cpp
-#, fuzzy
-#| msgid "Audacity is starting up..."
 msgid "Tenacity is starting up..."
-msgstr "Audacity 正在启动..."
+msgstr "Tenacity 正在启动..."
 
 #. i18n-hint: "New" is an action (verb) to create a NEW project
 #: src/AudacityApp.cpp src/BatchProcessDialog.cpp src/menus/FileMenus.cpp
@@ -991,10 +983,8 @@ msgid "Open &Recent..."
 msgstr "打开最近使用的(&R)..."
 
 #: src/AudacityApp.cpp
-#, fuzzy
-#| msgid "&About Audacity..."
 msgid "&About Tenacity..."
-msgstr "关于Audacity(&A)..."
+msgstr "&关于 Tenacity..."
 
 #: src/AudacityApp.cpp
 msgid "&Preferences..."
@@ -2661,16 +2651,12 @@ msgid "Hz"
 msgstr "Hz"
 
 #: src/FreqWindow.cpp
-#, fuzzy
-#| msgid "Horizontal"
 msgid "Scroll Horizontal"
-msgstr "水平"
+msgstr "水平分割"
 
 #: src/FreqWindow.cpp
-#, fuzzy
-#| msgid "Horizontal"
 msgid "Zoom Horizontal"
-msgstr "水平"
+msgstr "水平分割"
 
 #: src/FreqWindow.cpp
 msgid "Cursor:"
@@ -14689,17 +14675,12 @@ msgid "Preferences for Application"
 msgstr "质量偏好设置"
 
 #: src/prefs/ApplicationPrefs.cpp
-#, fuzzy
-#| msgctxt "update dialog"
-#| msgid "Update Audacity"
 msgid "Update Audacity"
-msgstr "更新 Audacity"
+msgstr "更新 Tenacity"
 
 #: src/prefs/ApplicationPrefs.cpp
-#, fuzzy
-#| msgid "&Check for Updates..."
 msgid "&Check for Updates"
-msgstr "检查更新(&C)..."
+msgstr "检查更新出错"
 
 #: src/prefs/BatchPrefs.cpp src/prefs/BatchPrefs.h
 msgid "Batch"
@@ -17600,10 +17581,8 @@ msgstr "对数插值(&I)"
 
 #. i18n-hint Appears on hovering mouse over clip affordance
 #: src/tracks/ui/AffordanceHandle.cpp
-#, fuzzy
-#| msgid "Click and drag to move a track in time"
 msgid "Click and drag to move a clip in time, or click to select"
-msgstr "单击并拖动在时间范围内的轨道"
+msgstr "单击并拖动可调整，双击可重置"
 
 #: src/tracks/ui/CommonTrackControls.cpp
 msgid "&Name..."
@@ -18417,10 +18396,9 @@ msgstr "确认关闭"
 
 #. i18n-hint: %s is replaced with a directory path.
 #: src/widgets/UnwritableLocationErrorDialog.cpp
-#, fuzzy, c-format
-#| msgid "Unable to read the preset from \"%s\""
+#, c-format
 msgid "Unable to write files to directory: %s."
-msgstr "无法从 \"%s\" 读取预设"
+msgstr "无法初始化工程文件"
 
 #. i18n-hint: This message describes the error in the Error dialog.
 #: src/widgets/UnwritableLocationErrorDialog.cpp
