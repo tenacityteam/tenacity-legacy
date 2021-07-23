@@ -40,9 +40,9 @@ enum
 
 // DA: DTMF for Audacity uses a different string.
 #ifdef EXPERIMENTAL_DA
-#define SHORT_APP_NAME "darkaudacity"
+#define SHORT_APP_NAME "darktenacity"
 #else
-#define SHORT_APP_NAME "audacity"
+#define SHORT_APP_NAME "tenacity"
 #endif
 
 // Define keys, defaults, minimums, and maximums for the effect parameters

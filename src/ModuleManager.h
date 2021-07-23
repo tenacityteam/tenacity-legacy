@@ -17,7 +17,7 @@
 #include <map>
 #include <vector>
 
-#include "audacity/Types.h"
+#include "tenacity/Types.h"
 #include "Identifier.h"
 
 class wxArrayString;

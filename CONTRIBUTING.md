@@ -59,7 +59,7 @@ See [git-rebase.io](https://git-rebase.io) for more details.
 ## Developer Certificate of Origin
 
 Tenacity is an open source project licensed under the GNU General Public
-license, version 2 or later (see [`LICENSE`](LICENSE)).
+license, version 2 or later (see [`LICENSE`](LICENSE.txt)).
 
 We respect intellectual property rights, and we'd like to make sure that all
 contributions are properly attributed. As such, we use the simple and clear

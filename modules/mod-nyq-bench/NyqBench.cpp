@@ -1373,7 +1373,6 @@ void NyqBench::OnAbout(wxCommandEvent & e)
    i.SetCopyright(_("(C) 2009 by Leland Lucius"));
    i.SetDescription(_("External Audacity module which provides a simple IDE for writing effects."));
    i.SetName(_("Nyquist Effect Workbench"));
-   i.SetVersion(__TDATE__);
 
    wxAboutBox(i);
 }

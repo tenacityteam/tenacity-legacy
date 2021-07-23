@@ -28,7 +28,7 @@ for shared and private configs - which need to move out.
 #include <wx/log.h>
 #include <wx/tokenzr.h>
 
-#include "audacity/ModuleInterface.h"
+#include "tenacity/ModuleInterface.h"
 
 #include "AudacityFileConfig.h"
 #include "Internat.h" // for macro XO
@@ -463,7 +463,7 @@ void PluginManager::FindFilesInPathList(const wxString & pattern,
    // Add the "Audacity" plug-ins directory
    wxFileName ff = PlatformCompatibility::GetExecutablePath();
 #if defined(__WXMAC__)
-   // Path ends for example in "Audacity.app/Contents/MacOSX"
+   // Path ends for example in "Tenacity.app/Contents/MacOSX"
    //ff.RemoveLastDir();
    //ff.RemoveLastDir();
    // just remove the MacOSX part.

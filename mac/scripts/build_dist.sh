@@ -89,8 +89,8 @@ then
       echo "Usage: ${0} srcroot dstroot"
       echo
       echo "  srcroot   path to the 'mac' subdirectory of your source tree"
-      echo "  dstroot   path to where Audacity was built:"
-      echo "            legacy build = /tmp/Audacity.dst"
+      echo "  dstroot   path to where Tenacity was built:"
+      echo "            legacy build = /tmp/Tenacity.dst"
       echo "            cmake build = <build directory/bin/Release"
       exit 1
    fi
@@ -107,10 +107,10 @@ VERSION=`awk '/^#define+ AUDACITY_VERSION / {print $3}' ${SRCROOT}/../src/Audaci
 RELEASE=`awk '/^#define+ AUDACITY_RELEASE / {print $3}' ${SRCROOT}/../src/Audacity.h`
 REVISION=`awk '/^#define+ AUDACITY_REVISION / {print $3}' ${SRCROOT}/../src/Audacity.h`
 VERSION=$VERSION.$RELEASE.$REVISION
-IDENT=$(plist "${DSTROOT}/Audacity.app/Contents/Info.plist" "CFBundleIdentifier")
+IDENT=$(plist "${DSTROOT}/Tenacity.app/Contents/Info.plist" "CFBundleIdentifier")
 
 #
-# This depends on a file in the builders HOME directory called ".audacity_signing" that
+# This depends on a file in the builders HOME directory called ".tenacity_signing" that
 # contains the following four lines with the appropriate values specified.  If the file
 # doesn't exist or one of the values is missing the distribution will be built unsigned
 # and unnotarized.
@@ -124,22 +124,22 @@ IDENT=$(plist "${DSTROOT}/Audacity.app/Contents/Info.plist" "CFBundleIdentifier"
 #   https://support.apple.com/guide/keychain-access/add-a-password-to-a-keychain-kyca1120/mac
 #
 # You generate the app-specific password in your Apple developer account and you must specify
-# "org.audacityteam.audacity" as the application identifier.
+# "org.tenacityaudio.tenacity" as the application identifier.
 #
 SIGNING=
-if [ -r ~/.audacity_signing ]
+if [ -r ~/.tenacity_signing ]
 then
-   source ~/.audacity_signing
+   source ~/.tenacity_signing
    if [ -n "${CODESIGN_APP_IDENTITY}" -a -n "${NOTARIZE_USERNAME}" -a -n "${NOTARIZE_PASSWORD}" ]
    then
       SIGNING="y"
    fi
 fi
 
-VOL="Audacity $VERSION"
-DMG="audacity-macos-$VERSION"
+VOL="Tenacity $VERSION"
+DMG="tenacity-macos-$VERSION"
 
-echo "Audacity has been installed to: ${DSTROOT}"
+echo "Tenacity has been installed to: ${DSTROOT}"
 cd "${DSTROOT}/.."
 
 # Make sure we have consistent ownership and permissions
@@ -156,17 +156,17 @@ then
                   --timestamp \
                   --identifier "${IDENT}" \
                   --options runtime \
-                  --entitlements "${SRCROOT}/Audacity.entitlements" \
+                  --entitlements "${SRCROOT}/Tenacity.entitlements" \
                   --sign "${CODESIGN_APP_IDENTITY}" \
-                  ${DSTROOT}/Audacity.app/Contents/modules/*
+                  ${DSTROOT}/Tenacity.app/Contents/modules/*
 
    xcrun codesign --verbose \
                   --timestamp \
                   --identifier "${IDENT}" \
                   --options runtime \
-                  --entitlements "${SRCROOT}/Audacity.entitlements" \
+                  --entitlements "${SRCROOT}/Tenacity.entitlements" \
                   --sign "${CODESIGN_APP_IDENTITY}" \
-                  ${DSTROOT}/Audacity.app/Contents/plug-ins/*
+                  ${DSTROOT}/Tenacity.app/Contents/plug-ins/*
 
    xcrun codesign --verbose \
                   --deep \
@@ -175,10 +175,10 @@ then
                   --options runtime \
                   --entitlements "${SRCROOT}/Audacity.entitlements" \
                   --sign "${CODESIGN_APP_IDENTITY}" \
-                  ${DSTROOT}/Audacity.app
+                  ${DSTROOT}/Tenacity.app
 
    # Create the ZIP archive for notarization
-   xcrun ditto -c -k --keepParent "${DSTROOT}/Audacity.app" "${DSTROOT}.zip" 
+   xcrun ditto -c -k --keepParent "${DSTROOT}/Tenacity.app" "${DSTROOT}.zip" 
 
    # Send it off for notarization
    notarize "${DSTROOT}.zip"
@@ -187,7 +187,7 @@ then
    rm "${DSTROOT}.zip"
 
    # Staple the app
-   stapler staple "${DSTROOT}/Audacity.app"
+   stapler staple "${DSTROOT}/Tenacity.app"
 fi
 
 # Create structure
@@ -278,7 +278,7 @@ fi
 
 # Create zip version
 rm -rf "${DMG}/.background"
-rm -rf "${DMG}/Audacity.app/Contents/help"
+rm -rf "${DMG}/Tenacity.app/Contents/help"
 zip -r9 "${DMG}.zip" "${DMG}"
 
 # Cleanup

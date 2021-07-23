@@ -35,7 +35,7 @@ ShuttleGui.
 #include <wx/utils.h>
 #include <wx/log.h>
 
-#include "audacity/ConfigInterface.h"
+#include "tenacity/ConfigInterface.h"
 
 #include "../Shuttle.h"
 #include "../ShuttleGui.h"

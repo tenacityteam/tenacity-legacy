@@ -253,7 +253,7 @@ static wxString HelpTextBuiltIn( const wxString & Key )
          << wxT(" [[https://forum.audacityteam.org/|Forum]] - for large knowledge base on using Audacity.")
          << wxT("</li></ul>")
 #else
-         << wxT("<center><h3>Audacity ")
+         << wxT("<center><h3>Tenacity ")
          << AUDACITY_VERSION_STRING
          << wxT("</h3><h3>")
          << XO("How to get help")

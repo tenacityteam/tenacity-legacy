@@ -263,7 +263,7 @@ function( audacity_append_common_compiler_options var use_pch )
          # Define/undefine _DEBUG
 	 # Yes, -U to /U too as needed for Windows:
 	 $<IF:$<CONFIG:Debug>,-D_DEBUG=1,-U_DEBUG>
-   )   
+   )
    # Definitions controlled by the AUDACITY_BUILD_LEVEL switch
    if( AUDACITY_BUILD_LEVEL EQUAL 0 )
       list( APPEND ${var} -DIS_ALPHA -DUSE_ALPHA_MANUAL )
@@ -408,7 +408,7 @@ function( audacity_module_fn NAME SOURCES IMPORT_TARGETS
 
    # compute LIBRARIES
    set( LIBRARIES )
-   
+
    foreach( IMPORT ${IMPORT_TARGETS} )
       list( APPEND LIBRARIES "${IMPORT}" )
    endforeach()
@@ -449,8 +449,8 @@ function( audacity_module_fn NAME SOURCES IMPORT_TARGETS
       endif()
 
       add_custom_command(TARGET ${TARGET} POST_BUILD
-         COMMAND ${CMAKE_COMMAND} -E copy 
-            "$<TARGET_FILE:${TARGET}>" 
+         COMMAND ${CMAKE_COMMAND} -E copy
+            "$<TARGET_FILE:${TARGET}>"
             "${REQUIRED_LOCATION}/$<TARGET_FILE_NAME:${TARGET}>"
       )
    endif()
@@ -478,7 +478,7 @@ function( audacity_module_fn NAME SOURCES IMPORT_TARGETS
    # collect dependency information
    list( APPEND GRAPH_EDGES "\"${TARGET}\" [${ATTRIBUTES}]" )
    if (NOT LIBTYPE STREQUAL "MODULE")
-      list( APPEND GRAPH_EDGES "\"Audacity\" -> \"${TARGET}\"" )
+      list( APPEND GRAPH_EDGES "\"Tenacity\" -> \"${TARGET}\"" )
    endif ()
    set(ACCESS PUBLIC PRIVATE INTERFACE)
    foreach( IMPORT ${IMPORT_TARGETS} )
@@ -589,7 +589,7 @@ function( addlib dir name symbol required check )
    set( TARGET_ROOT ${libsrc}/${dir} )
 
    # Define the option name
-   set( use ${_OPT}use_${name} ) 
+   set( use ${_OPT}use_${name} )
 
    # If we're not checking for system or local here, then let the
    # target config handle the rest.
@@ -635,7 +635,7 @@ function( addlib dir name symbol required check )
    if ( TARGET "${TARGET}" )
       return()
    endif()
- 
+
    message( STATUS "========== Configuring ${name} ==========" )
 
    # Check for the system package(s) if the user prefers it
@@ -676,7 +676,7 @@ function( addlib dir name symbol required check )
       # Set the folder (for the IDEs) for each one
       foreach( target ${targets} )
          # Skip interface libraries since they don't have any source to
-         # present in the IDEs   
+         # present in the IDEs
          get_target_property( type "${target}" TYPE )
          if( NOT "${type}" STREQUAL "INTERFACE_LIBRARY" )
             set_target_properties( ${target} PROPERTIES FOLDER "lib-src" )

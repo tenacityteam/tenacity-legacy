@@ -79,7 +79,7 @@ function cleanfulltree {
    printf "Done\n"
 
    printf "removing executable and other intermediate files ... "
-   myrmvf $1 src/audacity src/.depend src/.gchdepend
+   myrmvf $1 src/tenacity src/.depend src/.gchdepend
    myfindrm $1 config.status
    myfindrm $1 config.log
    myfindrm $1 config.cache
@@ -89,11 +89,11 @@ function cleanfulltree {
    printf "Done\n"
 
    printf "removing orphaned symlinks in lib-src/ ... "
-   myrmvf $1 lib-src/*.a 
+   myrmvf $1 lib-src/*.a
    printf "Done\n"
 
    printf "removing doxygen output files ... "
-   myrmrvf $1 dox 
+   myrmrvf $1 dox
    printf "Done\n"
 
    printf "removing unused libraries from GIT tree ..."
@@ -122,7 +122,7 @@ function slimtree {
    printf "Done\n"
 
    printf "removing qa ... "
-   myrmrvf $1 qa 
+   myrmrvf $1 qa
    printf "Done\n"
 
    printf "removing unused portaudio-v19 directories ... "
@@ -149,9 +149,9 @@ function slimtree {
    myrmvf $1 plug-ins/analyze.ny plug-ins/fadein.ny plug-ins/fadeout.ny
    myrmvf $1 plug-ins/undcbias.ny
    printf "Done\n"
-   
-   printf "Removing developer scripts not needed to build audacity ... "
-   myrmrvf $1 scripts/mw2html_audacity 
+
+   printf "Removing developer scripts not needed to build tenacity ... "
+   myrmrvf $1 scripts/mw2html_audacity
    printf "Done\n"
 
    printf "Removing Mac and Windows build files ... "
@@ -160,11 +160,11 @@ function slimtree {
    printf "Done\n"
 }
 
-echo "Maketarball 2.1.0 -- make an Audacity distribution tarball"
+echo "Maketarball 2.1.0 -- make an Tenacity distribution tarball"
 
 # check number of arguments, if not one then print a usage message
 if [ $# -ne 1 ] ; then
-   echo "Script to make directory trees for audacity source tarballs"
+   echo "Script to make directory trees for tenacity source tarballs"
    echo "Usage: $0 <mode>"
    echo "Where mode is either \"quiet\" or \"verbose\""
    exit 1
@@ -180,7 +180,7 @@ else
 fi
 
 if [ ! -f "src/Audacity.h" ] ; then
-   echo "$0 must be run from top-level audacity directory"
+   echo "$0 must be run from top-level tenacity directory"
    exit 1
 fi
 
@@ -188,7 +188,7 @@ fi
 sourcedir="$(pwd)"   # where the sources are
 cd ..
 topdir="$(pwd)"   # one level up where the tarballs come out
-tmpsrc="${topdir}/$(mktemp -d audacity-src-XXXXXX)" # where initial modifications are done
+tmpsrc="${topdir}/$(mktemp -d tenacity-src-XXXXXX)" # where initial modifications are done
 
 printf "making copy of source directory ... "
 cp -pr "${sourcedir}/." "${tmpsrc}"
@@ -196,7 +196,7 @@ cd "${tmpsrc}"
 printf "Done\n"
 
 # The script relies on make working, so Makefiles need to be present. This
-# means that configure must have been run on the sources. In general, it doesn't 
+# means that configure must have been run on the sources. In general, it doesn't
 # matter what options, but the generation of a Makefile in lib-src/ in
 # particular is important. Check that lib-src/Makefile is present and newer than
 # lib-src/Makefile.in before continuing
@@ -238,7 +238,7 @@ if [ $reconf -eq 1 ] ; then
    fi
 fi
 
-# The version number is stored in a C++ header as a set of #defines. Trying to 
+# The version number is stored in a C++ header as a set of #defines. Trying to
 # parse this with another language (as was done first with Perl and then with
 # awk) is always going to be fragile, so we use a C++ pre-processor (which
 # strangely enough we are pretty much guaranteed to have) to do it. Essentially
@@ -283,7 +283,7 @@ printf "${version}\n"
 # tarball, prior to building the source tarball
 cleanfulltree $mode
 
-# now we have the full source tree, lets slim it down to the bits that 
+# now we have the full source tree, lets slim it down to the bits that
 # you actually need to build audacity on a shared library system with the
 # relevant libraries installed on the system (e.g. Linux distros)
 slimtree $mode
@@ -297,10 +297,10 @@ printf "Done\n"
 
 # Tar up that lot as the source tarball
 printf "Creating source tarball ... "
-tar cf "${tarname}.tar" "${tarname}" 
+tar cf "${tarname}.tar" "${tarname}"
 printf "Done\n"
 
 printf "Compressing source tarball ... "
-xz "${tarname}.tar" 
+xz "${tarname}.tar"
 cd "${tarname}"
 printf "Done\n"

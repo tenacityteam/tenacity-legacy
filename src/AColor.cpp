@@ -258,6 +258,7 @@ void AColor::BevelTrackInfo(wxDC & dc, bool up, const wxRect & r, bool highlight
 
    wxColour col;
    col = Blend( theTheme.Colour( clrTrackInfo ), up ? wxColour( 255,255,255):wxColour(0,0,0));
+   col = Blend( theTheme.Colour( clrTrackInfo ), col);
 
    wxPen pen( highlight ? uglyPen : col );
    dc.SetPen( pen );
@@ -266,6 +267,7 @@ void AColor::BevelTrackInfo(wxDC & dc, bool up, const wxRect & r, bool highlight
    dc.DrawLine(r.x, r.y, r.x, r.y + r.height);
 
    col = Blend( theTheme.Colour( clrTrackInfo ), up ? wxColour(0,0,0): wxColour(255,255,255));
+   col = Blend( theTheme.Colour( clrTrackInfo ), col);
 
    pen.SetColour( col );
    dc.SetPen( highlight ? uglyPen : pen );
