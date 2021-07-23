@@ -2,7 +2,7 @@
 
 ((${BASH_VERSION%%.*} >= 4)) || { echo >&2 "$0: Error: Please upgrade Bash."; exit 1; }
 
-set -uxo pipefail
+set -uo pipefail
 
 max_retry=5
 counter=0
