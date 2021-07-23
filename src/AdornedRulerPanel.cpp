@@ -339,25 +339,13 @@ void AdornedRulerPanel::QuickPlayIndicatorOverlay::Draw(
         : AColor::Light(&dc, false)
       ;
 
-      // Draw indicator in all visible tracks
-      auto pCellularPanel = dynamic_cast<CellularPanel*>( &panel );
-      if ( !pCellularPanel ) {
-         wxASSERT( false );
-         return;
-      }
-      pCellularPanel
-         ->VisitCells( [&]( const wxRect &rect, TrackPanelCell &cell ) {
-            const auto pTrackView = dynamic_cast<TrackView*>(&cell);
-            if (!pTrackView)
-               return;
-
             // Draw the NEW indicator in its NEW location
-            AColor::Line(dc,
-               mOldQPIndicatorPos,
-               rect.GetTop(),
-               mOldQPIndicatorPos,
-               rect.GetBottom());
-      } );
+      auto rect = panel.GetRect();
+      AColor::Line(dc,
+         mOldQPIndicatorPos,
+         rect.GetTop(),
+         mOldQPIndicatorPos,
+         rect.GetBottom());
    }
 }
 
