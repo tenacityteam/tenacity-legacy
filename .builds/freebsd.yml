@@ -4,6 +4,7 @@ packages:
   - cmake
   - ffmpeg
   - wx28-gtk2-common 
+  - gtk2
   - py38-pip
   - gmake
   - conan
@@ -11,8 +12,6 @@ packages:
 sources:
   - https://git.sr.ht/~tenacity/tenacity
 tasks:
-  - conan: |
-      sudo pip install conan
   - configure: |
       mkdir build
       cd build
