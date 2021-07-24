@@ -2,6 +2,11 @@
 
 ((${BASH_VERSION%%.*} >= 4)) || { echo >&2 "$0: Error: Please upgrade Bash."; exit 1; }
 
+if [ -f "activate.sh" ]; then
+    echo "Setting up conan venv"
+    source activate.sh
+fi
+
 set -euxo pipefail
 
 conan --version # check it works
