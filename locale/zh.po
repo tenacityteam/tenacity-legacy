@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: audacity 3.0.3\n"
 "Report-Msgid-Bugs-To: emabrey@tenacityaudio.org\n"
 "POT-Creation-Date: 2021-07-20 03:55-0400\n"
-"PO-Revision-Date: 2021-07-23 07:06+0000\n"
+"PO-Revision-Date: 2021-07-24 05:06+0000\n"
 "Last-Translator: Eric <spice2wolf@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
 "tenacity/tenacity/zh_Hans/>\n"
@@ -3931,6 +3931,8 @@ msgid ""
 "Project is read only\n"
 "(Unable to work with the blockfiles)"
 msgstr ""
+"工程是只读的\n"
+"(无法使用 blockfiles)"
 
 #. i18n-hint: An error message.  Don't translate blockfiles.
 #: src/ProjectFileIO.cpp
@@ -3947,6 +3949,8 @@ msgid ""
 "Project is busy\n"
 "(Unable to work with the blockfiles)"
 msgstr ""
+"工程正忙\n"
+"(无法使用 blockfiles)"
 
 #. i18n-hint: An error message.  Don't translate blockfiles.
 #: src/ProjectFileIO.cpp
@@ -3954,6 +3958,8 @@ msgid ""
 "Project is corrupt\n"
 "(Unable to work with the blockfiles)"
 msgstr ""
+"工程损坏\n"
+"(无法使用 blockfiles)"
 
 #. i18n-hint: An error message.  Don't translate blockfiles.
 #: src/ProjectFileIO.cpp
@@ -3961,6 +3967,8 @@ msgid ""
 "Some permissions issue\n"
 "(Unable to work with the blockfiles)"
 msgstr ""
+"一些权限问题\n"
+"(无法使用 blockfiles)"
 
 #. i18n-hint: An error message.  Don't translate blockfiles.
 #: src/ProjectFileIO.cpp
@@ -3968,6 +3976,8 @@ msgid ""
 "A disk I/O error\n"
 "(Unable to work with the blockfiles)"
 msgstr ""
+"磁盘 I/O 错误\n"
+"(无法使用 blockfiles)"
 
 #. i18n-hint: An error message.  Don't translate blockfiles.
 #: src/ProjectFileIO.cpp
@@ -3975,11 +3985,13 @@ msgid ""
 "Not authorized\n"
 "(Unable to work with the blockfiles)"
 msgstr ""
+"未经授权\n"
+"(无法使用 blockfiles)"
 
 #. i18n-hint: An error message.  Don't translate blockfiles.
 #: src/ProjectFileIO.cpp
 msgid "Unable to work with the blockfiles"
-msgstr "无法处理块文件"
+msgstr "无法使用块文件"
 
 #: src/ProjectFileIO.cpp
 #, c-format
@@ -4109,6 +4121,10 @@ msgid ""
 "\n"
 "%s"
 msgstr ""
+"未能打开该工程，可能是由于存储设备\n"
+"空间有限。\n"
+"\n"
+"%s"
 
 #: src/ProjectFileIO.cpp
 #, c-format
@@ -4191,6 +4207,9 @@ msgid ""
 "\n"
 "Please select a different disk with more free space."
 msgstr ""
+"工程大小超过目标磁盘上的可用可用空间。\n"
+"\n"
+"请选择其他有更多可用空间的磁盘。"
 
 #: src/ProjectFileManager.cpp
 msgid "The project exceeds the maximum size of 4GB when writing to a FAT32 formatted filesystem."
@@ -4334,6 +4353,8 @@ msgid ""
 "Project resides on FAT formatted drive.\n"
 "Copy it to another drive to open it."
 msgstr ""
+"工程驻留在 FAT 格式的驱动器上。\n"
+"复制到另一个驱动器以打开它。"
 
 #: src/ProjectFileManager.cpp
 msgid "Project was recovered"
@@ -4380,6 +4401,13 @@ msgid ""
 "\n"
 "Do you want to continue?"
 msgstr ""
+"压缩此工程会通过去除文件内未使用的字节释放磁盘空间。\n"
+"\n"
+"可用空间为 %s，此工程当前正使用 %s\n"
+"\n"
+"如果继续，当前的“撤消/重做历史记录”和剪贴板内容将被丢弃，您将大致恢复磁盘空间的 %s。\n"
+"\n"
+"你想继续吗？"
 
 #: src/ProjectFileManager.cpp
 msgid "Compacted project file"
@@ -4930,6 +4958,8 @@ msgid ""
 "The temporary files directory is on a FAT formatted drive.\n"
 "Resetting to default location."
 msgstr ""
+"临时文件目录位于一个 FAT 格式的驱动器上。\n"
+"重置为默认位置。"
 
 #: src/TempDirectory.cpp
 #, c-format
@@ -4938,6 +4968,9 @@ msgid ""
 "\n"
 "For tips on suitable drives, click the help button."
 msgstr ""
+"%s\n"
+"\n"
+"有关合适驱动器的提示，请单击“帮助”按钮。"
 
 #: src/Theme.cpp
 #, c-format
@@ -5029,6 +5062,9 @@ msgid ""
 " were found in:\n"
 "  %s."
 msgstr ""
+"预期的主题组件文件中\n"
+" 没有一个在下列位置被找到：\n"
+"  %s."
 
 #: src/Theme.cpp
 #, c-format
@@ -9842,6 +9878,8 @@ msgid ""
 "Enable track spectrogram view before\n"
 "applying 'Spectral' effects."
 msgstr ""
+"在应用 \"Spectral\" 效果前\n"
+"启用轨道声谱视图。"
 
 #: src/effects/nyquist/Nyquist.cpp
 msgid ""
@@ -12152,6 +12190,10 @@ msgid ""
 "This is likely caused by a malformed MP3.\n"
 "\n"
 msgstr ""
+"导入失败\n"
+"\n"
+"这可能是由于畸形的 MP3 造成的。\n"
+"\n"
 
 #: src/import/ImportOGG.cpp
 msgid "Ogg Vorbis files"
@@ -12474,7 +12516,7 @@ msgstr "导入(&I)"
 
 #: src/import/RawAudioGuess.cpp
 msgid "Bad data size. Could not import audio"
-msgstr ""
+msgstr "数据大小无效。无法导入音频"
 
 #. i18n-hint: given the name of a track, specify its left channel
 #: src/menus/ClipMenus.cpp
@@ -13033,7 +13075,7 @@ msgstr "退出(&X)"
 
 #: src/menus/FileMenus.cpp
 msgid "Hidden File Menu"
-msgstr ""
+msgstr "隐藏的文件菜单"
 
 #: src/menus/FileMenus.cpp
 msgid "Export as FLAC"
@@ -14790,6 +14832,8 @@ msgid ""
 "Leave a field empty to go to the last directory used for that operation.\n"
 "Fill in a field to always go to that directory for that operation."
 msgstr ""
+"留空字段，以转到用于该操作的上一个目录。\n"
+"填写字段，则该操作将始终转到该目录。"
 
 #: src/prefs/DirectoriesPrefs.cpp
 msgid "O&pen:"
@@ -18403,7 +18447,7 @@ msgstr "无法初始化工程文件"
 #. i18n-hint: This message describes the error in the Error dialog.
 #: src/widgets/UnwritableLocationErrorDialog.cpp
 msgid "Please check that the directory exists, has the necessary permissions, and the drive isn't full."
-msgstr ""
+msgstr "请检查目录是否存在，是否具有必要的权限，驱动器是否已满。"
 
 #. i18n-hint: %s is replaced with 'Preferences > Directories'.
 #: src/widgets/UnwritableLocationErrorDialog.cpp
@@ -19209,11 +19253,11 @@ msgstr "最长前端静音"
 
 #: plug-ins/label-sounds.ny
 msgid "Maximum trailing silence"
-msgstr ""
+msgstr "最长尾部静音"
 
 #: plug-ins/label-sounds.ny
 msgid "Sound ##1"
-msgstr ""
+msgstr "声音 ##1"
 
 #. i18n-hint: hours minutes and seconds. Do not translate "~a".
 #: plug-ins/label-sounds.ny
@@ -19224,7 +19268,7 @@ msgstr "~a时 ~a分 ~a秒"
 #: plug-ins/label-sounds.ny
 #, lisp-format
 msgid "Too many silences detected.~%Only the first 10000 labels added."
-msgstr ""
+msgstr "检测到过多的静音。~% 只添加了前10000 个标签。"
 
 #. i18n-hint: '~a' will be replaced by a time duration
 #: plug-ins/label-sounds.ny
@@ -19240,7 +19284,7 @@ msgstr "未找到声音。~%尝试降低“阈值”或下调“最短声音持�
 #: plug-ins/label-sounds.ny
 #, lisp-format
 msgid "Labelling regions between sounds requires~%at least two sounds.~%Only one sound detected."
-msgstr ""
+msgstr "标记声音之间的区域需要~%至少两段声音。~%仅检测到一段声音。"
 
 #: plug-ins/limiter.ny
 msgid "Limiter"
@@ -19375,6 +19419,9 @@ msgid ""
 "Selection too long.\n"
 "Maximum length is ~a."
 msgstr ""
+"错误\n"
+"选区太长\n"
+"最大长度为 ~a。"
 
 #: plug-ins/noisegate.ny
 #, lisp-format
