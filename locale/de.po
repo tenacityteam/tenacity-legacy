@@ -31,8 +31,8 @@ msgstr ""
 "Project-Id-Version: Audacity\n"
 "Report-Msgid-Bugs-To: emabrey@tenacityaudio.org\n"
 "POT-Creation-Date: 2021-07-20 03:55-0400\n"
-"PO-Revision-Date: 2021-07-23 02:55+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2021-07-24 05:06+0000\n"
+"Last-Translator: Zero Dot <blindgrafix@googlemail.com>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/tenacity/tenacity/"
 "de/>\n"
 "Language: de\n"
@@ -80,7 +80,7 @@ msgstr "Es kann keine Verbindung zum Tenacity-Update-Server hergestellt werden."
 #: libraries/lib-strings/FutureStrings.h
 msgctxt "update dialog"
 msgid "Update data was corrupted."
-msgstr "Update-Daten waren beschädigt."
+msgstr "Die Update-Daten sind beschädigt."
 
 #: libraries/lib-strings/FutureStrings.h
 msgctxt "update dialog"
@@ -757,10 +757,8 @@ msgid "Credits"
 msgstr "Mitwirkende"
 
 #: src/AboutDialog.cpp
-#, fuzzy
-#| msgid "DarkAudacity Customisation"
 msgid "DarkTenacity Customisation"
-msgstr "DarkAudacity-Anpassungen"
+msgstr "DarkTenacity-Anpassungen"
 
 #. i18n-hint: The program's name substitutes for %s
 #: src/AboutDialog.cpp
@@ -779,12 +777,13 @@ msgid "%s includes code from the following projects:"
 msgstr "%s beinhaltet Code aus den folgenden Projekten:"
 
 #: src/AboutDialog.cpp
+#, fuzzy
 msgid "Emeritus:"
 msgstr "Inaktiv:"
 
 #: src/AboutDialog.cpp
 msgid "Contributors"
-msgstr "Beitragende"
+msgstr "Pre-Fork Beitragende"
 
 #: src/AboutDialog.cpp
 msgid "Website and Graphics"
@@ -798,7 +797,10 @@ msgstr "Webseite und Grafiken"
 #.
 #: src/AboutDialog.cpp
 msgid "translator_credits"
-msgstr "Deutsche Übersetzung von Andreas Klug, Heiko Abler, Pennywize, Edgar M. Franke, Daniel Winzen, Ralf Gebauer und Joachim Huffer, Sebastian Rüth, fossdd"
+msgstr ""
+"Deutsche Übersetzung von Andreas Klug, Heiko Abler, Pennywize, Edgar M. "
+"Franke, Daniel Winzen, Ralf Gebauer und Joachim Huffer, Sebastian Rüth, "
+"fossdd, ZeroDot1"
 
 #: src/AboutDialog.cpp
 msgid "Translators"
@@ -826,7 +828,7 @@ msgstr "Zeitleistenaktionen während Aufnahme deaktiviert"
 
 #: src/AdornedRulerPanel.cpp
 msgid "Click and drag to adjust, double-click to reset"
-msgstr "Klicken und Ziehen zum anpassen, Doppelklicken um zurückzusetzen"
+msgstr "Klicken und Ziehen zum Anpassen, Doppelklicken um zurückzusetzen"
 
 #. i18n-hint: This text is a tooltip on the icon (of a pin) representing
 #. the temporal position in the audio.
@@ -844,7 +846,7 @@ msgstr "Zeitleiste"
 #.
 #: src/AdornedRulerPanel.cpp
 msgid "Click or drag to begin Seek"
-msgstr "Klicken oder Ziehen, um Suche zu beginnen"
+msgstr "Klicken oder Ziehen, um die Suche zu beginnen"
 
 #. i18n-hint: These commands assist the user in finding a sound by ear. ...
 #. "Scrubbing" is variable-speed playback, ...
@@ -880,7 +882,7 @@ msgstr "Zum Schrubben bewegen"
 
 #: src/AdornedRulerPanel.cpp
 msgid "Drag to Seek. Release to stop seeking."
-msgstr "Zum Suchen ziehen. Aufhören, um die Suche zu beenden."
+msgstr "Zum Suchen ziehen. Aufhören zu ziehen, um die Suche zu beenden."
 
 #: src/AdornedRulerPanel.cpp
 msgid "Drag to Seek. Release and move to Scrub."
@@ -15255,7 +15257,12 @@ msgstr "Unbenutzte Filter:"
 
 #: src/prefs/ExtImportPrefs.cpp
 msgid "There are space characters (spaces, newlines, tabs or linefeeds) in one of the items. They are likely to break the pattern matching. Unless you know what you are doing, it is recommended to trim spaces. Do you want Audacity to trim spaces for you?"
-msgstr "Es sind Leerzeichen (Leerzeichen, Zeilenumbruch, Tabs oder Zeilenvorschübe) in einem der Elemente vorhanden. Sie werden voraussichtlich die Musterübereinstimmung verhindern. Außer, Sie wissen was Sie tun, wird es empfohlen, Leerzeichen zu kürzen. Soll Tenacity die Leerzeichen für Sie kürzen?"
+msgstr ""
+"Es sind Leerzeichen (Leerzeichen, Zeilenumbruch, Tabs oder Zeilenvorschübe) "
+"in einem der Elemente vorhanden. Sie werden voraussichtlich die "
+"Musterübereinstimmung verhindern. Außer, Sie wissen, was Sie tun, wird es "
+"empfohlen, Leerzeichen zu kürzen. Soll Tenacity die Leerzeichen für Sie "
+"kürzen?"
 
 #: src/prefs/ExtImportPrefs.cpp
 msgid "Spaces detected"
@@ -18642,6 +18649,8 @@ msgstr "Konnte die Voreinstellung von \"%s\" nicht lesen"
 #: src/widgets/UnwritableLocationErrorDialog.cpp
 msgid "Please check that the directory exists, has the necessary permissions, and the drive isn't full."
 msgstr ""
+"Bitte prüfen Sie, ob das Verzeichnis existiert, die notwendigen Rechte hat "
+"und das Laufwerk nicht voll ist."
 
 #. i18n-hint: %s is replaced with 'Preferences > Directories'.
 #: src/widgets/UnwritableLocationErrorDialog.cpp
@@ -20674,3 +20683,15 @@ msgstr "Fehler.~%Stereospur erforderlich."
 
 #~ msgid "Error.n"
 #~ msgstr "Fehler.n"
+
+#: src/ProjectFileIO.cpp
+#, c-format
+msgid "[Project %02i] Audacity "
+msgstr "[Projekt %02i] Tenacity "
+
+#. i18n-hint Tenacity's name substitutes for first and fourth %s, and the
+#. second and third %s are the copyright symbol and final year of copyright
+#: src/AboutDialog.cpp
+#, c-format
+msgid "%s %s 1999-%s %s contributors"
+msgstr "%s %s 1999-%s %s Beitragende"
