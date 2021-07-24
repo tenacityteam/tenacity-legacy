@@ -66,7 +66,7 @@ static wxString NoRevisionText = XO("No revision identifier was provided").Trans
 // To substitute into many other translatable strings
 static const auto ProgramName = Verbatim("Tenacity");
 
-static const auto PreforkProgramName = Verbatim("Pre-fork");
+static const auto PreforkProgramName = Verbatim("Audacity");
 
 // ----------------------------------------------------------------------------
 
@@ -123,7 +123,15 @@ void AboutDialog::CreateTenacityTab(ShuttleGui& AboutDialogGUI) {
     GenerateTenacityPageDescription(tenacityPageContent);
 
     GenerateTenacityTeamMembersInfo(tenacityPageContent);
+    GenerateSpecialThanksInfo(tenacityPageContent);
     GenerateTenacityLibsInfo(tenacityPageContent);
+
+    // Pre-form (Audacity) credits
+
+    tenacityPageContent
+        << wxT("<center><h3>")
+        << PreforkProgramName
+        << wxT("</h3></center>");
 
     GeneratePreforkTeamMembersInfo(tenacityPageContent);
     GeneratePreforkEmeritusInfo(tenacityPageContent);
@@ -621,6 +629,13 @@ void AboutDialog::CreateLicenseTab(ShuttleGui& AboutDialogGUI) {
 void AboutDialog::PopulateCreditsList() {
 
     /* i18n-hint: For "About Tenacity..." credits, substituting a person's proper name */
+    const auto tenacity_leadDeveloperFormat = XO("%s, lead Tenacity developer");
+    /* i18n-hint: For "About Tenacity..." credits, substituting a person's proper name */
+    const auto tenacity_developerFormat = XO("%s, Tenacity developer");
+    /* i18n-hint: For "About Tenacity..." credits, substituting a person's proper name */
+    const auto tenacity_contributorFormat = XO("%s, Tenacity contributor");
+
+    /* i18n-hint: For "About Tenacity..." credits, substituting a person's proper name */
     const auto prefork_sysAdminFormat = XO("%s, system administration");
     /* i18n-hint: For "About Tenacity..." credits, substituting a person's proper name */
     const auto prefork_coFounderFormat = XO("%s, co-founder and developer");
@@ -651,14 +666,25 @@ void AboutDialog::PopulateCreditsList() {
     /* i18n-hint: For "About Tenacity..." credits, substituting a person's proper name */
     const auto prefork_graphicsFormat = XO("%s, graphics");
 
-    /* i18n-hint: For "About Tenacity..." credits, substituting a person's proper name */
-    const auto tenacity_leadDeveloperFormat = XO("%s, lead Tenacity developer");
-    /* i18n-hint: For "About Tenacity..." credits, substituting a person's proper name */
-    const auto tenacity_developerFormat = XO("%s, Tenacity developer");
+    // Contributors
 
-    AddCredit(wxT("Emily Mabrey [[https://github.com/emabrey|emabrey]]"), tenacity_leadDeveloperFormat, roleTenacityTeamMember);
-    AddCredit(wxT("Semisol [[https://github.com/Semisol|Semisol]]"), tenacity_developerFormat, roleTenacityTeamMember);
-    AddCredit(wxT("Be [[https://github.com/Be-ing/|Be-ing]]"), tenacity_developerFormat, roleTenacityTeamMember);
+    AddCredit(wxT("abb128 ([[https://github.com/abb128|GitHub]])"), tenacity_contributorFormat, roleTenacityTeamMember);
+    AddCredit(wxT("AnotherFoxGuy ([[https://github.com/AnotherFoxGuy|GitHub]])"), tenacity_contributorFormat, roleTenacityTeamMember);
+    AddCredit(wxT("Ajay Ramachandran ([[https://ajay.app|Website]])"), tenacity_contributorFormat, roleTenacityTeamMember);
+    AddCredit(wxT("Be ([[https://github.com/Be-ing/|GitHub]])"), tenacity_contributorFormat, roleTenacityTeamMember);
+    AddCredit(wxT("caughtquick ([[https://caughtquick.tech|Website]]"), tenacity_contributorFormat, roleTenacityTeamMember);
+    AddCredit(wxT("Emily \"emabrey\" Mabrey ([[https://github.com/emabrey|GitHub]])"), tenacity_contributorFormat, roleTenacityTeamMember);
+    AddCredit(wxT("fossdd ([[https://github.com/fossdd|GitHub]])"), tenacity_contributorFormat, roleTenacityTeamMember);
+    AddCredit(wxT("nyanpasu64 ([[https://github.com/nyanpasu64|GitHub]])"), tenacity_contributorFormat, roleTenacityTeamMember);
+    AddCredit(wxT("Panagiotis \"AlwaysLivid\" Vasilopoulos ([[https://alwayslivid.com|Website]])"), tenacity_contributorFormat, roleTenacityTeamMember);
+    AddCredit(wxT("Rikard \"akleja\" Jansson ([[https://github.com/akleja|GitHub]])"), tenacity_contributorFormat, roleTenacityTeamMember);
+    AddCredit(wxT("Semisol ([[https://github.com/Semisol|GitHub]])"), tenacity_contributorFormat, roleTenacityTeamMember);
+    AddCredit(wxT("Sol Fisher Romanoff ([[https://solfisher.com|Website]])"), tenacity_contributorFormat, roleTenacityTeamMember);
+
+    // Thanks
+
+    AddCredit(wxT("Drew \"SirCmpwn\" DeVault"), roleThanks);
+    AddCredit(wxT("Filipe \"falkTX\" Coelho"), roleThanks);
 
     // Libraries section
 
@@ -822,12 +848,12 @@ void AboutDialog::GenerateTenacityPageDescription(wxTextOutputStream& tos) {
     #else
         << XO("<h3>")
         << ProgramName
-        << wxT(" ")
-        << wxString(AUDACITY_VERSION_STRING)
-        << wxT("</center></h3>")
+        // << wxT(" ")
+        // << wxString(AUDACITY_VERSION_STRING)
+        << wxT("</h3>")
         /* i18n-hint: The program's name substitutes for %s */
-        << XO("%s the free, open source, cross-platform software for recording and editing sounds.")
-        .Format(ProgramName)
+        << XO("Free, open source, cross-platform audio recorder and editor.")
+        << wxT("</center>")
     #endif
 
         // << wxT("<p><br>")
@@ -837,6 +863,9 @@ void AboutDialog::GenerateTenacityPageDescription(wxTextOutputStream& tos) {
         << wxT("<h3>")
         << XO("Credits")
         << wxT("</h3>")
+        << wxT("<p>")
+        << XO("Please note that names are sorted in alphabetical order, not in order of importance.")
+        << wxT("</p>")
         << wxT("<p>");
 
     // DA: Customisation credit
@@ -853,10 +882,20 @@ void AboutDialog::GenerateTenacityPageDescription(wxTextOutputStream& tos) {
 void AboutDialog::GenerateTenacityTeamMembersInfo(wxTextOutputStream& tos) {
     tos
         << wxT("<p><b>")
+        // To be replaced. Later.
         /* i18n-hint: The program's name substitutes for %s */
-        << XO("%s Team Members").Format(ProgramName)
+        << XO("%s Contributors").Format(ProgramName)
         << wxT("</b><br>")
         << GetCreditsByRole(roleTenacityTeamMember);
+}
+
+void AboutDialog::GenerateSpecialThanksInfo(wxTextOutputStream& tos) {
+
+    tos
+        << wxT("<p><b>")
+        << XO("Special thanks:")
+        << wxT("</b><br>")
+        << GetCreditsByRole(roleThanks);
 }
 
 void AboutDialog::GenerateTenacityLibsInfo(wxTextOutputStream& tos) {
