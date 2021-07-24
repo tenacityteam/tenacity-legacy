@@ -10,15 +10,15 @@
 #define BUILD_INFO_H
 
 #include "wx/cpp.h"
-#include <wx/string.h>
+#include <wx/ctrlsub.h>
 #include <wx/sstream.h>
+#include <wx/string.h>
 #include <wx/txtstrm.h>
 
 #include <Internat.h>
 
 // RevisionIdent contains the REV_TIME and REV_LONG defines from git commit information
 #include "RevisionIdent.h"
-#include <wx/ctrlsub.h>
 
 // This define replaces the original that modified the macro in wxwidgets
 #define CUSTOM_wxMAKE_VERSION_DOT_STRING_T(x, y, z) wxSTRINGIZE_T(x) wxT(".") wxSTRINGIZE_T(y) wxT(".") wxSTRINGIZE_T(z) wxT("(Tenacity)")
@@ -26,7 +26,7 @@
 class BuildInfo {
     
 public:
-      const enum class CompilerType { MSVC, MinGW, GCC, Clang, Unknown };
+      enum class CompilerType { MSVC, MinGW, GCC, Clang, Unknown };
 
       static constexpr auto CurrentBuildCompiler =
         #if defined(_MSC_FULL_VER)
