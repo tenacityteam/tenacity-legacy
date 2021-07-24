@@ -9,8 +9,7 @@ msgstr ""
 "POT-Creation-Date: 2021-07-20 03:55-0400\n"
 "PO-Revision-Date: 2021-07-23 06:17+0000\n"
 "Last-Translator: Emily Mabrey <emilymabrey93@gmail.com>\n"
-"Language-Team: Afrikaans <https://hosted.weblate.org/projects/tenacity/"
-"tenacity/af/>\n"
+"Language-Team: Afrikaans <https://hosted.weblate.org/projects/tenacity/tenacity/af/>\n"
 "Language: af\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -786,6 +785,13 @@ msgstr "Spesiale dank aan:"
 msgid "%s website: "
 msgstr "Eerste gebruik van Tenacity "
 
+#. i18n-hint Tenacity's name substitutes for first and third %s,
+#. and a "copyright" symbol for the second
+#: src/AboutDialog.cpp
+#, c-format
+msgid "%s software is copyright %s 1999-2021 %s Team."
+msgstr ""
+
 #. i18n-hint Tenacity's name substitutes for %s
 #: src/AboutDialog.cpp
 #, c-format
@@ -1001,9 +1007,7 @@ msgstr ""
 
 #: src/AudacityApp.cpp
 msgid "Audacity is now going to exit. Please launch Audacity again to use the new temporary directory."
-msgstr ""
-"Tenacity gaan nou afsluit. Laat loop Tenacity weer om die nuwe tydelike gids "
-"te gebruik."
+msgstr "Tenacity gaan nou afsluit. Laat loop Tenacity weer om die nuwe tydelike gids te gebruik."
 
 #: src/AudacityApp.cpp
 msgid ""
@@ -2607,9 +2611,7 @@ msgstr "Om die spektrum te teken moet alle bane die selfde monstertempo hê."
 #: src/FreqWindow.cpp
 #, c-format
 msgid "Too much audio was selected. Only the first %.1f seconds of audio will be analyzed."
-msgstr ""
-"Te veel oudio is gekies.  Slegs die eersste %.1f sekondes sal geanaliseer "
-"word."
+msgstr "Te veel oudio is gekies.  Slegs die eersste %.1f sekondes sal geanaliseer word."
 
 #: src/FreqWindow.cpp
 msgid "Not enough data selected."
@@ -3455,9 +3457,7 @@ msgstr ""
 msgid ""
 "Error opening sound device.\n"
 "Try changing the audio host, playback device and the project sample rate."
-msgstr ""
-"Fout met oopmaak van klanktoestel. Gaan asseblief die opstelling vir "
-"afvoertoestel en projektempo na."
+msgstr "Fout met oopmaak van klanktoestel. Gaan asseblief die opstelling vir afvoertoestel en projektempo na."
 
 #: src/ProjectAudioManager.cpp src/menus/TransportMenus.cpp
 msgid "The tracks selected for recording must all have the same sampling rate"
@@ -3660,6 +3660,11 @@ msgstr ""
 
 #: src/ProjectFileIO.cpp src/menus/WindowMenus.cpp
 msgid "<untitled>"
+msgstr ""
+
+#: src/ProjectFileIO.cpp
+#, c-format
+msgid "[Project %02i] "
 msgstr ""
 
 #: src/ProjectFileIO.cpp
@@ -9505,9 +9510,7 @@ msgstr "Nyquist"
 
 #: src/effects/nyquist/Nyquist.cpp
 msgid "Sorry, cannot apply effect on stereo tracks where the tracks don't match."
-msgstr ""
-"Jammer, kan nie effek toepas op stereo bane waar die individuele kanale van "
-"die baan nie ooreenstem nie."
+msgstr "Jammer, kan nie effek toepas op stereo bane waar die individuele kanale van die baan nie ooreenstem nie."
 
 #: src/effects/nyquist/Nyquist.cpp
 #, c-format
@@ -9686,9 +9689,7 @@ msgstr ""
 
 #: src/effects/vamp/VampEffect.cpp
 msgid "Sorry, Vamp Plug-ins cannot be run on stereo tracks where the individual channels of the track do not match."
-msgstr ""
-"Jammer, Vamp-inproppe werk nie op stereo bane waar die individuele kanale "
-"van die baan nie ooreenstem nie."
+msgstr "Jammer, Vamp-inproppe werk nie op stereo bane waar die individuele kanale van die baan nie ooreenstem nie."
 
 #: src/effects/vamp/VampEffect.cpp
 msgid "Sorry, failed to load Vamp Plug-in."
@@ -9752,8 +9753,7 @@ msgid ""
 msgstr ""
 "U wil 'n '%s'-lêer stoor met die naam \"%s\".\n"
 "\n"
-"Hierdie lêers eindig gewoonlik met \".%s\", en party programme maak nie "
-"lêers met niestandaard name oop nie.\n"
+"Hierdie lêers eindig gewoonlik met \".%s\", en party programme maak nie lêers met niestandaard name oop nie.\n"
 "\n"
 "Wil u definitief die lêer met hierdie naam stoor?"
 
@@ -9768,18 +9768,15 @@ msgstr "'n Lêer genaamd \"%s\" bestaan reeds.  Oorskryf?"
 
 #: src/export/Export.cpp
 msgid "Your tracks will be mixed down and exported as one mono file."
-msgstr ""
-"Die bane sal afgemeng word na twee stereo kanale in die uitgevoerde lêer."
+msgstr "Die bane sal afgemeng word na twee stereo kanale in die uitgevoerde lêer."
 
 #: src/export/Export.cpp
 msgid "Your tracks will be mixed down and exported as one stereo file."
-msgstr ""
-"Die bane sal afgemeng word na twee stereo kanale in die uitgevoerde lêer."
+msgstr "Die bane sal afgemeng word na twee stereo kanale in die uitgevoerde lêer."
 
 #: src/export/Export.cpp
 msgid "Your tracks will be mixed down to one exported file according to the encoder settings."
-msgstr ""
-"Die bane sal afgemeng word na twee stereo kanale in die uitgevoerde lêer."
+msgstr "Die bane sal afgemeng word na twee stereo kanale in die uitgevoerde lêer."
 
 #: src/export/Export.cpp
 msgid "Advanced Mixing Options"
@@ -11210,10 +11207,8 @@ msgid ""
 "You may be able to open it in a text editor and download the actual audio files."
 msgstr ""
 "is 'n speellyslêer. \n"
-"Tenacity kan nie hierdie lêer oopmaak nie want dit bevat slegs skakels na "
-"ander lêers.\n"
-"U kan dit dalk in 'n teksredigeerder oopmaak en die werklike oudiolêers "
-"aflaai."
+"Tenacity kan nie hierdie lêer oopmaak nie want dit bevat slegs skakels na ander lêers.\n"
+"U kan dit dalk in 'n teksredigeerder oopmaak en die werklike oudiolêers aflaai."
 
 #. i18n-hint: %s will be the filename
 #: src/import/Import.cpp
@@ -14336,9 +14331,7 @@ msgstr "Gids %s is nie skryfbaar nie"
 # Punt aan einde van sin?
 #: src/prefs/DirectoriesPrefs.cpp
 msgid "Changes to temporary directory will not take effect until Audacity is restarted"
-msgstr ""
-"Verandering aan die tydelike gids word eers effektief wanneer Tenacity oor "
-"begin"
+msgstr "Verandering aan die tydelike gids word eers effektief wanneer Tenacity oor begin"
 
 #: src/prefs/DirectoriesPrefs.cpp
 msgid "Temp Directory Update"
@@ -14978,9 +14971,7 @@ msgstr ""
 # Punt aan einde van sin?
 #: src/prefs/ModulePrefs.cpp
 msgid "Changes to these settings only take effect when Audacity starts up."
-msgstr ""
-"Verandering aan die tydelike gids word eers effektief wanneer Tenacity oor "
-"begin"
+msgstr "Verandering aan die tydelike gids word eers effektief wanneer Tenacity oor begin"
 
 #: src/prefs/ModulePrefs.cpp
 msgid "Ask"
@@ -16564,9 +16555,7 @@ msgstr "Oktaaf laer"
 #: src/tracks/playabletrack/notetrack/ui/NoteTrackVZoomHandle.cpp
 #: src/tracks/playabletrack/wavetrack/ui/WaveTrackVZoomHandle.cpp
 msgid "Click to vertically zoom in. Shift-click to zoom out. Drag to specify a zoom region."
-msgstr ""
-"Klik om vertikaal in te zoem,  Shift-klik om uit te zoem,  Sleep om 'n "
-"spesifieke  zoemstreek te maak."
+msgstr "Klik om vertikaal in te zoem,  Shift-klik om uit te zoem,  Sleep om 'n spesifieke  zoemstreek te maak."
 
 #: src/tracks/playabletrack/notetrack/ui/NoteTrackVZoomHandle.cpp
 #: src/tracks/playabletrack/wavetrack/ui/WaveTrackVZoomHandle.cpp

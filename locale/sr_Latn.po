@@ -10,14 +10,12 @@ msgstr ""
 "POT-Creation-Date: 2021-07-20 03:55-0400\n"
 "PO-Revision-Date: 2021-07-23 03:21+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Serbian (latin) <https://hosted.weblate.org/projects/tenacity/"
-"tenacity/sr_Latn/>\n"
+"Language-Team: Serbian (latin) <https://hosted.weblate.org/projects/tenacity/tenacity/sr_Latn/>\n"
 "Language: sr_Latn\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 4.7.2-dev\n"
 "X-Project-Style: default\n"
 
@@ -726,9 +724,7 @@ msgstr ""
 #: src/AboutDialog.cpp
 #, c-format
 msgid "%s the free, open source, cross-platform software for recording and editing sounds."
-msgstr ""
-"slobodan, otvorenog koda, višeplatformski program za snimanje i uređivanje "
-"zvuka<br>"
+msgstr "slobodan, otvorenog koda, višeplatformski program za snimanje i uređivanje zvuka<br>"
 
 #: src/AboutDialog.cpp
 msgid "Credits"
@@ -793,12 +789,18 @@ msgstr "Posebno se zahvaljujemo:"
 msgid "%s website: "
 msgstr "Prvo pokretanje Odvažnosti"
 
+#. i18n-hint Tenacity's name substitutes for first and third %s,
+#. and a "copyright" symbol for the second
+#: src/AboutDialog.cpp
+#, c-format
+msgid "%s software is copyright %s 1999-2021 %s Team."
+msgstr ""
+
 #. i18n-hint Tenacity's name substitutes for %s
 #: src/AboutDialog.cpp
 #, c-format
 msgid "The name %s is a registered trademark."
-msgstr ""
-"Naziv <b>Audacity&reg;</b> je registrovani zaštitni znak Dominika Maconija."
+msgstr "Naziv <b>Audacity&reg;</b> je registrovani zaštitni znak Dominika Maconija."
 
 #: src/AdornedRulerPanel.cpp
 msgid "Timeline actions disabled during recording"
@@ -1496,8 +1498,7 @@ msgid ""
 "\n"
 "After recovery, save the projects to ensure changes are written to disk."
 msgstr ""
-"Neki projekti nisu pravilno sačuvani prilikom poslednjeg pokretanja "
-"Odvažnosti.\n"
+"Neki projekti nisu pravilno sačuvani prilikom poslednjeg pokretanja Odvažnosti.\n"
 "Na sreću, sledeći projekti mogu biti samostalno oporavljeni:"
 
 #: src/AutoRecoveryDialog.cpp
@@ -2253,12 +2254,9 @@ msgid ""
 "is needed to keep their external dependencies in the right place.\n"
 "New projects will be self-contained and are less risky."
 msgstr ""
-"Vaš projekat je trenutno samosadržeći; ne zavisi ni od jedne spoljne zvučne "
-"datoteke. \n"
+"Vaš projekat je trenutno samosadržeći; ne zavisi ni od jedne spoljne zvučne datoteke. \n"
 "\n"
-"Ako izmenite projekat u stanje koje ima spoljne zavisnosti na uvežene "
-"datoteke, on više neće biti samosadržeći. Ako zatim sačuvate bez umnožavanja "
-"tih datoteka, možete izgubiti podatke."
+"Ako izmenite projekat u stanje koje ima spoljne zavisnosti na uvežene datoteke, on više neće biti samosadržeći. Ako zatim sačuvate bez umnožavanja tih datoteka, možete izgubiti podatke."
 
 #: src/Dependencies.cpp
 msgid "Dependency Check"
@@ -2343,13 +2341,10 @@ msgid ""
 "\n"
 "You may want to go back to Preferences > Libraries and re-configure it."
 msgstr ""
-"FFmpeg je podešen u postavkama i uspešno se učitao "
-"ranije,                         \n"
-"ali ovog puta Odvažnost nije uspela da ga učita pri "
-"pokretanju.                         \n"
+"FFmpeg je podešen u postavkama i uspešno se učitao ranije,                         \n"
+"ali ovog puta Odvažnost nije uspela da ga učita pri pokretanju.                         \n"
 "\n"
-"Moraćete da se vratite nazad u „Postavke > Biblioteke“ i da ga ponovo "
-"podesite."
+"Moraćete da se vratite nazad u „Postavke > Biblioteke“ i da ga ponovo podesite."
 
 #: src/FFmpeg.cpp
 msgid "FFmpeg startup failed"
@@ -2670,8 +2665,7 @@ msgstr "Da iscrtate spektar, sve izabrane numere moraju biti istog protoka uzork
 #: src/FreqWindow.cpp
 #, c-format
 msgid "Too much audio was selected. Only the first %.1f seconds of audio will be analyzed."
-msgstr ""
-"Previše zvuka je izabrano.  Samo prve %.1f sekunde zvuka će biti analizirane."
+msgstr "Previše zvuka je izabrano.  Samo prve %.1f sekunde zvuka će biti analizirane."
 
 #: src/FreqWindow.cpp
 msgid "Not enough data selected."
@@ -2819,60 +2813,36 @@ msgstr "Ovo su naši načini podrške:"
 #. i18n-hint: Preserve '[[help:Quick_Help|' as it's the name of a link.
 #: src/HelpText.cpp
 msgid "[[help:Quick_Help|Quick Help]] - if not installed locally, [[https://manual.audacityteam.org/quick_help.html|view online]]"
-msgstr ""
-" [[file:quick_help.html|Brza pomoć]] (treba biti instalirana na računaru, <a "
-"href=\"http://manual.audacityteam.org/o/quick_help.html\">Internet izdanje "
-"ako nije</a>)"
+msgstr " [[file:quick_help.html|Brza pomoć]] (treba biti instalirana na računaru, <a href=\"http://manual.audacityteam.org/o/quick_help.html\">Internet izdanje ako nije</a>)"
 
 #. i18n-hint: Preserve '[[help:Main_Page|' as it's the name of a link.
 #: src/HelpText.cpp
 msgid " [[help:Main_Page|Manual]] - if not installed locally, [[https://manual.audacityteam.org/|view online]]"
-msgstr ""
-" [[file:index.html|Uputstvo]] (treba biti instalirano na računaru, <a href="
-"\"http://manual.audacityteam.org/o/\">Internet izdanje ako nije</a>)"
+msgstr " [[file:index.html|Uputstvo]] (treba biti instalirano na računaru, <a href=\"http://manual.audacityteam.org/o/\">Internet izdanje ako nije</a>)"
 
 #: src/HelpText.cpp
 msgid " [[https://forum.audacityteam.org/|Forum]] - ask your question directly, online."
-msgstr ""
-" <a href=\"http://forum.audacityteam.org/\">Forum</a> (postavite vaše "
-"pitanje direktno, na Internetu)"
+msgstr " <a href=\"http://forum.audacityteam.org/\">Forum</a> (postavite vaše pitanje direktno, na Internetu)"
 
 #: src/HelpText.cpp
 msgid "More:</b> Visit our [[https://wiki.audacityteam.org/index.php|Wiki]] for tips, tricks, extra tutorials and effects plug-ins."
-msgstr ""
-" [[http://wiki.audacityteam.org/index.php|Viki]] (najnoviji saveti, trikovi "
-"i uputstva, na Internetu)"
+msgstr " [[http://wiki.audacityteam.org/index.php|Viki]] (najnoviji saveti, trikovi i uputstva, na Internetu)"
 
 #: src/HelpText.cpp
 msgid "Audacity can import unprotected files in many other formats (such as M4A and WMA, compressed WAV files from portable recorders and audio from video files) if you download and install the optional [[https://manual.audacityteam.org/man/faq_opening_and_saving_files.html#foreign| FFmpeg library]] to your computer."
-msgstr ""
-"Odvažnost može da uveze nezaštićene datoteke u mnogim drugim zapisima (kao "
-"što su M4A i VMA, sažete VAV datoteke sa prenosnih snimača i zvuk iz video "
-"datoteka) ako preuzmete i instalirate opcionalnu <a href=\"http://manual."
-"audacityteam.org/o/man/faq_opening_and_saving_files.html#foreign\"> FFmpeg "
-"biblioteku</a> na vaš računar."
+msgstr "Odvažnost može da uveze nezaštićene datoteke u mnogim drugim zapisima (kao što su M4A i VMA, sažete VAV datoteke sa prenosnih snimača i zvuk iz video datoteka) ako preuzmete i instalirate opcionalnu <a href=\"http://manual.audacityteam.org/o/man/faq_opening_and_saving_files.html#foreign\"> FFmpeg biblioteku</a> na vaš računar."
 
 #: src/HelpText.cpp
 msgid "You can also read our help on importing [[https://manual.audacityteam.org/man/playing_and_recording.html#midi|MIDI files]] and tracks from [[https://manual.audacityteam.org/man/faq_opening_and_saving_files.html#fromcd| audio CDs]]."
-msgstr ""
-"Možete takođe da pročitate našu pomoć o uvozu <a href=\"http://manual."
-"audacityteam.org/o/man/faq_opening_and_saving_files.html#midi\">MIDI "
-"datoteka</a> i numera sa <a href=\"http://manual.audacityteam.org/o/man/"
-"faq_opening_and_saving_files.html#fromcd\"> zvučnih CD-a</a>."
+msgstr "Možete takođe da pročitate našu pomoć o uvozu <a href=\"http://manual.audacityteam.org/o/man/faq_opening_and_saving_files.html#midi\">MIDI datoteka</a> i numera sa <a href=\"http://manual.audacityteam.org/o/man/faq_opening_and_saving_files.html#fromcd\"> zvučnih CD-a</a>."
 
 #: src/HelpText.cpp
 msgid "The Manual does not appear to be installed. Please [[*URL*|view the Manual online]].<br><br>To always view the Manual online, change \"Location of Manual\" in Interface Preferences to \"From Internet\"."
-msgstr ""
-"Izgleda da nemate instaliranu fasciklu „help“.<br> <a href=\"*URL*\""
-">Pogledajte sadržaj na mreži</a> ili <a href=\"http://manual.audacityteam."
-"org/o/man/unzipping_the_manual.html\"> preuzmite čitavo uputstvo</a>."
+msgstr "Izgleda da nemate instaliranu fasciklu „help“.<br> <a href=\"*URL*\">Pogledajte sadržaj na mreži</a> ili <a href=\"http://manual.audacityteam.org/o/man/unzipping_the_manual.html\"> preuzmite čitavo uputstvo</a>."
 
 #: src/HelpText.cpp
 msgid "The Manual does not appear to be installed. Please [[*URL*|view the Manual online]] or [[https://manual.audacityteam.org/man/unzipping_the_manual.html| download the Manual]].<br><br>To always view the Manual online, change \"Location of Manual\" in Interface Preferences to \"From Internet\"."
-msgstr ""
-"Izgleda da nemate instaliranu fasciklu „help“.<br> <a href=\"*URL*\""
-">Pogledajte sadržaj na mreži</a> ili <a href=\"http://manual.audacityteam."
-"org/o/man/unzipping_the_manual.html\"> preuzmite čitavo uputstvo</a>."
+msgstr "Izgleda da nemate instaliranu fasciklu „help“.<br> <a href=\"*URL*\">Pogledajte sadržaj na mreži</a> ili <a href=\"http://manual.audacityteam.org/o/man/unzipping_the_manual.html\"> preuzmite čitavo uputstvo</a>."
 
 #: src/HistoryWindow.cpp
 msgid "History"
@@ -3562,14 +3532,11 @@ msgstr "Pravi protok: %d"
 msgid ""
 "Error opening sound device.\n"
 "Try changing the audio host, playback device and the project sample rate."
-msgstr ""
-"Greška prilikom otvaranja zvučnog uređaja. Molim proverite podešavanja "
-"izlaznog uređaja i protok uzorka projekta."
+msgstr "Greška prilikom otvaranja zvučnog uređaja. Molim proverite podešavanja izlaznog uređaja i protok uzorka projekta."
 
 #: src/ProjectAudioManager.cpp src/menus/TransportMenus.cpp
 msgid "The tracks selected for recording must all have the same sampling rate"
-msgstr ""
-"Da primenite propusnik, sve izabrane numere moraju biti istog protoka uzorka."
+msgstr "Da primenite propusnik, sve izabrane numere moraju biti istog protoka uzorka."
 
 #: src/ProjectAudioManager.cpp src/menus/TransportMenus.cpp
 msgid "Mismatched Sampling Rates"
@@ -3796,8 +3763,7 @@ msgid ""
 "\n"
 "Select 'Help > Diagnostics > Show Log...' to see details."
 msgstr ""
-"Provera projekta je pronašla nedoslednosti datoteke za vreme samostalnog "
-"oporavka.\n"
+"Provera projekta je pronašla nedoslednosti datoteke za vreme samostalnog oporavka.\n"
 "\n"
 "Izaberite „Prikaži dnevnik...“ u izborniku pomoći da vidite detalje."
 
@@ -3808,6 +3774,11 @@ msgstr "Upozorenje: Problem u samostalnom oporavku"
 #: src/ProjectFileIO.cpp src/menus/WindowMenus.cpp
 msgid "<untitled>"
 msgstr "<bez naslova>"
+
+#: src/ProjectFileIO.cpp
+#, c-format
+msgid "[Project %02i] "
+msgstr ""
 
 #: src/ProjectFileIO.cpp
 msgid "Failed to open the project's database"
@@ -4076,8 +4047,7 @@ msgid ""
 "\n"
 "It has been recovered to the last snapshot."
 msgstr ""
-"Neki projekti nisu pravilno sačuvani prilikom poslednjeg pokretanja "
-"Odvažnosti.\n"
+"Neki projekti nisu pravilno sačuvani prilikom poslednjeg pokretanja Odvažnosti.\n"
 "Na sreću, sledeći projekti mogu biti samostalno oporavljeni:"
 
 #: src/ProjectFileManager.cpp
@@ -4145,8 +4115,7 @@ msgid ""
 "The project was not saved because the file name provided would overwrite another project.\n"
 "Please try again and select an original name."
 msgstr ""
-"Projekat nije sačuvan zato što će dati naziv projekta prepisati drugi "
-"projekat.\n"
+"Projekat nije sačuvan zato što će dati naziv projekta prepisati drugi projekat.\n"
 "Pokušajte ponovo i izaberite neki drugi naziv."
 
 #: src/ProjectFileManager.cpp
@@ -4185,8 +4154,7 @@ msgid ""
 "The project was not saved because the selected project is open in another window.\n"
 "Please try again and select an original name."
 msgstr ""
-"Projekat nije sačuvan zato što će dati naziv projekta prepisati drugi "
-"projekat.\n"
+"Projekat nije sačuvan zato što će dati naziv projekta prepisati drugi projekat.\n"
 "Pokušajte ponovo i izaberite neki drugi naziv."
 
 #: src/ProjectFileManager.cpp
@@ -4199,8 +4167,7 @@ msgid ""
 "Saving a copy must not overwrite an existing saved project.\n"
 "Please try again and select an original name."
 msgstr ""
-"Projekat nije sačuvan zato što će dati naziv projekta prepisati drugi "
-"projekat.\n"
+"Projekat nije sačuvan zato što će dati naziv projekta prepisati drugi projekat.\n"
 "Pokušajte ponovo i izaberite neki drugi naziv."
 
 #: src/ProjectFileManager.cpp
@@ -4777,9 +4744,7 @@ msgstr "Primedbe"
 
 #: src/Tags.cpp
 msgid "Use arrow keys (or ENTER key after editing) to navigate fields."
-msgstr ""
-"Koristite tastere strelica (ili taster UNESI nakon uređivanja) za "
-"prebacivanje među poljima."
+msgstr "Koristite tastere strelica (ili taster UNESI nakon uređivanja) za prebacivanje među poljima."
 
 #: src/Tags.cpp
 msgid "Tag"
@@ -5059,8 +5024,7 @@ msgid ""
 "for Timer Recording because it would overwrite another project.\n"
 "Please try again and select an original name."
 msgstr ""
-"Projekat nije sačuvan zato što će dati naziv projekta prepisati drugi "
-"projekat.\n"
+"Projekat nije sačuvan zato što će dati naziv projekta prepisati drugi projekat.\n"
 "Pokušajte ponovo i izaberite neki drugi naziv."
 
 #: src/TimerRecordDialog.cpp
@@ -6326,18 +6290,14 @@ msgstr ""
 #. * in 'Donald-Duck'!
 #: src/effects/AutoDuck.cpp
 msgid "You selected a track which does not contain audio. AutoDuck can only process audio tracks."
-msgstr ""
-"Izabrali ste numeru koja ne sadrži zvuk. Samoutišavanje može da obradi samo "
-"zvučne numere."
+msgstr "Izabrali ste numeru koja ne sadrži zvuk. Samoutišavanje može da obradi samo zvučne numere."
 
 #. i18n-hint: Auto duck is the name of an effect that 'ducks' (reduces the volume)
 #. * of the audio automatically when there is sound on another track.  Not as
 #. * in 'Donald-Duck'!
 #: src/effects/AutoDuck.cpp
 msgid "Auto Duck needs a control track which must be placed below the selected track(s)."
-msgstr ""
-"Samoutišavanje zahteva upravljačku numeru koja mora biti postavljena ispod "
-"izabrane numere."
+msgstr "Samoutišavanje zahteva upravljačku numeru koja mora biti postavljena ispod izabrane numere."
 
 #: src/effects/AutoDuck.cpp src/effects/TruncSilence.cpp
 msgid "db"
@@ -6867,9 +6827,7 @@ msgstr ""
 #. i18n-hint: RMS abbreviates root mean square, a certain averaging method
 #: src/effects/Contrast.cpp
 msgid "Contrast Analyzer, for measuring RMS volume differences between two selections of audio."
-msgstr ""
-"Analizator suprotnosti, za merenje razlika rms jačine zvuka između dva "
-"izbora zvuka."
+msgstr "Analizator suprotnosti, za merenje razlika rms jačine zvuka između dva izbora zvuka."
 
 #. i18n-hint noun
 #: src/effects/Contrast.cpp src/effects/ToneGen.cpp
@@ -7830,10 +7788,8 @@ msgid ""
 "To use this filter curve in a macro, please choose a new name for it.\n"
 "Choose the 'Save/Manage Curves...' button and rename the 'unnamed' curve, then use that one."
 msgstr ""
-"Da koristite ovu EKu krivu u grupnom lancu, molim izaberite novi naziv za nj."
-"\n"
-"Izaberite „Sačuvaj/upravljaj krivama...“ i promenite naziv „neimenovane“ "
-"krive, i nakon toga upotrebite ovo."
+"Da koristite ovu EKu krivu u grupnom lancu, molim izaberite novi naziv za nj.\n"
+"Izaberite „Sačuvaj/upravljaj krivama...“ i promenite naziv „neimenovane“ krive, i nakon toga upotrebite ovo."
 
 #: src/effects/Equalization.cpp
 msgid "Filter Curve EQ needs a different name"
@@ -7841,9 +7797,7 @@ msgstr "EKu kriva zahteva drugačiji naziv"
 
 #: src/effects/Equalization.cpp
 msgid "To apply Equalization, all selected tracks must have the same sample rate."
-msgstr ""
-"Da primenite ujednačavanje, sve izabrane numere moraju biti istog protoka "
-"uzorka."
+msgstr "Da primenite ujednačavanje, sve izabrane numere moraju biti istog protoka uzorka."
 
 #: src/effects/Equalization.cpp
 msgid "Track sample rate is too low for this effect."
@@ -8378,8 +8332,7 @@ msgstr ""
 
 #: src/effects/NoiseReduction.cpp
 msgid "All noise profile data must have the same sample rate."
-msgstr ""
-"Da primenite propusnik, sve izabrane numere moraju biti istog protoka uzorka."
+msgstr "Da primenite propusnik, sve izabrane numere moraju biti istog protoka uzorka."
 
 #: src/effects/NoiseReduction.cpp
 msgid "The sample rate of the noise profile must match that of the sound to be processed."
@@ -8809,8 +8762,7 @@ msgid ""
 msgstr ""
 "Popravka radi korišćenjem podataka zvuka izvan oblasti izbora.\n"
 "\n"
-"Molim izaberite oblast koja ima zvuk koji dodiruje barem jednu njegovu "
-"stranu.\n"
+"Molim izaberite oblast koja ima zvuk koji dodiruje barem jednu njegovu stranu.\n"
 "\n"
 "Više okolnog zvuka, bolje će je obaviti."
 
@@ -8983,8 +8935,7 @@ msgstr ""
 
 #: src/effects/ScienFilter.cpp
 msgid "To apply a filter, all selected tracks must have the same sample rate."
-msgstr ""
-"Da primenite propusnik, sve izabrane numere moraju biti istog protoka uzorka."
+msgstr "Da primenite propusnik, sve izabrane numere moraju biti istog protoka uzorka."
 
 #: src/effects/ScienFilter.cpp
 msgid "&Filter Type:"
@@ -9344,8 +9295,7 @@ msgstr "Grafički režim"
 
 #: src/effects/VST/VSTEffect.cpp
 msgid "Most VST effects have a graphical interface for setting parameter values. A basic text-only method is also available.  Reopen the effect for this to take effect."
-msgstr ""
-"Većina VST dejstava ima grafičko sučelje za podešavanje vrednosti parametara."
+msgstr "Većina VST dejstava ima grafičko sučelje za podešavanje vrednosti parametara."
 
 #: src/effects/VST/VSTEffect.cpp src/effects/lv2/LV2Effect.cpp
 msgid "Enable &graphical interface"
@@ -9668,8 +9618,7 @@ msgstr ""
 
 #: src/effects/lv2/LV2Effect.cpp
 msgid "LV2 effects can have a graphical interface for setting parameter values. A basic text-only method is also available.  Reopen the effect for this to take effect."
-msgstr ""
-"Većina VST dejstava ima grafičko sučelje za podešavanje vrednosti parametara."
+msgstr "Većina VST dejstava ima grafičko sučelje za podešavanje vrednosti parametara."
 
 #: src/effects/lv2/LV2Effect.cpp
 msgid "Couldn't instantiate effect"
@@ -9752,9 +9701,7 @@ msgstr "Upit Nikvista"
 
 #: src/effects/nyquist/Nyquist.cpp
 msgid "Sorry, cannot apply effect on stereo tracks where the tracks don't match."
-msgstr ""
-"Izvinite, ne mogu da primenim efekat na stereo numerama gde se numere ne "
-"podudaraju."
+msgstr "Izvinite, ne mogu da primenim efekat na stereo numerama gde se numere ne podudaraju."
 
 #: src/effects/nyquist/Nyquist.cpp
 #, c-format
@@ -9824,9 +9771,7 @@ msgstr "Nikvist nije vratio zvuk.\n"
 
 #: src/effects/nyquist/Nyquist.cpp
 msgid "[Warning: Nyquist returned invalid UTF-8 string, converted here as Latin-1]"
-msgstr ""
-"[Upozorenje: Nikvist je vratio neispravnu UTF-8 nisku, pretvorenu ovde kao "
-"Latin-1]"
+msgstr "[Upozorenje: Nikvist je vratio neispravnu UTF-8 nisku, pretvorenu ovde kao Latin-1]"
 
 #: src/effects/nyquist/Nyquist.cpp
 #, c-format
@@ -9846,8 +9791,7 @@ msgid ""
 "\t(mult *track* 0.1)\n"
 " ."
 msgstr ""
-"Vaš kod izgleda kao SAL sintaksa, ali nema povratnog iskaza. Ili koristite "
-"povratni iskaz kao što je\n"
+"Vaš kod izgleda kao SAL sintaksa, ali nema povratnog iskaza. Ili koristite povratni iskaz kao što je\n"
 "        return s * 0.1\n"
 "za SAL, ili počnite sa otvorenom zagradom kao što je\n"
 "\t(mult s 0.1)\n"
@@ -9941,9 +9885,7 @@ msgstr ""
 
 #: src/effects/vamp/VampEffect.cpp
 msgid "Sorry, Vamp Plug-ins cannot be run on stereo tracks where the individual channels of the track do not match."
-msgstr ""
-"Izvinite, Vamp priključci ne mogu biti primenjeni na stereo numerama gde se "
-"pojedinačni kanali numere ne podudaraju."
+msgstr "Izvinite, Vamp priključci ne mogu biti primenjeni na stereo numerama gde se pojedinačni kanali numere ne podudaraju."
 
 #: src/effects/vamp/VampEffect.cpp
 msgid "Sorry, failed to load Vamp Plug-in."
@@ -10007,8 +9949,7 @@ msgid ""
 msgstr ""
 "Želite da izvezete %s datoteku sa nazivom „%s“.\n"
 "\n"
-"Obično se te datoteke završavaju na „.%s“, a neki programi neće otvoriti "
-"datoteke sa neuobičajenim proširenjima.\n"
+"Obično se te datoteke završavaju na „.%s“, a neki programi neće otvoriti datoteke sa neuobičajenim proširenjima.\n"
 "\n"
 "Da li ste sigurni da želite da sačuvate datoteku pod ovim nazivom?"
 
@@ -10250,9 +10191,7 @@ msgstr ""
 #: src/export/ExportFFmpeg.cpp
 #, c-format
 msgid "Attempted to export %d channels, but maximum number of channels for selected output format is %d"
-msgstr ""
-"Pokušan je izvoz %d kanala, ali najveći broj kanala za izabrani format "
-"izlaza je %d"
+msgstr "Pokušan je izvoz %d kanala, ali najveći broj kanala za izabrani format izlaza je %d"
 
 #: src/export/ExportFFmpeg.cpp
 #, c-format
@@ -10572,9 +10511,7 @@ msgstr "Kodek:"
 
 #: src/export/ExportFFmpegDialogs.cpp
 msgid "Not all formats and codecs are compatible. Nor are all option combinations compatible with all codecs."
-msgstr ""
-"Nisu svi formati i kodeci saglasni. Niti su sve kombinacije opcija saglasne "
-"sa svim kodecima."
+msgstr "Nisu svi formati i kodeci saglasni. Niti su sve kombinacije opcija saglasne sa svim kodecima."
 
 #: src/export/ExportFFmpegDialogs.cpp
 msgid "Show All Formats"
@@ -10632,8 +10569,7 @@ msgid ""
 "0 - automatic\n"
 "Recommended - 192000"
 msgstr ""
-"Bitski protok (bitova/sekundi) — utiče na krajnju veličinu datoteke i "
-"kvalitet\n"
+"Bitski protok (bitova/sekundi) — utiče na krajnju veličinu datoteke i kvalitet\n"
 "Neki kodeci mogu prihvatiti samo određene vrednosti (128k, 192k, 256k itd.)\n"
 "0 — samostalno\n"
 "Preporučeno — 192000"
@@ -11150,8 +11086,7 @@ msgid ""
 "You are linking to lame_enc.dll v%d.%d. This version is not compatible with Audacity %d.%d.%d.\n"
 "Please download the latest version of 'LAME for Audacity'."
 msgstr ""
-"Vi ukazujete na „lame_enc.dll v%d.%d“. Ovo izdanje nije saglasno sa "
-"Odvažnošću %d.%d.%d.\n"
+"Vi ukazujete na „lame_enc.dll v%d.%d“. Ovo izdanje nije saglasno sa Odvažnošću %d.%d.%d.\n"
 "Molim preuzmite najnovije izdanje LAME MP3 biblioteke."
 
 #: src/export/ExportMP3.cpp
@@ -11393,8 +11328,7 @@ msgid ""
 "\n"
 "Suggested replacement:"
 msgstr ""
-"Natpis ili numera „%s“ nije pravilan naziv datoteke. Ne možete da koristite "
-"ništa od: %s\n"
+"Natpis ili numera „%s“ nije pravilan naziv datoteke. Ne možete da koristite ništa od: %s\n"
 "Koristi..."
 
 #. i18n-hint: The second %s gives a letter that can't be used.
@@ -11405,8 +11339,7 @@ msgid ""
 "\n"
 "Suggested replacement:"
 msgstr ""
-"Natpis ili numera „%s“ nije pravilan naziv datoteke. Ne možete da koristite "
-"ništa od: %s\n"
+"Natpis ili numera „%s“ nije pravilan naziv datoteke. Ne možete da koristite ništa od: %s\n"
 "Koristi..."
 
 #: src/export/ExportMultiple.cpp
@@ -11909,9 +11842,7 @@ msgstr "FFmpeg saglasne datoteke"
 #: src/import/ImportFFmpeg.cpp
 #, c-format
 msgid "Index[%02x] Codec[%s], Language[%s], Bitrate[%s], Channels[%d], Duration[%d]"
-msgstr ""
-"Indeks[%02x] Kodek[%s], Jezik[%s], Bitski protok[%s], Broj kanala[%d], "
-"Trajanje[%d]"
+msgstr "Indeks[%02x] Kodek[%s], Jezik[%s], Bitski protok[%s], Broj kanala[%d], Trajanje[%d]"
 
 #: src/import/ImportFLAC.cpp
 msgid "FLAC files"
@@ -11936,9 +11867,7 @@ msgstr "Ne mogu da preimenujem „%s“ u „%s“."
 #: src/import/ImportGStreamer.cpp
 #, c-format
 msgid "Index[%02d], Type[%s], Channels[%d], Rate[%d]"
-msgstr ""
-"Indeks[%02x] Kodek[%s], Jezik[%s], Bitski protok[%s], Broj kanala[%d], "
-"Trajanje[%d]"
+msgstr "Indeks[%02x] Kodek[%s], Jezik[%s], Bitski protok[%s], Broj kanala[%d], Trajanje[%d]"
 
 #: src/import/ImportGStreamer.cpp
 msgid "File doesn't contain any audio streams."
@@ -12024,9 +11953,7 @@ msgstr "Ogg Vorbis datoteke"
 #: src/import/ImportOGG.cpp
 #, c-format
 msgid "Index[%02x] Version[%d], Channels[%d], Rate[%ld]"
-msgstr ""
-"Indeks[%02x] Kodek[%s], Jezik[%s], Bitski protok[%s], Broj kanala[%d], "
-"Trajanje[%d]"
+msgstr "Indeks[%02x] Kodek[%s], Jezik[%s], Bitski protok[%s], Broj kanala[%d], Trajanje[%d]"
 
 #: src/import/ImportOGG.cpp
 msgid "Media read error"
@@ -13943,8 +13870,7 @@ msgstr "Molim izaberite radnju"
 #: src/menus/TrackMenus.cpp
 #, c-format
 msgid "Alignment completed: MIDI from %.2f to %.2f secs, Audio from %.2f to %.2f secs."
-msgstr ""
-"Poravnanje je obavljeno: MIDI od %.2f do %.2f sek., Zvuk od %.2f do %.2f sek."
+msgstr "Poravnanje je obavljeno: MIDI od %.2f do %.2f sek., Zvuk od %.2f do %.2f sek."
 
 #: src/menus/TrackMenus.cpp
 msgid "Sync MIDI with Audio"
@@ -13953,9 +13879,7 @@ msgstr "Usaglasi MIDI sa zvukom"
 #: src/menus/TrackMenus.cpp
 #, c-format
 msgid "Alignment error: input too short: MIDI from %.2f to %.2f secs, Audio from %.2f to %.2f secs."
-msgstr ""
-"Greška poravnanja: ulaz je prekratak: MIDI od %.2f do %.2f sek., Zvuk od "
-"%.2f do %.2f sek."
+msgstr "Greška poravnanja: ulaz je prekratak: MIDI od %.2f do %.2f sek., Zvuk od %.2f do %.2f sek."
 
 #: src/menus/TrackMenus.cpp
 msgid "Internal error reported by alignment process."
@@ -15175,8 +15099,7 @@ msgstr "&Podesi"
 
 #: src/prefs/KeyConfigPrefs.cpp
 msgid "Note: Pressing Cmd+Q will quit. All other keys are valid."
-msgstr ""
-"Napomena: Pritisak na Naredba+Q će napustiti. Svi ostali tasteri su ispravni."
+msgstr "Napomena: Pritisak na Naredba+Q će napustiti. Svi ostali tasteri su ispravni."
 
 #: src/prefs/KeyConfigPrefs.cpp
 msgid "&Import..."
@@ -15387,16 +15310,12 @@ msgstr ""
 #. i18n-hint preserve the leading spaces
 #: src/prefs/ModulePrefs.cpp
 msgid "  'Ask' means Audacity will ask if you want to load the module each time it starts."
-msgstr ""
-"„Pitaj“ znači da će Odvažnost pitati da li želite učitati priključak pri "
-"svakom njenom pokretanju."
+msgstr "„Pitaj“ znači da će Odvažnost pitati da li želite učitati priključak pri svakom njenom pokretanju."
 
 #. i18n-hint preserve the leading spaces
 #: src/prefs/ModulePrefs.cpp
 msgid "  'Failed' means Audacity thinks the module is broken and won't run it."
-msgstr ""
-"„Neuspeh“ znači da će Odvažnost misliti da je priključak oštećen i neće ga "
-"pokretati."
+msgstr "„Neuspeh“ znači da će Odvažnost misliti da je priključak oštećen i neće ga pokretati."
 
 #. i18n-hint preserve the leading spaces
 #: src/prefs/ModulePrefs.cpp
@@ -15405,9 +15324,7 @@ msgstr ""
 
 #: src/prefs/ModulePrefs.cpp
 msgid "Changes to these settings only take effect when Audacity starts up."
-msgstr ""
-"Izmene u privremenom direktrorijumu neće stupiti na snagu sve dok ponovo ne "
-"pokrenete Odvažnost"
+msgstr "Izmene u privremenom direktrorijumu neće stupiti na snagu sve dok ponovo ne pokrenete Odvažnost"
 
 #: src/prefs/ModulePrefs.cpp
 msgid "Ask"
@@ -16140,8 +16057,7 @@ msgid ""
 "Saving and loading individual theme files uses a separate file for each image, but is\n"
 "otherwise the same idea."
 msgstr ""
-"Čuvanje i učitavanje pojedinačnih datoteka tema koristi odvojenu datoteku za "
-"svaku sliku, ali je\n"
+"Čuvanje i učitavanje pojedinačnih datoteka tema koristi odvojenu datoteku za svaku sliku, ali je\n"
 "uostalom ista ideja."
 
 #. i18n-hint: && in here is an escape character to get a single & on screen,
@@ -17001,9 +16917,7 @@ msgstr "&Donja oktava"
 #: src/tracks/playabletrack/notetrack/ui/NoteTrackVZoomHandle.cpp
 #: src/tracks/playabletrack/wavetrack/ui/WaveTrackVZoomHandle.cpp
 msgid "Click to vertically zoom in. Shift-click to zoom out. Drag to specify a zoom region."
-msgstr ""
-"Kliknite za uspravno uvećanje. Šift-klik za umanjenje. Prevucite da odredite "
-"oblast prvog plana."
+msgstr "Kliknite za uspravno uvećanje. Šift-klik za umanjenje. Prevucite da odredite oblast prvog plana."
 
 #: src/tracks/playabletrack/notetrack/ui/NoteTrackVZoomHandle.cpp
 #: src/tracks/playabletrack/wavetrack/ui/WaveTrackVZoomHandle.cpp
@@ -17082,8 +16996,7 @@ msgstr "Kliknite i prevucite da promenite veličinu numere."
 
 #: src/tracks/playabletrack/wavetrack/ui/SampleHandle.cpp
 msgid "To use Draw, zoom in further until you can see the individual samples."
-msgstr ""
-"Da koristite Iscrtaj, uvećavajte sve dok ne budete videli pojedinačne uzorke."
+msgstr "Da koristite Iscrtaj, uvećavajte sve dok ne budete videli pojedinačne uzorke."
 
 #: src/tracks/playabletrack/wavetrack/ui/SampleHandle.cpp
 msgid "Moved Samples"

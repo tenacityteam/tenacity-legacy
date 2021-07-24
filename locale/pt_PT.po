@@ -7,8 +7,7 @@ msgstr ""
 "POT-Creation-Date: 2021-07-20 03:55-0400\n"
 "PO-Revision-Date: 2021-07-23 03:20+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Portuguese (Portugal) <https://hosted.weblate.org/projects/"
-"tenacity/tenacity/pt_PT/>\n"
+"Language-Team: Portuguese (Portugal) <https://hosted.weblate.org/projects/tenacity/tenacity/pt_PT/>\n"
 "Language: pt_PT\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -788,6 +787,13 @@ msgstr "Agradecimentos especiais:"
 #, c-format
 msgid "%s website: "
 msgstr "%s website: "
+
+#. i18n-hint Tenacity's name substitutes for first and third %s,
+#. and a "copyright" symbol for the second
+#: src/AboutDialog.cpp
+#, c-format
+msgid "%s software is copyright %s 1999-2021 %s Team."
+msgstr ""
 
 #. i18n-hint Tenacity's name substitutes for %s
 #: src/AboutDialog.cpp
@@ -3596,8 +3602,7 @@ msgid ""
 "Try changing the audio host, playback device and the project sample rate."
 msgstr ""
 "Erro ao abrir dispositivo de som.\n"
-"Tente alterar o anfitrião de áudio, dispositivo de reprodução e a taxa de "
-"sample do projeto."
+"Tente alterar o anfitrião de áudio, dispositivo de reprodução e a taxa de sample do projeto."
 
 #: src/ProjectAudioManager.cpp src/menus/TransportMenus.cpp
 msgid "The tracks selected for recording must all have the same sampling rate"
@@ -3841,8 +3846,7 @@ msgid ""
 "\n"
 "Select 'Help > Diagnostics > Show Log...' to see details."
 msgstr ""
-"A verificação do projeto encontrou inconsistências durante a recuperação "
-"automática.\n"
+"A verificação do projeto encontrou inconsistências durante a recuperação automática.\n"
 "\n"
 "Selecione 'Ajuda > Diagnóstico > Verificar Relatório…' para ver detalhes."
 
@@ -3853,6 +3857,11 @@ msgstr "Aviso: Problemas na Recuperação Automática"
 #: src/ProjectFileIO.cpp src/menus/WindowMenus.cpp
 msgid "<untitled>"
 msgstr "<sem-título>"
+
+#: src/ProjectFileIO.cpp
+#, c-format
+msgid "[Project %02i] "
+msgstr ""
 
 #: src/ProjectFileIO.cpp
 msgid "Failed to open the project's database"
@@ -4151,8 +4160,7 @@ msgid ""
 "\n"
 "%s"
 msgstr ""
-"Incapaz de remover informação de guardar automático, possivelmente devido ao "
-"espaço limitado\n"
+"Incapaz de remover informação de guardar automático, possivelmente devido ao espaço limitado\n"
 "no dispositivo de armazenamento.\n"
 "\n"
 "%s"
@@ -4244,8 +4252,7 @@ msgid ""
 "The project was not saved because the file name provided would overwrite another project.\n"
 "Please try again and select an original name."
 msgstr ""
-"O projeto não foi guardado pois o nome do ficheiro indicado iria sobrepor um "
-"projeto existente.\n"
+"O projeto não foi guardado pois o nome do ficheiro indicado iria sobrepor um projeto existente.\n"
 "Por favor, tente novamente com outro nome."
 
 #: src/ProjectFileManager.cpp
@@ -4290,8 +4297,7 @@ msgid ""
 "The project was not saved because the selected project is open in another window.\n"
 "Please try again and select an original name."
 msgstr ""
-"O projeto não foi guardado porque o projeto selecionado está aberto noutra "
-"janela.\n"
+"O projeto não foi guardado porque o projeto selecionado está aberto noutra janela.\n"
 "Por favor tente novamente e selecione um nome original."
 
 #: src/ProjectFileManager.cpp
@@ -4421,13 +4427,11 @@ msgid ""
 "\n"
 "Do you want to continue?"
 msgstr ""
-"Compactar este projeto irá libertar espaço em disco removendo bytes "
-"inutilizados dentro do ficheiro.\n"
+"Compactar este projeto irá libertar espaço em disco removendo bytes inutilizados dentro do ficheiro.\n"
 "\n"
 "Aqui há %s de espaço livre e este projeto está atualmente a usar %s.\n"
 "\n"
-"Se proceder, o atual histórico de Anular/Refazer e os conteúdos do clipboard "
-"irão ser descartados e irá recuperar aproximadamente %s de espaço livre.\n"
+"Se proceder, o atual histórico de Anular/Refazer e os conteúdos do clipboard irão ser descartados e irá recuperar aproximadamente %s de espaço livre.\n"
 "\n"
 "Deseja continuar?"
 
@@ -4952,9 +4956,7 @@ msgstr "Redefenir Géneros"
 
 #: src/Tags.cpp
 msgid "Are you sure you want to reset the genre list to defaults?"
-msgstr ""
-"Tem certeza que deseja redefinir a lista de géneros para os valores "
-"predefinidos?"
+msgstr "Tem certeza que deseja redefinir a lista de géneros para os valores predefinidos?"
 
 #: src/Tags.cpp
 msgid "Unable to open genre file."
@@ -5183,8 +5185,7 @@ msgid ""
 "for Timer Recording because it would overwrite another project.\n"
 "Please try again and select an original name."
 msgstr ""
-"O projeto não foi guardado pois o nome do ficheiro indicado iria sobrepor um "
-"projeto existente.\n"
+"O projeto não foi guardado pois o nome do ficheiro indicado iria sobrepor um projeto existente.\n"
 "Por favor, tente novamente com outro nome."
 
 #: src/TimerRecordDialog.cpp
@@ -5225,8 +5226,7 @@ msgid ""
 "Planned recording duration:   %s\n"
 "Recording time remaining on disk:   %s"
 msgstr ""
-"Você pode não ter espaço suficiente no disco para completar este "
-"Temporizador de Recorde, baseado nas suas opções.\n"
+"Você pode não ter espaço suficiente no disco para completar este Temporizador de Recorde, baseado nas suas opções.\n"
 "\n"
 "Quer continuar?\n"
 "\n"
@@ -5536,9 +5536,7 @@ msgstr " Em Seleção"
 
 #: src/TrackPanelResizeHandle.cpp
 msgid "Click and drag to adjust relative size of stereo tracks, double-click to make heights equal"
-msgstr ""
-"Clique e arraste para ajustar o tamanho relativo das faixas estéreo, clique "
-"duas vezes para tornar as alturas iguais"
+msgstr "Clique e arraste para ajustar o tamanho relativo das faixas estéreo, clique duas vezes para tornar as alturas iguais"
 
 #: src/TrackPanelResizeHandle.cpp
 msgid "Click and drag to resize the track."
@@ -5668,8 +5666,7 @@ msgid ""
 "\n"
 "%s"
 msgstr ""
-"%s: Não foi possível carregar configurações abaixo. Configurações "
-"predefinidas serão utilizadas.\n"
+"%s: Não foi possível carregar configurações abaixo. Configurações predefinidas serão utilizadas.\n"
 "\n"
 "%s"
 
@@ -5730,9 +5727,7 @@ msgstr ""
 
 #: src/commands/CommandManager.cpp
 msgid "The following commands have had their shortcuts removed, because their default shortcut is new or changed, and is the same shortcut that you have assigned to another command."
-msgstr ""
-"Os seguintes comandos tiveram os seus atalhos removidos, porque o seu atalho "
-"padrão é novo ou alterado, e é o mesmo atalho que atribuiu a outro comando."
+msgstr "Os seguintes comandos tiveram os seus atalhos removidos, porque o seu atalho padrão é novo ou alterado, e é o mesmo atalho que atribuiu a outro comando."
 
 #: src/commands/CommandManager.cpp
 msgid "Shortcuts have been removed"
@@ -6481,27 +6476,21 @@ msgstr "Auto Duck"
 
 #: src/effects/AutoDuck.cpp
 msgid "Reduces (ducks) the volume of one or more tracks whenever the volume of a specified \"control\" track reaches a particular level"
-msgstr ""
-"Reduz (ducks) o volume de um ou mais faixas sempre que o volume de uma faixa "
-"\"controlo\" específica chegar a um nível particular"
+msgstr "Reduz (ducks) o volume de um ou mais faixas sempre que o volume de uma faixa \"controlo\" específica chegar a um nível particular"
 
 #. i18n-hint: Auto duck is the name of an effect that 'ducks' (reduces the volume)
 #. * of the audio automatically when there is sound on another track.  Not as
 #. * in 'Donald-Duck'!
 #: src/effects/AutoDuck.cpp
 msgid "You selected a track which does not contain audio. AutoDuck can only process audio tracks."
-msgstr ""
-"Selecionou uma faixa que não contém áudio. O AutoDuck só pode processar "
-"faixas de áudio."
+msgstr "Selecionou uma faixa que não contém áudio. O AutoDuck só pode processar faixas de áudio."
 
 #. i18n-hint: Auto duck is the name of an effect that 'ducks' (reduces the volume)
 #. * of the audio automatically when there is sound on another track.  Not as
 #. * in 'Donald-Duck'!
 #: src/effects/AutoDuck.cpp
 msgid "Auto Duck needs a control track which must be placed below the selected track(s)."
-msgstr ""
-"O Auto Duck requer uma faixa de controlo que deve ser colocada abaixo da(s) "
-"faixa(s) selecionada(s)."
+msgstr "O Auto Duck requer uma faixa de controlo que deve ser colocada abaixo da(s) faixa(s) selecionada(s)."
 
 #: src/effects/AutoDuck.cpp src/effects/TruncSilence.cpp
 msgid "db"
@@ -7033,9 +7022,7 @@ msgstr ""
 #. i18n-hint: RMS abbreviates root mean square, a certain averaging method
 #: src/effects/Contrast.cpp
 msgid "Contrast Analyzer, for measuring RMS volume differences between two selections of audio."
-msgstr ""
-"Analista de Contraste, para medir diferenças de volume RMS entre duas "
-"seleções de áudio."
+msgstr "Analista de Contraste, para medir diferenças de volume RMS entre duas seleções de áudio."
 
 #. i18n-hint noun
 #: src/effects/Contrast.cpp src/effects/ToneGen.cpp
@@ -7523,9 +7510,7 @@ msgstr "Tons DTMF"
 
 #: src/effects/DtmfGen.cpp
 msgid "Generates dual-tone multi-frequency (DTMF) tones like those produced by the keypad on telephones"
-msgstr ""
-"Gera um tom duplo de multi frequência (DTMF) de tons como aqueles produzidos "
-"por teclas nos telefones"
+msgstr "Gera um tom duplo de multi frequência (DTMF) de tons como aqueles produzidos por teclas nos telefones"
 
 #: src/effects/DtmfGen.cpp
 msgid ""
@@ -8015,8 +8000,7 @@ msgid ""
 "Choose the 'Save/Manage Curves...' button and rename the 'unnamed' curve, then use that one."
 msgstr ""
 "Para usar essa curva de filtro numa macro, por favor, escolha um novo nome.\n"
-"Escolha o 'Guardar/Gerir Curvas…' e renomeie a curva ' sem nome ' e, em "
-"seguida, use essa."
+"Escolha o 'Guardar/Gerir Curvas…' e renomeie a curva ' sem nome ' e, em seguida, use essa."
 
 #: src/effects/Equalization.cpp
 msgid "Filter Curve EQ needs a different name"
@@ -8024,9 +8008,7 @@ msgstr "Curva de Filtro EQ precisa de um nome diferente"
 
 #: src/effects/Equalization.cpp
 msgid "To apply Equalization, all selected tracks must have the same sample rate."
-msgstr ""
-"Para aplicar a Equalização, todas as faixas selecionadas devem ter a mesma "
-"taxa de sample."
+msgstr "Para aplicar a Equalização, todas as faixas selecionadas devem ter a mesma taxa de sample."
 
 #: src/effects/Equalization.cpp
 msgid "Track sample rate is too low for this effect."
@@ -8544,8 +8526,7 @@ msgstr "Redução do ruído"
 
 #: src/effects/NoiseReduction.cpp
 msgid "Removes background noise such as fans, tape noise, or hums"
-msgstr ""
-"Remove o ruído do plano de fundo como ventoinhas, ruído de fita ou sussurros"
+msgstr "Remove o ruído do plano de fundo como ventoinhas, ruído de fita ou sussurros"
 
 #: src/effects/NoiseReduction.cpp
 msgid "Steps per block are too few for the window types."
@@ -8557,8 +8538,7 @@ msgstr "Passos por bloco não podem exceder o tamanho da janela."
 
 #: src/effects/NoiseReduction.cpp
 msgid "Median method is not implemented for more than four steps per window."
-msgstr ""
-"Método mediano não está implementado por mais de quatro passos por janela."
+msgstr "Método mediano não está implementado por mais de quatro passos por janela."
 
 #: src/effects/NoiseReduction.cpp
 msgid "You must specify the same window size for steps 1 and 2."
@@ -8574,9 +8554,7 @@ msgstr "Todos os dados de perfil de ruído devem ter a mesma taxa de sample."
 
 #: src/effects/NoiseReduction.cpp
 msgid "The sample rate of the noise profile must match that of the sound to be processed."
-msgstr ""
-"A taxa de sample do perfil de ruído deve coincidir com a do o som para ser "
-"processado."
+msgstr "A taxa de sample do perfil de ruído deve coincidir com a do o som para ser processado."
 
 # voice key? usei timbre.. vai saber o q  é
 #: src/effects/NoiseReduction.cpp
@@ -8760,9 +8738,7 @@ msgstr "Remoção de Ruído"
 
 #: src/effects/NoiseRemoval.cpp
 msgid "Removes constant background noise such as fans, tape noise, or hums"
-msgstr ""
-"Remove o ruído de fundo constante tal como ventoinhas, ruído de cassete ou "
-"sussurros"
+msgstr "Remove o ruído de fundo constante tal como ventoinhas, ruído de cassete ou sussurros"
 
 #: src/effects/NoiseRemoval.cpp
 msgid ""
@@ -8867,9 +8843,7 @@ msgstr "Paulstretch"
 
 #: src/effects/Paulstretch.cpp
 msgid "Paulstretch is only for an extreme time-stretch or \"stasis\" effect"
-msgstr ""
-"Utilizar Paulstretch é apenas por um efeito \"stasis\" ou tempo-esticado "
-"extremo"
+msgstr "Utilizar Paulstretch é apenas por um efeito \"stasis\" ou tempo-esticado extremo"
 
 # decay=decaimento
 #. i18n-hint: This is how many times longer the sound will be, e.g. applying
@@ -9004,8 +8978,7 @@ msgid ""
 "\n"
 "Zoom in and select a tiny fraction of a second to repair."
 msgstr ""
-"O efeito Reparar foi desenvolvido para ser usado apenas em secções muito "
-"pequenas de áudio danificado (acima de 128 samples).\n"
+"O efeito Reparar foi desenvolvido para ser usado apenas em secções muito pequenas de áudio danificado (acima de 128 samples).\n"
 "\n"
 "Amplie e selecione apenas uma pequena fração de segundo para reparar."
 
@@ -9192,9 +9165,7 @@ msgstr "Realiza o filtro IIR que emula filtros analógicos"
 
 #: src/effects/ScienFilter.cpp
 msgid "To apply a filter, all selected tracks must have the same sample rate."
-msgstr ""
-"Para aplicar um filtro, todas as faixas selecionadas devem ter a mesma taxa "
-"de sample."
+msgstr "Para aplicar um filtro, todas as faixas selecionadas devem ter a mesma taxa de sample."
 
 #: src/effects/ScienFilter.cpp
 msgid "&Filter Type:"
@@ -9470,15 +9441,11 @@ msgstr "Truncar Silêncio"
 
 #: src/effects/TruncSilence.cpp
 msgid "Automatically reduces the length of passages where the volume is below a specified level"
-msgstr ""
-"Automaticamente reduz o comprimento de passagens onde o volume é abaixo do "
-"nível específico"
+msgstr "Automaticamente reduz o comprimento de passagens onde o volume é abaixo do nível específico"
 
 #: src/effects/TruncSilence.cpp
 msgid "When truncating independently, there may only be one selected audio track in each Sync-Locked Track Group."
-msgstr ""
-"Quando truncar independentemente, poderá haver uma faixa de áudio "
-"selecionada em cada Grupo de Faixa Sinc-Trancado."
+msgstr "Quando truncar independentemente, poderá haver uma faixa de áudio selecionada em cada Grupo de Faixa Sinc-Trancado."
 
 #: src/effects/TruncSilence.cpp
 msgid "Detect Silence"
@@ -9532,12 +9499,7 @@ msgstr "Tamanho da Memória"
 
 #: src/effects/VST/VSTEffect.cpp src/effects/lv2/LV2Effect.cpp
 msgid "The buffer size controls the number of samples sent to the effect on each iteration. Smaller values will cause slower processing and some effects require 8192 samples or less to work properly. However most effects can accept large buffers and using them will greatly reduce processing time."
-msgstr ""
-"O tamanho do buffer controla o número de samples enviadas para o efeito em "
-"cada iteração. Valores menores causarão um processamento mais lento e alguns "
-"efeitos requerem 8192 samples ou menos para funcionar corretamente. No "
-"entanto, a maioria dos efeitos pode aceitar grandes buffers e usá-los "
-"reduzirá muito o tempo de processamento."
+msgstr "O tamanho do buffer controla o número de samples enviadas para o efeito em cada iteração. Valores menores causarão um processamento mais lento e alguns efeitos requerem 8192 samples ou menos para funcionar corretamente. No entanto, a maioria dos efeitos pode aceitar grandes buffers e usá-los reduzirá muito o tempo de processamento."
 
 #: src/effects/VST/VSTEffect.cpp
 msgid "&Buffer Size (8 to 1048576 samples):"
@@ -9563,10 +9525,7 @@ msgstr "Modo Gráfico"
 
 #: src/effects/VST/VSTEffect.cpp
 msgid "Most VST effects have a graphical interface for setting parameter values. A basic text-only method is also available.  Reopen the effect for this to take effect."
-msgstr ""
-"A maioria dos efeitos VST possui uma interface gráfica para definir os "
-"valores dos parâmetros. Um método básico apenas texto também está "
-"disponível.  Reabra o efeito para que isso entre em vigor."
+msgstr "A maioria dos efeitos VST possui uma interface gráfica para definir os valores dos parâmetros. Um método básico apenas texto também está disponível.  Reabra o efeito para que isso entre em vigor."
 
 #: src/effects/VST/VSTEffect.cpp src/effects/lv2/LV2Effect.cpp
 msgid "Enable &graphical interface"
@@ -9647,9 +9606,7 @@ msgstr "WahWah"
 
 #: src/effects/Wahwah.cpp
 msgid "Rapid tone quality variations, like that guitar sound so popular in the 1970's"
-msgstr ""
-"Variações de qualidade de tons rápidos, tal como o som de guitarra popular "
-"nos anos 1970"
+msgstr "Variações de qualidade de tons rápidos, tal como o som de guitarra popular nos anos 1970"
 
 #: src/effects/Wahwah.cpp
 msgid "Dept&h (%):"
@@ -9704,11 +9661,7 @@ msgstr "Interface de Utilizador"
 
 #: src/effects/audiounits/AudioUnitEffect.cpp
 msgid "Select \"Full\" to use the graphical interface if supplied by the Audio Unit. Select \"Generic\" to use the system supplied generic interface. Select \"Basic\" for a basic text-only interface. Reopen the effect for this to take effect."
-msgstr ""
-"Selecione \"Completo\" para utilizar a interface gráfica se fornecida pelo "
-"Audio Unit. Selecione \"Genérico\" para utilizar a interface genérica "
-"fornecida pelo sistema. Selecione \"Básico\" para uma interface básica de "
-"apenas texto. Reabra o efeito para isto para obter o efeito."
+msgstr "Selecione \"Completo\" para utilizar a interface gráfica se fornecida pelo Audio Unit. Selecione \"Genérico\" para utilizar a interface genérica fornecida pelo sistema. Selecione \"Básico\" para uma interface básica de apenas texto. Reabra o efeito para isto para obter o efeito."
 
 #: src/effects/audiounits/AudioUnitEffect.cpp
 msgid "Select &interface"
@@ -9900,10 +9853,7 @@ msgstr "Como parte do seu processamento, alguns efeitos LV2 devem atrasar o reto
 
 #: src/effects/lv2/LV2Effect.cpp
 msgid "LV2 effects can have a graphical interface for setting parameter values. A basic text-only method is also available.  Reopen the effect for this to take effect."
-msgstr ""
-"Os efeitos do LV2 podem ter uma interface gráfica para definir os valores "
-"dos parâmetros. Um método básico apenas texto também está disponível. Reabra "
-"o efeito para que isso entre em vigor."
+msgstr "Os efeitos do LV2 podem ter uma interface gráfica para definir os valores dos parâmetros. Um método básico apenas texto também está disponível. Reabra o efeito para que isso entre em vigor."
 
 #: src/effects/lv2/LV2Effect.cpp
 msgid "Couldn't instantiate effect"
@@ -9979,9 +9929,7 @@ msgstr ""
 #: src/effects/nyquist/Nyquist.cpp
 #, c-format
 msgid "error: File \"%s\" specified in header but not found in plug-in path.\n"
-msgstr ""
-"erro: Ficheiro especificado \"%s\"  no cabeçalho mas não encontrado no "
-"caminho no plug-in.\n"
+msgstr "erro: Ficheiro especificado \"%s\"  no cabeçalho mas não encontrado no caminho no plug-in.\n"
 
 #: src/effects/nyquist/Nyquist.cpp
 msgid "Audio selection required."
@@ -9993,9 +9941,7 @@ msgstr "Erro Nyquist"
 
 #: src/effects/nyquist/Nyquist.cpp
 msgid "Sorry, cannot apply effect on stereo tracks where the tracks don't match."
-msgstr ""
-"Desculpe, o efeito não pode ser aplicado em faixas estéreo cujas "
-"características dos canais diferem."
+msgstr "Desculpe, o efeito não pode ser aplicado em faixas estéreo cujas características dos canais diferem."
 
 #: src/effects/nyquist/Nyquist.cpp
 #, c-format
@@ -10068,9 +10014,7 @@ msgstr "O Nyquist retornou nil áudio.\n"
 
 #: src/effects/nyquist/Nyquist.cpp
 msgid "[Warning: Nyquist returned invalid UTF-8 string, converted here as Latin-1]"
-msgstr ""
-"[Aviso: O Nyquist retornou uma mensagem inválida em formato UTF-8, aqui "
-"convertida para Latin-1]"
+msgstr "[Aviso: O Nyquist retornou uma mensagem inválida em formato UTF-8, aqui convertida para Latin-1]"
 
 #: src/effects/nyquist/Nyquist.cpp
 #, c-format
@@ -10090,8 +10034,7 @@ msgid ""
 "\t(mult *track* 0.1)\n"
 " ."
 msgstr ""
-"O seu código parece usar sintaxe SAL, mas não existe uma declaração de "
-"retorno. Use uma declaração de retorno tal como \n"
+"O seu código parece usar sintaxe SAL, mas não existe uma declaração de retorno. Use uma declaração de retorno tal como \n"
 "\treturn s * 0.1\n"
 "para SAL, ou comece com um parêntesis aberto tal como \n"
 "\t(mult s 0.1)\n"
@@ -10191,9 +10134,7 @@ msgstr "Oferece suporte de Vamp Effects para o Audacity"
 
 #: src/effects/vamp/VampEffect.cpp
 msgid "Sorry, Vamp Plug-ins cannot be run on stereo tracks where the individual channels of the track do not match."
-msgstr ""
-"Desculpe, plugins Vamp não podem ser aplicados em faixas estéreo cujas "
-"características dos canais diferem."
+msgstr "Desculpe, plugins Vamp não podem ser aplicados em faixas estéreo cujas características dos canais diferem."
 
 #: src/effects/vamp/VampEffect.cpp
 msgid "Sorry, failed to load Vamp Plug-in."
@@ -10257,8 +10198,7 @@ msgid ""
 msgstr ""
 "Está prestes a exportar um ficheiro %s com o nome \"%s\". \n"
 "\n"
-"Normalmente estes ficheiros terminam em \".%s\" e alguns programas podem não "
-"abrir ficheiros com uma extensão diferente. \n"
+"Normalmente estes ficheiros terminam em \".%s\" e alguns programas podem não abrir ficheiros com uma extensão diferente. \n"
 "\n"
 "Tem a certeza que quer guardar o ficheiro com este nome?"
 
@@ -10281,9 +10221,7 @@ msgstr "As suas faixas serão misturadas e exportadas como um ficheiro estéreo.
 
 #: src/export/Export.cpp
 msgid "Your tracks will be mixed down to one exported file according to the encoder settings."
-msgstr ""
-"As suas faixas serão misturadas a um ficheiro exportado de acordo com as "
-"opções de codificação."
+msgstr "As suas faixas serão misturadas a um ficheiro exportado de acordo com as opções de codificação."
 
 #: src/export/Export.cpp
 msgid "Advanced Mixing Options"
@@ -10340,9 +10278,7 @@ msgstr "Mostrar saída"
 #: src/export/ExportCL.cpp
 #, c-format
 msgid "Data will be piped to standard in. \"%f\" uses the file name in the export window."
-msgstr ""
-"Os dados serão redirecionados para a entrada standard. \"%f\" usa o nome do "
-"ficheiro na janela de exportação."
+msgstr "Os dados serão redirecionados para a entrada standard. \"%f\" usa o nome do ficheiro na janela de exportação."
 
 #. i18n-hint files that can be run as programs
 #: src/export/ExportCL.cpp
@@ -10411,9 +10347,7 @@ msgstr ""
 #: src/export/ExportFFmpeg.cpp
 #, c-format
 msgid "FFmpeg : ERROR - Can't determine format description for file \"%s\"."
-msgstr ""
-"FFmpeg : ERRO - Não pôde determinar descrição de formato para o ficheiro \"%"
-"s\"."
+msgstr "FFmpeg : ERRO - Não pôde determinar descrição de formato para o ficheiro \"%s\"."
 
 #: src/export/ExportFFmpeg.cpp
 msgid "FFmpeg Error"
@@ -10426,23 +10360,17 @@ msgstr "FFmpeg : ERRO - Não pôde alocar saída do formato de contexto."
 #: src/export/ExportFFmpeg.cpp
 #, c-format
 msgid "FFmpeg : ERROR - Can't add audio stream to output file \"%s\"."
-msgstr ""
-"FFmpeg : ERRO - Não pôde adicionar stream de áudio para o ficheiro de saída "
-"\"%s\"."
+msgstr "FFmpeg : ERRO - Não pôde adicionar stream de áudio para o ficheiro de saída \"%s\"."
 
 #: src/export/ExportFFmpeg.cpp
 #, c-format
 msgid "FFmpeg : ERROR - Can't open output file \"%s\" to write. Error code is %d."
-msgstr ""
-"FFmpeg : ERRO - Não pôde abrir ficheiro de saída \"%s\" para escrever. "
-"Código de erro é %d."
+msgstr "FFmpeg : ERRO - Não pôde abrir ficheiro de saída \"%s\" para escrever. Código de erro é %d."
 
 #: src/export/ExportFFmpeg.cpp
 #, c-format
 msgid "FFmpeg : ERROR - Can't write headers to output file \"%s\". Error code is %d."
-msgstr ""
-"FFmpeg : ERRO - Não escreveu cabeçalhos para o ficheiro de saída \"%s\". "
-"Código de erro é %d."
+msgstr "FFmpeg : ERRO - Não escreveu cabeçalhos para o ficheiro de saída \"%s\". Código de erro é %d."
 
 #. i18n-hint: "codec" is short for a "coder-decoder" algorithm
 #: src/export/ExportFFmpeg.cpp
@@ -10500,8 +10428,7 @@ msgstr "FFmpeg : ERRO - Muitos dados remanescentes."
 
 #: src/export/ExportFFmpeg.cpp
 msgid "FFmpeg : ERROR - Couldn't write last audio frame to output file."
-msgstr ""
-"FFmpeg - ERRO - Não escreveu último frame de áudio para o ficheiro de saída."
+msgstr "FFmpeg - ERRO - Não escreveu último frame de áudio para o ficheiro de saída."
 
 #: src/export/ExportFFmpeg.cpp
 msgid "FFmpeg : ERROR - nAudioFrameSizeOut too large."
@@ -10514,9 +10441,7 @@ msgstr "FFmpeg : ERRO - Não codificou frame de áudio."
 #: src/export/ExportFFmpeg.cpp
 #, c-format
 msgid "Attempted to export %d channels, but maximum number of channels for selected output format is %d"
-msgstr ""
-"Tentou exportar %d canais, mas o número máximo de canais para o formato de "
-"saída selecionado é %d"
+msgstr "Tentou exportar %d canais, mas o número máximo de canais para o formato de saída selecionado é %d"
 
 #: src/export/ExportFFmpeg.cpp
 #, c-format
@@ -10836,9 +10761,7 @@ msgstr "Codec:"
 
 #: src/export/ExportFFmpegDialogs.cpp
 msgid "Not all formats and codecs are compatible. Nor are all option combinations compatible with all codecs."
-msgstr ""
-"Nem todos os formatos e codecs são compatíveis. Nem todas as combinações são "
-"compatíveis com todos os codecs."
+msgstr "Nem todos os formatos e codecs são compatíveis. Nem todas as combinações são compatíveis com todos os codecs."
 
 #: src/export/ExportFFmpegDialogs.cpp
 msgid "Show All Formats"
@@ -10896,10 +10819,8 @@ msgid ""
 "0 - automatic\n"
 "Recommended - 192000"
 msgstr ""
-"Taxa de Bits  (bits/segundo) - influencia o tamanho e qualidade do ficheiro "
-"\n"
-"Alguns codecs podem aceitar apenas valores específicos (128k, 192k, 256k, "
-"etc) \n"
+"Taxa de Bits  (bits/segundo) - influencia o tamanho e qualidade do ficheiro \n"
+"Alguns codecs podem aceitar apenas valores específicos (128k, 192k, 256k, etc) \n"
 "0 - automático \n"
 "Recomendado - 192000"
 
@@ -11674,8 +11595,7 @@ msgid ""
 "\n"
 "Suggested replacement:"
 msgstr ""
-"O rótulo ou faixa \"%s\" não é um nome de ficheiro legível. Não pode usar \"%"
-"s\".\n"
+"O rótulo ou faixa \"%s\" não é um nome de ficheiro legível. Não pode usar \"%s\".\n"
 "\n"
 "Substituição sugerida:"
 
@@ -12110,9 +12030,7 @@ msgstr "Importação de Projeto"
 
 #: src/import/ImportAUP.cpp
 msgid "The active project already has a time track and one was encountered in the project being imported, bypassing imported time track."
-msgstr ""
-"O projeto ativo já tem um controlo de tempo e um foi encontrado no projeto "
-"que está sendo importado, a ignorar o controlo de tempo importado."
+msgstr "O projeto ativo já tem um controlo de tempo e um foi encontrado no projeto que está sendo importado, a ignorar o controlo de tempo importado."
 
 #: src/import/ImportAUP.cpp
 msgid "Invalid sequence 'maxsamples' attribute."
@@ -12202,8 +12120,7 @@ msgstr "Ficheiros compatíveis FFmpeg"
 #: src/import/ImportFFmpeg.cpp
 #, c-format
 msgid "Index[%02x] Codec[%s], Language[%s], Bitrate[%s], Channels[%d], Duration[%d]"
-msgstr ""
-"Índice[%02x] Codec[%s], Idioma[%s], Taxa de Bits[%s], Canais[%d], Duração[%d]"
+msgstr "Índice[%02x] Codec[%s], Idioma[%s], Taxa de Bits[%s], Canais[%d], Duração[%d]"
 
 #: src/import/ImportFLAC.cpp
 msgid "FLAC files"
@@ -12264,9 +12181,7 @@ msgstr "Duração inválida no ficheiro LOF."
 
 #: src/import/ImportLOF.cpp
 msgid "MIDI tracks cannot be offset individually, only audio files can be."
-msgstr ""
-"As faixas MIDI não podem ser compensadas individualmente, apenas ficheiros "
-"de áudio o podem ser."
+msgstr "As faixas MIDI não podem ser compensadas individualmente, apenas ficheiros de áudio o podem ser."
 
 #. i18n-hint: You do not need to translate "LOF"
 #: src/import/ImportLOF.cpp
@@ -12542,13 +12457,11 @@ msgstr "Não foi possível definir a qualidade de renderização QuickTime"
 
 #: src/import/ImportQT.cpp
 msgid "Unable to set QuickTime discrete channels property"
-msgstr ""
-"Não foi possível definir a propriedade dos canais discretos do QuickTime"
+msgstr "Não foi possível definir a propriedade dos canais discretos do QuickTime"
 
 #: src/import/ImportQT.cpp
 msgid "Unable to get QuickTime sample size property"
-msgstr ""
-"Não foi possível obter as propriedades do tamanho do sample do QuickTime"
+msgstr "Não foi possível obter as propriedades do tamanho do sample do QuickTime"
 
 #: src/import/ImportQT.cpp
 msgid "Unable to retrieve stream description"
@@ -13334,8 +13247,7 @@ msgstr "Apagar Áudio Rotulado"
 #. regions
 #: src/menus/LabelMenus.cpp
 msgid "Split Cut labeled audio regions to clipboard"
-msgstr ""
-"Separar e Cortar as áreas de áudio rotulado para a área de transferência"
+msgstr "Separar e Cortar as áreas de áudio rotulado para a área de transferência"
 
 #. i18n-hint: (verb) Do a special kind of cut on the labels
 #: src/menus/LabelMenus.cpp
@@ -14241,8 +14153,7 @@ msgstr "Por favor selecione pelo menos uma faixa de áudio e uma faixa MIDI."
 #: src/menus/TrackMenus.cpp
 #, c-format
 msgid "Alignment completed: MIDI from %.2f to %.2f secs, Audio from %.2f to %.2f secs."
-msgstr ""
-"Alinhamento completo: MIDI de %.2f a %.2f segs, Áudio de %.2f a %.2f segs."
+msgstr "Alinhamento completo: MIDI de %.2f a %.2f segs, Áudio de %.2f a %.2f segs."
 
 #: src/menus/TrackMenus.cpp
 msgid "Sync MIDI with Audio"
@@ -14251,9 +14162,7 @@ msgstr "Sincronizar MIDI com Áudio"
 #: src/menus/TrackMenus.cpp
 #, c-format
 msgid "Alignment error: input too short: MIDI from %.2f to %.2f secs, Audio from %.2f to %.2f secs."
-msgstr ""
-"Erro de alinhamento: entrada muito curta: MIDI de %.2f a %.2f segs, Áudio de "
-"%.2f a %.2f segs."
+msgstr "Erro de alinhamento: entrada muito curta: MIDI de %.2f a %.2f segs, Áudio de %.2f a %.2f segs."
 
 #: src/menus/TrackMenus.cpp
 msgid "Internal error reported by alignment process."
@@ -14507,8 +14416,7 @@ msgid ""
 "\n"
 "Please close any additional projects and try again."
 msgstr ""
-"Temporizador de Gravação não pode ser utilizado com mais de um projeto "
-"aberto.\n"
+"Temporizador de Gravação não pode ser utilizado com mais de um projeto aberto.\n"
 "\n"
 "Por favor feche todos os outros projetos e tente de novo."
 
@@ -14518,8 +14426,7 @@ msgid ""
 "\n"
 "Please save or close this project and try again."
 msgstr ""
-"Temporizador de Gravação não pode ser utilizado com alterações não guardadas."
-"\n"
+"Temporizador de Gravação não pode ser utilizado com alterações não guardadas.\n"
 "\n"
 "Por favor guarde ou feche este projeto e tente de novo."
 
@@ -14968,8 +14875,7 @@ msgid ""
 "Leave a field empty to go to the last directory used for that operation.\n"
 "Fill in a field to always go to that directory for that operation."
 msgstr ""
-"Deixe um campo vazio para ir para o último diretório usado para essa "
-"operação.\n"
+"Deixe um campo vazio para ir para o último diretório usado para essa operação.\n"
 "Preencha um campo para ir sempre a esse diretório para aquela operação."
 
 #: src/prefs/DirectoriesPrefs.cpp
@@ -15520,8 +15426,7 @@ msgid ""
 "The file with the shortcuts contains illegal shortcut duplicates for \"%s\" and \"%s\".\n"
 "Nothing is imported."
 msgstr ""
-"O ficheiro com os atalhos contém atalhos duplicados ilegais por \"%s\" e \"%"
-"s\".\n"
+"O ficheiro com os atalhos contém atalhos duplicados ilegais por \"%s\" e \"%s\".\n"
 "Nada é importado."
 
 #: src/prefs/KeyConfigPrefs.cpp
@@ -15535,8 +15440,7 @@ msgid ""
 "The following commands are not mentioned in the imported file, but have their shortcuts removed because of the conflict with other new shortcuts:\n"
 msgstr ""
 "\n"
-"Os seguintes comandos não são mencionados no ficheiro importado, mas os seus "
-"atalhos foram removidos devido ao conflito com outros novos atalhos:\n"
+"Os seguintes comandos não são mencionados no ficheiro importado, mas os seus atalhos foram removidos devido ao conflito com outros novos atalhos:\n"
 
 #: src/prefs/KeyConfigPrefs.cpp
 msgid "Loading Keyboard Shortcuts"
@@ -16461,8 +16365,7 @@ msgid ""
 "Saving and loading individual theme files uses a separate file for each image, but is\n"
 "otherwise the same idea."
 msgstr ""
-"Guardar e carregar ficheiros individuais do tema usa um ficheiro diferente "
-"para cada imagem, \n"
+"Guardar e carregar ficheiros individuais do tema usa um ficheiro diferente para cada imagem, \n"
 "mas de resto a ideia é a mesma."
 
 #. i18n-hint: && in here is an escape character to get a single & on screen,
@@ -16721,8 +16624,7 @@ msgstr "Misturar e fundir as faixas para e&stéreo ao exportar"
 
 #: src/prefs/WarningsPrefs.cpp
 msgid "Mixing down on export (&Custom FFmpeg or external program)"
-msgstr ""
-"Misturar abaixo na exportação (FFmpeg &personalizado ou programa externo)"
+msgstr "Misturar abaixo na exportação (FFmpeg &personalizado ou programa externo)"
 
 #: src/prefs/WarningsPrefs.cpp
 msgid "Missing file &name extension during export"
@@ -17324,9 +17226,7 @@ msgstr "Descer Oita&va"
 #: src/tracks/playabletrack/notetrack/ui/NoteTrackVZoomHandle.cpp
 #: src/tracks/playabletrack/wavetrack/ui/WaveTrackVZoomHandle.cpp
 msgid "Click to vertically zoom in. Shift-click to zoom out. Drag to specify a zoom region."
-msgstr ""
-"Prima o Botão do Rato para ampliar na vertical. Shift-clique para diminuir. "
-"Arraste para indicar uma área a ampliar."
+msgstr "Prima o Botão do Rato para ampliar na vertical. Shift-clique para diminuir. Arraste para indicar uma área a ampliar."
 
 #: src/tracks/playabletrack/notetrack/ui/NoteTrackVZoomHandle.cpp
 #: src/tracks/playabletrack/wavetrack/ui/WaveTrackVZoomHandle.cpp
@@ -17660,9 +17560,7 @@ msgstr "%.0f%% Direito"
 
 #: src/tracks/playabletrack/wavetrack/ui/WaveTrackView.cpp
 msgid "Click and drag to adjust sizes of sub-views, double-click to split evenly"
-msgstr ""
-"Clique e arraste para ajustar os tamanhos das subvistas, clique duas vezes "
-"para dividir uniformemente"
+msgstr "Clique e arraste para ajustar os tamanhos das subvistas, clique duas vezes para dividir uniformemente"
 
 #: src/tracks/playabletrack/wavetrack/ui/WaveTrackView.cpp
 msgid "Click and drag to rearrange sub-views"
@@ -17885,8 +17783,7 @@ msgstr "Prima e arraste para mover o limite topo da seleção."
 
 #: src/tracks/ui/SelectHandle.cpp
 msgid "Click and drag to move center selection frequency to a spectral peak."
-msgstr ""
-"Prima e arraste para mover o centro da seleção para um pico de frequência."
+msgstr "Prima e arraste para mover o centro da seleção para um pico de frequência."
 
 #: src/tracks/ui/SelectHandle.cpp
 msgid "Click and drag to move center selection frequency."
@@ -17976,9 +17873,7 @@ msgstr "Ctrl+Click"
 #: src/tracks/ui/TrackSelectHandle.cpp
 #, c-format
 msgid "%s to select or deselect track. Drag up or down to change track order."
-msgstr ""
-"%s para selecionar ou desmarcar faixa. Arrastar cima ou baixo para mudar a "
-"ordem da faixa."
+msgstr "%s para selecionar ou desmarcar faixa. Arrastar cima ou baixo para mudar a ordem da faixa."
 
 #. i18n-hint: %s is replaced by (translation of) 'Ctrl+Click' on windows, 'Command+Click' on Mac
 #: src/tracks/ui/TrackSelectHandle.cpp
@@ -18989,9 +18884,7 @@ msgstr "Benjamin Schwartz and Steve Daulton"
 
 #: plug-ins/clipfix.ny
 msgid "Licensing confirmed under terms of the GNU General Public License version 2"
-msgstr ""
-"Licenciamento confirmado sob os termos do GNU General Public License version "
-"2"
+msgstr "Licenciamento confirmado sob os termos do GNU General Public License version 2"
 
 #: plug-ins/clipfix.ny
 msgid "Threshold of Clipping (%)"
@@ -19012,8 +18905,7 @@ msgstr "Crossfading…"
 #: plug-ins/crossfadeclips.ny
 #, lisp-format
 msgid "Error.~%Invalid selection.~%More than 2 audio clips selected."
-msgstr ""
-"Erro.~%Seleção inválida.~%Mais do que dois clipes de áudio selecionados."
+msgstr "Erro.~%Seleção inválida.~%Mais do que dois clipes de áudio selecionados."
 
 #: plug-ins/crossfadeclips.ny
 #, lisp-format
@@ -19342,8 +19234,7 @@ msgid ""
 "                   Track sample rate is ~a Hz~%~\n"
 "                   Frequency must be less than ~a Hz."
 msgstr ""
-"Erro:~%~%A frequência (~a Hz) é muito alta para a taxa de sample da "
-"faixa.~%~%~\n"
+"Erro:~%~%A frequência (~a Hz) é muito alta para a taxa de sample da faixa.~%~%~\n"
 "                   A taxa de sample da faixa é ~a Hz~%~\n"
 "                   A frequência deve ser menor do que ~a Hz."
 
@@ -19354,9 +19245,7 @@ msgstr "Sons de Rótulo"
 
 #: plug-ins/label-sounds.ny plug-ins/noisegate.ny
 msgid "Released under terms of the GNU General Public License version 2 or later."
-msgstr ""
-"Distribuído sob os termos da GNU General Public License versão 2 ou "
-"posterior."
+msgstr "Distribuído sob os termos da GNU General Public License versão 2 ou posterior."
 
 #: plug-ins/label-sounds.ny
 msgid "Threshold level (dB)"
@@ -19427,9 +19316,7 @@ msgstr "~ah ~am ~as"
 #: plug-ins/label-sounds.ny
 #, lisp-format
 msgid "Too many silences detected.~%Only the first 10000 labels added."
-msgstr ""
-"Demasiados silêncios detetados.~%Apenas os primeiros 10000 rótulos "
-"adicionados."
+msgstr "Demasiados silêncios detetados.~%Apenas os primeiros 10000 rótulos adicionados."
 
 #. i18n-hint: '~a' will be replaced by a time duration
 #: plug-ins/label-sounds.ny
@@ -19440,16 +19327,12 @@ msgstr "Erro.~%Seleção deve ser menor do que ~a."
 #: plug-ins/label-sounds.ny
 #, lisp-format
 msgid "No sounds found.~%Try lowering the 'Threshold' or reduce 'Minimum sound duration'."
-msgstr ""
-"Nenhum som encontrado.~%Tente baixar o 'Limite' ou reduzir a 'Duração mínima "
-"do som'."
+msgstr "Nenhum som encontrado.~%Tente baixar o 'Limite' ou reduzir a 'Duração mínima do som'."
 
 #: plug-ins/label-sounds.ny
 #, lisp-format
 msgid "Labelling regions between sounds requires~%at least two sounds.~%Only one sound detected."
-msgstr ""
-"Opções de rótulo entre sons requer~%pelo menos dois sons.~%Apenas um som "
-"detetado."
+msgstr "Opções de rótulo entre sons requer~%pelo menos dois sons.~%Apenas um som detetado."
 
 #: plug-ins/limiter.ny
 msgid "Limiter"
@@ -19637,8 +19520,7 @@ msgid ""
 "                 Track sample rate is ~a Hz.~%~\n"
 "                 Frequency must be less than ~a Hz."
 msgstr ""
-"Erro:~%~%Frequência (~a Hz) é muito alta para a taxa de sample da faixa.~%~%~"
-"\n"
+"Erro:~%~%Frequência (~a Hz) é muito alta para a taxa de sample da faixa.~%~%~\n"
 "                 Taxa de sample da faixa é ~a Hz.~%~\n"
 "                 Frequência deve ser menos do que ~a Hz."
 
@@ -19697,8 +19579,7 @@ msgstr "Aviso.~%Falhou ao copiar alguns ficheiros:~%"
 #: plug-ins/nyquist-plug-in-installer.ny
 #, lisp-format
 msgid "Plug-ins installed.~%(Use the Plug-in Manager to enable effects):"
-msgstr ""
-"Plug-ins instalados.~%(Utilize o Gestor plug-in para ativar os efeitos):"
+msgstr "Plug-ins instalados.~%(Utilize o Gestor plug-in para ativar os efeitos):"
 
 #: plug-ins/nyquist-plug-in-installer.ny
 msgid "Plug-ins updated:"
@@ -19799,9 +19680,7 @@ msgstr "+/- 1"
 
 #: plug-ins/rhythmtrack.ny
 msgid "Set 'Number of bars' to zero to enable the 'Rhythm track duration'."
-msgstr ""
-"Definir 'Número de barras' para zero para ativar a 'Duração da faixa de "
-"ritmo'."
+msgstr "Definir 'Número de barras' para zero para ativar a 'Duração da faixa de ritmo'."
 
 #: plug-ins/rhythmtrack.ny
 msgid "Number of bars"
@@ -20025,9 +19904,7 @@ msgstr "Taxa de sample: ~a Hz.  Valores de sample em ~a escala.~%~a~%~a"
 #: plug-ins/sample-data-export.ny
 #, lisp-format
 msgid "~a   ~a~%~aSample Rate: ~a Hz.~%Length processed: ~a samples ~a seconds.~a"
-msgstr ""
-"~a   ~a~%~aTaxa de Sample: ~a Hz.~%Comprimento processado: ~a samples ~a "
-"segundos.~a"
+msgstr "~a   ~a~%~aTaxa de Sample: ~a Hz.~%Comprimento processado: ~a samples ~a segundos.~a"
 
 #: plug-ins/sample-data-export.ny
 #, lisp-format
@@ -20045,10 +19922,8 @@ msgid ""
 "                  samples, ~a seconds.~%Peak amplitude: ~a (linear) ~a dB.  Unweighted RMS: ~a dB.~%~\n"
 "                  DC offset: ~a~a"
 msgstr ""
-"~a~%Taxa de Sample: ~a Hz. Valores de sample em ~a escala. ~a.~%~"
-"aComprimento processado: ~a ~\n"
-"                  samples, ~a segundos.~%Amplitude de pico: ~a (linear) ~a "
-"dB.  RMS sem peso: ~a dB.~%~\n"
+"~a~%Taxa de Sample: ~a Hz. Valores de sample em ~a escala. ~a.~%~aComprimento processado: ~a ~\n"
+"                  samples, ~a segundos.~%Amplitude de pico: ~a (linear) ~a dB.  RMS sem peso: ~a dB.~%~\n"
 "                  DC offset: ~a~a"
 
 #: plug-ins/sample-data-export.ny
@@ -20380,9 +20255,7 @@ msgstr ""
 #: plug-ins/vocalrediso.ny
 #, lisp-format
 msgid "Pan position: ~a~%The left and right channels are correlated by about ~a %. This means:~%~a~%"
-msgstr ""
-"Posição de balanço: ~a~%Os canais esquerdo e direito são correlacionados em "
-"acerca ~a %. Isto significa:~%~a~%"
+msgstr "Posição de balanço: ~a~%Os canais esquerdo e direito são correlacionados em acerca ~a %. Isto significa:~%~a~%"
 
 #: plug-ins/vocalrediso.ny
 msgid ""
@@ -20392,16 +20265,14 @@ msgid ""
 msgstr ""
 " - Os dois canais são idênticos, p.e. dual mono.\n"
 "                O centro não pode ser removido.\n"
-"                Qualquer diferença restante pode ser causada por perda de "
-"codificação."
+"                Qualquer diferença restante pode ser causada por perda de codificação."
 
 #: plug-ins/vocalrediso.ny
 msgid ""
 " - The two Channels are strongly related, i.e. nearly mono or extremely panned.\n"
 "                Most likely, the center extraction will be poor."
 msgstr ""
-" - Os dois Canais são fortemente relacionados, p.e. perto de mono ou extremo "
-"balanço.\n"
+" - Os dois Canais são fortemente relacionados, p.e. perto de mono ou extremo balanço.\n"
 "                Mais propriamente, a extração central será pobre."
 
 #: plug-ins/vocalrediso.ny
@@ -20414,8 +20285,7 @@ msgid ""
 "                However, the center extraction depends also on the used reverb."
 msgstr ""
 " - Um valor ideal para Estéreo.\n"
-"                Contudo, a extração do centro depende também do reverb "
-"utilizado."
+"                Contudo, a extração do centro depende também do reverb utilizado."
 
 #: plug-ins/vocalrediso.ny
 msgid ""
@@ -20424,8 +20294,7 @@ msgid ""
 "                The center extraction can still be good though."
 msgstr ""
 " - Os dois canais estão quase não relacionados.\n"
-"                Ou você só tem ruído ou a peça é dominada de maneira "
-"desequilibrada.\n"
+"                Ou você só tem ruído ou a peça é dominada de maneira desequilibrada.\n"
 "                A extração do centro ainda pode ser boa."
 
 #: plug-ins/vocalrediso.ny
@@ -20447,8 +20316,7 @@ msgid ""
 msgstr ""
 " - Os dois canais são quase idênticos.\n"
 "                  Obviamente, um efeito pseudo estéreo foi usado\n"
-"                  para espalhar o sinal sobre a distância física entre os "
-"altifalantes.\n"
+"                  para espalhar o sinal sobre a distância física entre os altifalantes.\n"
 "                  Não espere bons resultados de uma remoção do centro."
 
 #: plug-ins/vocalrediso.ny

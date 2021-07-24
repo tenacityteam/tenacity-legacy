@@ -13,8 +13,7 @@ msgstr ""
 "POT-Creation-Date: 2021-07-20 03:55-0400\n"
 "PO-Revision-Date: 2021-07-23 02:57+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Persian <https://hosted.weblate.org/projects/tenacity/"
-"tenacity/fa/>\n"
+"Language-Team: Persian <https://hosted.weblate.org/projects/tenacity/tenacity/fa/>\n"
 "Language: fa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -796,6 +795,13 @@ msgstr "تشکر ویژه:"
 msgid "%s website: "
 msgstr "اولین اجرای اوداسیتی"
 
+#. i18n-hint Tenacity's name substitutes for first and third %s,
+#. and a "copyright" symbol for the second
+#: src/AboutDialog.cpp
+#, c-format
+msgid "%s software is copyright %s 1999-2021 %s Team."
+msgstr ""
+
 #. i18n-hint Tenacity's name substitutes for %s
 #: src/AboutDialog.cpp
 #, c-format
@@ -808,9 +814,7 @@ msgstr ""
 
 #: src/AdornedRulerPanel.cpp
 msgid "Click and drag to adjust, double-click to reset"
-msgstr ""
-"برای تنظیم اندازهٔ نسبی قطعات استریو کلیک کنید و در حالی که کلید را پایین "
-"نگاه داشته‌اید موشی را حرکت دهید."
+msgstr "برای تنظیم اندازهٔ نسبی قطعات استریو کلیک کنید و در حالی که کلید را پایین نگاه داشته‌اید موشی را حرکت دهید."
 
 #. i18n-hint: This text is a tooltip on the icon (of a pin) representing
 #. the temporal position in the audio.
@@ -836,9 +840,7 @@ msgstr "برای ویرایش نمونه‌ها کلیک کنید و بکشید"
 #.
 #: src/AdornedRulerPanel.cpp
 msgid "Click or drag to begin Scrub"
-msgstr ""
-"برای تغییر اندازهٔ شیار کلیک کنید و در حالی که دکمه را نگاه داشته‌اید موشی "
-"را حرکت دهید."
+msgstr "برای تغییر اندازهٔ شیار کلیک کنید و در حالی که دکمه را نگاه داشته‌اید موشی را حرکت دهید."
 
 #. i18n-hint: These commands assist the user in finding a sound by ear. ...
 #. "Scrubbing" is variable-speed playback, ...
@@ -3464,15 +3466,11 @@ msgstr "نرخ واقعی %Id"
 msgid ""
 "Error opening sound device.\n"
 "Try changing the audio host, playback device and the project sample rate."
-msgstr ""
-"خطا در هنگام باز کردن دستگاه صدا. لطفاً تنظیمات خروجی دستگاه و نرخ نمونه‌"
-"برداری پروژه را بررسی کنید."
+msgstr "خطا در هنگام باز کردن دستگاه صدا. لطفاً تنظیمات خروجی دستگاه و نرخ نمونه‌برداری پروژه را بررسی کنید."
 
 #: src/ProjectAudioManager.cpp src/menus/TransportMenus.cpp
 msgid "The tracks selected for recording must all have the same sampling rate"
-msgstr ""
-"برای رسم طیف، همهٔ شیارهای انتخاب‌شده باید نرخ نمونه‌برداری یکسان داشته "
-"باشند."
+msgstr "برای رسم طیف، همهٔ شیارهای انتخاب‌شده باید نرخ نمونه‌برداری یکسان داشته باشند."
 
 #: src/ProjectAudioManager.cpp src/menus/TransportMenus.cpp
 msgid "Mismatched Sampling Rates"
@@ -3671,6 +3669,11 @@ msgstr ""
 
 #: src/ProjectFileIO.cpp src/menus/WindowMenus.cpp
 msgid "<untitled>"
+msgstr ""
+
+#: src/ProjectFileIO.cpp
+#, c-format
+msgid "[Project %02i] "
 msgstr ""
 
 #: src/ProjectFileIO.cpp
@@ -5207,15 +5210,11 @@ msgstr " انتخاب روشن"
 
 #: src/TrackPanelResizeHandle.cpp
 msgid "Click and drag to adjust relative size of stereo tracks, double-click to make heights equal"
-msgstr ""
-"برای تنظیم اندازهٔ نسبی قطعات استریو کلیک کنید و در حالی که کلید را پایین "
-"نگاه داشته‌اید موشی را حرکت دهید."
+msgstr "برای تنظیم اندازهٔ نسبی قطعات استریو کلیک کنید و در حالی که کلید را پایین نگاه داشته‌اید موشی را حرکت دهید."
 
 #: src/TrackPanelResizeHandle.cpp
 msgid "Click and drag to resize the track."
-msgstr ""
-"برای تغییر اندازهٔ شیار کلیک کنید و در حالی که دکمه را نگاه داشته‌اید موشی "
-"را حرکت دهید."
+msgstr "برای تغییر اندازهٔ شیار کلیک کنید و در حالی که دکمه را نگاه داشته‌اید موشی را حرکت دهید."
 
 #: src/TrackUtilities.cpp
 msgid "Removed audio track(s)"
@@ -6151,18 +6150,14 @@ msgstr ""
 #. * in 'Donald-Duck'!
 #: src/effects/AutoDuck.cpp
 msgid "You selected a track which does not contain audio. AutoDuck can only process audio tracks."
-msgstr ""
-"شما شیاری را انتخاب کرده‌اید که حاوی صوت نیست. مخفی‌سازی خودکار فقط می‌تواند "
-"شیارهای صوتی را پردازش کند."
+msgstr "شما شیاری را انتخاب کرده‌اید که حاوی صوت نیست. مخفی‌سازی خودکار فقط می‌تواند شیارهای صوتی را پردازش کند."
 
 #. i18n-hint: Auto duck is the name of an effect that 'ducks' (reduces the volume)
 #. * of the audio automatically when there is sound on another track.  Not as
 #. * in 'Donald-Duck'!
 #: src/effects/AutoDuck.cpp
 msgid "Auto Duck needs a control track which must be placed below the selected track(s)."
-msgstr ""
-"مخفی‌سازی خودکار به یک شیار کنترلی نیاز دارد که باید زیر شیار انتخاب‌شده "
-"قرار داده شود."
+msgstr "مخفی‌سازی خودکار به یک شیار کنترلی نیاز دارد که باید زیر شیار انتخاب‌شده قرار داده شود."
 
 #: src/effects/AutoDuck.cpp src/effects/TruncSilence.cpp
 msgid "db"
@@ -7656,9 +7651,7 @@ msgstr ""
 
 #: src/effects/Equalization.cpp
 msgid "To apply Equalization, all selected tracks must have the same sample rate."
-msgstr ""
-"برای رسم طیف، همهٔ شیارهای انتخاب‌شده باید نرخ نمونه‌برداری یکسان داشته "
-"باشند."
+msgstr "برای رسم طیف، همهٔ شیارهای انتخاب‌شده باید نرخ نمونه‌برداری یکسان داشته باشند."
 
 #: src/effects/Equalization.cpp
 msgid "Track sample rate is too low for this effect."
@@ -8187,9 +8180,7 @@ msgstr ""
 
 #: src/effects/NoiseReduction.cpp
 msgid "All noise profile data must have the same sample rate."
-msgstr ""
-"برای رسم طیف، همهٔ شیارهای انتخاب‌شده باید نرخ نمونه‌برداری یکسان داشته "
-"باشند."
+msgstr "برای رسم طیف، همهٔ شیارهای انتخاب‌شده باید نرخ نمونه‌برداری یکسان داشته باشند."
 
 #: src/effects/NoiseReduction.cpp
 msgid "The sample rate of the noise profile must match that of the sound to be processed."
@@ -8272,8 +8263,7 @@ msgid ""
 "Select all of the audio you want filtered, choose how much noise you want\n"
 "filtered out, and then click 'OK' to reduce noise.\n"
 msgstr ""
-"تمام صدایی که می‌خواهید صافی کنید را انتخاب نمایید، مشخص کنید که چه مقدار "
-"نوفه را می‌خواهید\n"
+"تمام صدایی که می‌خواهید صافی کنید را انتخاب نمایید، مشخص کنید که چه مقدار نوفه را می‌خواهید\n"
 "با استفاده از صافی حذف کنید، سپس روی «تأیید» کلیک کنید تا نوفه حذف گردد.\n"
 
 #: src/effects/NoiseReduction.cpp src/effects/NoiseRemoval.cpp
@@ -8384,8 +8374,7 @@ msgid ""
 "Select all of the audio you want filtered, choose how much noise you want\n"
 "filtered out, and then click 'OK' to remove noise.\n"
 msgstr ""
-"تمام صدایی که می‌خواهید صافی کنید را انتخاب نمایید، مشخص کنید که چه مقدار "
-"نوفه را می‌خواهید\n"
+"تمام صدایی که می‌خواهید صافی کنید را انتخاب نمایید، مشخص کنید که چه مقدار نوفه را می‌خواهید\n"
 "با استفاده از صافی حذف کنید، سپس روی «تأیید» کلیک کنید تا نوفه حذف گردد.\n"
 
 #: src/effects/NoiseRemoval.cpp
@@ -8605,8 +8594,7 @@ msgid ""
 "\n"
 "Zoom in and select a tiny fraction of a second to repair."
 msgstr ""
-"جلوهٔ تعمیر برای اعمال بر روی بخش بسیاری کوتاهی از صوت آسیب‌دیده مناسب است ("
-"حداکثر تا ۱۲۸ نمونه).\n"
+"جلوهٔ تعمیر برای اعمال بر روی بخش بسیاری کوتاهی از صوت آسیب‌دیده مناسب است (حداکثر تا ۱۲۸ نمونه).\n"
 "\n"
 "با استفاده از زوم کردن به داخل، کسر کوچکی از ثانیه را برای تعمیر انتخاب کنید."
 
@@ -8788,9 +8776,7 @@ msgstr ""
 
 #: src/effects/ScienFilter.cpp
 msgid "To apply a filter, all selected tracks must have the same sample rate."
-msgstr ""
-"برای رسم طیف، همهٔ شیارهای انتخاب‌شده باید نرخ نمونه‌برداری یکسان داشته "
-"باشند."
+msgstr "برای رسم طیف، همهٔ شیارهای انتخاب‌شده باید نرخ نمونه‌برداری یکسان داشته باشند."
 
 #: src/effects/ScienFilter.cpp
 msgid "&Filter Type:"
@@ -9552,9 +9538,7 @@ msgstr "Nyquist"
 
 #: src/effects/nyquist/Nyquist.cpp
 msgid "Sorry, cannot apply effect on stereo tracks where the tracks don't match."
-msgstr ""
-"متاسفانه نمی‌توان جلوه را بر روی شیارهای استریو که با هم همخوانی ندارند، "
-"اعمال نمود."
+msgstr "متاسفانه نمی‌توان جلوه را بر روی شیارهای استریو که با هم همخوانی ندارند، اعمال نمود."
 
 #: src/effects/nyquist/Nyquist.cpp
 #, c-format
@@ -10680,9 +10664,7 @@ msgstr ""
 
 #: src/export/ExportMP2.cpp
 msgid "Cannot export MP2 with this sample rate and bit rate"
-msgstr ""
-"با نرخ نمونه‌برداری و نرخ بیت تعیین‌شده نمی‌توان صدور به قالب MP2 را انجام "
-"داد"
+msgstr "با نرخ نمونه‌برداری و نرخ بیت تعیین‌شده نمی‌توان صدور به قالب MP2 را انجام داد"
 
 #: src/export/ExportMP2.cpp src/export/ExportMP3.cpp src/export/ExportOGG.cpp
 msgid "Unable to open target file for writing"
@@ -11594,9 +11576,7 @@ msgstr "مدت زمان نامعتبر در پروندهٔ LOF"
 
 #: src/import/ImportLOF.cpp
 msgid "MIDI tracks cannot be offset individually, only audio files can be."
-msgstr ""
-"شیارهای MIDI نمی‌توانند بطور مستقل از افست استفاده کنند. فقط پرونده‌های صوتی "
-"می‌توانند چنین کنند. "
+msgstr "شیارهای MIDI نمی‌توانند بطور مستقل از افست استفاده کنند. فقط پرونده‌های صوتی می‌توانند چنین کنند. "
 
 #. i18n-hint: You do not need to translate "LOF"
 #: src/import/ImportLOF.cpp
@@ -12031,8 +12011,7 @@ msgstr ""
 
 #: src/menus/ClipMenus.cpp
 msgid "Time shifted clips to the left"
-msgstr ""
-"بریده‌ها/شیارهای  %s که زمان آنها به اندازهٔ %I.02f ثانیه به جابه‌جا شده است"
+msgstr "بریده‌ها/شیارهای  %s که زمان آنها به اندازهٔ %I.02f ثانیه به جابه‌جا شده است"
 
 #: src/menus/ClipMenus.cpp src/prefs/MousePrefs.cpp
 #: src/tracks/ui/TimeShiftHandle.cpp
@@ -15000,9 +14979,7 @@ msgstr ""
 
 #: src/prefs/ModulePrefs.cpp
 msgid "Changes to these settings only take effect when Audacity starts up."
-msgstr ""
-"تغییرات در شاخهٔ موقت تا زمانی که اوداسیتی راه‌اندازی مجدد نشود، اعمال "
-"نخواهند شد"
+msgstr "تغییرات در شاخهٔ موقت تا زمانی که اوداسیتی راه‌اندازی مجدد نشود، اعمال نخواهند شد"
 
 #: src/prefs/ModulePrefs.cpp
 msgid "Ask"
@@ -16411,9 +16388,7 @@ msgstr "میله ابزار %s اوداسیتی"
 
 #: src/toolbars/ToolBar.cpp
 msgid "Click and drag to resize toolbar"
-msgstr ""
-"برای تغییر اندازهٔ شیار کلیک کنید و در حالی که دکمه را نگاه داشته‌اید موشی "
-"را حرکت دهید."
+msgstr "برای تغییر اندازهٔ شیار کلیک کنید و در حالی که دکمه را نگاه داشته‌اید موشی را حرکت دهید."
 
 #: src/toolbars/ToolDock.cpp
 msgid "ToolDock"
@@ -16586,9 +16561,7 @@ msgstr "اُکتاو پایین"
 #: src/tracks/playabletrack/notetrack/ui/NoteTrackVZoomHandle.cpp
 #: src/tracks/playabletrack/wavetrack/ui/WaveTrackVZoomHandle.cpp
 msgid "Click to vertically zoom in. Shift-click to zoom out. Drag to specify a zoom region."
-msgstr ""
-"برای زوم به داخل عمودی کلیک، برای زوم به خارج تبدیل-کلیک کنید و برای ایجاد "
-"محدودهٔ زوم خاص کلید موشی را نگه دارید و موشی را حرکت دهید."
+msgstr "برای زوم به داخل عمودی کلیک، برای زوم به خارج تبدیل-کلیک کنید و برای ایجاد محدودهٔ زوم خاص کلید موشی را نگه دارید و موشی را حرکت دهید."
 
 #: src/tracks/playabletrack/notetrack/ui/NoteTrackVZoomHandle.cpp
 #: src/tracks/playabletrack/wavetrack/ui/WaveTrackVZoomHandle.cpp
@@ -16920,9 +16893,7 @@ msgstr ""
 
 #: src/tracks/playabletrack/wavetrack/ui/WaveTrackView.cpp
 msgid "Click and drag to adjust sizes of sub-views, double-click to split evenly"
-msgstr ""
-"برای تنظیم اندازهٔ نسبی قطعات استریو کلیک کنید و در حالی که کلید را پایین "
-"نگاه داشته‌اید موشی را حرکت دهید."
+msgstr "برای تنظیم اندازهٔ نسبی قطعات استریو کلیک کنید و در حالی که کلید را پایین نگاه داشته‌اید موشی را حرکت دهید."
 
 #: src/tracks/playabletrack/wavetrack/ui/WaveTrackView.cpp
 msgid "Click and drag to rearrange sub-views"
@@ -17129,39 +17100,27 @@ msgstr "پرش به آغاز"
 
 #: src/tracks/ui/SelectHandle.cpp
 msgid "Click and drag to move left selection boundary."
-msgstr ""
-"برای جابه‌جا کردن حد چپ انتخاب کلیک کنید و در حالی که دکمه را نگاه داشته‌اید "
-"موشی را حرکت دهید."
+msgstr "برای جابه‌جا کردن حد چپ انتخاب کلیک کنید و در حالی که دکمه را نگاه داشته‌اید موشی را حرکت دهید."
 
 #: src/tracks/ui/SelectHandle.cpp
 msgid "Click and drag to move right selection boundary."
-msgstr ""
-"برای جابه‌جا کردن حد راست انتخاب، کلیک کنید و در حالی که دکمه را نگاه داشته‌"
-"اید موشی را حرکت دهید."
+msgstr "برای جابه‌جا کردن حد راست انتخاب، کلیک کنید و در حالی که دکمه را نگاه داشته‌اید موشی را حرکت دهید."
 
 #: src/tracks/ui/SelectHandle.cpp
 msgid "Click and drag to move bottom selection frequency."
-msgstr ""
-"برای جابه‌جا کردن حد چپ انتخاب کلیک کنید و در حالی که دکمه را نگاه داشته‌اید "
-"موشی را حرکت دهید."
+msgstr "برای جابه‌جا کردن حد چپ انتخاب کلیک کنید و در حالی که دکمه را نگاه داشته‌اید موشی را حرکت دهید."
 
 #: src/tracks/ui/SelectHandle.cpp
 msgid "Click and drag to move top selection frequency."
-msgstr ""
-"برای جابه‌جا کردن حد چپ انتخاب کلیک کنید و در حالی که دکمه را نگاه داشته‌اید "
-"موشی را حرکت دهید."
+msgstr "برای جابه‌جا کردن حد چپ انتخاب کلیک کنید و در حالی که دکمه را نگاه داشته‌اید موشی را حرکت دهید."
 
 #: src/tracks/ui/SelectHandle.cpp
 msgid "Click and drag to move center selection frequency to a spectral peak."
-msgstr ""
-"برای جابه‌جا کردن حد چپ انتخاب کلیک کنید و در حالی که دکمه را نگاه داشته‌اید "
-"موشی را حرکت دهید."
+msgstr "برای جابه‌جا کردن حد چپ انتخاب کلیک کنید و در حالی که دکمه را نگاه داشته‌اید موشی را حرکت دهید."
 
 #: src/tracks/ui/SelectHandle.cpp
 msgid "Click and drag to move center selection frequency."
-msgstr ""
-"برای جابه‌جا کردن حد چپ انتخاب کلیک کنید و در حالی که دکمه را نگاه داشته‌اید "
-"موشی را حرکت دهید."
+msgstr "برای جابه‌جا کردن حد چپ انتخاب کلیک کنید و در حالی که دکمه را نگاه داشته‌اید موشی را حرکت دهید."
 
 #: src/tracks/ui/SelectHandle.cpp
 msgid "Click and drag to adjust frequency bandwidth."
@@ -17272,13 +17231,11 @@ msgstr "جابه‌جایی شیار"
 
 #: src/tracks/ui/ZoomHandle.cpp
 msgid "Click to Zoom In, Shift-Click to Zoom Out"
-msgstr ""
-"برای زوم کردن کلیک کنید، برای زوم به عقب کلید تبدیل را نگه دارید و کلیک کنید"
+msgstr "برای زوم کردن کلیک کنید، برای زوم به عقب کلید تبدیل را نگه دارید و کلیک کنید"
 
 #: src/tracks/ui/ZoomHandle.cpp
 msgid "Drag to Zoom Into Region, Right-Click to Zoom Out"
-msgstr ""
-"برای زوم کردن روی یک ناحیه کلیک کنید و بکشید، برای زوم به عقب کلیک راست کنید"
+msgstr "برای زوم کردن روی یک ناحیه کلیک کنید و بکشید، برای زوم به عقب کلیک راست کنید"
 
 #: src/tracks/ui/ZoomHandle.cpp
 msgid "Left=Zoom In, Right=Zoom Out, Middle=Normal"

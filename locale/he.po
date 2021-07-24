@@ -11,8 +11,7 @@ msgstr ""
 "POT-Creation-Date: 2021-07-20 03:55-0400\n"
 "PO-Revision-Date: 2021-07-23 18:37+0000\n"
 "Last-Translator: Sol Fisher Romanoff <sol@solfisher.com>\n"
-"Language-Team: Hebrew <https://hosted.weblate.org/projects/tenacity/tenacity/"
-"he/>\n"
+"Language-Team: Hebrew <https://hosted.weblate.org/projects/tenacity/tenacity/he/>\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -787,6 +786,13 @@ msgstr ":מיוחדות תודות"
 msgid "%s website: "
 msgstr "Audacity ריצה ראשונה של"
 
+#. i18n-hint Tenacity's name substitutes for first and third %s,
+#. and a "copyright" symbol for the second
+#: src/AboutDialog.cpp
+#, c-format
+msgid "%s software is copyright %s 1999-2021 %s Team."
+msgstr ""
+
 #. i18n-hint Tenacity's name substitutes for %s
 #: src/AboutDialog.cpp
 #, c-format
@@ -1266,8 +1272,7 @@ msgstr "!אין זיכרון פנוי"
 
 #: src/AudioIO.cpp
 msgid "Automated Recording Level Adjustment stopped. It was not possible to optimize it more. Still too high."
-msgstr ""
-".כוונון עוצמת כניסה אוטומטית הופסקה. לא ניתן למטב יותר. עדיין הרמה גבוהה מדי"
+msgstr ".כוונון עוצמת כניסה אוטומטית הופסקה. לא ניתן למטב יותר. עדיין הרמה גבוהה מדי"
 
 #: src/AudioIO.cpp
 #, c-format
@@ -1276,8 +1281,7 @@ msgstr ".%f כוונון עוצמת כניסה אוטומטי הפחית לעו�
 
 #: src/AudioIO.cpp
 msgid "Automated Recording Level Adjustment stopped. It was not possible to optimize it more. Still too low."
-msgstr ""
-"כוונון עוצמת כניסה אוטומטי הופסקה. לא ניתן למטב יותר. הרמה עדיין נמוכה מדי."
+msgstr "כוונון עוצמת כניסה אוטומטי הופסקה. לא ניתן למטב יותר. הרמה עדיין נמוכה מדי."
 
 #: src/AudioIO.cpp
 #, c-format
@@ -1286,15 +1290,11 @@ msgstr ".%.2f כוונון עוצמת כניסה אוטומטית הגביר א�
 
 #: src/AudioIO.cpp
 msgid "Automated Recording Level Adjustment stopped. The total number of analyses has been exceeded without finding an acceptable volume. Still too high."
-msgstr ""
-"כוונון עוצמת כניסה אוטומטית הופסקה. חרג ממספר הנסיונות ולא התקבל רמת שמע "
-"תקינה. הרמה עדיין גבוהה מדי."
+msgstr "כוונון עוצמת כניסה אוטומטית הופסקה. חרג ממספר הנסיונות ולא התקבל רמת שמע תקינה. הרמה עדיין גבוהה מדי."
 
 #: src/AudioIO.cpp
 msgid "Automated Recording Level Adjustment stopped. The total number of analyses has been exceeded without finding an acceptable volume. Still too low."
-msgstr ""
-"כוונון עוצמת כניסה אוטומטית הופסקה. חרג ממספר הנסיונות ולא התקבל רמת שמע "
-"תקינה. הרמה עדיין נמוכה מדי."
+msgstr "כוונון עוצמת כניסה אוטומטית הופסקה. חרג ממספר הנסיונות ולא התקבל רמת שמע תקינה. הרמה עדיין נמוכה מדי."
 
 #: src/AudioIO.cpp
 #, c-format
@@ -2235,8 +2235,7 @@ msgid ""
 msgstr ""
 "כעת הפרוייקט הוא עצמאי, ואינו תלוי באף קובץ אודיו חיצוני.\n"
 "\n"
-"אם תשנה את הפרוייקט למצב תלות חיצוני או שתייבא קבצים, יפסיק להיות פרוייקט "
-"עצמאי, ושמירתו ללא העתקת הקבצים יגרום לאיבוד מידע."
+"אם תשנה את הפרוייקט למצב תלות חיצוני או שתייבא קבצים, יפסיק להיות פרוייקט עצמאי, ושמירתו ללא העתקת הקבצים יגרום לאיבוד מידע."
 
 #: src/Dependencies.cpp
 msgid "Dependency Check"
@@ -3482,15 +3481,11 @@ msgstr "%d :קצב בפועל"
 msgid ""
 "Error opening sound device.\n"
 "Try changing the audio host, playback device and the project sample rate."
-msgstr ""
-"Error while opening sound device. Please check the output device settings "
-"and the project sample rate."
+msgstr "Error while opening sound device. Please check the output device settings and the project sample rate."
 
 #: src/ProjectAudioManager.cpp src/menus/TransportMenus.cpp
 msgid "The tracks selected for recording must all have the same sampling rate"
-msgstr ""
-".בכדי לצייר את הספקטרום, כלל הרצועות הנבחרות חייבות להיות בעלות אותו קצב "
-"דגימה"
+msgstr ".בכדי לצייר את הספקטרום, כלל הרצועות הנבחרות חייבות להיות בעלות אותו קצב דגימה"
 
 #: src/ProjectAudioManager.cpp src/menus/TransportMenus.cpp
 msgid "Mismatched Sampling Rates"
@@ -3692,6 +3687,11 @@ msgstr ""
 #: src/ProjectFileIO.cpp src/menus/WindowMenus.cpp
 msgid "<untitled>"
 msgstr "<ללא שם>"
+
+#: src/ProjectFileIO.cpp
+#, c-format
+msgid "[Project %02i] "
+msgstr ""
 
 #: src/ProjectFileIO.cpp
 msgid "Failed to open the project's database"
@@ -7655,9 +7655,7 @@ msgstr ""
 
 #: src/effects/Equalization.cpp
 msgid "To apply Equalization, all selected tracks must have the same sample rate."
-msgstr ""
-".בכדי לצייר את הספקטרום, כלל הרצועות הנבחרות חייבות להיות בעלות אותו קצב "
-"דגימה"
+msgstr ".בכדי לצייר את הספקטרום, כלל הרצועות הנבחרות חייבות להיות בעלות אותו קצב דגימה"
 
 #: src/effects/Equalization.cpp
 msgid "Track sample rate is too low for this effect."
@@ -8785,9 +8783,7 @@ msgstr ""
 
 #: src/effects/ScienFilter.cpp
 msgid "To apply a filter, all selected tracks must have the same sample rate."
-msgstr ""
-".בכדי לצייר את הספקטרום, כלל הרצועות הנבחרות חייבות להיות בעלות אותו קצב "
-"דגימה"
+msgstr ".בכדי לצייר את הספקטרום, כלל הרצועות הנבחרות חייבות להיות בעלות אותו קצב דגימה"
 
 #: src/effects/ScienFilter.cpp
 msgid "&Filter Type:"
@@ -9732,9 +9728,7 @@ msgstr ""
 
 #: src/effects/vamp/VampEffect.cpp
 msgid "Sorry, Vamp Plug-ins cannot be run on stereo tracks where the individual channels of the track do not match."
-msgstr ""
-".מוספים לא יכולים להתבצע עבור ערוצי סטריאו כאשר הערוצים של הרצועה אינם "
-"מתואמים Vamp מצטער, אפקטי"
+msgstr ".מוספים לא יכולים להתבצע עבור ערוצי סטריאו כאשר הערוצים של הרצועה אינם מתואמים Vamp מצטער, אפקטי"
 
 #: src/effects/vamp/VampEffect.cpp
 msgid "Sorry, failed to load Vamp Plug-in."
@@ -9798,8 +9792,7 @@ msgid ""
 msgstr ""
 ".%s את הקובץ %s הינך מתעתד לשמור תחת השם.\n"
 "\n"
-".ומספר תוכנות לא יוכלו לפתוח קבצים בעלי סיומת לא סטנדרטית ,%s-בדרך כלל קבצים "
-"אלו מסתימים ב\n"
+".ומספר תוכנות לא יוכלו לפתוח קבצים בעלי סיומת לא סטנדרטית ,%s-בדרך כלל קבצים אלו מסתימים ב\n"
 "\n"
 "?האם אתה בטוח ברצונך לשמור את הקובץ בשם זה"
 

@@ -9,14 +9,12 @@ msgstr ""
 "POT-Creation-Date: 2021-07-20 03:55-0400\n"
 "PO-Revision-Date: 2021-07-23 02:53+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Welsh <https://hosted.weblate.org/projects/tenacity/tenacity/"
-"cy/>\n"
+"Language-Team: Welsh <https://hosted.weblate.org/projects/tenacity/tenacity/cy/>\n"
 "Language: cy\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=6; plural=(n==0) ? 0 : (n==1) ? 1 : (n==2) ? 2 : "
-"(n==3) ? 3 :(n==6) ? 4 : 5;\n"
+"Plural-Forms: nplurals=6; plural=(n==0) ? 0 : (n==1) ? 1 : (n==2) ? 2 : (n==3) ? 3 :(n==6) ? 4 : 5;\n"
 "X-Generator: Weblate 4.7.2-dev\n"
 "X-Poedit-Language: Cymraeg\n"
 "X-Poedit-Country: Cymru\n"
@@ -789,6 +787,13 @@ msgstr "Diolchiadau arbennig:"
 #, c-format
 msgid "%s website: "
 msgstr "Rhedeiad Cyntaf Audacity"
+
+#. i18n-hint Tenacity's name substitutes for first and third %s,
+#. and a "copyright" symbol for the second
+#: src/AboutDialog.cpp
+#, c-format
+msgid "%s software is copyright %s 1999-2021 %s Team."
+msgstr ""
 
 #. i18n-hint Tenacity's name substitutes for %s
 #: src/AboutDialog.cpp
@@ -2596,8 +2601,7 @@ msgstr "I blotio'r sbectrwm, rhaid i bob trac dewisiedig fod o'r un graddfa samp
 #: src/FreqWindow.cpp
 #, c-format
 msgid "Too much audio was selected. Only the first %.1f seconds of audio will be analyzed."
-msgstr ""
-"Dewiswyd gormod o sain. Dim ond y %.1f eiliad o sain gaith ei ddadansoddi."
+msgstr "Dewiswyd gormod o sain. Dim ond y %.1f eiliad o sain gaith ei ddadansoddi."
 
 #: src/FreqWindow.cpp
 msgid "Not enough data selected."
@@ -3443,14 +3447,11 @@ msgstr ""
 msgid ""
 "Error opening sound device.\n"
 "Try changing the audio host, playback device and the project sample rate."
-msgstr ""
-"Gwall wrth agor y ddyfais sain. Gwiriwch osodiadau'r ddyfais allbwn a "
-"graddfa samplo y cywaith."
+msgstr "Gwall wrth agor y ddyfais sain. Gwiriwch osodiadau'r ddyfais allbwn a graddfa samplo y cywaith."
 
 #: src/ProjectAudioManager.cpp src/menus/TransportMenus.cpp
 msgid "The tracks selected for recording must all have the same sampling rate"
-msgstr ""
-"I blotio'r sbectrwm, rhaid i bob trac dewisiedig fod o'r un graddfa samplo."
+msgstr "I blotio'r sbectrwm, rhaid i bob trac dewisiedig fod o'r un graddfa samplo."
 
 #: src/ProjectAudioManager.cpp src/menus/TransportMenus.cpp
 msgid "Mismatched Sampling Rates"
@@ -3649,6 +3650,11 @@ msgstr ""
 
 #: src/ProjectFileIO.cpp src/menus/WindowMenus.cpp
 msgid "<untitled>"
+msgstr ""
+
+#: src/ProjectFileIO.cpp
+#, c-format
+msgid "[Project %02i] "
 msgstr ""
 
 #: src/ProjectFileIO.cpp
@@ -7594,8 +7600,7 @@ msgstr ""
 
 #: src/effects/Equalization.cpp
 msgid "To apply Equalization, all selected tracks must have the same sample rate."
-msgstr ""
-"I blotio'r sbectrwm, rhaid i bob trac dewisiedig fod o'r un graddfa samplo."
+msgstr "I blotio'r sbectrwm, rhaid i bob trac dewisiedig fod o'r un graddfa samplo."
 
 #: src/effects/Equalization.cpp
 msgid "Track sample rate is too low for this effect."
@@ -8124,8 +8129,7 @@ msgstr ""
 
 #: src/effects/NoiseReduction.cpp
 msgid "All noise profile data must have the same sample rate."
-msgstr ""
-"I blotio'r sbectrwm, rhaid i bob trac dewisiedig fod o'r un graddfa samplo."
+msgstr "I blotio'r sbectrwm, rhaid i bob trac dewisiedig fod o'r un graddfa samplo."
 
 #: src/effects/NoiseReduction.cpp
 msgid "The sample rate of the noise profile must match that of the sound to be processed."
@@ -8712,8 +8716,7 @@ msgstr ""
 
 #: src/effects/ScienFilter.cpp
 msgid "To apply a filter, all selected tracks must have the same sample rate."
-msgstr ""
-"I blotio'r sbectrwm, rhaid i bob trac dewisiedig fod o'r un graddfa samplo."
+msgstr "I blotio'r sbectrwm, rhaid i bob trac dewisiedig fod o'r un graddfa samplo."
 
 #: src/effects/ScienFilter.cpp
 msgid "&Filter Type:"
@@ -9475,9 +9478,7 @@ msgstr "Nyquist"
 
 #: src/effects/nyquist/Nyquist.cpp
 msgid "Sorry, cannot apply effect on stereo tracks where the tracks don't match."
-msgstr ""
-"Mae'n ddrwg gen i, nid yw'n bosib cyflawni effeithiau pan fo traciau unigol "
-"y sianeli ddim yn cydweddu."
+msgstr "Mae'n ddrwg gen i, nid yw'n bosib cyflawni effeithiau pan fo traciau unigol y sianeli ddim yn cydweddu."
 
 #: src/effects/nyquist/Nyquist.cpp
 #, c-format
@@ -9730,21 +9731,15 @@ msgstr ""
 
 #: src/export/Export.cpp
 msgid "Your tracks will be mixed down and exported as one mono file."
-msgstr ""
-"Bydd eich traciau yn cael eu cymysgu i ddau sianel stereo yn y ffeil "
-"allforedig."
+msgstr "Bydd eich traciau yn cael eu cymysgu i ddau sianel stereo yn y ffeil allforedig."
 
 #: src/export/Export.cpp
 msgid "Your tracks will be mixed down and exported as one stereo file."
-msgstr ""
-"Bydd eich traciau yn cael eu cymysgu i ddau sianel stereo yn y ffeil "
-"allforedig."
+msgstr "Bydd eich traciau yn cael eu cymysgu i ddau sianel stereo yn y ffeil allforedig."
 
 #: src/export/Export.cpp
 msgid "Your tracks will be mixed down to one exported file according to the encoder settings."
-msgstr ""
-"Bydd eich traciau yn cael eu cymysgu i ddau sianel stereo yn y ffeil "
-"allforedig."
+msgstr "Bydd eich traciau yn cael eu cymysgu i ddau sianel stereo yn y ffeil allforedig."
 
 #: src/export/Export.cpp
 msgid "Advanced Mixing Options"
@@ -11521,9 +11516,7 @@ msgstr "Hyd annilys yn y ffeil LOF."
 
 #: src/import/ImportLOF.cpp
 msgid "MIDI tracks cannot be offset individually, only audio files can be."
-msgstr ""
-"Ni ellir atredu traciau MIDI yn unigol, dim ond â thraciau sain mae posib "
-"gwneud hyn."
+msgstr "Ni ellir atredu traciau MIDI yn unigol, dim ond â thraciau sain mae posib gwneud hyn."
 
 #. i18n-hint: You do not need to translate "LOF"
 #: src/import/ImportLOF.cpp
@@ -14926,9 +14919,7 @@ msgstr ""
 
 #: src/prefs/ModulePrefs.cpp
 msgid "Changes to these settings only take effect when Audacity starts up."
-msgstr ""
-"Ni fydd newidiadau i'r ffolder dros dro yn cael effaith tan ailgychwyn "
-"Audacity"
+msgstr "Ni fydd newidiadau i'r ffolder dros dro yn cael effaith tan ailgychwyn Audacity"
 
 #: src/prefs/ModulePrefs.cpp
 msgid "Ask"
@@ -14960,8 +14951,7 @@ msgstr "Hoffterau Audacity"
 
 #: src/prefs/MousePrefs.cpp
 msgid "Mouse Bindings (default values, not configurable)"
-msgstr ""
-"Rhwymiadau'r Llygoden (gwerthoedd rhagosodedig,  nid yw'n ffurfweddadwy)"
+msgstr "Rhwymiadau'r Llygoden (gwerthoedd rhagosodedig,  nid yw'n ffurfweddadwy)"
 
 #: src/prefs/MousePrefs.cpp
 msgid "Tool"
@@ -16511,9 +16501,7 @@ msgstr "I Lawr Wythfed"
 #: src/tracks/playabletrack/notetrack/ui/NoteTrackVZoomHandle.cpp
 #: src/tracks/playabletrack/wavetrack/ui/WaveTrackVZoomHandle.cpp
 msgid "Click to vertically zoom in. Shift-click to zoom out. Drag to specify a zoom region."
-msgstr ""
-"Clico i chywddo yn fertigol,  Shift-Clic i bellhau, Llusgo i greu ardal "
-"chwyddo benodol."
+msgstr "Clico i chywddo yn fertigol,  Shift-Clic i bellhau, Llusgo i greu ardal chwyddo benodol."
 
 #: src/tracks/playabletrack/notetrack/ui/NoteTrackVZoomHandle.cpp
 #: src/tracks/playabletrack/wavetrack/ui/WaveTrackVZoomHandle.cpp

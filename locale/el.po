@@ -10,8 +10,7 @@ msgstr ""
 "POT-Creation-Date: 2021-07-20 03:55-0400\n"
 "PO-Revision-Date: 2021-07-23 02:56+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Greek <https://hosted.weblate.org/projects/tenacity/tenacity/"
-"el/>\n"
+"Language-Team: Greek <https://hosted.weblate.org/projects/tenacity/tenacity/el/>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -791,6 +790,13 @@ msgstr "Ευχαριστούμε ιδιαίτερα:"
 #, c-format
 msgid "%s website: "
 msgstr "Ιστότοπος %s: "
+
+#. i18n-hint Tenacity's name substitutes for first and third %s,
+#. and a "copyright" symbol for the second
+#: src/AboutDialog.cpp
+#, c-format
+msgid "%s software is copyright %s 1999-2021 %s Team."
+msgstr ""
 
 #. i18n-hint Tenacity's name substitutes for %s
 #: src/AboutDialog.cpp
@@ -3597,8 +3603,7 @@ msgid ""
 "Try changing the audio host, playback device and the project sample rate."
 msgstr ""
 "Σφάλμα κατά το άνοιγμα της συσκευής ήχου.\n"
-"Δοκιμάστε να αλλάξετε τον δέκτη του ήχου, τη συσκευή αναπαραγωγής και τον "
-"ρυθμό δειγματοληψίας του έργου."
+"Δοκιμάστε να αλλάξετε τον δέκτη του ήχου, τη συσκευή αναπαραγωγής και τον ρυθμό δειγματοληψίας του έργου."
 
 #: src/ProjectAudioManager.cpp src/menus/TransportMenus.cpp
 msgid "The tracks selected for recording must all have the same sampling rate"
@@ -3837,11 +3842,9 @@ msgid ""
 "\n"
 "Select 'Help > Diagnostics > Show Log...' to see details."
 msgstr ""
-"Ο έλεγχος έργου βρήκε αντιφάσεις στο αρχείο κατά τη διάρκεια της αυτόματης "
-"ανάκτησης.\n"
+"Ο έλεγχος έργου βρήκε αντιφάσεις στο αρχείο κατά τη διάρκεια της αυτόματης ανάκτησης.\n"
 "\n"
-"Επιλέξτε 'Βοήθεια > Διαγνωστικά > Εμφάνιση ημερολογίου...' για να δείτε "
-"λεπτομέρειες."
+"Επιλέξτε 'Βοήθεια > Διαγνωστικά > Εμφάνιση ημερολογίου...' για να δείτε λεπτομέρειες."
 
 #: src/ProjectFSCK.cpp
 msgid "Warning: Problems in Automatic Recovery"
@@ -3850,6 +3853,11 @@ msgstr "Προειδοποίηση: Προβλήματα στην αυτόματ
 #: src/ProjectFileIO.cpp src/menus/WindowMenus.cpp
 msgid "<untitled>"
 msgstr "<χωρίς όνομα>"
+
+#: src/ProjectFileIO.cpp
+#, c-format
+msgid "[Project %02i] "
+msgstr ""
 
 #: src/ProjectFileIO.cpp
 msgid "Failed to open the project's database"
@@ -4148,8 +4156,7 @@ msgid ""
 "\n"
 "%s"
 msgstr ""
-"Αδυναμία αφαίρεσης πληροφοριών αυτόματης αποθήκευσης, πιθανόν λόγω "
-"περιορισμένου χώρου\n"
+"Αδυναμία αφαίρεσης πληροφοριών αυτόματης αποθήκευσης, πιθανόν λόγω περιορισμένου χώρου\n"
 "στη συσκευή αποθήκευσης.\n"
 "\n"
 "%s"
@@ -4222,8 +4229,7 @@ msgid ""
 "\n"
 "Please select a different disk with more free space."
 msgstr ""
-"Το μέγεθος του έργου υπερβαίνει τον διαθέσιμο ελεύθερο χώρο στον δίσκο "
-"προορισμού.\n"
+"Το μέγεθος του έργου υπερβαίνει τον διαθέσιμο ελεύθερο χώρο στον δίσκο προορισμού.\n"
 "\n"
 "Παρακαλούμε, επιλέξτε έναν διαφορετικό δίσκο με περισσότερο ελεύθερο χώρο."
 
@@ -4241,8 +4247,7 @@ msgid ""
 "The project was not saved because the file name provided would overwrite another project.\n"
 "Please try again and select an original name."
 msgstr ""
-"Το έργο δεν αποθηκεύτηκε επειδή το παρεχόμενο όνομα αρχείου θα "
-"αντικαθιστούσε ένα άλλο έργο.\n"
+"Το έργο δεν αποθηκεύτηκε επειδή το παρεχόμενο όνομα αρχείου θα αντικαθιστούσε ένα άλλο έργο.\n"
 "Παρακαλούμε δοκιμάστε ξανά και επιλέξτε να πρωτότυπο όνομα."
 
 #: src/ProjectFileManager.cpp
@@ -4287,8 +4292,7 @@ msgid ""
 "The project was not saved because the selected project is open in another window.\n"
 "Please try again and select an original name."
 msgstr ""
-"Το έργο δεν αποθηκεύτηκε, επειδή το επιλεγμένο έργο είναι ανοικτό σε άλλο "
-"παράθυρο.\n"
+"Το έργο δεν αποθηκεύτηκε, επειδή το επιλεγμένο έργο είναι ανοικτό σε άλλο παράθυρο.\n"
 "Παρακαλούμε, δοκιμάστε ξανά και επιλέξτε ένα πρωτότυπο όνομα."
 
 #: src/ProjectFileManager.cpp
@@ -4301,8 +4305,7 @@ msgid ""
 "Saving a copy must not overwrite an existing saved project.\n"
 "Please try again and select an original name."
 msgstr ""
-"Η αποθήκευση αντιγράφου δεν πρέπει να αντικαθιστά υφιστάμενο αποθηκευμένο "
-"έργο.\n"
+"Η αποθήκευση αντιγράφου δεν πρέπει να αντικαθιστά υφιστάμενο αποθηκευμένο έργο.\n"
 "Παρακαλούμε δοκιμάστε ξανά και επιλέξτε ένα πρωτότυπο όνομα."
 
 #: src/ProjectFileManager.cpp
@@ -4419,15 +4422,11 @@ msgid ""
 "\n"
 "Do you want to continue?"
 msgstr ""
-"Η συμπύκνωση αυτού του έργου θα απελευθερώσει χώρο στον δίσκο αφαιρώντας μη "
-"χρησιμοποιούμενα bytes μέσα στο αρχείο.\n"
+"Η συμπύκνωση αυτού του έργου θα απελευθερώσει χώρο στον δίσκο αφαιρώντας μη χρησιμοποιούμενα bytes μέσα στο αρχείο.\n"
 "\n"
-"Υπάρχει %s ελεύθερου χώρου στον δίσκο και αυτό το έργο χρησιμοποιεί τώρα %s."
+"Υπάρχει %s ελεύθερου χώρου στον δίσκο και αυτό το έργο χρησιμοποιεί τώρα %s.\n"
 "\n"
-"\n"
-"Εάν συνεχίσετε, το τρέχον ιστορικό αναιρέσεων/ακύρωσης αναιρέσεων και τα "
-"περιεχόμενα του προχείρου θα απορριφθούν και θα ανακτήσετε περίπου %s χώρο "
-"δίσκου.\n"
+"Εάν συνεχίσετε, το τρέχον ιστορικό αναιρέσεων/ακύρωσης αναιρέσεων και τα περιεχόμενα του προχείρου θα απορριφθούν και θα ανακτήσετε περίπου %s χώρο δίσκου.\n"
 "\n"
 "Θέλετε να συνεχίσετε;"
 
@@ -4806,8 +4805,7 @@ msgid ""
 "Sequence has block file exceeding maximum %s samples per block.\n"
 "Truncating to this maximum length."
 msgstr ""
-"Η ακολουθία έχει αρχείο μπλοκ που ξεπερνά το μέγιστο %s δειγμάτων ανά μπλοκ."
-"\n"
+"Η ακολουθία έχει αρχείο μπλοκ που ξεπερνά το μέγιστο %s δειγμάτων ανά μπλοκ.\n"
 "Περικόπτεται σε αυτό το μέγιστο μήκος."
 
 #: src/Sequence.cpp
@@ -4892,9 +4890,7 @@ msgstr "Σχόλια"
 
 #: src/Tags.cpp
 msgid "Use arrow keys (or ENTER key after editing) to navigate fields."
-msgstr ""
-"Χρησιμοποιήστε τα βελάκια (ή το πλήκτρο εισαγωγής μετά την επεξεργασία) για "
-"να περιηγηθείτε στα πεδία."
+msgstr "Χρησιμοποιήστε τα βελάκια (ή το πλήκτρο εισαγωγής μετά την επεξεργασία) για να περιηγηθείτε στα πεδία."
 
 #: src/Tags.cpp
 msgid "Tag"
@@ -4954,9 +4950,7 @@ msgstr "Επαναφορά μουσικών ειδών"
 
 #: src/Tags.cpp
 msgid "Are you sure you want to reset the genre list to defaults?"
-msgstr ""
-"Είστε σίγουροι ότι θέλετε να επαναφέρετε την λίστα των ειδών στις "
-"προεπιλογές;"
+msgstr "Είστε σίγουροι ότι θέλετε να επαναφέρετε την λίστα των ειδών στις προεπιλογές;"
 
 #: src/Tags.cpp
 msgid "Unable to open genre file."
@@ -5227,8 +5221,7 @@ msgid ""
 "Planned recording duration:   %s\n"
 "Recording time remaining on disk:   %s"
 msgstr ""
-"Μπορεί να μην έχετε αρκετό ελεύθερο χώρο δίσκου για να ολοκληρώσετε αυτήν "
-"την ηχογράφηση με χρονοδιακόπτη, με βάση τις τρέχουσες ρυθμίσεις σας.\n"
+"Μπορεί να μην έχετε αρκετό ελεύθερο χώρο δίσκου για να ολοκληρώσετε αυτήν την ηχογράφηση με χρονοδιακόπτη, με βάση τις τρέχουσες ρυθμίσεις σας.\n"
 "\n"
 "Θέλετε να συνεχίσετε;\n"
 "\n"
@@ -5537,9 +5530,7 @@ msgstr " Ενεργοποιημένη επιλογή"
 
 #: src/TrackPanelResizeHandle.cpp
 msgid "Click and drag to adjust relative size of stereo tracks, double-click to make heights equal"
-msgstr ""
-"Πατήστε και σύρετε για να ρυθμίσετε το σχετικό μέγεθος των κομματιών στέρεο, "
-"διπλοπατήστε για να κάνετε τα ύψη ίσα"
+msgstr "Πατήστε και σύρετε για να ρυθμίσετε το σχετικό μέγεθος των κομματιών στέρεο, διπλοπατήστε για να κάνετε τα ύψη ίσα"
 
 #: src/TrackPanelResizeHandle.cpp
 msgid "Click and drag to resize the track."
@@ -5654,8 +5645,7 @@ msgstr "Δεν υπάρχει αρκετός διαθέσιμος χώρος γ�
 #: src/blockfile/NotYetAvailableException.cpp
 #, c-format
 msgid "This operation cannot be done until importation of %s completes."
-msgstr ""
-"Αυτή η λειτουργία δεν μπορεί να γίνει μέχρι να ολοκληρωθεί η εισαγωγή του %s."
+msgstr "Αυτή η λειτουργία δεν μπορεί να γίνει μέχρι να ολοκληρωθεί η εισαγωγή του %s."
 
 #: src/commands/AudacityCommand.cpp src/effects/Effect.cpp
 #: src/effects/nyquist/Nyquist.cpp src/prefs/PrefsPanel.cpp plug-ins/beat.ny
@@ -5669,8 +5659,7 @@ msgid ""
 "\n"
 "%s"
 msgstr ""
-"%s: Αδυναμία φόρτωσης των παρακάτω ρυθμίσεων. Θα χρησιμοποιηθούν οι "
-"προεπιλεγμένες ρυθμίσεις.\n"
+"%s: Αδυναμία φόρτωσης των παρακάτω ρυθμίσεων. Θα χρησιμοποιηθούν οι προεπιλεγμένες ρυθμίσεις.\n"
 "\n"
 "%s"
 
@@ -5731,10 +5720,7 @@ msgstr ""
 
 #: src/commands/CommandManager.cpp
 msgid "The following commands have had their shortcuts removed, because their default shortcut is new or changed, and is the same shortcut that you have assigned to another command."
-msgstr ""
-"Οι παρακάτω εντολές έχουν αφαιρεθεί από τις συντομεύσεις τους, επειδή η "
-"προεπιλεγμένη συντόμευση είναι νέα ή αλλαγμένη και είναι η ίδια συντόμευση "
-"που έχετε αποδώσει σε άλλη εντολή."
+msgstr "Οι παρακάτω εντολές έχουν αφαιρεθεί από τις συντομεύσεις τους, επειδή η προεπιλεγμένη συντόμευση είναι νέα ή αλλαγμένη και είναι η ίδια συντόμευση που έχετε αποδώσει σε άλλη εντολή."
 
 #: src/commands/CommandManager.cpp
 msgid "Shortcuts have been removed"
@@ -6485,27 +6471,21 @@ msgstr "Αυτόματη μείωση έντασης (Auto Duck)"
 
 #: src/effects/AutoDuck.cpp
 msgid "Reduces (ducks) the volume of one or more tracks whenever the volume of a specified \"control\" track reaches a particular level"
-msgstr ""
-"Μειώνει την ένταση ενός ή περισσότερων κομματιών όταν η ένταση ενός "
-"καθορισμένου \"ελέγχου\" του κομματιού φτάνει σε ένα συγκεκριμένο επίπεδο"
+msgstr "Μειώνει την ένταση ενός ή περισσότερων κομματιών όταν η ένταση ενός καθορισμένου \"ελέγχου\" του κομματιού φτάνει σε ένα συγκεκριμένο επίπεδο"
 
 #. i18n-hint: Auto duck is the name of an effect that 'ducks' (reduces the volume)
 #. * of the audio automatically when there is sound on another track.  Not as
 #. * in 'Donald-Duck'!
 #: src/effects/AutoDuck.cpp
 msgid "You selected a track which does not contain audio. AutoDuck can only process audio tracks."
-msgstr ""
-"Επιλέξατε ένα κομμάτι που δεν περιέχει ήχο. Η αυτόματη μείωση έντασης "
-"(AutoDuck) μπορεί να επεξεργαστεί μόνο κομμάτια ήχου."
+msgstr "Επιλέξατε ένα κομμάτι που δεν περιέχει ήχο. Η αυτόματη μείωση έντασης (AutoDuck) μπορεί να επεξεργαστεί μόνο κομμάτια ήχου."
 
 #. i18n-hint: Auto duck is the name of an effect that 'ducks' (reduces the volume)
 #. * of the audio automatically when there is sound on another track.  Not as
 #. * in 'Donald-Duck'!
 #: src/effects/AutoDuck.cpp
 msgid "Auto Duck needs a control track which must be placed below the selected track(s)."
-msgstr ""
-"Η αυτόματη μείωση έντασης χρειάζεται ένα κομμάτι ελέγχου που πρέπει να "
-"τοποθετηθεί κάτω από τα επιλεγμένα κομμάτια."
+msgstr "Η αυτόματη μείωση έντασης χρειάζεται ένα κομμάτι ελέγχου που πρέπει να τοποθετηθεί κάτω από τα επιλεγμένα κομμάτια."
 
 #: src/effects/AutoDuck.cpp src/effects/TruncSilence.cpp
 msgid "db"
@@ -6864,14 +6844,11 @@ msgstr "Απομάκρυνση των πατημάτων"
 
 #: src/effects/ClickRemoval.cpp
 msgid "Click Removal is designed to remove clicks on audio tracks"
-msgstr ""
-"Η αφαίρεση πατήματος (κλικ) είναι σχεδιασμένη να αφαιρεί τα πατήματα (κλικ) "
-"σε ηχητικά κομμάτια"
+msgstr "Η αφαίρεση πατήματος (κλικ) είναι σχεδιασμένη να αφαιρεί τα πατήματα (κλικ) σε ηχητικά κομμάτια"
 
 #: src/effects/ClickRemoval.cpp
 msgid "Algorithm not effective on this audio. Nothing changed."
-msgstr ""
-"Ο αλγόριθμος δεν είναι αποτελεσματικός σε αυτόν τον ήχο. Τίποτα δεν άλλαξε."
+msgstr "Ο αλγόριθμος δεν είναι αποτελεσματικός σε αυτόν τον ήχο. Τίποτα δεν άλλαξε."
 
 #: src/effects/ClickRemoval.cpp
 #, c-format
@@ -7044,9 +7021,7 @@ msgstr ""
 #. i18n-hint: RMS abbreviates root mean square, a certain averaging method
 #: src/effects/Contrast.cpp
 msgid "Contrast Analyzer, for measuring RMS volume differences between two selections of audio."
-msgstr ""
-"Ο αναλυτής αντίθεσης, για τη μέτρηση διαφορών έντασης RMS μεταξύ δύο "
-"επιλογών του ήχου."
+msgstr "Ο αναλυτής αντίθεσης, για τη μέτρηση διαφορών έντασης RMS μεταξύ δύο επιλογών του ήχου."
 
 #. i18n-hint noun
 #: src/effects/Contrast.cpp src/effects/ToneGen.cpp
@@ -7530,9 +7505,7 @@ msgstr "Τόνοι DTMF"
 
 #: src/effects/DtmfGen.cpp
 msgid "Generates dual-tone multi-frequency (DTMF) tones like those produced by the keypad on telephones"
-msgstr ""
-"Δημιουργεί διπλοτονικούς τόνους πολυσυχνότητας (DTMF) όπως αυτοί που "
-"παράγονται στο πληκτρολόγιο των τηλεφώνων"
+msgstr "Δημιουργεί διπλοτονικούς τόνους πολυσυχνότητας (DTMF) όπως αυτοί που παράγονται στο πληκτρολόγιο των τηλεφώνων"
 
 #: src/effects/DtmfGen.cpp
 msgid ""
@@ -7716,8 +7689,7 @@ msgstr ""
 "\n"
 "%s\n"
 "\n"
-"Περισσότερες πληροφορίες μπορεί να είναι διαθέσιμες στο 'Βοήθεια > "
-"Διαγνωστικά > Εμφάνιση ημερολογίου'"
+"Περισσότερες πληροφορίες μπορεί να είναι διαθέσιμες στο 'Βοήθεια > Διαγνωστικά > Εμφάνιση ημερολογίου'"
 
 #: src/effects/EffectManager.cpp
 msgid "Effect failed to initialize"
@@ -7736,8 +7708,7 @@ msgstr ""
 "\n"
 "%s\n"
 "\n"
-"Περισσότερες πληροφορίες μπορεί να είναι διαθέσιμες στο 'Βοήθεια > "
-"Διαγνωστικά > Εμφάνιση ημερολογίου'"
+"Περισσότερες πληροφορίες μπορεί να είναι διαθέσιμες στο 'Βοήθεια > Διαγνωστικά > Εμφάνιση ημερολογίου'"
 
 #: src/effects/EffectManager.cpp
 msgid "Command failed to initialize"
@@ -8022,10 +7993,8 @@ msgid ""
 "To use this filter curve in a macro, please choose a new name for it.\n"
 "Choose the 'Save/Manage Curves...' button and rename the 'unnamed' curve, then use that one."
 msgstr ""
-"Για να χρησιμοποιήσετε αυτήν την καμπύλη φίλτρου σε μακροεντολή, παρακαλούμε "
-"επιλέξτε ένα νέο όνομα για αυτήν.\n"
-"Επιλέξτε το πλήκτρο 'Αποθήκευση/Διαχείριση καμπυλών...' και μετονομάστε την "
-"'ανώνυμη' καμπύλη, έπειτα χρησιμοποιήστε την."
+"Για να χρησιμοποιήσετε αυτήν την καμπύλη φίλτρου σε μακροεντολή, παρακαλούμε επιλέξτε ένα νέο όνομα για αυτήν.\n"
+"Επιλέξτε το πλήκτρο 'Αποθήκευση/Διαχείριση καμπυλών...' και μετονομάστε την 'ανώνυμη' καμπύλη, έπειτα χρησιμοποιήστε την."
 
 #: src/effects/Equalization.cpp
 msgid "Filter Curve EQ needs a different name"
@@ -8033,14 +8002,11 @@ msgstr "Η καμπύλη φίλτρου EQ χρειάζεται διαφορε�
 
 #: src/effects/Equalization.cpp
 msgid "To apply Equalization, all selected tracks must have the same sample rate."
-msgstr ""
-"Για να εφαρμοστεί εξισορρόπηση, όλα τα επιλεγμένα κομμάτια πρέπει να έχουν "
-"τον ίδιο ρυθμό δειγματοληψίας."
+msgstr "Για να εφαρμοστεί εξισορρόπηση, όλα τα επιλεγμένα κομμάτια πρέπει να έχουν τον ίδιο ρυθμό δειγματοληψίας."
 
 #: src/effects/Equalization.cpp
 msgid "Track sample rate is too low for this effect."
-msgstr ""
-"Ο ρυθμός δειγμάτων του κομματιού είναι υπερβολικά χαμηλός για αυτό το εφέ."
+msgstr "Ο ρυθμός δειγμάτων του κομματιού είναι υπερβολικά χαμηλός για αυτό το εφέ."
 
 #: src/effects/Equalization.cpp
 msgid "Effect Unavailable"
@@ -8403,8 +8369,7 @@ msgstr "Αντιστροφή"
 
 #: src/effects/Invert.cpp
 msgid "Flips the audio samples upside-down, reversing their polarity"
-msgstr ""
-"Αντιστρέφει τα ηχητικά δείγματα ανάποδα, αντιστρέφοντας την πολικότητά τους"
+msgstr "Αντιστρέφει τα ηχητικά δείγματα ανάποδα, αντιστρέφοντας την πολικότητά τους"
 
 #: src/effects/LoadEffects.cpp
 msgid "Builtin Effects"
@@ -8554,13 +8519,11 @@ msgstr "Μείωση θορύβου"
 
 #: src/effects/NoiseReduction.cpp
 msgid "Removes background noise such as fans, tape noise, or hums"
-msgstr ""
-"Αφαιρεί τον θόρυβο παρασκηνίου όπως ανεμιστήρες, θόρυβος ταινίας, ή βουητά"
+msgstr "Αφαιρεί τον θόρυβο παρασκηνίου όπως ανεμιστήρες, θόρυβος ταινίας, ή βουητά"
 
 #: src/effects/NoiseReduction.cpp
 msgid "Steps per block are too few for the window types."
-msgstr ""
-"Τα βήματα ανά μπλοκ είναι υπερβολικά λίγα για τους τύπους του παραθύρου."
+msgstr "Τα βήματα ανά μπλοκ είναι υπερβολικά λίγα για τους τύπους του παραθύρου."
 
 #: src/effects/NoiseReduction.cpp
 msgid "Steps per block cannot exceed the window size."
@@ -8568,8 +8531,7 @@ msgstr "Τα βήματα ανά μπλοκ δεν μπορούν να ξεπε�
 
 #: src/effects/NoiseReduction.cpp
 msgid "Median method is not implemented for more than four steps per window."
-msgstr ""
-"Η μέθοδος διαμέσου δεν εφαρμόζεται για πάνω από τέσσερα βήματα ανά παράθυρο."
+msgstr "Η μέθοδος διαμέσου δεν εφαρμόζεται για πάνω από τέσσερα βήματα ανά παράθυρο."
 
 #: src/effects/NoiseReduction.cpp
 msgid "You must specify the same window size for steps 1 and 2."
@@ -8577,21 +8539,15 @@ msgstr "Πρέπει να ορίσετε το ίδιο μέγεθος παραθ
 
 #: src/effects/NoiseReduction.cpp
 msgid "Warning: window types are not the same as for profiling."
-msgstr ""
-"Προειδοποίηση: οι τύποι παραθύρων δεν είναι οι ίδιοι όπως στη δημιουργία "
-"κατατομής (προφίλ)."
+msgstr "Προειδοποίηση: οι τύποι παραθύρων δεν είναι οι ίδιοι όπως στη δημιουργία κατατομής (προφίλ)."
 
 #: src/effects/NoiseReduction.cpp
 msgid "All noise profile data must have the same sample rate."
-msgstr ""
-"Όλα τα δεδομένα κατατομής (προφίλ) θορύβου πρέπει να έχουν τον ίδιο ρυθμό "
-"πρέπει έχουν τον ίδιο ρυθμό δειγματοληψίας."
+msgstr "Όλα τα δεδομένα κατατομής (προφίλ) θορύβου πρέπει να έχουν τον ίδιο ρυθμό πρέπει έχουν τον ίδιο ρυθμό δειγματοληψίας."
 
 #: src/effects/NoiseReduction.cpp
 msgid "The sample rate of the noise profile must match that of the sound to be processed."
-msgstr ""
-"Ο ρυθμός δειγματοληψίας της κατατομής (προφίλ) θορύβου πρέπει να συμφωνεί με "
-"αυτόν του ήχου που θα επεξεργαστεί."
+msgstr "Ο ρυθμός δειγματοληψίας της κατατομής (προφίλ) θορύβου πρέπει να συμφωνεί με αυτόν του ήχου που θα επεξεργαστεί."
 
 #: src/effects/NoiseReduction.cpp
 msgid "Selected noise profile is too short."
@@ -8670,8 +8626,7 @@ msgid ""
 "Select all of the audio you want filtered, choose how much noise you want\n"
 "filtered out, and then click 'OK' to reduce noise.\n"
 msgstr ""
-"Επιλέξτε όλον τον ήχο που θέλετε να φιλτράρετε, διαλέξτε πόσος θόρυβος "
-"θέλετε να\n"
+"Επιλέξτε όλον τον ήχο που θέλετε να φιλτράρετε, διαλέξτε πόσος θόρυβος θέλετε να\n"
 "αφαιρεθεί και πατήστε στο 'Εντάξει' για να μειωθεί ο θόρυβος.\n"
 
 #: src/effects/NoiseReduction.cpp src/effects/NoiseRemoval.cpp
@@ -8775,9 +8730,7 @@ msgstr "Αφαίρεση θορύβου"
 
 #: src/effects/NoiseRemoval.cpp
 msgid "Removes constant background noise such as fans, tape noise, or hums"
-msgstr ""
-"Αφαιρεί τον σταθερό θόρυβο παρασκηνίου όπως ανεμιστήρες, θόρυβος ταινίας, ή "
-"βουητά"
+msgstr "Αφαιρεί τον σταθερό θόρυβο παρασκηνίου όπως ανεμιστήρες, θόρυβος ταινίας, ή βουητά"
 
 #: src/effects/NoiseRemoval.cpp
 msgid ""
@@ -8882,8 +8835,7 @@ msgstr "Paulstretch"
 
 #: src/effects/Paulstretch.cpp
 msgid "Paulstretch is only for an extreme time-stretch or \"stasis\" effect"
-msgstr ""
-"Το Paulstretch είναι μόνο για ακραία επιμήκυνση χρόνου ή το εφέ \"στάση\""
+msgstr "Το Paulstretch είναι μόνο για ακραία επιμήκυνση χρόνου ή το εφέ \"στάση\""
 
 #. i18n-hint: This is how many times longer the sound will be, e.g. applying
 #. * the effect to a 1-second sample, with the default Stretch Factor of 10.0
@@ -9017,11 +8969,9 @@ msgid ""
 "\n"
 "Zoom in and select a tiny fraction of a second to repair."
 msgstr ""
-"Το εφέ επισκευής μπορεί να λειτουργήσει σε πολύ μικρά τμήματα κατεστραμμένου "
-"ήχου (μέχρι 128 δείγματα).\n"
+"Το εφέ επισκευής μπορεί να λειτουργήσει σε πολύ μικρά τμήματα κατεστραμμένου ήχου (μέχρι 128 δείγματα).\n"
 "\n"
-"Κάντε μεγέθυνση, και επιλέξτε κάποια εκατοστά του δευτερολέπτου για να "
-"επισκευαστούν."
+"Κάντε μεγέθυνση, και επιλέξτε κάποια εκατοστά του δευτερολέπτου για να επισκευαστούν."
 
 #: src/effects/Repair.cpp
 msgid ""
@@ -9031,11 +8981,9 @@ msgid ""
 "\n"
 "The more surrounding audio, the better it performs."
 msgstr ""
-"Εργασίες επισκευής χρησιμοποιώντας δεδομένα ήχου έξω από την περιοχή "
-"επιλογής.\n"
+"Εργασίες επισκευής χρησιμοποιώντας δεδομένα ήχου έξω από την περιοχή επιλογής.\n"
 "\n"
-"Παρακαλούμε επιλέξτε μια περιοχή που έχει σχετικό ήχο τουλάχιστον σε μια "
-"πλευρά του.\n"
+"Παρακαλούμε επιλέξτε μια περιοχή που έχει σχετικό ήχο τουλάχιστον σε μια πλευρά του.\n"
 "\n"
 "Όσο περισσότερος περιβάλλον ήχος, τόσο καλύτερα εκτελείται."
 
@@ -9208,9 +9156,7 @@ msgstr "Εκτελεί φιλτράρισμα IIR που προσομοιώνε�
 
 #: src/effects/ScienFilter.cpp
 msgid "To apply a filter, all selected tracks must have the same sample rate."
-msgstr ""
-"Για να εφαρμοστεί ένα φίλτρο, όλα τα επιλεγμένα κομμάτια πρέπει να έχουν τον "
-"ίδιο ρυθμό δειγματοληψίας."
+msgstr "Για να εφαρμοστεί ένα φίλτρο, όλα τα επιλεγμένα κομμάτια πρέπει να έχουν τον ίδιο ρυθμό δειγματοληψίας."
 
 #: src/effects/ScienFilter.cpp
 msgid "&Filter Type:"
@@ -9438,8 +9384,7 @@ msgstr "Τόνος"
 
 #: src/effects/ToneGen.cpp
 msgid "Generates an ascending or descending tone of one of four types"
-msgstr ""
-"Δημιουργεί έναν αυξανόμενο ή μειούμενο τόνο ενός από τους τέσσερις τύπους"
+msgstr "Δημιουργεί έναν αυξανόμενο ή μειούμενο τόνο ενός από τους τέσσερις τύπους"
 
 #: src/effects/ToneGen.cpp
 msgid "Generates a constant frequency tone of one of four types"
@@ -9487,15 +9432,11 @@ msgstr "Περικοπή σίγασης"
 
 #: src/effects/TruncSilence.cpp
 msgid "Automatically reduces the length of passages where the volume is below a specified level"
-msgstr ""
-"Μειώνει αυτόματα τη διάρκεια των τμημάτων όπου η ένταση είναι κάτω από ένα "
-"καθορισμένο επίπεδο"
+msgstr "Μειώνει αυτόματα τη διάρκεια των τμημάτων όπου η ένταση είναι κάτω από ένα καθορισμένο επίπεδο"
 
 #: src/effects/TruncSilence.cpp
 msgid "When truncating independently, there may only be one selected audio track in each Sync-Locked Track Group."
-msgstr ""
-"Κατά την ανεξάρτητη περικοπή, μπορεί να υπάρχει μόνο ένα επιλεγμένο κομμάτι "
-"ήχου σε κάθε ομάδα κομματιών με κλειδωμένο συγχρονισμό."
+msgstr "Κατά την ανεξάρτητη περικοπή, μπορεί να υπάρχει μόνο ένα επιλεγμένο κομμάτι ήχου σε κάθε ομάδα κομματιών με κλειδωμένο συγχρονισμό."
 
 #: src/effects/TruncSilence.cpp
 msgid "Detect Silence"
@@ -9549,12 +9490,7 @@ msgstr "Μέγεθος ενδιάμεσης μνήμης"
 
 #: src/effects/VST/VSTEffect.cpp src/effects/lv2/LV2Effect.cpp
 msgid "The buffer size controls the number of samples sent to the effect on each iteration. Smaller values will cause slower processing and some effects require 8192 samples or less to work properly. However most effects can accept large buffers and using them will greatly reduce processing time."
-msgstr ""
-"Το μέγεθος βοηθητικής μνήμης ελέγχει τον αριθμό δειγμάτων που στάλθηκαν στο "
-"εφέ σε κάθε επανάληψη. Μικρότερες τιμές θα προκαλέσουν πιο αργή επεξεργασία "
-"και κάποια εφέ απαιτούν 8192 δείγματα ή λιγότερα για να δουλέψουν σωστά. "
-"Όμως, τα περισσότερα εφέ μπορούν να δεχτούν μεγάλες βοηθητικές μνήμες και "
-"χρησιμοποιώντας τες μειώνεται πολύ ο χρόνος επεξεργασίας."
+msgstr "Το μέγεθος βοηθητικής μνήμης ελέγχει τον αριθμό δειγμάτων που στάλθηκαν στο εφέ σε κάθε επανάληψη. Μικρότερες τιμές θα προκαλέσουν πιο αργή επεξεργασία και κάποια εφέ απαιτούν 8192 δείγματα ή λιγότερα για να δουλέψουν σωστά. Όμως, τα περισσότερα εφέ μπορούν να δεχτούν μεγάλες βοηθητικές μνήμες και χρησιμοποιώντας τες μειώνεται πολύ ο χρόνος επεξεργασίας."
 
 #: src/effects/VST/VSTEffect.cpp
 msgid "&Buffer Size (8 to 1048576 samples):"
@@ -9580,10 +9516,7 @@ msgstr "Γραφική λειτουργία"
 
 #: src/effects/VST/VSTEffect.cpp
 msgid "Most VST effects have a graphical interface for setting parameter values. A basic text-only method is also available.  Reopen the effect for this to take effect."
-msgstr ""
-"Τα περισσότερα εφέ VST έχουν γραφική διεπαφή για τη ρύθμιση τιμών "
-"παραμέτρου. Είναι διαθέσιμη επίσης βασική μέθοδος μόνο κειμένου. Ξανανοίξτε "
-"το εφέ για να λειτουργήσει."
+msgstr "Τα περισσότερα εφέ VST έχουν γραφική διεπαφή για τη ρύθμιση τιμών παραμέτρου. Είναι διαθέσιμη επίσης βασική μέθοδος μόνο κειμένου. Ξανανοίξτε το εφέ για να λειτουργήσει."
 
 #: src/effects/VST/VSTEffect.cpp src/effects/lv2/LV2Effect.cpp
 msgid "Enable &graphical interface"
@@ -9664,9 +9597,7 @@ msgstr "Wahwah"
 
 #: src/effects/Wahwah.cpp
 msgid "Rapid tone quality variations, like that guitar sound so popular in the 1970's"
-msgstr ""
-"Γρήγορες διακυμάνσεις ποιότητας τόνου, όπως αυτές του ήχου της κιθάρας που "
-"ήταν τόσο δημοφιλείς τη δεκαετία του 1970"
+msgstr "Γρήγορες διακυμάνσεις ποιότητας τόνου, όπως αυτές του ήχου της κιθάρας που ήταν τόσο δημοφιλείς τη δεκαετία του 1970"
 
 #: src/effects/Wahwah.cpp
 msgid "Dept&h (%):"
@@ -9719,11 +9650,7 @@ msgstr "Διεπαφή χρήστη"
 
 #: src/effects/audiounits/AudioUnitEffect.cpp
 msgid "Select \"Full\" to use the graphical interface if supplied by the Audio Unit. Select \"Generic\" to use the system supplied generic interface. Select \"Basic\" for a basic text-only interface. Reopen the effect for this to take effect."
-msgstr ""
-"Επιλέξτε \"Πλήρης\" για να χρησιμοποιήσετε τη γραφική διεπαφή, εάν παρέχεται "
-"από τη μονάδα ήχου. Επιλέξτε \"Γενικά\" για να χρησιμοποιήσετε το παρεχόμενο "
-"σύστημα διεπαφής. Επιλέξτε \"Βασικό\" για βασική διεπαφή μόνο κειμένου. "
-"Ξανανοίξτε το εφέ για να λειτουργήσει."
+msgstr "Επιλέξτε \"Πλήρης\" για να χρησιμοποιήσετε τη γραφική διεπαφή, εάν παρέχεται από τη μονάδα ήχου. Επιλέξτε \"Γενικά\" για να χρησιμοποιήσετε το παρεχόμενο σύστημα διεπαφής. Επιλέξτε \"Βασικό\" για βασική διεπαφή μόνο κειμένου. Ξανανοίξτε το εφέ για να λειτουργήσει."
 
 #: src/effects/audiounits/AudioUnitEffect.cpp
 msgid "Select &interface"
@@ -9914,10 +9841,7 @@ msgstr "Ως μέρος των επεξεργασιών τους, κάποια �
 
 #: src/effects/lv2/LV2Effect.cpp
 msgid "LV2 effects can have a graphical interface for setting parameter values. A basic text-only method is also available.  Reopen the effect for this to take effect."
-msgstr ""
-"Τα εφέ LV2 μπορούν να έχουν γραφική διεπαφή για τον ορισμό τιμών παραμέτρου. "
-"Υπάρχει επίσης διαθέσιμη βασική μέθοδος μόνο κειμένου. Ξανανοίξτε το εφέ για "
-"να λειτουργήσει."
+msgstr "Τα εφέ LV2 μπορούν να έχουν γραφική διεπαφή για τον ορισμό τιμών παραμέτρου. Υπάρχει επίσης διαθέσιμη βασική μέθοδος μόνο κειμένου. Ξανανοίξτε το εφέ για να λειτουργήσει."
 
 #: src/effects/lv2/LV2Effect.cpp
 msgid "Couldn't instantiate effect"
@@ -9993,9 +9917,7 @@ msgstr ""
 #: src/effects/nyquist/Nyquist.cpp
 #, c-format
 msgid "error: File \"%s\" specified in header but not found in plug-in path.\n"
-msgstr ""
-"σφάλμα: Καθορίστηκε το αρχείο \"%s\" στην κεφαλίδα, αλλά δεν βρέθηκε στη "
-"διαδρομή του προσθέτου.\n"
+msgstr "σφάλμα: Καθορίστηκε το αρχείο \"%s\" στην κεφαλίδα, αλλά δεν βρέθηκε στη διαδρομή του προσθέτου.\n"
 
 #: src/effects/nyquist/Nyquist.cpp
 msgid "Audio selection required."
@@ -10007,9 +9929,7 @@ msgstr "Σφάλμα Nyquist"
 
 #: src/effects/nyquist/Nyquist.cpp
 msgid "Sorry, cannot apply effect on stereo tracks where the tracks don't match."
-msgstr ""
-"Λυπούμαστε, αδύνατη η εφαρμογή του εφέ σε κομμάτια στέρεο, όπου τα κομμάτια "
-"δεν ταιριάζουν."
+msgstr "Λυπούμαστε, αδύνατη η εφαρμογή του εφέ σε κομμάτια στέρεο, όπου τα κομμάτια δεν ταιριάζουν."
 
 #: src/effects/nyquist/Nyquist.cpp
 #, c-format
@@ -10038,8 +9958,7 @@ msgstr "τα εφέ ';type tool' δεν μπορούν να επιστρέψου
 #. i18n-hint: Don't translate ';type tool'.
 #: src/effects/nyquist/Nyquist.cpp
 msgid "';type tool' effects cannot return labels from Nyquist.\n"
-msgstr ""
-"τα εφέ ';type tool' δεν μπορούν να επιστρέψουν ετικέτες από το Nyquist.\n"
+msgstr "τα εφέ ';type tool' δεν μπορούν να επιστρέψουν ετικέτες από το Nyquist.\n"
 
 #. i18n-hint: "%s" is replaced by name of plug-in.
 #: src/effects/nyquist/Nyquist.cpp
@@ -10083,9 +10002,7 @@ msgstr "Το Nyquist δεν επέστρεψε ήχο.\n"
 
 #: src/effects/nyquist/Nyquist.cpp
 msgid "[Warning: Nyquist returned invalid UTF-8 string, converted here as Latin-1]"
-msgstr ""
-"[Προειδοποίηση: Το Nyquist επέστρεψε άκυρη συμβολοσειρά UTF-8, μετατράπηκε "
-"εδώ ως Λατινική-1]"
+msgstr "[Προειδοποίηση: Το Nyquist επέστρεψε άκυρη συμβολοσειρά UTF-8, μετατράπηκε εδώ ως Λατινική-1]"
 
 #: src/effects/nyquist/Nyquist.cpp
 #, c-format
@@ -10105,8 +10022,7 @@ msgid ""
 "\t(mult *track* 0.1)\n"
 " ."
 msgstr ""
-"Ο κώδικας σας μοιάζει με σύνταξη SAL, αλλά δεν υπάρχει πρόταση 'επιστροφής'."
-"\n"
+"Ο κώδικας σας μοιάζει με σύνταξη SAL, αλλά δεν υπάρχει πρόταση 'επιστροφής'.\n"
 "Για SAL, χρησιμοποιήστε μια πρόταση επιστροφής όπως:\n"
 "       return *track* * 0.1\n"
 "ή για LISP, αρχίστε με μια ανοικτή παρένθεση όπως:\n"
@@ -10208,9 +10124,7 @@ msgstr "Δίνει υποστήριξη στα εφέ Vamp για το Audacity"
 
 #: src/effects/vamp/VampEffect.cpp
 msgid "Sorry, Vamp Plug-ins cannot be run on stereo tracks where the individual channels of the track do not match."
-msgstr ""
-"Λυπούμαστε, τα πρόσθετα Vamp δεν μπορούν να εφαρμοστούν σε στερεοφωνικά "
-"κομμάτια, όπου τα ατομικά κανάλια των κομματιών δεν ταιριάζουν."
+msgstr "Λυπούμαστε, τα πρόσθετα Vamp δεν μπορούν να εφαρμοστούν σε στερεοφωνικά κομμάτια, όπου τα ατομικά κανάλια των κομματιών δεν ταιριάζουν."
 
 #: src/effects/vamp/VampEffect.cpp
 msgid "Sorry, failed to load Vamp Plug-in."
@@ -10274,16 +10188,13 @@ msgid ""
 msgstr ""
 "Πρόκειται να εξάγετε ένα αρχείο %s με το όνομα \"%s\".\n"
 "\n"
-"Συνήθως αυτά τα αρχεία καταλήγουν σε \".%s\" και κάποια προγράμματα δεν θα "
-"ανοίξουν αρχεία με μη συμβατικές καταλήξεις.\n"
+"Συνήθως αυτά τα αρχεία καταλήγουν σε \".%s\" και κάποια προγράμματα δεν θα ανοίξουν αρχεία με μη συμβατικές καταλήξεις.\n"
 "\n"
 "Είστε σίγουροι ότι θέλετε να εξαγάγετε το αρχείο με αυτό το όνομα;"
 
 #: src/export/Export.cpp
 msgid "Sorry, pathnames longer than 256 characters not supported."
-msgstr ""
-"Λυπούμαστε, δεν υποστηρίζονται ονόματα διαδρομής με περισσότερους από 256 "
-"χαρακτήρες."
+msgstr "Λυπούμαστε, δεν υποστηρίζονται ονόματα διαδρομής με περισσότερους από 256 χαρακτήρες."
 
 #: src/export/Export.cpp
 #, c-format
@@ -10296,14 +10207,11 @@ msgstr "Τα κομμάτια σας θα αναμιχθούν και θα εξ�
 
 #: src/export/Export.cpp
 msgid "Your tracks will be mixed down and exported as one stereo file."
-msgstr ""
-"Τα κομμάτια σας θα αναμιχθούν και θα εξαχθούν ως ένα στερεοφωνικό αρχείο."
+msgstr "Τα κομμάτια σας θα αναμιχθούν και θα εξαχθούν ως ένα στερεοφωνικό αρχείο."
 
 #: src/export/Export.cpp
 msgid "Your tracks will be mixed down to one exported file according to the encoder settings."
-msgstr ""
-"Τα κομμάτια σας θα αναμιχθούν σε ένα εξαγόμενο αρχείο σύμφωνα με τις "
-"ρυθμίσεις του κωδικοποιητή."
+msgstr "Τα κομμάτια σας θα αναμιχθούν σε ένα εξαγόμενο αρχείο σύμφωνα με τις ρυθμίσεις του κωδικοποιητή."
 
 #: src/export/Export.cpp
 msgid "Advanced Mixing Options"
@@ -10360,9 +10268,7 @@ msgstr "Εμφάνιση εξόδου"
 #: src/export/ExportCL.cpp
 #, c-format
 msgid "Data will be piped to standard in. \"%f\" uses the file name in the export window."
-msgstr ""
-"Τα δεδομένα θα διοχετευθούν στην τυπική είσοδο. Το \"%f\" χρησιμοποιεί το "
-"όνομα του αρχείου στο παράθυρο εξαγωγής."
+msgstr "Τα δεδομένα θα διοχετευθούν στην τυπική είσοδο. Το \"%f\" χρησιμοποιεί το όνομα του αρχείου στο παράθυρο εξαγωγής."
 
 #. i18n-hint files that can be run as programs
 #: src/export/ExportCL.cpp
@@ -10388,8 +10294,7 @@ msgstr "Εξαγωγή"
 
 #: src/export/ExportCL.cpp
 msgid "Exporting the selected audio using command-line encoder"
-msgstr ""
-"Εξαγωγή του επιλεγμένου ήχου χρησιμοποιώντας κωδικοποιητή γραμμής εντολών"
+msgstr "Εξαγωγή του επιλεγμένου ήχου χρησιμοποιώντας κωδικοποιητή γραμμής εντολών"
 
 #: src/export/ExportCL.cpp
 msgid "Exporting the audio using command-line encoder"
@@ -10432,9 +10337,7 @@ msgstr ""
 #: src/export/ExportFFmpeg.cpp
 #, c-format
 msgid "FFmpeg : ERROR - Can't determine format description for file \"%s\"."
-msgstr ""
-"FFmpeg : ΣΦΑΛΜΑ - Αδύνατος ο προσδιορισμός περιγραφής μορφής για το αρχείο \""
-"%s\"."
+msgstr "FFmpeg : ΣΦΑΛΜΑ - Αδύνατος ο προσδιορισμός περιγραφής μορφής για το αρχείο \"%s\"."
 
 #: src/export/ExportFFmpeg.cpp
 msgid "FFmpeg Error"
@@ -10442,28 +10345,22 @@ msgstr "Σφάλμα FFmpeg"
 
 #: src/export/ExportFFmpeg.cpp
 msgid "FFmpeg : ERROR - Can't allocate output format context."
-msgstr ""
-"FFmpeg : ΣΦΑΛΜΑ - Αδύνατη η κατανομή του περιεχομένου της μορφής εξόδου."
+msgstr "FFmpeg : ΣΦΑΛΜΑ - Αδύνατη η κατανομή του περιεχομένου της μορφής εξόδου."
 
 #: src/export/ExportFFmpeg.cpp
 #, c-format
 msgid "FFmpeg : ERROR - Can't add audio stream to output file \"%s\"."
-msgstr ""
-"FFmpeg : ΣΦΑΛΜΑ - Αδύνατη η προσθήκη ροής ήχου στο αρχείο εξόδου \"%s\"."
+msgstr "FFmpeg : ΣΦΑΛΜΑ - Αδύνατη η προσθήκη ροής ήχου στο αρχείο εξόδου \"%s\"."
 
 #: src/export/ExportFFmpeg.cpp
 #, c-format
 msgid "FFmpeg : ERROR - Can't open output file \"%s\" to write. Error code is %d."
-msgstr ""
-"FFmpeg : ΣΦΑΛΜΑ - Αδυναμία ανοίγματος αρχείου εξόδου \"%s\" για εγγραφή. Ο "
-"κωδικός σφάλματος είναι %d."
+msgstr "FFmpeg : ΣΦΑΛΜΑ - Αδυναμία ανοίγματος αρχείου εξόδου \"%s\" για εγγραφή. Ο κωδικός σφάλματος είναι %d."
 
 #: src/export/ExportFFmpeg.cpp
 #, c-format
 msgid "FFmpeg : ERROR - Can't write headers to output file \"%s\". Error code is %d."
-msgstr ""
-"FFmpeg : ΣΦΑΛΜΑ - Αδυναμία εγγραφής στο αρχείο εξόδου \"%s\". Ο κωδικός "
-"σφάλματος είναι %d."
+msgstr "FFmpeg : ΣΦΑΛΜΑ - Αδυναμία εγγραφής στο αρχείο εξόδου \"%s\". Ο κωδικός σφάλματος είναι %d."
 
 #. i18n-hint: "codec" is short for a "coder-decoder" algorithm
 #: src/export/ExportFFmpeg.cpp
@@ -10497,20 +10394,15 @@ msgstr ""
 
 #: src/export/ExportFFmpeg.cpp
 msgid "FFmpeg : ERROR - Can't allocate buffer to read into from audio FIFO."
-msgstr ""
-"FFmpeg : ΣΦΑΛΜΑ - Αδυναμία κατανομής ενδιάμεσης μνήμης για ανάγνωση στο FIFO "
-"από ήχο."
+msgstr "FFmpeg : ΣΦΑΛΜΑ - Αδυναμία κατανομής ενδιάμεσης μνήμης για ανάγνωση στο FIFO από ήχο."
 
 #: src/export/ExportFFmpeg.cpp
 msgid "FFmpeg : ERROR - Could not get sample buffer size"
-msgstr ""
-"FFmpeg : ΣΦΑΛΜΑ - Αδυναμία λήψης μεγέθους ενδιάμεσης μνήμης του δείγματος"
+msgstr "FFmpeg : ΣΦΑΛΜΑ - Αδυναμία λήψης μεγέθους ενδιάμεσης μνήμης του δείγματος"
 
 #: src/export/ExportFFmpeg.cpp
 msgid "FFmpeg : ERROR - Could not allocate bytes for samples buffer"
-msgstr ""
-"FFmpeg : ΣΦΑΛΜΑ - Αδυναμία κατανομής ψηφιολέξεων (bytes) για ενδιάμεση μνήμη "
-"δειγμάτων"
+msgstr "FFmpeg : ΣΦΑΛΜΑ - Αδυναμία κατανομής ψηφιολέξεων (bytes) για ενδιάμεση μνήμη δειγμάτων"
 
 #: src/export/ExportFFmpeg.cpp
 msgid "FFmpeg : ERROR - Could not setup audio frame"
@@ -10526,9 +10418,7 @@ msgstr "FFmpeg : ΣΦΑΛΜΑ - Υπερβολικά δεδομένα παραμ
 
 #: src/export/ExportFFmpeg.cpp
 msgid "FFmpeg : ERROR - Couldn't write last audio frame to output file."
-msgstr ""
-"FFmpeg : ΣΦΑΛΜΑ - Αδυναμία εγγραφής του τελευταίου πλαισίου ήχου στο αρχείο "
-"εξόδου."
+msgstr "FFmpeg : ΣΦΑΛΜΑ - Αδυναμία εγγραφής του τελευταίου πλαισίου ήχου στο αρχείο εξόδου."
 
 #: src/export/ExportFFmpeg.cpp
 msgid "FFmpeg : ERROR - nAudioFrameSizeOut too large."
@@ -10541,9 +10431,7 @@ msgstr "FFmpeg : ΣΦΑΛΜΑ - Αδυναμία κωδικοποίησης πλ
 #: src/export/ExportFFmpeg.cpp
 #, c-format
 msgid "Attempted to export %d channels, but maximum number of channels for selected output format is %d"
-msgstr ""
-"Έγινε προσπάθεια εξαγωγής %d καναλιών, αλλά ο μέγιστος αριθμός καναλιών για "
-"την επιλεγμένη μορφή εξόδου είναι %d"
+msgstr "Έγινε προσπάθεια εξαγωγής %d καναλιών, αλλά ο μέγιστος αριθμός καναλιών για την επιλεγμένη μορφή εξόδου είναι %d"
 
 #: src/export/ExportFFmpeg.cpp
 #, c-format
@@ -10584,8 +10472,7 @@ msgstr ""
 
 #: src/export/ExportFFmpeg.cpp src/export/ExportMP3.cpp
 msgid "You may resample to one of the rates below."
-msgstr ""
-"Μπορείτε να κάνετε επαναδειγματοληψία με έναν από τους παρακάτω ρυθμούς."
+msgstr "Μπορείτε να κάνετε επαναδειγματοληψία με έναν από τους παρακάτω ρυθμούς."
 
 #: src/export/ExportFFmpeg.cpp src/export/ExportMP3.cpp
 msgid "Sample Rates"
@@ -10864,9 +10751,7 @@ msgstr "Κωδικοποιητής:"
 
 #: src/export/ExportFFmpegDialogs.cpp
 msgid "Not all formats and codecs are compatible. Nor are all option combinations compatible with all codecs."
-msgstr ""
-"Δεν είναι όλες οι μορφές συμβατές. Ούτε είναι όλοι οι συνδιασμοί των "
-"επιλογών συμβατοί με όλους τους κωδικοποιητές."
+msgstr "Δεν είναι όλες οι μορφές συμβατές. Ούτε είναι όλοι οι συνδιασμοί των επιλογών συμβατοί με όλους τους κωδικοποιητές."
 
 #: src/export/ExportFFmpegDialogs.cpp
 msgid "Show All Formats"
@@ -10924,10 +10809,8 @@ msgid ""
 "0 - automatic\n"
 "Recommended - 192000"
 msgstr ""
-"Ο ρυθμός δυαδικών (δυαδικά/δευτερόλεπτο) επηρεάζει το τελικό μέγεθος αρχείου "
-"και την ποιότητα\n"
-"Μερικοί κωδικοποιητές μπορεί να δεχτούν μόνο ειδικές τιμές (128k, 192k, 256k "
-"κλπ)\n"
+"Ο ρυθμός δυαδικών (δυαδικά/δευτερόλεπτο) επηρεάζει το τελικό μέγεθος αρχείου και την ποιότητα\n"
+"Μερικοί κωδικοποιητές μπορεί να δεχτούν μόνο ειδικές τιμές (128k, 192k, 256k κλπ)\n"
 "0 - αυτόματα\n"
 "Συνιστάται - 192000"
 
@@ -11275,8 +11158,7 @@ msgstr "Αρχεία MP2"
 
 #: src/export/ExportMP2.cpp
 msgid "Cannot export MP2 with this sample rate and bit rate"
-msgstr ""
-"Αδύνατη η εξαγωγή με μορφή MP2 με αυτό το ρυθμό δειγματοληψίας και ρυθμό bit"
+msgstr "Αδύνατη η εξαγωγή με μορφή MP2 με αυτό το ρυθμό δειγματοληψίας και ρυθμό bit"
 
 #: src/export/ExportMP2.cpp src/export/ExportMP3.cpp src/export/ExportOGG.cpp
 msgid "Unable to open target file for writing"
@@ -11544,8 +11426,7 @@ msgid ""
 "The project sample rate (%d) and bit rate (%d kbps) combination is not\n"
 "supported by the MP3 file format. "
 msgstr ""
-"Ο ρυθμός δειγματοληψίας του έργου (%d) και ο συνδυασμός ρυθμού δυαδικών (%d "
-"kbps)\n"
+"Ο ρυθμός δειγματοληψίας του έργου (%d) και ο συνδυασμός ρυθμού δυαδικών (%d kbps)\n"
 "δεν υποστηρίζεται από τη μορφή αρχείου MP3. "
 
 #: src/export/ExportMP3.cpp
@@ -11654,8 +11535,7 @@ msgstr "Κάτι πήγε στραβά μετά την εξαγωγή του/τ�
 #: src/export/ExportMultiple.cpp
 #, c-format
 msgid "Export canceled after exporting the following %lld file(s)."
-msgstr ""
-"Η εξαγωγή ακυρώθηκε μετά την εξαγωγή του/των ακόλουθου/ων %lld αρχείου/ων."
+msgstr "Η εξαγωγή ακυρώθηκε μετά την εξαγωγή του/των ακόλουθου/ων %lld αρχείου/ων."
 
 #: src/export/ExportMultiple.cpp
 #, c-format
@@ -11665,8 +11545,7 @@ msgstr "Η εξαγωγή σταμάτησε μετά την εξαγωγή το
 #: src/export/ExportMultiple.cpp
 #, c-format
 msgid "Something went really wrong after exporting the following %lld file(s)."
-msgstr ""
-"Κάτι πήγε πολύ στραβά μετά την εξαγωγή του/των ακόλουθου/ων %lld αρχείου/ων."
+msgstr "Κάτι πήγε πολύ στραβά μετά την εξαγωγή του/των ακόλουθου/ων %lld αρχείου/ων."
 
 #: src/export/ExportMultiple.cpp
 #, c-format
@@ -11709,8 +11588,7 @@ msgid ""
 "\n"
 "Suggested replacement:"
 msgstr ""
-"Η ετικέτα ή το κομμάτι \"%s\" δεν είναι επιτρεπτό όνομα αρχείου. Δεν "
-"μπορείτε να χρησιμοποιήσετε το \"%s\".\n"
+"Η ετικέτα ή το κομμάτι \"%s\" δεν είναι επιτρεπτό όνομα αρχείου. Δεν μπορείτε να χρησιμοποιήσετε το \"%s\".\n"
 "\n"
 "Προτεινόμενη αντικατάσταση:"
 
@@ -12145,9 +12023,7 @@ msgstr "Εισαγωγή έργου"
 
 #: src/import/ImportAUP.cpp
 msgid "The active project already has a time track and one was encountered in the project being imported, bypassing imported time track."
-msgstr ""
-"Το ενεργό έργο έχει ήδη κομμάτι χρόνου και εμφανίστηκε ένα στο εισαγόμενο "
-"έργο, παράκαμψη του εισαγόμενου κομματιού χρόνου."
+msgstr "Το ενεργό έργο έχει ήδη κομμάτι χρόνου και εμφανίστηκε ένα στο εισαγόμενο έργο, παράκαμψη του εισαγόμενου κομματιού χρόνου."
 
 #: src/import/ImportAUP.cpp
 msgid "Invalid sequence 'maxsamples' attribute."
@@ -12182,9 +12058,7 @@ msgstr "Λείπει ή είναι άκυρο το γνώρισμα 'len' απλ
 
 #: src/import/ImportAUP.cpp
 msgid "Missing or invalid silentblockfile 'len' attribute."
-msgstr ""
-"Λείπει ή είναι άκυρο το γνώρισμα 'len' του αρχείου μπλοκ σιγής "
-"(silentblockfile)."
+msgstr "Λείπει ή είναι άκυρο το γνώρισμα 'len' του αρχείου μπλοκ σιγής (silentblockfile)."
 
 #: src/import/ImportAUP.cpp
 #, c-format
@@ -12239,9 +12113,7 @@ msgstr "Συμβατά αρχεία με FFmpeg"
 #: src/import/ImportFFmpeg.cpp
 #, c-format
 msgid "Index[%02x] Codec[%s], Language[%s], Bitrate[%s], Channels[%d], Duration[%d]"
-msgstr ""
-"Δείκτης[%02x] Κωδικοποιητής[%s], Γλώσσα[%s], Ρυθμός δυαδικών[%s], Κανάλια[%d]"
-", Διάρκεια[%d]"
+msgstr "Δείκτης[%02x] Κωδικοποιητής[%s], Γλώσσα[%s], Ρυθμός δυαδικών[%s], Κανάλια[%d], Διάρκεια[%d]"
 
 #: src/import/ImportFLAC.cpp
 msgid "FLAC files"
@@ -12305,9 +12177,7 @@ msgstr "Μη αποδεκτή διάρκεια στο αρχείο LOF."
 
 #: src/import/ImportLOF.cpp
 msgid "MIDI tracks cannot be offset individually, only audio files can be."
-msgstr ""
-"Τα κομμάτια MIDI δεν μπορούν να μετατοπιστούν ξεχωριστά , μόνο τα αρχεία "
-"ακουστικού σήματος μπορούν."
+msgstr "Τα κομμάτια MIDI δεν μπορούν να μετατοπιστούν ξεχωριστά , μόνο τα αρχεία ακουστικού σήματος μπορούν."
 
 #  i18n-hint: You do not need to translate "LOF"
 #. i18n-hint: You do not need to translate "LOF"
@@ -12327,9 +12197,7 @@ msgstr "Εισαγωγή MIDI"
 #: src/import/ImportMIDI.cpp
 #, c-format
 msgid "Could not open file %s: Filename too short."
-msgstr ""
-"Αδύνατο το άνοιγμα του αρχείου %s: Το όνομα του αρχείου είναι υπερβολικά "
-"μικρό."
+msgstr "Αδύνατο το άνοιγμα του αρχείου %s: Το όνομα του αρχείου είναι υπερβολικά μικρό."
 
 #: src/import/ImportMIDI.cpp
 #, c-format
@@ -12892,9 +12760,7 @@ msgstr "Σιγή"
 #: src/menus/EditMenus.cpp
 #, c-format
 msgid "Trim selected audio tracks from %.2f seconds to %.2f seconds"
-msgstr ""
-"Περικοπή επιλεγμένων κομματιών ήχου από %.2f δευτερόλεπτα σε %.2f "
-"δευτερόλεπτα"
+msgstr "Περικοπή επιλεγμένων κομματιών ήχου από %.2f δευτερόλεπτα σε %.2f δευτερόλεπτα"
 
 #: src/menus/EditMenus.cpp
 msgid "Trim Audio"
@@ -14285,15 +14151,12 @@ msgstr "Επαναδειγματοληψία κομματιού"
 
 #: src/menus/TrackMenus.cpp
 msgid "Please select at least one audio track and one MIDI track."
-msgstr ""
-"Παρακαλούμε, επιλέξτε τουλάχιστον ένα κομμάτι ήχου και ένα κομμάτι MIDI."
+msgstr "Παρακαλούμε, επιλέξτε τουλάχιστον ένα κομμάτι ήχου και ένα κομμάτι MIDI."
 
 #: src/menus/TrackMenus.cpp
 #, c-format
 msgid "Alignment completed: MIDI from %.2f to %.2f secs, Audio from %.2f to %.2f secs."
-msgstr ""
-"Ολοκληρώθηκε η στοίχιση: MIDI από %.2f μέχρι %.2f δευτερόλεπτα, ήχος από "
-"%.2f μέχρι %.2f δευτερόλεπτα."
+msgstr "Ολοκληρώθηκε η στοίχιση: MIDI από %.2f μέχρι %.2f δευτερόλεπτα, ήχος από %.2f μέχρι %.2f δευτερόλεπτα."
 
 #: src/menus/TrackMenus.cpp
 msgid "Sync MIDI with Audio"
@@ -14302,9 +14165,7 @@ msgstr "Συγχρονισμός MIDI με ήχο"
 #: src/menus/TrackMenus.cpp
 #, c-format
 msgid "Alignment error: input too short: MIDI from %.2f to %.2f secs, Audio from %.2f to %.2f secs."
-msgstr ""
-"Σφάλμα στοίχισης: η είσοδος υπερβολικά σύντομη: MIDI από %.2f μέχρι %.2f "
-"δευτερόλεπτα, ήχος από %.2f μέχρι %.2f δευτερόλεπτα."
+msgstr "Σφάλμα στοίχισης: η είσοδος υπερβολικά σύντομη: MIDI από %.2f μέχρι %.2f δευτερόλεπτα, ήχος από %.2f μέχρι %.2f δευτερόλεπτα."
 
 #: src/menus/TrackMenus.cpp
 msgid "Internal error reported by alignment process."
@@ -14557,8 +14418,7 @@ msgid ""
 "\n"
 "Please close any additional projects and try again."
 msgstr ""
-"Η ηχογράφηση με χρονοδιακόπτη δεν μπορεί να χρησιμοποιηθεί με περισσότερα "
-"από ένα ανοικτά έργα.\n"
+"Η ηχογράφηση με χρονοδιακόπτη δεν μπορεί να χρησιμοποιηθεί με περισσότερα από ένα ανοικτά έργα.\n"
 "\n"
 "Παρακαλούμε, κλείστε οποιοδήποτε επιπλέον έργο και ξαναπροσπαθήστε."
 
@@ -14568,8 +14428,7 @@ msgid ""
 "\n"
 "Please save or close this project and try again."
 msgstr ""
-"Η ηχογράφηση με χρονοδιακόπτη δεν μπορεί να χρησιμοποιηθεί εώ έχετε "
-"αναποθήκευτες αλλαγές.\n"
+"Η ηχογράφηση με χρονοδιακόπτη δεν μπορεί να χρησιμοποιηθεί εώ έχετε αναποθήκευτες αλλαγές.\n"
 "\n"
 "Παρακαλούμε, αποθηκεύστε ή κλείστε αυτό το έργο και ξαναδοκιμάστε."
 
@@ -14894,8 +14753,7 @@ msgstr "Αποκωδικοποιείται η κυματομορφή"
 #: src/ondemand/ODWaveTrackTaskQueue.cpp
 #, c-format
 msgid "%s %2.0f%% complete. Click to change task focal point."
-msgstr ""
-"Ολοκληρώθηκε το %s %2.0f%%. Πατήστε για να αλλάξετε εργασία εστιακού σημείου."
+msgstr "Ολοκληρώθηκε το %s %2.0f%%. Πατήστε για να αλλάξετε εργασία εστιακού σημείου."
 
 #: src/prefs/ApplicationPrefs.cpp
 msgid "Preferences for Application"
@@ -15019,10 +14877,8 @@ msgid ""
 "Leave a field empty to go to the last directory used for that operation.\n"
 "Fill in a field to always go to that directory for that operation."
 msgstr ""
-"Αφήστε ένα κενό πεδίο να πάει με τον τελευταίο χρησιμοποιούμενο κατάλογο για "
-"αυτήν την λειτουργία.\n"
-"Συμπληρώστε ένα πεδίο που να πηγαίνει πάντα με αυτόν τον κατάλογο για αυτήν "
-"τη λειτουργία."
+"Αφήστε ένα κενό πεδίο να πάει με τον τελευταίο χρησιμοποιούμενο κατάλογο για αυτήν την λειτουργία.\n"
+"Συμπληρώστε ένα πεδίο που να πηγαίνει πάντα με αυτόν τον κατάλογο για αυτήν τη λειτουργία."
 
 #: src/prefs/DirectoriesPrefs.cpp
 msgid "O&pen:"
@@ -15482,8 +15338,7 @@ msgstr "Οι προτιμήσεις πληκτρολογίου είναι προ
 
 #: src/prefs/KeyConfigPrefs.cpp
 msgid "Open a new project to modify keyboard shortcuts."
-msgstr ""
-"Ανοίξτε ένα νέο έργο για να τροποποιήσετε τις συντομεύσεις πληκτρολογίου."
+msgstr "Ανοίξτε ένα νέο έργο για να τροποποιήσετε τις συντομεύσεις πληκτρολογίου."
 
 #: src/prefs/KeyConfigPrefs.cpp
 msgid "&Hotkey:"
@@ -15540,8 +15395,7 @@ msgstr "&Τοποθέτηση"
 
 #: src/prefs/KeyConfigPrefs.cpp
 msgid "Note: Pressing Cmd+Q will quit. All other keys are valid."
-msgstr ""
-"Σημείωση: Πληκτρολογώντας Cmd+Q θα κλείσει. Όλα τα άλλα πλήκτρα είναι έγκυρα."
+msgstr "Σημείωση: Πληκτρολογώντας Cmd+Q θα κλείσει. Όλα τα άλλα πλήκτρα είναι έγκυρα."
 
 #: src/prefs/KeyConfigPrefs.cpp
 msgid "&Import..."
@@ -15574,8 +15428,7 @@ msgid ""
 "The file with the shortcuts contains illegal shortcut duplicates for \"%s\" and \"%s\".\n"
 "Nothing is imported."
 msgstr ""
-"Το αρχείο με τις συντομεύσεις περιέχει μη έγκυρες διπλές συντομεύσεις για \"%"
-"s\" και \"%s\".\n"
+"Το αρχείο με τις συντομεύσεις περιέχει μη έγκυρες διπλές συντομεύσεις για \"%s\" και \"%s\".\n"
 "Δεν εισάχθηκε τίποτα."
 
 #: src/prefs/KeyConfigPrefs.cpp
@@ -15589,9 +15442,7 @@ msgid ""
 "The following commands are not mentioned in the imported file, but have their shortcuts removed because of the conflict with other new shortcuts:\n"
 msgstr ""
 "\n"
-"Οι παρακάτω εντολές δεν αναφέρονται στο εισαγόμενο αρχείο, αλλά έχουν "
-"αφαιρεμένες τις συντομεύσεις τους λόγω της σύγκρουσης με άλλες νέες "
-"συντομεύσεις:\n"
+"Οι παρακάτω εντολές δεν αναφέρονται στο εισαγόμενο αρχείο, αλλά έχουν αφαιρεμένες τις συντομεύσεις τους λόγω της σύγκρουσης με άλλες νέες συντομεύσεις:\n"
 
 #: src/prefs/KeyConfigPrefs.cpp
 msgid "Loading Keyboard Shortcuts"
@@ -16306,8 +16157,7 @@ msgstr "Η ελάχιστη συχνότητα θα πρέπει να είναι
 
 #: src/prefs/SpectrogramSettings.cpp
 msgid "Minimum frequency must be less than maximum frequency"
-msgstr ""
-"Η ελάχιστη συχνότητα θα πρέπει να είναι μικρότερη από την μέγιστη συχνότητα"
+msgstr "Η ελάχιστη συχνότητα θα πρέπει να είναι μικρότερη από την μέγιστη συχνότητα"
 
 #: src/prefs/SpectrogramSettings.cpp
 msgid "The range must be at least 1 dB"
@@ -16514,8 +16364,7 @@ msgid ""
 "Saving and loading individual theme files uses a separate file for each image, but is\n"
 "otherwise the same idea."
 msgstr ""
-"Η αποθήκευση και φόρτωση μεμονωμένων αρχείων θεμάτων χρησιμοποιεί ένα "
-"ξεχωριστό αρχείο για κάθε εικόνα, αλλά είναι\n"
+"Η αποθήκευση και φόρτωση μεμονωμένων αρχείων θεμάτων χρησιμοποιεί ένα ξεχωριστό αρχείο για κάθε εικόνα, αλλά είναι\n"
 "αλλιώς η ίδια ιδέα."
 
 #. i18n-hint: && in here is an escape character to get a single & on screen,
@@ -16580,9 +16429,7 @@ msgstr "Η επεξεργασία ενός αποσπάσματος μπορεί
 
 #: src/prefs/TracksBehaviorsPrefs.cpp
 msgid "\"Move track focus\" c&ycles repeatedly through tracks"
-msgstr ""
-"Το \"Μετακίνηση εστίασης κομματιού\" κάνει επανειλημμένους κύκλο&υς μέσα από "
-"τα κομμάτια"
+msgstr "Το \"Μετακίνηση εστίασης κομματιού\" κάνει επανειλημμένους κύκλο&υς μέσα από τα κομμάτια"
 
 #: src/prefs/TracksBehaviorsPrefs.cpp
 msgid "&Type to create a label"
@@ -16776,9 +16623,7 @@ msgstr "Ανάμειξη σε &στερεοφωνικό κατά τη διάρκ
 
 #: src/prefs/WarningsPrefs.cpp
 msgid "Mixing down on export (&Custom FFmpeg or external program)"
-msgstr ""
-"Ανάμειξη σε ένα κατά την εξαγωγή (&Προσαρμοσμένο FFmpeg ή εξωτερικό "
-"πρόγραμμα)"
+msgstr "Ανάμειξη σε ένα κατά την εξαγωγή (&Προσαρμοσμένο FFmpeg ή εξωτερικό πρόγραμμα)"
 
 #: src/prefs/WarningsPrefs.cpp
 msgid "Missing file &name extension during export"
@@ -17018,8 +16863,7 @@ msgstr "Ένταση ηχογράφησης: %.2f"
 
 #: src/toolbars/MixerToolBar.cpp
 msgid "Recording Volume (Unavailable; use system mixer.)"
-msgstr ""
-"Ένταση ηχογράφησης (μη διαθέσιμη; χρησιμοποίησε τον μείκτη του συστήματος.)"
+msgstr "Ένταση ηχογράφησης (μη διαθέσιμη; χρησιμοποίησε τον μείκτη του συστήματος.)"
 
 #: src/toolbars/MixerToolBar.cpp
 #, c-format
@@ -17033,8 +16877,7 @@ msgstr "Ένταση αναπαραγωγής: %.2f"
 
 #: src/toolbars/MixerToolBar.cpp
 msgid "Playback Volume (Unavailable; use system mixer.)"
-msgstr ""
-"Ένταση αναπαραγωγής (μη διαθέσιμη; χρησιμοποίησε τον μείκτη του συστήματος.)"
+msgstr "Ένταση αναπαραγωγής (μη διαθέσιμη; χρησιμοποίησε τον μείκτη του συστήματος.)"
 
 #. i18n-hint: Clicking this menu item shows the toolbar
 #. with the mixer
@@ -17381,9 +17224,7 @@ msgstr "Κάτω ο&κτάβα"
 #: src/tracks/playabletrack/notetrack/ui/NoteTrackVZoomHandle.cpp
 #: src/tracks/playabletrack/wavetrack/ui/WaveTrackVZoomHandle.cpp
 msgid "Click to vertically zoom in. Shift-click to zoom out. Drag to specify a zoom region."
-msgstr ""
-"Πάτημα για κάθετη μεγέθυνση. Shift-πάτημα για σμίκρυνση. Μεταφορά για ορισμό "
-"περιοχής εστίασης."
+msgstr "Πάτημα για κάθετη μεγέθυνση. Shift-πάτημα για σμίκρυνση. Μεταφορά για ορισμό περιοχής εστίασης."
 
 #: src/tracks/playabletrack/notetrack/ui/NoteTrackVZoomHandle.cpp
 #: src/tracks/playabletrack/wavetrack/ui/WaveTrackVZoomHandle.cpp
@@ -17462,9 +17303,7 @@ msgstr "Πατήστε και σύρετε για να επεξεργαστεί�
 
 #: src/tracks/playabletrack/wavetrack/ui/SampleHandle.cpp
 msgid "To use Draw, zoom in further until you can see the individual samples."
-msgstr ""
-"Για να χρησιμοποιήσετε σχεδίαση, μεγεθύνετε παραπέρα μέχρι να μπορείτε να "
-"δείτε τα μεμονωμένα δείγματα."
+msgstr "Για να χρησιμοποιήσετε σχεδίαση, μεγεθύνετε παραπέρα μέχρι να μπορείτε να δείτε τα μεμονωμένα δείγματα."
 
 #: src/tracks/playabletrack/wavetrack/ui/SampleHandle.cpp
 msgid "Moved Samples"
@@ -17719,9 +17558,7 @@ msgstr "%.0f%% Δεξιά"
 
 #: src/tracks/playabletrack/wavetrack/ui/WaveTrackView.cpp
 msgid "Click and drag to adjust sizes of sub-views, double-click to split evenly"
-msgstr ""
-"Πατήστε και σύρετε για να ρυθμίσετε μεγέθη των υποπροβολών, διπλοπατήστε για "
-"ομοιόμορφη διαίρεση"
+msgstr "Πατήστε και σύρετε για να ρυθμίσετε μεγέθη των υποπροβολών, διπλοπατήστε για ομοιόμορφη διαίρεση"
 
 #: src/tracks/playabletrack/wavetrack/ui/WaveTrackView.cpp
 msgid "Click and drag to rearrange sub-views"
@@ -17944,14 +17781,11 @@ msgstr "Πάτημα και σύρσιμο για να μετακινήσετε 
 
 #: src/tracks/ui/SelectHandle.cpp
 msgid "Click and drag to move center selection frequency to a spectral peak."
-msgstr ""
-"Πάτημα και σύρσιμο για να μετακινήσετε τη συχνότητα της κεντρικής επιλογής "
-"σε φασματική κορυφή."
+msgstr "Πάτημα και σύρσιμο για να μετακινήσετε τη συχνότητα της κεντρικής επιλογής σε φασματική κορυφή."
 
 #: src/tracks/ui/SelectHandle.cpp
 msgid "Click and drag to move center selection frequency."
-msgstr ""
-"Πάτημα και σύρσιμο για να μετακινήσετε τη συχνότητα της κεντρικής επιλογής."
+msgstr "Πάτημα και σύρσιμο για να μετακινήσετε τη συχνότητα της κεντρικής επιλογής."
 
 #: src/tracks/ui/SelectHandle.cpp
 msgid "Click and drag to adjust frequency bandwidth."
@@ -17966,8 +17800,7 @@ msgstr "Επεξεργασία, Προτιμήσεις..."
 #: src/tracks/ui/SelectHandle.cpp
 #, c-format
 msgid "Multi-Tool Mode: %s for Mouse and Keyboard Preferences."
-msgstr ""
-"Λειτουργία πολυεργαλείου: %s για τις προτιμήσεις ποντικιού και πληκτρολογίου."
+msgstr "Λειτουργία πολυεργαλείου: %s για τις προτιμήσεις ποντικιού και πληκτρολογίου."
 
 #: src/tracks/ui/SelectHandle.cpp
 msgid "Click and drag to set frequency bandwidth."
@@ -17997,14 +17830,12 @@ msgstr "Μετακινήθηκαν αποσπάσματα σε άλλο κομμ
 #: src/tracks/ui/TimeShiftHandle.cpp
 #, c-format
 msgid "Time shifted tracks/clips right %.02f seconds"
-msgstr ""
-"Ο χρόνος μετατόπισε τα κομμάτια/αποσπάσματα δεξιά κατά %.02f δευτερόλεπτα"
+msgstr "Ο χρόνος μετατόπισε τα κομμάτια/αποσπάσματα δεξιά κατά %.02f δευτερόλεπτα"
 
 #: src/tracks/ui/TimeShiftHandle.cpp
 #, c-format
 msgid "Time shifted tracks/clips left %.02f seconds"
-msgstr ""
-"Ο χρόνος μετατόπισε τα κομμάτια/αποσπάσματα αριστερά κατά %.02f δευτερόλεπτα"
+msgstr "Ο χρόνος μετατόπισε τα κομμάτια/αποσπάσματα αριστερά κατά %.02f δευτερόλεπτα"
 
 #: src/tracks/ui/TrackButtonHandles.cpp
 msgid "Collapse"
@@ -18040,9 +17871,7 @@ msgstr "Ctrl+πάτημα"
 #: src/tracks/ui/TrackSelectHandle.cpp
 #, c-format
 msgid "%s to select or deselect track. Drag up or down to change track order."
-msgstr ""
-"%s για επιλογή ή απεπιλογή κομματιού. Μετακινήστε πάνω ή κάτω για αλλαγή "
-"σειράς κομματιού."
+msgstr "%s για επιλογή ή απεπιλογή κομματιού. Μετακινήστε πάνω ή κάτω για αλλαγή σειράς κομματιού."
 
 #. i18n-hint: %s is replaced by (translation of) 'Ctrl+Click' on windows, 'Command+Click' on Mac
 #: src/tracks/ui/TrackSelectHandle.cpp
@@ -18818,8 +18647,7 @@ msgid ""
 "                      or reduce the filter 'Width'."
 msgstr ""
 "~aΟι παράμετροι του φίλτρου εγκοπής (Notch) δεν μπορούν να εφαρμοστούν.~%~\n"
-"                      Προσπαθήστε να αυξήσετε το κάτω όριο της συχνότητας~%~"
-"\n"
+"                      Προσπαθήστε να αυξήσετε το κάτω όριο της συχνότητας~%~\n"
 "                      ή να μειώσετε το φίλτρο πλάτους ('Width')."
 
 #: plug-ins/SpectralEditMulti.ny plug-ins/SpectralEditParametricEQ.ny
@@ -18858,10 +18686,8 @@ msgid ""
 "                        For the current track, the high frequency setting cannot~%~\n"
 "                        be greater than ~a Hz"
 msgstr ""
-"~aΗ επιλογή συσχνότητας είναι υπερβολικά υψηλή για τον ρυθμό δειγματοληψίας "
-"κομματιού.~%~\n"
-"                        Για το τρέχον κομμάτι, η ρύθμιση της υψηλής "
-"συχνότητας δεν μπορεί~%~\n"
+"~aΗ επιλογή συσχνότητας είναι υπερβολικά υψηλή για τον ρυθμό δειγματοληψίας κομματιού.~%~\n"
+"                        Για το τρέχον κομμάτι, η ρύθμιση της υψηλής συχνότητας δεν μπορεί~%~\n"
 "                        να είναι μεγαλύτερη από ~a Hz"
 
 #: plug-ins/SpectralEditParametricEQ.ny plug-ins/SpectralEditShelves.ny
@@ -18899,9 +18725,7 @@ msgstr "Steve Daulton"
 #: plug-ins/StudioFadeOut.ny
 #, lisp-format
 msgid "Selection too short.~%It must be more than 2 samples."
-msgstr ""
-"Η επιλογή είναι υπερβολικά μικρή. ~%Πρέπει να είναι μεγαλύτερη από 2 "
-"δείγματα."
+msgstr "Η επιλογή είναι υπερβολικά μικρή. ~%Πρέπει να είναι μεγαλύτερη από 2 δείγματα."
 
 #: plug-ins/adjustable-fade.ny
 msgid "Adjustable Fade"
@@ -19060,9 +18884,7 @@ msgstr "Benjamin Schwartz και Steve Daulton"
 
 #: plug-ins/clipfix.ny
 msgid "Licensing confirmed under terms of the GNU General Public License version 2"
-msgstr ""
-"Η αδειοδότηση συμφωνεί με τους όρους της Γενικής Δημόσιας Άδειας GNU, "
-"έκδοσης 2"
+msgstr "Η αδειοδότηση συμφωνεί με τους όρους της Γενικής Δημόσιας Άδειας GNU, έκδοσης 2"
 
 #: plug-ins/clipfix.ny
 msgid "Threshold of Clipping (%)"
@@ -19083,8 +18905,7 @@ msgstr "Ομαλή μετάβαση..."
 #: plug-ins/crossfadeclips.ny
 #, lisp-format
 msgid "Error.~%Invalid selection.~%More than 2 audio clips selected."
-msgstr ""
-"Σφάλμα.~%Άκυρη επιλογή.~%Επιλέχτηκαν περισσότερα από 2 αποσπάσματα ήχου."
+msgstr "Σφάλμα.~%Άκυρη επιλογή.~%Επιλέχτηκαν περισσότερα από 2 αποσπάσματα ήχου."
 
 #: plug-ins/crossfadeclips.ny
 #, lisp-format
@@ -19094,9 +18915,7 @@ msgstr "Σφάλμα.~%Άκυρη επιλογή.~%Κενός χώρος στη�
 #: plug-ins/crossfadeclips.ny
 #, lisp-format
 msgid "Error.~%Crossfade Clips may only be applied to one track."
-msgstr ""
-"Σφάλμα.~%Αποσπάσματα ομαλής μετάβασης μπορούν να εφαρμοστούν μόνο σε ένα "
-"κομμάτι."
+msgstr "Σφάλμα.~%Αποσπάσματα ομαλής μετάβασης μπορούν να εφαρμοστούν μόνο σε ένα κομμάτι."
 
 #: plug-ins/crossfadetracks.ny
 msgid "Crossfade Tracks"
@@ -19414,8 +19233,7 @@ msgid ""
 "                   Track sample rate is ~a Hz~%~\n"
 "                   Frequency must be less than ~a Hz."
 msgstr ""
-"Σφάλμα:~%~%Η συχνότητα (~a Hz) είναι υπερβολικά υψηλή για το ρυθμό "
-"δειγματοληψίας του κομματιού.~%~%~\n"
+"Σφάλμα:~%~%Η συχνότητα (~a Hz) είναι υπερβολικά υψηλή για το ρυθμό δειγματοληψίας του κομματιού.~%~%~\n"
 "                   Ο ρυθμός δειγματοληψίας του κομματιού είναι ~a Hz~%~\n"
 "                   Η συχνότητα πρέπει να είναι μικρότερη από ~a Hz."
 
@@ -19426,9 +19244,7 @@ msgstr "Label Sounds (Ετικέτες ήχων)"
 
 #: plug-ins/label-sounds.ny plug-ins/noisegate.ny
 msgid "Released under terms of the GNU General Public License version 2 or later."
-msgstr ""
-"Εκδόθηκε με τους όρους της Γενικής Δημόσιας Άδειας GNU, έκδοσης 2 ή "
-"μεταγενέστερης."
+msgstr "Εκδόθηκε με τους όρους της Γενικής Δημόσιας Άδειας GNU, έκδοσης 2 ή μεταγενέστερης."
 
 #: plug-ins/label-sounds.ny
 msgid "Threshold level (dB)"
@@ -19499,9 +19315,7 @@ msgstr "~ah ~am ~as"
 #: plug-ins/label-sounds.ny
 #, lisp-format
 msgid "Too many silences detected.~%Only the first 10000 labels added."
-msgstr ""
-"Εντοπίστηκαν πάρα πολλές σιωπές.  Προστέθηκαν ~%μόνο οι πρώτες 10000 "
-"ετικέτες."
+msgstr "Εντοπίστηκαν πάρα πολλές σιωπές.  Προστέθηκαν ~%μόνο οι πρώτες 10000 ετικέτες."
 
 #. i18n-hint: '~a' will be replaced by a time duration
 #: plug-ins/label-sounds.ny
@@ -19512,16 +19326,12 @@ msgstr "Σφάλμα. Η ~%επιλογή πρέπει να είναι μεγα�
 #: plug-ins/label-sounds.ny
 #, lisp-format
 msgid "No sounds found.~%Try lowering the 'Threshold' or reduce 'Minimum sound duration'."
-msgstr ""
-"Δεν βρέθηκαν ήχοι. ~%Δοκιμάστε να μειώσετε το 'Κατώφλι' ή μειώστε την "
-"'Ελάχιστη διάρκεια του ήχου'."
+msgstr "Δεν βρέθηκαν ήχοι. ~%Δοκιμάστε να μειώσετε το 'Κατώφλι' ή μειώστε την 'Ελάχιστη διάρκεια του ήχου'."
 
 #: plug-ins/label-sounds.ny
 #, lisp-format
 msgid "Labelling regions between sounds requires~%at least two sounds.~%Only one sound detected."
-msgstr ""
-"Η ονομασία περιοχών μεταξύ ήχων απαιτεί ~%τουλάχιστον δύο ήχους. Ανιχνεύθηκε "
-"~%μόνο ένας ήχος."
+msgstr "Η ονομασία περιοχών μεταξύ ήχων απαιτεί ~%τουλάχιστον δύο ήχους. Ανιχνεύθηκε ~%μόνο ένας ήχος."
 
 #: plug-ins/limiter.ny
 msgid "Limiter"
@@ -19709,8 +19519,7 @@ msgid ""
 "                 Track sample rate is ~a Hz.~%~\n"
 "                 Frequency must be less than ~a Hz."
 msgstr ""
-"Σφάλμα:~%~%Η συχνότητα (~a Hz) είναι υπερβολικά υψηλή για τον ρυθμό "
-"δειγματοληψίας του κομματιού.~%~%~\n"
+"Σφάλμα:~%~%Η συχνότητα (~a Hz) είναι υπερβολικά υψηλή για τον ρυθμό δειγματοληψίας του κομματιού.~%~%~\n"
 "                 Ο ρυθμός δειγματοληψίας του κομματιού είναι ~a Hz.~%~\n"
 "                 Η συχνότητα πρέπει να είναι μικρότερη από ~a Hz."
 
@@ -19769,9 +19578,7 @@ msgstr "Προειδοποίηση. ~%Αποτυχία αντιγραφής ορ
 #: plug-ins/nyquist-plug-in-installer.ny
 #, lisp-format
 msgid "Plug-ins installed.~%(Use the Plug-in Manager to enable effects):"
-msgstr ""
-"Εγκατάσταθηκαν πρόσθετα.~%(Χρησιμοποιήστε τον διαχειριστή προσθέτων για να "
-"ενεργοποιήσετε τα εφέ):"
+msgstr "Εγκατάσταθηκαν πρόσθετα.~%(Χρησιμοποιήστε τον διαχειριστή προσθέτων για να ενεργοποιήσετε τα εφέ):"
 
 #: plug-ins/nyquist-plug-in-installer.ny
 msgid "Plug-ins updated:"
@@ -19872,9 +19679,7 @@ msgstr "+/- 1"
 
 #: plug-ins/rhythmtrack.ny
 msgid "Set 'Number of bars' to zero to enable the 'Rhythm track duration'."
-msgstr ""
-"Ορίστε το 'Αριθμός γραμμών' σε μηδέν για να ενεργοποιηθεί το 'Διάρκεια "
-"κομματιού ρυθμού'."
+msgstr "Ορίστε το 'Αριθμός γραμμών' σε μηδέν για να ενεργοποιηθεί το 'Διάρκεια κομματιού ρυθμού'."
 
 #: plug-ins/rhythmtrack.ny
 msgid "Number of bars"
@@ -20093,15 +19898,12 @@ msgstr "~aΔεδομένα γράφτηκαν στο:~%~a"
 #: plug-ins/sample-data-export.ny
 #, lisp-format
 msgid "Sample Rate: ~a Hz.  Sample values on ~a scale.~%~a~%~a"
-msgstr ""
-"Ρυθμός δειγματοληψίας: ~a Hz.  Τιμές δειγματοληψίας σε κλίμακα ~a.~%~a~%~a"
+msgstr "Ρυθμός δειγματοληψίας: ~a Hz.  Τιμές δειγματοληψίας σε κλίμακα ~a.~%~a~%~a"
 
 #: plug-ins/sample-data-export.ny
 #, lisp-format
 msgid "~a   ~a~%~aSample Rate: ~a Hz.~%Length processed: ~a samples ~a seconds.~a"
-msgstr ""
-"~a   ~a~%~aΡυθμός δειγματοληψίας: ~a Hz.~%Επεξεργάστηκε μήκος: ~a δείγματα ~"
-"a δευτερόλεπτα.~a"
+msgstr "~a   ~a~%~aΡυθμός δειγματοληψίας: ~a Hz.~%Επεξεργάστηκε μήκος: ~a δείγματα ~a δευτερόλεπτα.~a"
 
 #: plug-ins/sample-data-export.ny
 #, lisp-format
@@ -20119,10 +19921,8 @@ msgid ""
 "                  samples, ~a seconds.~%Peak amplitude: ~a (linear) ~a dB.  Unweighted RMS: ~a dB.~%~\n"
 "                  DC offset: ~a~a"
 msgstr ""
-"~a~%Ρυθμός δειγματοληψίας: ~a Hz. Τιμές δείγματος στην κλίμακα ~a scale. "
-"~a.~%~aΕπεξεργάστηκε μήκος: ~a ~\n"
-"                  δείγματα, ~a δευτερόλεπτα.~%Πλάτος κορυφής: ~a (γραμμικό) ~"
-"a dB.  Αστάθμιστο RMS: ~a dB.~%~\n"
+"~a~%Ρυθμός δειγματοληψίας: ~a Hz. Τιμές δείγματος στην κλίμακα ~a scale. ~a.~%~aΕπεξεργάστηκε μήκος: ~a ~\n"
+"                  δείγματα, ~a δευτερόλεπτα.~%Πλάτος κορυφής: ~a (γραμμικό) ~a dB.  Αστάθμιστο RMS: ~a dB.~%~\n"
 "                  Μετατόπιση DC: ~a~a"
 
 #: plug-ins/sample-data-export.ny
@@ -20454,9 +20254,7 @@ msgstr ""
 #: plug-ins/vocalrediso.ny
 #, lisp-format
 msgid "Pan position: ~a~%The left and right channels are correlated by about ~a %. This means:~%~a~%"
-msgstr ""
-"Θέση μετακίνησης: ~a~%Το αριστερό και το δεξιό κανάλι συσχετίζονται κατά "
-"περίπου ~a %. Αυτό σημαίνει:~%~a~%"
+msgstr "Θέση μετακίνησης: ~a~%Το αριστερό και το δεξιό κανάλι συσχετίζονται κατά περίπου ~a %. Αυτό σημαίνει:~%~a~%"
 
 #: plug-ins/vocalrediso.ny
 msgid ""
@@ -20466,23 +20264,19 @@ msgid ""
 msgstr ""
 " - Τα δύο κανάλια είναι ταυτόσημα, δηλ. δύο μονοφωνικά.\n"
 "                Το κέντρο δεν μπορεί να μετακινηθεί.\n"
-"                Οποιαδήποτε παραμένουσα διαφορά μπορεί να προκληθεί από "
-"απωλεστική κωδικοποίηση."
+"                Οποιαδήποτε παραμένουσα διαφορά μπορεί να προκληθεί από απωλεστική κωδικοποίηση."
 
 #: plug-ins/vocalrediso.ny
 msgid ""
 " - The two Channels are strongly related, i.e. nearly mono or extremely panned.\n"
 "                Most likely, the center extraction will be poor."
 msgstr ""
-" - Τα δύο κανάλια συσχετίζονται έντονα, δηλ. σχεδόν μονοφωνικό ή ακραία "
-"μετακινημένο.\n"
+" - Τα δύο κανάλια συσχετίζονται έντονα, δηλ. σχεδόν μονοφωνικό ή ακραία μετακινημένο.\n"
 "                Κατά πάσα πιθανότητα, η εξαγωγή του κέντρου θα είναι φτωχή."
 
 #: plug-ins/vocalrediso.ny
 msgid " - A fairly good value, at least stereo in average and not too wide spread."
-msgstr ""
-" - Μια αρκετά καλή τιμή, τουλάχιστον στερεοφωνική στο μέσο όρο και όχι "
-"υπερβολικά εξαπλωμένη."
+msgstr " - Μια αρκετά καλή τιμή, τουλάχιστον στερεοφωνική στο μέσο όρο και όχι υπερβολικά εξαπλωμένη."
 
 #: plug-ins/vocalrediso.ny
 msgid ""
@@ -20490,8 +20284,7 @@ msgid ""
 "                However, the center extraction depends also on the used reverb."
 msgstr ""
 " - Μια ιδανική τιμή για στερεοφωνικό.\n"
-"                Όμως, η εξαγωγή του κέντρου εξαρτάται επίσης από τη "
-"χρησιμοποιούμενη αντήχηση."
+"                Όμως, η εξαγωγή του κέντρου εξαρτάται επίσης από τη χρησιμοποιούμενη αντήχηση."
 
 #: plug-ins/vocalrediso.ny
 msgid ""
@@ -20500,8 +20293,7 @@ msgid ""
 "                The center extraction can still be good though."
 msgstr ""
 " - Τα δυο κανάλια σχεδόν δεν συσχετίζονται.\n"
-"                Είτε έχετε μόνο θόρυβο ή το κομμάτι επεξεργάστηκε με μη "
-"εξισορροπημένο τρόπο.\n"
+"                Είτε έχετε μόνο θόρυβο ή το κομμάτι επεξεργάστηκε με μη εξισορροπημένο τρόπο.\n"
 "                Η εξαγωγή του κέντρου μπορεί να είναι ακόμα καλή, όμως."
 
 #: plug-ins/vocalrediso.ny
@@ -20510,8 +20302,7 @@ msgid ""
 "                This can cause strange effects.\n"
 "                Especially when played by only one speaker."
 msgstr ""
-" - Αν και το κομμάτι είναι στερεοφωνικό, το πεδίο είναι προφανώς πολύ πλατύ."
-"\n"
+" - Αν και το κομμάτι είναι στερεοφωνικό, το πεδίο είναι προφανώς πολύ πλατύ.\n"
 "                Αυτό μπορεί να προκαλέσει περίεργα εφέ.\n"
 "                Ιδιαίτερα, όταν παίζεται από ένα μόνο ηχείο."
 
@@ -20524,8 +20315,7 @@ msgid ""
 msgstr ""
 " - Τα δύο κανάλια είναι σχεδόν ταυτόσημα.\n"
 "                  Προφανώς, έχει χρησιμοποιηθεί ένα ψευδοστερεοφωνικό εφέ\n"
-"                  για την εξάπλωση του σήματος μέσω της φυσικής απόστασης "
-"μεταξύ των ηχείων.\n"
+"                  για την εξάπλωση του σήματος μέσω της φυσικής απόστασης μεταξύ των ηχείων.\n"
 "                   Μην περιμένετε καλά αποτελέσματα από αφαίρεση του κέντρου."
 
 #: plug-ins/vocalrediso.ny
