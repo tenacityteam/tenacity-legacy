@@ -99,7 +99,6 @@ void AboutDialog::CreateTenacityTab(ShuttleGui& AboutDialogGUI) {
     wxStringOutputStream tenacityPageGeneratedContent;
     wxTextOutputStream tenacityPageContent(tenacityPageGeneratedContent);   // string to build up list of information in
 
-    
     tenacityPageContent << wxT("<center>");
         // Tenacity specific credits
         GenerateTenacityPageDescription(tenacityPageContent);
