@@ -9,6 +9,7 @@
 #ifndef BUILD_INFO_H
 #define BUILD_INFO_H
 
+#include "wx/cpp.h"
 #include <wx/string.h>
 #include <wx/sstream.h>
 #include <wx/txtstrm.h>
@@ -17,6 +18,7 @@
 
 // RevisionIdent contains the REV_TIME and REV_LONG defines from git commit information
 #include "RevisionIdent.h"
+#include <wx/ctrlsub.h>
 
 // This define replaces the original that modified the macro in wxwidgets
 #define CUSTOM_wxMAKE_VERSION_DOT_STRING_T(x, y, z) wxSTRINGIZE_T(x) wxT(".") wxSTRINGIZE_T(y) wxT(".") wxSTRINGIZE_T(z) wxT("(Tenacity)")
@@ -44,15 +46,39 @@ public:
           switch (BuildInfo::CurrentBuildCompiler) {
 
           case BuildInfo::CompilerType::MSVC:
+            #if !defined(_MSC_VER) || !defined(_MSC_FULL_VER) || !defined (_MSC_BUILD)
+              // This should be unreachable, but it makes the compiler realize that they will always be defined
+              #define _MSC_VER 0
+              #define _MSC_FULL_VER 0
+              #define _MSC_BUILD 0
+            #endif
             return wxString::Format(wxT("MSVC %02d.%02d.%05d.%02d"), _MSC_VER / 100, _MSC_VER % 100, _MSC_FULL_VER % 100000, _MSC_BUILD);
 
           case BuildInfo::CompilerType::MinGW:
+            #if !defined(__GNUC__) || !defined (__GNUC_MINOR__) || !defined(__GNUC_PATCHLEVEL__)
+              // This should be unreachable, but it makes the compiler realize that they will always be defined
+              #define __GNUC__ 0
+              #define __GNUC_MINOR__ 0
+              #define __GNUC_PATCHLEVEL__ 0
+            #endif
             return wxString::Format(wxT("MinGW %s"), CUSTOM_wxMAKE_VERSION_DOT_STRING_T( __GNUC__, __GNUC_MINOR__, __GNUC_PATCHLEVEL__));
 
           case BuildInfo::CompilerType::GCC:
+            #if !defined(__GNUC__) || !defined (__GNUC_MINOR__) || !defined(__GNUC_PATCHLEVEL__)
+              // This should be unreachable, but it makes the compiler realize that they will always be defined
+              #define __GNUC__ 0
+              #define __GNUC_MINOR__ 0
+              #define __GNUC_PATCHLEVEL__ 0
+            #endif
             return wxString::Format(wxT("GCC %s"), CUSTOM_wxMAKE_VERSION_DOT_STRING_T( __GNUC__, __GNUC_MINOR__, __GNUC_PATCHLEVEL__));
 
           case BuildInfo::CompilerType::Clang:
+            #if !defined(__clang_major__) || !defined (__clang_minor__) || !defined(__clang_patchlevel__)
+              // This should be unreachable, but it makes the compiler realize that they will always be defined
+              #define __clang_major__ 0
+              #define __clang_minor__ 0
+              #define __clang_patchlevel__ 0
+            #endif
             return wxString::Format( wxT("clang %s"), CUSTOM_wxMAKE_VERSION_DOT_STRING_T(__clang_major__, __clang_minor__, __clang_patchlevel__));
 
           case BuildInfo::CompilerType::Unknown:
