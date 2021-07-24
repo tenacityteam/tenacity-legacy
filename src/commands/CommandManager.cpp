@@ -1608,8 +1608,8 @@ void CommandManager::CheckDups()
 // must both be in either the first or the second group, so there is no need
 // to test for this case.
 // Note that if a user is using the full set of default shortcuts, and one
-// of these is changed, then if /GUI/Shortcuts/FullDefaults is not set in audacity.cfg,
-// because the defaults appear as user assigned shortcuts in audacity.cfg,
+// of these is changed, then if /GUI/Shortcuts/FullDefaults is not set in tenacity.cfg,
+// because the defaults appear as user assigned shortcuts in tenacity.cfg,
 // the previous default overrides the changed default, and no duplicate can
 // be introduced.
 void CommandManager::RemoveDuplicateShortcuts()

@@ -743,9 +743,9 @@ void ToolManager::ReadConfig()
    int vMajor, vMinor, vMicro;
    gPrefs->GetVersionKeysInit(vMajor, vMinor, vMicro);
    bool useLegacyDock = false;
-   // note that vMajor, vMinor, and vMicro will all be zero if either it's a new audacity.cfg file
+   // note that vMajor, vMinor, and vMicro will all be zero if either it's a new tenaciyu.cfg file
    // or the version is less than 1.3.13 (when there were no version keys according to the comments in
-   // InitPreferences()). So for new audacity.cfg
+   // InitPreferences()). So for new tenacity.cfg
    // file useLegacyDock will be true, but this doesn't matter as there are no Dock or DockV2 keys in the file yet.
    if (vMajor <= 1 ||
       (vMajor == 2 && (vMinor <= 1 || (vMinor == 2 && vMicro <= 1))))   // version <= 2.2.1
@@ -854,7 +854,7 @@ void ToolManager::ReadConfig()
          }
 #else
          // note that this section is here because if you had been using sync-lock and now you aren't,
-         // the space for the extra button is stored in audacity.cfg, and so you get an extra space
+         // the space for the extra button is stored in tenacity.cfg, and so you get an extra space
          // in the EditToolbar.
          // It is needed so that the meterToolbar size gets preserved.
          // Longer-term we should find a better fix for this.
