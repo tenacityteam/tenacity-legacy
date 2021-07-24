@@ -10,15 +10,13 @@
 #define BUILD_INFO_H
 
 #include <wx/string.h>
+#include <wx/sstream.h>
+#include <wx/txtstrm.h>
+
+#include <Internat.h>
 
 // RevisionIdent contains the REV_TIME and REV_LONG defines from git commit information
 #include "RevisionIdent.h"
-
-
-//This needs to be outside the #ifdef or it won't end up in the POT file consistently
-
-
-
 
 // This define replaces the original that modified the macro in wxwidgets
 #define CUSTOM_wxMAKE_VERSION_DOT_STRING_T(x, y, z) wxSTRINGIZE_T(x) wxT(".") wxSTRINGIZE_T(y) wxT(".") wxSTRINGIZE_T(z) wxT("(Tenacity)")
@@ -49,10 +47,10 @@ public:
             return wxString::Format(wxT("MSVC %02d.%02d.%05d.%02d"), _MSC_VER / 100, _MSC_VER % 100, _MSC_FULL_VER % 100000, _MSC_BUILD);
 
           case BuildInfo::CompilerType::MinGW:
-            return wxString::Format(wxT("MinGW "), CUSTOM_wxMAKE_VERSION_DOT_STRING_T( __GNUC__, __GNUC_MINOR__, __GNUC_PATCHLEVEL__));
+            return wxString::Format(wxT("MinGW %s"), CUSTOM_wxMAKE_VERSION_DOT_STRING_T( __GNUC__, __GNUC_MINOR__, __GNUC_PATCHLEVEL__));
 
           case BuildInfo::CompilerType::GCC:
-            return wxString::Format(wxT("GCC "), CUSTOM_wxMAKE_VERSION_DOT_STRING_T( __GNUC__, __GNUC_MINOR__, __GNUC_PATCHLEVEL__));
+            return wxString::Format(wxT("GCC %s"), CUSTOM_wxMAKE_VERSION_DOT_STRING_T( __GNUC__, __GNUC_MINOR__, __GNUC_PATCHLEVEL__));
 
           case BuildInfo::CompilerType::Clang:
             return wxString::Format( wxT("clang %s"), CUSTOM_wxMAKE_VERSION_DOT_STRING_T(__clang_major__, __clang_minor__, __clang_patchlevel__));
@@ -99,22 +97,30 @@ public:
            #endif
         }
 
+        static constexpr inline bool isDebugBuild(){
+            #ifdef _DEBUG
+                return true;
+            #else
+                return false;
+            #endif
+        }
+
         static const wxString getBuildType() {
 
             wxStringOutputStream o;
             wxTextOutputStream buildTypeString(o);
 
-            if(BuildInfo::isCMakeBuild()){
+            if constexpr (isCMakeBuild()){
                 buildTypeString << Verbatim("CMake ");
             }
 
-            if constexpr (_DEBUG){
+            if constexpr (isDebugBuild()){
                 buildTypeString << XO("Debug build (debug level %d)").Format(wxDEBUG_LEVEL).Translation();
             }else{
                 buildTypeString << XO("Release build (debug level %d)").Format(wxDEBUG_LEVEL).Translation();
             }
 
-            if(BuildInfo::is64bits()) {
+            if constexpr (is64bits()) {
                 buildTypeString << XO(", 64 bits").Translation();
             }
 
