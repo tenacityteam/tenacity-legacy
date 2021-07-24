@@ -122,6 +122,13 @@ jobs:
         restore-keys: |
           host-${{ matrix.config.name }}-
 
+      # Install scdoc with conan TODO: Move conan pkg to own repo
+    - name: "[Linux] Install scdoc"
+      if: runner.os == 'Linux'
+      run: |
+        conan remote add rigs-of-rods-deps https://conan.cloudsmith.io/rigs-of-rods/deps/
+        conan install scdoc/1.11.1@anotherfoxguy/stable -g=virtualenv --build=missing
+
     - name: Configure
       env:
         # Apple code signing
