@@ -61,4 +61,9 @@ else # Linux & others
     pip3 install wheel setuptools # need these first to install other packages (e.g. conan)
     pip3 install "${pip_packages[@]}"
 
+    # scdoc
+    git clone https://git.sr.ht/~sircmpwn/scdoc
+    cd scdoc
+    make; sudo make install
+
 fi

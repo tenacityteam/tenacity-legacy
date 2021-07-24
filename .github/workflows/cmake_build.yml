@@ -102,6 +102,11 @@ jobs:
       if: runner.os == 'Windows'
       run: choco install sccache
 
+    # Temporary: delete after setting up cmake properly
+    - name: "[Linux] Generate man page"
+      if: runner.os == 'Linux'
+      run: scdoc < "help/tenacity.1.scd" > "help/tenacity.1"
+
     - name: "Set up compiler cache"
       uses: actions/cache@v2
       with:
