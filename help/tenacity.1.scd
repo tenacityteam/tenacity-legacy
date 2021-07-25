@@ -14,16 +14,16 @@ tenacity - Graphical cross-platform audio editor
 
 # OPTIONS
 
-*-help*
+*-h --help*
 	Displays a brief list of command line options.
 
-*-version*
+*-v --version*
 	Displays the Tenacity version number.
 
-*-test*
+*-t --test*
 	Runs self diagnostics tests (only present in development builds).
 
-*-blocksize nnn*
+*-b --blocksize nnn*
 	Sets the Tenacity block size for writing files to disk to nnn bytes.
 
 # DESCRIPTION
@@ -132,4 +132,3 @@ James Crook, Vaughan Johnson, Leland Lucius, and Markus Meyer,
 but dozens of others have contributed.
 
 http://www.audacityteam.org/about/credits/
-
