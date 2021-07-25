@@ -32,6 +32,10 @@ class AUDACITY_DLL_API AboutDialog final : public wxDialogWrapper{
 
     public:
 
+    static constexpr int ABOUT_DIALOG_WIDTH = 506;
+    static constexpr int ABOUT_DIALOG_HEIGHT = 359;
+    static const inline wxSize ABOUT_DIALOG_DEFAULT_SIZE = wxSize(ABOUT_DIALOG_WIDTH, ABOUT_DIALOG_HEIGHT);
+
     AboutDialog() : AboutDialog(nullptr){};
     AboutDialog(wxWindow * parent);
     virtual ~AboutDialog();
@@ -46,7 +50,7 @@ class AUDACITY_DLL_API AboutDialog final : public wxDialogWrapper{
     enum Role
     {
         roleTenacityTeamMember,
-        roleThanks,
+        roleTenacityThanks,
         roleLibrary,
         rolePreforkTeamMember,
         rolePreforkEmeritusTeam,
@@ -64,9 +68,10 @@ class AUDACITY_DLL_API AboutDialog final : public wxDialogWrapper{
     static wxImage GenerateTenacityLogoRescaledImage(const float fScale);
     void GenerateTenacityPageDescription(wxTextOutputStream & tos);
     void GenerateTenacityTeamMembersInfo(wxTextOutputStream & tos);
-    void GenerateSpecialThanksInfo(wxTextOutputStream & tos);
+    void GenerateTenacitySpecialThanksInfo(wxTextOutputStream & tos);
     void GenerateTenacityLibsInfo(wxTextOutputStream & tos);
 
+    void GeneratePreforkSubheader(wxTextOutputStream & tos);
     void GeneratePreforkTeamMembersInfo(wxTextOutputStream & tos);
     void GeneratePreforkEmeritusInfo(wxTextOutputStream & tos);
     void GeneratePreforkContributorInfo(wxTextOutputStream & tos);
@@ -74,16 +79,15 @@ class AUDACITY_DLL_API AboutDialog final : public wxDialogWrapper{
     void GeneratePreforkTranslatorsInfo(wxTextOutputStream & tos);
     void GeneratePreforkSpecialThanksInfo(wxTextOutputStream & tos);
     void GeneratePreforkWebsiteInfo(wxTextOutputStream & tos);
+    void GeneratePreforkTrademarkDisclaimer(wxTextOutputStream & tos);
 
     void PopulateCreditsList();
     void AddCredit(const wxString & name, Role role);
     void AddCredit(const wxString & name, TranslatableString format, Role role);
     wxString GetCreditsByRole(Role role);
 
-    static void AddBuildInfoRow(wxTextOutputStream * str, const wxChar * libname,
-                                const TranslatableString & libdesc, const TranslatableString & status);
-    static void AddBuildInfoRow(wxTextOutputStream * str,
-                                const TranslatableString & description, const wxChar * spec);
+    static void AddBuildInfoRow(wxTextOutputStream * str, const wxChar * libname, const TranslatableString & libdesc, const TranslatableString & status);
+    static void AddBuildInfoRow(wxTextOutputStream * str, const TranslatableString & description, const wxChar * spec);
 };
 
 #endif
