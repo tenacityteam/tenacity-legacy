@@ -126,7 +126,7 @@ jobs:
     - name: "[Linux] Install scdoc"
       if: runner.os == 'Linux'
       run: |
-        conan remote add rigs-of-rods-deps https://conan.cloudsmith.io/rigs-of-rods/deps/
+        conan remote add -f rigs-of-rods-deps https://conan.cloudsmith.io/rigs-of-rods/deps/
         conan install scdoc/1.11.1@anotherfoxguy/stable -g=virtualenv --build=missing
 
     - name: Configure
