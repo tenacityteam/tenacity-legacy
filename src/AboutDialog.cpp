@@ -29,6 +29,7 @@ hold information about a credit item in the Credits list
 #include <wx/sstream.h>
 #include <wx/txtstrm.h>
 
+#include <BuildInfo.h>
 #include "FileNames.h"
 #include "HelpText.h"
 #include "ShuttleGui.h"
@@ -44,28 +45,10 @@ hold information about a credit item in the Credits list
 #include "../images/AudacityLogoWithName.xpm"
 #endif
 
-// RevisionIdent contains the REV_TIME and REV_LONG defines from git commit information
-#include "RevisionIdent.h"
 
-//This needs to be outside the #ifdef or it won't end up in the POT file consistently
-static wxString NoDateTimeText = XO("Unknown date and time").Translation();
-
-#ifndef REV_TIME
-#define REV_TIME NoDateTimeText
-#endif
-
-//This needs to be outside the #ifdef or it won't end up in the POT file consistently
-static wxString NoRevisionText = XO("No revision identifier was provided").Translation();
-
-#ifdef REV_LONG
-#define REV_IDENT wxString( "[[https://github.com/tenacityteam/tenacity/commit/" )+ REV_LONG + "|" + wxString( REV_LONG ).Left(6) + "]] of " +  REV_TIME 
-#else
-#define REV_IDENT (NoRevisionText)
-#endif
 
 // To substitute into many other translatable strings
 static const auto ProgramName = Verbatim("Tenacity");
-
 static const auto PreforkProgramName = Verbatim("Audacity");
 
 // ----------------------------------------------------------------------------
@@ -110,37 +93,29 @@ void AboutDialog::OnOK(wxCommandEvent& WXUNUSED(event)) {
     EndModal(wxID_OK);
 }
 
-
-#define ABOUT_DIALOG_WIDTH 506
-#define ABOUT_DIALOG_HEIGHT 359
-
 void AboutDialog::CreateTenacityTab(ShuttleGui& AboutDialogGUI) {
     PopulateCreditsList();
 
     wxStringOutputStream tenacityPageGeneratedContent;
     wxTextOutputStream tenacityPageContent(tenacityPageGeneratedContent);   // string to build up list of information in
 
-    GenerateTenacityPageDescription(tenacityPageContent);
+    tenacityPageContent << wxT("<center>");
+        // Tenacity specific credits
+        GenerateTenacityPageDescription(tenacityPageContent);
+        GenerateTenacityTeamMembersInfo(tenacityPageContent);
+        GenerateTenacitySpecialThanksInfo(tenacityPageContent);
+        GenerateTenacityLibsInfo(tenacityPageContent);
 
-    GenerateTenacityTeamMembersInfo(tenacityPageContent);
-    GenerateSpecialThanksInfo(tenacityPageContent);
-    GenerateTenacityLibsInfo(tenacityPageContent);
-
-    // Pre-form (Audacity) credits
-
-    tenacityPageContent
-        << wxT("<center><h3>")
-        << PreforkProgramName
-        << wxT("</h3></center>");
-
-    GeneratePreforkTeamMembersInfo(tenacityPageContent);
-    GeneratePreforkEmeritusInfo(tenacityPageContent);
-    GeneratePreforkContributorInfo(tenacityPageContent);
-    GeneratePreforkTranslatorsInfo(tenacityPageContent);
-    GeneratePreforkGraphicsInfo(tenacityPageContent);
-    GeneratePreforkSpecialThanksInfo(tenacityPageContent);
-    GeneratePreforkWebsiteInfo(tenacityPageContent);
-
+        // Pre-fork (Audacity) credits
+        GeneratePreforkSubheader(tenacityPageContent);
+        GeneratePreforkTeamMembersInfo(tenacityPageContent);
+        GeneratePreforkEmeritusInfo(tenacityPageContent);
+        GeneratePreforkContributorInfo(tenacityPageContent);
+        GeneratePreforkTranslatorsInfo(tenacityPageContent);
+        GeneratePreforkGraphicsInfo(tenacityPageContent);
+        GeneratePreforkSpecialThanksInfo(tenacityPageContent);
+        GeneratePreforkWebsiteInfo(tenacityPageContent);
+        GeneratePreforkTrademarkDisclaimer(tenacityPageContent);
     tenacityPageContent << wxT("</center>");
 
     auto pPage = AboutDialogGUI.StartNotebookPage(ProgramName);
@@ -157,51 +132,15 @@ void AboutDialog::CreateTenacityTab(ShuttleGui& AboutDialogGUI) {
         AboutDialogGUI.Prop(MINIMUM_PROPORTION).AddWindow(AboutDialog::icon);
     }
 
-    HtmlWindow* html = safenew LinkingHtmlWindow(AboutDialogGUI.GetParent(), -1,
+    HtmlWindow* html = safenew LinkingHtmlWindow(AboutDialogGUI.GetParent(), wxID_ANY,
                                                  wxDefaultPosition,
-                                                 wxSize(ABOUT_DIALOG_WIDTH, ABOUT_DIALOG_HEIGHT),
+                                                 ABOUT_DIALOG_DEFAULT_SIZE,
                                                  wxHW_SCROLLBAR_AUTO | wxSUNKEN_BORDER);
     html->SetPage(FormatHtmlText(tenacityPageGeneratedContent.GetString()));
 
     AboutDialogGUI.Prop(GROWING_PROPORTION).Position(wxEXPAND).Focus().AddWindow(html);
     AboutDialogGUI.EndVerticalLay();
     AboutDialogGUI.EndNotebookPage();
-}
-
-static const wxString getCompilerVersion() {
-#if defined(_MSC_FULL_VER)
-    return wxString::Format(wxT("MSVC %02d.%02d.%05d.%02d"), _MSC_VER / 100, _MSC_VER % 100, _MSC_FULL_VER % 100000, _MSC_BUILD);
-#elif defined(__GNUC_PATCHLEVEL__) && defined(__MINGW32__)
-    return wxT("MinGW ") wxMAKE_VERSION_DOT_STRING_T(__GNUC__, __GNUC_MINOR__, __GNUC_PATCHLEVEL__);
-#elif defined(__GNUC_PATCHLEVEL__)
-    return wxT("GCC ") wxMAKE_VERSION_DOT_STRING_T(__GNUC__, __GNUC_MINOR__, __GNUC_PATCHLEVEL__);
-#elif defined(__clang_version__)
-    return wxT("clang ") __clang_version__;
-#else
-    return wxt("Unknown!!!");
-#endif
-}
-
-static const TranslatableString getBuildType() {
-
-    auto buildType = Verbatim("Unknown Build Type!!!");
-
-#ifdef _DEBUG
-    buildType = XO("Debug build (debug level %d)").Format(wxDEBUG_LEVEL);
-#else
-    buildType = XO("Release build (debug level %d)").Format(wxDEBUG_LEVEL);
-#endif
-
-    if ((sizeof(void*) == 8)) {
-        buildType = XO("%s, 64 bits").Format(buildType);
-    }
-
-    // Remove this once the transition to CMake is complete
-#ifdef CMAKE
-    buildType = Verbatim("CMake %s").Format(buildType);
-#endif
-
-    return buildType;
 }
 
 /** \brief: Fills out the "Information" tab of the preferences dialogue
@@ -237,9 +176,9 @@ void AboutDialog::CreateInformationTab(ShuttleGui& AboutDialogGUI) {
         << XO("The Build")
         << wxT("</h3>\n<table>"); // start build info table
 
-    AddBuildInfoRow(&informationStr, XO("Commit Id:"), REV_IDENT);
-    AddBuildInfoRow(&informationStr, XO("Build type:"), getBuildType().Translation());
-    AddBuildInfoRow(&informationStr, XO("Compiler:"), getCompilerVersion());
+    AddBuildInfoRow(&informationStr, XO("Commit Id:"), BuildInfo::getRevisionIdentifier());
+    AddBuildInfoRow(&informationStr, XO("Build type:"), BuildInfo::getBuildType());
+    AddBuildInfoRow(&informationStr, XO("Compiler:"), BuildInfo::getCompilerVersionString());
 
     // Install prefix
 #ifdef __WXGTK__
@@ -250,21 +189,6 @@ void AboutDialog::CreateInformationTab(ShuttleGui& AboutDialogGUI) {
     // Location of settings
     AddBuildInfoRow(&informationStr, XO("Settings folder:"), FileNames::DataDir());
 
-    /*
-    informationStr << wxT("</table>\n"); // end of build info table
-    informationStr
-        << wxT("<h3>")
-        /* i18n-hint: Libraries that are essential to Tenacity *//*
-        << XO("Core Libraries")
-        << wxT("</h3>\n<table>");  // start table of core libraries
-
-    AddBuildInfoRow(&informationStr, wxT("wxWidgets"), XO("Cross-platform GUI library"), Verbatim(wxVERSION_NUM_DOT_STRING_T));
-    AddBuildInfoRow(&informationStr, wxT("PortAudio"), XO("Audio playback and recording"), Verbatim(wxT("v19")));
-    AddBuildInfoRow(&informationStr, wxT("libsoxr"), XO("Sample rate conversion"), enabled);
-
-    informationStr << wxT("</table>\n"); // end table of core libraries
-    */
-
     informationStr
         << wxT("<h3>")
         << XO("File Format Support")
@@ -273,6 +197,9 @@ void AboutDialog::CreateInformationTab(ShuttleGui& AboutDialogGUI) {
     informationStr
         << wxT("<table>");   // start table of file formats supported
 
+    AddBuildInfoRow(&informationStr, wxT("wxWidgets"), XO("Cross-platform GUI library"), Verbatim(wxVERSION_NUM_DOT_STRING_T));
+    AddBuildInfoRow(&informationStr, wxT("PortAudio"), XO("Audio playback and recording"), Verbatim(wxT("v19")));
+    AddBuildInfoRow(&informationStr, wxT("libsoxr"), XO("Sample rate conversion"), enabled);
     AddBuildInfoRow(&informationStr, wxT("libmad"), XO("MP3 Importing"), USE_LIBMAD ? enabled : disabled);
     /* i18n-hint: Ogg is the container format. Vorbis is the compression codec. Both are proper nouns and shouldn't be translated */
     AddBuildInfoRow(&informationStr, wxT("libvorbis"), XO("Ogg Vorbis Import and Export"), USE_LIBVORBIS ? enabled : disabled);
@@ -683,8 +610,8 @@ void AboutDialog::PopulateCreditsList() {
 
     // Thanks
 
-    AddCredit(wxT("Drew \"SirCmpwn\" DeVault"), roleThanks);
-    AddCredit(wxT("Filipe \"falkTX\" Coelho"), roleThanks);
+    AddCredit(wxT("Drew \"SirCmpwn\" DeVault"), roleTenacityThanks);
+    AddCredit(wxT("Filipe \"falkTX\" Coelho"), roleTenacityThanks);
 
     // Libraries section
 
@@ -834,16 +761,14 @@ wxImage AboutDialog::GenerateTenacityLogoRescaledImage(const float fScale) {
 
 void AboutDialog::GenerateTenacityPageDescription(wxTextOutputStream& tos) {
     tos
-        << wxT("<center>")
         // DA: Description and provenance in About box
     #ifdef EXPERIMENTAL_DA
     #undef _
     #define _(s) wxGetTranslation((s))
         << wxT("<h3>DarkTenacity ")
         << wxString(AUDACITY_VERSION_STRING)
-        << wxT("</center></h3>")
-        << wxT("Customised version of the Tenacity free, open source, cross-platform software ")
-        << wxT("for recording and editing sounds.")
+        << wxT("</h3>")
+        << wxT("Customised version of the free, open source, cross-platform audio recorder and editor Tenacity.")
 
     #else
         << XO("<h3>")
@@ -853,7 +778,6 @@ void AboutDialog::GenerateTenacityPageDescription(wxTextOutputStream& tos) {
         << wxT("</h3>")
         /* i18n-hint: The program's name substitutes for %s */
         << XO("Free, open source, cross-platform audio recorder and editor.")
-        << wxT("</center>")
     #endif
 
         // << wxT("<p><br>")
@@ -889,13 +813,13 @@ void AboutDialog::GenerateTenacityTeamMembersInfo(wxTextOutputStream& tos) {
         << GetCreditsByRole(roleTenacityTeamMember);
 }
 
-void AboutDialog::GenerateSpecialThanksInfo(wxTextOutputStream& tos) {
+void AboutDialog::GenerateTenacitySpecialThanksInfo(wxTextOutputStream& tos) {
 
     tos
         << wxT("<p><b>")
-        << XO("Special thanks:")
+        << XO("Tenacity Special thanks:")
         << wxT("</b><br>")
-        << GetCreditsByRole(roleThanks);
+        << GetCreditsByRole(roleTenacityThanks);
 }
 
 void AboutDialog::GenerateTenacityLibsInfo(wxTextOutputStream& tos) {
@@ -910,7 +834,15 @@ void AboutDialog::GenerateTenacityLibsInfo(wxTextOutputStream& tos) {
         << GetCreditsByRole(roleLibrary);
 }
 
-void AboutDialog::GeneratePreforkTeamMembersInfo(wxTextOutputStream& tos) {
+void AboutDialog::GeneratePreforkSubheader(wxTextOutputStream &tos) {
+    tos
+        << wxT("<center><h3>")
+        << PreforkProgramName
+        << wxT("</h3></center>")
+        << wxT("<center>");
+}
+
+void AboutDialog::GeneratePreforkTeamMembersInfo(wxTextOutputStream &tos) {
     tos
         << wxT("<p><b>")
         /* i18n-hint: The program's name substitutes for %s */
@@ -1000,6 +932,15 @@ void AboutDialog::GeneratePreforkWebsiteInfo(wxTextOutputStream& tos) {
 #endif
 }
 
+void AboutDialog::GeneratePreforkTrademarkDisclaimer(wxTextOutputStream& tos) {
+
+    tos
+        /* i18n-hint The registered trademark symbol (r) is substituted at %s*/
+        << XO("The Audacity%s trademark is used within this software for descriptive and informational purposes only.").Format("<sup>&reg;</sup>")
+        << wxT("\n")
+        << XO("Tenacity is not produced or endorsed by MuseCY SM Ltd. or Dominic M Mazzoni.");
+}
+
 void AboutDialog::AddCredit(const wxString& name, const Role role) {
     AddCredit(name, {}, role);
 }
@@ -1008,6 +949,7 @@ void AboutDialog::AddCredit(const wxString& name, TranslatableString format, con
     auto str = format.empty()
         ? Verbatim(name)
         : TranslatableString{format}.Format(name);
+
     creditItems.emplace_back(std::move(str), role);
 }
 
