@@ -47,10 +47,6 @@ used throughout Audacity into this one place.
 #include <windows.h>
 #endif
 
-#if defined(__WXGTK__)
-static wxString gOldUnixDataDir;
-#endif
-
 static wxString gConfigDir;
 static wxString gDataDir;
 
@@ -233,16 +229,11 @@ wxString FileNames::LowerCaseAppNameInPath( const wxString & dirIn){
 
 FilePath FileNames::ConfigDir()
 {
-#if defined(__WXGTK__)
-   if (gOldUnixDataDir.empty())
-      gOldUnixDataDir = wxFileName::GetHomeDir() + wxT("/.audacity-data");
-#endif
-
    if (gConfigDir.empty())
    {
       wxFileName exePath(PlatformCompatibility::GetExecutablePath());
 #if defined(__WXMAC__)
-      // Path ends for example in "Audacity.app/Contents/MacOSX"
+      // Path ends for example in "Tenacity.app/Contents/MacOSX"
       // just remove the MacOSX part.
       exePath.RemoveLastDir();
 #endif
@@ -251,15 +242,13 @@ FilePath FileNames::ConfigDir()
       {
          // Use "Portable Settings" folder
          gConfigDir = portablePrefsPath.GetFullPath();
-#if defined(__WXGTK__)
-      } else if (::wxDirExists(gOldUnixDataDir))
-      {
-         // Use old user data dir folder
-         gConfigDir = gOldUnixDataDir;
-#endif
       } else {
          // Use OS-provided user data dir folder
-         wxString configDir(wxStandardPaths::Get().GetUserConfigDir() + wxT("/audacity"));
+#if defined(__WSMSW__)
+         wxString configDir(wxStandardPaths::Get().GetUserConfigDir() + wxT("\\Tenacity"));
+#else
+         wxString configDir(wxStandardPaths::Get().GetUserConfigDir() + wxT("/tenacity"));
+#endif
          gConfigDir = FileNames::MkDir(configDir);
       }
    }
@@ -270,10 +259,6 @@ FilePath FileNames::ConfigDir()
 
 FilePath FileNames::DataDir()
 {
-#if defined(__WXGTK__)
-    if (gOldUnixDataDir.empty())
-        gOldUnixDataDir = wxFileName::GetHomeDir() + wxT("/.audacity-data");
-#endif
    // LLL:  Wouldn't you know that as of WX 2.6.2, there is a conflict
    //       between wxStandardPaths and wxConfig under Linux.  The latter
    //       creates a normal file as "$HOME/.audacity", while the former
@@ -298,10 +283,6 @@ FilePath FileNames::DataDir()
          // Use "Portable Settings" folder
          gDataDir = portablePrefsPath.GetFullPath();
 #if defined(__WXGTK__)
-      } else if (::wxDirExists(gOldUnixDataDir))
-      {
-         // Use old user data dir folder
-         gDataDir = gOldUnixDataDir;
       } else
       {
          wxString dataDir;
@@ -310,7 +291,7 @@ FilePath FileNames::DataDir()
          if ( !wxGetEnv(wxS("XDG_DATA_HOME"), &dataDir) || dataDir.empty() )
             dataDir = wxFileName::GetHomeDir() + wxT("/.local/share");
 
-         dataDir = dataDir + wxT("/audacity");
+         dataDir = dataDir + wxT("/tenacity");
 #else
       } else
       {
@@ -341,7 +322,7 @@ FilePath FileNames::HtmlHelpDir()
    //for mac this puts us within the .app: Tenacity.app/Contents/SharedSupport/
    return wxFileName( exePath.GetPath()+wxT("/help/manual"), wxEmptyString ).GetFullPath();
 #else
-   //linux goes into /*prefix*/share/audacity/
+   //linux goes into /*prefix*/share/tenacity/
    //windows (probably) goes into the dir containing the .exe
    wxString dataDir = FileNames::LowerCaseAppNameInPath( wxStandardPaths::Get().GetDataDir());
    return wxFileName( dataDir+wxT("/help/manual"), wxEmptyString ).GetFullPath();
@@ -401,7 +382,7 @@ FilePath FileNames::BaseDir()
    // the "Debug" directory in debug builds.
    baseDir = PlatformCompatibility::GetExecutablePath();
 #else
-   // Linux goes into /*prefix*/share/audacity/
+   // Linux goes into /*prefix*/share/tenacity/
    baseDir = FileNames::LowerCaseAppNameInPath(wxStandardPaths::Get().GetPluginsDir());
 #endif
 

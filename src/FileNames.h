@@ -112,15 +112,15 @@ namespace FileNames
       FilePaths &otherNames, wxFileName &newName);
 
    AUDACITY_DLL_API wxString LowerCaseAppNameInPath( const wxString & dirIn);
-   /** \brief Audacity user config directory
+   /** \brief Tenacity user config directory
     *
-    * Where audacity keeps its settigns squirreled away, by default ~/.config/audacity/
-    * on Unix, Application Data/Audacity on Windows */
+    * Where Tenacity keeps its settigns squirreled away, by default ~/.config/tenacity/
+    * on Unix, Application Data/Tenacity on Windows */
    FilePath ConfigDir();
-   /** \brief Audacity user data directory
+   /** \brief Tenacity user data directory
     *
-    * Where audacity keeps its settings and other user data squirreled away,
-    * by default ~/.local/share/audacity/ on Unix, Application Data/Audacity on
+    * Where Tenacity keeps its settings and other user data squirreled away,
+    * by default ~/.local/share/tenacity/ on Unix, Application Data/Tenacity on
     * windows system */
    AUDACITY_DLL_API FilePath DataDir();
    AUDACITY_DLL_API FilePath ResourcesDir();
