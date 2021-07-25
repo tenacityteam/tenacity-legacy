@@ -9,9 +9,9 @@
 # Seong-ho Cho <darkcircle.0426@gmail.com>, 2012-2014
 msgid ""
 msgstr ""
-"Project-Id-Version: audacity 3.0.4\n"
+"Project-Id-Version: tenacity 3.0.4\n"
 "Report-Msgid-Bugs-To: emabrey@tenacityaudio.org\n"
-"POT-Creation-Date: 2021-07-20 03:55-0400\n"
+"POT-Creation-Date: 2021-07-25 03:44-0400\n"
 "PO-Revision-Date: 2021-07-24 09:19+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Korean <https://hosted.weblate.org/projects/tenacity/tenacity/ko/>\n"
@@ -462,36 +462,16 @@ msgstr "정지"
 msgid "Stop script"
 msgstr "스크립트 정지"
 
-#: src/AboutDialog.cpp
-msgid "No revision identifier was provided"
-msgstr "수정본 ID가 없습니다."
-
 #. i18n-hint: information about the program
 #: src/AboutDialog.cpp
 #, c-format
 msgid "About %s"
 msgstr "정보 %s"
 
-#. i18n-hint: In most languages OK is to be translated as OK.  It appears on a
-#. button.
+#. i18n-hint: In most languages OK is to be translated as OK.  It appears on a button.
 #: src/AboutDialog.cpp src/Dependencies.cpp src/SplashDialog.cpp src/effects/nyquist/Nyquist.cpp src/widgets/MultiDialog.cpp
 msgid "OK"
 msgstr "확인"
-
-#: src/AboutDialog.cpp
-#, c-format
-msgid "Debug build (debug level %d)"
-msgstr "디버그 빌드 (디버그 레벨 %d) "
-
-#: src/AboutDialog.cpp
-#, c-format
-msgid "Release build (debug level %d)"
-msgstr "배포 빌드(디버그 레벨 %d)"
-
-#: src/AboutDialog.cpp
-#, c-format
-msgid "%s, 64 bits"
-msgstr ""
 
 #: src/AboutDialog.cpp
 msgid "Build Information"
@@ -509,10 +489,6 @@ msgstr "비활성화"
 #: src/AboutDialog.cpp
 msgid "The Build"
 msgstr "빌드"
-
-#: src/AboutDialog.cpp
-msgid "Program build date:"
-msgstr "프로그램 빌드 날짜:"
 
 #: src/AboutDialog.cpp
 msgid "Commit Id:"
@@ -540,11 +516,22 @@ msgid "File Format Support"
 msgstr "지원 파일 형식"
 
 #: src/AboutDialog.cpp
+msgid "Cross-platform GUI library"
+msgstr "크로스 플랫폼 GUI 라이브러리"
+
+#: src/AboutDialog.cpp
+msgid "Audio playback and recording"
+msgstr "오디오 재생 및 녹음"
+
+#: src/AboutDialog.cpp
+msgid "Sample rate conversion"
+msgstr "샘플링 주파수 변환"
+
+#: src/AboutDialog.cpp
 msgid "MP3 Importing"
 msgstr "MP3 가져오기"
 
-#. i18n-hint: Ogg is the container format. Vorbis is the compression codec.
-#. Both are proper nouns and shouldn't be translated
+#. i18n-hint: Ogg is the container format. Vorbis is the compression codec. Both are proper nouns and shouldn't be translated
 #: src/AboutDialog.cpp
 msgid "Ogg Vorbis Import and Export"
 msgstr "Ogg Vorbis 가져오기/내보내기"
@@ -553,8 +540,7 @@ msgstr "Ogg Vorbis 가져오기/내보내기"
 msgid "ID3 tag support"
 msgstr "ID3 태그 지원"
 
-#. i18n-hint: FLAC stands for Free Lossless Audio Codec, but is effectively a
-#. proper noun and so shouldn't be translated
+#. i18n-hint: FLAC stands for Free Lossless Audio Codec, but is effectively a proper noun and so shouldn't be translated
 #: src/AboutDialog.cpp
 msgid "FLAC import and export"
 msgstr "FLAC 가져오기/내보내기"
@@ -599,124 +585,113 @@ msgstr "극한의 피치와 템포 변경 지원"
 msgid "GPL License"
 msgstr "GPL 라이선스"
 
-#. i18n-hint: For "About Tenacity..." credits, substituting a person's proper
-#. name
-#: src/AboutDialog.cpp
-#, c-format
-msgid "%s, system administration"
-msgstr "%s, 시스템 관리 "
-
-#. i18n-hint: For "About Tenacity..." credits, substituting a person's proper
-#. name
-#: src/AboutDialog.cpp
-#, c-format
-msgid "%s, co-founder and developer"
-msgstr "%s, 공동 설립자와 개발자"
-
-#. i18n-hint: For "About Tenacity..." credits, substituting a person's proper
-#. name
-#: src/AboutDialog.cpp
-#, c-format
-msgid "%s, developer"
-msgstr "%s, 개발자"
-
-#. i18n-hint: For "About Tenacity..." credits, substituting a person's proper
-#. name
-#: src/AboutDialog.cpp
-#, c-format
-msgid "%s, developer and support"
-msgstr "%s, 개발자 및 지원"
-
-#. i18n-hint: For "About Tenacity..." credits, substituting a person's proper
-#. name
-#: src/AboutDialog.cpp
-#, c-format
-msgid "%s, documentation and support"
-msgstr "%s, 문서화 및 지원 "
-
-#. i18n-hint: For "About Tenacity..." credits, substituting a person's proper
-#. name
-#: src/AboutDialog.cpp
-#, c-format
-msgid "%s, QA tester, documentation and support"
-msgstr "%s, QA 테스팅, 문서화 및 지원"
-
-#. i18n-hint: For "About Tenacity..." credits, substituting a person's proper
-#. name
-#: src/AboutDialog.cpp
-#, c-format
-msgid "%s, documentation and support, French"
-msgstr "%s, 문서화 및 지원, 프랑스어"
-
-#. i18n-hint: For "About Tenacity..." credits, substituting a person's proper
-#. name
-#: src/AboutDialog.cpp
-#, c-format
-msgid "%s, quality assurance"
-msgstr "%s, 품질 보증"
-
-#. i18n-hint: For "About Tenacity..." credits, substituting a person's proper
-#. name
-#: src/AboutDialog.cpp
-#, c-format
-msgid "%s, accessibility advisor"
-msgstr "%s, 접근성 자문"
-
-#. i18n-hint: For "About Tenacity..." credits, substituting a person's proper
-#. name
-#: src/AboutDialog.cpp
-#, c-format
-msgid "%s, graphic artist"
-msgstr "%s, 그래픽 아티스트"
-
-#. i18n-hint: For "About Tenacity..." credits, substituting a person's proper
-#. name
-#: src/AboutDialog.cpp
-#, c-format
-msgid "%s, composer"
-msgstr "%s, 작곡가"
-
-#. i18n-hint: For "About Tenacity..." credits, substituting a person's proper
-#. name
-#: src/AboutDialog.cpp
-#, c-format
-msgid "%s, tester"
-msgstr "%s, 테스터"
-
-#. i18n-hint: For "About Tenacity..." credits, substituting a person's proper
-#. name
-#: src/AboutDialog.cpp
-#, c-format
-msgid "%s, Nyquist plug-ins"
-msgstr "%s, 나이키시트 플러그인"
-
-#. i18n-hint: For "About Tenacity..." credits, substituting a person's proper
-#. name
-#: src/AboutDialog.cpp
-#, c-format
-msgid "%s, web developer"
-msgstr "%s, 웹 개발자"
-
-#. i18n-hint: For "About Tenacity..." credits, substituting a person's proper
-#. name
-#: src/AboutDialog.cpp
-#, c-format
-msgid "%s, graphics"
-msgstr "%s, 그래픽"
-
-#. i18n-hint: For "About Tenacity..." credits, substituting a person's proper
-#. name
+#. i18n-hint: For "About Tenacity..." credits, substituting a person's proper name
 #: src/AboutDialog.cpp
 #, fuzzy, c-format
 msgid "%s, lead Tenacity developer"
 msgstr "%s, 웹 개발자"
 
-#. i18n-hint: For "About Tenacity..." credits, substituting a person's proper
-#. name
+#. i18n-hint: For "About Tenacity..." credits, substituting a person's proper name
 #: src/AboutDialog.cpp
 #, fuzzy, c-format
 msgid "%s, Tenacity developer"
 msgstr "%s, 웹 개발자"
+
+#. i18n-hint: For "About Tenacity..." credits, substituting a person's proper name
+#: src/AboutDialog.cpp
+#, fuzzy, c-format
+msgid "%s, Tenacity contributor"
+msgstr "%s, 웹 개발자"
+
+#. i18n-hint: For "About Tenacity..." credits, substituting a person's proper name
+#: src/AboutDialog.cpp
+#, c-format
+msgid "%s, system administration"
+msgstr "%s, 시스템 관리 "
+
+#. i18n-hint: For "About Tenacity..." credits, substituting a person's proper name
+#: src/AboutDialog.cpp
+#, c-format
+msgid "%s, co-founder and developer"
+msgstr "%s, 공동 설립자와 개발자"
+
+#. i18n-hint: For "About Tenacity..." credits, substituting a person's proper name
+#: src/AboutDialog.cpp
+#, c-format
+msgid "%s, developer"
+msgstr "%s, 개발자"
+
+#. i18n-hint: For "About Tenacity..." credits, substituting a person's proper name
+#: src/AboutDialog.cpp
+#, c-format
+msgid "%s, developer and support"
+msgstr "%s, 개발자 및 지원"
+
+#. i18n-hint: For "About Tenacity..." credits, substituting a person's proper name
+#: src/AboutDialog.cpp
+#, c-format
+msgid "%s, documentation and support"
+msgstr "%s, 문서화 및 지원 "
+
+#. i18n-hint: For "About Tenacity..." credits, substituting a person's proper name
+#: src/AboutDialog.cpp
+#, c-format
+msgid "%s, QA tester, documentation and support"
+msgstr "%s, QA 테스팅, 문서화 및 지원"
+
+#. i18n-hint: For "About Tenacity..." credits, substituting a person's proper name
+#: src/AboutDialog.cpp
+#, c-format
+msgid "%s, documentation and support, French"
+msgstr "%s, 문서화 및 지원, 프랑스어"
+
+#. i18n-hint: For "About Tenacity..." credits, substituting a person's proper name
+#: src/AboutDialog.cpp
+#, c-format
+msgid "%s, quality assurance"
+msgstr "%s, 품질 보증"
+
+#. i18n-hint: For "About Tenacity..." credits, substituting a person's proper name
+#: src/AboutDialog.cpp
+#, c-format
+msgid "%s, accessibility advisor"
+msgstr "%s, 접근성 자문"
+
+#. i18n-hint: For "About Tenacity..." credits, substituting a person's proper name
+#: src/AboutDialog.cpp
+#, c-format
+msgid "%s, graphic artist"
+msgstr "%s, 그래픽 아티스트"
+
+#. i18n-hint: For "About Tenacity..." credits, substituting a person's proper name
+#: src/AboutDialog.cpp
+#, c-format
+msgid "%s, composer"
+msgstr "%s, 작곡가"
+
+#. i18n-hint: For "About Tenacity..." credits, substituting a person's proper name
+#: src/AboutDialog.cpp
+#, c-format
+msgid "%s, tester"
+msgstr "%s, 테스터"
+
+#. i18n-hint: For "About Tenacity..." credits, substituting a person's proper name
+#: src/AboutDialog.cpp
+#, c-format
+msgid "%s, Nyquist plug-ins"
+msgstr "%s, 나이키시트 플러그인"
+
+#. i18n-hint: For "About Tenacity..." credits, substituting a person's proper name
+#: src/AboutDialog.cpp
+#, c-format
+msgid "%s, web developer"
+msgstr "%s, 웹 개발자"
+
+#. i18n-hint: For "About Tenacity..." credits, substituting a person's proper name
+#: src/AboutDialog.cpp
+#, c-format
+msgid "%s, graphics"
+msgstr "%s, 그래픽"
 
 #: src/AboutDialog.cpp
 #, c-format
@@ -729,13 +704,17 @@ msgstr ""
 
 #. i18n-hint: The program's name substitutes for %s
 #: src/AboutDialog.cpp
-#, c-format
-msgid "%s the free, open source, cross-platform software for recording and editing sounds."
+#, fuzzy
+msgid "Free, open source, cross-platform audio recorder and editor."
 msgstr "%s 는 소리 녹화와 편집을 위한 무료, 오픈소스, 크로스 플랫폼 소프트웨어 입니다."
 
 #: src/AboutDialog.cpp
 msgid "Credits"
 msgstr "만든 사람들"
+
+#: src/AboutDialog.cpp
+msgid "Please note that names are sorted in alphabetical order, not in order of importance."
+msgstr ""
 
 #: src/AboutDialog.cpp
 #, fuzzy
@@ -744,9 +723,14 @@ msgstr "검은색 오데시티 사용자 정의"
 
 #. i18n-hint: The program's name substitutes for %s
 #: src/AboutDialog.cpp
-#, c-format
-msgid "%s Team Members"
-msgstr "%s 팀 구성원"
+#, fuzzy, c-format
+msgid "%s Contributors"
+msgstr "공헌한 분들"
+
+#: src/AboutDialog.cpp
+#, fuzzy
+msgid "Tenacity Special thanks:"
+msgstr "특별히 감사할 분들:"
 
 #: src/AboutDialog.cpp src/prefs/LibraryPrefs.cpp
 msgid "Libraries"
@@ -757,6 +741,12 @@ msgstr "라이브러리"
 #, c-format
 msgid "%s includes code from the following projects:"
 msgstr "%s 는 다음 프로젝트들의 코드를 포함합니다:"
+
+#. i18n-hint: The program's name substitutes for %s
+#: src/AboutDialog.cpp
+#, c-format
+msgid "%s Team Members"
+msgstr "%s 팀 구성원"
 
 #: src/AboutDialog.cpp
 msgid "Emeritus:"
@@ -793,18 +783,21 @@ msgstr "특별히 감사할 분들:"
 msgid "%s website: "
 msgstr "%s 웹사이트: "
 
-#. i18n-hint Tenacity's name substitutes for first and third %s,
-#. and a "copyright" symbol for the second
+#. i18n-hint Tenacity's name substitutes for first and fourth %s, and the second and third %s are the copyright symbol and final year of copyright
 #: src/AboutDialog.cpp
 #, c-format
-msgid "%s software is copyright %s 1999-2021 %s Team."
+msgid "%s %s 1999-%s %s contributors"
 msgstr ""
 
-#. i18n-hint Tenacity's name substitutes for %s
+#. i18n-hint The registered trademark symbol (r) is substituted at %s
 #: src/AboutDialog.cpp
 #, c-format
-msgid "The name %s is a registered trademark."
-msgstr " %s 는 등록 상표입니다."
+msgid "The Audacity%s trademark is used within this software for descriptive and informational purposes only."
+msgstr ""
+
+#: src/AboutDialog.cpp
+msgid "Tenacity is not produced or endorsed by MuseCY SM Ltd. or Dominic M Mazzoni."
+msgstr ""
 
 #: src/AdornedRulerPanel.cpp
 msgid "Timeline actions disabled during recording"
@@ -1616,8 +1609,7 @@ msgstr ""
 msgid "Menu Command (No Parameters)"
 msgstr "메뉴 명령 (매개 변수 없음)"
 
-#. i18n-hint: %s will be replaced by the name of an action, such as "Remove
-#. Tracks".
+#. i18n-hint: %s will be replaced by the name of an action, such as "Remove Tracks".
 #: src/BatchCommands.cpp src/CommonCommandFlags.cpp
 #, c-format
 msgid "\"%s\" requires one or more tracks to be selected."
@@ -1833,8 +1825,7 @@ msgstr "새 매크로 이름"
 msgid "Name must not be blank"
 msgstr "이름은 비워둘 수 없습니다"
 
-#. i18n-hint: The %c will be replaced with 'forbidden characters', like '/'
-#. and '\'.
+#. i18n-hint: The %c will be replaced with 'forbidden characters', like '/' and '\'.
 #: src/BatchProcessDialog.cpp
 #, c-format
 msgid "Names may not contain '%c' and '%c'"
@@ -2023,8 +2014,31 @@ msgstr "시험 실패!!!\n"
 msgid "Benchmark completed successfully.\n"
 msgstr "벤치마크를 성공적으로 마쳤습니다.\n"
 
-#. i18n-hint: %s will be replaced by the name of an action, such as Normalize,
-#. Cut, Fade.
+#: src/BuildInfo.h
+msgid "No revision identifier was provided"
+msgstr "수정본 ID가 없습니다."
+
+#: src/BuildInfo.h
+#, fuzzy
+msgid "Unknown date and time"
+msgstr "끝 날짜 및 시간"
+
+#: src/BuildInfo.h
+#, c-format
+msgid "Debug build (debug level %d)"
+msgstr "디버그 빌드 (디버그 레벨 %d) "
+
+#: src/BuildInfo.h
+#, c-format
+msgid "Release build (debug level %d)"
+msgstr "배포 빌드(디버그 레벨 %d)"
+
+#: src/BuildInfo.h
+#, fuzzy
+msgid ", 64 bits"
+msgstr "24비트"
+
+#. i18n-hint: %s will be replaced by the name of an action, such as Normalize, Cut, Fade.
 #: src/CommonCommandFlags.cpp
 #, c-format
 msgid ""
@@ -2036,15 +2050,13 @@ msgstr ""
 "\n"
 "Ctrl + A는 전체 오디오를 선택합니다."
 
-#. i18n-hint: %s will be replaced by the name of an action, such as Normalize,
-#. Cut, Fade.
+#. i18n-hint: %s will be replaced by the name of an action, such as Normalize, Cut, Fade.
 #: src/CommonCommandFlags.cpp
 #, c-format
 msgid "Select the audio for %s to use (for example, Cmd + A to Select All) then try again."
 msgstr "%s가 사용할 오디오를 선택(예:  전체 선택은 Cmd + A)하고 다시 해보세요."
 
-#. i18n-hint: %s will be replaced by the name of an action, such as Normalize,
-#. Cut, Fade.
+#. i18n-hint: %s will be replaced by the name of an action, such as Normalize, Cut, Fade.
 #: src/CommonCommandFlags.cpp
 #, c-format
 msgid "Select the audio for %s to use (for example, Ctrl + A to Select All) then try again."
@@ -2054,8 +2066,7 @@ msgstr "%s가 사용할 오디오를 선택(예:  전체 선택은 Ctrl + A)하�
 msgid "No Audio Selected"
 msgstr "선택한 오디오가 없습니다"
 
-#. i18n-hint: %s will be replaced by the name of an effect, usually 'Noise
-#. Reduction'.
+#. i18n-hint: %s will be replaced by the name of an effect, usually 'Noise Reduction'.
 #: src/CommonCommandFlags.cpp
 #, c-format
 msgid ""
@@ -2486,8 +2497,7 @@ msgstr ""
 msgid "File Error"
 msgstr "파일 오류"
 
-#. i18n-hint: %s will be the error message from the libsndfile software
-#. library
+#. i18n-hint: %s will be the error message from the libsndfile software library
 #: src/FileFormats.cpp
 #, c-format
 msgid "Error (file may not have been written): %s"
@@ -2691,30 +2701,26 @@ msgstr "충분한 데이터를 선택하지 않았습니다."
 msgid "s"
 msgstr ""
 
-#. i18n-hint: The %d's are replaced by numbers, the %s by musical notes, e.g.
-#. A#
+#. i18n-hint: The %d's are replaced by numbers, the %s by musical notes, e.g. A#
 #: src/FreqWindow.cpp
 #, c-format
 msgid "%d Hz (%s) = %d dB"
 msgstr ""
 
-#. i18n-hint: The %d's are replaced by numbers, the %s by musical notes, e.g.
-#. A#
+#. i18n-hint: The %d's are replaced by numbers, the %s by musical notes, e.g. A#
 #: src/FreqWindow.cpp
 #, c-format
 msgid "%d Hz (%s) = %.1f dB"
 msgstr ""
 
-#. i18n-hint: The %d's are replaced by numbers, the %s by musical notes, e.g.
-#. A#
+#. i18n-hint: The %d's are replaced by numbers, the %s by musical notes, e.g. A#
 #. * the %.4f are numbers, and 'sec' should be an abbreviation for seconds
 #: src/FreqWindow.cpp
 #, c-format
 msgid "%.4f sec (%d Hz) (%s) = %f"
 msgstr "%.4f 초 (%d Hz) (%s) = %f"
 
-#. i18n-hint: The %d's are replaced by numbers, the %s by musical notes, e.g.
-#. A#
+#. i18n-hint: The %d's are replaced by numbers, the %s by musical notes, e.g. A#
 #. * the %.4f are numbers, and 'sec' should be an abbreviation for seconds
 #: src/FreqWindow.cpp
 #, c-format
@@ -3120,8 +3126,7 @@ msgid "Gain"
 msgstr "게인"
 
 #. i18n-hint: title of the MIDI Velocity slider
-#. i18n-hint: Title of the Velocity slider, used to adjust the volume of note
-#. tracks
+#. i18n-hint: Title of the Velocity slider, used to adjust the volume of note tracks
 #: src/MixerBoard.cpp src/tracks/playabletrack/notetrack/ui/NoteTrackControls.cpp src/tracks/playabletrack/notetrack/ui/NoteTrackSliderHandles.cpp
 msgid "Velocity"
 msgstr "속도"
@@ -3346,32 +3351,27 @@ msgstr ""
 msgid "B♭"
 msgstr ""
 
-#. i18n-hint: Two, alternate names of a musical note in the 12-tone chromatic
-#. scale
+#. i18n-hint: Two, alternate names of a musical note in the 12-tone chromatic scale
 #: src/PitchName.cpp
 msgid "C♯/D♭"
 msgstr ""
 
-#. i18n-hint: Two, alternate names of a musical note in the 12-tone chromatic
-#. scale
+#. i18n-hint: Two, alternate names of a musical note in the 12-tone chromatic scale
 #: src/PitchName.cpp
 msgid "D♯/E♭"
 msgstr ""
 
-#. i18n-hint: Two, alternate names of a musical note in the 12-tone chromatic
-#. scale
+#. i18n-hint: Two, alternate names of a musical note in the 12-tone chromatic scale
 #: src/PitchName.cpp
 msgid "F♯/G♭"
 msgstr ""
 
-#. i18n-hint: Two, alternate names of a musical note in the 12-tone chromatic
-#. scale
+#. i18n-hint: Two, alternate names of a musical note in the 12-tone chromatic scale
 #: src/PitchName.cpp
 msgid "G♯/A♭"
 msgstr ""
 
-#. i18n-hint: Two, alternate names of a musical note in the 12-tone chromatic
-#. scale
+#. i18n-hint: Two, alternate names of a musical note in the 12-tone chromatic scale
 #: src/PitchName.cpp
 msgid "A♯/B♭"
 msgstr ""
@@ -4021,11 +4021,15 @@ msgstr ""
 msgid "Compacting project"
 msgstr "프로젝트 압축"
 
-#. i18n-hint: The %02i is the project number, the %s is the project name.
+#. i18n-hint: The %02i is the project number. This is followed by the project name in quotes as a %s.
 #: src/ProjectFileIO.cpp
 #, c-format
 msgid "[Project %02i] Audacity \"%s\""
 msgstr "[프로젝트 %02i] 오데시티 \"%s\""
+
+#: src/ProjectFileIO.cpp src/commands/AudacityCommand.cpp src/effects/Effect.cpp src/effects/nyquist/Nyquist.cpp src/prefs/PrefsPanel.cpp plug-ins/beat.ny
+msgid "Audacity"
+msgstr "오데시티"
 
 #. i18n-hint: E.g this is recovered audio that had been lost.
 #: src/ProjectFileIO.cpp
@@ -4393,8 +4397,7 @@ msgstr "자동 데이터베이스 백업 실패"
 msgid "Welcome to Audacity version %s"
 msgstr "오데시티 %s 버전 사용을 환영합니다"
 
-#. i18n-hint: The first %s numbers the project, the second %s is the project
-#. name.
+#. i18n-hint: The first %s numbers the project, the second %s is the project name.
 #: src/ProjectManager.cpp
 #, c-format
 msgid "%sSave changes to %s?"
@@ -4634,8 +4637,7 @@ msgstr "미터"
 msgid "Play Meter"
 msgstr "재생 미터"
 
-#. i18n-hint: (noun) The meter that shows the loudness of the audio being
-#. recorded.
+#. i18n-hint: (noun) The meter that shows the loudness of the audio being recorded.
 #: src/Screenshot.cpp src/commands/ScreenshotCommand.cpp src/toolbars/MeterToolBar.cpp
 msgid "Record Meter"
 msgstr "녹음 미터"
@@ -4665,8 +4667,7 @@ msgid "Ruler"
 msgstr "눈금자"
 
 #. i18n-hint: "Tracks" include audio recordings but also other collections of
-#. * data associated with a time line, such as sequences of labels, and
-#. musical
+#. * data associated with a time line, such as sequences of labels, and musical
 #. * notes
 #: src/Screenshot.cpp src/commands/GetInfoCommand.cpp src/commands/GetTrackInfoCommand.cpp src/commands/ScreenshotCommand.cpp src/export/ExportMultiple.cpp src/prefs/TracksPrefs.cpp src/prefs/TracksPrefs.h
 msgid "Tracks"
@@ -4934,8 +4935,7 @@ msgstr ""
 "  %s."
 
 #. i18n-hint: A theme is a consistent visual style across an application's
-#. graphical user interface, including choices of colors, and similarity of
-#. images
+#. graphical user interface, including choices of colors, and similarity of images
 #. such as those on button controls.  Audacity can load and save alternative
 #. themes.
 #: src/Theme.cpp
@@ -5073,17 +5073,12 @@ msgstr "높은 대비"
 msgid "Custom"
 msgstr "사용자 정의"
 
-#. i18n-hint: This string is used to configure the controls which shows the
-#. recording
-#. * duration. As such it is important that only the alphabetic parts of the
-#. string
+#. i18n-hint: This string is used to configure the controls which shows the recording
+#. * duration. As such it is important that only the alphabetic parts of the string
 #. * are translated, with the numbers left exactly as they are.
-#. * The string 'days' indicates that the first number in the control will be
-#. the number of days,
-#. * then the 'h' indicates the second number displayed is hours, the 'm'
-#. indicates the third
-#. * number displayed is minutes, and the 's' indicates that the fourth number
-#. displayed is
+#. * The string 'days' indicates that the first number in the control will be the number of days,
+#. * then the 'h' indicates the second number displayed is hours, the 'm' indicates the third
+#. * number displayed is minutes, and the 's' indicates that the fourth number displayed is
 #. * seconds.
 #: src/TimeDialog.h src/TimerRecordDialog.cpp src/effects/DtmfGen.cpp src/effects/Noise.cpp src/effects/Silence.cpp src/effects/ToneGen.cpp src/effects/VST/VSTEffect.cpp src/effects/ladspa/LadspaEffect.cpp src/effects/lv2/LV2Effect.cpp
 msgid "Duration"
@@ -5282,15 +5277,11 @@ msgstr "099시 060분 060초"
 msgid "099 days 024 h 060 m 060 s"
 msgstr "099일 024시 060분 060초"
 
-#. i18n-hint: This string is used to configure the controls for times when the
-#. recording is
-#. * started and stopped. As such it is important that only the alphabetic
-#. parts of the string
+#. i18n-hint: This string is used to configure the controls for times when the recording is
+#. * started and stopped. As such it is important that only the alphabetic parts of the string
 #. * are translated, with the numbers left exactly as they are.
-#. * The 'h' indicates the first number displayed is hours, the 'm' indicates
-#. the second number
-#. * displayed is minutes, and the 's' indicates that the third number
-#. displayed is seconds.
+#. * The 'h' indicates the first number displayed is hours, the 'm' indicates the second number
+#. * displayed is minutes, and the 's' indicates that the third number displayed is seconds.
 #: src/TimerRecordDialog.cpp
 msgid "Start Date and Time"
 msgstr "시작 날짜 및 시간"
@@ -5541,8 +5532,7 @@ msgstr "선택이 너무 작아서 음성 키를 사용할 수 없습니다."
 msgid "Calibration Results\n"
 msgstr "캘리브레이션 결과\n"
 
-#. i18n-hint: %1.4f is replaced by a number.  sd stands for 'Standard
-#. Deviations'
+#. i18n-hint: %1.4f is replaced by a number.  sd stands for 'Standard Deviations'
 #: src/VoiceKey.cpp
 #, c-format
 msgid "Energy                  -- mean: %1.4f  sd: (%1.4f)\n"
@@ -5579,10 +5569,6 @@ msgstr "잘라내기 선을 확장하는데 필요한 공간이 부족합니다"
 msgid "This operation cannot be done until importation of %s completes."
 msgstr "%s 가져오기가 끝날 때까지 이 동작을 수행할 수 없습니다."
 
-#: src/commands/AudacityCommand.cpp src/effects/Effect.cpp src/effects/nyquist/Nyquist.cpp src/prefs/PrefsPanel.cpp plug-ins/beat.ny
-msgid "Audacity"
-msgstr "오데시티"
-
 #: src/commands/AudacityCommand.cpp src/effects/Effect.cpp
 #, c-format
 msgid ""
@@ -5599,8 +5585,7 @@ msgstr ""
 msgid "Applying %s..."
 msgstr "%s 적용..."
 
-#. i18n-hint: An item name followed by a value, with appropriate separating
-#. punctuation
+#. i18n-hint: An item name followed by a value, with appropriate separating punctuation
 #: src/commands/AudacityCommand.cpp src/effects/Effect.cpp src/effects/vamp/VampEffect.cpp src/menus/PluginMenus.cpp src/tracks/playabletrack/notetrack/ui/NoteTrackSliderHandles.cpp src/tracks/playabletrack/wavetrack/ui/WaveTrackSliderHandles.cpp src/widgets/ASlider.cpp
 #, c-format
 msgid "%s: %s"
@@ -6382,16 +6367,14 @@ msgstr "오토 덕"
 msgid "Reduces (ducks) the volume of one or more tracks whenever the volume of a specified \"control\" track reaches a particular level"
 msgstr "지정한 \"제어\" 트랙의 볼륨이 특정한 레벨에 도달할 때마다 한 개 이상 트랙의 볼륨을 줄입니다 (ducks)"
 
-#. i18n-hint: Auto duck is the name of an effect that 'ducks' (reduces the
-#. volume)
+#. i18n-hint: Auto duck is the name of an effect that 'ducks' (reduces the volume)
 #. * of the audio automatically when there is sound on another track.  Not as
 #. * in 'Donald-Duck'!
 #: src/effects/AutoDuck.cpp
 msgid "You selected a track which does not contain audio. AutoDuck can only process audio tracks."
 msgstr "오디오가 포함되지 않은 트랙을 선택했습니다. 오토 덕은 오디오 트랙만 처리할 수 있습니다."
 
-#. i18n-hint: Auto duck is the name of an effect that 'ducks' (reduces the
-#. volume)
+#. i18n-hint: Auto duck is the name of an effect that 'ducks' (reduces the volume)
 #. * of the audio automatically when there is sound on another track.  Not as
 #. * in 'Donald-Duck'!
 #: src/effects/AutoDuck.cpp
@@ -6615,8 +6598,7 @@ msgstr "속도 변경은 템포(빠르기)와 피치(음정) 모두에 영향을
 msgid "&Speed Multiplier:"
 msgstr "속도 곱셈기:"
 
-#. i18n-hint: "rpm" is an English abbreviation meaning "revolutions per
-#. minute".
+#. i18n-hint: "rpm" is an English abbreviation meaning "revolutions per minute".
 #. "vinyl" refers to old-fashioned phonograph records
 #: src/effects/ChangeSpeed.cpp
 msgid "Standard Vinyl rpm:"
@@ -6849,23 +6831,20 @@ msgid "Attack Time"
 msgstr "어택 시간"
 
 #. i18n-hint: Particularly in percussion, sounds can be regarded as having
-#. * an 'attack' phase where the sound builds up and a 'decay' or 'release'
-#. where the
+#. * an 'attack' phase where the sound builds up and a 'decay' or 'release' where the
 #. * sound dies away.
 #: src/effects/Compressor.cpp
 msgid "R&elease Time:"
 msgstr "릴리즈 시간:"
 
 #. i18n-hint: Particularly in percussion, sounds can be regarded as having
-#. * an 'attack' phase where the sound builds up and a 'decay' or 'release'
-#. where the
+#. * an 'attack' phase where the sound builds up and a 'decay' or 'release' where the
 #. * sound dies away.
 #: src/effects/Compressor.cpp
 msgid "Release Time"
 msgstr "릴리즈 시간"
 
-#. i18n-hint: Make-up, i.e. correct for any reduction, rather than fabricate
-#. it.
+#. i18n-hint: Make-up, i.e. correct for any reduction, rather than fabricate it.
 #: src/effects/Compressor.cpp
 msgid "Ma&ke-up gain for 0 dB after compressing"
 msgstr "압축 후 피크 레벨 0 dB까지 메이크업 게인 적용"
@@ -7045,8 +7024,7 @@ msgstr "배경음 레벨이 너무 높습니다"
 msgid "Background higher than foreground"
 msgstr "배경음이 전경음보다 더 높습니다"
 
-#. i18n-hint: WCAG2 is the 'Web Content Accessibility Guidelines (WCAG) 2.0',
-#. see http://www.w3.org/TR/WCAG20/
+#. i18n-hint: WCAG2 is the 'Web Content Accessibility Guidelines (WCAG) 2.0', see http://www.w3.org/TR/WCAG20/
 #: src/effects/Contrast.cpp
 msgid "WCAG2 Pass"
 msgstr "WCAG2 통과"
@@ -7533,8 +7511,7 @@ msgid "Previewing"
 msgstr "미리보기 처리 중"
 
 #. i18n-hint: "Nyquist" is an embedded interpreted programming language in
-#. Audacity, named in honor of the Swedish-American Harry Nyquist (or
-#. Nyqvist).
+#. Audacity, named in honor of the Swedish-American Harry Nyquist (or Nyqvist).
 #. In the translations of this and other strings, you may transliterate the
 #. name into another alphabet.
 #: src/effects/Effect.h
@@ -7939,8 +7916,7 @@ msgstr ""
 msgid "%g kHz"
 msgstr ""
 
-#. i18n-hint k is SI abbreviation for x1,000.  Usually unchanged in
-#. translation.
+#. i18n-hint k is SI abbreviation for x1,000.  Usually unchanged in translation.
 #: src/effects/Equalization.cpp
 #, c-format
 msgid "%gk"
@@ -8539,8 +8515,7 @@ msgstr "감소시키기(&D)"
 msgid "&Isolate"
 msgstr "분리(&I)"
 
-#. i18n-hint: Means the difference between effect and original sound.
-#. Translate differently from "Reduce" !
+#. i18n-hint: Means the difference between effect and original sound.  Translate differently from "Reduce" !
 #: src/effects/NoiseReduction.cpp
 msgid "Resid&ue"
 msgstr "잔여(&U)"
@@ -8745,8 +8720,7 @@ msgstr "스트레치 인수:"
 msgid "&Time Resolution (seconds):"
 msgstr "시간 해상도 (초):"
 
-#. i18n-hint: 'Time Resolution' is the name of a control in the Paulstretch
-#. effect.
+#. i18n-hint: 'Time Resolution' is the name of a control in the Paulstretch effect.
 #: src/effects/Paulstretch.cpp
 #, c-format
 msgid ""
@@ -8760,8 +8734,7 @@ msgstr ""
 "오디오 선택을 적어도 %.1f초만큼 증가시키 보거나,\n"
 "'시간 해상도'를  %.1f초 이내로 감소시켜 보세요."
 
-#. i18n-hint: 'Time Resolution' is the name of a control in the Paulstretch
-#. effect.
+#. i18n-hint: 'Time Resolution' is the name of a control in the Paulstretch effect.
 #: src/effects/Paulstretch.cpp
 #, c-format
 msgid ""
@@ -8775,8 +8748,7 @@ msgstr ""
 "현재 오디오 선택에 대해, 최대\n"
 "'시간 해상도'는 %.1f 초입니다."
 
-#. i18n-hint: 'Time Resolution' is the name of a control in the Paulstretch
-#. effect.
+#. i18n-hint: 'Time Resolution' is the name of a control in the Paulstretch effect.
 #: src/effects/Paulstretch.cpp
 #, c-format
 msgid ""
@@ -9021,20 +8993,17 @@ msgstr "선택한 오디오의 앞뒤를 뒤바꿉니다"
 msgid "SBSMS Time / Pitch Stretch"
 msgstr "SBSMS 시간 / 음정 늘이기"
 
-#. i18n-hint: Butterworth is the name of the person after whom the filter type
-#. is named.
+#. i18n-hint: Butterworth is the name of the person after whom the filter type is named.
 #: src/effects/ScienFilter.cpp
 msgid "Butterworth"
 msgstr "버터워스"
 
-#. i18n-hint: Chebyshev is the name of the person after whom the filter type
-#. is named.
+#. i18n-hint: Chebyshev is the name of the person after whom the filter type is named.
 #: src/effects/ScienFilter.cpp
 msgid "Chebyshev Type I"
 msgstr "체비셰프 형식 I"
 
-#. i18n-hint: Chebyshev is the name of the person after whom the filter type
-#. is named.
+#. i18n-hint: Chebyshev is the name of the person after whom the filter type is named.
 #: src/effects/ScienFilter.cpp
 msgid "Chebyshev Type II"
 msgstr "체비셰프 형식 II"
@@ -9064,8 +9033,7 @@ msgstr "필터를 적용하려면, 선택한 모든 트랙은 같은 샘플링 �
 msgid "&Filter Type:"
 msgstr "필터 형식(&F):"
 
-#. i18n-hint: 'Order' means the complexity of the filter, and is a number
-#. between 1 and 10.
+#. i18n-hint: 'Order' means the complexity of the filter, and is a number between 1 and 10.
 #: src/effects/ScienFilter.cpp
 msgid "O&rder:"
 msgstr "순서(&R):"
@@ -9134,40 +9102,32 @@ msgstr "무음 임계값:"
 msgid "Silence Threshold"
 msgstr "무음 임계값"
 
-#. i18n-hint: The English would be clearer if it had 'Duration' rather than
-#. 'Time'
-#. This is a NEW experimental effect, and until we have it documented in the
-#. user
+#. i18n-hint: The English would be clearer if it had 'Duration' rather than 'Time'
+#. This is a NEW experimental effect, and until we have it documented in the user
 #. manual we don't have a clear description of what this parameter does.
 #. It is OK to leave it in English.
 #: src/effects/ScoreAlignDialog.cpp
 msgid "Presmooth Time:"
 msgstr "사전 평활화 시간:"
 
-#. i18n-hint: The English would be clearer if it had 'Duration' rather than
-#. 'Time'
-#. This is a NEW experimental effect, and until we have it documented in the
-#. user
+#. i18n-hint: The English would be clearer if it had 'Duration' rather than 'Time'
+#. This is a NEW experimental effect, and until we have it documented in the user
 #. manual we don't have a clear description of what this parameter does.
 #. It is OK to leave it in English.
 #: src/effects/ScoreAlignDialog.cpp
 msgid "Presmooth Time"
 msgstr "이전 평활화 시간"
 
-#. i18n-hint: The English would be clearer if it had 'Duration' rather than
-#. 'Time'
-#. This is a NEW experimental effect, and until we have it documented in the
-#. user
+#. i18n-hint: The English would be clearer if it had 'Duration' rather than 'Time'
+#. This is a NEW experimental effect, and until we have it documented in the user
 #. manual we don't have a clear description of what this parameter does.
 #. It is OK to leave it in English.
 #: src/effects/ScoreAlignDialog.cpp
 msgid "Line Time:"
 msgstr "라인 시간:"
 
-#. i18n-hint: The English would be clearer if it had 'Duration' rather than
-#. 'Time'
-#. This is a NEW experimental effect, and until we have it documented in the
-#. user
+#. i18n-hint: The English would be clearer if it had 'Duration' rather than 'Time'
+#. This is a NEW experimental effect, and until we have it documented in the user
 #. manual we don't have a clear description of what this parameter does.
 #. It is OK to leave it in English.
 #: src/effects/ScoreAlignDialog.cpp
@@ -9178,10 +9138,8 @@ msgstr "라인 시간"
 msgid "Smooth Time:"
 msgstr "평활화 시간:"
 
-#. i18n-hint: The English would be clearer if it had 'Duration' rather than
-#. 'Time'
-#. This is a NEW experimental effect, and until we have it documented in the
-#. user
+#. i18n-hint: The English would be clearer if it had 'Duration' rather than 'Time'
+#. This is a NEW experimental effect, and until we have it documented in the user
 #. manual we don't have a clear description of what this parameter does.
 #. It is OK to leave it in English.
 #: src/effects/ScoreAlignDialog.cpp
@@ -9494,8 +9452,7 @@ msgstr "사전설정 파일을 읽을 수 없습니다."
 msgid "This parameter file was saved from %s. Continue?"
 msgstr "이 파라메터 파일은 %s 에서 저장된 것입니다. 계속?"
 
-#. i18n-hint: Abbreviates Virtual Studio Technology, an audio software
-#. protocol
+#. i18n-hint: Abbreviates Virtual Studio Technology, an audio software protocol
 #. developed by Steinberg GmbH
 #: src/effects/VST/VSTEffect.h
 msgid "VST"
@@ -9715,10 +9672,8 @@ msgstr "LADSPA 효과 옵션"
 msgid "As part of their processing, some LADSPA effects must delay returning audio to Audacity. When not compensating for this delay, you will notice that small silences have been inserted into the audio. Enabling this option will provide that compensation, but it may not work for all LADSPA effects."
 msgstr "처리의 일부 과정으로서, 일부 LADSPA 효과는 오데시티에 지연된 반환을 해야만 합니다. 이 지연에 대한 보상을 하지 않으면, 오디오에 짧은 묵음이 들어가게 됩니다. 이 옵션을 활성화하면 보상이 되나, 모든 LADSPA 효과에서 작동하는 것은 아닙니다. "
 
-#. i18n-hint: An item name introducing a value, which is not part of the
-#. string but
-#. appears in a following text box window; translate with appropriate
-#. punctuation
+#. i18n-hint: An item name introducing a value, which is not part of the string but
+#. appears in a following text box window; translate with appropriate punctuation
 #: src/effects/ladspa/LadspaEffect.cpp src/effects/nyquist/Nyquist.cpp src/effects/vamp/VampEffect.cpp src/tracks/playabletrack/wavetrack/ui/SpectrumView.cpp
 #, c-format
 msgid "%s:"
@@ -9795,8 +9750,7 @@ msgstr "나이키스트 효과 지원을 오데시티에 제공합니다"
 msgid "Applying Nyquist Effect..."
 msgstr "나이키스트 효과 적용 중..."
 
-#. i18n-hint: It is acceptable to translate this the same as for "Nyquist
-#. Prompt"
+#. i18n-hint: It is acceptable to translate this the same as for "Nyquist Prompt"
 #: src/effects/nyquist/Nyquist.cpp
 msgid "Nyquist Worker"
 msgstr "나이키스트 작업자"
@@ -10049,8 +10003,7 @@ msgstr "플러그인 설정"
 msgid "Program"
 msgstr "프로그램"
 
-#. i18n-hint: Vamp is the proper name of a software protocol for sound
-#. analysis.
+#. i18n-hint: Vamp is the proper name of a software protocol for sound analysis.
 #. It is not an abbreviation for anything.  See http://vamp-plugins.org
 #: src/effects/vamp/VampEffect.h
 msgid "Vamp"
@@ -10171,8 +10124,7 @@ msgstr "출력 표시"
 #. i18n-hint: Some programmer-oriented terminology here:
 #. "Data" refers to the sound to be exported, "piped" means sent,
 #. and "standard in" means the default input stream that the external program,
-#. named by %f, will read.  And yes, it's %f, not %s -- this isn't actually
-#. used
+#. named by %f, will read.  And yes, it's %f, not %s -- this isn't actually used
 #. in the program as a format string.  Keep %f unchanged.
 #: src/export/ExportCL.cpp
 #, c-format
@@ -10939,19 +10891,15 @@ msgstr ""
 "선택 사항\n"
 "0 - 기본값"
 
-#. i18n-hint: 'mux' is short for multiplexor, a device that selects between
-#. several inputs
-#. 'Mux Rate' is a parameter that has some bearing on compression ratio for
-#. MPEG
+#. i18n-hint: 'mux' is short for multiplexor, a device that selects between several inputs
+#. 'Mux Rate' is a parameter that has some bearing on compression ratio for MPEG
 #. it has a hard to predict effect on the degree of compression
 #: src/export/ExportFFmpegDialogs.cpp
 msgid "Mux Rate:"
 msgstr "멀티플렉서 비율:"
 
-#. i18n-hint: 'Packet Size' is a parameter that has some bearing on
-#. compression ratio for MPEG
-#. compression.  It measures how big a chunk of audio is compressed in one
-#. piece.
+#. i18n-hint: 'Packet Size' is a parameter that has some bearing on compression ratio for MPEG
+#. compression.  It measures how big a chunk of audio is compressed in one piece.
 #: src/export/ExportFFmpegDialogs.cpp
 msgid ""
 "Packet size\n"
@@ -10962,10 +10910,8 @@ msgstr ""
 "선택 사항\n"
 "0 - 기본값"
 
-#. i18n-hint: 'Packet Size' is a parameter that has some bearing on
-#. compression ratio for MPEG
-#. compression.  It measures how big a chunk of audio is compressed in one
-#. piece.
+#. i18n-hint: 'Packet Size' is a parameter that has some bearing on compression ratio for MPEG
+#. compression.  It measures how big a chunk of audio is compressed in one piece.
 #: src/export/ExportFFmpegDialogs.cpp
 msgid "Packet Size:"
 msgstr "패킷 크기:"
@@ -11198,8 +11144,7 @@ msgstr "채널 모드:"
 msgid "Force export to mono"
 msgstr "모노로 강제 내보내기"
 
-#. i18n-hint: LAME is the name of an MP3 converter and should not be
-#. translated
+#. i18n-hint: LAME is the name of an MP3 converter and should not be translated
 #: src/export/ExportMP3.cpp
 msgid "Locate LAME"
 msgstr "LAME 찾기"
@@ -14262,16 +14207,14 @@ msgstr "포커스된 트랙: 맨 위로 이동(&O)"
 msgid "Move Focused Track to &Bottom"
 msgstr "포커스된 트랙: 맨 아래로 이동(&B)"
 
-#. i18n-hint: These are strings for the status bar, and indicate whether
-#. Audacity
+#. i18n-hint: These are strings for the status bar, and indicate whether Audacity
 #. is playing or recording or stopped, and whether it is paused;
 #. progressive verb form
 #: src/menus/TransportMenus.cpp src/toolbars/ControlToolBar.cpp
 msgid "Playing"
 msgstr "재생 중"
 
-#. i18n-hint: These are strings for the status bar, and indicate whether
-#. Audacity
+#. i18n-hint: These are strings for the status bar, and indicate whether Audacity
 #. is playing or recording or stopped, and whether it is paused;
 #. progressive verb form
 #: src/menus/TransportMenus.cpp src/prefs/DevicePrefs.cpp src/prefs/MidiIOPrefs.cpp src/prefs/RecordingPrefs.cpp src/prefs/RecordingPrefs.h src/toolbars/ControlToolBar.cpp
@@ -14890,23 +14833,20 @@ msgid "LV&2"
 msgstr ""
 
 #. i18n-hint: "Nyquist" is an embedded interpreted programming language in
-#. Audacity, named in honor of the Swedish-American Harry Nyquist (or
-#. Nyqvist).
+#. Audacity, named in honor of the Swedish-American Harry Nyquist (or Nyqvist).
 #. In the translations of this and other strings, you may transliterate the
 #. name into another alphabet.
 #: src/prefs/EffectsPrefs.cpp
 msgid "N&yquist"
 msgstr "나이퀴스트(&Y)"
 
-#. i18n-hint: Vamp is the proper name of a software protocol for sound
-#. analysis.
+#. i18n-hint: Vamp is the proper name of a software protocol for sound analysis.
 #. It is not an abbreviation for anything.  See http://vamp-plugins.org
 #: src/prefs/EffectsPrefs.cpp
 msgid "&Vamp"
 msgstr ""
 
-#. i18n-hint: Abbreviates Virtual Studio Technology, an audio software
-#. protocol
+#. i18n-hint: Abbreviates Virtual Studio Technology, an audio software protocol
 #. developed by Steinberg GmbH
 #: src/prefs/EffectsPrefs.cpp
 msgid "V&ST"
@@ -15478,8 +15418,7 @@ msgstr "미디 신디사이저 레이턴시는 정수여야 합니다"
 msgid "Midi IO"
 msgstr ""
 
-#. i18n-hint: Modules are optional extensions to Audacity that add NEW
-#. features.
+#. i18n-hint: Modules are optional extensions to Audacity that add NEW features.
 #: src/prefs/ModulePrefs.cpp
 msgid "Modules"
 msgstr "모듈"
@@ -15830,8 +15769,7 @@ msgstr "실시간 변환"
 msgid "Sample Rate Con&verter:"
 msgstr "샘플링 주파수 변환(&V):"
 
-#. i18n-hint: technical term for randomization to reduce undesirable
-#. resampling artifacts
+#. i18n-hint: technical term for randomization to reduce undesirable resampling artifacts
 #: src/prefs/QualityPrefs.cpp
 msgid "&Dither:"
 msgstr "디더(&D):"
@@ -15844,8 +15782,7 @@ msgstr "고품질 변환"
 msgid "Sample Rate Conver&ter:"
 msgstr "샘플링 주파수 변환(&T):"
 
-#. i18n-hint: technical term for randomization to reduce undesirable
-#. resampling artifacts
+#. i18n-hint: technical term for randomization to reduce undesirable resampling artifacts
 #: src/prefs/QualityPrefs.cpp
 msgid "Dit&her:"
 msgstr "디더(&H):"
@@ -15878,8 +15815,7 @@ msgstr "소프트웨어 입력신호 플레이 쓰루 (&S)"
 msgid "Record on a new track"
 msgstr "새 트랙에 녹음"
 
-#. i18n-hint: Dropout is a loss of a short sequence audio sample data from the
-#. recording
+#. i18n-hint: Dropout is a loss of a short sequence audio sample data from the recording
 #: src/prefs/RecordingPrefs.cpp
 msgid "Detect dropouts"
 msgstr "드롭아웃 감지"
@@ -15976,14 +15912,12 @@ msgstr "크로스 페이드 (&F) :"
 msgid "Mel"
 msgstr ""
 
-#. i18n-hint: The name of a frequency scale in psychoacoustics, named for
-#. Heinrich Barkhausen
+#. i18n-hint: The name of a frequency scale in psychoacoustics, named for Heinrich Barkhausen
 #: src/prefs/SpectrogramSettings.cpp
 msgid "Bark"
 msgstr ""
 
-#. i18n-hint: The name of a frequency scale in psychoacoustics, abbreviates
-#. Equivalent Rectangular Bandwidth
+#. i18n-hint: The name of a frequency scale in psychoacoustics, abbreviates Equivalent Rectangular Bandwidth
 #: src/prefs/SpectrogramSettings.cpp
 msgid "ERB"
 msgstr ""
@@ -16144,8 +16078,7 @@ msgstr "스펙트럼 선택 사용하기(&B)"
 msgid "Show a grid along the &Y-axis"
 msgstr "Y-축을 따라 격자 보이기(&Y)"
 
-#. i18n-hint: FFT stands for Fast Fourier Transform and probably shouldn't be
-#. translated
+#. i18n-hint: FFT stands for Fast Fourier Transform and probably shouldn't be translated
 #: src/prefs/SpectrumPrefs.cpp
 msgid "FFT Find Notes"
 msgstr "FFT 노트 찾기"
@@ -16207,8 +16140,7 @@ msgid "The maximum number of notes must be in the range 1..128"
 msgstr "최대 노트 개수는 1부터 128사이의 범위 내에 있어야 합니다"
 
 #. i18n-hint: A theme is a consistent visual style across an application's
-#. graphical user interface, including choices of colors, and similarity of
-#. images
+#. graphical user interface, including choices of colors, and similarity of images
 #. such as those on button controls.  Audacity can load and save alternative
 #. themes.
 #: src/prefs/ThemePrefs.cpp src/prefs/ThemePrefs.h
@@ -16527,8 +16459,7 @@ msgstr "파형 환경 설정"
 msgid "Waveform dB &range:"
 msgstr "파형 dB 범위 (&R)"
 
-#. i18n-hint: These are strings for the status bar, and indicate whether
-#. Audacity
+#. i18n-hint: These are strings for the status bar, and indicate whether Audacity
 #. is playing or recording or stopped, and whether it is paused;
 #. progressive verb form
 #: src/toolbars/ControlToolBar.cpp
@@ -16567,8 +16498,7 @@ msgstr "끝까지 선택"
 msgid "Select to Start"
 msgstr "시작까지 선택"
 
-#. i18n-hint: These are strings for the status bar, and indicate whether
-#. Audacity
+#. i18n-hint: These are strings for the status bar, and indicate whether Audacity
 #. is playing or recording or stopped, and whether it is paused.
 #: src/toolbars/ControlToolBar.cpp src/tracks/ui/Scrubbing.cpp
 #, c-format
@@ -16695,8 +16625,7 @@ msgstr "녹음 레벨 미터"
 msgid "Playback Meter"
 msgstr "재생 레벨 미터"
 
-#. i18n-hint: (noun) The meter that shows the loudness of the audio being
-#. recorded.
+#. i18n-hint: (noun) The meter that shows the loudness of the audio being recorded.
 #. This is the name used in screen reader software, where having 'Meter' first
 #. apparently is helpful to partially sighted people.
 #: src/toolbars/MeterToolBar.cpp
@@ -17222,8 +17151,7 @@ msgid "Processing...   %i%%"
 msgstr "처리중...\t%i%%"
 
 #. i18n-hint: The strings name a track and a format
-#. i18n-hint: The strings name a track and a channel choice (mono, left, or
-#. right)
+#. i18n-hint: The strings name a track and a channel choice (mono, left, or right)
 #: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp src/tracks/playabletrack/wavetrack/ui/WaveformView.cpp
 #, c-format
 msgid "Changed '%s' to %s"
@@ -17651,8 +17579,7 @@ msgstr "주파수 대역폭을 조절하려면 클릭 후 드래그하세요."
 msgid "Edit, Preferences..."
 msgstr "편집, 환경 설정..."
 
-#. i18n-hint: %s is usually replaced by "Ctrl+P" for Windows/Linux,
-#. "Command+," for Mac
+#. i18n-hint: %s is usually replaced by "Ctrl+P" for Windows/Linux, "Command+," for Mac
 #: src/tracks/ui/SelectHandle.cpp
 #, c-format
 msgid "Multi-Tool Mode: %s for Mouse and Keyboard Preferences."
@@ -17666,8 +17593,7 @@ msgstr "주파수 대역폭 설정은 클릭 후 드래그하세요."
 msgid "Click and drag to select audio"
 msgstr "오디오 선택은 클릭 후 드래그하세요"
 
-#. i18n-hint: "Snapping" means automatic alignment of selection edges to any
-#. nearby label or clip boundaries
+#. i18n-hint: "Snapping" means automatic alignment of selection edges to any nearby label or clip boundaries
 #: src/tracks/ui/SelectHandle.cpp
 msgid "(snapping)"
 msgstr "(달라붙기)"
@@ -17724,15 +17650,13 @@ msgstr "Command+클릭"
 msgid "Ctrl+Click"
 msgstr "Ctrl+클릭"
 
-#. i18n-hint: %s is replaced by (translation of) 'Ctrl+Click' on windows,
-#. 'Command+Click' on Mac
+#. i18n-hint: %s is replaced by (translation of) 'Ctrl+Click' on windows, 'Command+Click' on Mac
 #: src/tracks/ui/TrackSelectHandle.cpp
 #, c-format
 msgid "%s to select or deselect track. Drag up or down to change track order."
 msgstr "트랙 선택/선택 해제는 %s. 트랙 순서 변경은 위아래로 드래그하세요."
 
-#. i18n-hint: %s is replaced by (translation of) 'Ctrl+Click' on windows,
-#. 'Command+Click' on Mac
+#. i18n-hint: %s is replaced by (translation of) 'Ctrl+Click' on windows, 'Command+Click' on Mac
 #: src/tracks/ui/TrackSelectHandle.cpp
 #, c-format
 msgid "%s to select or deselect track."
@@ -18007,12 +17931,10 @@ msgstr "hh:mm:ss + 100분의 1"
 
 #. i18n-hint: Format string for displaying time in hours, minutes, seconds
 #. * and hundredths of a second. Change the 'h' to the abbreviation for hours,
-#. * 'm' to the abbreviation for minutes and 's' to the abbreviation for
-#. seconds
+#. * 'm' to the abbreviation for minutes and 's' to the abbreviation for seconds
 #. * (the hundredths are shown as decimal seconds). Don't change the numbers
 #. * unless there aren't 60 minutes in an hour in your locale.
-#. * The decimal separator is specified using '<' if your language uses a ','
-#. or
+#. * The decimal separator is specified using '<' if your language uses a ',' or
 #. * to '>' if your language uses a '.'.
 #: src/widgets/NumericTextCtrl.cpp
 msgid "0100 h 060 m 060>0100 s"
@@ -18025,13 +17947,11 @@ msgid "hh:mm:ss + milliseconds"
 msgstr "hh:mm:ss + 1/1000 초"
 
 #. i18n-hint: Format string for displaying time in hours, minutes, seconds
-#. * and milliseconds. Change the 'h' to the abbreviation for hours, 'm' to
-#. the
+#. * and milliseconds. Change the 'h' to the abbreviation for hours, 'm' to the
 #. * abbreviation for minutes and 's' to the abbreviation for seconds (the
 #. * milliseconds are shown as decimal seconds) . Don't change the numbers
 #. * unless there aren't 60 minutes in an hour in your locale.
-#. * The decimal separator is specified using '<' if your language uses a ','
-#. or
+#. * The decimal separator is specified using '<' if your language uses a ',' or
 #. * to '>' if your language uses a '.'.
 #: src/widgets/NumericTextCtrl.cpp
 msgid "0100 h 060 m 060>01000 s"
@@ -18048,8 +17968,7 @@ msgstr "hh:mm:ss + 샘플"
 #. * abbreviation for minutes, 's' to the abbreviation for seconds and
 #. * translate samples . Don't change the numbers
 #. * unless there aren't 60 seconds in a minute in your locale.
-#. * The decimal separator is specified using '<' if your language uses a ','
-#. or
+#. * The decimal separator is specified using '<' if your language uses a ',' or
 #. * to '>' if your language uses a '.'.
 #: src/widgets/NumericTextCtrl.cpp
 msgid "0100 h 060 m 060 s+># samples"
@@ -18081,8 +18000,7 @@ msgstr "hh:mm:ss + 필름 프레임 (24 fps)"
 #. * for hours, 'm' to the abbreviation for minutes, 's' to the abbreviation
 #. * for seconds and translate 'frames' . Don't change the numbers
 #. * unless there aren't 60 seconds in a minute in your locale.
-#. * The decimal separator is specified using '<' if your language uses a ','
-#. or
+#. * The decimal separator is specified using '<' if your language uses a ',' or
 #. * to '>' if your language uses a '.'.
 #: src/widgets/NumericTextCtrl.cpp
 msgid "0100 h 060 m 060 s+>24 frames"
@@ -18113,8 +18031,7 @@ msgstr "hh:mm:ss + NTSC 드롭 프레임"
 #. * and frames with NTSC drop frames. Change the 'h' to the abbreviation
 #. * for hours, 'm' to the abbreviation for minutes, 's' to the abbreviation
 #. * for seconds and translate 'frames'. Leave the |N alone, it's important!
-#. * The decimal separator is specified using '<' if your language uses a ','
-#. or
+#. * The decimal separator is specified using '<' if your language uses a ',' or
 #. * to '>' if your language uses a '.'.
 #: src/widgets/NumericTextCtrl.cpp
 msgid "0100 h 060 m 060 s+>30 frames|N"
@@ -18132,8 +18049,7 @@ msgstr "hh:mm:ss + NTSC 비드롭 프레임"
 #. * for hours, 'm' to the abbreviation for minutes, 's' to the abbreviation
 #. * for seconds and translate 'frames'. Leave the | .999000999 alone,
 #. * the whole things really is slightly off-speed!
-#. * The decimal separator is specified using '<' if your language uses a ','
-#. or
+#. * The decimal separator is specified using '<' if your language uses a ',' or
 #. * to '>' if your language uses a '.'.
 #: src/widgets/NumericTextCtrl.cpp
 msgid "0100 h 060 m 060 s+>030 frames| .999000999"
@@ -18164,8 +18080,7 @@ msgstr "hh:mm:ss + PAL 프레임 (25 fps)"
 #. * and frames with PAL TV frames. Change the 'h' to the abbreviation
 #. * for hours, 'm' to the abbreviation for minutes, 's' to the abbreviation
 #. * for seconds and translate 'frames'. Nice simple time code!
-#. * The decimal separator is specified using '<' if your language uses a ','
-#. or
+#. * The decimal separator is specified using '<' if your language uses a ',' or
 #. * to '>' if your language uses a '.'.
 #: src/widgets/NumericTextCtrl.cpp
 msgid "0100 h 060 m 060 s+>25 frames"
@@ -18195,8 +18110,7 @@ msgstr "hh:mm:ss + CDDA 프레임(75 fps)"
 #. * and frames with CD Audio frames. Change the 'h' to the abbreviation
 #. * for hours, 'm' to the abbreviation for minutes, 's' to the abbreviation
 #. * for seconds and translate 'frames'.
-#. * The decimal separator is specified using '<' if your language uses a ','
-#. or
+#. * The decimal separator is specified using '<' if your language uses a ',' or
 #. * to '>' if your language uses a '.'.
 #: src/widgets/NumericTextCtrl.cpp
 msgid "0100 h 060 m 060 s+>75 frames"
@@ -18218,8 +18132,7 @@ msgstr "01000,01000 프레임|75"
 
 #. i18n-hint: Format string for displaying frequency in hertz. Change
 #. * the decimal point for your locale. Don't change the numbers.
-#. * The decimal separator is specified using '<' if your language uses a ','
-#. or
+#. * The decimal separator is specified using '<' if your language uses a ',' or
 #. * to '>' if your language uses a '.'.
 #: src/widgets/NumericTextCtrl.cpp
 msgid "010,01000>0100 Hz"
@@ -18236,8 +18149,7 @@ msgstr ""
 
 #. i18n-hint: Format string for displaying frequency in kilohertz. Change
 #. * the decimal point for your locale. Don't change the numbers.
-#. * The decimal separator is specified using '<' if your language uses a ','
-#. or
+#. * The decimal separator is specified using '<' if your language uses a ',' or
 #. * to '>' if your language uses a '.'.
 #: src/widgets/NumericTextCtrl.cpp
 msgid "01000>01000 kHz|0.001"
@@ -18255,8 +18167,7 @@ msgstr "옥타브"
 
 #. i18n-hint: Format string for displaying log of frequency in octaves.
 #. * Change the decimal points for your locale. Don't change the numbers.
-#. * The decimal separator is specified using '<' if your language uses a ','
-#. or
+#. * The decimal separator is specified using '<' if your language uses a ',' or
 #. * to '>' if your language uses a '.'.
 #: src/widgets/NumericTextCtrl.cpp
 msgid "100>01000 octaves|1.442695041"
@@ -18276,8 +18187,7 @@ msgstr "반음 + 센트"
 #. i18n-hint: Format string for displaying log of frequency in semitones
 #. * and cents.
 #. * Change the decimal points for your locale. Don't change the numbers.
-#. * The decimal separator is specified using '<' if your language uses a ','
-#. or
+#. * The decimal separator is specified using '<' if your language uses a ',' or
 #. * to '>' if your language uses a '.'.
 #: src/widgets/NumericTextCtrl.cpp
 msgid "1000 semitones >0100 cents|17.312340491"
@@ -18373,8 +18283,7 @@ msgstr ""
 "폴더를 만들 수 없습니다:\n"
 " %s"
 
-#. i18n-hint: Hyperlink title that opens Preferences dialog on Directories
-#. page.
+#. i18n-hint: Hyperlink title that opens Preferences dialog on Directories page.
 #: src/widgets/UnwritableLocationErrorDialog.cpp
 msgid "Preferences > Directories"
 msgstr "디렉토리 환경설정"
@@ -19203,8 +19112,7 @@ msgstr "소프트 리미트"
 msgid "Hard Limit"
 msgstr "하드 리미트"
 
-#. i18n-hint: clipping of wave peaks and troughs, not division of a track into
-#. clips
+#. i18n-hint: clipping of wave peaks and troughs, not division of a track into clips
 #: plug-ins/limiter.ny
 msgid "Soft Clip"
 msgstr "소프트 클립"
@@ -19810,15 +19718,13 @@ msgstr "<b>샘플링 주파수:</b> &nbsp;&nbsp;~a Hz."
 msgid "<b>Peak Amplitude:</b> &nbsp;&nbsp;~a (linear) &nbsp;&nbsp;~a dB."
 msgstr "<b>최고 진폭:</b> &nbsp;&nbsp;~a (선혀) &nbsp;&nbsp;~a dB."
 
-#. i18n-hint: RMS abbreviates root-mean-square, a method of averaging a
-#. signal; there also "weighted" versions of it but this isn't that
+#. i18n-hint: RMS abbreviates root-mean-square, a method of averaging a signal; there also "weighted" versions of it but this isn't that
 #: plug-ins/sample-data-export.ny
 #, lisp-format
 msgid "<b>RMS</b> (unweighted): &nbsp;&nbsp;~a dB."
 msgstr "<b>RMS</b> (가중치 없ㅇ): &nbsp;&nbsp;~a dB."
 
-#. i18n-hint: DC derives from "direct current" in electronics, really means
-#. the zero frequency component of a signal
+#. i18n-hint: DC derives from "direct current" in electronics, really means the zero frequency component of a signal
 #: plug-ins/sample-data-export.ny
 #, lisp-format
 msgid "<b>DC Offset:</b> &nbsp;&nbsp;~a"
@@ -20227,6 +20133,12 @@ msgstr "레이더 니들의 주파수 (Hz)"
 msgid "Error.~%Stereo track required."
 msgstr "오류.~%스테레오 트랙이 필요합니다."
 
+#~ msgid "Program build date:"
+#~ msgstr "프로그램 빌드 날짜:"
+
+#~ msgid "The name %s is a registered trademark."
+#~ msgstr " %s 는 등록 상표입니다."
+
 #~ msgid "Problem Report for Audacity"
 #~ msgstr "오데시티의 문제점 리포트"
 
@@ -20287,15 +20199,6 @@ msgstr "오류.~%스테레오 트랙이 필요합니다."
 
 #~ msgid "Core Libraries"
 #~ msgstr "핵심 라이브러리"
-
-#~ msgid "Cross-platform GUI library"
-#~ msgstr "크로스 플랫폼 GUI 라이브러리"
-
-#~ msgid "Audio playback and recording"
-#~ msgstr "오디오 재생 및 녹음"
-
-#~ msgid "Sample rate conversion"
-#~ msgstr "샘플링 주파수 변환"
 
 #~ msgid "Dark Theme Extras"
 #~ msgstr "검은색 테마 추가"

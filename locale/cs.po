@@ -4,9 +4,9 @@
 # Adolfo Jayme Barrientos <fitojb@ubuntu.com>, 2021.
 msgid ""
 msgstr ""
-"Project-Id-Version: audacity 3.0.4\n"
+"Project-Id-Version: tenacity 3.0.4\n"
 "Report-Msgid-Bugs-To: emabrey@tenacityaudio.org\n"
-"POT-Creation-Date: 2021-07-20 03:55-0400\n"
+"POT-Creation-Date: 2021-07-25 03:44-0400\n"
 "PO-Revision-Date: 2021-07-24 09:07+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Czech <https://hosted.weblate.org/projects/tenacity/tenacity/cs/>\n"
@@ -457,36 +457,16 @@ msgstr "Zastavit"
 msgid "Stop script"
 msgstr "Zastavit skript"
 
-#: src/AboutDialog.cpp
-msgid "No revision identifier was provided"
-msgstr "Nebyl poskytnut žádný identifikátor změny"
-
 #. i18n-hint: information about the program
 #: src/AboutDialog.cpp
 #, c-format
 msgid "About %s"
 msgstr "O programu %s"
 
-#. i18n-hint: In most languages OK is to be translated as OK.  It appears on a
-#. button.
+#. i18n-hint: In most languages OK is to be translated as OK.  It appears on a button.
 #: src/AboutDialog.cpp src/Dependencies.cpp src/SplashDialog.cpp src/effects/nyquist/Nyquist.cpp src/widgets/MultiDialog.cpp
 msgid "OK"
 msgstr ""
-
-#: src/AboutDialog.cpp
-#, c-format
-msgid "Debug build (debug level %d)"
-msgstr "Ladicí sestavení (úroveň ladění %d)"
-
-#: src/AboutDialog.cpp
-#, c-format
-msgid "Release build (debug level %d)"
-msgstr "Vydavatelské sestavení (úroveň ladění %d)"
-
-#: src/AboutDialog.cpp
-#, c-format
-msgid "%s, 64 bits"
-msgstr "%s, 64 bitů"
 
 #: src/AboutDialog.cpp
 msgid "Build Information"
@@ -504,10 +484,6 @@ msgstr "Zakázáno"
 #: src/AboutDialog.cpp
 msgid "The Build"
 msgstr "Sestavení pro ladění"
-
-#: src/AboutDialog.cpp
-msgid "Program build date:"
-msgstr "Datum sestavení programu:"
 
 #: src/AboutDialog.cpp
 msgid "Commit Id:"
@@ -535,11 +511,22 @@ msgid "File Format Support"
 msgstr "Podporovaný typ formátu"
 
 #: src/AboutDialog.cpp
+msgid "Cross-platform GUI library"
+msgstr "Knihovna rozhraní pro více systémů"
+
+#: src/AboutDialog.cpp
+msgid "Audio playback and recording"
+msgstr "Přehrávání a nahrávání zvuku"
+
+#: src/AboutDialog.cpp
+msgid "Sample rate conversion"
+msgstr "Převod vzorkovacího kmitočtu"
+
+#: src/AboutDialog.cpp
 msgid "MP3 Importing"
 msgstr "Nahrávání MP3"
 
-#. i18n-hint: Ogg is the container format. Vorbis is the compression codec.
-#. Both are proper nouns and shouldn't be translated
+#. i18n-hint: Ogg is the container format. Vorbis is the compression codec. Both are proper nouns and shouldn't be translated
 #: src/AboutDialog.cpp
 msgid "Ogg Vorbis Import and Export"
 msgstr "Nahrávání a ukládání do Ogg Vorbis "
@@ -548,8 +535,7 @@ msgstr "Nahrávání a ukládání do Ogg Vorbis "
 msgid "ID3 tag support"
 msgstr "Podpora značek ID3"
 
-#. i18n-hint: FLAC stands for Free Lossless Audio Codec, but is effectively a
-#. proper noun and so shouldn't be translated
+#. i18n-hint: FLAC stands for Free Lossless Audio Codec, but is effectively a proper noun and so shouldn't be translated
 #: src/AboutDialog.cpp
 msgid "FLAC import and export"
 msgstr "Nahrávání a ukládání do FLAC"
@@ -594,124 +580,113 @@ msgstr "Podpora změny krajní výšky tónu a tempa"
 msgid "GPL License"
 msgstr "Licence GPL"
 
-#. i18n-hint: For "About Tenacity..." credits, substituting a person's proper
-#. name
-#: src/AboutDialog.cpp
-#, c-format
-msgid "%s, system administration"
-msgstr "%s, správa systému"
-
-#. i18n-hint: For "About Tenacity..." credits, substituting a person's proper
-#. name
-#: src/AboutDialog.cpp
-#, c-format
-msgid "%s, co-founder and developer"
-msgstr "%s, spoluzakladatel a vývojář"
-
-#. i18n-hint: For "About Tenacity..." credits, substituting a person's proper
-#. name
-#: src/AboutDialog.cpp
-#, c-format
-msgid "%s, developer"
-msgstr "%s, vývojář"
-
-#. i18n-hint: For "About Tenacity..." credits, substituting a person's proper
-#. name
-#: src/AboutDialog.cpp
-#, c-format
-msgid "%s, developer and support"
-msgstr "%s, dokumentace a podpora"
-
-#. i18n-hint: For "About Tenacity..." credits, substituting a person's proper
-#. name
-#: src/AboutDialog.cpp
-#, c-format
-msgid "%s, documentation and support"
-msgstr "%s, dokumentace a podpora"
-
-#. i18n-hint: For "About Tenacity..." credits, substituting a person's proper
-#. name
-#: src/AboutDialog.cpp
-#, c-format
-msgid "%s, QA tester, documentation and support"
-msgstr "%s, dokumentace a podpora"
-
-#. i18n-hint: For "About Tenacity..." credits, substituting a person's proper
-#. name
-#: src/AboutDialog.cpp
-#, c-format
-msgid "%s, documentation and support, French"
-msgstr "%s, dokumentace a podpora, francouzština"
-
-#. i18n-hint: For "About Tenacity..." credits, substituting a person's proper
-#. name
-#: src/AboutDialog.cpp
-#, c-format
-msgid "%s, quality assurance"
-msgstr "%s, zajištění kvality"
-
-#. i18n-hint: For "About Tenacity..." credits, substituting a person's proper
-#. name
-#: src/AboutDialog.cpp
-#, c-format
-msgid "%s, accessibility advisor"
-msgstr "%s, poradce pro zpřístupnění"
-
-#. i18n-hint: For "About Tenacity..." credits, substituting a person's proper
-#. name
-#: src/AboutDialog.cpp
-#, c-format
-msgid "%s, graphic artist"
-msgstr "%s, umělecký návrhář"
-
-#. i18n-hint: For "About Tenacity..." credits, substituting a person's proper
-#. name
-#: src/AboutDialog.cpp
-#, c-format
-msgid "%s, composer"
-msgstr "%s, skladatel"
-
-#. i18n-hint: For "About Tenacity..." credits, substituting a person's proper
-#. name
-#: src/AboutDialog.cpp
-#, c-format
-msgid "%s, tester"
-msgstr "%s, zkoušeč"
-
-#. i18n-hint: For "About Tenacity..." credits, substituting a person's proper
-#. name
-#: src/AboutDialog.cpp
-#, c-format
-msgid "%s, Nyquist plug-ins"
-msgstr "%s, přídavné moduly Nyquist"
-
-#. i18n-hint: For "About Tenacity..." credits, substituting a person's proper
-#. name
-#: src/AboutDialog.cpp
-#, c-format
-msgid "%s, web developer"
-msgstr "%s, vývojář stránek"
-
-#. i18n-hint: For "About Tenacity..." credits, substituting a person's proper
-#. name
-#: src/AboutDialog.cpp
-#, c-format
-msgid "%s, graphics"
-msgstr "%s, grafika"
-
-#. i18n-hint: For "About Tenacity..." credits, substituting a person's proper
-#. name
+#. i18n-hint: For "About Tenacity..." credits, substituting a person's proper name
 #: src/AboutDialog.cpp
 #, fuzzy, c-format
 msgid "%s, lead Tenacity developer"
 msgstr "%s, vývojář stránek"
 
-#. i18n-hint: For "About Tenacity..." credits, substituting a person's proper
-#. name
+#. i18n-hint: For "About Tenacity..." credits, substituting a person's proper name
 #: src/AboutDialog.cpp
 #, fuzzy, c-format
 msgid "%s, Tenacity developer"
 msgstr "%s, vývojář stránek"
+
+#. i18n-hint: For "About Tenacity..." credits, substituting a person's proper name
+#: src/AboutDialog.cpp
+#, fuzzy, c-format
+msgid "%s, Tenacity contributor"
+msgstr "%s, vývojář stránek"
+
+#. i18n-hint: For "About Tenacity..." credits, substituting a person's proper name
+#: src/AboutDialog.cpp
+#, c-format
+msgid "%s, system administration"
+msgstr "%s, správa systému"
+
+#. i18n-hint: For "About Tenacity..." credits, substituting a person's proper name
+#: src/AboutDialog.cpp
+#, c-format
+msgid "%s, co-founder and developer"
+msgstr "%s, spoluzakladatel a vývojář"
+
+#. i18n-hint: For "About Tenacity..." credits, substituting a person's proper name
+#: src/AboutDialog.cpp
+#, c-format
+msgid "%s, developer"
+msgstr "%s, vývojář"
+
+#. i18n-hint: For "About Tenacity..." credits, substituting a person's proper name
+#: src/AboutDialog.cpp
+#, c-format
+msgid "%s, developer and support"
+msgstr "%s, dokumentace a podpora"
+
+#. i18n-hint: For "About Tenacity..." credits, substituting a person's proper name
+#: src/AboutDialog.cpp
+#, c-format
+msgid "%s, documentation and support"
+msgstr "%s, dokumentace a podpora"
+
+#. i18n-hint: For "About Tenacity..." credits, substituting a person's proper name
+#: src/AboutDialog.cpp
+#, c-format
+msgid "%s, QA tester, documentation and support"
+msgstr "%s, dokumentace a podpora"
+
+#. i18n-hint: For "About Tenacity..." credits, substituting a person's proper name
+#: src/AboutDialog.cpp
+#, c-format
+msgid "%s, documentation and support, French"
+msgstr "%s, dokumentace a podpora, francouzština"
+
+#. i18n-hint: For "About Tenacity..." credits, substituting a person's proper name
+#: src/AboutDialog.cpp
+#, c-format
+msgid "%s, quality assurance"
+msgstr "%s, zajištění kvality"
+
+#. i18n-hint: For "About Tenacity..." credits, substituting a person's proper name
+#: src/AboutDialog.cpp
+#, c-format
+msgid "%s, accessibility advisor"
+msgstr "%s, poradce pro zpřístupnění"
+
+#. i18n-hint: For "About Tenacity..." credits, substituting a person's proper name
+#: src/AboutDialog.cpp
+#, c-format
+msgid "%s, graphic artist"
+msgstr "%s, umělecký návrhář"
+
+#. i18n-hint: For "About Tenacity..." credits, substituting a person's proper name
+#: src/AboutDialog.cpp
+#, c-format
+msgid "%s, composer"
+msgstr "%s, skladatel"
+
+#. i18n-hint: For "About Tenacity..." credits, substituting a person's proper name
+#: src/AboutDialog.cpp
+#, c-format
+msgid "%s, tester"
+msgstr "%s, zkoušeč"
+
+#. i18n-hint: For "About Tenacity..." credits, substituting a person's proper name
+#: src/AboutDialog.cpp
+#, c-format
+msgid "%s, Nyquist plug-ins"
+msgstr "%s, přídavné moduly Nyquist"
+
+#. i18n-hint: For "About Tenacity..." credits, substituting a person's proper name
+#: src/AboutDialog.cpp
+#, c-format
+msgid "%s, web developer"
+msgstr "%s, vývojář stránek"
+
+#. i18n-hint: For "About Tenacity..." credits, substituting a person's proper name
+#: src/AboutDialog.cpp
+#, c-format
+msgid "%s, graphics"
+msgstr "%s, grafika"
 
 #: src/AboutDialog.cpp
 #, c-format
@@ -724,13 +699,17 @@ msgstr ""
 
 #. i18n-hint: The program's name substitutes for %s
 #: src/AboutDialog.cpp
-#, c-format
-msgid "%s the free, open source, cross-platform software for recording and editing sounds."
+#, fuzzy
+msgid "Free, open source, cross-platform audio recorder and editor."
 msgstr "%s je program zadarmo, s otevřeným zdrojovým kódem, pro více operačních systémů, na nahrávání a upravování zvuku"
 
 #: src/AboutDialog.cpp
 msgid "Credits"
 msgstr "Zásluhy"
+
+#: src/AboutDialog.cpp
+msgid "Please note that names are sorted in alphabetical order, not in order of importance."
+msgstr ""
 
 #: src/AboutDialog.cpp
 #, fuzzy
@@ -739,9 +718,14 @@ msgstr "Přizpůsobení DarkAudacity"
 
 #. i18n-hint: The program's name substitutes for %s
 #: src/AboutDialog.cpp
-#, c-format
-msgid "%s Team Members"
-msgstr "%s členové týmu"
+#, fuzzy, c-format
+msgid "%s Contributors"
+msgstr "Přispěvatelé"
+
+#: src/AboutDialog.cpp
+#, fuzzy
+msgid "Tenacity Special thanks:"
+msgstr "Zvláštní poděkování:"
 
 #: src/AboutDialog.cpp src/prefs/LibraryPrefs.cpp
 msgid "Libraries"
@@ -752,6 +736,12 @@ msgstr "Knihovny"
 #, c-format
 msgid "%s includes code from the following projects:"
 msgstr "%s obsahuje kód následujících projektů:"
+
+#. i18n-hint: The program's name substitutes for %s
+#: src/AboutDialog.cpp
+#, c-format
+msgid "%s Team Members"
+msgstr "%s členové týmu"
 
 #: src/AboutDialog.cpp
 msgid "Emeritus:"
@@ -788,18 +778,21 @@ msgstr "Zvláštní poděkování:"
 msgid "%s website: "
 msgstr "Stránky %s: "
 
-#. i18n-hint Tenacity's name substitutes for first and third %s,
-#. and a "copyright" symbol for the second
+#. i18n-hint Tenacity's name substitutes for first and fourth %s, and the second and third %s are the copyright symbol and final year of copyright
 #: src/AboutDialog.cpp
 #, c-format
-msgid "%s software is copyright %s 1999-2021 %s Team."
+msgid "%s %s 1999-%s %s contributors"
 msgstr ""
 
-#. i18n-hint Tenacity's name substitutes for %s
+#. i18n-hint The registered trademark symbol (r) is substituted at %s
 #: src/AboutDialog.cpp
 #, c-format
-msgid "The name %s is a registered trademark."
-msgstr "Název %s je registrovaná ochranná známka Dominica Mazzoniho."
+msgid "The Audacity%s trademark is used within this software for descriptive and informational purposes only."
+msgstr ""
+
+#: src/AboutDialog.cpp
+msgid "Tenacity is not produced or endorsed by MuseCY SM Ltd. or Dominic M Mazzoni."
+msgstr ""
 
 #: src/AdornedRulerPanel.cpp
 msgid "Timeline actions disabled during recording"
@@ -1613,8 +1606,7 @@ msgstr ""
 msgid "Menu Command (No Parameters)"
 msgstr "Příkaz v nabídce (žádné parametry)"
 
-#. i18n-hint: %s will be replaced by the name of an action, such as "Remove
-#. Tracks".
+#. i18n-hint: %s will be replaced by the name of an action, such as "Remove Tracks".
 #: src/BatchCommands.cpp src/CommonCommandFlags.cpp
 #, c-format
 msgid "\"%s\" requires one or more tracks to be selected."
@@ -1830,8 +1822,7 @@ msgstr "Název nového makra"
 msgid "Name must not be blank"
 msgstr "Název nesmí být prázdný"
 
-#. i18n-hint: The %c will be replaced with 'forbidden characters', like '/'
-#. and '\'.
+#. i18n-hint: The %c will be replaced with 'forbidden characters', like '/' and '\'.
 #: src/BatchProcessDialog.cpp
 #, c-format
 msgid "Names may not contain '%c' and '%c'"
@@ -2020,8 +2011,31 @@ msgstr "ZKOUŠKA SE NEZDAŘILA!\n"
 msgid "Benchmark completed successfully.\n"
 msgstr "Srovnávací zkouška byla úspěšně dokončena.\n"
 
-#. i18n-hint: %s will be replaced by the name of an action, such as Normalize,
-#. Cut, Fade.
+#: src/BuildInfo.h
+msgid "No revision identifier was provided"
+msgstr "Nebyl poskytnut žádný identifikátor změny"
+
+#: src/BuildInfo.h
+#, fuzzy
+msgid "Unknown date and time"
+msgstr "Datum a čas konce"
+
+#: src/BuildInfo.h
+#, c-format
+msgid "Debug build (debug level %d)"
+msgstr "Ladicí sestavení (úroveň ladění %d)"
+
+#: src/BuildInfo.h
+#, c-format
+msgid "Release build (debug level %d)"
+msgstr "Vydavatelské sestavení (úroveň ladění %d)"
+
+#: src/BuildInfo.h
+#, fuzzy
+msgid ", 64 bits"
+msgstr "%s, 64 bitů"
+
+#. i18n-hint: %s will be replaced by the name of an action, such as Normalize, Cut, Fade.
 #: src/CommonCommandFlags.cpp
 #, c-format
 msgid ""
@@ -2033,15 +2047,13 @@ msgstr ""
 "\n"
 "Ctrl+A vybere všechen zvuk."
 
-#. i18n-hint: %s will be replaced by the name of an action, such as Normalize,
-#. Cut, Fade.
+#. i18n-hint: %s will be replaced by the name of an action, such as Normalize, Cut, Fade.
 #: src/CommonCommandFlags.cpp
 #, c-format
 msgid "Select the audio for %s to use (for example, Cmd + A to Select All) then try again."
 msgstr "Vyberte zvuk pro %s (např. Cmd+A pro výběr všeho), potom to zkuste znovu."
 
-#. i18n-hint: %s will be replaced by the name of an action, such as Normalize,
-#. Cut, Fade.
+#. i18n-hint: %s will be replaced by the name of an action, such as Normalize, Cut, Fade.
 #: src/CommonCommandFlags.cpp
 #, c-format
 msgid "Select the audio for %s to use (for example, Ctrl + A to Select All) then try again."
@@ -2051,8 +2063,7 @@ msgstr "Vyberte zvuk pro %s (např. Ctrl+A pro výběr všeho), potom to zkuste 
 msgid "No Audio Selected"
 msgstr "Nebyl vybrán žádný zvuk"
 
-#. i18n-hint: %s will be replaced by the name of an effect, usually 'Noise
-#. Reduction'.
+#. i18n-hint: %s will be replaced by the name of an effect, usually 'Noise Reduction'.
 #: src/CommonCommandFlags.cpp
 #, c-format
 msgid ""
@@ -2484,8 +2495,7 @@ msgstr ""
 msgid "File Error"
 msgstr "Chyba v souboru"
 
-#. i18n-hint: %s will be the error message from the libsndfile software
-#. library
+#. i18n-hint: %s will be the error message from the libsndfile software library
 #: src/FileFormats.cpp
 #, c-format
 msgid "Error (file may not have been written): %s"
@@ -2689,30 +2699,26 @@ msgstr "Není vybrán dostatek údajů."
 msgid "s"
 msgstr ""
 
-#. i18n-hint: The %d's are replaced by numbers, the %s by musical notes, e.g.
-#. A#
+#. i18n-hint: The %d's are replaced by numbers, the %s by musical notes, e.g. A#
 #: src/FreqWindow.cpp
 #, c-format
 msgid "%d Hz (%s) = %d dB"
 msgstr ""
 
-#. i18n-hint: The %d's are replaced by numbers, the %s by musical notes, e.g.
-#. A#
+#. i18n-hint: The %d's are replaced by numbers, the %s by musical notes, e.g. A#
 #: src/FreqWindow.cpp
 #, c-format
 msgid "%d Hz (%s) = %.1f dB"
 msgstr ""
 
-#. i18n-hint: The %d's are replaced by numbers, the %s by musical notes, e.g.
-#. A#
+#. i18n-hint: The %d's are replaced by numbers, the %s by musical notes, e.g. A#
 #. * the %.4f are numbers, and 'sec' should be an abbreviation for seconds
 #: src/FreqWindow.cpp
 #, c-format
 msgid "%.4f sec (%d Hz) (%s) = %f"
 msgstr "%.4f s (%d Hz) (%s) = %f"
 
-#. i18n-hint: The %d's are replaced by numbers, the %s by musical notes, e.g.
-#. A#
+#. i18n-hint: The %d's are replaced by numbers, the %s by musical notes, e.g. A#
 #. * the %.4f are numbers, and 'sec' should be an abbreviation for seconds
 #: src/FreqWindow.cpp
 #, c-format
@@ -3118,8 +3124,7 @@ msgid "Gain"
 msgstr "Zesílení"
 
 #. i18n-hint: title of the MIDI Velocity slider
-#. i18n-hint: Title of the Velocity slider, used to adjust the volume of note
-#. tracks
+#. i18n-hint: Title of the Velocity slider, used to adjust the volume of note tracks
 #: src/MixerBoard.cpp src/tracks/playabletrack/notetrack/ui/NoteTrackControls.cpp src/tracks/playabletrack/notetrack/ui/NoteTrackSliderHandles.cpp
 msgid "Velocity"
 msgstr "Síla tónu"
@@ -3344,32 +3349,27 @@ msgstr ""
 msgid "B♭"
 msgstr ""
 
-#. i18n-hint: Two, alternate names of a musical note in the 12-tone chromatic
-#. scale
+#. i18n-hint: Two, alternate names of a musical note in the 12-tone chromatic scale
 #: src/PitchName.cpp
 msgid "C♯/D♭"
 msgstr ""
 
-#. i18n-hint: Two, alternate names of a musical note in the 12-tone chromatic
-#. scale
+#. i18n-hint: Two, alternate names of a musical note in the 12-tone chromatic scale
 #: src/PitchName.cpp
 msgid "D♯/E♭"
 msgstr ""
 
-#. i18n-hint: Two, alternate names of a musical note in the 12-tone chromatic
-#. scale
+#. i18n-hint: Two, alternate names of a musical note in the 12-tone chromatic scale
 #: src/PitchName.cpp
 msgid "F♯/G♭"
 msgstr ""
 
-#. i18n-hint: Two, alternate names of a musical note in the 12-tone chromatic
-#. scale
+#. i18n-hint: Two, alternate names of a musical note in the 12-tone chromatic scale
 #: src/PitchName.cpp
 msgid "G♯/A♭"
 msgstr ""
 
-#. i18n-hint: Two, alternate names of a musical note in the 12-tone chromatic
-#. scale
+#. i18n-hint: Two, alternate names of a musical note in the 12-tone chromatic scale
 #: src/PitchName.cpp
 msgid "A♯/B♭"
 msgstr ""
@@ -4007,11 +4007,15 @@ msgstr ""
 msgid "Compacting project"
 msgstr "Sceluje se projekt"
 
-#. i18n-hint: The %02i is the project number, the %s is the project name.
+#. i18n-hint: The %02i is the project number. This is followed by the project name in quotes as a %s.
 #: src/ProjectFileIO.cpp
 #, c-format
 msgid "[Project %02i] Audacity \"%s\""
 msgstr "[Projekt %02i] Audacity \"%s\""
+
+#: src/ProjectFileIO.cpp src/commands/AudacityCommand.cpp src/effects/Effect.cpp src/effects/nyquist/Nyquist.cpp src/prefs/PrefsPanel.cpp plug-ins/beat.ny
+msgid "Audacity"
+msgstr ""
 
 #. i18n-hint: E.g this is recovered audio that had been lost.
 #: src/ProjectFileIO.cpp
@@ -4381,8 +4385,7 @@ msgstr "Automatické zálohování databáze selhalo."
 msgid "Welcome to Audacity version %s"
 msgstr "Vítejte v Audacity verze %s"
 
-#. i18n-hint: The first %s numbers the project, the second %s is the project
-#. name.
+#. i18n-hint: The first %s numbers the project, the second %s is the project name.
 #: src/ProjectManager.cpp
 #, c-format
 msgid "%sSave changes to %s?"
@@ -4626,8 +4629,7 @@ msgstr "Měřič"
 msgid "Play Meter"
 msgstr "Hladina přehrávání"
 
-#. i18n-hint: (noun) The meter that shows the loudness of the audio being
-#. recorded.
+#. i18n-hint: (noun) The meter that shows the loudness of the audio being recorded.
 #: src/Screenshot.cpp src/commands/ScreenshotCommand.cpp src/toolbars/MeterToolBar.cpp
 msgid "Record Meter"
 msgstr "Hladina nahrávání"
@@ -4657,8 +4659,7 @@ msgid "Ruler"
 msgstr "Pravítko"
 
 #. i18n-hint: "Tracks" include audio recordings but also other collections of
-#. * data associated with a time line, such as sequences of labels, and
-#. musical
+#. * data associated with a time line, such as sequences of labels, and musical
 #. * notes
 #: src/Screenshot.cpp src/commands/GetInfoCommand.cpp src/commands/GetTrackInfoCommand.cpp src/commands/ScreenshotCommand.cpp src/export/ExportMultiple.cpp src/prefs/TracksPrefs.cpp src/prefs/TracksPrefs.h
 msgid "Tracks"
@@ -4926,8 +4927,7 @@ msgstr ""
 "  %s."
 
 #. i18n-hint: A theme is a consistent visual style across an application's
-#. graphical user interface, including choices of colors, and similarity of
-#. images
+#. graphical user interface, including choices of colors, and similarity of images
 #. such as those on button controls.  Audacity can load and save alternative
 #. themes.
 #: src/Theme.cpp
@@ -5066,17 +5066,12 @@ msgstr "Vysoký kontrast"
 msgid "Custom"
 msgstr "Vlastní"
 
-#. i18n-hint: This string is used to configure the controls which shows the
-#. recording
-#. * duration. As such it is important that only the alphabetic parts of the
-#. string
+#. i18n-hint: This string is used to configure the controls which shows the recording
+#. * duration. As such it is important that only the alphabetic parts of the string
 #. * are translated, with the numbers left exactly as they are.
-#. * The string 'days' indicates that the first number in the control will be
-#. the number of days,
-#. * then the 'h' indicates the second number displayed is hours, the 'm'
-#. indicates the third
-#. * number displayed is minutes, and the 's' indicates that the fourth number
-#. displayed is
+#. * The string 'days' indicates that the first number in the control will be the number of days,
+#. * then the 'h' indicates the second number displayed is hours, the 'm' indicates the third
+#. * number displayed is minutes, and the 's' indicates that the fourth number displayed is
 #. * seconds.
 #: src/TimeDialog.h src/TimerRecordDialog.cpp src/effects/DtmfGen.cpp src/effects/Noise.cpp src/effects/Silence.cpp src/effects/ToneGen.cpp src/effects/VST/VSTEffect.cpp src/effects/ladspa/LadspaEffect.cpp src/effects/lv2/LV2Effect.cpp
 msgid "Duration"
@@ -5275,15 +5270,11 @@ msgstr ""
 msgid "099 days 024 h 060 m 060 s"
 msgstr "099 dní 024 h 060 m 060 s"
 
-#. i18n-hint: This string is used to configure the controls for times when the
-#. recording is
-#. * started and stopped. As such it is important that only the alphabetic
-#. parts of the string
+#. i18n-hint: This string is used to configure the controls for times when the recording is
+#. * started and stopped. As such it is important that only the alphabetic parts of the string
 #. * are translated, with the numbers left exactly as they are.
-#. * The 'h' indicates the first number displayed is hours, the 'm' indicates
-#. the second number
-#. * displayed is minutes, and the 's' indicates that the third number
-#. displayed is seconds.
+#. * The 'h' indicates the first number displayed is hours, the 'm' indicates the second number
+#. * displayed is minutes, and the 's' indicates that the third number displayed is seconds.
 #: src/TimerRecordDialog.cpp
 msgid "Start Date and Time"
 msgstr "Datum a čas začátku"
@@ -5534,8 +5525,7 @@ msgstr "Výběr pro použití hlasového klíče příliš malý."
 msgid "Calibration Results\n"
 msgstr "Výsledky kalibrace\n"
 
-#. i18n-hint: %1.4f is replaced by a number.  sd stands for 'Standard
-#. Deviations'
+#. i18n-hint: %1.4f is replaced by a number.  sd stands for 'Standard Deviations'
 #: src/VoiceKey.cpp
 #, c-format
 msgid "Energy                  -- mean: %1.4f  sd: (%1.4f)\n"
@@ -5572,10 +5562,6 @@ msgstr "Za klipem není dost místa pro otevření střihu"
 msgid "This operation cannot be done until importation of %s completes."
 msgstr "Tuto operaci nelze udělat, dokud nebude dokončeno nahrávání %s."
 
-#: src/commands/AudacityCommand.cpp src/effects/Effect.cpp src/effects/nyquist/Nyquist.cpp src/prefs/PrefsPanel.cpp plug-ins/beat.ny
-msgid "Audacity"
-msgstr ""
-
 #: src/commands/AudacityCommand.cpp src/effects/Effect.cpp
 #, c-format
 msgid ""
@@ -5592,8 +5578,7 @@ msgstr ""
 msgid "Applying %s..."
 msgstr "Používá se %s..."
 
-#. i18n-hint: An item name followed by a value, with appropriate separating
-#. punctuation
+#. i18n-hint: An item name followed by a value, with appropriate separating punctuation
 #: src/commands/AudacityCommand.cpp src/effects/Effect.cpp src/effects/vamp/VampEffect.cpp src/menus/PluginMenus.cpp src/tracks/playabletrack/notetrack/ui/NoteTrackSliderHandles.cpp src/tracks/playabletrack/wavetrack/ui/WaveTrackSliderHandles.cpp src/widgets/ASlider.cpp
 #, c-format
 msgid "%s: %s"
@@ -6375,16 +6360,14 @@ msgstr "Automatické zeslabení"
 msgid "Reduces (ducks) the volume of one or more tracks whenever the volume of a specified \"control\" track reaches a particular level"
 msgstr "Sníží hlasitost jedné nebo více stop vždy, když hlasitost určené kontrolní stopy dosáhne určité úrovně"
 
-#. i18n-hint: Auto duck is the name of an effect that 'ducks' (reduces the
-#. volume)
+#. i18n-hint: Auto duck is the name of an effect that 'ducks' (reduces the volume)
 #. * of the audio automatically when there is sound on another track.  Not as
 #. * in 'Donald-Duck'!
 #: src/effects/AutoDuck.cpp
 msgid "You selected a track which does not contain audio. AutoDuck can only process audio tracks."
 msgstr "Je vybrána stopa, která neobsahuje zvuková data. Automatické zeslabení může zpracovávat jen zvukové stopy."
 
-#. i18n-hint: Auto duck is the name of an effect that 'ducks' (reduces the
-#. volume)
+#. i18n-hint: Auto duck is the name of an effect that 'ducks' (reduces the volume)
 #. * of the audio automatically when there is sound on another track.  Not as
 #. * in 'Donald-Duck'!
 #: src/effects/AutoDuck.cpp
@@ -6608,8 +6591,7 @@ msgstr "Změnit rychlost, ovlivnit tempo a výšku tónu"
 msgid "&Speed Multiplier:"
 msgstr "&Násobič rychlosti:"
 
-#. i18n-hint: "rpm" is an English abbreviation meaning "revolutions per
-#. minute".
+#. i18n-hint: "rpm" is an English abbreviation meaning "revolutions per minute".
 #. "vinyl" refers to old-fashioned phonograph records
 #: src/effects/ChangeSpeed.cpp
 msgid "Standard Vinyl rpm:"
@@ -6842,23 +6824,20 @@ msgid "Attack Time"
 msgstr "Čas náběhu"
 
 #. i18n-hint: Particularly in percussion, sounds can be regarded as having
-#. * an 'attack' phase where the sound builds up and a 'decay' or 'release'
-#. where the
+#. * an 'attack' phase where the sound builds up and a 'decay' or 'release' where the
 #. * sound dies away.
 #: src/effects/Compressor.cpp
 msgid "R&elease Time:"
 msgstr "Čas &uvolnění:"
 
 #. i18n-hint: Particularly in percussion, sounds can be regarded as having
-#. * an 'attack' phase where the sound builds up and a 'decay' or 'release'
-#. where the
+#. * an 'attack' phase where the sound builds up and a 'decay' or 'release' where the
 #. * sound dies away.
 #: src/effects/Compressor.cpp
 msgid "Release Time"
 msgstr "Čas uvolnění"
 
-#. i18n-hint: Make-up, i.e. correct for any reduction, rather than fabricate
-#. it.
+#. i18n-hint: Make-up, i.e. correct for any reduction, rather than fabricate it.
 #: src/effects/Compressor.cpp
 msgid "Ma&ke-up gain for 0 dB after compressing"
 msgstr "&Zvýšení na 0 dB po kompresi"
@@ -7040,8 +7019,7 @@ msgstr "Úroveň pozadí je příliš vysoká"
 msgid "Background higher than foreground"
 msgstr "Pozadí je vyšší než popředí"
 
-#. i18n-hint: WCAG2 is the 'Web Content Accessibility Guidelines (WCAG) 2.0',
-#. see http://www.w3.org/TR/WCAG20/
+#. i18n-hint: WCAG2 is the 'Web Content Accessibility Guidelines (WCAG) 2.0', see http://www.w3.org/TR/WCAG20/
 #: src/effects/Contrast.cpp
 msgid "WCAG2 Pass"
 msgstr "WCAG2: \"OK\""
@@ -7526,8 +7504,7 @@ msgid "Previewing"
 msgstr "Náhled"
 
 #. i18n-hint: "Nyquist" is an embedded interpreted programming language in
-#. Audacity, named in honor of the Swedish-American Harry Nyquist (or
-#. Nyqvist).
+#. Audacity, named in honor of the Swedish-American Harry Nyquist (or Nyqvist).
 #. In the translations of this and other strings, you may transliterate the
 #. name into another alphabet.
 #: src/effects/Effect.h
@@ -7935,8 +7912,7 @@ msgstr ""
 msgid "%g kHz"
 msgstr ""
 
-#. i18n-hint k is SI abbreviation for x1,000.  Usually unchanged in
-#. translation.
+#. i18n-hint k is SI abbreviation for x1,000.  Usually unchanged in translation.
 #: src/effects/Equalization.cpp
 #, c-format
 msgid "%gk"
@@ -8533,8 +8509,7 @@ msgstr "&Zmenšit"
 msgid "&Isolate"
 msgstr "&Oddělit"
 
-#. i18n-hint: Means the difference between effect and original sound.
-#. Translate differently from "Reduce" !
+#. i18n-hint: Means the difference between effect and original sound.  Translate differently from "Reduce" !
 #: src/effects/NoiseReduction.cpp
 msgid "Resid&ue"
 msgstr "Zbytek"
@@ -8739,8 +8714,7 @@ msgstr "Faktor &protažení:"
 msgid "&Time Resolution (seconds):"
 msgstr "Ča&sové rozlišení (sekundy):"
 
-#. i18n-hint: 'Time Resolution' is the name of a control in the Paulstretch
-#. effect.
+#. i18n-hint: 'Time Resolution' is the name of a control in the Paulstretch effect.
 #: src/effects/Paulstretch.cpp
 #, c-format
 msgid ""
@@ -8754,8 +8728,7 @@ msgstr ""
 "Pokuste se o zvětšení výběru zvuku na alespoň %.1f s,\n"
 "nebo o zmenšení časového rozlišení na méně než %.1f s."
 
-#. i18n-hint: 'Time Resolution' is the name of a control in the Paulstretch
-#. effect.
+#. i18n-hint: 'Time Resolution' is the name of a control in the Paulstretch effect.
 #: src/effects/Paulstretch.cpp
 #, c-format
 msgid ""
@@ -8769,8 +8742,7 @@ msgstr ""
 "Pro nynější časové rozlišení je největší\n"
 "časové rozlišení %.1f s."
 
-#. i18n-hint: 'Time Resolution' is the name of a control in the Paulstretch
-#. effect.
+#. i18n-hint: 'Time Resolution' is the name of a control in the Paulstretch effect.
 #: src/effects/Paulstretch.cpp
 #, c-format
 msgid ""
@@ -9015,20 +8987,17 @@ msgstr "Obrátí vybraný zvuk"
 msgid "SBSMS Time / Pitch Stretch"
 msgstr "Protáhnutí času zvuku/výšky tónu SBSMS"
 
-#. i18n-hint: Butterworth is the name of the person after whom the filter type
-#. is named.
+#. i18n-hint: Butterworth is the name of the person after whom the filter type is named.
 #: src/effects/ScienFilter.cpp
 msgid "Butterworth"
 msgstr "Butterworthův filtr"
 
-#. i18n-hint: Chebyshev is the name of the person after whom the filter type
-#. is named.
+#. i18n-hint: Chebyshev is the name of the person after whom the filter type is named.
 #: src/effects/ScienFilter.cpp
 msgid "Chebyshev Type I"
 msgstr "Čebyševův filtr typ I"
 
-#. i18n-hint: Chebyshev is the name of the person after whom the filter type
-#. is named.
+#. i18n-hint: Chebyshev is the name of the person after whom the filter type is named.
 #: src/effects/ScienFilter.cpp
 msgid "Chebyshev Type II"
 msgstr "Čebyševův filtr typ II"
@@ -9058,8 +9027,7 @@ msgstr "Chcete-li použít filtr, musí mít všechny vybrané stopy stejný vzo
 msgid "&Filter Type:"
 msgstr "&Typ filtru:"
 
-#. i18n-hint: 'Order' means the complexity of the filter, and is a number
-#. between 1 and 10.
+#. i18n-hint: 'Order' means the complexity of the filter, and is a number between 1 and 10.
 #: src/effects/ScienFilter.cpp
 msgid "O&rder:"
 msgstr "&Pořadí:"
@@ -9128,40 +9096,32 @@ msgstr "Prahová hodnota pro ticho:"
 msgid "Silence Threshold"
 msgstr "Prahová hodnota pro ticho"
 
-#. i18n-hint: The English would be clearer if it had 'Duration' rather than
-#. 'Time'
-#. This is a NEW experimental effect, and until we have it documented in the
-#. user
+#. i18n-hint: The English would be clearer if it had 'Duration' rather than 'Time'
+#. This is a NEW experimental effect, and until we have it documented in the user
 #. manual we don't have a clear description of what this parameter does.
 #. It is OK to leave it in English.
 #: src/effects/ScoreAlignDialog.cpp
 msgid "Presmooth Time:"
 msgstr "Doba trvání předvyhlazení:"
 
-#. i18n-hint: The English would be clearer if it had 'Duration' rather than
-#. 'Time'
-#. This is a NEW experimental effect, and until we have it documented in the
-#. user
+#. i18n-hint: The English would be clearer if it had 'Duration' rather than 'Time'
+#. This is a NEW experimental effect, and until we have it documented in the user
 #. manual we don't have a clear description of what this parameter does.
 #. It is OK to leave it in English.
 #: src/effects/ScoreAlignDialog.cpp
 msgid "Presmooth Time"
 msgstr "Doba trvání předvyhlazení"
 
-#. i18n-hint: The English would be clearer if it had 'Duration' rather than
-#. 'Time'
-#. This is a NEW experimental effect, and until we have it documented in the
-#. user
+#. i18n-hint: The English would be clearer if it had 'Duration' rather than 'Time'
+#. This is a NEW experimental effect, and until we have it documented in the user
 #. manual we don't have a clear description of what this parameter does.
 #. It is OK to leave it in English.
 #: src/effects/ScoreAlignDialog.cpp
 msgid "Line Time:"
 msgstr "Doba trvání řádku:"
 
-#. i18n-hint: The English would be clearer if it had 'Duration' rather than
-#. 'Time'
-#. This is a NEW experimental effect, and until we have it documented in the
-#. user
+#. i18n-hint: The English would be clearer if it had 'Duration' rather than 'Time'
+#. This is a NEW experimental effect, and until we have it documented in the user
 #. manual we don't have a clear description of what this parameter does.
 #. It is OK to leave it in English.
 #: src/effects/ScoreAlignDialog.cpp
@@ -9172,10 +9132,8 @@ msgstr "Doba trvání řádku"
 msgid "Smooth Time:"
 msgstr "Doba trvání vyhlazení:"
 
-#. i18n-hint: The English would be clearer if it had 'Duration' rather than
-#. 'Time'
-#. This is a NEW experimental effect, and until we have it documented in the
-#. user
+#. i18n-hint: The English would be clearer if it had 'Duration' rather than 'Time'
+#. This is a NEW experimental effect, and until we have it documented in the user
 #. manual we don't have a clear description of what this parameter does.
 #. It is OK to leave it in English.
 #: src/effects/ScoreAlignDialog.cpp
@@ -9488,8 +9446,7 @@ msgstr "Nelze přečíst soubor s přednastaveními."
 msgid "This parameter file was saved from %s. Continue?"
 msgstr "Tento parametrický soubor byl uložen z %s. Pokračovat?"
 
-#. i18n-hint: Abbreviates Virtual Studio Technology, an audio software
-#. protocol
+#. i18n-hint: Abbreviates Virtual Studio Technology, an audio software protocol
 #. developed by Steinberg GmbH
 #: src/effects/VST/VSTEffect.h
 msgid "VST"
@@ -9709,10 +9666,8 @@ msgstr "Volby pro efekty LADSPA"
 msgid "As part of their processing, some LADSPA effects must delay returning audio to Audacity. When not compensating for this delay, you will notice that small silences have been inserted into the audio. Enabling this option will provide that compensation, but it may not work for all LADSPA effects."
 msgstr "Jako část jejich zpracování některé efekty LADSPA musí zpozdit vrácení zvuku do Audacity. Pokud toto zpoždění nebude vyrovnáno, povšimnete si vloženímalých tich do zvuku. Povolení této volby toto vyrovnání poskytne, nemusí však pracovat pro všechny efekty LADSPA."
 
-#. i18n-hint: An item name introducing a value, which is not part of the
-#. string but
-#. appears in a following text box window; translate with appropriate
-#. punctuation
+#. i18n-hint: An item name introducing a value, which is not part of the string but
+#. appears in a following text box window; translate with appropriate punctuation
 #: src/effects/ladspa/LadspaEffect.cpp src/effects/nyquist/Nyquist.cpp src/effects/vamp/VampEffect.cpp src/tracks/playabletrack/wavetrack/ui/SpectrumView.cpp
 #, c-format
 msgid "%s:"
@@ -9789,8 +9744,7 @@ msgstr "Poskytuje Audacity podporu pro efekty Nyquist"
 msgid "Applying Nyquist Effect..."
 msgstr "Použít efekt Nyquist..."
 
-#. i18n-hint: It is acceptable to translate this the same as for "Nyquist
-#. Prompt"
+#. i18n-hint: It is acceptable to translate this the same as for "Nyquist Prompt"
 #: src/effects/nyquist/Nyquist.cpp
 msgid "Nyquist Worker"
 msgstr "Pracovník Nyquist"
@@ -10041,8 +9995,7 @@ msgstr "Nastavení přídavného modulu"
 msgid "Program"
 msgstr ""
 
-#. i18n-hint: Vamp is the proper name of a software protocol for sound
-#. analysis.
+#. i18n-hint: Vamp is the proper name of a software protocol for sound analysis.
 #. It is not an abbreviation for anything.  See http://vamp-plugins.org
 #: src/effects/vamp/VampEffect.h
 msgid "Vamp"
@@ -10163,8 +10116,7 @@ msgstr "Ukázat výstup"
 #. i18n-hint: Some programmer-oriented terminology here:
 #. "Data" refers to the sound to be exported, "piped" means sent,
 #. and "standard in" means the default input stream that the external program,
-#. named by %f, will read.  And yes, it's %f, not %s -- this isn't actually
-#. used
+#. named by %f, will read.  And yes, it's %f, not %s -- this isn't actually used
 #. in the program as a format string.  Keep %f unchanged.
 #: src/export/ExportCL.cpp
 #, c-format
@@ -10928,19 +10880,15 @@ msgstr ""
 "Volitelné\n"
 "0 - standardní"
 
-#. i18n-hint: 'mux' is short for multiplexor, a device that selects between
-#. several inputs
-#. 'Mux Rate' is a parameter that has some bearing on compression ratio for
-#. MPEG
+#. i18n-hint: 'mux' is short for multiplexor, a device that selects between several inputs
+#. 'Mux Rate' is a parameter that has some bearing on compression ratio for MPEG
 #. it has a hard to predict effect on the degree of compression
 #: src/export/ExportFFmpegDialogs.cpp
 msgid "Mux Rate:"
 msgstr "Datový tok vícenásobného proudu:"
 
-#. i18n-hint: 'Packet Size' is a parameter that has some bearing on
-#. compression ratio for MPEG
-#. compression.  It measures how big a chunk of audio is compressed in one
-#. piece.
+#. i18n-hint: 'Packet Size' is a parameter that has some bearing on compression ratio for MPEG
+#. compression.  It measures how big a chunk of audio is compressed in one piece.
 #: src/export/ExportFFmpegDialogs.cpp
 msgid ""
 "Packet size\n"
@@ -10951,10 +10899,8 @@ msgstr ""
 "Volitelné\n"
 "0 - standardní"
 
-#. i18n-hint: 'Packet Size' is a parameter that has some bearing on
-#. compression ratio for MPEG
-#. compression.  It measures how big a chunk of audio is compressed in one
-#. piece.
+#. i18n-hint: 'Packet Size' is a parameter that has some bearing on compression ratio for MPEG
+#. compression.  It measures how big a chunk of audio is compressed in one piece.
 #: src/export/ExportFFmpegDialogs.cpp
 msgid "Packet Size:"
 msgstr "Velikost paketu:"
@@ -11187,8 +11133,7 @@ msgstr "Režim kanálu:"
 msgid "Force export to mono"
 msgstr "Vynutit uložení do mono"
 
-#. i18n-hint: LAME is the name of an MP3 converter and should not be
-#. translated
+#. i18n-hint: LAME is the name of an MP3 converter and should not be translated
 #: src/export/ExportMP3.cpp
 msgid "Locate LAME"
 msgstr "Hledat LAME"
@@ -14261,16 +14206,14 @@ msgstr "Přesunout vybranou stopu úplně &nahoru"
 msgid "Move Focused Track to &Bottom"
 msgstr "Přesunout vybranou stopu úplně do&lů"
 
-#. i18n-hint: These are strings for the status bar, and indicate whether
-#. Audacity
+#. i18n-hint: These are strings for the status bar, and indicate whether Audacity
 #. is playing or recording or stopped, and whether it is paused;
 #. progressive verb form
 #: src/menus/TransportMenus.cpp src/toolbars/ControlToolBar.cpp
 msgid "Playing"
 msgstr "Přehrává se"
 
-#. i18n-hint: These are strings for the status bar, and indicate whether
-#. Audacity
+#. i18n-hint: These are strings for the status bar, and indicate whether Audacity
 #. is playing or recording or stopped, and whether it is paused;
 #. progressive verb form
 #: src/menus/TransportMenus.cpp src/prefs/DevicePrefs.cpp src/prefs/MidiIOPrefs.cpp src/prefs/RecordingPrefs.cpp src/prefs/RecordingPrefs.h src/toolbars/ControlToolBar.cpp
@@ -14889,23 +14832,20 @@ msgid "LV&2"
 msgstr ""
 
 #. i18n-hint: "Nyquist" is an embedded interpreted programming language in
-#. Audacity, named in honor of the Swedish-American Harry Nyquist (or
-#. Nyqvist).
+#. Audacity, named in honor of the Swedish-American Harry Nyquist (or Nyqvist).
 #. In the translations of this and other strings, you may transliterate the
 #. name into another alphabet.
 #: src/prefs/EffectsPrefs.cpp
 msgid "N&yquist"
 msgstr ""
 
-#. i18n-hint: Vamp is the proper name of a software protocol for sound
-#. analysis.
+#. i18n-hint: Vamp is the proper name of a software protocol for sound analysis.
 #. It is not an abbreviation for anything.  See http://vamp-plugins.org
 #: src/prefs/EffectsPrefs.cpp
 msgid "&Vamp"
 msgstr ""
 
-#. i18n-hint: Abbreviates Virtual Studio Technology, an audio software
-#. protocol
+#. i18n-hint: Abbreviates Virtual Studio Technology, an audio software protocol
 #. developed by Steinberg GmbH
 #: src/prefs/EffectsPrefs.cpp
 msgid "V&ST"
@@ -15476,8 +15416,7 @@ msgstr "Prodleva syntetizátoru MIDI musí být celé číslo"
 msgid "Midi IO"
 msgstr "Vstup/Výstup MIDI"
 
-#. i18n-hint: Modules are optional extensions to Audacity that add NEW
-#. features.
+#. i18n-hint: Modules are optional extensions to Audacity that add NEW features.
 #: src/prefs/ModulePrefs.cpp
 msgid "Modules"
 msgstr "Moduly"
@@ -15828,8 +15767,7 @@ msgstr "Převod ve skutečném čase"
 msgid "Sample Rate Con&verter:"
 msgstr "Pře&vodník vzorkovacího kmitočtu:"
 
-#. i18n-hint: technical term for randomization to reduce undesirable
-#. resampling artifacts
+#. i18n-hint: technical term for randomization to reduce undesirable resampling artifacts
 #: src/prefs/QualityPrefs.cpp
 msgid "&Dither:"
 msgstr "&Náhodný šum:"
@@ -15842,8 +15780,7 @@ msgstr "Vysocekvalitní převod"
 msgid "Sample Rate Conver&ter:"
 msgstr "Pře&vodník vzorkovacího kmitočtu:"
 
-#. i18n-hint: technical term for randomization to reduce undesirable
-#. resampling artifacts
+#. i18n-hint: technical term for randomization to reduce undesirable resampling artifacts
 #: src/prefs/QualityPrefs.cpp
 msgid "Dit&her:"
 msgstr "Ná&hodný šum:"
@@ -15876,8 +15813,7 @@ msgstr "&Softwarové přehrávání vstupu"
 msgid "Record on a new track"
 msgstr "Nahrávat do nové stopy"
 
-#. i18n-hint: Dropout is a loss of a short sequence audio sample data from the
-#. recording
+#. i18n-hint: Dropout is a loss of a short sequence audio sample data from the recording
 #: src/prefs/RecordingPrefs.cpp
 msgid "Detect dropouts"
 msgstr "Rozpoznat výpadky"
@@ -15974,14 +15910,12 @@ msgstr "Pro&línání:"
 msgid "Mel"
 msgstr ""
 
-#. i18n-hint: The name of a frequency scale in psychoacoustics, named for
-#. Heinrich Barkhausen
+#. i18n-hint: The name of a frequency scale in psychoacoustics, named for Heinrich Barkhausen
 #: src/prefs/SpectrogramSettings.cpp
 msgid "Bark"
 msgstr "Štěknutí"
 
-#. i18n-hint: The name of a frequency scale in psychoacoustics, abbreviates
-#. Equivalent Rectangular Bandwidth
+#. i18n-hint: The name of a frequency scale in psychoacoustics, abbreviates Equivalent Rectangular Bandwidth
 #: src/prefs/SpectrogramSettings.cpp
 msgid "ERB"
 msgstr ""
@@ -16142,8 +16076,7 @@ msgstr "&Povolit výběr spektra"
 msgid "Show a grid along the &Y-axis"
 msgstr "Ukázat nad osou &y mřížku"
 
-#. i18n-hint: FFT stands for Fast Fourier Transform and probably shouldn't be
-#. translated
+#. i18n-hint: FFT stands for Fast Fourier Transform and probably shouldn't be translated
 #: src/prefs/SpectrumPrefs.cpp
 msgid "FFT Find Notes"
 msgstr "Hledat noty FFT"
@@ -16205,8 +16138,7 @@ msgid "The maximum number of notes must be in the range 1..128"
 msgstr "Nejvyšší počet not musí musí ležet mezi 1 a 128"
 
 #. i18n-hint: A theme is a consistent visual style across an application's
-#. graphical user interface, including choices of colors, and similarity of
-#. images
+#. graphical user interface, including choices of colors, and similarity of images
 #. such as those on button controls.  Audacity can load and save alternative
 #. themes.
 #: src/prefs/ThemePrefs.cpp src/prefs/ThemePrefs.h
@@ -16525,8 +16457,7 @@ msgstr "Nastavení průběhových křivek"
 msgid "Waveform dB &range:"
 msgstr "&Rozsah křivky v dB:"
 
-#. i18n-hint: These are strings for the status bar, and indicate whether
-#. Audacity
+#. i18n-hint: These are strings for the status bar, and indicate whether Audacity
 #. is playing or recording or stopped, and whether it is paused;
 #. progressive verb form
 #: src/toolbars/ControlToolBar.cpp
@@ -16565,8 +16496,7 @@ msgstr "Vybrat po konec"
 msgid "Select to Start"
 msgstr "Výběr po začátek"
 
-#. i18n-hint: These are strings for the status bar, and indicate whether
-#. Audacity
+#. i18n-hint: These are strings for the status bar, and indicate whether Audacity
 #. is playing or recording or stopped, and whether it is paused.
 #: src/toolbars/ControlToolBar.cpp src/tracks/ui/Scrubbing.cpp
 #, c-format
@@ -16693,8 +16623,7 @@ msgstr "Nahrávací měřič"
 msgid "Playback Meter"
 msgstr "Přehrávací měřič"
 
-#. i18n-hint: (noun) The meter that shows the loudness of the audio being
-#. recorded.
+#. i18n-hint: (noun) The meter that shows the loudness of the audio being recorded.
 #. This is the name used in screen reader software, where having 'Meter' first
 #. apparently is helpful to partially sighted people.
 #: src/toolbars/MeterToolBar.cpp
@@ -17220,8 +17149,7 @@ msgid "Processing...   %i%%"
 msgstr "Zpracovává se... %i%%"
 
 #. i18n-hint: The strings name a track and a format
-#. i18n-hint: The strings name a track and a channel choice (mono, left, or
-#. right)
+#. i18n-hint: The strings name a track and a channel choice (mono, left, or right)
 #: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp src/tracks/playabletrack/wavetrack/ui/WaveformView.cpp
 #, c-format
 msgid "Changed '%s' to %s"
@@ -17649,8 +17577,7 @@ msgstr "Klepněte a táhněte pro upravení šířky kmitočtového pásma."
 msgid "Edit, Preferences..."
 msgstr "Úpravy, Nastavení..."
 
-#. i18n-hint: %s is usually replaced by "Ctrl+P" for Windows/Linux,
-#. "Command+," for Mac
+#. i18n-hint: %s is usually replaced by "Ctrl+P" for Windows/Linux, "Command+," for Mac
 #: src/tracks/ui/SelectHandle.cpp
 #, c-format
 msgid "Multi-Tool Mode: %s for Mouse and Keyboard Preferences."
@@ -17664,8 +17591,7 @@ msgstr "Klepněte a táhněte pro nastavení šířky kmitočtového pásma."
 msgid "Click and drag to select audio"
 msgstr "Klepněte na tlačítko a tažením vyberte zvuk"
 
-#. i18n-hint: "Snapping" means automatic alignment of selection edges to any
-#. nearby label or clip boundaries
+#. i18n-hint: "Snapping" means automatic alignment of selection edges to any nearby label or clip boundaries
 #: src/tracks/ui/SelectHandle.cpp
 msgid "(snapping)"
 msgstr "(přichytávání)"
@@ -17722,15 +17648,13 @@ msgstr "Příkaz-klepnutí"
 msgid "Ctrl+Click"
 msgstr "Ctrl-klepnutí"
 
-#. i18n-hint: %s is replaced by (translation of) 'Ctrl+Click' on windows,
-#. 'Command+Click' on Mac
+#. i18n-hint: %s is replaced by (translation of) 'Ctrl+Click' on windows, 'Command+Click' on Mac
 #: src/tracks/ui/TrackSelectHandle.cpp
 #, c-format
 msgid "%s to select or deselect track. Drag up or down to change track order."
 msgstr "%s pro vybrání nebo zrušení výběru stopy. Táhněte nahoru nebo dolů pro změnu pořadí stop."
 
-#. i18n-hint: %s is replaced by (translation of) 'Ctrl+Click' on windows,
-#. 'Command+Click' on Mac
+#. i18n-hint: %s is replaced by (translation of) 'Ctrl+Click' on windows, 'Command+Click' on Mac
 #: src/tracks/ui/TrackSelectHandle.cpp
 #, c-format
 msgid "%s to select or deselect track."
@@ -18005,12 +17929,10 @@ msgstr "hh: mm: ss + setiny"
 
 #. i18n-hint: Format string for displaying time in hours, minutes, seconds
 #. * and hundredths of a second. Change the 'h' to the abbreviation for hours,
-#. * 'm' to the abbreviation for minutes and 's' to the abbreviation for
-#. seconds
+#. * 'm' to the abbreviation for minutes and 's' to the abbreviation for seconds
 #. * (the hundredths are shown as decimal seconds). Don't change the numbers
 #. * unless there aren't 60 minutes in an hour in your locale.
-#. * The decimal separator is specified using '<' if your language uses a ','
-#. or
+#. * The decimal separator is specified using '<' if your language uses a ',' or
 #. * to '>' if your language uses a '.'.
 #: src/widgets/NumericTextCtrl.cpp
 msgid "0100 h 060 m 060>0100 s"
@@ -18023,13 +17945,11 @@ msgid "hh:mm:ss + milliseconds"
 msgstr "hh:mm:ss + millisekundy"
 
 #. i18n-hint: Format string for displaying time in hours, minutes, seconds
-#. * and milliseconds. Change the 'h' to the abbreviation for hours, 'm' to
-#. the
+#. * and milliseconds. Change the 'h' to the abbreviation for hours, 'm' to the
 #. * abbreviation for minutes and 's' to the abbreviation for seconds (the
 #. * milliseconds are shown as decimal seconds) . Don't change the numbers
 #. * unless there aren't 60 minutes in an hour in your locale.
-#. * The decimal separator is specified using '<' if your language uses a ','
-#. or
+#. * The decimal separator is specified using '<' if your language uses a ',' or
 #. * to '>' if your language uses a '.'.
 #: src/widgets/NumericTextCtrl.cpp
 msgid "0100 h 060 m 060>01000 s"
@@ -18046,8 +17966,7 @@ msgstr "hh:mm:ss + vzorky"
 #. * abbreviation for minutes, 's' to the abbreviation for seconds and
 #. * translate samples . Don't change the numbers
 #. * unless there aren't 60 seconds in a minute in your locale.
-#. * The decimal separator is specified using '<' if your language uses a ','
-#. or
+#. * The decimal separator is specified using '<' if your language uses a ',' or
 #. * to '>' if your language uses a '.'.
 #: src/widgets/NumericTextCtrl.cpp
 msgid "0100 h 060 m 060 s+># samples"
@@ -18079,8 +17998,7 @@ msgstr "hh:mm:ss + film frames - rámce (24 fps)"
 #. * for hours, 'm' to the abbreviation for minutes, 's' to the abbreviation
 #. * for seconds and translate 'frames' . Don't change the numbers
 #. * unless there aren't 60 seconds in a minute in your locale.
-#. * The decimal separator is specified using '<' if your language uses a ','
-#. or
+#. * The decimal separator is specified using '<' if your language uses a ',' or
 #. * to '>' if your language uses a '.'.
 #: src/widgets/NumericTextCtrl.cpp
 msgid "0100 h 060 m 060 s+>24 frames"
@@ -18111,8 +18029,7 @@ msgstr "hh:mm:ss + NTSC drop snímků"
 #. * and frames with NTSC drop frames. Change the 'h' to the abbreviation
 #. * for hours, 'm' to the abbreviation for minutes, 's' to the abbreviation
 #. * for seconds and translate 'frames'. Leave the |N alone, it's important!
-#. * The decimal separator is specified using '<' if your language uses a ','
-#. or
+#. * The decimal separator is specified using '<' if your language uses a ',' or
 #. * to '>' if your language uses a '.'.
 #: src/widgets/NumericTextCtrl.cpp
 msgid "0100 h 060 m 060 s+>30 frames|N"
@@ -18130,8 +18047,7 @@ msgstr "hh:mm:ss + NTSC non-drop snímků"
 #. * for hours, 'm' to the abbreviation for minutes, 's' to the abbreviation
 #. * for seconds and translate 'frames'. Leave the | .999000999 alone,
 #. * the whole things really is slightly off-speed!
-#. * The decimal separator is specified using '<' if your language uses a ','
-#. or
+#. * The decimal separator is specified using '<' if your language uses a ',' or
 #. * to '>' if your language uses a '.'.
 #: src/widgets/NumericTextCtrl.cpp
 msgid "0100 h 060 m 060 s+>030 frames| .999000999"
@@ -18162,8 +18078,7 @@ msgstr "hh:mm:ss + PAL snímky (25 fps)"
 #. * and frames with PAL TV frames. Change the 'h' to the abbreviation
 #. * for hours, 'm' to the abbreviation for minutes, 's' to the abbreviation
 #. * for seconds and translate 'frames'. Nice simple time code!
-#. * The decimal separator is specified using '<' if your language uses a ','
-#. or
+#. * The decimal separator is specified using '<' if your language uses a ',' or
 #. * to '>' if your language uses a '.'.
 #: src/widgets/NumericTextCtrl.cpp
 msgid "0100 h 060 m 060 s+>25 frames"
@@ -18193,8 +18108,7 @@ msgstr "hh:mm:ss + CDDA snímků (75 fps)"
 #. * and frames with CD Audio frames. Change the 'h' to the abbreviation
 #. * for hours, 'm' to the abbreviation for minutes, 's' to the abbreviation
 #. * for seconds and translate 'frames'.
-#. * The decimal separator is specified using '<' if your language uses a ','
-#. or
+#. * The decimal separator is specified using '<' if your language uses a ',' or
 #. * to '>' if your language uses a '.'.
 #: src/widgets/NumericTextCtrl.cpp
 msgid "0100 h 060 m 060 s+>75 frames"
@@ -18216,8 +18130,7 @@ msgstr "01000,01000 frames - rámce|75"
 
 #. i18n-hint: Format string for displaying frequency in hertz. Change
 #. * the decimal point for your locale. Don't change the numbers.
-#. * The decimal separator is specified using '<' if your language uses a ','
-#. or
+#. * The decimal separator is specified using '<' if your language uses a ',' or
 #. * to '>' if your language uses a '.'.
 #: src/widgets/NumericTextCtrl.cpp
 msgid "010,01000>0100 Hz"
@@ -18234,8 +18147,7 @@ msgstr ""
 
 #. i18n-hint: Format string for displaying frequency in kilohertz. Change
 #. * the decimal point for your locale. Don't change the numbers.
-#. * The decimal separator is specified using '<' if your language uses a ','
-#. or
+#. * The decimal separator is specified using '<' if your language uses a ',' or
 #. * to '>' if your language uses a '.'.
 #: src/widgets/NumericTextCtrl.cpp
 msgid "01000>01000 kHz|0.001"
@@ -18253,8 +18165,7 @@ msgstr "Oktávy"
 
 #. i18n-hint: Format string for displaying log of frequency in octaves.
 #. * Change the decimal points for your locale. Don't change the numbers.
-#. * The decimal separator is specified using '<' if your language uses a ','
-#. or
+#. * The decimal separator is specified using '<' if your language uses a ',' or
 #. * to '>' if your language uses a '.'.
 #: src/widgets/NumericTextCtrl.cpp
 msgid "100>01000 octaves|1.442695041"
@@ -18274,8 +18185,7 @@ msgstr "Půltóny + centy"
 #. i18n-hint: Format string for displaying log of frequency in semitones
 #. * and cents.
 #. * Change the decimal points for your locale. Don't change the numbers.
-#. * The decimal separator is specified using '<' if your language uses a ','
-#. or
+#. * The decimal separator is specified using '<' if your language uses a ',' or
 #. * to '>' if your language uses a '.'.
 #: src/widgets/NumericTextCtrl.cpp
 msgid "1000 semitones >0100 cents|17.312340491"
@@ -18371,8 +18281,7 @@ msgstr ""
 "Nepodařilo se vytvořit adresář:\n"
 "  %s"
 
-#. i18n-hint: Hyperlink title that opens Preferences dialog on Directories
-#. page.
+#. i18n-hint: Hyperlink title that opens Preferences dialog on Directories page.
 #: src/widgets/UnwritableLocationErrorDialog.cpp
 msgid "Preferences > Directories"
 msgstr "Nastavení adresářů"
@@ -19201,8 +19110,7 @@ msgstr "Měkké ohraničení"
 msgid "Hard Limit"
 msgstr "Tvrdé ohraničení"
 
-#. i18n-hint: clipping of wave peaks and troughs, not division of a track into
-#. clips
+#. i18n-hint: clipping of wave peaks and troughs, not division of a track into clips
 #: plug-ins/limiter.ny
 msgid "Soft Clip"
 msgstr "Měkké odříznutí"
@@ -19808,15 +19716,13 @@ msgstr "<b>Vzorkovací kmitočet:</b> &nbsp;&nbsp;~a Hz."
 msgid "<b>Peak Amplitude:</b> &nbsp;&nbsp;~a (linear) &nbsp;&nbsp;~a dB."
 msgstr "<b>Vrcholový rozkmit:</b> &nbsp;&nbsp;~a (lineární) &nbsp;&nbsp;~a dB."
 
-#. i18n-hint: RMS abbreviates root-mean-square, a method of averaging a
-#. signal; there also "weighted" versions of it but this isn't that
+#. i18n-hint: RMS abbreviates root-mean-square, a method of averaging a signal; there also "weighted" versions of it but this isn't that
 #: plug-ins/sample-data-export.ny
 #, lisp-format
 msgid "<b>RMS</b> (unweighted): &nbsp;&nbsp;~a dB."
 msgstr "<b>RMS</b> (nevyhodnoceno): &nbsp;&nbsp;~a dB."
 
-#. i18n-hint: DC derives from "direct current" in electronics, really means
-#. the zero frequency component of a signal
+#. i18n-hint: DC derives from "direct current" in electronics, really means the zero frequency component of a signal
 #: plug-ins/sample-data-export.ny
 #, lisp-format
 msgid "<b>DC Offset:</b> &nbsp;&nbsp;~a"
@@ -20225,13 +20131,19 @@ msgstr "Kmitočet jehel radaru (Hz)"
 msgid "Error.~%Stereo track required."
 msgstr "Chyba.~%Požadována stopa sterea."
 
+#~ msgid "Program build date:"
+#~ msgstr "Datum sestavení programu:"
+
+#~ msgid "The name %s is a registered trademark."
+#~ msgstr "Název %s je registrovaná ochranná známka Dominica Mazzoniho."
+
 #, fuzzy
 #~ msgid "Problem Report for Audacity"
 #~ msgstr "Poskytuje Audacity podporu pro efekty Vamp"
 
 #, fuzzy
 #~ msgid "Unknown exception"
-#~ msgstr "Neznámá volba příkazového řádku: %s\n"
+#~ msgstr "s"
 
 #, fuzzy
 #~ msgid "Unknown assertion"
@@ -20273,15 +20185,6 @@ msgstr "Chyba.~%Požadována stopa sterea."
 
 #~ msgid "Core Libraries"
 #~ msgstr "Základní knihovny"
-
-#~ msgid "Cross-platform GUI library"
-#~ msgstr "Knihovna rozhraní pro více systémů"
-
-#~ msgid "Audio playback and recording"
-#~ msgstr "Přehrávání a nahrávání zvuku"
-
-#~ msgid "Sample rate conversion"
-#~ msgstr "Převod vzorkovacího kmitočtu"
 
 #~ msgid "Dark Theme Extras"
 #~ msgstr "Tmavý vzhled"
@@ -20728,9 +20631,6 @@ msgstr "Chyba.~%Požadována stopa sterea."
 #~ msgid "Label placement (seconds before silence ends)"
 #~ msgstr "Umísťování textových značek (sekund před skončením ticha)"
 
-#~ msgid "S"
-#~ msgstr ""
-
 #~ msgid ""
 #~ "No silences found.\n"
 #~ "Try reducing the silence level and\n"
@@ -20745,9 +20645,6 @@ msgstr "Chyba.~%Požadována stopa sterea."
 
 #~ msgid "Finding sound..."
 #~ msgstr "Hledá se zvuk..."
-
-#~ msgid "Jeremy R. Brown"
-#~ msgstr ""
 
 #~ msgid "Treat audio below this level as silence [ -dB]"
 #~ msgstr "Zacházet se zvukem pod touto hladinou jako s tichem [-dB]"
@@ -20785,9 +20682,6 @@ msgstr "Chyba.~%Požadována stopa sterea."
 #~ msgid "About Audacity"
 #~ msgstr "O programu Audacity"
 
-#~ msgid "<h3>Audacity "
-#~ msgstr ""
-
 #~ msgid "Audacity Team Members"
 #~ msgstr "Členové týmu Audacity"
 
@@ -20821,15 +20715,6 @@ msgstr "Chyba.~%Požadována stopa sterea."
 
 #~ msgid "Missing data block file: '%s'"
 #~ msgstr "Chybějící data přiřazeného blokového souboru: '%s'"
-
-#~ msgid "KB"
-#~ msgstr ""
-
-#~ msgid "MB"
-#~ msgstr ""
-
-#~ msgid "GB"
-#~ msgstr ""
 
 #~ msgid "The module \"%s\" does not provide a version string. It will not be loaded."
 #~ msgstr "Modul \"%s\" neposkytuje řetězec verze. Nebude nahrán."
@@ -20934,9 +20819,6 @@ msgstr "Chyba.~%Požadována stopa sterea."
 #~ msgid "Zoom to Fit\tShift-Right-Click"
 #~ msgstr "Přizpůsobit oknu\tShift-klepnutí pravým tlačítkem myši"
 
-#~ msgid "e"
-#~ msgstr ""
-
 #~ msgid "incorporating"
 #~ msgstr "začleňování"
 
@@ -20984,9 +20866,6 @@ msgstr "Chyba.~%Požadována stopa sterea."
 
 #~ msgid "Selected:"
 #~ msgstr "Vybráno:"
-
-#~ msgid "ms"
-#~ msgstr ""
 
 #~ msgid "xml files (*.xml;*.XML)|*.xml;*.XML"
 #~ msgstr "Soubory xml (*.xml;*.XML)|*.xml;*.XML"
@@ -21105,9 +20984,6 @@ msgstr "Chyba.~%Požadována stopa sterea."
 #~ msgid "F&ocus"
 #~ msgstr "&Zaměření"
 
-#~ msgid "%s - %s"
-#~ msgstr ""
-
 #~ msgid ""
 #~ "This is a debug version of Audacity, with an extra button, 'Output Sourcery'. This will save a\n"
 #~ "C version of the image cache that can be compiled in as a default."
@@ -21120,9 +20996,6 @@ msgstr "Chyba.~%Požadována stopa sterea."
 
 #~ msgid "&Waveform (dB)"
 #~ msgstr "&Křivka (dB)"
-
-#~ msgid "Alex S. Brown"
-#~ msgstr ""
 
 #~ msgid "Error.~%~s is not a supported plug-in.~%"
 #~ msgstr "Chyba.~%~s není podporovaný přídavný modul.~%"
@@ -21329,12 +21202,6 @@ msgstr "Chyba.~%Požadována stopa sterea."
 
 #~ msgid "Transcription"
 #~ msgstr "Přepis"
-
-#~ msgid "'?"
-#~ msgstr ""
-
-#~ msgid "' ?"
-#~ msgstr ""
 
 #~ msgid "Delete "
 #~ msgstr "Vymazat"
@@ -21570,15 +21437,6 @@ msgstr "Chyba.~%Požadována stopa sterea."
 #~ msgid "down"
 #~ msgstr "dolů"
 
-#~ msgid "+"
-#~ msgstr ""
-
-#~ msgid "("
-#~ msgstr ""
-
-#~ msgid ")"
-#~ msgstr ""
-
 #~ msgid "DuckAmountDb"
 #~ msgstr "Míra zeslabení v Db"
 
@@ -21605,9 +21463,6 @@ msgstr "Chyba.~%Požadována stopa sterea."
 
 #~ msgid "Percentage"
 #~ msgstr "Procentní podíl"
-
-#~ msgid "SBSMS"
-#~ msgstr ""
 
 #~ msgid "NoiseFloor"
 #~ msgstr "Nežádoucí hluk"
@@ -21840,9 +21695,6 @@ msgstr "Chyba.~%Požadována stopa sterea."
 
 #~ msgid "Move Sele&ction when Aligning"
 #~ msgstr "Přesunout &výběr při zarovnávání"
-
-#~ msgid "&Mono"
-#~ msgstr ""
 
 #~ msgid "&Left Channel"
 #~ msgstr "&Levý kanál"
@@ -22189,9 +22041,6 @@ msgstr "Chyba.~%Požadována stopa sterea."
 #~ msgid "Operation not permitted."
 #~ msgstr "Operace není povolena."
 
-#~ msgid "."
-#~ msgstr ""
-
 #~ msgid "Illegal directory name."
 #~ msgstr "Neplatný název adresáře."
 
@@ -22225,9 +22074,6 @@ msgstr "Chyba.~%Požadována stopa sterea."
 #~ msgid "Spectral Selection lo&g(f)"
 #~ msgstr "Výběr spektra lo&g(f)"
 
-#~ msgid "Pitc&h (EAC)"
-#~ msgstr ""
-
 #~ msgid "Set Sample &Format"
 #~ msgstr "Nastavit &formát vzorkování"
 
@@ -22251,9 +22097,6 @@ msgstr "Chyba.~%Požadována stopa sterea."
 
 #~ msgid "Default"
 #~ msgstr "Výchozí"
-
-#~ msgid "AVX"
-#~ msgstr ""
 
 #~ msgid "AVX Threaded"
 #~ msgstr "AVX závitový"
@@ -23025,9 +22868,6 @@ msgstr "Chyba.~%Požadována stopa sterea."
 #~ msgid "Max silence duration:"
 #~ msgstr "Největší doba trvání ticha:"
 
-#~ msgid ":1"
-#~ msgstr ""
-
 #~ msgid "Threshold for silence:"
 #~ msgstr "Práh ticha: "
 
@@ -23311,12 +23151,6 @@ msgstr "Chyba.~%Požadována stopa sterea."
 
 #~ msgid "Cl&eanSpeech Mode (Customized GUI)"
 #~ msgstr "Režim Cl&eanSpeech (změněné uživatelské rozhraní)"
-
-#~ msgid "&VAMP"
-#~ msgstr ""
-
-#~ msgid "36"
-#~ msgstr ""
 
 #~ msgid ""
 #~ "Note: Export quality options can be chosen by clicking the Options\n"

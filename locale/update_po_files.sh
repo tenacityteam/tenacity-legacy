@@ -13,9 +13,9 @@ xargs xgettext \
 --keyword=_ --keyword=XO --keyword=XC:1,2c --keyword=XXO --keyword=XXC:1,2c --keyword=XP:1,2 --keyword=XPC:1,2,4c \
 --add-comments=" i18n" \
 --add-location=file  \
---copyright-holder='Tenacity Team' \
+--copyright-holder='Tenacity Contributors' \
 --package-name="tenacity" \
---package-version='3.0.3' \
+--package-version='3.0.4' \
 --msgid-bugs-address="emabrey@tenacityaudio.org" \
 --add-location=file -L C -o tenacity.pot
 echo ";; Adding nyquist files to tenacity.pot"
@@ -28,12 +28,12 @@ xargs xgettext \
 --keyword=_ --keyword=_C:1,2c --keyword=ngettext:1,2 --keyword=ngettextc:1,2,4c \
 --add-comments=" i18n" \
 --add-location=file  \
---copyright-holder='Tenacity Team' \
+--copyright-holder='Tenacity Contributors' \
 --package-name="tenacity" \
 --package-version='3.0.4' \
 --msgid-bugs-address="emabrey@tenacityaudio.org" \
 --add-location=file -L Lisp -j -o tenacity.pot
-if test "${AUDACITY_ONLY_POT:-}" = 'y'; then
+if test "${TENACITY_ONLY_POT:-}" = 'y'; then
     return 0
 fi
 echo ";; Updating the .po files - Updating Project-Id-Version"
