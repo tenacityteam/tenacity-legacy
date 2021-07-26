@@ -51,7 +51,8 @@ HitTestPreview SampleHandle::HitPreview
 {
    static auto disabledCursor =
       ::MakeCursor(wxCURSOR_NO_ENTRY, DisabledCursorXpm, 16, 16);
-   static wxCursor smoothCursor{ wxCURSOR_SPRAYCAN };
+   static auto smoothCursor =
+      ::MakeCursor(wxCURSOR_SPRAYCAN, DrawToolSmoothingXpm, 16, 16);
    static auto pencilCursor =
       ::MakeCursor(wxCURSOR_PENCIL, DrawCursorXpm, 12, 22);
 
@@ -64,7 +65,7 @@ HitTestPreview SampleHandle::HitPreview
       (unsafe
        ? &*disabledCursor
        : (state.AltDown()
-          ? &smoothCursor
+          ? &*smoothCursor
           : &*pencilCursor))
    };
 }

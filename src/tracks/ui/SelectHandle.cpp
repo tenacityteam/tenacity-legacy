@@ -296,8 +296,10 @@ namespace
       (SelectionBoundary boundary, bool frequencySnapping,
        TranslatableString &tip, wxCursor *&pCursor)
    {
-      static wxCursor adjustLeftSelectionCursor{ wxCURSOR_POINT_LEFT };
-      static wxCursor adjustRightSelectionCursor{ wxCURSOR_POINT_RIGHT };
+      static auto adjustLeftSelectionCursor = 
+         ::MakeCursor(wxCURSOR_POINT_LEFT, ArrowLeftCursorXpm, 6, 16);
+      static auto adjustRightSelectionCursor =
+         ::MakeCursor(wxCURSOR_POINT_RIGHT, ArrowRightCursorXpm, 27, 16);
 
       static auto bottomFrequencyCursor =
          ::MakeCursor(wxCURSOR_ARROW, BottomFrequencyCursorXpm, 16, 16);
@@ -312,11 +314,11 @@ namespace
          break;
       case SBLeft:
          tip = XO("Click and drag to move left selection boundary.");
-         pCursor = &adjustLeftSelectionCursor;
+         pCursor = &*adjustLeftSelectionCursor;
          break;
       case SBRight:
          tip = XO("Click and drag to move right selection boundary.");
-         pCursor = &adjustRightSelectionCursor;
+         pCursor = &*adjustRightSelectionCursor;
          break;
 #ifdef EXPERIMENTAL_SPECTRAL_EDITING
       case SBBottom:
