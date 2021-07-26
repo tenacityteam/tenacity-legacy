@@ -39,8 +39,6 @@ jobs:
             os: ubuntu-latest
             arch: x86_64
             generator: Unix Makefiles
-            compiler_cache: ccache
-            compiler_cache_path: ~/.ccache
             language: 'cpp'  # CodeQL supports [ 'cpp', 'csharp', 'go', 'java', 'javascript', 'python' ]
        
     steps:
@@ -64,14 +62,6 @@ jobs:
     - name: Environment
       run: |
         source "scripts/ci/environment.sh"
-    - name: "Set up compiler cache"
-      uses: actions/cache@v2
-      with:
-        path: ${{ matrix.config.compiler_cache_path }}
-        key: ${{ matrix.config.os }}-${{ matrix.config.arch }}-${{ github.head_ref }}-${{ github.run_number }}
-        restore-keys: |
-          ${{ matrix.config.os }}-${{ matrix.config.arch }}-${{ github.head_ref }}-
-          ${{ matrix.config.os }}-${{ matrix.config.arch }}-
     - name: Cache for .conan
       id: cache-conan
       uses: actions/cache@v2
@@ -101,8 +91,6 @@ jobs:
     - name: Build
       run: |
         exec bash "scripts/ci/build.sh"
-    - name: "Print compiler cache stats"
-      run: ${{ matrix.config.compiler_cache }} -s
     - name: Install
       run: |
         exec bash "scripts/ci/install.sh"
