@@ -947,14 +947,6 @@ msgstr "Audacity kjører allerede"
 msgid "Audacity Startup Failure"
 msgstr "Audacity prosjektfiler"
 
-#: src/AudacityApp.cpp
-msgid ""
-"The Audacity IPC server failed to initialize.\n"
-"\n"
-"This is likely due to a resource shortage\n"
-"and a reboot may be required."
-msgstr ""
-
 #. i18n-hint: This controls the number of bytes that Audacity will
 #. *           use when writing files to the disk
 #: src/AudacityApp.cpp
@@ -2863,27 +2855,12 @@ msgstr "Notespor"
 
 #. i18n-hint: Name of a musical note in the 12-tone chromatic scale
 #: src/PitchName.cpp
-msgid "D♯"
-msgstr ""
-
-#. i18n-hint: Name of a musical note in the 12-tone chromatic scale
-#: src/PitchName.cpp
 msgid "G"
 msgstr ""
 
 #. i18n-hint: Name of a musical note in the 12-tone chromatic scale
 #: src/PitchName.cpp
-msgid "B"
-msgstr ""
-
-#. i18n-hint: Name of a musical note in the 12-tone chromatic scale
-#: src/PitchName.cpp
 msgid "A♭"
-msgstr ""
-
-#. i18n-hint: Two, alternate names of a musical note in the 12-tone chromatic scale
-#: src/PitchName.cpp
-msgid "F♯/G♭"
 msgstr ""
 
 #: src/PluginManager.cpp
@@ -3343,13 +3320,6 @@ msgstr "Lagrer et Audacity-prosjekt"
 #: src/ProjectFileIO.cpp
 msgid "Unable to initialize the project file"
 msgstr "Kunne ikke starte opp MP3-strøm"
-
-#. i18n-hint: An error message.  Don't translate blockfiles.
-#: src/ProjectFileIO.cpp
-msgid ""
-"Project is busy\n"
-"(Unable to work with the blockfiles)"
-msgstr ""
 
 #. i18n-hint: An error message.  Don't translate blockfiles.
 #: src/ProjectFileIO.cpp
@@ -6869,11 +6839,6 @@ msgstr "Effekten er utilgjengelig"
 msgid "Max dB"
 msgstr "Maks dB"
 
-#: src/effects/Equalization.cpp
-#, c-format
-msgid "%d Hz"
-msgstr ""
-
 #. i18n-hint k is SI abbreviation for x1,000.  Usually unchanged in translation.
 #: src/effects/Equalization.cpp
 #, c-format
@@ -7449,10 +7414,6 @@ msgstr "Vindus&typer"
 #: src/effects/NoiseReduction.cpp
 msgid "Window si&ze:"
 msgstr "&Størrelse på vindu"
-
-#: src/effects/NoiseReduction.cpp src/prefs/SpectrumPrefs.cpp
-msgid "64"
-msgstr ""
 
 #: src/effects/NoiseReduction.cpp
 msgid "1024"
@@ -9107,10 +9068,6 @@ msgstr "Kvalitet:"
 msgid "%.2f kbps"
 msgstr "%.2f kb/s"
 
-#: src/export/ExportFFmpegDialogs.cpp src/export/ExportFLAC.cpp
-msgid "4"
-msgstr ""
-
 #: src/export/ExportFFmpegDialogs.cpp
 msgid "9"
 msgstr ""
@@ -9134,10 +9091,6 @@ msgstr "&Lyd..."
 #: src/export/ExportFFmpegDialogs.cpp
 msgid "Low Delay"
 msgstr "Forsinkelse"
-
-#: src/export/ExportFFmpegDialogs.cpp
-msgid "20 ms"
-msgstr ""
 
 #: src/export/ExportFFmpegDialogs.cpp
 msgid "Mediumband"
@@ -9823,10 +9776,6 @@ msgstr ""
 "Vennligst last ned den nyeste utgaven av MP3-biblioteket LAME."
 
 #: src/export/ExportMP3.cpp
-msgid "Only libmp3lame.so.0"
-msgstr ""
-
-#: src/export/ExportMP3.cpp
 msgid "Extended libraries"
 msgstr "Kjernebiblioteker"
 
@@ -10070,10 +10019,6 @@ msgstr "Ogg Vorbis-filer"
 #: src/export/ExportOGG.cpp
 msgid "Unable to export - rate or quality problem"
 msgstr "Klarer ikke å bestemme QuickTime-rendringskvalitet"
-
-#: src/export/ExportOGG.cpp
-msgid "Unable to export - problem with packets"
-msgstr ""
 
 #: src/export/ExportOGG.cpp
 msgid "Unable to export - problem with file"
@@ -10368,10 +10313,6 @@ msgid "Internal error in importer...tag not recognized"
 msgstr "Intern feil i koordineringsprosessen."
 
 #: src/import/ImportAUP.cpp
-msgid "Invalid project 'zoom' attribute."
-msgstr ""
-
-#: src/import/ImportAUP.cpp
 msgid "Invalid project 'selHigh' attribute."
 msgstr ""
 
@@ -10391,10 +10332,6 @@ msgstr "Ugyldig samplingsfrekvens"
 #: src/import/ImportAUP.cpp
 msgid "Invalid sequence 'numsamples' attribute."
 msgstr "Ugyldig samplingsfrekvens"
-
-#: src/import/ImportAUP.cpp
-msgid "Missing or invalid silentblockfile 'len' attribute."
-msgstr ""
 
 #: src/import/ImportAUP.cpp
 #, c-format
@@ -10560,25 +10497,12 @@ msgstr "Intern logisk feil"
 msgid "WAV, AIFF, and other uncompressed types"
 msgstr "WAV, AIFF og andre ukomprimerte filtyper"
 
-#. i18n-hint: "codec" is short for a "coder-decoder" algorithm
-#: src/import/ImportPCM.cpp
-msgid "FLAC (FLAC Lossless Audio Codec)"
-msgstr ""
-
 #: src/import/ImportPCM.cpp
 msgid "MAT5 (GNU Octave 2.1 / Matlab 5.0)"
 msgstr ""
 
 #: src/import/ImportPCM.cpp
-msgid "PVF (Portable Voice Format)"
-msgstr ""
-
-#: src/import/ImportPCM.cpp
 msgid "SDS (Midi Sample Dump Standard)"
-msgstr ""
-
-#: src/import/ImportPCM.cpp
-msgid "WAV (NIST Sphere)"
 msgstr ""
 
 #: src/import/ImportPCM.cpp
@@ -10600,10 +10524,6 @@ msgstr "32-bit flyttall"
 #: src/import/ImportPCM.cpp
 msgid "64 bit float"
 msgstr "32-bit flyttall"
-
-#: src/import/ImportPCM.cpp
-msgid "Microsoft ADPCM"
-msgstr ""
 
 #: src/import/ImportPCM.cpp
 msgid "12 bit DWVW"
@@ -15325,15 +15245,7 @@ msgid "Rat&e"
 msgstr "Frek&vens"
 
 #: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
-msgid "22050 Hz"
-msgstr ""
-
-#: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
 msgid "96000 Hz"
-msgstr ""
-
-#: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
-msgid "384000 Hz"
 msgstr ""
 
 #: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
@@ -16995,10 +16907,6 @@ msgstr "Frekvens (Hz)"
 msgid "Roll-off (dB per octave)"
 msgstr "Avrulling (dB per oktav)"
 
-#: plug-ins/highpass.ny plug-ins/lowpass.ny
-msgid "36 dB"
-msgstr ""
-
 #: plug-ins/highpass.ny plug-ins/lowpass.ny plug-ins/notch.ny
 msgid "Frequency must be at least 0.1 Hz."
 msgstr "Frekvensen må være minst 0,1 Hz."
@@ -17070,11 +16978,6 @@ msgstr "~aOmrådelengde = ~a sekunder."
 #: plug-ins/label-sounds.ny
 msgid "Maximum leading silence"
 msgstr "Oppdager stillhet..."
-
-#: plug-ins/label-sounds.ny
-#, lisp-format
-msgid "Too many silences detected.~%Only the first 10000 labels added."
-msgstr ""
 
 #. i18n-hint: '~a' will be replaced by a time duration
 #: plug-ins/label-sounds.ny
@@ -17187,13 +17090,6 @@ msgstr "Kompresserings-/forfalnings-tid"
 #: plug-ins/noisegate.ny
 msgid "Decay (ms)"
 msgstr "Kompresserings-/forfalnings-tid"
-
-#: plug-ins/noisegate.ny
-#, lisp-format
-msgid ""
-"Peak based on first ~a seconds ~a dB~%\n"
-"Suggested Threshold Setting ~a dB."
-msgstr ""
 
 #: plug-ins/notch.ny
 msgid "Notch Filter"

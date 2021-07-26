@@ -650,12 +650,6 @@ msgstr ""
 msgid "Translators"
 msgstr "Пренос"
 
-#. i18n-hint The registered trademark symbol (r) is substituted at %s
-#: src/AboutDialog.cpp
-#, c-format
-msgid "The Audacity%s trademark is used within this software for descriptive and informational purposes only."
-msgstr ""
-
 #: src/AdornedRulerPanel.cpp
 msgid "Click and drag to adjust, double-click to reset"
 msgstr "Кликните и превуците да дотерате величину садржаних прегледа, два пута кликните да поделите равномерно"
@@ -743,10 +737,6 @@ msgstr "Неуспех"
 msgid "Reset Audacity Preferences"
 msgstr "Поставке Аудаситија"
 
-#: src/AudacityApp.cpp
-msgid "Tenacity is starting up..."
-msgstr ""
-
 #. i18n-hint: "New" is an action (verb) to create a NEW project
 #: src/AudacityApp.cpp src/BatchProcessDialog.cpp src/menus/FileMenus.cpp
 msgid "&New"
@@ -775,13 +765,6 @@ msgid "&File"
 msgstr "Датотека"
 
 #: src/AudacityApp.cpp
-msgid ""
-"Running two copies of Audacity simultaneously may cause\n"
-"data loss or cause your system to crash.\n"
-"\n"
-msgstr ""
-
-#: src/AudacityApp.cpp
 msgid "Do you still want to start Audacity?"
 msgstr "Да ли желите да сачувате измене?"
 
@@ -796,14 +779,6 @@ msgstr "Прво покретање Аудаситија"
 #: src/AudacityApp.cpp
 msgid "Audacity Startup Failure"
 msgstr "Аудаситијева датотека ВСТ претподешености"
-
-#: src/AudacityApp.cpp
-msgid ""
-"The Audacity IPC server failed to initialize.\n"
-"\n"
-"This is likely due to a resource shortage\n"
-"and a reboot may be required."
-msgstr ""
 
 #. i18n-hint: This displays a list of available options
 #: src/AudacityApp.cpp
@@ -871,10 +846,6 @@ msgstr "Не могу да пишем у датотеку: %s"
 #, c-format
 msgid "Error: %s"
 msgstr "Грешка.~%"
-
-#: src/AudioIO.cpp
-msgid "Error Initializing Midi"
-msgstr ""
 
 #: src/AudioIO.cpp
 msgid "Audacity Audio"
@@ -2818,27 +2789,12 @@ msgstr "Прибележи нумеру"
 
 #. i18n-hint: Name of a musical note in the 12-tone chromatic scale
 #: src/PitchName.cpp
-msgid "D♯"
-msgstr ""
-
-#. i18n-hint: Name of a musical note in the 12-tone chromatic scale
-#: src/PitchName.cpp
 msgid "G"
 msgstr ""
 
 #. i18n-hint: Name of a musical note in the 12-tone chromatic scale
 #: src/PitchName.cpp
-msgid "B"
-msgstr ""
-
-#. i18n-hint: Name of a musical note in the 12-tone chromatic scale
-#: src/PitchName.cpp
 msgid "A♭"
-msgstr ""
-
-#. i18n-hint: Two, alternate names of a musical note in the 12-tone chromatic scale
-#: src/PitchName.cpp
-msgid "F♯/G♭"
 msgstr ""
 
 #: src/PluginManager.cpp
@@ -3341,13 +3297,6 @@ msgstr ""
 #: src/ProjectFileIO.cpp
 msgid "Unable to initialize the project file"
 msgstr "Не могу да покренем датотеку пројекта"
-
-#. i18n-hint: An error message.  Don't translate blockfiles.
-#: src/ProjectFileIO.cpp
-msgid ""
-"Project is busy\n"
-"(Unable to work with the blockfiles)"
-msgstr ""
 
 #. i18n-hint: An error message.  Don't translate blockfiles.
 #: src/ProjectFileIO.cpp
@@ -7216,12 +7165,6 @@ msgstr "Највише dB"
 msgid "Min dB"
 msgstr "Најмање dB"
 
-#. i18n-hint k is SI abbreviation for x1,000.  Usually unchanged in translation.
-#: src/effects/Equalization.cpp
-#, c-format
-msgid "%gk"
-msgstr ""
-
 #: src/effects/Equalization.cpp
 msgid "&EQ Type:"
 msgstr "&Врста уједначавача:"
@@ -7831,10 +7774,6 @@ msgstr "&Врсте прозора:"
 #: src/effects/NoiseReduction.cpp
 msgid "Window si&ze:"
 msgstr "&Величина прозора:"
-
-#: src/effects/NoiseReduction.cpp src/prefs/SpectrumPrefs.cpp
-msgid "64"
-msgstr ""
 
 #: src/effects/NoiseReduction.cpp
 msgid "1024"
@@ -9595,10 +9534,6 @@ msgstr "Квалитет (kb/s):"
 msgid "%.2f kbps"
 msgstr "%.2f kb/s"
 
-#: src/export/ExportFFmpegDialogs.cpp src/export/ExportFLAC.cpp
-msgid "4"
-msgstr ""
-
 #: src/export/ExportFFmpegDialogs.cpp
 msgid "9"
 msgstr ""
@@ -9626,10 +9561,6 @@ msgstr "Слабо кашњење"
 #: src/export/ExportFFmpegDialogs.cpp
 msgid "2.5 ms"
 msgstr "2,5 ms"
-
-#: src/export/ExportFFmpegDialogs.cpp
-msgid "40 ms"
-msgstr ""
 
 #: src/export/ExportFFmpegDialogs.cpp
 msgid "Narrowband"
@@ -16280,15 +16211,7 @@ msgid "Rat&e"
 msgstr "П&роток"
 
 #: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
-msgid "22050 Hz"
-msgstr ""
-
-#: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
 msgid "96000 Hz"
-msgstr ""
-
-#: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
-msgid "384000 Hz"
 msgstr ""
 
 #: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
@@ -17980,10 +17903,6 @@ msgstr "Учесталост (Hz)"
 #: plug-ins/highpass.ny plug-ins/lowpass.ny
 msgid "Roll-off (dB per octave)"
 msgstr "Одмотај (dB по октави)"
-
-#: plug-ins/highpass.ny plug-ins/lowpass.ny
-msgid "36 dB"
-msgstr ""
 
 #: plug-ins/highpass.ny plug-ins/lowpass.ny plug-ins/notch.ny
 msgid "Frequency must be at least 0.1 Hz."
