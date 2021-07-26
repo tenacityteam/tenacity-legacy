@@ -97,12 +97,6 @@ msgstr "測定できません"
 msgid "%s bytes"
 msgstr "%s バイト"
 
-#. i18n-hint: Abbreviation for Mega bytes
-#: libraries/lib-strings/Internat.cpp
-#, c-format
-msgid "%s MB"
-msgstr ""
-
 #: libraries/lib-strings/Languages.cpp
 msgid "Simplified"
 msgstr ""
@@ -257,10 +251,6 @@ msgid "Find dialog"
 msgstr "ダイアログの検索"
 
 #: modules/mod-nyq-bench/NyqBench.cpp
-msgid "Tango Icon Gallery (toolbar icons)"
-msgstr ""
-
-#: modules/mod-nyq-bench/NyqBench.cpp
 msgid "(C) 2009 by Leland Lucius"
 msgstr ""
 
@@ -393,20 +383,12 @@ msgid "Go to matching paren"
 msgstr "対応する paren へ"
 
 #: modules/mod-nyq-bench/NyqBench.cpp
-msgid "Go to top S-expr"
-msgstr ""
-
-#: modules/mod-nyq-bench/NyqBench.cpp
 msgid "Up"
 msgstr "上へ"
 
 #: modules/mod-nyq-bench/NyqBench.cpp
 msgid "Previous"
 msgstr "１つ前"
-
-#: modules/mod-nyq-bench/NyqBench.cpp
-msgid "Next"
-msgstr ""
 
 #. i18n-hint noun
 #: modules/mod-nyq-bench/NyqBench.cpp src/effects/Contrast.cpp src/effects/ToneGen.cpp src/toolbars/SelectionBar.cpp
@@ -734,12 +716,6 @@ msgstr "スペシャルサンクス:"
 #, c-format
 msgid "%s website: "
 msgstr "%s ウェブサイト: "
-
-#. i18n-hint The registered trademark symbol (r) is substituted at %s
-#: src/AboutDialog.cpp
-#, c-format
-msgid "The Audacity%s trademark is used within this software for descriptive and informational purposes only."
-msgstr ""
 
 #: src/AdornedRulerPanel.cpp
 msgid "Timeline actions disabled during recording"
@@ -2634,12 +2610,6 @@ msgid "s"
 msgstr "秒"
 
 #. i18n-hint: The %d's are replaced by numbers, the %s by musical notes, e.g. A#
-#: src/FreqWindow.cpp
-#, c-format
-msgid "%d Hz (%s) = %.1f dB"
-msgstr ""
-
-#. i18n-hint: The %d's are replaced by numbers, the %s by musical notes, e.g. A#
 #. * the %.4f are numbers, and 'sec' should be an abbreviation for seconds
 #: src/FreqWindow.cpp
 #, c-format
@@ -2831,11 +2801,6 @@ msgstr "使用クリップボード領域(&B)"
 #: src/HistoryWindow.cpp
 msgid "D&iscard"
 msgstr "破棄(&I)"
-
-#: src/HistoryWindow.cpp src/ProjectFileManager.cpp
-#, c-format
-msgid "Compacting actually freed %s of disk space."
-msgstr ""
 
 #. i18n-hint: Clicking this menu item shows the various editing steps
 #. that have been taken.
@@ -3189,17 +3154,7 @@ msgstr "ノートトラック"
 
 #. i18n-hint: Name of a musical note in the 12-tone chromatic scale
 #: src/PitchName.cpp
-msgid "C♯"
-msgstr ""
-
-#. i18n-hint: Name of a musical note in the 12-tone chromatic scale
-#: src/PitchName.cpp
 msgid "D♯"
-msgstr ""
-
-#. i18n-hint: Name of a musical note in the 12-tone chromatic scale
-#: src/PitchName.cpp
-msgid "F"
 msgstr ""
 
 #. i18n-hint: Name of a musical note in the 12-tone chromatic scale
@@ -3209,17 +3164,7 @@ msgstr ""
 
 #. i18n-hint: Name of a musical note in the 12-tone chromatic scale
 #: src/PitchName.cpp
-msgid "A"
-msgstr ""
-
-#. i18n-hint: Name of a musical note in the 12-tone chromatic scale
-#: src/PitchName.cpp
 msgid "B"
-msgstr ""
-
-#. i18n-hint: Name of a musical note in the 12-tone chromatic scale
-#: src/PitchName.cpp
-msgid "E♭"
 msgstr ""
 
 #. i18n-hint: Name of a musical note in the 12-tone chromatic scale
@@ -3229,17 +3174,7 @@ msgstr ""
 
 #. i18n-hint: Two, alternate names of a musical note in the 12-tone chromatic scale
 #: src/PitchName.cpp
-msgid "C♯/D♭"
-msgstr ""
-
-#. i18n-hint: Two, alternate names of a musical note in the 12-tone chromatic scale
-#: src/PitchName.cpp
 msgid "F♯/G♭"
-msgstr ""
-
-#. i18n-hint: Two, alternate names of a musical note in the 12-tone chromatic scale
-#: src/PitchName.cpp
-msgid "A♯/B♭"
 msgstr ""
 
 #: src/PluginManager.cpp
@@ -4221,18 +4156,6 @@ msgid "Cannot import AUP3 format.  Use File > Open instead"
 msgstr "AUP3 フォーマットを取り込めません。  代わりに [ファイル] > [開く] をご利用ください。"
 
 #: src/ProjectFileManager.cpp
-#, c-format
-msgid ""
-"Compacting this project will free up disk space by removing unused bytes within the file.\n"
-"\n"
-"There is %s of free disk space and this project is currently using %s.\n"
-"\n"
-"If you proceed, the current Undo/Redo History and clipboard contents will be discarded and you will recover approximately %s of disk space.\n"
-"\n"
-"Do you want to continue?"
-msgstr ""
-
-#: src/ProjectFileManager.cpp
 msgid "Compact"
 msgstr ""
 
@@ -4324,11 +4247,6 @@ msgstr "水平スクロールバー"
 #: src/ProjectWindow.cpp
 msgid "Vertical Scrollbar"
 msgstr "垂直スクロールバー"
-
-#: src/Registry.cpp
-#, c-format
-msgid "Plug-in item at %s conflicts with a previously defined item and was discarded"
-msgstr ""
 
 #: src/Resample.cpp
 msgid "Low Quality (Fastest)"
@@ -5439,10 +5357,6 @@ msgid "Repeat %s"
 msgstr "%s を再適用"
 
 #: src/commands/CommandManager.cpp
-msgid "The following commands have had their shortcuts removed, because their default shortcut is new or changed, and is the same shortcut that you have assigned to another command."
-msgstr ""
-
-#: src/commands/CommandManager.cpp
 msgid "Shortcuts have been removed"
 msgstr "ショートカットが削除されました"
 
@@ -5551,11 +5465,6 @@ msgstr "ラベル"
 #: src/commands/GetInfoCommand.cpp
 msgid "Boxes"
 msgstr "ボックス"
-
-#. i18n-hint name of a computer programming language
-#: src/commands/GetInfoCommand.cpp src/commands/HelpCommand.cpp
-msgid "LISP"
-msgstr ""
 
 #: src/commands/GetInfoCommand.cpp src/effects/EffectManager.cpp
 msgid "Type:"
@@ -6007,10 +5916,6 @@ msgid "Resize:"
 msgstr "大きさ変更:"
 
 #: src/commands/SetProjectCommand.cpp
-msgid "Y:"
-msgstr ""
-
-#: src/commands/SetProjectCommand.cpp
 msgid "Width:"
 msgstr "幅:"
 
@@ -6357,10 +6262,6 @@ msgstr "高品質な伸縮を使用 (低速) (&U)"
 msgid "33⅓"
 msgstr "33 + 1/3"
 
-#: src/effects/ChangeSpeed.cpp
-msgid "78"
-msgstr ""
-
 # ja: 独自アクセスキー
 #: src/effects/ChangeSpeed.cpp
 msgid "Change Speed"
@@ -6556,13 +6457,6 @@ msgstr "%.2f 秒"
 #, c-format
 msgid "%.1f secs"
 msgstr "%.1f 秒"
-
-#. i18n-hint: Unless your language has a different convention for ratios,
-#. * like 8:1, leave as is.
-#: src/effects/Compressor.cpp
-#, c-format
-msgid "%.1f:1"
-msgstr ""
 
 #: src/effects/Compressor.cpp
 #, c-format
@@ -6891,23 +6785,11 @@ msgid "Contrast..."
 msgstr "コントラスト(&C)..."
 
 #: src/effects/Distortion.cpp
-msgid "Soft Clipping"
-msgstr ""
-
-#: src/effects/Distortion.cpp
 msgid "Medium Overdrive"
 msgstr ""
 
 #: src/effects/Distortion.cpp
-msgid "Cubic Curve (odd harmonics)"
-msgstr ""
-
-#: src/effects/Distortion.cpp
 msgid "Expand and Compress"
-msgstr ""
-
-#: src/effects/Distortion.cpp
-msgid "Rectifier Distortion"
 msgstr ""
 
 # ja: ファクトリープリセット
@@ -6918,17 +6800,7 @@ msgstr ""
 
 # ja: ファクトリープリセット
 #: src/effects/Distortion.cpp
-msgid "Fuzz Box"
-msgstr ""
-
-# ja: ファクトリープリセット
-#: src/effects/Distortion.cpp
 msgid "Blues drive sustain"
-msgstr ""
-
-# ja: ファクトリープリセット
-#: src/effects/Distortion.cpp
-msgid "Heavy Overdrive"
 msgstr ""
 
 # ja: ファクトリープリセット
@@ -6938,27 +6810,12 @@ msgstr ""
 
 # ja: ファクトリープリセット
 #: src/effects/Distortion.cpp
-msgid "Gated Expansion Distortion"
-msgstr ""
-
-# ja: ファクトリープリセット
-#: src/effects/Distortion.cpp
 msgid "Leveller, Moderate, -70dB noise floor"
 msgstr ""
 
 # ja: ファクトリープリセット
 #: src/effects/Distortion.cpp
-msgid "Leveller, Heavier, -70dB noise floor"
-msgstr ""
-
-# ja: ファクトリープリセット
-#: src/effects/Distortion.cpp
 msgid "Half-wave Rectifier"
-msgstr ""
-
-# ja: ファクトリープリセット
-#: src/effects/Distortion.cpp
-msgid "Full-wave Rectifier (DC blocked)"
 msgstr ""
 
 #: src/effects/Distortion.cpp
@@ -7526,17 +7383,7 @@ msgstr "特定の周波数の音量を調節します"
 
 # ja: ファクトリープリセット
 #: src/effects/Equalization.cpp
-msgid "AM Radio"
-msgstr ""
-
-# ja: ファクトリープリセット
-#: src/effects/Equalization.cpp
 msgid "Bass Cut"
-msgstr ""
-
-# ja: ファクトリープリセット
-#: src/effects/Equalization.cpp
-msgid "RIAA"
 msgstr ""
 
 # ja: ファクトリープリセット
@@ -7575,11 +7422,6 @@ msgstr "最大 dB"
 #: src/effects/Equalization.cpp src/effects/ScienFilter.cpp
 msgid "Min dB"
 msgstr "最小 dB"
-
-#: src/effects/Equalization.cpp
-#, c-format
-msgid "%d Hz"
-msgstr ""
 
 #. i18n-hint k is SI abbreviation for x1,000.  Usually unchanged in translation.
 #: src/effects/Equalization.cpp
@@ -7962,10 +7804,6 @@ msgid "Loudness LUFS"
 msgstr "ラウドネス LUFS"
 
 #: src/effects/Loudness.cpp
-msgid "RMS dB"
-msgstr ""
-
-#: src/effects/Loudness.cpp
 msgid "Normalize &stereo channels independently"
 msgstr "ステレオチャンネルごとにノーマライズ(&S)"
 
@@ -8011,27 +7849,12 @@ msgstr "ノイズの種類(&N):"
 
 # ja: "Experimental only, don't need translations"
 #: src/effects/NoiseReduction.cpp
-msgid "Second greatest"
-msgstr ""
-
-# ja: "Experimental only, don't need translations"
-#: src/effects/NoiseReduction.cpp
 msgid "none, Hann (2.0.6 behavior)"
 msgstr ""
 
 # ja: "Experimental only, don't need translations"
 #: src/effects/NoiseReduction.cpp
-msgid "Hann, Hann (default)"
-msgstr ""
-
-# ja: "Experimental only, don't need translations"
-#: src/effects/NoiseReduction.cpp
 msgid "Hamming, none"
-msgstr ""
-
-# ja: "Experimental only, don't need translations"
-#: src/effects/NoiseReduction.cpp
-msgid "Hamming, Reciprocal Hamming"
 msgstr ""
 
 # ja: 独自アクセスキー
@@ -8184,15 +8007,7 @@ msgid "Window si&ze:"
 msgstr "窓関数のサイズ(&Z):"
 
 #: src/effects/NoiseReduction.cpp src/prefs/SpectrumPrefs.cpp
-msgid "16"
-msgstr ""
-
-#: src/effects/NoiseReduction.cpp src/prefs/SpectrumPrefs.cpp
 msgid "64"
-msgstr ""
-
-#: src/effects/NoiseReduction.cpp src/prefs/SpectrumPrefs.cpp
-msgid "256"
 msgstr ""
 
 #: src/effects/NoiseReduction.cpp
@@ -8202,10 +8017,6 @@ msgstr ""
 #: src/effects/NoiseReduction.cpp
 msgid "2048 (default)"
 msgstr "2048 (デフォルト)"
-
-#: src/effects/NoiseReduction.cpp src/prefs/SpectrumPrefs.cpp
-msgid "8192"
-msgstr ""
 
 #: src/effects/NoiseReduction.cpp
 msgid "S&teps per window:"
@@ -9173,10 +8984,6 @@ msgid "Select &interface"
 msgstr "インターフェイスの選択(&I)"
 
 #: src/effects/audiounits/AudioUnitEffect.cpp
-msgid "Generic"
-msgstr ""
-
-#: src/effects/audiounits/AudioUnitEffect.cpp
 msgid "Import Audio Unit Presets"
 msgstr "Audio Unit プリセットの取り込み"
 
@@ -9708,12 +9515,6 @@ msgstr "フォーマットオプション"
 msgid "Channel: %2d"
 msgstr "チャンネル: %2d"
 
-#. i18n-hint: track name and R abbreviating Right channel
-#: src/export/Export.cpp
-#, c-format
-msgid "%s - R"
-msgstr ""
-
 #: src/export/Export.cpp
 #, c-format
 msgid "Output Channels: %2d"
@@ -9961,24 +9762,12 @@ msgstr "ビットレート:"
 msgid "Quality (kbps):"
 msgstr "品質 (kbps):"
 
-#: src/export/ExportFFmpegDialogs.cpp
-msgid "0"
-msgstr ""
-
 #: src/export/ExportFFmpegDialogs.cpp src/export/ExportFLAC.cpp
 msgid "3"
 msgstr ""
 
 #: src/export/ExportFFmpegDialogs.cpp src/export/ExportFLAC.cpp
-msgid "5"
-msgstr ""
-
-#: src/export/ExportFFmpegDialogs.cpp src/export/ExportFLAC.cpp
 msgid "7"
-msgstr ""
-
-#: src/export/ExportFFmpegDialogs.cpp
-msgid "10"
 msgstr ""
 
 #: src/export/ExportFFmpegDialogs.cpp
@@ -9998,15 +9787,7 @@ msgid "Low Delay"
 msgstr "低遅延"
 
 #: src/export/ExportFFmpegDialogs.cpp
-msgid "5 ms"
-msgstr ""
-
-#: src/export/ExportFFmpegDialogs.cpp
 msgid "20 ms"
-msgstr ""
-
-#: src/export/ExportFFmpegDialogs.cpp
-msgid "60 ms"
 msgstr ""
 
 #: src/export/ExportFFmpegDialogs.cpp
@@ -10514,10 +10295,6 @@ msgstr "形式を検出できませんでした"
 #: src/export/ExportFFmpegDialogs.cpp
 msgid "Failed to find the codec"
 msgstr "コーデックが見つかりませんでした"
-
-#: src/export/ExportFLAC.cpp
-msgid "24 bit"
-msgstr ""
 
 #: src/export/ExportFLAC.cpp
 msgid "0 (fastest)"
@@ -11036,10 +10813,6 @@ msgstr "選択した音声を Ogg Vorbis ファイルに書き出し"
 #: src/export/ExportOGG.cpp
 msgid "Exporting the audio as Ogg Vorbis"
 msgstr "音声を Ogg Vorbis ファイルに書き出し"
-
-#: src/export/ExportPCM.cpp src/import/ImportPCM.cpp
-msgid "WAV (Microsoft)"
-msgstr ""
 
 #: src/export/ExportPCM.cpp
 msgid "Header:"
@@ -11656,10 +11429,6 @@ msgid "WAV, AIFF, and other uncompressed types"
 msgstr "WAV、AIFF、その他の非圧縮形式"
 
 #: src/import/ImportPCM.cpp
-msgid "AVR (Audio Visual Research)"
-msgstr ""
-
-#: src/import/ImportPCM.cpp
 msgid "CAF (Apple Core Audio File)"
 msgstr "CAF (Apple コア音声ファイル)"
 
@@ -11673,10 +11442,6 @@ msgid "HTK (HMM Tool Kit)"
 msgstr "HTK (HMM ツールキット)"
 
 #: src/import/ImportPCM.cpp
-msgid "MAT4 (GNU Octave 2.0 / Matlab 4.2)"
-msgstr ""
-
-#: src/import/ImportPCM.cpp
 msgid "MPC (Akai MPC 2k)"
 msgstr ""
 
@@ -11685,24 +11450,12 @@ msgid "OGG (OGG Container format)"
 msgstr "OGG (OGG コンテナフォーマット)"
 
 #: src/import/ImportPCM.cpp
-msgid "PVF (Portable Voice Format)"
-msgstr ""
-
-#: src/import/ImportPCM.cpp
 msgid "RAW (header-less)"
 msgstr "RAW (ヘッダーなし)"
 
 #: src/import/ImportPCM.cpp
-msgid "SD2 (Sound Designer II)"
-msgstr ""
-
-#: src/import/ImportPCM.cpp
 msgid "SDS (Midi Sample Dump Standard)"
 msgstr "SDS (MIDI サンプルダンプスタンダード)"
-
-#: src/import/ImportPCM.cpp
-msgid "VOC (Creative Labs)"
-msgstr ""
 
 #: src/import/ImportPCM.cpp
 msgid "WAV (NIST Sphere)"
@@ -11745,15 +11498,7 @@ msgid "U-Law"
 msgstr "μ-Law"
 
 #: src/import/ImportPCM.cpp
-msgid "IMA ADPCM"
-msgstr ""
-
-#: src/import/ImportPCM.cpp
 msgid "GSM 6.10"
-msgstr ""
-
-#: src/import/ImportPCM.cpp
-msgid "24kbs G723 ADPCM"
 msgstr ""
 
 #: src/import/ImportPCM.cpp
@@ -12783,10 +12528,6 @@ msgstr "フォーカスするトラックを切り替え(&D)"
 #: src/menus/PluginMenus.cpp
 msgid "Uncategorized"
 msgstr "未分類"
-
-#: src/menus/PluginMenus.cpp
-msgid "Unknown"
-msgstr ""
 
 #: src/menus/PluginMenus.cpp
 #, c-format
@@ -15381,11 +15122,6 @@ msgstr "プリロール(&L):"
 msgid "Cross&fade:"
 msgstr "クロスフェード(&F):"
 
-#. i18n-hint: The name of a frequency scale in psychoacoustics, named for Heinrich Barkhausen
-#: src/prefs/SpectrogramSettings.cpp
-msgid "Bark"
-msgstr ""
-
 #. i18n-hint: Time units, that is Period = 1 / Frequency
 #: src/prefs/SpectrogramSettings.cpp
 msgid "Period"
@@ -16626,23 +16362,11 @@ msgid "Rat&e"
 msgstr "サンプリング周波数(&E)"
 
 #: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
-msgid "11025 Hz"
-msgstr ""
-
-#: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
 msgid "22050 Hz"
 msgstr ""
 
 #: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
-msgid "48000 Hz"
-msgstr ""
-
-#: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
 msgid "96000 Hz"
-msgstr ""
-
-#: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
-msgid "192000 Hz"
 msgstr ""
 
 #: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
@@ -17130,12 +16854,6 @@ msgstr "押す"
 #: src/widgets/AButton.cpp
 msgid "Button"
 msgstr "ボタン"
-
-#. i18n-hint: One-letter abbreviation for Right, in the Pan slider
-#. i18n-hint: One-letter abbreviation for Right, in VU Meter
-#: src/widgets/ASlider.cpp src/widgets/Meter.cpp
-msgid "R"
-msgstr ""
 
 #. i18n-hint: "x" suggests a multiplicative factor
 #: src/widgets/ASlider.cpp
@@ -18355,10 +18073,6 @@ msgstr "周波数 (Hz)"
 #: plug-ins/highpass.ny plug-ins/lowpass.ny
 msgid "Roll-off (dB per octave)"
 msgstr "減衰傾度 (オクターブあたり)"
-
-#: plug-ins/highpass.ny plug-ins/lowpass.ny
-msgid "12 dB"
-msgstr ""
 
 #: plug-ins/highpass.ny plug-ins/lowpass.ny
 msgid "36 dB"

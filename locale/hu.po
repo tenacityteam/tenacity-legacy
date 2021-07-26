@@ -29,11 +29,6 @@ msgstr "Kilépés az Audacity programból"
 
 #: libraries/lib-strings/FutureStrings.h
 msgctxt "update dialog"
-msgid "&Install update"
-msgstr ""
-
-#: libraries/lib-strings/FutureStrings.h
-msgctxt "update dialog"
 msgid "Changelog"
 msgstr "Csatorna"
 
@@ -41,11 +36,6 @@ msgstr "Csatorna"
 msgctxt "update dialog"
 msgid "Error checking for update"
 msgstr "Hiba a fájl visszafejtésekor"
-
-#: libraries/lib-strings/FutureStrings.h
-msgctxt "update dialog"
-msgid "Update data was corrupted."
-msgstr ""
 
 #: libraries/lib-strings/FutureStrings.h
 msgctxt "update dialog"
@@ -76,12 +66,6 @@ msgstr "Nem lehet meghatározni"
 #, c-format
 msgid "%s bytes"
 msgstr "bájt"
-
-#. i18n-hint: Abbreviation for Mega bytes
-#: libraries/lib-strings/Internat.cpp
-#, c-format
-msgid "%s MB"
-msgstr ""
 
 #: libraries/lib-strings/Languages.cpp
 msgid "Simplified"
@@ -646,10 +630,6 @@ msgstr "fejlesztő"
 msgid "%s, graphics"
 msgstr "&Grafika"
 
-#: src/AboutDialog.cpp
-msgid "<h3>"
-msgstr ""
-
 #. i18n-hint: The program's name substitutes for %s
 #: src/AboutDialog.cpp
 #, fuzzy
@@ -721,12 +701,6 @@ msgstr "Külön köszönet:"
 #, c-format
 msgid "%s website: "
 msgstr "Az Audacity első indítása"
-
-#. i18n-hint The registered trademark symbol (r) is substituted at %s
-#: src/AboutDialog.cpp
-#, c-format
-msgid "The Audacity%s trademark is used within this software for descriptive and informational purposes only."
-msgstr ""
 
 #: src/AdornedRulerPanel.cpp
 msgid "Timeline actions disabled during recording"
@@ -978,14 +952,6 @@ msgstr "Audacity projektfájlok"
 
 #: src/AudacityApp.cpp
 msgid ""
-"Unable to acquire lock semaphore.\n"
-"\n"
-"This is likely due to a resource shortage\n"
-"and a reboot may be required."
-msgstr ""
-
-#: src/AudacityApp.cpp
-msgid ""
 "The Audacity IPC server failed to initialize.\n"
 "\n"
 "This is likely due to a resource shortage\n"
@@ -1215,17 +1181,8 @@ msgid "Selected playback device: %d - %s\n"
 msgstr "Lejátszóeszköz kiválasztása\n"
 
 #: src/AudioIOBase.cpp
-msgid "Cannot check mutual sample rates without both devices.\n"
-msgstr ""
-
-#: src/AudioIOBase.cpp
 msgid "Unable to open Portmixer\n"
 msgstr "Nem sikerült megnyitni a műfajfájlt.\n"
-
-#: src/AudioIOBase.cpp
-#, c-format
-msgid "%d - %s\n"
-msgstr ""
 
 #: src/AudioIOBase.cpp
 msgid "Available recording sources:\n"
@@ -1250,12 +1207,6 @@ msgstr "Lejátszási hangerő: %%.2f%s\n"
 #: src/AudioIOBase.cpp
 msgid "Playback volume is native\n"
 msgstr "Lejátszási hangerő: %%.2f%s\n"
-
-#. i18n-hint: Supported, meaning made available by the system
-#: src/AudioIOBase.cpp
-#, c-format
-msgid "Supports input: %d\n"
-msgstr ""
 
 #: src/AudioIOBase.cpp
 #, c-format
@@ -1373,10 +1324,6 @@ msgid "Menu Command (With Parameters)"
 msgstr "Paraméterek &szerkesztése"
 
 #: src/BatchCommands.cpp
-msgid "Menu Command (No Parameters)"
-msgstr ""
-
-#: src/BatchCommands.cpp
 #, c-format
 msgid "Your batch command of %s was not recognized."
 msgstr "A(z) %s kötegelt parancsa nem volt felismerhető."
@@ -1430,10 +1377,6 @@ msgstr "Görbék kezelése"
 #: src/BatchProcessDialog.cpp
 msgid "Select Macro"
 msgstr "Görbe kiválasztása"
-
-#: src/BatchProcessDialog.cpp
-msgid "Apply Macro to:"
-msgstr ""
 
 #: src/BatchProcessDialog.cpp
 msgid "Apply macro to project"
@@ -1593,12 +1536,6 @@ msgstr "&Teljesítményteszt futtatása…"
 msgid "Number of Edits:"
 msgstr "Ismétlések száma"
 
-#. i18n-hint: A "seed" is a number that initializes a
-#. pseudorandom number generating algorithm
-#: src/Benchmark.cpp
-msgid "Random Seed:"
-msgstr ""
-
 #: src/Benchmark.cpp
 msgid "Show detailed info about each editing operation"
 msgstr ""
@@ -1623,18 +1560,8 @@ msgid "Number of edits should be in the range 1 - 10000."
 msgstr "A hangjegyek legnagyobb számának az 1…128 tartományban kell lennie"
 
 #: src/Benchmark.cpp
-#, c-format
-msgid "Using %lld chunks of %lld samples each, for a total of %.1f MB.\n"
-msgstr ""
-
-#: src/Benchmark.cpp
 msgid "Preparing...\n"
 msgstr "Előnézet előkészítése\n"
-
-#: src/Benchmark.cpp
-#, c-format
-msgid "Performing %d edits...\n"
-msgstr ""
 
 #: src/Benchmark.cpp
 #, c-format
@@ -1648,16 +1575,7 @@ msgstr "Beillesztés\n"
 
 #: src/Benchmark.cpp
 #, c-format
-msgid "Time to perform %d edits: %ld ms\n"
-msgstr ""
-
-#: src/Benchmark.cpp
-#, c-format
 msgid "Track # blocks: %ld\n"
-msgstr ""
-
-#: src/Benchmark.cpp
-msgid "Doing correctness check...\n"
 msgstr ""
 
 #: src/Benchmark.cpp
@@ -1665,20 +1583,8 @@ msgid "Passed correctness check!\n"
 msgstr ""
 
 #: src/Benchmark.cpp
-#, c-format
-msgid "Time to check all data: %ld ms\n"
-msgstr ""
-
-#: src/Benchmark.cpp
 msgid "Reading data again...\n"
 msgstr "Felvétel időtartama:\n"
-
-#: src/Benchmark.cpp
-#, c-format
-msgid ""
-"At 44100 Hz, %d bytes per sample, the estimated number of\n"
-" simultaneous tracks that could be played at once: %.1f\n"
-msgstr ""
 
 #: src/Benchmark.cpp
 msgid "Benchmark completed successfully.\n"
@@ -1702,12 +1608,6 @@ msgid ""
 "\n"
 "Ctrl + A selects all audio."
 msgstr "Ennek a műveletnek a végrehajtásához először ki kell jelölnie némi hangot."
-
-#. i18n-hint: %s will be replaced by the name of an action, such as Normalize, Cut, Fade.
-#: src/CommonCommandFlags.cpp
-#, c-format
-msgid "Select the audio for %s to use (for example, Ctrl + A to Select All) then try again."
-msgstr ""
 
 #: src/CommonCommandFlags.cpp
 msgid "No Audio Selected"
@@ -1936,11 +1836,6 @@ msgstr "Blackman, Hann"
 msgid "Welch"
 msgstr "Üdvözöljük!"
 
-#. i18n-hint a mathematical function named for C. F. Gauss
-#: src/FFT.cpp
-msgid "Gaussian(a=3.5)"
-msgstr ""
-
 #: src/FFmpeg.cpp
 msgid "FFmpeg support not compiled in"
 msgstr "Az FFmpeg támogatás nincs belefordítva"
@@ -2032,10 +1927,6 @@ msgstr "Ne jelenjen meg többet ez a figyelmeztetés"
 #: src/FFmpeg.cpp
 msgid "Failed to find compatible FFmpeg libraries."
 msgstr "Nem sikerült megfelelő FFmpeg programkönyvtárakat találni."
-
-#: src/FFmpeg.h
-msgid "Only libavformat.so"
-msgstr ""
 
 #: src/FileException.cpp
 #, c-format
@@ -2242,12 +2133,6 @@ msgid "s"
 msgstr "mp"
 
 #. i18n-hint: The %d's are replaced by numbers, the %s by musical notes, e.g. A#
-#: src/FreqWindow.cpp
-#, c-format
-msgid "%d Hz (%s) = %.1f dB"
-msgstr ""
-
-#. i18n-hint: The %d's are replaced by numbers, the %s by musical notes, e.g. A#
 #. * the %.4f are numbers, and 'sec' should be an abbreviation for seconds
 #: src/FreqWindow.cpp
 #, c-format
@@ -2339,10 +2224,6 @@ msgstr "CD-re írás"
 #: src/HelpText.cpp
 msgid "No Local Help"
 msgstr "Nincs helyi súgó"
-
-#: src/HelpText.cpp
-msgid "<br><br>The version of Audacity you are using is a <b>Beta test version</b>."
-msgstr ""
 
 #: src/HelpText.cpp
 msgid "You can help us get Audacity ready for release by joining our [[https://www.audacityteam.org/community/|community]].<hr><br><br>"
@@ -2440,13 +2321,6 @@ msgstr "&Parancs"
 #: src/HistoryWindow.cpp
 msgid "&History..."
 msgstr "Elő&zmények…"
-
-#: src/InconsistencyException.cpp
-#, c-format
-msgid ""
-"Internal error at %s line %d.\n"
-"Please inform the Audacity team at https://forum.audacityteam.org/."
-msgstr ""
 
 #: src/InconsistencyException.h
 msgid "Internal Error"
@@ -2769,11 +2643,6 @@ msgstr "Db"
 
 #. i18n-hint: Name of a musical note in the 12-tone chromatic scale
 #: src/PitchName.cpp
-msgid "E"
-msgstr ""
-
-#. i18n-hint: Name of a musical note in the 12-tone chromatic scale
-#: src/PitchName.cpp
 msgid "F♯"
 msgstr ""
 
@@ -2784,18 +2653,8 @@ msgstr "GB"
 
 #. i18n-hint: Name of a musical note in the 12-tone chromatic scale
 #: src/PitchName.cpp
-msgid "A"
-msgstr ""
-
-#. i18n-hint: Name of a musical note in the 12-tone chromatic scale
-#: src/PitchName.cpp
 msgid "B"
 msgstr "dB"
-
-#. i18n-hint: Name of a musical note in the 12-tone chromatic scale
-#: src/PitchName.cpp
-msgid "E♭"
-msgstr ""
 
 #. i18n-hint: Name of a musical note in the 12-tone chromatic scale
 #: src/PitchName.cpp
@@ -2804,27 +2663,13 @@ msgstr ""
 
 #. i18n-hint: Two, alternate names of a musical note in the 12-tone chromatic scale
 #: src/PitchName.cpp
-msgid "C♯/D♭"
-msgstr ""
-
-#. i18n-hint: Two, alternate names of a musical note in the 12-tone chromatic scale
-#: src/PitchName.cpp
 msgid "F♯/G♭"
-msgstr ""
-
-#. i18n-hint: Two, alternate names of a musical note in the 12-tone chromatic scale
-#: src/PitchName.cpp
-msgid "A♯/B♭"
 msgstr ""
 
 #: src/PluginManager.cpp
 #, c-format
 msgid "Overwrite the plug-in file %s?"
 msgstr "Meglévő fájlok felülírása"
-
-#: src/PluginManager.cpp
-msgid "Plug-in file is in use. Failed to overwrite"
-msgstr ""
 
 #: src/PluginManager.cpp
 #, c-format
@@ -2990,13 +2835,6 @@ msgstr "Hiba a hangeszköz megnyitásakor. Próbálja meg megváltoztatni a hang
 msgid "The tracks selected for recording must all have the same sampling rate"
 msgstr "Egy szűrő alkalmazásához minden kijelölt sávnak azonos mintavételezési gyakorisággal kell rendelkeznie."
 
-#: src/ProjectAudioManager.cpp src/menus/TransportMenus.cpp
-msgid ""
-"Too few tracks are selected for recording at this sample rate.\n"
-"(Audacity requires two channels at the same sample rate for\n"
-"each stereo track)"
-msgstr ""
-
 #: src/ProjectAudioManager.cpp
 msgid "Recorded Audio"
 msgstr "Hang felvéve"
@@ -3004,15 +2842,6 @@ msgstr "Hang felvéve"
 #: src/ProjectAudioManager.cpp src/toolbars/ControlToolBar.cpp
 msgid "Record"
 msgstr "Felvétel"
-
-#: src/ProjectAudioManager.cpp
-msgid ""
-"Recorded audio was lost at the labeled locations. Possible causes:\n"
-"\n"
-"Other applications are competing with Audacity for processor time\n"
-"\n"
-"You are saving directly to a slow external storage device\n"
-msgstr ""
 
 #. i18n-hint: The audacity project file is XML and has 'tags' in it,
 #. rather like html tags <something>some stuff</something>.
@@ -3242,13 +3071,6 @@ msgid ""
 "%s"
 msgstr "Nem sikerült olvasni az előbeállítás-fájlt."
 
-#. i18n-hint: An error message.
-#: src/ProjectFileIO.cpp
-msgid ""
-"Project is in a read only directory\n"
-"(Unable to create the required temporary files)"
-msgstr ""
-
 #: src/ProjectFileIO.cpp
 msgid "This is not an Audacity project file"
 msgstr "Egy Audacity projekt mentése"
@@ -3260,21 +3082,7 @@ msgstr "Nem sikerült előkészíteni az MP3 adatfolyamot"
 #. i18n-hint: An error message.  Don't translate blockfiles.
 #: src/ProjectFileIO.cpp
 msgid ""
-"Project is read only\n"
-"(Unable to work with the blockfiles)"
-msgstr ""
-
-#. i18n-hint: An error message.  Don't translate blockfiles.
-#: src/ProjectFileIO.cpp
-msgid ""
 "Project is busy\n"
-"(Unable to work with the blockfiles)"
-msgstr ""
-
-#. i18n-hint: An error message.  Don't translate blockfiles.
-#: src/ProjectFileIO.cpp
-msgid ""
-"Some permissions issue\n"
 "(Unable to work with the blockfiles)"
 msgstr ""
 
@@ -3304,10 +3112,6 @@ msgid "Failed to bind SQL parameter"
 msgstr "Nem sikerült megtalálni a kodeket"
 
 #: src/ProjectFileIO.cpp
-msgid "Destination project could not be detached"
-msgstr ""
-
-#: src/ProjectFileIO.cpp
 msgid "Copying Project"
 msgstr "Hiba a projekt megnyitásakor"
 
@@ -3328,10 +3132,6 @@ msgstr ""
 #: src/ProjectFileIO.cpp
 msgid "Compacting project"
 msgstr "&Projektek mentése"
-
-#: src/ProjectFileIO.cpp src/commands/AudacityCommand.cpp src/effects/Effect.cpp src/effects/nyquist/Nyquist.cpp src/prefs/PrefsPanel.cpp plug-ins/beat.ny
-msgid "Audacity"
-msgstr ""
 
 #. i18n-hint: E.g this is recovered audio that had been lost.
 #: src/ProjectFileIO.cpp
@@ -3371,15 +3171,6 @@ msgstr "&Projektek mentése"
 #: src/ProjectFileIO.cpp src/ProjectFileManager.cpp
 msgid "Error Saving Project"
 msgstr "Hiba a projekt mentésekor"
-
-#: src/ProjectFileIO.cpp
-#, c-format
-msgid ""
-"The project failed to open, possibly due to limited space\n"
-"on the storage device.\n"
-"\n"
-"%s"
-msgstr ""
 
 #: src/ProjectFileIO.cpp
 msgid "Backing up project"
@@ -3426,10 +3217,6 @@ msgstr "Figyelmeztetés - Üres projekt"
 #: src/ProjectFileManager.cpp
 msgid "Insufficient Disk Space"
 msgstr "Lemezterület"
-
-#: src/ProjectFileManager.cpp
-msgid "The project exceeds the maximum size of 4GB when writing to a FAT32 formatted filesystem."
-msgstr ""
 
 #: src/ProjectFileManager.cpp src/commands/ScreenshotCommand.cpp
 #, c-format
@@ -3661,11 +3448,6 @@ msgstr "Vízszintes"
 msgid "Vertical Scrollbar"
 msgstr "Függőleges"
 
-#: src/Registry.cpp
-#, c-format
-msgid "Plug-in item at %s conflicts with a previously defined item and was discarded"
-msgstr ""
-
 #: src/Resample.cpp
 msgid "Low Quality (Fastest)"
 msgstr ""
@@ -3681,11 +3463,6 @@ msgstr "Minőség"
 #: src/Resample.cpp
 msgid "Best Quality (Slowest)"
 msgstr "(Legjobb minőség)"
-
-#. i18n-hint: Audio data bit depth (precision): 24-bit integers
-#: src/SampleFormat.cpp
-msgid "24-bit PCM"
-msgstr ""
 
 #. i18n-hint: Audio data bit depth (precision): 32-bit floating point
 #: src/SampleFormat.cpp src/prefs/QualitySettings.cpp
@@ -3894,10 +3671,6 @@ msgstr "Magas sávok"
 msgid "Choose a location to save screenshot images"
 msgstr "Válasszon egy helyet a képernyőképek mentéséhez"
 
-#: src/Screenshot.cpp src/commands/CommandTargets.cpp
-msgid "Long Message"
-msgstr ""
-
 #: src/Sequence.cpp
 #, c-format
 msgid ""
@@ -4074,14 +3847,6 @@ msgstr "Hiba a címkefájl mentésekor"
 #: src/TempDirectory.cpp
 msgid "Unsuitable"
 msgstr "Alkalmatlan modul"
-
-#: src/TempDirectory.cpp
-#, c-format
-msgid ""
-"%s\n"
-"\n"
-"For tips on suitable drives, click the help button."
-msgstr ""
 
 #: src/Theme.cpp
 #, c-format
@@ -4329,14 +4094,6 @@ msgid ""
 "\n"
 "Recording exported: %s"
 msgstr "Fe"
-
-#: src/TimerRecordDialog.cpp
-#, c-format
-msgid ""
-"%s\n"
-"\n"
-"'%s' has been canceled due to the error(s) noted above."
-msgstr ""
 
 #: src/TimerRecordDialog.cpp src/menus/TransportMenus.cpp
 msgid "Timer Recording"
@@ -4638,18 +4395,9 @@ msgstr ""
 msgid "Applying %s..."
 msgstr "%s alkalmazása…"
 
-#: src/commands/AudacityCommand.h
-msgid "FAIL"
-msgstr ""
-
 #: src/commands/BatchEvalCommand.cpp
 msgid "Batch Command"
 msgstr "Parancs"
-
-#: src/commands/Command.cpp
-#, c-format
-msgid "Invalid value for parameter '%s': should be %s"
-msgstr ""
 
 #: src/commands/CommandManager.cpp src/prefs/MousePrefs.cpp src/widgets/KeyView.cpp
 msgid "Command"
@@ -4661,10 +4409,6 @@ msgstr "Parancs"
 #, c-format
 msgid "Repeat %s"
 msgstr "Ismétlés: %s"
-
-#: src/commands/CommandManager.cpp
-msgid "The following commands have had their shortcuts removed, because their default shortcut is new or changed, and is the same shortcut that you have assigned to another command."
-msgstr ""
 
 #: src/commands/CompareAudioCommand.cpp
 msgid "Compare Audio"
@@ -4718,10 +4462,6 @@ msgstr "Percenkénti fordulatszámtól"
 msgid "From Y:"
 msgstr "Percenkénti fordulatszámtól"
 
-#: src/commands/DragCommand.cpp
-msgid "To Y:"
-msgstr ""
-
 #: src/commands/DragCommand.h
 msgid "Drags mouse from one place to another."
 msgstr ""
@@ -4754,11 +4494,6 @@ msgstr "Burkológörbe"
 msgid "Labels"
 msgstr "Címkék"
 
-#. i18n-hint JavaScript Object Notation
-#: src/commands/GetInfoCommand.cpp src/commands/HelpCommand.cpp
-msgid "JSON"
-msgstr ""
-
 #: src/commands/GetInfoCommand.cpp src/commands/HelpCommand.cpp
 msgid "Brief"
 msgstr ""
@@ -4786,10 +4521,6 @@ msgstr "Megjegyzések"
 #: src/commands/HelpCommand.cpp src/export/ExportCL.cpp
 msgid "Command:"
 msgstr "Parancs:"
-
-#: src/commands/HelpCommand.h
-msgid "Gives help on a command."
-msgstr ""
 
 #: src/commands/ImportExportCommands.cpp
 msgid "Import2"
@@ -4822,10 +4553,6 @@ msgstr "Az Audacity csapat"
 #: src/commands/LoadCommands.cpp
 msgid "Provides builtin commands to Audacity"
 msgstr "Beépített hatásokat biztosít az Audacity programhoz"
-
-#: src/commands/MessageCommand.cpp src/commands/SetLabelCommand.cpp
-msgid "Text:"
-msgstr ""
 
 #: src/commands/MessageCommand.h
 msgid "Echos a message."
@@ -4867,10 +4594,6 @@ msgstr "&Projekt mentése"
 msgid "Saves a copy of current project."
 msgstr "&Projekt mentése"
 
-#: src/commands/OpenSaveCommands.h
-msgid "Clears the log contents."
-msgstr ""
-
 #: src/commands/PreferenceCommands.cpp
 msgid "Get Preference"
 msgstr "&Beállítások használata"
@@ -4886,10 +4609,6 @@ msgstr "&Beállítások használata"
 #: src/commands/PreferenceCommands.cpp src/commands/SetEnvelopeCommand.cpp
 msgid "Value:"
 msgstr "Érték"
-
-#: src/commands/PreferenceCommands.h
-msgid "Gets the value of a single preference."
-msgstr ""
 
 #: src/commands/PreferenceCommands.h
 msgid "Sets the value of a single preference."
@@ -5145,10 +4864,6 @@ msgid "Resize:"
 msgstr "Csökken&tés"
 
 #: src/commands/SetProjectCommand.cpp
-msgid "Y:"
-msgstr ""
-
-#: src/commands/SetProjectCommand.cpp
 msgid "Width:"
 msgstr "Szélesség"
 
@@ -5195,10 +4910,6 @@ msgstr "Lineáris"
 #: src/commands/SetTrackInfoCommand.cpp
 msgid "Reset"
 msgstr "&Visszaállítás"
-
-#: src/commands/SetTrackInfoCommand.cpp
-msgid "HalfWave"
-msgstr ""
 
 #: src/commands/SetTrackInfoCommand.cpp
 msgid "Display:"
@@ -5649,13 +5360,6 @@ msgstr "%.2f mp"
 msgid "%.1f secs"
 msgstr "%.1f mp"
 
-#. i18n-hint: Unless your language has a different convention for ratios,
-#. * like 8:1, leave as is.
-#: src/effects/Compressor.cpp
-#, c-format
-msgid "%.1f:1"
-msgstr ""
-
 #: src/effects/Compressor.cpp
 #, c-format
 msgid "Ratio %.0f to 1"
@@ -5830,12 +5534,6 @@ msgstr "&Különbség:"
 #: src/effects/Contrast.cpp src/menus/HelpMenus.cpp src/prefs/GUIPrefs.cpp
 msgid "&Help"
 msgstr "&Súgó"
-
-#. i18n-hint: dB abbreviates decibels
-#: src/effects/Contrast.cpp
-#, c-format
-msgid "%s dB"
-msgstr ""
 
 #: src/effects/Contrast.cpp
 msgid "zero"
@@ -6657,20 +6355,12 @@ msgid "Adjusts the volume levels of particular frequencies"
 msgstr "Beállítja az egyes frekvenciák hangerőszintjeit"
 
 #: src/effects/Equalization.cpp
-msgid "AM Radio"
-msgstr ""
-
-#: src/effects/Equalization.cpp
 msgid "Bass Boost"
 msgstr "Basszus (dB):"
 
 #: src/effects/Equalization.cpp
 msgid "Bass Cut"
 msgstr "Basszus"
-
-#: src/effects/Equalization.cpp
-msgid "RIAA"
-msgstr ""
 
 #: src/effects/Equalization.cpp
 msgid "Treble Boost"
@@ -6705,17 +6395,9 @@ msgid "Effect Unavailable"
 msgstr "A hatás nem érhető el"
 
 #: src/effects/Equalization.cpp src/effects/ScienFilter.cpp
-msgid "Max dB"
-msgstr ""
-
-#: src/effects/Equalization.cpp src/effects/ScienFilter.cpp
 #, c-format
 msgid "%d dB"
 msgstr "%3d dB"
-
-#: src/effects/Equalization.cpp src/effects/ScienFilter.cpp
-msgid "- dB"
-msgstr ""
 
 #: src/effects/Equalization.cpp
 #, c-format
@@ -7049,10 +6731,6 @@ msgid "perceived loudness"
 msgstr "Legnagyobb amplitúdó normalizálása erre:"
 
 #: src/effects/Loudness.cpp
-msgid "Loudness Normalization"
-msgstr ""
-
-#: src/effects/Loudness.cpp
 msgid "Sets the loudness of one or more tracks"
 msgstr "Beállítja egy vagy több sáv csúcsamplitúdóját"
 
@@ -7073,10 +6751,6 @@ msgstr "Feldolgozás: "
 #: src/effects/Loudness.cpp
 msgid "&Normalize"
 msgstr "Normalizálás"
-
-#: src/effects/Loudness.cpp
-msgid "LUFS"
-msgstr ""
 
 #: src/effects/Loudness.cpp
 msgid "Normalize &stereo channels independently"
@@ -7296,15 +6970,7 @@ msgid "Window si&ze:"
 msgstr "Ablak&méret"
 
 #: src/effects/NoiseReduction.cpp src/prefs/SpectrumPrefs.cpp
-msgid "16"
-msgstr ""
-
-#: src/effects/NoiseReduction.cpp src/prefs/SpectrumPrefs.cpp
 msgid "64"
-msgstr ""
-
-#: src/effects/NoiseReduction.cpp src/prefs/SpectrumPrefs.cpp
-msgid "256"
 msgstr ""
 
 #: src/effects/NoiseReduction.cpp
@@ -7314,10 +6980,6 @@ msgstr ""
 #: src/effects/NoiseReduction.cpp
 msgid "2048 (default)"
 msgstr "2048 (alapértelmezett)"
-
-#: src/effects/NoiseReduction.cpp src/prefs/SpectrumPrefs.cpp
-msgid "8192"
-msgstr ""
 
 #: src/effects/NoiseReduction.cpp
 msgid "S&teps per window:"
@@ -8105,10 +7767,6 @@ msgid "Save VST Preset As:"
 msgstr "VST-előbeállítás mentése másként:"
 
 #: src/effects/VST/VSTEffect.cpp
-msgid "Standard VST program file"
-msgstr ""
-
-#: src/effects/VST/VSTEffect.cpp
 msgid "Audacity VST preset file"
 msgstr "Audacity projektfájlok"
 
@@ -8152,10 +7810,6 @@ msgstr "Nem sikerült olvasni az előbeállítás-fájlt."
 #, c-format
 msgid "This parameter file was saved from %s. Continue?"
 msgstr "Ez a paraméterfájl innen lett elmentve: %s. Folytatja?"
-
-#: src/effects/Wahwah.cpp
-msgid "Wahwah"
-msgstr ""
 
 #: src/effects/Wahwah.cpp
 msgid "Rapid tone quality variations, like that guitar sound so popular in the 1970's"
@@ -8292,10 +7946,6 @@ msgstr "Mintavételezési gyakoriság átalakítás"
 msgid "Failed to write XML preset to \"%s\""
 msgstr "%s eltávolítása sikertelen"
 
-#: src/effects/audiounits/AudioUnitEffect.cpp
-msgid "Failed to create property list for preset"
-msgstr ""
-
 #. i18n-hint: the name of an Apple audio software protocol
 #. i18n-hint: Audio Unit is the name of an Apple audio software protocol
 #: src/effects/audiounits/AudioUnitEffect.h src/prefs/EffectsPrefs.cpp
@@ -8315,13 +7965,6 @@ msgstr "LADSPA-hatásokat biztosít"
 #: src/effects/ladspa/LadspaEffect.cpp
 msgid "LADSPA Effect Options"
 msgstr "LADSPA-hatás beállításai"
-
-#. i18n-hint: An item name introducing a value, which is not part of the string but
-#. appears in a following text box window; translate with appropriate punctuation
-#: src/effects/ladspa/LadspaEffect.cpp src/effects/nyquist/Nyquist.cpp src/effects/vamp/VampEffect.cpp src/tracks/playabletrack/wavetrack/ui/SpectrumView.cpp
-#, c-format
-msgid "%s:"
-msgstr ""
 
 #: src/effects/ladspa/LadspaEffect.cpp
 msgid "Effect Output"
@@ -8430,11 +8073,6 @@ msgstr "Nyquist-kimenet: "
 msgid "Processing complete."
 msgstr "Feldolgozás kész."
 
-#. i18n-hint: Don't translate ';type tool'.
-#: src/effects/nyquist/Nyquist.cpp
-msgid "';type tool' effects cannot return labels from Nyquist.\n"
-msgstr ""
-
 #. i18n-hint: "%s" is replaced by name of plug-in.
 #: src/effects/nyquist/Nyquist.cpp
 #, c-format
@@ -8511,14 +8149,6 @@ msgstr "Hiba a Nyquist-kódban"
 #: src/effects/nyquist/Nyquist.cpp
 msgid "Could not determine language"
 msgstr "Nem sikerült visszafejteni a fájlt: "
-
-#. i18n-hint: Warning that there is one quotation mark rather than a pair.
-#: src/effects/nyquist/Nyquist.cpp
-#, c-format
-msgid ""
-"Mismatched quotes in\n"
-"%s"
-msgstr ""
 
 #: src/effects/nyquist/Nyquist.cpp
 msgid "Enter Nyquist Command: "
@@ -8600,12 +8230,6 @@ msgstr "Elnézést, nem sikerült a Vamp-bővítmény előkészítése."
 #: src/effects/vamp/VampEffect.cpp
 msgid "Plugin Settings"
 msgstr "Bővítmény-beállítások"
-
-#. i18n-hint: Vamp is the proper name of a software protocol for sound analysis.
-#. It is not an abbreviation for anything.  See http://vamp-plugins.org
-#: src/effects/vamp/VampEffect.h
-msgid "Vamp"
-msgstr ""
 
 #: src/export/Export.cpp
 msgid "No format specific options"
@@ -8818,10 +8442,6 @@ msgstr ""
 "Az FFmpeg nem találja a 0x%x hangkodeket.\n"
 "A kodekhez támogatása valószínűleg nincs belefordítva."
 
-#: src/export/ExportFFmpeg.cpp
-msgid "The codec reported an invalid parameter (EINVAL)"
-msgstr ""
-
 #. i18n-hint: "codec" is short for a "coder-decoder" algorithm
 #: src/export/ExportFFmpeg.cpp
 #, c-format
@@ -8931,16 +8551,8 @@ msgstr "Bitsebesség:"
 msgid "Quality (kbps):"
 msgstr "Minőség:"
 
-#: src/export/ExportFFmpegDialogs.cpp
-msgid "0"
-msgstr ""
-
 #: src/export/ExportFFmpegDialogs.cpp src/export/ExportFLAC.cpp
 msgid "3"
-msgstr ""
-
-#: src/export/ExportFFmpegDialogs.cpp src/export/ExportFLAC.cpp
-msgid "5"
 msgstr ""
 
 #: src/export/ExportFFmpegDialogs.cpp src/export/ExportFLAC.cpp
@@ -8968,24 +8580,12 @@ msgid "Low Delay"
 msgstr "Késleltetés"
 
 #: src/export/ExportFFmpegDialogs.cpp
-msgid "5 ms"
-msgstr ""
-
-#: src/export/ExportFFmpegDialogs.cpp
 msgid "20 ms"
-msgstr ""
-
-#: src/export/ExportFFmpegDialogs.cpp
-msgid "60 ms"
 msgstr ""
 
 #: src/export/ExportFFmpegDialogs.cpp
 msgid "Mediumband"
 msgstr "Közepes"
-
-#: src/export/ExportFFmpegDialogs.cpp
-msgid "Super Wideband"
-msgstr ""
 
 #: src/export/ExportFFmpegDialogs.cpp
 msgid "Fullband"
@@ -9457,11 +9057,6 @@ msgstr "Nincsenek exportálandó címkék."
 msgid "Select xml file to export presets into"
 msgstr "Válasszon xml-fájlt, amelybe az előbeállításokat exportálja"
 
-#. i18n-hint: "codec" is short for a "coder-decoder" algorithm
-#: src/export/ExportFFmpegDialogs.cpp
-msgid "Incompatible format and codec"
-msgstr ""
-
 #: src/export/ExportFFmpegDialogs.cpp
 msgid "Failed to guess format"
 msgstr "Nem sikerült kitalálni a formátumot"
@@ -9470,10 +9065,6 @@ msgstr "Nem sikerült kitalálni a formátumot"
 #: src/export/ExportFFmpegDialogs.cpp
 msgid "Failed to find the codec"
 msgstr "Nem sikerült megtalálni a kodeket"
-
-#: src/export/ExportFLAC.cpp
-msgid "24 bit"
-msgstr ""
 
 #: src/export/ExportFLAC.cpp
 msgid "0 (fastest)"
@@ -9544,15 +9135,7 @@ msgid "220-260 kbps (Best Quality)"
 msgstr "(Legjobb minőség)"
 
 #: src/export/ExportMP3.cpp
-msgid "170-210 kbps"
-msgstr ""
-
-#: src/export/ExportMP3.cpp
 msgid "145-185 kbps"
-msgstr ""
-
-#: src/export/ExportMP3.cpp
-msgid "95-135 kbps"
 msgstr ""
 
 #: src/export/ExportMP3.cpp
@@ -9562,10 +9145,6 @@ msgstr "%.2f kbps"
 #: src/export/ExportMP3.cpp
 msgid "45-85 kbps (Smaller files)"
 msgstr "(Kisebb fájlok)"
-
-#: src/export/ExportMP3.cpp
-msgid "Extreme, 220-260 kbps"
-msgstr ""
 
 #: src/export/ExportMP3.cpp
 msgid "Medium, 145-185 kbps"
@@ -9667,10 +9246,6 @@ msgid ""
 msgstr ""
 "A lame_enc.dll v%d.%d fájlhoz csatlakozik. Ez a verzió nem kompatibilis az Audacity %d.%d.%d. verziójával.\n"
 "Töltse le a LAME MP3 programkönyvtár legújabb verzióját."
-
-#: src/export/ExportMP3.cpp
-msgid "Only libmp3lame64bit.dylib"
-msgstr ""
 
 #: src/export/ExportMP3.cpp
 msgid "Only libmp3lame.so.0"
@@ -9924,10 +9499,6 @@ msgid "Unable to export - rate or quality problem"
 msgstr "Nem lehet beállítani a QuickTime megjelenítő minőségét"
 
 #: src/export/ExportOGG.cpp
-msgid "Unable to export - problem initialising"
-msgstr ""
-
-#: src/export/ExportOGG.cpp
 msgid "Unable to export - problem with packets"
 msgstr ""
 
@@ -9962,10 +9533,6 @@ msgstr "Egyéb tömörítetlen fájlok"
 #: src/export/ExportPCM.cpp
 msgid "Error Exporting"
 msgstr "Hiba az importáláskor"
-
-#: src/export/ExportPCM.cpp
-msgid "GSM 6.10 requires mono"
-msgstr ""
 
 #: src/export/ExportPCM.cpp
 msgid "Cannot export audio in this format."
@@ -10200,11 +9767,6 @@ msgstr ""
 "Az Audacity nem ismerte fel a(z) „%s” fájl típusát.\n"
 "Próbálja meg telepíteni az FFmpeg programot. Tömörítetlen fájloknál próbálja meg ezt is: Fájl > Importálás > Nyers adatok."
 
-#: src/import/Import.cpp src/menus/ClipMenus.cpp
-#, c-format
-msgid "%s, %s"
-msgstr ""
-
 #. i18n-hint: %s will be the filename
 #: src/import/Import.cpp
 #, c-format
@@ -10236,15 +9798,7 @@ msgid "Internal error in importer...tag not recognized"
 msgstr "Az igazítási folyamat belső hibát jelentett."
 
 #: src/import/ImportAUP.cpp
-msgid "Invalid project 'vpos' attribute."
-msgstr ""
-
-#: src/import/ImportAUP.cpp
 msgid "Invalid project 'zoom' attribute."
-msgstr ""
-
-#: src/import/ImportAUP.cpp
-msgid "Invalid project 'sel1' attribute."
 msgstr ""
 
 #: src/import/ImportAUP.cpp
@@ -10269,19 +9823,7 @@ msgid "Invalid sequence 'numsamples' attribute."
 msgstr "Érvénytelen mintavételezési gyakoriság"
 
 #: src/import/ImportAUP.cpp
-#, c-format
-msgid ""
-"Missing project file %s\n"
-"\n"
-"Inserting silence instead."
-msgstr ""
-
-#: src/import/ImportAUP.cpp
 msgid "Missing or invalid silentblockfile 'len' attribute."
-msgstr ""
-
-#: src/import/ImportAUP.cpp
-msgid "Missing or invalid pcmaliasblockfile 'aliasstart' attribute."
 msgstr ""
 
 #: src/import/ImportAUP.cpp
@@ -10435,17 +9977,9 @@ msgstr "Belső logikai hiba"
 msgid "WAV, AIFF, and other uncompressed types"
 msgstr "WAV, AIFF és egyéb tömörítetlen típusok"
 
-#: src/import/ImportPCM.cpp
-msgid "AVR (Audio Visual Research)"
-msgstr ""
-
 #. i18n-hint: "codec" is short for a "coder-decoder" algorithm
 #: src/import/ImportPCM.cpp
 msgid "FLAC (FLAC Lossless Audio Codec)"
-msgstr ""
-
-#: src/import/ImportPCM.cpp
-msgid "IFF (Amiga IFF/SVX8/SV16)"
 msgstr ""
 
 #: src/import/ImportPCM.cpp
@@ -10453,23 +9987,11 @@ msgid "MAT5 (GNU Octave 2.1 / Matlab 5.0)"
 msgstr ""
 
 #: src/import/ImportPCM.cpp
-msgid "OGG (OGG Container format)"
-msgstr ""
-
-#: src/import/ImportPCM.cpp
 msgid "PVF (Portable Voice Format)"
 msgstr ""
 
 #: src/import/ImportPCM.cpp
-msgid "RF64 (RIFF 64)"
-msgstr ""
-
-#: src/import/ImportPCM.cpp
 msgid "SDS (Midi Sample Dump Standard)"
-msgstr ""
-
-#: src/import/ImportPCM.cpp
-msgid "VOC (Creative Labs)"
 msgstr ""
 
 #: src/import/ImportPCM.cpp
@@ -10481,20 +10003,12 @@ msgid "WAVEX (Microsoft)"
 msgstr "WAV (Microsoft) 32-bit lebegőpontos PCM"
 
 #: src/import/ImportPCM.cpp
-msgid "XI (FastTracker 2)"
-msgstr ""
-
-#: src/import/ImportPCM.cpp
 msgid "Signed 16 bit PCM"
 msgstr "16-bit PCM"
 
 #: src/import/ImportPCM.cpp
 msgid "Signed 24 bit PCM"
 msgstr "24-bit PCM"
-
-#: src/import/ImportPCM.cpp
-msgid "Unsigned 8 bit PCM"
-msgstr ""
 
 #: src/import/ImportPCM.cpp
 msgid "32 bit float"
@@ -10505,15 +10019,7 @@ msgid "64 bit float"
 msgstr "32-bit lebegőpontos"
 
 #: src/import/ImportPCM.cpp
-msgid "A-Law"
-msgstr ""
-
-#: src/import/ImportPCM.cpp
 msgid "Microsoft ADPCM"
-msgstr ""
-
-#: src/import/ImportPCM.cpp
-msgid "32kbs G721 ADPCM"
 msgstr ""
 
 #: src/import/ImportPCM.cpp
@@ -10721,10 +10227,6 @@ msgstr "A parancsfájl nem lett elmentve."
 #: src/menus/ClipMenus.cpp src/menus/EditMenus.cpp
 msgid "Clip B&oundaries"
 msgstr "Határ&ok levágása"
-
-#: src/menus/ClipMenus.cpp
-msgid "Cursor to Ne&xt Clip Boundary"
-msgstr ""
 
 #: src/menus/ClipMenus.cpp
 msgid "Previo&us Clip"
@@ -11615,10 +11117,6 @@ msgstr "Kiválasztás…"
 #: src/menus/PluginMenus.cpp
 msgid "Set Track Status..."
 msgstr "a &sáv elejére"
-
-#: src/menus/PluginMenus.cpp
-msgid "Set Track Visuals..."
-msgstr ""
 
 #: src/menus/PluginMenus.cpp
 msgid "Get Preference..."
@@ -12867,10 +12365,6 @@ msgid "Default directories"
 msgstr "Könyvtárak"
 
 #: src/prefs/DirectoriesPrefs.cpp
-msgid "O&pen:"
-msgstr ""
-
-#: src/prefs/DirectoriesPrefs.cpp
 msgid "&Browse..."
 msgstr "Tallózás…"
 
@@ -12994,12 +12488,6 @@ msgstr "LADSPA-hatások"
 #: src/prefs/EffectsPrefs.cpp
 msgid "N&yquist"
 msgstr "Nyquist"
-
-#. i18n-hint: Abbreviates Virtual Studio Technology, an audio software protocol
-#. developed by Steinberg GmbH
-#: src/prefs/EffectsPrefs.cpp
-msgid "V&ST"
-msgstr ""
 
 #: src/prefs/EffectsPrefs.cpp
 msgid "Enable Effects"
@@ -13193,11 +12681,6 @@ msgstr "&Rendszerhang a hosszabb tevékenységek befejezésekor"
 msgid "Re&tain labels if selection snaps to a label"
 msgstr "Címkék meg&tartása, ha a kijelölés egy címke széléhez illeszkedik"
 
-#. i18n-hint: RTL stands for 'Right to Left'
-#: src/prefs/GUIPrefs.cpp
-msgid "Use mostly Left-to-Right layouts in RTL languages"
-msgstr ""
-
 #: src/prefs/GUIPrefs.cpp
 msgid "Show Timeline Tooltips"
 msgstr "Idővonal buboréksúgók engedélyezése"
@@ -13251,10 +12734,6 @@ msgstr "Csend mellőzése a kezdeteken és a végeken"
 #: src/prefs/ImportExportPrefs.cpp
 msgid "Exported Label Style:"
 msgstr "Címkék exportálása másként:"
-
-#: src/prefs/ImportExportPrefs.h
-msgid "IMPORT EXPORT"
-msgstr ""
 
 #. i18n-hint: as in computer keyboard (not musical!)
 #: src/prefs/KeyConfigPrefs.cpp
@@ -13770,10 +13249,6 @@ msgstr "&Rövid szakasz:"
 msgid "Lo&ng period:"
 msgstr "&Hosszú szakasz:"
 
-#: src/prefs/PlaybackPrefs.cpp
-msgid "&Micro-fades"
-msgstr ""
-
 #: src/prefs/PrefsDialog.cpp
 msgid "Audacity Preferences"
 msgstr "Audacity beállítások"
@@ -13934,10 +13409,6 @@ msgstr "0 jelentése végtelen"
 #: src/prefs/RecordingPrefs.cpp
 msgid "Punch and Roll Recording"
 msgstr "Hangvezérelt felvétel"
-
-#: src/prefs/RecordingPrefs.cpp
-msgid "Cross&fade:"
-msgstr ""
 
 #. i18n-hint: The name of a frequency scale in psychoacoustics, named for Heinrich Barkhausen
 #: src/prefs/SpectrogramSettings.cpp
@@ -14291,10 +13762,6 @@ msgstr "Hullámforma"
 msgid "Spectrogram"
 msgstr "Spektrogram"
 
-#: src/prefs/TracksPrefs.cpp
-msgid "Stem plot"
-msgstr ""
-
 #: src/prefs/TracksPrefs.cpp src/toolbars/EditToolBar.cpp
 msgid "Fit to Width"
 msgstr "A&blakhoz igazítás"
@@ -14328,10 +13795,6 @@ msgid "50ths of Seconds"
 msgstr "másodperc"
 
 #: src/prefs/TracksPrefs.cpp
-msgid "500ths of Seconds"
-msgstr ""
-
-#: src/prefs/TracksPrefs.cpp
 msgid "MilliSeconds"
 msgstr "ezredmásodperc"
 
@@ -14354,10 +13817,6 @@ msgstr "Hangsávnév megjelenítése &rátétként"
 #: src/prefs/TracksPrefs.cpp
 msgid "&Pinned Recording/Playback head"
 msgstr "&Rögzített felvevő- vagy lejátszófej"
-
-#: src/prefs/TracksPrefs.cpp
-msgid "Pinned &head position"
-msgstr ""
 
 #: src/prefs/TracksPrefs.cpp
 msgid "Default &view mode:"
@@ -15025,10 +14484,6 @@ msgid "Stretch"
 msgstr "Nyújtás"
 
 #: src/tracks/playabletrack/wavetrack/ui/CutlineHandle.cpp
-msgid "Left-Click to merge clips"
-msgstr ""
-
-#: src/tracks/playabletrack/wavetrack/ui/CutlineHandle.cpp
 msgid "Merged Clips"
 msgstr "Klipek egyesítve"
 
@@ -15122,23 +14577,11 @@ msgid "Rat&e"
 msgstr "Se&besség"
 
 #: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
-msgid "11025 Hz"
-msgstr ""
-
-#: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
 msgid "16000 Hz"
 msgstr "0100000>0100 Hz"
 
 #: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
-msgid "44100 Hz"
-msgstr ""
-
-#: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
 msgid "88200 Hz"
-msgstr ""
-
-#: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
-msgid "176400 Hz"
 msgstr ""
 
 #: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
@@ -15261,12 +14704,6 @@ msgstr "Jobb, "
 msgid "%+.1f dB"
 msgstr "%.2f dB"
 
-#. i18n-hint: Stereo pan setting
-#: src/tracks/playabletrack/wavetrack/ui/WaveTrackSliderHandles.cpp src/widgets/ASlider.cpp
-#, c-format
-msgid "%.0f%% Right"
-msgstr ""
-
 #: src/tracks/playabletrack/wavetrack/ui/WaveTrackView.cpp
 msgid "Click and drag to adjust sizes of sub-views, double-click to split evenly"
 msgstr "Kattintás és húzás a sztereó sávok relatív méretének változtatásához."
@@ -15274,10 +14711,6 @@ msgstr "Kattintás és húzás a sztereó sávok relatív méretének változtat
 #: src/tracks/playabletrack/wavetrack/ui/WaveTrackView.cpp
 msgid "Click and drag to rearrange sub-views"
 msgstr "Kattintás és húzás a sáv áthelyezéséhez az időben"
-
-#: src/tracks/playabletrack/wavetrack/ui/WaveTrackView.cpp
-msgid "Close sub-view"
-msgstr ""
 
 #: src/tracks/playabletrack/wavetrack/ui/WaveformVZoomHandle.cpp
 msgid "Zoom x1/2"
@@ -16038,11 +15471,6 @@ msgstr "01000,01000 képkocka|75"
 msgid "010,01000>0100 Hz"
 msgstr "0100000>0100 Hz"
 
-#. i18n-hint: Name of display format that shows frequency in kilohertz
-#: src/widgets/NumericTextCtrl.cpp
-msgid "kHz"
-msgstr ""
-
 #. i18n-hint: Format string for displaying frequency in kilohertz. Change
 #. * the decimal point for your locale. Don't change the numbers.
 #. * The decimal separator is specified using '<' if your language uses a ',' or
@@ -16256,22 +15684,10 @@ msgstr "Spektrális kijelölés"
 msgid "Filtering..."
 msgstr "Szűrőhossz"
 
-#: plug-ins/SpectralEditMulti.ny plug-ins/SpectralEditParametricEQ.ny plug-ins/SpectralEditShelves.ny plug-ins/StudioFadeOut.ny plug-ins/adjustable-fade.ny plug-ins/beat.ny plug-ins/crossfadeclips.ny plug-ins/crossfadetracks.ny plug-ins/delay.ny plug-ins/eq-xml-to-txt-converter.ny plug-ins/equalabel.ny plug-ins/highpass.ny plug-ins/limiter.ny plug-ins/lowpass.ny plug-ins/notch.ny plug-ins/nyquist-plug-in-installer.ny plug-ins/pluck.ny plug-ins/rhythmtrack.ny plug-ins/rissetdrum.ny plug-ins/sample-data-export.ny plug-ins/sample-data-import.ny plug-ins/spectral-delete.ny plug-ins/tremolo.ny plug-ins/vocalrediso.ny plug-ins/vocoder.ny
-msgid "Released under terms of the GNU General Public License version 2"
-msgstr ""
-
 #: plug-ins/SpectralEditMulti.ny plug-ins/SpectralEditParametricEQ.ny plug-ins/SpectralEditShelves.ny
 #, lisp-format
 msgid "~aPlease select frequencies."
 msgstr "Frekvenciák"
-
-#: plug-ins/SpectralEditMulti.ny
-#, lisp-format
-msgid ""
-"~aNotch filter parameters cannot be applied.~%~\n"
-"                      Try increasing the low frequency bound~%~\n"
-"                      or reduce the filter 'Width'."
-msgstr ""
 
 #: plug-ins/SpectralEditMulti.ny plug-ins/SpectralEditParametricEQ.ny plug-ins/SpectralEditShelves.ny plug-ins/nyquist-plug-in-installer.ny
 #, lisp-format
@@ -16288,21 +15704,8 @@ msgstr "Nö&velés (dB):"
 
 #: plug-ins/SpectralEditParametricEQ.ny
 #, lisp-format
-msgid "~aHigh frequency is undefined."
-msgstr ""
-
-#: plug-ins/SpectralEditParametricEQ.ny
-#, lisp-format
 msgid "~aCenter frequency must be above 0 Hz."
 msgstr "A legkisebb frekvenciának legalább 0 Hz-nek kell lennie"
-
-#: plug-ins/SpectralEditParametricEQ.ny plug-ins/SpectralEditShelves.ny
-#, lisp-format
-msgid ""
-"~aBandwidth is zero (the upper and lower~%~\n"
-"                         frequencies are both ~a Hz).~%~\n"
-"                         Please select a frequency range."
-msgstr ""
 
 #: plug-ins/SpectralEditShelves.ny
 msgid "Spectral edit shelves"
@@ -16362,10 +15765,6 @@ msgid "Start (or end)"
 msgstr "Kezdés"
 
 #: plug-ins/adjustable-fade.ny
-msgid "Handy Presets (override controls)"
-msgstr ""
-
-#: plug-ins/adjustable-fade.ny
 msgid "None Selected"
 msgstr "Kijelölés"
 
@@ -16376,10 +15775,6 @@ msgstr "Lineáris"
 #: plug-ins/adjustable-fade.ny
 msgid "Linear Out"
 msgstr "Lineáris"
-
-#: plug-ins/adjustable-fade.ny
-msgid "Exponential Out"
-msgstr ""
 
 #: plug-ins/adjustable-fade.ny
 msgid "Logarithmic In"
@@ -16441,10 +15836,6 @@ msgid "Clip Fix"
 msgstr "Levágás"
 
 #: plug-ins/clipfix.ny
-msgid "Benjamin Schwartz and Steve Daulton"
-msgstr ""
-
-#: plug-ins/clipfix.ny
 msgid "Threshold of Clipping (%)"
 msgstr ""
 
@@ -16502,10 +15893,6 @@ msgstr "Egyéni sáv&név használata"
 msgid "Fade direction"
 msgstr "közvetlen olvasás"
 
-#: plug-ins/crossfadetracks.ny
-msgid "Alternating In / Out"
-msgstr ""
-
 #: plug-ins/delay.ny
 msgid "Delay"
 msgstr "Késleltetés"
@@ -16521,10 +15908,6 @@ msgstr "Késleltetés"
 #: plug-ins/delay.ny
 msgid "Regular"
 msgstr "Négyszögletű"
-
-#: plug-ins/delay.ny
-msgid "Reverse Bouncing Ball"
-msgstr ""
 
 #: plug-ins/delay.ny
 msgid "Delay time (seconds)"
@@ -16549,10 +15932,6 @@ msgstr "Hatás előnézete"
 #: plug-ins/delay.ny
 msgid "Number of echoes"
 msgstr "Ismétlések száma"
-
-#: plug-ins/eq-xml-to-txt-converter.ny
-msgid "EQ XML to TXT Converter"
-msgstr ""
 
 #: plug-ins/eq-xml-to-txt-converter.ny
 msgid "Select target EQ effect"
@@ -16583,10 +15962,6 @@ msgstr "Nem sikerült megnyitni a műfajfájlt."
 #, lisp-format
 msgid "Error.~%File cannot be written:~%\"~a.txt\""
 msgstr "Hiba (esetleg a fájl nem lett kiírva): %s"
-
-#: plug-ins/equalabel.ny
-msgid "Adding equally-spaced labels to the label track..."
-msgstr ""
 
 #. i18n-hint: Refers to the controls 'Number of labels' and 'Label interval'.
 #: plug-ins/equalabel.ny
@@ -16623,15 +15998,7 @@ msgid "Label text"
 msgstr "Címkeszerkesztés"
 
 #: plug-ins/equalabel.ny
-msgid "None - Text Only"
-msgstr ""
-
-#: plug-ins/equalabel.ny
 msgid "2 (Before Label)"
-msgstr ""
-
-#: plug-ins/equalabel.ny
-msgid "1 (After Label)"
 msgstr ""
 
 #: plug-ins/equalabel.ny
@@ -16659,11 +16026,6 @@ msgstr "Terü&let mentése"
 msgid "point labels"
 msgstr "Címkék szerkesztve"
 
-#: plug-ins/equalabel.ny
-#, lisp-format
-msgid "~aRegion length = ~a seconds."
-msgstr ""
-
 #: plug-ins/highpass.ny
 msgid "High-Pass Filter"
 msgstr "Klasszikus szűrők"
@@ -16677,15 +16039,7 @@ msgid "Frequency (Hz)"
 msgstr "Frekvencia (Hz):"
 
 #: plug-ins/highpass.ny plug-ins/lowpass.ny
-msgid "6 dB"
-msgstr ""
-
-#: plug-ins/highpass.ny plug-ins/lowpass.ny
 msgid "24 dB"
-msgstr ""
-
-#: plug-ins/highpass.ny plug-ins/lowpass.ny
-msgid "48 dB"
 msgstr ""
 
 #: plug-ins/highpass.ny plug-ins/lowpass.ny plug-ins/notch.ny
@@ -16738,17 +16092,7 @@ msgid "Point after sound"
 msgstr "Joint sztereó"
 
 #: plug-ins/label-sounds.ny
-msgid "Region between sounds"
-msgstr ""
-
-#: plug-ins/label-sounds.ny
 msgid "Maximum trailing silence"
-msgstr ""
-
-#. i18n-hint: hours minutes and seconds. Do not translate "~a".
-#: plug-ins/label-sounds.ny
-#, lisp-format
-msgid "~ah ~am ~as"
 msgstr ""
 
 #. i18n-hint: '~a' will be replaced by a time duration
@@ -16756,11 +16100,6 @@ msgstr ""
 #, lisp-format
 msgid "Error.~%Selection must be less than ~a."
 msgstr "A kijelölésnek nagyobbnak kell lennie %d mintánál."
-
-#: plug-ins/label-sounds.ny
-#, lisp-format
-msgid "Labelling regions between sounds requires~%at least two sounds.~%Only one sound detected."
-msgstr ""
 
 #: plug-ins/limiter.ny
 msgid "Limiter"
@@ -16790,12 +16129,6 @@ msgstr "Következő eszköz"
 #: plug-ins/limiter.ny
 msgid "Hard Clip"
 msgstr "Kemény levágás"
-
-#: plug-ins/limiter.ny
-msgid ""
-"Input Gain (dB)\n"
-"Right channel"
-msgstr ""
 
 #: plug-ins/limiter.ny
 msgid "Limit to (dB)"
@@ -16860,14 +16193,6 @@ msgstr "Válasz-/lecsengési idő"
 #: plug-ins/noisegate.ny
 #, lisp-format
 msgid ""
-"Error.\n"
-"Selection too long.\n"
-"Maximum length is ~a."
-msgstr ""
-
-#: plug-ins/noisegate.ny
-#, lisp-format
-msgid ""
 "Peak based on first ~a seconds ~a dB~%\n"
 "Suggested Threshold Setting ~a dB."
 msgstr ""
@@ -16883,14 +16208,6 @@ msgstr "Nyquist-hatás alkalmazása…"
 #: plug-ins/notch.ny
 msgid "Steve Daulton and Bill Wharrie"
 msgstr "Beállítás ala&pértelmezettként"
-
-#: plug-ins/notch.ny
-#, lisp-format
-msgid ""
-"Error:~%~%Frequency (~a Hz) is too high for track sample rate.~%~%~\n"
-"                 Track sample rate is ~a Hz.~%~\n"
-"                 Frequency must be less than ~a Hz."
-msgstr ""
 
 #: plug-ins/nyquist-plug-in-installer.ny
 msgid "Nyquist Plug-in Installer"
@@ -16931,11 +16248,6 @@ msgstr "Nem engedélyezett"
 
 #: plug-ins/nyquist-plug-in-installer.ny
 #, lisp-format
-msgid "Success.~%Files written to:~%~s~%"
-msgstr ""
-
-#: plug-ins/nyquist-plug-in-installer.ny
-#, lisp-format
 msgid "Warning.~%Failed to copy some files:~%"
 msgstr "%s eltávolítása sikertelen"
 
@@ -16951,16 +16263,8 @@ msgstr "Válasszon egy MIDI fájlt…"
 msgid "Unsupported file type:"
 msgstr "Nem használt szűrők:"
 
-#: plug-ins/nyquist-plug-in-installer.ny
-msgid "Cannot be written to plug-ins folder:"
-msgstr ""
-
 #: plug-ins/pluck.ny
 msgid "Pluck"
-msgstr ""
-
-#: plug-ins/pluck.ny
-msgid "MIDI values for C notes: 36, 48, 60 [middle C], 72, 84, 96."
 msgstr ""
 
 #: plug-ins/pluck.ny
@@ -16972,10 +16276,6 @@ msgid "Fade-out type"
 msgstr "Fájltípus:"
 
 #: plug-ins/pluck.ny
-msgid "Gradual"
-msgstr ""
-
-#: plug-ins/pluck.ny
 msgid "Duration (60s max)"
 msgstr "Időtartam"
 
@@ -16984,20 +16284,12 @@ msgid "Rhythm Track"
 msgstr "Sáv eltávolítása"
 
 #: plug-ins/rhythmtrack.ny
-msgid "Tempo (bpm)"
-msgstr ""
-
-#: plug-ins/rhythmtrack.ny
 msgid "Beats per bar"
 msgstr "Percenkénti ütem"
 
 #: plug-ins/rhythmtrack.ny
 msgid "Swing amount"
 msgstr "Torzítás mértéke"
-
-#: plug-ins/rhythmtrack.ny
-msgid "Set 'Number of bars' to zero to enable the 'Rhythm track duration'."
-msgstr ""
 
 #: plug-ins/rhythmtrack.ny
 msgid "Number of bars"
@@ -17024,10 +16316,6 @@ msgid "Beat sound"
 msgstr "Ismétlődés"
 
 #: plug-ins/rhythmtrack.ny
-msgid "Ping (short)"
-msgstr ""
-
-#: plug-ins/rhythmtrack.ny
 msgid "Cowbell"
 msgstr ""
 
@@ -17040,17 +16328,7 @@ msgid "Noise Click"
 msgstr "Zajszint padló"
 
 #: plug-ins/rhythmtrack.ny
-msgid "Drip (long)"
-msgstr ""
-
-#: plug-ins/rhythmtrack.ny
 msgid "18 - 116"
-msgstr ""
-
-#: plug-ins/rhythmtrack.ny
-msgid ""
-"Set either 'Number of bars' or\n"
-"'Rhythm track duration' to greater than zero."
 msgstr ""
 
 #: plug-ins/rissetdrum.ny
@@ -17068,10 +16346,6 @@ msgstr "Késleltetési idő (másodperc):"
 #: plug-ins/rissetdrum.ny
 msgid "Center frequency of noise (Hz)"
 msgstr "Középfrekvencia és szélesség"
-
-#: plug-ins/rissetdrum.ny
-msgid "Amount of noise in mix (percent)"
-msgstr ""
 
 #: plug-ins/rissetdrum.ny
 msgid "Amplitude (0 - 1)"
@@ -17122,10 +16396,6 @@ msgid "All"
 msgstr "Összes"
 
 #: plug-ins/sample-data-export.ny
-msgid "Channel layout for stereo"
-msgstr ""
-
-#: plug-ins/sample-data-export.ny
 msgid "Alternate Lines"
 msgstr ""
 
@@ -17154,19 +16424,9 @@ msgstr "Jobb csatorna"
 
 #: plug-ins/sample-data-export.ny
 #, lisp-format
-msgid "Sample Rate: ~a Hz.  Sample values on ~a scale.~%~a~%~a"
-msgstr ""
-
-#: plug-ins/sample-data-export.ny
-#, lisp-format
 msgid ""
 "~a   ~a~%~aSample Rate: ~a Hz. Sample values on ~a scale.~%~\n"
 "                     Length processed: ~a samples ~a seconds.~a"
-msgstr ""
-
-#: plug-ins/sample-data-export.ny
-#, lisp-format
-msgid "~a linear, ~a dB."
 msgstr ""
 
 #: plug-ins/sample-data-export.ny
@@ -17179,20 +16439,10 @@ msgstr "minta"
 msgid "~a seconds."
 msgstr "másodperc"
 
-#: plug-ins/sample-data-export.ny
-#, lisp-format
-msgid "<b>Sample Rate:</b> &nbsp;&nbsp;~a Hz."
-msgstr ""
-
 #. i18n-hint: RMS abbreviates root-mean-square, a method of averaging a signal; there also "weighted" versions of it but this isn't that
 #: plug-ins/sample-data-export.ny
 #, lisp-format
 msgid "<b>RMS</b> (unweighted): &nbsp;&nbsp;~a dB."
-msgstr ""
-
-#: plug-ins/sample-data-export.ny
-#, lisp-format
-msgid "~a linear, &nbsp;&nbsp;~a dB."
 msgstr ""
 
 #: plug-ins/sample-data-export.ny
@@ -17241,16 +16491,7 @@ msgstr "1 csatorna (monó)"
 
 #: plug-ins/sample-data-export.ny
 #, lisp-format
-msgid "One row per channel.~%"
-msgstr ""
-
-#: plug-ins/sample-data-export.ny
-#, lisp-format
 msgid "Left and right channels on alternate lines.~%"
-msgstr ""
-
-#: plug-ins/sample-data-export.ny
-msgid "Unspecified channel order"
 msgstr ""
 
 #: plug-ins/sample-data-import.ny
@@ -17273,14 +16514,6 @@ msgstr "Hiba"
 #, lisp-format
 msgid ""
 "Error~%~\n"
-"                        '~a' could not be opened.~%~\n"
-"                        Check that file exists."
-msgstr ""
-
-#: plug-ins/sample-data-import.ny
-#, lisp-format
-msgid ""
-"Error~%~\n"
 "              Data must be numbers in plain ASCII text.~%~\n"
 "              '~a' is not a numeric value."
 msgstr ""
@@ -17293,10 +16526,6 @@ msgstr "Nem sikerült megnyitni a műfajfájlt."
 #: plug-ins/spectral-delete.ny
 msgid "Spectral Delete"
 msgstr "Spektrális kijelölés"
-
-#: plug-ins/tremolo.ny
-msgid "Tremolo"
-msgstr ""
 
 #: plug-ins/tremolo.ny
 msgid "Applying Tremolo..."
@@ -17363,18 +16592,8 @@ msgid "Strength"
 msgstr "Szűrőhossz"
 
 #: plug-ins/vocalrediso.ny
-msgid "High Cut for Vocals (Hz)"
-msgstr ""
-
-#: plug-ins/vocalrediso.ny
 #, lisp-format
 msgid "Pan position: ~a~%The left and right channels are correlated by about ~a %. This means:~%~a~%"
-msgstr ""
-
-#: plug-ins/vocalrediso.ny
-msgid ""
-" - The two Channels are strongly related, i.e. nearly mono or extremely panned.\n"
-"                Most likely, the center extraction will be poor."
 msgstr ""
 
 #: plug-ins/vocalrediso.ny
@@ -17384,23 +16603,12 @@ msgid ""
 msgstr ""
 
 #: plug-ins/vocalrediso.ny
-msgid ""
-" - Although the Track is stereo, the field is obviously extra wide.\n"
-"                This can cause strange effects.\n"
-"                Especially when played by only one speaker."
-msgstr ""
-
-#: plug-ins/vocalrediso.ny
 msgid "This plug-in works only with stereo tracks."
 msgstr ""
 
 #: plug-ins/vocoder.ny
 msgid "Processing Vocoder..."
 msgstr "Feldolgozás kész."
-
-#: plug-ins/vocoder.ny
-msgid "Distance: (1 to 120, default = 20)"
-msgstr ""
 
 #: plug-ins/vocoder.ny
 msgid "Output choice"

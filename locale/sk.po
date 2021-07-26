@@ -100,12 +100,6 @@ msgstr "%s bajtov"
 msgid "%s KB"
 msgstr "%s kB"
 
-#. i18n-hint: Abbreviation for Giga bytes
-#: libraries/lib-strings/Internat.cpp
-#, c-format
-msgid "%s GB"
-msgstr ""
-
 #: libraries/lib-strings/Languages.cpp
 msgid "Simplified"
 msgstr "Zjednodušený"
@@ -747,12 +741,6 @@ msgstr "Špeciálne poďakovanie:"
 msgid "%s website: "
 msgstr "%s webstránka: "
 
-#. i18n-hint The registered trademark symbol (r) is substituted at %s
-#: src/AboutDialog.cpp
-#, c-format
-msgid "The Audacity%s trademark is used within this software for descriptive and informational purposes only."
-msgstr ""
-
 #: src/AdornedRulerPanel.cpp
 msgid "Timeline actions disabled during recording"
 msgstr "Počas nahrávania sú zakázané akcie časovej osi"
@@ -999,14 +987,6 @@ msgstr "Audacity je už spustené"
 #: src/AudacityApp.cpp
 msgid "Audacity Startup Failure"
 msgstr "Zlyhanie pri spustení Audacity"
-
-#: src/AudacityApp.cpp
-msgid ""
-"Unable to acquire lock semaphore.\n"
-"\n"
-"This is likely due to a resource shortage\n"
-"and a reboot may be required."
-msgstr ""
 
 #: src/AudacityApp.cpp
 msgid ""
@@ -2160,11 +2140,6 @@ msgstr "Obdĺžnikový"
 
 #. i18n-hint a proper name
 #: src/FFT.cpp
-msgid "Hamming"
-msgstr ""
-
-#. i18n-hint a proper name
-#: src/FFT.cpp
 msgid "Blackman"
 msgstr ""
 
@@ -2490,12 +2465,6 @@ msgstr "Vybraných príliš veľká dĺžka audia. Bude analyzovaných len prvý
 #: src/FreqWindow.cpp
 msgid "Not enough data selected."
 msgstr "Nie je vybraných dostatok údajov."
-
-#. i18n-hint: The %d's are replaced by numbers, the %s by musical notes, e.g. A#
-#: src/FreqWindow.cpp
-#, c-format
-msgid "%d Hz (%s) = %d dB"
-msgstr ""
 
 #. i18n-hint: The %d's are replaced by numbers, the %s by musical notes, e.g. A#
 #. * the %.4f are numbers, and 'sec' should be an abbreviation for seconds
@@ -3042,17 +3011,7 @@ msgstr "Notová stopa"
 
 #. i18n-hint: Name of a musical note in the 12-tone chromatic scale
 #: src/PitchName.cpp
-msgid "C♯"
-msgstr ""
-
-#. i18n-hint: Name of a musical note in the 12-tone chromatic scale
-#: src/PitchName.cpp
 msgid "D♯"
-msgstr ""
-
-#. i18n-hint: Name of a musical note in the 12-tone chromatic scale
-#: src/PitchName.cpp
-msgid "F"
 msgstr ""
 
 #. i18n-hint: Name of a musical note in the 12-tone chromatic scale
@@ -3062,17 +3021,7 @@ msgstr ""
 
 #. i18n-hint: Name of a musical note in the 12-tone chromatic scale
 #: src/PitchName.cpp
-msgid "A"
-msgstr ""
-
-#. i18n-hint: Name of a musical note in the 12-tone chromatic scale
-#: src/PitchName.cpp
 msgid "B"
-msgstr ""
-
-#. i18n-hint: Name of a musical note in the 12-tone chromatic scale
-#: src/PitchName.cpp
-msgid "E♭"
 msgstr ""
 
 #. i18n-hint: Name of a musical note in the 12-tone chromatic scale
@@ -3082,17 +3031,7 @@ msgstr ""
 
 #. i18n-hint: Two, alternate names of a musical note in the 12-tone chromatic scale
 #: src/PitchName.cpp
-msgid "C♯/D♭"
-msgstr ""
-
-#. i18n-hint: Two, alternate names of a musical note in the 12-tone chromatic scale
-#: src/PitchName.cpp
 msgid "F♯/G♭"
-msgstr ""
-
-#. i18n-hint: Two, alternate names of a musical note in the 12-tone chromatic scale
-#: src/PitchName.cpp
-msgid "A♯/B♭"
 msgstr ""
 
 #: src/PluginManager.cpp
@@ -3558,13 +3497,6 @@ msgid ""
 "%s"
 msgstr "Nemožno čítať súbor predvolieb."
 
-#. i18n-hint: An error message.
-#: src/ProjectFileIO.cpp
-msgid ""
-"Project is in a read only directory\n"
-"(Unable to create the required temporary files)"
-msgstr ""
-
 #: src/ProjectFileIO.cpp
 msgid "This is not an Audacity project file"
 msgstr "Ukladanie projektu Audacity"
@@ -3576,21 +3508,7 @@ msgstr "Nemožno inicializovať MP3 tok"
 #. i18n-hint: An error message.  Don't translate blockfiles.
 #: src/ProjectFileIO.cpp
 msgid ""
-"Project is read only\n"
-"(Unable to work with the blockfiles)"
-msgstr ""
-
-#. i18n-hint: An error message.  Don't translate blockfiles.
-#: src/ProjectFileIO.cpp
-msgid ""
 "Project is busy\n"
-"(Unable to work with the blockfiles)"
-msgstr ""
-
-#. i18n-hint: An error message.  Don't translate blockfiles.
-#: src/ProjectFileIO.cpp
-msgid ""
-"Some permissions issue\n"
 "(Unable to work with the blockfiles)"
 msgstr ""
 
@@ -3618,10 +3536,6 @@ msgstr "Nemožno nastaviť tok na pozastavený stav."
 #: src/ProjectFileIO.cpp
 msgid "Failed to bind SQL parameter"
 msgstr "Nepodarilo sa nájsť kodek"
-
-#: src/ProjectFileIO.cpp
-msgid "Destination project could not be detached"
-msgstr ""
 
 #: src/ProjectFileIO.cpp
 msgid "Copying Project"
@@ -3691,15 +3605,6 @@ msgid "Error Saving Project"
 msgstr "Chyba uloženia projektu"
 
 #: src/ProjectFileIO.cpp
-#, c-format
-msgid ""
-"The project failed to open, possibly due to limited space\n"
-"on the storage device.\n"
-"\n"
-"%s"
-msgstr ""
-
-#: src/ProjectFileIO.cpp
 msgid "Backing up project"
 msgstr "Uložení &prázdneho projektu"
 
@@ -3743,10 +3648,6 @@ msgstr "Upozornenie - prázdny projekt"
 #: src/ProjectFileManager.cpp
 msgid "Insufficient Disk Space"
 msgstr "Miesto na disku"
-
-#: src/ProjectFileManager.cpp
-msgid "The project exceeds the maximum size of 4GB when writing to a FAT32 formatted filesystem."
-msgstr ""
 
 #: src/ProjectFileManager.cpp src/commands/ScreenshotCommand.cpp
 #, c-format
@@ -4037,11 +3938,6 @@ msgstr "Vysoká kvalita"
 #: src/Resample.cpp
 msgid "Best Quality (Slowest)"
 msgstr "Najlepšia kvalita (najpomalšie)"
-
-#. i18n-hint: Audio data bit depth (precision): 24-bit integers
-#: src/SampleFormat.cpp
-msgid "24-bit PCM"
-msgstr ""
 
 #. i18n-hint: Audio data bit depth (precision): 32-bit floating point
 #: src/SampleFormat.cpp src/prefs/QualitySettings.cpp
@@ -4432,14 +4328,6 @@ msgstr "Chyba ukladania súboru príznakov"
 #: src/TempDirectory.cpp
 msgid "Unsuitable"
 msgstr "Modul je nevhodný"
-
-#: src/TempDirectory.cpp
-#, c-format
-msgid ""
-"%s\n"
-"\n"
-"For tips on suitable drives, click the help button."
-msgstr ""
 
 #: src/Theme.cpp
 #, c-format
@@ -5240,11 +5128,6 @@ msgstr "Nápisy"
 msgid "Boxes"
 msgstr "Schránky"
 
-#. i18n-hint name of a computer programming language
-#: src/commands/GetInfoCommand.cpp src/commands/HelpCommand.cpp
-msgid "LISP"
-msgstr ""
-
 #: src/commands/GetInfoCommand.cpp src/commands/HelpCommand.cpp
 msgid "Brief"
 msgstr "Krátky"
@@ -5284,10 +5167,6 @@ msgstr "Príkaz:"
 #: src/commands/HelpCommand.h
 msgid "Gives help on a command."
 msgstr "Ponúkne pomoc pri príkaze."
-
-#: src/commands/ImportExportCommands.cpp
-msgid "Import2"
-msgstr ""
 
 #: src/commands/ImportExportCommands.cpp src/commands/OpenSaveCommands.cpp
 msgid "File Name:"
@@ -5360,10 +5239,6 @@ msgstr "Uloží projekt."
 #: src/commands/OpenSaveCommands.h
 msgid "Saves a copy of current project."
 msgstr "Uloží projekt."
-
-#: src/commands/OpenSaveCommands.h
-msgid "Clears the log contents."
-msgstr ""
 
 #: src/commands/PreferenceCommands.cpp
 msgid "Get Preference"
@@ -5685,10 +5560,6 @@ msgstr "Intenzita:"
 #: src/commands/SetProjectCommand.cpp
 msgid "Resize:"
 msgstr "Zmeniť veľkosť:"
-
-#: src/commands/SetProjectCommand.cpp
-msgid "Y:"
-msgstr ""
 
 #: src/commands/SetProjectCommand.cpp
 msgid "Width:"
@@ -6025,10 +5896,6 @@ msgstr "Percentuálna zmena"
 msgid "&Use high quality stretching (slow)"
 msgstr "Použiť &napínanie vysokej kvality (pomalé)"
 
-#: src/effects/ChangeSpeed.cpp
-msgid "45"
-msgstr ""
-
 #. i18n-hint: n/a is an English abbreviation meaning "not applicable".
 #. i18n-hint: Can mean "not available," "not applicable," "no answer"
 #: src/effects/ChangeSpeed.cpp src/effects/audiounits/AudioUnitEffect.cpp src/effects/ladspa/LadspaEffect.cpp src/effects/lv2/LV2Effect.cpp src/effects/nyquist/Nyquist.cpp
@@ -6223,13 +6090,6 @@ msgstr "%.2f sekúnd"
 msgid "%.1f secs"
 msgstr "%.1f sekúnd"
 
-#. i18n-hint: Unless your language has a different convention for ratios,
-#. * like 8:1, leave as is.
-#: src/effects/Compressor.cpp
-#, c-format
-msgid "%.1f:1"
-msgstr ""
-
 #: src/effects/Compressor.cpp
 #, c-format
 msgid "Ratio %.0f to 1"
@@ -6404,12 +6264,6 @@ msgstr "&Rozdiel:"
 #: src/effects/Contrast.cpp src/menus/HelpMenus.cpp src/prefs/GUIPrefs.cpp
 msgid "&Help"
 msgstr "Nápove&da"
-
-#. i18n-hint: dB abbreviates decibels
-#: src/effects/Contrast.cpp
-#, c-format
-msgid "%s dB"
-msgstr ""
 
 #: src/effects/Contrast.cpp
 msgid "zero"
@@ -6679,10 +6533,6 @@ msgid "Upper Threshold"
 msgstr "Horný prah"
 
 #: src/effects/Distortion.cpp
-msgid "Parameter 2"
-msgstr ""
-
-#: src/effects/Distortion.cpp
 msgid "Number of repeats"
 msgstr "Počet opakovaní"
 
@@ -6833,10 +6683,6 @@ msgstr "Trvanie tónu:"
 #: src/effects/DtmfGen.cpp
 msgid "Silence duration:"
 msgstr "Trvanie ticha:"
-
-#: src/effects/Echo.cpp
-msgid "Echo"
-msgstr ""
 
 #: src/effects/Echo.cpp
 msgid "Repeats the selected audio again and again"
@@ -7107,10 +6953,6 @@ msgstr "Odstrániť predvoľby"
 msgid "Defaults"
 msgstr "Predvolené"
 
-#: src/effects/EffectUI.cpp src/menus/PluginMenus.cpp
-msgid "Export..."
-msgstr ""
-
 #: src/effects/EffectUI.cpp src/widgets/Meter.cpp
 msgid "Options..."
 msgstr "Možnosti..."
@@ -7267,16 +7109,7 @@ msgid "Effect Unavailable"
 msgstr "Efekt nedostupný"
 
 #: src/effects/Equalization.cpp src/effects/ScienFilter.cpp
-msgid "Max dB"
-msgstr ""
-
-#: src/effects/Equalization.cpp src/effects/ScienFilter.cpp
 msgid "Min dB"
-msgstr ""
-
-#: src/effects/Equalization.cpp
-#, c-format
-msgid "%d Hz"
 msgstr ""
 
 #. i18n-hint k is SI abbreviation for x1,000.  Usually unchanged in translation.
@@ -7647,10 +7480,6 @@ msgid "Loudness LUFS"
 msgstr "Hlasitosť LUFS"
 
 #: src/effects/Loudness.cpp
-msgid "RMS dB"
-msgstr ""
-
-#: src/effects/Loudness.cpp
 msgid "Normalize &stereo channels independently"
 msgstr "Nezávisle normalizovať &stereo kanály"
 
@@ -7868,15 +7697,7 @@ msgid "Window si&ze:"
 msgstr "Veľ&kosť okna:"
 
 #: src/effects/NoiseReduction.cpp src/prefs/SpectrumPrefs.cpp
-msgid "16"
-msgstr ""
-
-#: src/effects/NoiseReduction.cpp src/prefs/SpectrumPrefs.cpp
 msgid "64"
-msgstr ""
-
-#: src/effects/NoiseReduction.cpp src/prefs/SpectrumPrefs.cpp
-msgid "256"
 msgstr ""
 
 #: src/effects/NoiseReduction.cpp
@@ -7886,10 +7707,6 @@ msgstr ""
 #: src/effects/NoiseReduction.cpp
 msgid "2048 (default)"
 msgstr "2048 (predvolené)"
-
-#: src/effects/NoiseReduction.cpp src/prefs/SpectrumPrefs.cpp
-msgid "8192"
-msgstr ""
 
 #: src/effects/NoiseReduction.cpp
 msgid "S&teps per window:"
@@ -9259,12 +9076,6 @@ msgstr "Prepáčte, nepodarilo sa inicializovať rozšírenie Vamp."
 msgid "Plugin Settings"
 msgstr "Nastavenia rozšírení"
 
-#. i18n-hint: Vamp is the proper name of a software protocol for sound analysis.
-#. It is not an abbreviation for anything.  See http://vamp-plugins.org
-#: src/effects/vamp/VampEffect.h
-msgid "Vamp"
-msgstr ""
-
 #: src/export/Export.cpp
 msgid "No format specific options"
 msgstr "Žiadne špecifické možnosti formátu"
@@ -9610,15 +9421,7 @@ msgid "%.2f kbps"
 msgstr "%.2f kbit/s"
 
 #: src/export/ExportFFmpegDialogs.cpp src/export/ExportFLAC.cpp
-msgid "1"
-msgstr ""
-
-#: src/export/ExportFFmpegDialogs.cpp src/export/ExportFLAC.cpp
 msgid "4"
-msgstr ""
-
-#: src/export/ExportFFmpegDialogs.cpp src/export/ExportFLAC.cpp
-msgid "6"
 msgstr ""
 
 #: src/export/ExportFFmpegDialogs.cpp
@@ -9634,20 +9437,12 @@ msgid "Constrained"
 msgstr "Vynútené"
 
 #: src/export/ExportFFmpegDialogs.cpp
-msgid "Audio"
-msgstr ""
-
-#: src/export/ExportFFmpegDialogs.cpp
 msgid "Low Delay"
 msgstr "Nízke oneskorenie"
 
 #: src/export/ExportFFmpegDialogs.cpp
 msgid "2.5 ms"
 msgstr "2,5 ms"
-
-#: src/export/ExportFFmpegDialogs.cpp
-msgid "10 ms"
-msgstr ""
 
 #: src/export/ExportFFmpegDialogs.cpp
 msgid "40 ms"
@@ -10160,10 +9955,6 @@ msgid "Failed to find the codec"
 msgstr "Nepodarilo sa nájsť kodek"
 
 #: src/export/ExportFLAC.cpp
-msgid "24 bit"
-msgstr ""
-
-#: src/export/ExportFLAC.cpp
 msgid "0 (fastest)"
 msgstr "0 (najrýchlejšie)"
 
@@ -10672,10 +10463,6 @@ msgstr "Exportovanie vybraného audia ako Ogg Vorbis"
 msgid "Exporting the audio as Ogg Vorbis"
 msgstr "Exportovanie audia ako Ogg Vorbis"
 
-#: src/export/ExportPCM.cpp src/import/ImportPCM.cpp
-msgid "WAV (Microsoft)"
-msgstr ""
-
 #: src/export/ExportPCM.cpp
 msgid "Header:"
 msgstr "Hlavička:"
@@ -10947,11 +10734,6 @@ msgstr ""
 "Audacity nerozpoznal typ súboru '%s'.\n"
 "Skúste nainštalovať FFmpeg. Pre nekomprimované súbory, taktiež skúste Súbor/Importovať/Surové údaje."
 
-#: src/import/Import.cpp src/menus/ClipMenus.cpp
-#, c-format
-msgid "%s, %s"
-msgstr ""
-
 #. i18n-hint: %s will be the filename
 #: src/import/Import.cpp
 #, c-format
@@ -10990,16 +10772,8 @@ msgid "Internal error in importer...tag not recognized"
 msgstr "Interná chyba oznámená procesom zarovnávania."
 
 #: src/import/ImportAUP.cpp
-msgid "Invalid project 'vpos' attribute."
-msgstr ""
-
-#: src/import/ImportAUP.cpp
 msgid "Invalid project 'h' attribute."
 msgstr "Chybná rýchlosť."
-
-#: src/import/ImportAUP.cpp
-msgid "Invalid project 'sel0' attribute."
-msgstr ""
 
 #: src/import/ImportAUP.cpp
 msgid "Invalid project 'selLow' attribute."
@@ -11023,19 +10797,7 @@ msgid "Invalid sequence 'numsamples' attribute."
 msgstr "Neplatná vzorkovacia frekvencia"
 
 #: src/import/ImportAUP.cpp
-#, c-format
-msgid ""
-"Missing project file %s\n"
-"\n"
-"Inserting silence instead."
-msgstr ""
-
-#: src/import/ImportAUP.cpp
 msgid "Missing or invalid silentblockfile 'len' attribute."
-msgstr ""
-
-#: src/import/ImportAUP.cpp
-msgid "Missing or invalid pcmaliasblockfile 'aliasstart' attribute."
 msgstr ""
 
 #: src/import/ImportAUP.cpp
@@ -11198,17 +10960,9 @@ msgstr "Interná logická chyba"
 msgid "WAV, AIFF, and other uncompressed types"
 msgstr "WAV, AIFF a ďalšie nekomprimované typy"
 
-#: src/import/ImportPCM.cpp
-msgid "AVR (Audio Visual Research)"
-msgstr ""
-
 #. i18n-hint: "codec" is short for a "coder-decoder" algorithm
 #: src/import/ImportPCM.cpp
 msgid "FLAC (FLAC Lossless Audio Codec)"
-msgstr ""
-
-#: src/import/ImportPCM.cpp
-msgid "IFF (Amiga IFF/SVX8/SV16)"
 msgstr ""
 
 #: src/import/ImportPCM.cpp
@@ -11216,15 +10970,7 @@ msgid "MAT5 (GNU Octave 2.1 / Matlab 5.0)"
 msgstr ""
 
 #: src/import/ImportPCM.cpp
-msgid "OGG (OGG Container format)"
-msgstr ""
-
-#: src/import/ImportPCM.cpp
 msgid "PVF (Portable Voice Format)"
-msgstr ""
-
-#: src/import/ImportPCM.cpp
-msgid "RF64 (RIFF 64)"
 msgstr ""
 
 #: src/import/ImportPCM.cpp
@@ -11232,15 +10978,7 @@ msgid "SDS (Midi Sample Dump Standard)"
 msgstr ""
 
 #: src/import/ImportPCM.cpp
-msgid "VOC (Creative Labs)"
-msgstr ""
-
-#: src/import/ImportPCM.cpp
 msgid "WAV (NIST Sphere)"
-msgstr ""
-
-#: src/import/ImportPCM.cpp
-msgid "WVE (Psion Series 3)"
 msgstr ""
 
 #: src/import/ImportPCM.cpp
@@ -11272,15 +11010,7 @@ msgid "64 bit float"
 msgstr "64 bitové na pohyblivej čiarke"
 
 #: src/import/ImportPCM.cpp
-msgid "A-Law"
-msgstr ""
-
-#: src/import/ImportPCM.cpp
 msgid "Microsoft ADPCM"
-msgstr ""
-
-#: src/import/ImportPCM.cpp
-msgid "32kbs G721 ADPCM"
 msgstr ""
 
 #: src/import/ImportPCM.cpp
@@ -11288,15 +11018,7 @@ msgid "12 bit DWVW"
 msgstr ""
 
 #: src/import/ImportPCM.cpp
-msgid "24 bit DWVW"
-msgstr ""
-
-#: src/import/ImportPCM.cpp
 msgid "16 bit DPCM"
-msgstr ""
-
-#: src/import/ImportPCM.cpp
-msgid "Vorbis"
 msgstr ""
 
 #: src/import/ImportPlugin.cpp src/import/ImportRaw.cpp
@@ -13666,10 +13388,6 @@ msgstr "Žiadne audio rozhrania"
 msgid "No devices found"
 msgstr "Žiadne zariadenia neboli nájdené"
 
-#: src/prefs/DevicePrefs.cpp
-msgid "2 (Stereo)"
-msgstr ""
-
 #. i18n-hint:  Directories, also called directories, in computer file systems
 #: src/prefs/DirectoriesPrefs.cpp src/prefs/DirectoriesPrefs.h src/widgets/UnwritableLocationErrorDialog.cpp
 msgid "Directories"
@@ -13682,10 +13400,6 @@ msgstr "Predvoľby pre priečinky"
 #: src/prefs/DirectoriesPrefs.cpp
 msgid "Default directories"
 msgstr "Priečinky"
-
-#: src/prefs/DirectoriesPrefs.cpp
-msgid "O&pen:"
-msgstr ""
 
 #: src/prefs/DirectoriesPrefs.cpp
 msgid "&Browse..."
@@ -13797,12 +13511,6 @@ msgstr "Zoskupené podľa vydavateľa"
 #: src/prefs/EffectsPrefs.cpp
 msgid "Grouped by Type"
 msgstr "Zoskupené podľa typu"
-
-#. i18n-hint: abbreviates
-#. "Linux Audio Developer's Simple Plugin API (LADSPA) version 2"
-#: src/prefs/EffectsPrefs.cpp
-msgid "LV&2"
-msgstr ""
 
 #. i18n-hint: Vamp is the proper name of a software protocol for sound analysis.
 #. It is not an abbreviation for anything.  See http://vamp-plugins.org
@@ -14728,10 +14436,6 @@ msgstr "Prevo&dník vzorkovacej frekvencie:"
 msgid "Dit&her:"
 msgstr "Chv&enie:"
 
-#: src/prefs/QualitySettings.cpp
-msgid "24-bit"
-msgstr ""
-
 #: src/prefs/RecordingPrefs.cpp
 msgid "Preferences for Recording"
 msgstr "Predvoľby nahrávania"
@@ -14839,11 +14543,6 @@ msgstr "Pred pre&točenie:"
 #: src/prefs/RecordingPrefs.cpp
 msgid "Cross&fade:"
 msgstr "Krížové &zoslabenie:"
-
-#. i18n-hint: The name of a frequency scale in psychoacoustics, named for Heinrich Barkhausen
-#: src/prefs/SpectrogramSettings.cpp
-msgid "Bark"
-msgstr ""
 
 #. i18n-hint: Time units, that is Period = 1 / Frequency
 #: src/prefs/SpectrogramSettings.cpp
@@ -16076,23 +15775,11 @@ msgid "Rat&e"
 msgstr "&Frekvencia"
 
 #: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
-msgid "11025 Hz"
-msgstr ""
-
-#: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
 msgid "22050 Hz"
 msgstr ""
 
 #: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
-msgid "48000 Hz"
-msgstr ""
-
-#: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
 msgid "96000 Hz"
-msgstr ""
-
-#: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
-msgid "192000 Hz"
 msgstr ""
 
 #: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
@@ -16184,11 +15871,6 @@ msgstr "Rozdeliť stereo na mono '%s'"
 #: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
 msgid "Split to Mono"
 msgstr "Rozdeliť na mono"
-
-#: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
-#, c-format
-msgid "Mono, %dHz"
-msgstr ""
 
 #: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
 #, c-format
@@ -16748,15 +16430,6 @@ msgstr "Vyberte, prosím, akciu"
 msgid "01000,01000 seconds"
 msgstr "01000,01000 sekúnd"
 
-#. i18n-hint: Format string for displaying time in hours, minutes and
-#. * seconds. Change the 'h' to the abbreviation for hours, 'm' to the
-#. * abbreviation for minutes and 's' to the abbreviation for seconds. Don't
-#. * change the numbers unless there aren't 60 seconds in a minute in your
-#. * locale
-#: src/widgets/NumericTextCtrl.cpp
-msgid "0100 h 060 m 060 s"
-msgstr ""
-
 #. i18n-hint: Format string for displaying time in days, hours, minutes and
 #. * seconds. Change the 'days' to the word for days, 'h' to the abbreviation
 #. * for hours, 'm' to the abbreviation for minutes and 's' to the
@@ -16958,11 +16631,6 @@ msgstr "01000,01000 snímky|75"
 #: src/widgets/NumericTextCtrl.cpp
 msgid "010,01000>0100 Hz"
 msgstr "0100000>0100 Hz"
-
-#. i18n-hint: Name of display format that shows frequency in kilohertz
-#: src/widgets/NumericTextCtrl.cpp
-msgid "kHz"
-msgstr ""
 
 #: src/widgets/NumericTextCtrl.cpp
 msgid "hertz"
@@ -17749,10 +17417,6 @@ msgid "Roll-off (dB per octave)"
 msgstr "Rolovať (dB za oktávu)"
 
 #: plug-ins/highpass.ny plug-ins/lowpass.ny
-msgid "12 dB"
-msgstr ""
-
-#: plug-ins/highpass.ny plug-ins/lowpass.ny
 msgid "36 dB"
 msgstr ""
 
@@ -17827,10 +17491,6 @@ msgstr "~aDĺžka oblasti = ~a sekúnd."
 #: plug-ins/label-sounds.ny
 msgid "Maximum leading silence"
 msgstr "Vyhľadávanie ticha..."
-
-#: plug-ins/label-sounds.ny
-msgid "Sound ##1"
-msgstr ""
 
 #: plug-ins/label-sounds.ny
 #, lisp-format

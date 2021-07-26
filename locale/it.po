@@ -100,12 +100,6 @@ msgstr "%s byte"
 msgid "%s KB"
 msgstr "%s kB"
 
-#. i18n-hint: Abbreviation for Giga bytes
-#: libraries/lib-strings/Internat.cpp
-#, c-format
-msgid "%s GB"
-msgstr ""
-
 #: libraries/lib-strings/Languages.cpp
 msgid "Simplified"
 msgstr "Semplificato"
@@ -742,12 +736,6 @@ msgstr "Ringraziamenti particolari:"
 #, c-format
 msgid "%s website: "
 msgstr "Sito web di %s: "
-
-#. i18n-hint The registered trademark symbol (r) is substituted at %s
-#: src/AboutDialog.cpp
-#, c-format
-msgid "The Audacity%s trademark is used within this software for descriptive and informational purposes only."
-msgstr ""
 
 #: src/AdornedRulerPanel.cpp
 msgid "Timeline actions disabled during recording"
@@ -2221,17 +2209,7 @@ msgstr "Rettangolare"
 
 #. i18n-hint a proper name
 #: src/FFT.cpp
-msgid "Hamming"
-msgstr ""
-
-#. i18n-hint a proper name
-#: src/FFT.cpp
 msgid "Blackman"
-msgstr ""
-
-#. i18n-hint a proper name
-#: src/FFT.cpp
-msgid "Welch"
 msgstr ""
 
 #. i18n-hint a mathematical function named for C. F. Gauss
@@ -2491,13 +2469,6 @@ msgstr "Frequenza logaritmica"
 msgid "Scroll"
 msgstr "Scorri"
 
-#. i18n-hint: This is the abbreviation for "Hertz", or
-#. cycles per second.
-#. i18n-hint: Name of display format that shows frequency in hertz
-#: src/FreqWindow.cpp src/effects/ChangePitch.cpp src/effects/Equalization.cpp src/effects/ScienFilter.cpp src/import/ImportRaw.cpp src/widgets/NumericTextCtrl.cpp
-msgid "Hz"
-msgstr ""
-
 #: src/FreqWindow.cpp
 #, fuzzy
 msgid "Scroll Horizontal"
@@ -2556,12 +2527,6 @@ msgstr "È stato selezionato troppo audio. Saranno analizzati solo i primi %.1f 
 #: src/FreqWindow.cpp
 msgid "Not enough data selected."
 msgstr "I dati selezionati non sono sufficienti."
-
-#. i18n-hint: The %d's are replaced by numbers, the %s by musical notes, e.g. A#
-#: src/FreqWindow.cpp
-#, c-format
-msgid "%d Hz (%s) = %d dB"
-msgstr ""
 
 #. i18n-hint: The %d's are replaced by numbers, the %s by musical notes, e.g. A#
 #. * the %.4f are numbers, and 'sec' should be an abbreviation for seconds
@@ -4345,11 +4310,6 @@ msgstr "Qualità alta"
 msgid "Best Quality (Slowest)"
 msgstr "Qualità migliore (la più lenta)"
 
-#. i18n-hint: Audio data bit depth (precision): 24-bit integers
-#: src/SampleFormat.cpp
-msgid "24-bit PCM"
-msgstr ""
-
 #. i18n-hint: Audio data bit depth (precision): 32-bit floating point
 #: src/SampleFormat.cpp src/prefs/QualitySettings.cpp
 msgid "32-bit float"
@@ -5551,11 +5511,6 @@ msgstr "Etichette"
 msgid "Boxes"
 msgstr "Riquadri"
 
-#. i18n-hint name of a computer programming language
-#: src/commands/GetInfoCommand.cpp src/commands/HelpCommand.cpp
-msgid "LISP"
-msgstr ""
-
 #: src/commands/GetInfoCommand.cpp src/commands/HelpCommand.cpp
 msgid "Brief"
 msgstr "Breve"
@@ -6014,10 +5969,6 @@ msgid "Resize:"
 msgstr "Ridimensiona:"
 
 #: src/commands/SetProjectCommand.cpp
-msgid "Y:"
-msgstr ""
-
-#: src/commands/SetProjectCommand.cpp
 msgid "Width:"
 msgstr "Larghezza:"
 
@@ -6344,10 +6295,6 @@ msgstr "Percentuale di cambiamento"
 msgid "&Use high quality stretching (slow)"
 msgstr "&Usa allungamento ad alta qualità (lento)"
 
-#: src/effects/ChangeSpeed.cpp
-msgid "45"
-msgstr ""
-
 #. i18n-hint: n/a is an English abbreviation meaning "not applicable".
 #. i18n-hint: Can mean "not available," "not applicable," "no answer"
 #: src/effects/ChangeSpeed.cpp src/effects/audiounits/AudioUnitEffect.cpp src/effects/ladspa/LadspaEffect.cpp src/effects/lv2/LV2Effect.cpp src/effects/nyquist/Nyquist.cpp
@@ -6542,13 +6489,6 @@ msgstr "%.2f sec"
 msgid "%.1f secs"
 msgstr "%.1f sec"
 
-#. i18n-hint: Unless your language has a different convention for ratios,
-#. * like 8:1, leave as is.
-#: src/effects/Compressor.cpp
-#, c-format
-msgid "%.1f:1"
-msgstr ""
-
 #: src/effects/Compressor.cpp
 #, c-format
 msgid "Ratio %.0f to 1"
@@ -6719,12 +6659,6 @@ msgstr "&Differenza:"
 #: src/effects/Contrast.cpp src/menus/HelpMenus.cpp src/prefs/GUIPrefs.cpp
 msgid "&Help"
 msgstr "&Aiuto"
-
-#. i18n-hint: dB abbreviates decibels
-#: src/effects/Contrast.cpp
-#, c-format
-msgid "%s dB"
-msgstr ""
 
 #: src/effects/Contrast.cpp
 msgid "indeterminate"
@@ -7577,16 +7511,7 @@ msgid "Effect Unavailable"
 msgstr "Effetto non disponibile"
 
 #: src/effects/Equalization.cpp src/effects/ScienFilter.cpp
-msgid "Max dB"
-msgstr ""
-
-#: src/effects/Equalization.cpp src/effects/ScienFilter.cpp
 msgid "Min dB"
-msgstr ""
-
-#: src/effects/Equalization.cpp
-#, c-format
-msgid "%d Hz"
 msgstr ""
 
 #. i18n-hint k is SI abbreviation for x1,000.  Usually unchanged in translation.
@@ -7949,10 +7874,6 @@ msgid "Loudness LUFS"
 msgstr "Sonorità LUFS"
 
 #: src/effects/Loudness.cpp
-msgid "RMS dB"
-msgstr ""
-
-#: src/effects/Loudness.cpp
 msgid "Normalize &stereo channels independently"
 msgstr "Normalizza canali &stereo indipendentemente"
 
@@ -8022,10 +7943,6 @@ msgstr "Hann, Hann (predefinito)"
 #: src/effects/NoiseReduction.cpp
 msgid "Hamming, none"
 msgstr "Hamming, nessuno"
-
-#: src/effects/NoiseReduction.cpp
-msgid "Hamming, Reciprocal Hamming"
-msgstr ""
 
 #: src/effects/NoiseReduction.cpp src/menus/PluginMenus.cpp
 msgid "Noise Reduction"
@@ -8174,15 +8091,7 @@ msgid "Window si&ze:"
 msgstr "Dimen&sione finestra:"
 
 #: src/effects/NoiseReduction.cpp src/prefs/SpectrumPrefs.cpp
-msgid "16"
-msgstr ""
-
-#: src/effects/NoiseReduction.cpp src/prefs/SpectrumPrefs.cpp
 msgid "64"
-msgstr ""
-
-#: src/effects/NoiseReduction.cpp src/prefs/SpectrumPrefs.cpp
-msgid "256"
 msgstr ""
 
 #: src/effects/NoiseReduction.cpp
@@ -8192,10 +8101,6 @@ msgstr ""
 #: src/effects/NoiseReduction.cpp
 msgid "2048 (default)"
 msgstr "2048 (predefinito)"
-
-#: src/effects/NoiseReduction.cpp src/prefs/SpectrumPrefs.cpp
-msgid "8192"
-msgstr ""
 
 #: src/effects/NoiseReduction.cpp
 msgid "S&teps per window:"
@@ -9034,10 +8939,6 @@ msgstr "Non è stato possibile leggere il file delle combinazioni."
 #, c-format
 msgid "This parameter file was saved from %s. Continue?"
 msgstr "Questo file di parametri è stato salvato da %s. Procedere?"
-
-#: src/effects/Wahwah.cpp
-msgid "Wahwah"
-msgstr ""
 
 #: src/effects/Wahwah.cpp
 msgid "Rapid tone quality variations, like that guitar sound so popular in the 1970's"
@@ -9894,24 +9795,12 @@ msgstr "Bit rate:"
 msgid "Quality (kbps):"
 msgstr "Qualità (kbps):"
 
-#: src/export/ExportFFmpegDialogs.cpp
-msgid "0"
-msgstr ""
-
 #: src/export/ExportFFmpegDialogs.cpp src/export/ExportFLAC.cpp
 msgid "3"
 msgstr ""
 
 #: src/export/ExportFFmpegDialogs.cpp src/export/ExportFLAC.cpp
-msgid "5"
-msgstr ""
-
-#: src/export/ExportFFmpegDialogs.cpp src/export/ExportFLAC.cpp
 msgid "7"
-msgstr ""
-
-#: src/export/ExportFFmpegDialogs.cpp
-msgid "10"
 msgstr ""
 
 #: src/export/ExportFFmpegDialogs.cpp
@@ -9923,20 +9812,12 @@ msgid "Constrained"
 msgstr "Vincolato"
 
 #: src/export/ExportFFmpegDialogs.cpp
-msgid "Audio"
-msgstr ""
-
-#: src/export/ExportFFmpegDialogs.cpp
 msgid "Low Delay"
 msgstr "Poco ritardo"
 
 #: src/export/ExportFFmpegDialogs.cpp
 msgid "2.5 ms"
 msgstr "2,5 ms"
-
-#: src/export/ExportFFmpegDialogs.cpp
-msgid "10 ms"
-msgstr ""
 
 #: src/export/ExportFFmpegDialogs.cpp
 msgid "40 ms"
@@ -10436,10 +10317,6 @@ msgid "Failed to find the codec"
 msgstr "Non è stato possibile trovare il codec"
 
 #: src/export/ExportFLAC.cpp
-msgid "24 bit"
-msgstr ""
-
-#: src/export/ExportFLAC.cpp
 msgid "0 (fastest)"
 msgstr "0 (la più veloce)"
 
@@ -10508,15 +10385,7 @@ msgid "220-260 kbps (Best Quality)"
 msgstr "220-260 kbps (qualità migliore)"
 
 #: src/export/ExportMP3.cpp
-msgid "170-210 kbps"
-msgstr ""
-
-#: src/export/ExportMP3.cpp
 msgid "145-185 kbps"
-msgstr ""
-
-#: src/export/ExportMP3.cpp
-msgid "95-135 kbps"
 msgstr ""
 
 #: src/export/ExportMP3.cpp
@@ -10564,10 +10433,6 @@ msgstr "Media"
 #: src/export/ExportMP3.cpp
 msgid "Constant"
 msgstr "Costante"
-
-#: src/export/ExportMP3.cpp
-msgid "Stereo"
-msgstr ""
 
 #: src/export/ExportMP3.cpp
 msgid "Bit Rate Mode:"
@@ -10928,10 +10793,6 @@ msgstr "Esportazione dell'audio selezionato come Ogg Vorbis"
 #: src/export/ExportOGG.cpp
 msgid "Exporting the audio as Ogg Vorbis"
 msgstr "Esportazione dell'audio come Ogg Vorbis"
-
-#: src/export/ExportPCM.cpp src/import/ImportPCM.cpp
-msgid "WAV (Microsoft)"
-msgstr ""
 
 #: src/export/ExportPCM.cpp
 msgid "Header:"
@@ -11544,18 +11405,10 @@ msgstr "Errore logico interno"
 msgid "WAV, AIFF, and other uncompressed types"
 msgstr "WAV, AIFF, e altri tipi non compressi"
 
-#: src/import/ImportPCM.cpp
-msgid "AVR (Audio Visual Research)"
-msgstr ""
-
 #. i18n-hint: "codec" is short for a "coder-decoder" algorithm
 #: src/import/ImportPCM.cpp
 msgid "FLAC (FLAC Lossless Audio Codec)"
 msgstr "FLAC (codec audio FLAC senza perdita)"
-
-#: src/import/ImportPCM.cpp
-msgid "IFF (Amiga IFF/SVX8/SV16)"
-msgstr ""
 
 #: src/import/ImportPCM.cpp
 msgid "MAT5 (GNU Octave 2.1 / Matlab 5.0)"
@@ -11566,31 +11419,15 @@ msgid "OGG (OGG Container format)"
 msgstr "OGG (contenitore in formato OGG)"
 
 #: src/import/ImportPCM.cpp
-msgid "PVF (Portable Voice Format)"
-msgstr ""
-
-#: src/import/ImportPCM.cpp
 msgid "RAW (header-less)"
 msgstr "RAW (senza intestazione)"
-
-#: src/import/ImportPCM.cpp
-msgid "SD2 (Sound Designer II)"
-msgstr ""
 
 #: src/import/ImportPCM.cpp
 msgid "SF (Berkeley/IRCAM/CARL)"
 msgstr ""
 
 #: src/import/ImportPCM.cpp
-msgid "W64 (SoundFoundry WAVE 64)"
-msgstr ""
-
-#: src/import/ImportPCM.cpp
 msgid "WAVEX (Microsoft)"
-msgstr ""
-
-#: src/import/ImportPCM.cpp
-msgid "XI (FastTracker 2)"
 msgstr ""
 
 #: src/import/ImportPCM.cpp
@@ -11622,15 +11459,7 @@ msgid "64 bit float"
 msgstr "64 bit virgola mobile"
 
 #: src/import/ImportPCM.cpp
-msgid "A-Law"
-msgstr ""
-
-#: src/import/ImportPCM.cpp
 msgid "Microsoft ADPCM"
-msgstr ""
-
-#: src/import/ImportPCM.cpp
-msgid "32kbs G721 ADPCM"
 msgstr ""
 
 #: src/import/ImportPCM.cpp
@@ -11700,12 +11529,6 @@ msgstr "Importa dati raw"
 #: src/import/ImportRaw.cpp
 msgid "No endianness"
 msgstr "Nessun ordine dei byte"
-
-#. i18n-hint: Refers to byte-order.  Don't translate this if you don't
-#. know the correct technical word.
-#: src/import/ImportRaw.cpp
-msgid "Big-endian"
-msgstr ""
 
 #. i18n-hint: Refers to byte-order.  Don't translate "endianness" if you don't
 #. know the correct technical word.
@@ -12086,10 +11909,6 @@ msgstr "Tasto &Canc"
 #: src/menus/EditMenus.cpp
 msgid "Delete Key&2"
 msgstr "Tasto Canc&2"
-
-#: src/menus/ExtraMenus.cpp
-msgid "Mi&xer"
-msgstr ""
 
 #: src/menus/ExtraMenus.cpp
 msgid "Ad&just Playback Volume..."
@@ -14149,12 +13968,6 @@ msgstr "Raggruppati per editore"
 msgid "Grouped by Type"
 msgstr "Raggruppati per tipo"
 
-#. i18n-hint: abbreviates
-#. "Linux Audio Developer's Simple Plugin API (LADSPA) version 2"
-#: src/prefs/EffectsPrefs.cpp
-msgid "LV&2"
-msgstr ""
-
 #. i18n-hint: Vamp is the proper name of a software protocol for sound analysis.
 #. It is not an abbreviation for anything.  See http://vamp-plugins.org
 #: src/prefs/EffectsPrefs.cpp
@@ -14771,10 +14584,6 @@ msgstr "Non è stato trovato alcun modulo"
 msgid "Module"
 msgstr "Modulo"
 
-#: src/prefs/MousePrefs.cpp src/prefs/MousePrefs.h
-msgid "Mouse"
-msgstr ""
-
 #: src/prefs/MousePrefs.cpp
 msgid "Preferences for Mouse"
 msgstr "Preferenze per mouse"
@@ -15075,10 +14884,6 @@ msgstr "Conver&titore della frequenza di campionamento:"
 msgid "Dit&her:"
 msgstr "Reti&natura:"
 
-#: src/prefs/QualitySettings.cpp
-msgid "24-bit"
-msgstr ""
-
 #: src/prefs/RecordingPrefs.cpp
 msgid "Preferences for Recording"
 msgstr "Preferenze per registrazione"
@@ -15182,10 +14987,6 @@ msgstr "0 significa infinito"
 #: src/prefs/RecordingPrefs.cpp
 msgid "Punch and Roll Recording"
 msgstr "Registrazione Punch e Roll"
-
-#: src/prefs/RecordingPrefs.cpp
-msgid "Cross&fade:"
-msgstr ""
 
 #. i18n-hint: The name of a frequency scale in psychoacoustics, named for Heinrich Barkhausen
 #: src/prefs/SpectrogramSettings.cpp
@@ -16416,23 +16217,11 @@ msgid "Rat&e"
 msgstr "Fr&equenza"
 
 #: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
-msgid "11025 Hz"
-msgstr ""
-
-#: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
 msgid "22050 Hz"
 msgstr ""
 
 #: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
-msgid "48000 Hz"
-msgstr ""
-
-#: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
 msgid "96000 Hz"
-msgstr ""
-
-#: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
-msgid "192000 Hz"
 msgstr ""
 
 #: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
@@ -16527,11 +16316,6 @@ msgstr "Dividi in mono"
 
 #: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
 #, c-format
-msgid "Mono, %dHz"
-msgstr ""
-
-#: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
-#, c-format
 msgid "Left, %dHz"
 msgstr "Sinistro, %dHz"
 
@@ -16567,10 +16351,6 @@ msgstr "Riorganizza sotto-viste"
 #: src/tracks/playabletrack/wavetrack/ui/WaveTrackView.cpp
 msgid "Close sub-view"
 msgstr "Chiudi sotto-vista"
-
-#: src/tracks/playabletrack/wavetrack/ui/WaveformVZoomHandle.cpp
-msgid "Zoom x2"
-msgstr ""
 
 #: src/tracks/playabletrack/wavetrack/ui/WaveformVZoomHandle.cpp
 msgid "Half Wave"
@@ -17080,15 +16860,6 @@ msgstr "Selezionare un'azione"
 msgid "01000,01000 seconds"
 msgstr "01000,01000 secondi"
 
-#. i18n-hint: Format string for displaying time in hours, minutes and
-#. * seconds. Change the 'h' to the abbreviation for hours, 'm' to the
-#. * abbreviation for minutes and 's' to the abbreviation for seconds. Don't
-#. * change the numbers unless there aren't 60 seconds in a minute in your
-#. * locale
-#: src/widgets/NumericTextCtrl.cpp
-msgid "0100 h 060 m 060 s"
-msgstr ""
-
 #. i18n-hint: Name of time display format that shows time in days, hours,
 #. * minutes and seconds
 #: src/widgets/NumericTextCtrl.cpp
@@ -17288,10 +17059,6 @@ msgstr "Fotogrammi CDDA (75 frame/sec)"
 #: src/widgets/NumericTextCtrl.cpp
 msgid "01000,01000 frames|75"
 msgstr "01000,01000 frame|75"
-
-#: src/widgets/NumericTextCtrl.cpp
-msgid "centihertz"
-msgstr ""
 
 #. i18n-hint: Format string for displaying frequency in kilohertz. Change
 #. * the decimal point for your locale. Don't change the numbers.
@@ -18080,10 +17847,6 @@ msgstr "Frequenza (Hz)"
 #: plug-ins/highpass.ny plug-ins/lowpass.ny
 msgid "Roll-off (dB per octave)"
 msgstr "Roll-off (dB per ottava)"
-
-#: plug-ins/highpass.ny plug-ins/lowpass.ny
-msgid "12 dB"
-msgstr ""
 
 #: plug-ins/highpass.ny plug-ins/lowpass.ny
 msgid "36 dB"
