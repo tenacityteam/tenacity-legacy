@@ -90,6 +90,10 @@ jobs:
         conan install scdoc/1.11.1@anotherfoxguy/stable -g=virtualenv --build=missing
     - name: Configure
       env:
+        # Apple code signing
+        APPLE_CODESIGN_IDENTITY: ${{ secrets.APPLE_CODESIGN_IDENTITY }}
+        APPLE_NOTARIZATION_USER_NAME: ${{ secrets.APPLE_NOTARIZATION_USER_NAME }}
+        APPLE_NOTARIZATION_PASSWORD: ${{ secrets.APPLE_NOTARIZATION_PASSWORD }}
         CC: ${{ matrix.config.cc }}
         CXX: ${{ matrix.config.cxx }}
       run: |
@@ -102,3 +106,6 @@ jobs:
     - name: Install
       run: |
         exec bash "scripts/ci/install.sh"
+    - name: Perform CodeQL Analysis
+      uses: github/codeql-action/analyze@v1
+
