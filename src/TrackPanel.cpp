@@ -1291,6 +1291,13 @@ public:
          context.dc.DrawRectangle(rect);
          wxRect bevel(rect.x, rect.y, rect.width - 1, rect.height - 1);
          AColor::BevelTrackInfo(context.dc, true, bevel, false);
+         // Stroke the left border
+        context.dc.SetPen(*wxBLACK_PEN);
+        {
+           const auto left = rect.GetLeft();
+           AColor::Line( context.dc, left - 1, rect.GetTop(),
+               left - 1, rect.GetBottom() );
+        }
       }
    }
 
