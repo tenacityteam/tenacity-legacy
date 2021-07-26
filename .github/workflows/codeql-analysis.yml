@@ -60,7 +60,13 @@ jobs:
             language: 'cpp'  # CodeQL supports [ 'cpp', 'csharp', 'go', 'java', 'javascript', 'python' ]
        
     steps:
-  
+    # Setup 64-bit GCC 11
+    - name: Set up GCC
+      uses: egor-tensin/setup-gcc@v1
+      with:
+        platform: x64
+        version: 11
+
     - name: Checkout repository
       uses: actions/checkout@v2
     - name: Dependencies
@@ -91,8 +97,6 @@ jobs:
         APPLE_CODESIGN_IDENTITY: ${{ secrets.APPLE_CODESIGN_IDENTITY }}
         APPLE_NOTARIZATION_USER_NAME: ${{ secrets.APPLE_NOTARIZATION_USER_NAME }}
         APPLE_NOTARIZATION_PASSWORD: ${{ secrets.APPLE_NOTARIZATION_PASSWORD }}
-        CC: ${{ matrix.config.cc }}
-        CXX: ${{ matrix.config.cxx }}
       run: |
         exec bash "scripts/ci/configure.sh"
     # Initializes the CodeQL tools for scanning.
@@ -107,9 +111,6 @@ jobs:
     - name: Build
       run: |
         exec bash "scripts/ci/build.sh"
-    - name: Install
-      run: |
-        exec bash "scripts/ci/install.sh"
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v1
 
