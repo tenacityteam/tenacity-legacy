@@ -1184,10 +1184,6 @@ msgid "Paste: %lld\n"
 msgstr "ჩასმა\n"
 
 #: src/Benchmark.cpp
-msgid "Passed correctness check!\n"
-msgstr ""
-
-#: src/Benchmark.cpp
 msgid "Reading data again...\n"
 msgstr "აუდიოს ჩაწერა\n"
 
@@ -1622,11 +1618,6 @@ msgstr "CD-ზე ჩაწერა"
 msgid "No Local Help"
 msgstr "ლოკალური დახმარების გარეშე"
 
-#. i18n-hint: Preserve '[[help:Main_Page|' as it's the name of a link.
-#: src/HelpText.cpp
-msgid " [[help:Main_Page|Manual]] - if not installed locally, [[https://manual.audacityteam.org/|view online]]"
-msgstr ""
-
 #: src/HistoryWindow.cpp
 msgid "History"
 msgstr "&ისტორია..."
@@ -1849,11 +1840,6 @@ msgstr "GB"
 msgid "B"
 msgstr "dB"
 
-#. i18n-hint: Two, alternate names of a musical note in the 12-tone chromatic scale
-#: src/PitchName.cpp
-msgid "F♯/G♭"
-msgstr ""
-
 #: src/PluginManager.cpp
 #, c-format
 msgid "Overwrite the plug-in file %s?"
@@ -1984,25 +1970,12 @@ msgid "Close project immediately with no changes"
 msgstr "პროექტის მყისიერი დახურვა ცვლილებების გარეშე"
 
 #: src/ProjectFSCK.cpp
-#, c-format
-msgid ""
-"Project check of \"%s\" folder \n"
-"detected %lld missing alias (.auf) blockfile(s). \n"
-"Audacity can fully regenerate these files \n"
-"from the current audio in the project."
-msgstr ""
-
-#: src/ProjectFSCK.cpp
 msgid "Fill in silence for missing display data (this session only)"
 msgstr "სიჩუმის ამოვსება  ნაკლული მონაცემებისთვის [მხოლოდ ეს სესია]"
 
 #: src/ProjectFSCK.cpp
 msgid "Close project immediately with no further changes"
 msgstr "პროექტის მყისიერი დახურვა შემდგომი ცვლილებების გარეშე"
-
-#: src/ProjectFSCK.cpp
-msgid "Warning - Orphan Block File(s)"
-msgstr ""
 
 #. i18n-hint: This title appears on a dialog that indicates the progress
 #. in doing something.
@@ -2053,13 +2026,6 @@ msgstr "Audacity პროექტის შენახვა"
 #: src/ProjectFileIO.cpp
 msgid "Unable to initialize the project file"
 msgstr "შეუძლებელია  MP3  ნაკადის დაწყება"
-
-#. i18n-hint: An error message.  Don't translate blockfiles.
-#: src/ProjectFileIO.cpp
-msgid ""
-"Not authorized\n"
-"(Unable to work with the blockfiles)"
-msgstr ""
 
 #. i18n-hint: An error message.  Don't translate blockfiles.
 #: src/ProjectFileIO.cpp
@@ -2338,10 +2304,6 @@ msgid "Choose..."
 msgstr "არჩევა..."
 
 #: src/Screenshot.cpp
-msgid "Capture Window Plus"
-msgstr ""
-
-#: src/Screenshot.cpp
 msgid "All Effects"
 msgstr "ეფ&ექტი"
 
@@ -2402,10 +2364,6 @@ msgstr "ტრეკის ზოლი"
 #: src/Screenshot.cpp src/commands/GetInfoCommand.cpp src/commands/GetTrackInfoCommand.cpp src/commands/ScreenshotCommand.cpp src/export/ExportMultiple.cpp src/prefs/TracksPrefs.cpp src/prefs/TracksPrefs.h
 msgid "Tracks"
 msgstr "ტრეკები"
-
-#: src/Screenshot.cpp
-msgid "One Hour"
-msgstr ""
 
 #: src/Sequence.cpp
 msgid "Warning - Truncating Overlong Block File"
@@ -3927,11 +3885,6 @@ msgid "%.2f dB"
 msgstr "%.1f dB"
 
 #: src/effects/Contrast.cpp
-#, c-format
-msgid "Filename = %s."
-msgstr ""
-
-#: src/effects/Contrast.cpp
 msgid "Data gathered"
 msgstr ""
 
@@ -3962,10 +3915,6 @@ msgstr "გამასწორებელი"
 #: src/effects/Distortion.cpp
 msgid "Rectifier Distortion"
 msgstr "რღვევა"
-
-#: src/effects/Distortion.cpp
-msgid "Heavy Overdrive"
-msgstr ""
 
 #: src/effects/Distortion.cpp
 msgid "Leveller, Heavier, -70dB noise floor"
@@ -4393,10 +4342,6 @@ msgstr "Auto Duck დამუშავება..."
 #: src/effects/Equalization.cpp
 msgid "D&efault"
 msgstr "&ნაგულისხმევი პარამეტრები"
-
-#: src/effects/Equalization.cpp
-msgid "Error Loading EQ Curves"
-msgstr ""
 
 #: src/effects/Equalization.cpp
 msgid "Curve not found"
@@ -4959,10 +4904,6 @@ msgstr "სტეროდან მონოზე გააქტიურე�
 #: src/effects/TimeScale.cpp
 msgid "Sliding Stretch"
 msgstr "შეყოვნების ფაქტორი:"
-
-#: src/effects/TimeScale.cpp
-msgid "(s&emitones) [-12 to 12]:"
-msgstr ""
 
 #: src/effects/ToneGen.cpp src/prefs/SpectrogramSettings.cpp
 msgid "Logarithmic"
@@ -5537,15 +5478,6 @@ msgstr "FFmpeg ვერ მოიძებნა"
 msgid "FFmpeg Error"
 msgstr "FFmpeg ბიბლიოთეკა:"
 
-#. i18n-hint: "codec" is short for a "coder-decoder" algorithm
-#: src/export/ExportFFmpeg.cpp
-#, c-format
-msgid ""
-"Can't open audio codec \"%s\" (0x%x)\n"
-"\n"
-"%s"
-msgstr ""
-
 #: src/export/ExportFFmpeg.cpp
 msgid "FFmpeg : ERROR - nAudioFrameSizeOut too large."
 msgstr ""
@@ -5608,10 +5540,6 @@ msgstr "ბიტური კოეფიციენტი:"
 #: src/export/ExportFFmpegDialogs.cpp
 msgid "Quality (kbps):"
 msgstr "ხარისხი"
-
-#: src/export/ExportFFmpegDialogs.cpp src/export/ExportFLAC.cpp
-msgid "7"
-msgstr ""
 
 #: src/export/ExportFFmpegDialogs.cpp
 msgid "10"
@@ -6083,10 +6011,6 @@ msgid "220-260 kbps (Best Quality)"
 msgstr "(საუკეთესო ხარისხი)"
 
 #: src/export/ExportMP3.cpp
-msgid "65-105 kbps"
-msgstr ""
-
-#: src/export/ExportMP3.cpp
 msgid "45-85 kbps (Smaller files)"
 msgstr "(პატარა ფაილები)"
 
@@ -6536,10 +6460,6 @@ msgid "Import Project"
 msgstr "პარამეტრების იმპორტი"
 
 #: src/import/ImportAUP.cpp
-msgid "Invalid project 'sel1' attribute."
-msgstr ""
-
-#: src/import/ImportAUP.cpp
 #, c-format
 msgid "Couldn't find the project data folder: \"%s\""
 msgstr "შეუძლებელია პროექტის მონაცემთა საქაღალდის პოვნა: \"%s\""
@@ -6555,14 +6475,6 @@ msgstr "სემპლის არასწორი კოეფიციე�
 #: src/import/ImportAUP.cpp
 msgid "Invalid sequence 'numsamples' attribute."
 msgstr "სემპლის არასწორი კოეფიციენტი"
-
-#: src/import/ImportAUP.cpp
-#, c-format
-msgid ""
-"Error while processing %s\n"
-"\n"
-"Inserting silence."
-msgstr ""
 
 #: src/import/ImportAUP.cpp
 #, c-format
@@ -6690,10 +6602,6 @@ msgid "WAV, AIFF, and other uncompressed types"
 msgstr "WAV, AIFF, და სხვა არაკომპრესირებული ტიპები"
 
 #: src/import/ImportPCM.cpp
-msgid "MAT5 (GNU Octave 2.1 / Matlab 5.0)"
-msgstr ""
-
-#: src/import/ImportPCM.cpp
 msgid "SDS (Midi Sample Dump Standard)"
 msgstr ""
 
@@ -6716,10 +6624,6 @@ msgstr "32-ბიტიანი მცოცავი"
 #: src/import/ImportPCM.cpp
 msgid "64 bit float"
 msgstr "32-ბიტიანი მცოცავი"
-
-#: src/import/ImportPCM.cpp
-msgid "12 bit DWVW"
-msgstr ""
 
 #: src/import/ImportPCM.cpp
 msgid "16 bit DWVW"
@@ -8874,10 +8778,6 @@ msgid "Preferences for ExtImport"
 msgstr "პარამეტრები..."
 
 #: src/prefs/ExtImportPrefs.cpp
-msgid "Move f&ilter up"
-msgstr ""
-
-#: src/prefs/ExtImportPrefs.cpp
 msgid "Rule deletion confirmation"
 msgstr ""
 
@@ -8938,10 +8838,6 @@ msgstr "ეკრანი"
 #: src/prefs/GUIPrefs.cpp
 msgid "&Beep on completion of longer activities"
 msgstr "დიდი ხანგრძლივობის მოქმედებების დასრულებისას სიგნალი"
-
-#: src/prefs/GUIPrefs.h
-msgid "GUI"
-msgstr ""
 
 #: src/prefs/ImportExportPrefs.cpp
 msgid "Import / Export"
@@ -10371,10 +10267,6 @@ msgid "16000 Hz"
 msgstr "0100 ს 060 წ 060>01000 წ"
 
 #: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
-msgid "352800 Hz"
-msgstr ""
-
-#: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
 msgid "&Other..."
 msgstr "სხვა..."
 
@@ -11604,10 +11496,6 @@ msgid "Label text"
 msgstr "იარლიყის რედაქტირება"
 
 #: plug-ins/equalabel.ny
-msgid "3 (After Label)"
-msgstr ""
-
-#: plug-ins/equalabel.ny
 msgid "Message on completion"
 msgstr "კლავიშთა კომბინაცია"
 
@@ -12152,12 +12040,6 @@ msgstr "&ანალიზი"
 #: plug-ins/vocalrediso.ny
 msgid "Strength"
 msgstr "ფილტრი"
-
-#: plug-ins/vocalrediso.ny
-msgid ""
-" - An ideal value for Stereo.\n"
-"                However, the center extraction depends also on the used reverb."
-msgstr ""
 
 #: plug-ins/vocoder.ny
 msgid "Processing Vocoder..."

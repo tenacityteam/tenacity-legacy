@@ -770,11 +770,6 @@ msgid ""
 "Error code: %s"
 msgstr "Greška pri otvaranju zvučnog uređaja."
 
-#: src/AudioIO.cpp
-#, c-format
-msgid "Automated Recording Level Adjustment stopped. %.2f seems an acceptable volume."
-msgstr ""
-
 #: src/AudioIOBase.cpp
 #, c-format
 msgid "Default recording device number: %d\n"
@@ -1178,10 +1173,6 @@ msgid "Paste: %lld\n"
 msgstr "Umetni\n"
 
 #: src/Benchmark.cpp
-msgid "Passed correctness check!\n"
-msgstr ""
-
-#: src/Benchmark.cpp
 msgid "Reading data again...\n"
 msgstr "Snimanje zvuka\n"
 
@@ -1340,18 +1331,9 @@ msgstr "Pravougaono"
 msgid "Welch"
 msgstr "Dobrodošli!"
 
-#: src/FFmpeg.cpp
-msgid "Locate FFmpeg"
-msgstr ""
-
 #: src/FFmpeg.cpp src/export/ExportCL.cpp src/export/ExportMP3.cpp plug-ins/nyquist-plug-in-installer.ny
 msgid "Browse..."
 msgstr "Pregledaj ..."
-
-#. i18n-hint: do not translate avformat.  Preserve the computer gibberish.
-#: src/FFmpeg.h
-msgid "Only avformat.dll"
-msgstr ""
 
 #: src/FileException.cpp
 #, c-format
@@ -1571,11 +1553,6 @@ msgstr "Zapeci na CD"
 #: src/HelpText.cpp
 msgid "No Local Help"
 msgstr "Nema lokalne pomoći"
-
-#. i18n-hint: Preserve '[[help:Main_Page|' as it's the name of a link.
-#: src/HelpText.cpp
-msgid " [[help:Main_Page|Manual]] - if not installed locally, [[https://manual.audacityteam.org/|view online]]"
-msgstr ""
 
 #: src/HistoryWindow.cpp
 msgid "History"
@@ -1801,11 +1778,6 @@ msgstr "GB"
 msgid "B"
 msgstr "dB"
 
-#. i18n-hint: Two, alternate names of a musical note in the 12-tone chromatic scale
-#: src/PitchName.cpp
-msgid "F♯/G♭"
-msgstr ""
-
 #: src/PluginManager.cpp
 #, c-format
 msgid "Overwrite the plug-in file %s?"
@@ -1938,25 +1910,12 @@ msgid "Close project immediately with no changes"
 msgstr "Odmah zatvori projekt bez izmjena"
 
 #: src/ProjectFSCK.cpp
-#, c-format
-msgid ""
-"Project check of \"%s\" folder \n"
-"detected %lld missing alias (.auf) blockfile(s). \n"
-"Audacity can fully regenerate these files \n"
-"from the current audio in the project."
-msgstr ""
-
-#: src/ProjectFSCK.cpp
 msgid "Fill in silence for missing display data (this session only)"
 msgstr "Popuni tišinom nedostajuće podatke za prikaz [samo za tu sesiju]"
 
 #: src/ProjectFSCK.cpp
 msgid "Close project immediately with no further changes"
 msgstr "Odmah zatvori projekt bez daljnjih promjena"
-
-#: src/ProjectFSCK.cpp
-msgid "Warning - Orphan Block File(s)"
-msgstr ""
 
 #. i18n-hint: This title appears on a dialog that indicates the progress
 #. in doing something.
@@ -2007,13 +1966,6 @@ msgstr "Testne datoteke nije moguće otvoriti/kreirati"
 #: src/ProjectFileIO.cpp
 msgid "Unable to initialize the project file"
 msgstr "Nije moguće inicijalizirati MP3 tok"
-
-#. i18n-hint: An error message.  Don't translate blockfiles.
-#: src/ProjectFileIO.cpp
-msgid ""
-"Not authorized\n"
-"(Unable to work with the blockfiles)"
-msgstr ""
 
 #. i18n-hint: An error message.  Don't translate blockfiles.
 #: src/ProjectFileIO.cpp
@@ -2276,10 +2228,6 @@ msgid "Choose..."
 msgstr "Izaberi ..."
 
 #: src/Screenshot.cpp
-msgid "Capture Window Plus"
-msgstr ""
-
-#: src/Screenshot.cpp
 msgid "All Effects"
 msgstr "Efe&kt"
 
@@ -2340,10 +2288,6 @@ msgstr "Podprozor s trakom"
 #: src/Screenshot.cpp src/commands/GetInfoCommand.cpp src/commands/GetTrackInfoCommand.cpp src/commands/ScreenshotCommand.cpp src/export/ExportMultiple.cpp src/prefs/TracksPrefs.cpp src/prefs/TracksPrefs.h
 msgid "Tracks"
 msgstr "Trake"
-
-#: src/Screenshot.cpp
-msgid "One Hour"
-msgstr ""
 
 #: src/Sequence.cpp
 msgid "Warning - Truncating Overlong Block File"
@@ -3585,13 +3529,6 @@ msgstr "Izaberite prag (niže znači veća osjetljivost):"
 msgid "Max &Spike Width (higher is more sensitive):"
 msgstr "Najveća širina šiljka (više znači veću osjetljivost):"
 
-#. i18n-hint: Unless your language has a different convention for ratios,
-#. * like 8:1, leave as is.
-#: src/effects/Compressor.cpp
-#, c-format
-msgid "%.1f:1"
-msgstr ""
-
 #: src/effects/Compressor.cpp
 msgid "&Ratio:"
 msgstr "Trajanje"
@@ -3657,20 +3594,8 @@ msgstr "Ponovo postavi"
 msgid "&Help"
 msgstr "&Pomoć"
 
-#. i18n-hint: dB abbreviates decibels
-#. RMS abbreviates root mean square, a certain averaging method
-#: src/effects/Contrast.cpp
-#, c-format
-msgid "Difference = %.2f RMS dB."
-msgstr ""
-
 #: src/effects/Contrast.cpp
 msgid "Measured foreground level"
-msgstr ""
-
-#. i18n-hint: WCAG abbreviates Web Content Accessibility Guidelines
-#: src/effects/Contrast.cpp
-msgid "WCAG 2.0 Success Criteria 1.4.7 Contrast Results"
 msgstr ""
 
 #: src/effects/Contrast.cpp
@@ -3692,10 +3617,6 @@ msgstr "Kompresor dinamičkog opsega"
 #: src/effects/Distortion.cpp
 msgid "Leveller"
 msgstr "Izravnjivač "
-
-#: src/effects/Distortion.cpp
-msgid "Light Crunch Overdrive"
-msgstr ""
 
 #: src/effects/Distortion.cpp
 msgid "Leveller, Heavy, -70dB noise floor"
@@ -3752,11 +3673,6 @@ msgstr "Procesiranje automatskog spuštanja ..."
 #: src/effects/Distortion.cpp
 msgid "Degree of Levelling"
 msgstr "Stepen izravnavanja"
-
-#. i18n-hint: Control range.
-#: src/effects/Distortion.cpp
-msgid "(0 to 5):"
-msgstr ""
 
 #: src/effects/DtmfGen.cpp
 msgid "DTMF Tones"
@@ -4089,10 +4005,6 @@ msgid "D&efault"
 msgstr "&Podrazumijevano"
 
 #: src/effects/Equalization.cpp
-msgid "Error Loading EQ Curves"
-msgstr ""
-
-#: src/effects/Equalization.cpp
 msgid "D&elete..."
 msgstr ""
 
@@ -4372,10 +4284,6 @@ msgid "Removing DC offset...\n"
 msgstr "Odstranjivanje šuma\n"
 
 #: src/effects/Normalize.cpp
-msgid "&Remove DC offset (center on 0.0 vertically)"
-msgstr ""
-
-#: src/effects/Normalize.cpp
 msgid "&Normalize peak amplitude to   "
 msgstr "Normaliziraj najveću amplitudu na"
 
@@ -4467,10 +4375,6 @@ msgid "New selection length: %s"
 msgstr "Nova dužina izbora:"
 
 #: src/effects/Reverb.cpp
-msgid "Large Room"
-msgstr ""
-
-#: src/effects/Reverb.cpp
 msgid "Rever&berance (%):"
 msgstr "Odziv (%):"
 
@@ -4491,18 +4395,9 @@ msgstr "Obrnuto"
 msgid "Reverses the selected audio"
 msgstr "Izvoženje izbranog zvuka kao %s"
 
-#. i18n-hint: "infinite impulse response"
-#: src/effects/ScienFilter.cpp
-msgid "Performs IIR filtering that emulates analog filters"
-msgstr ""
-
 #: src/effects/ScienFilter.cpp
 msgid "To apply a filter, all selected tracks must have the same sample rate."
 msgstr "Za crtanje spektra sve izabrane trake moraju imati jednak stepen uzorkovanja."
-
-#: src/effects/ScienFilter.cpp
-msgid "Minimum S&topband Attenuation:"
-msgstr ""
 
 #: src/effects/ScoreAlignDialog.cpp
 msgid "Align MIDI to Audio"
@@ -4593,10 +4488,6 @@ msgstr "Pretvaranje sterea u mono"
 #: src/effects/TimeScale.cpp
 msgid "Sliding Stretch"
 msgstr "Faktor opadanja: "
-
-#: src/effects/TimeScale.cpp
-msgid "(s&emitones) [-12 to 12]:"
-msgstr ""
 
 #: src/effects/ToneGen.cpp plug-ins/tremolo.ny
 msgid "Sine"
@@ -4835,12 +4726,6 @@ msgstr "Efe&kt"
 #: src/effects/lv2/LV2Effect.cpp
 msgid "LV2 Effect Settings"
 msgstr "Postavke efekta"
-
-#. i18n-hint: abbreviates
-#. "Linux Audio Developer's Simple Plugin API (LADSPA) version 2"
-#: src/effects/lv2/LV2Effect.h
-msgid "LV2"
-msgstr ""
 
 #: src/effects/lv2/LoadLV2.cpp
 msgid "LV2 Effects"
@@ -5126,15 +5011,6 @@ msgstr "U &redu"
 msgid "FFmpeg Error"
 msgstr "Greška LOF"
 
-#. i18n-hint: "codec" is short for a "coder-decoder" algorithm
-#: src/export/ExportFFmpeg.cpp
-#, c-format
-msgid ""
-"Can't open audio codec \"%s\" (0x%x)\n"
-"\n"
-"%s"
-msgstr ""
-
 #: src/export/ExportFFmpeg.cpp
 msgid "FFmpeg : ERROR - nAudioFrameSizeOut too large."
 msgstr ""
@@ -5190,10 +5066,6 @@ msgstr "Bitna brzina:"
 #: src/export/ExportFFmpegDialogs.cpp
 msgid "Quality (kbps):"
 msgstr "Kvalitet:"
-
-#: src/export/ExportFFmpegDialogs.cpp src/export/ExportFLAC.cpp
-msgid "7"
-msgstr ""
 
 #: src/export/ExportFFmpegDialogs.cpp
 msgid "10"
@@ -5253,15 +5125,7 @@ msgid "Replace preset '%s'?"
 msgstr "Preimenovano '%s' u '%s'"
 
 #: src/export/ExportFFmpegDialogs.cpp
-msgid "WMA (version 2) Files (FFmpeg)"
-msgstr ""
-
-#: src/export/ExportFFmpegDialogs.cpp
 msgid "Configure custom FFmpeg options"
-msgstr ""
-
-#: src/export/ExportFFmpegDialogs.cpp
-msgid "Show All Codecs"
 msgstr ""
 
 #: src/export/ExportFFmpegDialogs.cpp
@@ -5273,15 +5137,7 @@ msgid "Quality:"
 msgstr "Kvalitet:"
 
 #: src/export/ExportFFmpegDialogs.cpp
-msgid "Compression:"
-msgstr ""
-
-#: src/export/ExportFFmpegDialogs.cpp
 msgid "Min. PdO"
-msgstr ""
-
-#: src/export/ExportFFmpegDialogs.cpp
-msgid "MPEG container options"
 msgstr ""
 
 #: src/export/ExportFFmpegDialogs.cpp
@@ -5349,10 +5205,6 @@ msgstr "Izvoz izabranog zvuka pri %ld kb/s"
 #, c-format
 msgid "Exporting the audio at %ld kbps"
 msgstr "Izvoz izabranog zvuka pri %ld kb/s"
-
-#: src/export/ExportMP3.cpp
-msgid "80-120 kbps"
-msgstr ""
 
 #: src/export/ExportMP3.cpp
 msgid "Extreme"
@@ -5699,15 +5551,6 @@ msgstr ""
 "Audacity ne može otvoriti ovaj zaštićeni format.\n"
 "Morate  je pretvoriti u  podržanu vrstu zvučnih datoteka, kao što su WAV i AIFF."
 
-#. i18n-hint: %s will be the filename
-#: src/import/Import.cpp
-#, c-format
-msgid ""
-"Audacity did not recognize the type of the file '%s'.\n"
-"\n"
-"%sFor uncompressed files, also try File > Import > Raw Data."
-msgstr ""
-
 #: src/import/ImportAUP.cpp
 #, c-format
 msgid ""
@@ -5721,10 +5564,6 @@ msgstr ""
 #: src/import/ImportAUP.cpp
 msgid "Import Project"
 msgstr "Izvezi oznake kao:"
-
-#: src/import/ImportAUP.cpp
-msgid "Invalid project 'sel1' attribute."
-msgstr ""
 
 #: src/import/ImportAUP.cpp
 #, c-format
@@ -5742,14 +5581,6 @@ msgstr "Nevažeća frekvencija uzimanja uzoraka"
 #: src/import/ImportAUP.cpp
 msgid "Invalid sequence 'numsamples' attribute."
 msgstr "Nevažeća frekvencija uzimanja uzoraka"
-
-#: src/import/ImportAUP.cpp
-#, c-format
-msgid ""
-"Error while processing %s\n"
-"\n"
-"Inserting silence."
-msgstr ""
 
 #: src/import/ImportAUP.cpp
 #, c-format
@@ -5869,15 +5700,7 @@ msgid "WAV, AIFF, and other uncompressed types"
 msgstr "WAV, AIFF i druge nekompresovane vrste"
 
 #: src/import/ImportPCM.cpp
-msgid "MAT5 (GNU Octave 2.1 / Matlab 5.0)"
-msgstr ""
-
-#: src/import/ImportPCM.cpp
 msgid "SDS (Midi Sample Dump Standard)"
-msgstr ""
-
-#: src/import/ImportPCM.cpp
-msgid "Signed 8 bit PCM"
 msgstr ""
 
 #: src/import/ImportPCM.cpp
@@ -5895,10 +5718,6 @@ msgstr "32-bitni realni"
 #: src/import/ImportPCM.cpp
 msgid "64 bit float"
 msgstr "32-bitni realni"
-
-#: src/import/ImportPCM.cpp
-msgid "12 bit DWVW"
-msgstr ""
 
 #: src/import/ImportPCM.cpp
 msgid "16 bit DWVW"
@@ -7506,11 +7325,6 @@ msgstr "O&dstrani trake:"
 msgid "Transport &Options"
 msgstr "Prepis"
 
-#. i18n-hint: (verb) Start playing audio
-#: src/menus/TransportMenus.cpp
-msgid "Pl&ay"
-msgstr ""
-
 #: src/menus/TransportMenus.cpp
 msgid "Play &One Second"
 msgstr "Izvedi jednu sekundu"
@@ -7856,10 +7670,6 @@ msgid "Preferences for ExtImport"
 msgstr "Postavke ..."
 
 #: src/prefs/ExtImportPrefs.cpp
-msgid "Move f&ilter up"
-msgstr ""
-
-#: src/prefs/ExtImportPrefs.cpp
 msgid "Rule deletion confirmation"
 msgstr ""
 
@@ -7912,10 +7722,6 @@ msgstr "Prikaz"
 #: src/prefs/GUIPrefs.cpp
 msgid "&Beep on completion of longer activities"
 msgstr "&Zapiskaj na kraju daljnjih operacija"
-
-#: src/prefs/GUIPrefs.h
-msgid "GUI"
-msgstr ""
 
 #: src/prefs/ImportExportPrefs.cpp
 msgid "&Mix down to Stereo or Mono"
@@ -8022,12 +7828,6 @@ msgstr "Postavke ..."
 #: src/prefs/LibraryPrefs.cpp
 msgid "MP3 Library Version:"
 msgstr "MP3 verzija biblioteke:"
-
-#: src/prefs/LibraryPrefs.cpp
-msgid ""
-"Audacity has automatically detected valid FFmpeg libraries.\n"
-"Do you still want to locate them manually?"
-msgstr ""
 
 #: src/prefs/MidiIOPrefs.cpp
 msgid "Preferences for MidiIO"
@@ -8357,10 +8157,6 @@ msgstr "Broj trake"
 #: src/prefs/RecordingPrefs.cpp
 msgid "Automated Recording Level Adjustment"
 msgstr "Kraj snimanja"
-
-#: src/prefs/RecordingPrefs.cpp
-msgid "Punch and Roll Recording"
-msgstr ""
 
 #. i18n-hint: New color scheme for spectrograms
 #: src/prefs/SpectrogramSettings.cpp
@@ -9273,10 +9069,6 @@ msgstr "Postavi frekvenciju"
 #: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
 msgid "16000 Hz"
 msgstr "0100 č 060 m 060>01000 s"
-
-#: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
-msgid "352800 Hz"
-msgstr ""
 
 #: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
 msgid "&Other..."
@@ -10415,10 +10207,6 @@ msgid "Label text"
 msgstr "Uredi oznaku"
 
 #: plug-ins/equalabel.ny
-msgid "3 (After Label)"
-msgstr ""
-
-#: plug-ins/equalabel.ny
 msgid "Message on completion"
 msgstr "Kombinacija tastera"
 
@@ -10918,12 +10706,6 @@ msgstr "&Analiziraj"
 #: plug-ins/vocalrediso.ny
 msgid "Strength"
 msgstr "Dužina"
-
-#: plug-ins/vocalrediso.ny
-msgid ""
-" - An ideal value for Stereo.\n"
-"                However, the center extraction depends also on the used reverb."
-msgstr ""
 
 #: plug-ins/vocoder.ny
 msgid "Processing Vocoder..."
