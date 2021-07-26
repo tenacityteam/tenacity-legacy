@@ -648,11 +648,6 @@ msgid ""
 "Error code: %s"
 msgstr "កំហុស​ខណៈពេល​​បើក​ឧបករណ៍​សំឡេង ។ "
 
-#: src/AudioIO.cpp
-#, c-format
-msgid "Automated Recording Level Adjustment stopped. %.2f seems an acceptable volume."
-msgstr ""
-
 #: src/AudioIOBase.cpp
 #, c-format
 msgid "Default recording device number: %d\n"
@@ -1056,10 +1051,6 @@ msgid "Paste: %lld\n"
 msgstr "បិទ​ភ្ជាប់\n"
 
 #: src/Benchmark.cpp
-msgid "Passed correctness check!\n"
-msgstr ""
-
-#: src/Benchmark.cpp
 msgid "Reading data again...\n"
 msgstr "កំពុង​​ថត​​អូឌីយ៉ូ\n"
 
@@ -1213,11 +1204,6 @@ msgstr "រាង"
 msgid "Rectangular"
 msgstr "ចតុកោណកែង"
 
-#. i18n-hint a mathematical function named for C. F. Gauss
-#: src/FFT.cpp
-msgid "Gaussian(a=3.5)"
-msgstr ""
-
 #: src/FFmpeg.cpp
 #, c-format
 msgid "Location of '%s':"
@@ -1226,11 +1212,6 @@ msgstr ""
 #: src/FFmpeg.cpp src/export/ExportCL.cpp src/export/ExportMP3.cpp plug-ins/nyquist-plug-in-installer.ny
 msgid "Browse..."
 msgstr "រក​មើល..."
-
-#. i18n-hint: do not translate avformat.  Preserve the computer gibberish.
-#: src/FFmpeg.h
-msgid "Only avformat.dll"
-msgstr ""
 
 #: src/FileException.cpp
 #, c-format
@@ -1436,11 +1417,6 @@ msgstr "ថត"
 #: src/HelpText.cpp
 msgid "No Local Help"
 msgstr "គ្មាន​ជំនួយ​​មូលដ្ឋាន"
-
-#. i18n-hint: Preserve '[[help:Main_Page|' as it's the name of a link.
-#: src/HelpText.cpp
-msgid " [[help:Main_Page|Manual]] - if not installed locally, [[https://manual.audacityteam.org/|view online]]"
-msgstr ""
 
 #: src/HistoryWindow.cpp
 msgid "History"
@@ -1671,11 +1647,6 @@ msgstr "ជីកាបៃ"
 msgid "B"
 msgstr "dB"
 
-#. i18n-hint: Two, alternate names of a musical note in the 12-tone chromatic scale
-#: src/PitchName.cpp
-msgid "F♯/G♭"
-msgstr ""
-
 #: src/PluginManager.cpp
 #, c-format
 msgid "Overwrite the plug-in file %s?"
@@ -1805,25 +1776,12 @@ msgid "Close project immediately with no changes"
 msgstr "បិទ​​គម្រោង​​ភ្លាមៗ​​ដោយ​​គ្មាន​ការ​ផ្លាស់ប្ដួរ"
 
 #: src/ProjectFSCK.cpp
-#, c-format
-msgid ""
-"Project check of \"%s\" folder \n"
-"detected %lld missing alias (.auf) blockfile(s). \n"
-"Audacity can fully regenerate these files \n"
-"from the current audio in the project."
-msgstr ""
-
-#: src/ProjectFSCK.cpp
 msgid "Fill in silence for missing display data (this session only)"
 msgstr "បំពេញ​​ដោយ​​ស្ងាត់​​សម្រាប់​​ទិន្នន័យ​​បង្ហាញ​​ដែល​​បាត់ [តែ​សម័យ​​នេះ​ប៉ុណ្ណោះ]"
 
 #: src/ProjectFSCK.cpp
 msgid "Close project immediately with no further changes"
 msgstr "បិទ​​គម្រោង​​ភ្លាមៗ​​ដោយ​​គ្មាន​​កា​រផ្លាស់ប្ដូរ​​ផ្សេង​​ទៀត"
-
-#: src/ProjectFSCK.cpp
-msgid "Warning - Orphan Block File(s)"
-msgstr ""
 
 #. i18n-hint: This title appears on a dialog that indicates the progress
 #. in doing something.
@@ -1874,13 +1832,6 @@ msgstr "មិន​​អាច​​បើក/បង្កើត​​ឯក�
 #: src/ProjectFileIO.cpp
 msgid "Unable to initialize the project file"
 msgstr "មិនអាចចាប់ផ្តើមស្ទ្រីម MP3​ បាន​ទេ"
-
-#. i18n-hint: An error message.  Don't translate blockfiles.
-#: src/ProjectFileIO.cpp
-msgid ""
-"Not authorized\n"
-"(Unable to work with the blockfiles)"
-msgstr ""
 
 #. i18n-hint: An error message.  Don't translate blockfiles.
 #: src/ProjectFileIO.cpp
@@ -2125,10 +2076,6 @@ msgid "Choose..."
 msgstr "ជ្រើស..."
 
 #: src/Screenshot.cpp
-msgid "Capture Window Plus"
-msgstr ""
-
-#: src/Screenshot.cpp
 msgid "All Effects"
 msgstr "បែបផែន"
 
@@ -2189,10 +2136,6 @@ msgstr "បន្ទះ​បទ"
 #: src/Screenshot.cpp src/commands/GetInfoCommand.cpp src/commands/GetTrackInfoCommand.cpp src/commands/ScreenshotCommand.cpp src/export/ExportMultiple.cpp src/prefs/TracksPrefs.cpp src/prefs/TracksPrefs.h
 msgid "Tracks"
 msgstr "បទ"
-
-#: src/Screenshot.cpp
-msgid "One Hour"
-msgstr ""
 
 #: src/Sequence.cpp
 msgid "Warning - Truncating Overlong Block File"
@@ -3424,13 +3367,6 @@ msgstr "ជ្រើស​កម្រិត​​ពន្លឺ (កាន់�
 msgid "Max &Spike Width (higher is more sensitive):"
 msgstr "ទទឹង​ spike អតិបរមា (កាន់​តែ​ខ្ពស់​ កាន់​តែ​ប្រសើរ) ៖"
 
-#. i18n-hint: Unless your language has a different convention for ratios,
-#. * like 8:1, leave as is.
-#: src/effects/Compressor.cpp
-#, c-format
-msgid "%.1f:1"
-msgstr ""
-
 #: src/effects/Compressor.cpp
 msgid "&Ratio:"
 msgstr "ថិរវេលា"
@@ -3489,20 +3425,8 @@ msgstr "កំណត់​ឡើង​វិញ"
 msgid "&Help"
 msgstr "ជំនួយ"
 
-#. i18n-hint: dB abbreviates decibels
-#. RMS abbreviates root mean square, a certain averaging method
-#: src/effects/Contrast.cpp
-#, c-format
-msgid "Difference = %.2f RMS dB."
-msgstr ""
-
 #: src/effects/Contrast.cpp
 msgid "Measured foreground level"
-msgstr ""
-
-#. i18n-hint: WCAG abbreviates Web Content Accessibility Guidelines
-#: src/effects/Contrast.cpp
-msgid "WCAG 2.0 Success Criteria 1.4.7 Contrast Results"
 msgstr ""
 
 #: src/effects/Contrast.cpp
@@ -3520,10 +3444,6 @@ msgstr "បង្ហាញ​​កា​រច្រឹប"
 #: src/effects/Distortion.cpp
 msgid "Expand and Compress"
 msgstr "ឧបករណ៍​បង្ហាប់​ជួរ​ថាមវន្ត"
-
-#: src/effects/Distortion.cpp
-msgid "Blues drive sustain"
-msgstr ""
 
 #: src/effects/Distortion.cpp
 msgid "Leveller, Moderate, -70dB noise floor"
@@ -3580,11 +3500,6 @@ msgstr "កំពុង​ដំណើរ​ការ Auto Duck..."
 #: src/effects/Distortion.cpp
 msgid "Degree of Levelling"
 msgstr "កម្រិត​នៃ Leveling"
-
-#. i18n-hint: Control range.
-#: src/effects/Distortion.cpp
-msgid "(0 to 5):"
-msgstr ""
 
 #: src/effects/DtmfGen.cpp
 msgid "DTMF Tones"
@@ -3912,10 +3827,6 @@ msgid "D&efault"
 msgstr "លំនាំដើម"
 
 #: src/effects/Equalization.cpp
-msgid "Error Loading EQ Curves"
-msgstr ""
-
-#: src/effects/Equalization.cpp
 msgid "D&elete..."
 msgstr ""
 
@@ -4192,10 +4103,6 @@ msgid "Removing DC offset...\n"
 msgstr "​យក​ការ​រំខាន​ចេញ\n"
 
 #: src/effects/Normalize.cpp
-msgid "&Remove DC offset (center on 0.0 vertically)"
-msgstr ""
-
-#: src/effects/Normalize.cpp
 msgid "&Normalize peak amplitude to   "
 msgstr "ធ្វើ​ឲ្យ​អាំភ្លី​អតិបរមា​ធម្មតា​ទៅ"
 
@@ -4287,10 +4194,6 @@ msgid "New selection length: %s"
 msgstr "ប្រវែងជម្រើស​ថ្មី ៖"
 
 #: src/effects/Reverb.cpp
-msgid "Large Room"
-msgstr ""
-
-#: src/effects/Reverb.cpp
 msgid "Rever&berance (%):"
 msgstr "មតិ​អ្នកប្រើ (%) ៖"
 
@@ -4311,18 +4214,9 @@ msgstr "ដាក់​បញ្ច្រាស"
 msgid "Reverses the selected audio"
 msgstr "​នាំចេញ​អូឌីយ៉ូ​ទៅជា %s"
 
-#. i18n-hint: "infinite impulse response"
-#: src/effects/ScienFilter.cpp
-msgid "Performs IIR filtering that emulates analog filters"
-msgstr ""
-
 #: src/effects/ScienFilter.cpp
 msgid "To apply a filter, all selected tracks must have the same sample rate."
 msgstr "ដើម្បី​​គ្រោង​​វិសាលគម បទ​​ដែល​​ជ្រើស​​ទាំងអស់​ត្រូវ​តែ​មាន​អត្រា​​គំរូ​​ដូច​គ្នា ។"
-
-#: src/effects/ScienFilter.cpp
-msgid "Minimum S&topband Attenuation:"
-msgstr ""
 
 #: src/effects/ScoreAlignDialog.cpp
 msgid "Align MIDI to Audio"
@@ -4413,10 +4307,6 @@ msgstr "អនុវត្ត​ស្តេរ៉េអូ​ទៅជា​​
 #: src/effects/TimeScale.cpp
 msgid "Sliding Stretch"
 msgstr "កត្តា​បន្ថយ ៖"
-
-#: src/effects/TimeScale.cpp
-msgid "(s&emitones) [-12 to 12]:"
-msgstr ""
 
 #: src/effects/ToneGen.cpp plug-ins/tremolo.ny
 msgid "Sine"
@@ -4651,12 +4541,6 @@ msgstr "បែបផែន"
 #: src/effects/lv2/LV2Effect.cpp
 msgid "LV2 Effect Settings"
 msgstr "ការ​កំណត់​បែបផែន"
-
-#. i18n-hint: abbreviates
-#. "Linux Audio Developer's Simple Plugin API (LADSPA) version 2"
-#: src/effects/lv2/LV2Effect.h
-msgid "LV2"
-msgstr ""
 
 #: src/effects/lv2/LoadLV2.cpp
 msgid "LV2 Effects"
@@ -4946,15 +4830,6 @@ msgstr "យល់ព្រម"
 msgid "FFmpeg Error"
 msgstr "កំហុស LOF"
 
-#. i18n-hint: "codec" is short for a "coder-decoder" algorithm
-#: src/export/ExportFFmpeg.cpp
-#, c-format
-msgid ""
-"Can't open audio codec \"%s\" (0x%x)\n"
-"\n"
-"%s"
-msgstr ""
-
 #: src/export/ExportFFmpeg.cpp
 msgid "FFmpeg : ERROR - nAudioFrameSizeOut too large."
 msgstr ""
@@ -5091,15 +4966,7 @@ msgid "Replace preset '%s'?"
 msgstr "បាន​ប្ដូរ​ឈ្មោះ '%s' ទៅ '%s'"
 
 #: src/export/ExportFFmpegDialogs.cpp
-msgid "WMA (version 2) Files (FFmpeg)"
-msgstr ""
-
-#: src/export/ExportFFmpegDialogs.cpp
 msgid "Configure custom FFmpeg options"
-msgstr ""
-
-#: src/export/ExportFFmpegDialogs.cpp
-msgid "Show All Codecs"
 msgstr ""
 
 #: src/export/ExportFFmpegDialogs.cpp
@@ -5111,15 +4978,7 @@ msgid "Quality:"
 msgstr "គុណភាព ៖"
 
 #: src/export/ExportFFmpegDialogs.cpp
-msgid "Compression:"
-msgstr ""
-
-#: src/export/ExportFFmpegDialogs.cpp
 msgid "Min. PdO"
-msgstr ""
-
-#: src/export/ExportFFmpegDialogs.cpp
-msgid "MPEG container options"
 msgstr ""
 
 #: src/export/ExportFFmpegDialogs.cpp
@@ -5187,10 +5046,6 @@ msgstr "នាំចេញ​អូឌីយ៉ូ​ដែលបាន​ជ្
 #, c-format
 msgid "Exporting the audio at %ld kbps"
 msgstr "នាំចេញ​អូឌីយ៉ូ​ដែលបាន​ជ្រើស​នៅល្បឿន %ld kbps"
-
-#: src/export/ExportMP3.cpp
-msgid "80-120 kbps"
-msgstr ""
 
 #: src/export/ExportMP3.cpp
 msgid "Extreme"
@@ -5462,17 +5317,6 @@ msgstr "អត្រា​គំរូ"
 msgid "This version of Audacity was not compiled with %s support."
 msgstr "Audacity កំណែ​នេះ​មិនទាន់​បាន​ចង​ក្រង​ជាមួយ %s គាំទ្រ ។"
 
-#. i18n-hint: %s will be the filename
-#: src/import/Import.cpp
-#, c-format
-msgid ""
-"\"%s\" is a Musepack audio file. \n"
-"Audacity cannot open this type of file. \n"
-"If you think it might be an mp3 file, rename it to end with \".mp3\" \n"
-"and try importing it again. Otherwise you need to convert it to a supported audio \n"
-"format, such as WAV or AIFF."
-msgstr ""
-
 #: src/import/Import.cpp src/menus/ClipMenus.cpp
 #, c-format
 msgid "%s, %s"
@@ -5493,10 +5337,6 @@ msgid "Import Project"
 msgstr "នាំចេញ​​ស្លាក​ជា ៖"
 
 #: src/import/ImportAUP.cpp
-msgid "Invalid project 'sel1' attribute."
-msgstr ""
-
-#: src/import/ImportAUP.cpp
 #, c-format
 msgid "Couldn't find the project data folder: \"%s\""
 msgstr "មិន​អាច​រក​ឃើញ​ថត​ទិន្នន័យ​គម្រោង ៖ \"%s\""
@@ -5512,14 +5352,6 @@ msgstr "អត្រា​គំរូ​មិន​ត្រឹមត្រូ
 #: src/import/ImportAUP.cpp
 msgid "Invalid sequence 'numsamples' attribute."
 msgstr "អត្រា​គំរូ​មិន​ត្រឹមត្រូវ"
-
-#: src/import/ImportAUP.cpp
-#, c-format
-msgid ""
-"Error while processing %s\n"
-"\n"
-"Inserting silence."
-msgstr ""
 
 #: src/import/ImportAUP.cpp
 #, c-format
@@ -5639,15 +5471,7 @@ msgid "WAV, AIFF, and other uncompressed types"
 msgstr "WAV, AIFF និង​ប្រភេទ​ឯកសារ​មិន​បង្ហាប់​ផ្សេង​ទៀត"
 
 #: src/import/ImportPCM.cpp
-msgid "MAT5 (GNU Octave 2.1 / Matlab 5.0)"
-msgstr ""
-
-#: src/import/ImportPCM.cpp
 msgid "SDS (Midi Sample Dump Standard)"
-msgstr ""
-
-#: src/import/ImportPCM.cpp
-msgid "Signed 8 bit PCM"
 msgstr ""
 
 #: src/import/ImportPCM.cpp
@@ -5665,10 +5489,6 @@ msgstr "៣២ ប៊ីត float"
 #: src/import/ImportPCM.cpp
 msgid "64 bit float"
 msgstr "៣២ ប៊ីត float"
-
-#: src/import/ImportPCM.cpp
-msgid "12 bit DWVW"
-msgstr ""
 
 #: src/import/ImportPCM.cpp
 msgid "16 bit DWVW"
@@ -7235,11 +7055,6 @@ msgstr "យក​បទ​​ចេញ"
 msgid "Transport &Options"
 msgstr "ការ​ចម្លង"
 
-#. i18n-hint: (verb) Start playing audio
-#: src/menus/TransportMenus.cpp
-msgid "Pl&ay"
-msgstr ""
-
 #: src/menus/TransportMenus.cpp
 msgid "Play &One Second"
 msgstr "ចាក់​​មួយ​​វិនាទី"
@@ -7585,10 +7400,6 @@ msgid "Preferences for ExtImport"
 msgstr "​ចំណូលចិត្ត..."
 
 #: src/prefs/ExtImportPrefs.cpp
-msgid "Move f&ilter up"
-msgstr ""
-
-#: src/prefs/ExtImportPrefs.cpp
 msgid "Rule deletion confirmation"
 msgstr ""
 
@@ -7641,10 +7452,6 @@ msgstr "បង្ហាញ"
 #: src/prefs/GUIPrefs.cpp
 msgid "&Beep on completion of longer activities"
 msgstr "បន្លឺ​សំឡេង​ប៊ីត​នៅ​ពេល​​បញ្ចប់​សកម្មភាព​វែងៗ"
-
-#: src/prefs/GUIPrefs.h
-msgid "GUI"
-msgstr ""
 
 #: src/prefs/ImportExportPrefs.cpp
 msgid "&Mix down to Stereo or Mono"
@@ -7747,12 +7554,6 @@ msgstr "​ចំណូលចិត្ត..."
 #: src/prefs/LibraryPrefs.cpp
 msgid "MP3 Library Version:"
 msgstr "កំណែ​បណ្ណាល័យ MP3 ៖"
-
-#: src/prefs/LibraryPrefs.cpp
-msgid ""
-"Audacity has automatically detected valid FFmpeg libraries.\n"
-"Do you still want to locate them manually?"
-msgstr ""
 
 #: src/prefs/MidiIOPrefs.cpp
 msgid "Preferences for MidiIO"
@@ -8078,10 +7879,6 @@ msgstr "ថត​អូឌីយ៉ូ"
 #: src/prefs/RecordingPrefs.cpp
 msgid "&Track Number"
 msgstr "លេខ​បទ"
-
-#: src/prefs/RecordingPrefs.cpp
-msgid "milliseconds (time of one analysis)"
-msgstr ""
 
 #. i18n-hint: The name of a frequency scale in psychoacoustics, abbreviates Equivalent Rectangular Bandwidth
 #: src/prefs/SpectrogramSettings.cpp
@@ -8979,10 +8776,6 @@ msgstr "កំណត់​អត្រា"
 #: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
 msgid "16000 Hz"
 msgstr "0100 ម៉ោង 060 នាទី 060>01000 វិនាទី"
-
-#: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
-msgid "352800 Hz"
-msgstr ""
 
 #: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
 msgid "&Other..."
@@ -10119,10 +9912,6 @@ msgid "Label text"
 msgstr "កែសម្រួល​ស្លាក"
 
 #: plug-ins/equalabel.ny
-msgid "3 (After Label)"
-msgstr ""
-
-#: plug-ins/equalabel.ny
 msgid "Message on completion"
 msgstr "បន្សំ​គ្រាប់ចុច"
 
@@ -10622,12 +10411,6 @@ msgstr "ធ្វើ​​វិភាគ"
 #: plug-ins/vocalrediso.ny
 msgid "Strength"
 msgstr "ប្រវែង"
-
-#: plug-ins/vocalrediso.ny
-msgid ""
-" - An ideal value for Stereo.\n"
-"                However, the center extraction depends also on the used reverb."
-msgstr ""
 
 #: plug-ins/vocoder.ny
 msgid "Processing Vocoder..."

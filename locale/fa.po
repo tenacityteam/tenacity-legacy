@@ -530,11 +530,6 @@ msgstr "اوداسیتی از قبل در حال اجرا است"
 msgid "Audacity Startup Failure"
 msgstr "پرونده‌های پروژهٔ اوداسیتی"
 
-#. i18n-hint: This runs a set of automatic tests on Audacity itself
-#: src/AudacityApp.cpp
-msgid "run self diagnostics"
-msgstr ""
-
 #. i18n-hint: This displays the Audacity version
 #: src/AudacityApp.cpp
 msgid "display Audacity version"
@@ -617,11 +612,6 @@ msgid ""
 "Error opening recording device.\n"
 "Error code: %s"
 msgstr "خطا در هنگام باز کردن دستگاه صدا. "
-
-#: src/AudioIO.cpp
-#, c-format
-msgid "Automated Recording Level Adjustment stopped. %.2f seems an acceptable volume."
-msgstr ""
 
 #: src/AudioIOBase.cpp
 #, c-format
@@ -985,10 +975,6 @@ msgid "Paste: %lld\n"
 msgstr "چسباندن\n"
 
 #: src/Benchmark.cpp
-msgid "Passed correctness check!\n"
-msgstr ""
-
-#: src/Benchmark.cpp
 msgid "Reading data again...\n"
 msgstr "مدت زمان صوت:\n"
 
@@ -1120,18 +1106,9 @@ msgstr "شکل‌یافته"
 msgid "Rectangular"
 msgstr "مستطیلی"
 
-#. i18n-hint a mathematical function named for C. F. Gauss
-#: src/FFT.cpp
-msgid "Gaussian(a=3.5)"
-msgstr ""
-
 #: src/FFmpeg.cpp
 #, c-format
 msgid "Location of '%s':"
-msgstr ""
-
-#: src/FFmpeg.cpp
-msgid "Do not show this warning again"
 msgstr ""
 
 #: src/FileException.cpp
@@ -1342,10 +1319,6 @@ msgstr "در حال ضبط"
 #: src/HelpText.cpp
 msgid "Recording - Setting the Recording Level"
 msgstr "در حال ضبط"
-
-#: src/HelpText.cpp
-msgid "<br><br>The version of Audacity you are using is a <b>Beta test version</b>."
-msgstr ""
 
 #: src/HelpText.cpp
 msgid "More:</b> Visit our [[https://wiki.audacityteam.org/index.php|Wiki]] for tips, tricks, extra tutorials and effects plug-ins."
@@ -1576,11 +1549,6 @@ msgstr "گیگابایت"
 msgid "B"
 msgstr "دسی‌بل"
 
-#. i18n-hint: Two, alternate names of a musical note in the 12-tone chromatic scale
-#: src/PitchName.cpp
-msgid "F♯/G♭"
-msgstr ""
-
 #: src/PluginManager.cpp
 #, c-format
 msgid "Overwrite the plug-in file %s?"
@@ -1711,25 +1679,12 @@ msgid "Close project immediately with no changes"
 msgstr "همین حالا پروژه بدون هیچ تغییری بسته شود"
 
 #: src/ProjectFSCK.cpp
-#, c-format
-msgid ""
-"Project check of \"%s\" folder \n"
-"detected %lld missing alias (.auf) blockfile(s). \n"
-"Audacity can fully regenerate these files \n"
-"from the current audio in the project."
-msgstr ""
-
-#: src/ProjectFSCK.cpp
 msgid "Fill in silence for missing display data (this session only)"
 msgstr "پر کردن داده‌های نمایشی مفقود با سکوت [فقط برای این نشست]"
 
 #: src/ProjectFSCK.cpp
 msgid "Close project immediately with no further changes"
 msgstr "همین حالا پروژه بدون هیچ تغییر دیگری بسته شود"
-
-#: src/ProjectFSCK.cpp
-msgid "Warning - Orphan Block File(s)"
-msgstr ""
 
 #. i18n-hint: This title appears on a dialog that indicates the progress
 #. in doing something.
@@ -1780,13 +1735,6 @@ msgstr "باز کردن/ایجاد پروندهٔ آزمایشی مممکن نی
 #: src/ProjectFileIO.cpp
 msgid "Unable to initialize the project file"
 msgstr "باز کردن/ایجاد پروندهٔ آزمایشی مممکن نیست"
-
-#. i18n-hint: An error message.  Don't translate blockfiles.
-#: src/ProjectFileIO.cpp
-msgid ""
-"Not authorized\n"
-"(Unable to work with the blockfiles)"
-msgstr ""
 
 #. i18n-hint: An error message.  Don't translate blockfiles.
 #: src/ProjectFileIO.cpp
@@ -2025,17 +1973,9 @@ msgstr "کیفیت "
 msgid "High Quality"
 msgstr "کیفیت "
 
-#: src/Screenshot.cpp
-msgid "Save images to:"
-msgstr ""
-
 #: src/Screenshot.cpp src/export/ExportMultiple.cpp
 msgid "Choose..."
 msgstr "انتخاب..."
-
-#: src/Screenshot.cpp
-msgid "Capture Window Plus"
-msgstr ""
 
 #: src/Screenshot.cpp
 msgid "All Effects"
@@ -2099,10 +2039,6 @@ msgstr "تابلوی شیار"
 msgid "Tracks"
 msgstr "شیارها"
 
-#: src/Screenshot.cpp
-msgid "One Hour"
-msgstr ""
-
 #: src/Sequence.cpp
 msgid "Warning - Truncating Overlong Block File"
 msgstr ""
@@ -2162,10 +2098,6 @@ msgstr "&بار کردن..."
 #: src/Tags.cpp
 msgid "Don't show this when exporting audio"
 msgstr "این اخطار دیگر نشان داده نشود"
-
-#: src/Tags.cpp
-msgid "Save Metadata As:"
-msgstr ""
 
 #: src/TempDirectory.cpp
 msgid "Unsuitable"
@@ -2293,10 +2225,6 @@ msgstr "ضبط زمان‌بندی شدهٔ اوداسیتی"
 #: src/TimerRecordDialog.cpp
 msgid "Save Timer Recording As"
 msgstr "در حال ضبط"
-
-#: src/TimerRecordDialog.cpp
-msgid "Error in Automatic Export"
-msgstr ""
 
 #: src/TimerRecordDialog.cpp
 msgid "Current Project"
@@ -3252,13 +3180,6 @@ msgstr "آستانه برای نوفه: "
 msgid "Max &Spike Width (higher is more sensitive):"
 msgstr "آستانه برای نوفه: "
 
-#. i18n-hint: Unless your language has a different convention for ratios,
-#. * like 8:1, leave as is.
-#: src/effects/Compressor.cpp
-#, c-format
-msgid "%.1f:1"
-msgstr ""
-
 #: src/effects/Compressor.cpp
 msgid "&Ratio:"
 msgstr "مدت زمان"
@@ -3313,20 +3234,8 @@ msgstr "انتخاب سکوت"
 msgid "&Help"
 msgstr "را&هنما"
 
-#. i18n-hint: dB abbreviates decibels
-#. RMS abbreviates root mean square, a certain averaging method
-#: src/effects/Contrast.cpp
-#, c-format
-msgid "Difference = %.2f RMS dB."
-msgstr ""
-
 #: src/effects/Contrast.cpp
 msgid "Measured foreground level"
-msgstr ""
-
-#. i18n-hint: WCAG abbreviates Web Content Accessibility Guidelines
-#: src/effects/Contrast.cpp
-msgid "WCAG 2.0 Success Criteria 1.4.7 Contrast Results"
 msgstr ""
 
 #: src/effects/Contrast.cpp
@@ -3344,10 +3253,6 @@ msgstr "فشرده‌ساز با دامنهٔ پویا"
 #: src/effects/Distortion.cpp
 msgid "Leveller"
 msgstr "ابزار ترازبندی"
-
-#: src/effects/Distortion.cpp
-msgid "Light Crunch Overdrive"
-msgstr ""
 
 #: src/effects/Distortion.cpp
 msgid "Leveller, Heavy, -70dB noise floor"
@@ -3404,11 +3309,6 @@ msgstr "در حال پردازش مخفی‌سازی خودکار..."
 #: src/effects/Distortion.cpp
 msgid "Degree of Levelling"
 msgstr "درجهٔ ترازبندی"
-
-#. i18n-hint: Control range.
-#: src/effects/Distortion.cpp
-msgid "(0 to 5):"
-msgstr ""
 
 #: src/effects/DtmfGen.cpp
 msgid "DTMF Tones"
@@ -3706,10 +3606,6 @@ msgid "D&efault"
 msgstr "&پیش‌فرض‌ها"
 
 #: src/effects/Equalization.cpp
-msgid "Error Loading EQ Curves"
-msgstr ""
-
-#: src/effects/Equalization.cpp
 msgid "D&elete..."
 msgstr ""
 
@@ -3920,10 +3816,6 @@ msgid "Window si&ze:"
 msgstr "نوع پنجره:"
 
 #: src/effects/NoiseReduction.cpp
-msgid "1024"
-msgstr ""
-
-#: src/effects/NoiseReduction.cpp
 msgid "2048 (default)"
 msgstr "۲۵۶ ‐ پیش‌فرض"
 
@@ -3962,10 +3854,6 @@ msgstr "نرمال‌سازی"
 #: src/effects/Normalize.cpp
 msgid "Removing DC offset...\n"
 msgstr "در حال حذف نوفه\n"
-
-#: src/effects/Normalize.cpp
-msgid "&Remove DC offset (center on 0.0 vertically)"
-msgstr ""
 
 #: src/effects/Normalize.cpp
 msgid "&Normalize peak amplitude to   "
@@ -4083,18 +3971,9 @@ msgstr "برعکس"
 msgid "Reverses the selected audio"
 msgstr "صدور صوت انتخاب‌شده بعنوان FLAC"
 
-#. i18n-hint: "infinite impulse response"
-#: src/effects/ScienFilter.cpp
-msgid "Performs IIR filtering that emulates analog filters"
-msgstr ""
-
 #: src/effects/ScienFilter.cpp
 msgid "To apply a filter, all selected tracks must have the same sample rate."
 msgstr "برای رسم طیف، همهٔ شیارهای انتخاب‌شده باید نرخ نمونه‌برداری یکسان داشته باشند."
-
-#: src/effects/ScienFilter.cpp
-msgid "Minimum S&topband Attenuation:"
-msgstr ""
 
 #: src/effects/ScoreAlignDialog.cpp
 msgid "Align MIDI to Audio"
@@ -4185,10 +4064,6 @@ msgstr "اعمال استریو به مونو"
 #: src/effects/TimeScale.cpp
 msgid "Sliding Stretch"
 msgstr "عامل میرایی:"
-
-#: src/effects/TimeScale.cpp
-msgid "(s&emitones) [-12 to 12]:"
-msgstr ""
 
 #: src/effects/ToneGen.cpp plug-ins/tremolo.ny
 msgid "Sine"
@@ -4404,12 +4279,6 @@ msgstr "ج&لوه"
 msgid "LV2 Effect Settings"
 msgstr "تنظیمات جلوه"
 
-#. i18n-hint: abbreviates
-#. "Linux Audio Developer's Simple Plugin API (LADSPA) version 2"
-#: src/effects/lv2/LV2Effect.h
-msgid "LV2"
-msgstr ""
-
 #: src/effects/lv2/LoadLV2.cpp
 msgid "LV2 Effects"
 msgstr "ج&لوه"
@@ -4541,10 +4410,6 @@ msgid "Vamp Effects"
 msgstr "ج&لوه"
 
 #: src/export/Export.cpp
-msgid "No format specific options"
-msgstr ""
-
-#: src/export/Export.cpp
 msgid "Export Audio"
 msgstr "صدور چندتایی"
 
@@ -4631,15 +4496,6 @@ msgstr "&تأیید"
 msgid "FFmpeg Error"
 msgstr "خطای LOF"
 
-#. i18n-hint: "codec" is short for a "coder-decoder" algorithm
-#: src/export/ExportFFmpeg.cpp
-#, c-format
-msgid ""
-"Can't open audio codec \"%s\" (0x%x)\n"
-"\n"
-"%s"
-msgstr ""
-
 #: src/export/ExportFFmpeg.cpp
 msgid "FFmpeg : ERROR - nAudioFrameSizeOut too large."
 msgstr ""
@@ -4660,10 +4516,6 @@ msgstr "نرخ بیت:"
 #: src/export/ExportFFmpegDialogs.cpp
 msgid "Quality (kbps):"
 msgstr "کیفیت "
-
-#: src/export/ExportFFmpegDialogs.cpp src/export/ExportFLAC.cpp
-msgid "7"
-msgstr ""
 
 #: src/export/ExportFFmpegDialogs.cpp
 msgid "On"
@@ -4715,15 +4567,7 @@ msgid "Replace preset '%s'?"
 msgstr "نام «%s» به «%s» تغییر کرد"
 
 #: src/export/ExportFFmpegDialogs.cpp
-msgid "WMA (version 2) Files (FFmpeg)"
-msgstr ""
-
-#: src/export/ExportFFmpegDialogs.cpp
 msgid "Configure custom FFmpeg options"
-msgstr ""
-
-#: src/export/ExportFFmpegDialogs.cpp
-msgid "Show All Codecs"
 msgstr ""
 
 #: src/export/ExportFFmpegDialogs.cpp
@@ -4732,26 +4576,11 @@ msgstr "زبان:"
 
 #: src/export/ExportFFmpegDialogs.cpp
 msgid ""
-"Sample rate (Hz)\n"
-"0 - don't change sample rate"
-msgstr ""
-
-#: src/export/ExportFFmpegDialogs.cpp
-msgid ""
 "Frame size\n"
 "Optional\n"
 "0 - default\n"
 "min - 16\n"
 "max - 65535"
-msgstr ""
-
-#: src/export/ExportFFmpegDialogs.cpp
-msgid ""
-"Maximal prediction order\n"
-"Optional\n"
-"-1 - default\n"
-"min - 0\n"
-"max - 32 (with LPC) or 4 (without LPC)"
 msgstr ""
 
 #: src/export/ExportFFmpegDialogs.cpp
@@ -4804,10 +4633,6 @@ msgid "Exporting the audio at %ld kbps"
 msgstr "صدور صوت انتخاب‌شده با سرعت %ld کیلوبیت در ثانیه"
 
 #: src/export/ExportMP3.cpp
-msgid "80-120 kbps"
-msgstr ""
-
-#: src/export/ExportMP3.cpp
 msgid "Extreme"
 msgstr ""
 
@@ -4827,10 +4652,6 @@ msgstr "کیفیت "
 #, c-format
 msgid "Where is %s?"
 msgstr "%s کجاست؟"
-
-#: src/export/ExportMP3.cpp
-msgid "MP3 Files"
-msgstr ""
 
 #: src/export/ExportMP3.cpp
 msgid "Could not open MP3 encoding library!"
@@ -4948,17 +4769,6 @@ msgstr "‏«‎%s» وارد شد"
 msgid "This version of Audacity was not compiled with %s support."
 msgstr "این نسخه از اوداسیتی از %s پشتیبانی نمی‌کند."
 
-#. i18n-hint: %s will be the filename
-#: src/import/Import.cpp
-#, c-format
-msgid ""
-"\"%s\" is a Musepack audio file. \n"
-"Audacity cannot open this type of file. \n"
-"If you think it might be an mp3 file, rename it to end with \".mp3\" \n"
-"and try importing it again. Otherwise you need to convert it to a supported audio \n"
-"format, such as WAV or AIFF."
-msgstr ""
-
 #: src/import/Import.cpp src/menus/ClipMenus.cpp
 #, c-format
 msgid "%s, %s"
@@ -4977,10 +4787,6 @@ msgid "Import Project"
 msgstr "صدور برچسب‌ها به صورت:"
 
 #: src/import/ImportAUP.cpp
-msgid "Invalid project 'sel1' attribute."
-msgstr ""
-
-#: src/import/ImportAUP.cpp
 #, c-format
 msgid "Couldn't find the project data folder: \"%s\""
 msgstr "پوشهٔ داده‌های پروژه پیدا نمی‌شود: «%s»"
@@ -4988,10 +4794,6 @@ msgstr "پوشهٔ داده‌های پروژه پیدا نمی‌شود: «%s»
 #: src/import/ImportAUP.cpp
 msgid "Project Import"
 msgstr "نرخ پروژه (هرتز):"
-
-#: src/import/ImportAUP.cpp
-msgid "Missing or invalid silentblockfile 'len' attribute."
-msgstr ""
 
 #: src/import/ImportAUP.cpp
 #, c-format
@@ -5093,15 +4895,7 @@ msgid "Internal logic fault"
 msgstr "نقص در منطق درونی"
 
 #: src/import/ImportPCM.cpp
-msgid "MAT4 (GNU Octave 2.0 / Matlab 4.2)"
-msgstr ""
-
-#: src/import/ImportPCM.cpp
 msgid "SD2 (Sound Designer II)"
-msgstr ""
-
-#: src/import/ImportPCM.cpp
-msgid "XI (FastTracker 2)"
 msgstr ""
 
 #: src/import/ImportPCM.cpp
@@ -5119,10 +4913,6 @@ msgstr "۲۴ بیتی"
 #: src/import/ImportPCM.cpp
 msgid "16 bit DPCM"
 msgstr "۱۶ بیتی"
-
-#: src/import/ImportQT.cpp
-msgid "Unable to get QuickTime sample size property"
-msgstr ""
 
 #: src/import/ImportRaw.cpp
 msgid "Import Raw Data"
@@ -7008,10 +6798,6 @@ msgid "Preferences for ExtImport"
 msgstr "ترجیحات..."
 
 #: src/prefs/ExtImportPrefs.cpp
-msgid "Move f&ilter up"
-msgstr ""
-
-#: src/prefs/ExtImportPrefs.cpp
 msgid "Rule deletion confirmation"
 msgstr ""
 
@@ -7060,10 +6846,6 @@ msgstr "۱۴۵- دسی‌بل (محدودهٔ PCM نمونه‌های ۲۴ بی�
 #: src/prefs/GUIPrefs.cpp src/prefs/TracksPrefs.cpp src/prefs/WaveformPrefs.cpp
 msgid "Display"
 msgstr "نمایش"
-
-#: src/prefs/GUIPrefs.cpp
-msgid "&Beep on completion of longer activities"
-msgstr ""
 
 #: src/prefs/GUIPrefs.h
 msgid "GUI"
@@ -7162,12 +6944,6 @@ msgstr "ترجیحات..."
 #: src/prefs/LibraryPrefs.cpp
 msgid "MP3 Library Version:"
 msgstr "نسخهٔ کتاب‌خانهٔ MP3"
-
-#: src/prefs/LibraryPrefs.cpp
-msgid ""
-"Audacity has automatically detected valid FFmpeg libraries.\n"
-"Do you still want to locate them manually?"
-msgstr ""
 
 #: src/prefs/MidiIOPrefs.cpp
 msgid "Preferences for MidiIO"
@@ -7381,10 +7157,6 @@ msgstr "طول"
 msgid "Cut Preview"
 msgstr "پیش‌نمایش برش"
 
-#: src/prefs/PlaybackPrefs.cpp
-msgid "Always scrub un&pinned"
-msgstr ""
-
 #: src/prefs/PrefsDialog.cpp
 msgid "Audacity Preferences"
 msgstr "ترجیحات اوداسیتی"
@@ -7449,10 +7221,6 @@ msgstr "صدای ضبط‌شده"
 #: src/prefs/RecordingPrefs.cpp
 msgid "&Track Number"
 msgstr "شمارهٔ شیار"
-
-#: src/prefs/RecordingPrefs.cpp
-msgid "milliseconds (time of one analysis)"
-msgstr ""
 
 #. i18n-hint: The name of a frequency scale in psychoacoustics, abbreviates Equivalent Rectangular Bandwidth
 #: src/prefs/SpectrogramSettings.cpp
@@ -8307,10 +8075,6 @@ msgstr "تنظیم نرخ"
 #: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
 msgid "16000 Hz"
 msgstr "0100 h 060 m 060>0100 s"
-
-#: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
-msgid "352800 Hz"
-msgstr ""
 
 #: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
 msgid "&Other..."
@@ -9411,10 +9175,6 @@ msgid "Label text"
 msgstr "ویرایش برچسب"
 
 #: plug-ins/equalabel.ny
-msgid "3 (After Label)"
-msgstr ""
-
-#: plug-ins/equalabel.ny
 msgid "Message on completion"
 msgstr "ترکیب کلید‌ها"
 
@@ -9894,12 +9654,6 @@ msgstr "تحلی&ل"
 #: plug-ins/vocalrediso.ny
 msgid "Strength"
 msgstr "طول"
-
-#: plug-ins/vocalrediso.ny
-msgid ""
-" - An ideal value for Stereo.\n"
-"                However, the center extraction depends also on the used reverb."
-msgstr ""
 
 #: plug-ins/vocoder.ny
 msgid "Processing Vocoder..."
