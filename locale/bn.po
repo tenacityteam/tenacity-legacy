@@ -52,10 +52,6 @@ msgstr "নির্বাচন"
 msgid "Select &Font..."
 msgstr "ফন্ট..."
 
-#: modules/mod-nyq-bench/NyqBench.cpp
-msgid "Open script"
-msgstr ""
-
 #: modules/mod-nyq-bench/NyqBench.cpp src/Benchmark.cpp
 msgid "Save"
 msgstr "সংরক্ষিত %s"
@@ -369,12 +365,6 @@ msgstr "সাঁটো\n"
 msgid "Reading data again...\n"
 msgstr "%d চ্যানেল\n"
 
-#: src/Dependencies.cpp
-msgid ""
-"Copying these files into your project will remove this dependency.\n"
-"This is safer, but needs more disk space."
-msgstr ""
-
 #: src/Dither.cpp src/commands/ScreenshotCommand.cpp src/effects/EffectManager.cpp src/effects/EffectUI.cpp src/prefs/TracksBehaviorsPrefs.cpp plug-ins/equalabel.ny plug-ins/sample-data-export.ny
 msgid "None"
 msgstr "কোনটিই নয়"
@@ -666,10 +656,6 @@ msgstr "প্লেব্যাক"
 #: src/Screenshot.cpp src/commands/ScreenshotCommand.cpp src/toolbars/SpectralSelectionBar.cpp
 msgid "Spectral Selection"
 msgstr "নির্বাচনের শেষে"
-
-#: src/ShuttleGui.cpp
-msgid "Dry Previe&w"
-msgstr ""
 
 #: src/Tags.cpp src/prefs/MousePrefs.cpp
 msgid "Comments"
@@ -1128,28 +1114,13 @@ msgstr "অভিমুখে"
 msgid "R&elease Time:"
 msgstr "একটি মিডি ফাইল নির্বাচন করুন"
 
-#. i18n-hint: dB abbreviates decibels
-#. * RMS abbreviates root mean square, a certain averaging method
-#: src/effects/Contrast.cpp
-#, c-format
-msgid "%.2f dB RMS"
-msgstr ""
-
 #: src/effects/Distortion.cpp
 msgid "Hard Clipping"
 msgstr ""
 
 #: src/effects/Distortion.cpp
-msgid "Parameter 1"
-msgstr ""
-
-#: src/effects/Distortion.cpp
 msgid "Distortion type:"
 msgstr "ইন্টারফেস"
-
-#: src/effects/DtmfGen.cpp
-msgid "Tone duration:"
-msgstr ""
 
 #: src/effects/Echo.cpp
 msgid "Echo"
@@ -1225,10 +1196,6 @@ msgid "Select Curve"
 msgstr "নির্বাচন"
 
 #: src/effects/Equalization.cpp
-msgid "Name is the same as the original one"
-msgstr ""
-
-#: src/effects/Equalization.cpp
 #, c-format
 msgid "Delete '%s'?"
 msgstr "মোছো"
@@ -1262,11 +1229,6 @@ msgstr "উইন্ডো"
 #: src/effects/NoiseReduction.cpp
 msgid "Window si&ze:"
 msgstr "উইন্ডো"
-
-#: src/effects/Normalize.cpp
-#, c-format
-msgid "Analyzing first track of stereo pair: %s"
-msgstr ""
 
 #: src/effects/Phaser.cpp
 msgid "Phaser"
@@ -1306,14 +1268,6 @@ msgstr "উল্টা"
 #: src/effects/Reverse.cpp
 msgid "Reverse"
 msgstr "উল্টা"
-
-#. i18n-hint: The English would be clearer if it had 'Duration' rather than 'Time'
-#. This is a NEW experimental effect, and until we have it documented in the user
-#. manual we don't have a clear description of what this parameter does.
-#. It is OK to leave it in English.
-#: src/effects/ScoreAlignDialog.cpp
-msgid "Line Time"
-msgstr ""
 
 #. i18n-hint: noun
 #: src/effects/Silence.cpp
@@ -1369,10 +1323,6 @@ msgstr "ইন্টারফেস"
 msgid "Location"
 msgstr "কাজ"
 
-#: src/effects/lv2/LV2Effect.cpp
-msgid "Couldn't instantiate effect"
-msgstr ""
-
 #: src/effects/nyquist/Nyquist.cpp
 msgid "Audio selection required."
 msgstr "নির্বাচনের শেষে"
@@ -1393,16 +1343,6 @@ msgstr "একটি মিডি ফাইল নির্বাচন কর�
 #: src/effects/nyquist/Nyquist.cpp
 msgid "Save file as"
 msgstr "সংরক্ষিত %s"
-
-#. i18n-hint: Some programmer-oriented terminology here:
-#. "Data" refers to the sound to be exported, "piped" means sent,
-#. and "standard in" means the default input stream that the external program,
-#. named by %f, will read.  And yes, it's %f, not %s -- this isn't actually used
-#. in the program as a format string.  Keep %f unchanged.
-#: src/export/ExportCL.cpp
-#, c-format
-msgid "Data will be piped to standard in. \"%f\" uses the file name in the export window."
-msgstr ""
 
 #: src/export/ExportFFmpeg.cpp
 msgid "FFmpeg : ERROR - nAudioFrameSizeOut too large."
@@ -1429,21 +1369,9 @@ msgstr "কাজ"
 msgid "Application:"
 msgstr "লাভ"
 
-#. i18n-hint: "codec" is short for a "coder-decoder" algorithm
-#: src/export/ExportFFmpegDialogs.cpp
-msgid "Codec:"
-msgstr ""
-
 #: src/export/ExportFFmpegDialogs.cpp
 msgid "Language:"
 msgstr "ভাষা (Language):"
-
-#: src/export/ExportFFmpegDialogs.cpp
-msgid ""
-"Maximum bit rate of the multiplexed stream\n"
-"Optional\n"
-"0 - default"
-msgstr ""
 
 #: src/export/ExportMP3.cpp
 msgid "170-210 kbps"
@@ -1457,10 +1385,6 @@ msgstr "মান"
 #: src/export/ExportMP3.cpp src/prefs/QualityPrefs.cpp src/prefs/QualityPrefs.h
 msgid "Quality"
 msgstr "মান"
-
-#: src/export/ExportMultiple.cpp
-msgid "Export Multiple"
-msgstr ""
 
 #: src/export/ExportOGG.cpp
 msgid "Unable to export - problem with metadata"
@@ -1482,17 +1406,8 @@ msgstr "সংরক্ষিত %s"
 msgid "Project Import"
 msgstr "নির্বাচনের শুরুতে"
 
-#. i18n-hint: You do not need to translate "LOF"
-#: src/import/ImportLOF.cpp
-msgid "Invalid track offset in LOF file."
-msgstr ""
-
 #: src/import/ImportPCM.cpp
 msgid "SF (Berkeley/IRCAM/CARL)"
-msgstr ""
-
-#: src/import/ImportQT.cpp
-msgid "Unable to set QuickTime discrete channels property"
 msgstr ""
 
 #: src/import/ImportRaw.cpp
@@ -2280,10 +2195,6 @@ msgid "Preferences for GUI"
 msgstr "প্লেব্যাক"
 
 #: src/prefs/ImportExportPrefs.cpp
-msgid "S&tandard"
-msgstr ""
-
-#: src/prefs/ImportExportPrefs.cpp
 msgid "&Beats"
 msgstr "পুনরাবৃত্তি"
 
@@ -2883,12 +2794,6 @@ msgstr "রেকর্ডিং হচ্ছে"
 #: src/widgets/Meter.cpp
 msgid "Playback Meter Options"
 msgstr "প্লেব্যাক"
-
-#. i18n-hint: Name of time display format that shows time in hours, minutes,
-#. * seconds and frames at 24 frames per second (commonly used for films)
-#: src/widgets/NumericTextCtrl.cpp
-msgid "hh:mm:ss + film frames (24 fps)"
-msgstr ""
 
 #: src/widgets/NumericTextCtrl.cpp
 msgid "(Use context menu to change format.)"
