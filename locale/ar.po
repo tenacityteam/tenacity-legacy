@@ -28,11 +28,6 @@ msgstr "اخرج من Tenacity"
 
 #: libraries/lib-strings/FutureStrings.h
 msgctxt "update dialog"
-msgid "&Install update"
-msgstr ""
-
-#: libraries/lib-strings/FutureStrings.h
-msgctxt "update dialog"
 msgid "Changelog"
 msgstr "القناة"
 
@@ -40,11 +35,6 @@ msgstr "القناة"
 msgctxt "update dialog"
 msgid "Error checking for update"
 msgstr "خطأ في حل شفرة الملف"
-
-#: libraries/lib-strings/FutureStrings.h
-msgctxt "update dialog"
-msgid "Update data was corrupted."
-msgstr ""
 
 #: libraries/lib-strings/FutureStrings.h
 msgctxt "update dialog"
@@ -75,12 +65,6 @@ msgstr "غير قادر على تحديد"
 #, c-format
 msgid "%s bytes"
 msgstr "بايتات"
-
-#. i18n-hint: Abbreviation for Mega bytes
-#: libraries/lib-strings/Internat.cpp
-#, c-format
-msgid "%s MB"
-msgstr ""
 
 #: libraries/lib-strings/Languages.cpp
 msgid "Simplified"
@@ -738,12 +722,6 @@ msgstr "شكر خاص:"
 msgid "%s website: "
 msgstr "موقع Tenacity الشبكي: "
 
-#. i18n-hint The registered trademark symbol (r) is substituted at %s
-#: src/AboutDialog.cpp
-#, c-format
-msgid "The Audacity%s trademark is used within this software for descriptive and informational purposes only."
-msgstr ""
-
 #: src/AdornedRulerPanel.cpp
 msgid "Timeline actions disabled during recording"
 msgstr "أفعال خط الوقت غير ممَكنة أثناء التسجيل"
@@ -988,14 +966,6 @@ msgstr "Tenacity يشتغل الآن"
 #: src/AudacityApp.cpp
 msgid "Audacity Startup Failure"
 msgstr "ملفات مشروع Tenacity"
-
-#: src/AudacityApp.cpp
-msgid ""
-"Unable to acquire lock semaphore.\n"
-"\n"
-"This is likely due to a resource shortage\n"
-"and a reboot may be required."
-msgstr ""
 
 #: src/AudacityApp.cpp
 msgid ""
@@ -1247,17 +1217,8 @@ msgid "Selected playback device: %d - %s\n"
 msgstr "جهاز التشغيل المختار: %d - %s\n"
 
 #: src/AudioIOBase.cpp
-msgid "Cannot check mutual sample rates without both devices.\n"
-msgstr ""
-
-#: src/AudioIOBase.cpp
 msgid "Unable to open Portmixer\n"
 msgstr "غير قادر على فتح ملف النوع.\n"
-
-#: src/AudioIOBase.cpp
-#, c-format
-msgid "%d - %s\n"
-msgstr ""
 
 #: src/AudioIOBase.cpp
 msgid "Available recording sources:\n"
@@ -1282,12 +1243,6 @@ msgstr "حجم التشغيل: %s (محاكى)\n"
 #: src/AudioIOBase.cpp
 msgid "Playback volume is native\n"
 msgstr "حجم التشغيل: %s (محاكى)\n"
-
-#. i18n-hint: Supported, meaning made available by the system
-#: src/AudioIOBase.cpp
-#, c-format
-msgid "Supports input: %d\n"
-msgstr ""
 
 #: src/AudioIOBase.cpp
 #, c-format
@@ -1407,10 +1362,6 @@ msgstr "تأثير"
 #: src/BatchCommands.cpp
 msgid "Menu Command (With Parameters)"
 msgstr "حرر المتغيرات"
-
-#: src/BatchCommands.cpp
-msgid "Menu Command (No Parameters)"
-msgstr ""
 
 #: src/BatchCommands.cpp
 #, c-format
@@ -2089,11 +2040,6 @@ msgstr "بلاكمان-هاريس"
 #: src/FFT.cpp
 msgid "Welch"
 msgstr "ولتش"
-
-#. i18n-hint a mathematical function named for C. F. Gauss
-#: src/FFT.cpp
-msgid "Gaussian(a=3.5)"
-msgstr ""
 
 #: src/FFmpeg.cpp
 msgid "FFmpeg support not compiled in"
@@ -3253,13 +3199,6 @@ msgstr ""
 msgid "The tracks selected for recording must all have the same sampling rate"
 msgstr "لتطبق مرشحة، يجب أن يكون لجميع المقاطع المختارة نفس معدل العينة."
 
-#: src/ProjectAudioManager.cpp src/menus/TransportMenus.cpp
-msgid ""
-"Too few tracks are selected for recording at this sample rate.\n"
-"(Audacity requires two channels at the same sample rate for\n"
-"each stereo track)"
-msgstr ""
-
 #: src/ProjectAudioManager.cpp
 msgid "Recorded Audio"
 msgstr "صوت مسجل"
@@ -3519,13 +3458,6 @@ msgid ""
 "%s"
 msgstr "غير قادر على قراءة ملف المسبقات."
 
-#. i18n-hint: An error message.
-#: src/ProjectFileIO.cpp
-msgid ""
-"Project is in a read only directory\n"
-"(Unable to create the required temporary files)"
-msgstr ""
-
 #: src/ProjectFileIO.cpp
 msgid "This is not an Audacity project file"
 msgstr "حفظ مشروع Tenacity"
@@ -3537,21 +3469,7 @@ msgstr "غير قادر على بدأ تيار MP3"
 #. i18n-hint: An error message.  Don't translate blockfiles.
 #: src/ProjectFileIO.cpp
 msgid ""
-"Project is read only\n"
-"(Unable to work with the blockfiles)"
-msgstr ""
-
-#. i18n-hint: An error message.  Don't translate blockfiles.
-#: src/ProjectFileIO.cpp
-msgid ""
 "Project is busy\n"
-"(Unable to work with the blockfiles)"
-msgstr ""
-
-#. i18n-hint: An error message.  Don't translate blockfiles.
-#: src/ProjectFileIO.cpp
-msgid ""
-"Some permissions issue\n"
 "(Unable to work with the blockfiles)"
 msgstr ""
 
@@ -3579,10 +3497,6 @@ msgstr "غير قادر على على تعيين حالة المجرى إلى م
 #: src/ProjectFileIO.cpp
 msgid "Failed to bind SQL parameter"
 msgstr "أخفقت في إيجاد المشفر"
-
-#: src/ProjectFileIO.cpp
-msgid "Destination project could not be detached"
-msgstr ""
 
 #: src/ProjectFileIO.cpp
 msgid "Copying Project"
@@ -3650,15 +3564,6 @@ msgid "Error Saving Project"
 msgstr "خطأ في حفظ المشروع"
 
 #: src/ProjectFileIO.cpp
-#, c-format
-msgid ""
-"The project failed to open, possibly due to limited space\n"
-"on the storage device.\n"
-"\n"
-"%s"
-msgstr ""
-
-#: src/ProjectFileIO.cpp
 msgid "Backing up project"
 msgstr "احفظ المشاريع الفارغة"
 
@@ -3702,10 +3607,6 @@ msgstr "تحذير - مشروع فارغ"
 #: src/ProjectFileManager.cpp
 msgid "Insufficient Disk Space"
 msgstr "مساحة القرص"
-
-#: src/ProjectFileManager.cpp
-msgid "The project exceeds the maximum size of 4GB when writing to a FAT32 formatted filesystem."
-msgstr ""
 
 #: src/ProjectFileManager.cpp src/commands/ScreenshotCommand.cpp
 #, c-format
@@ -3944,11 +3845,6 @@ msgstr "شريط تمرير أفقي"
 #: src/ProjectWindow.cpp
 msgid "Vertical Scrollbar"
 msgstr "شريط تمرير عمودي"
-
-#: src/Registry.cpp
-#, c-format
-msgid "Plug-in item at %s conflicts with a previously defined item and was discarded"
-msgstr ""
 
 #: src/Resample.cpp
 msgid "Low Quality (Fastest)"
@@ -4363,14 +4259,6 @@ msgstr "خطأ في حفظ ملف البطاقات"
 #: src/TempDirectory.cpp
 msgid "Unsuitable"
 msgstr "الوحدة غير ملائمة"
-
-#: src/TempDirectory.cpp
-#, c-format
-msgid ""
-"%s\n"
-"\n"
-"For tips on suitable drives, click the help button."
-msgstr ""
 
 #: src/Theme.cpp
 #, c-format
@@ -5183,11 +5071,6 @@ msgstr "علامات"
 msgid "Boxes"
 msgstr "صناديق"
 
-#. i18n-hint name of a computer programming language
-#: src/commands/GetInfoCommand.cpp src/commands/HelpCommand.cpp
-msgid "LISP"
-msgstr ""
-
 #: src/commands/GetInfoCommand.cpp src/commands/HelpCommand.cpp
 msgid "Brief"
 msgstr "وجيز"
@@ -5311,10 +5194,6 @@ msgstr "احفظ مشروعا."
 #: src/commands/OpenSaveCommands.h
 msgid "Saves a copy of current project."
 msgstr "احفظ مشروعا."
-
-#: src/commands/OpenSaveCommands.h
-msgid "Clears the log contents."
-msgstr ""
 
 #: src/commands/PreferenceCommands.cpp
 msgid "Get Preference"
@@ -5486,10 +5365,6 @@ msgstr "وقت النهاية:"
 #: src/commands/SelectCommand.cpp
 msgid "Select Frequencies"
 msgstr "اختر ترددات"
-
-#: src/commands/SelectCommand.cpp
-msgid "Low:"
-msgstr ""
 
 #: src/commands/SelectCommand.cpp
 msgid "Select Tracks"
@@ -5712,10 +5587,6 @@ msgstr "العرض:"
 #: src/commands/SetTrackInfoCommand.cpp
 msgid "Scale:"
 msgstr "المقياس:"
-
-#: src/commands/SetTrackInfoCommand.cpp
-msgid "VZoom Top:"
-msgstr ""
 
 #: src/commands/SetTrackInfoCommand.cpp
 msgid "Use Spectral Prefs"
@@ -6164,13 +6035,6 @@ msgstr "%.2f ثواني"
 msgid "%.1f secs"
 msgstr "%.1f ثواني"
 
-#. i18n-hint: Unless your language has a different convention for ratios,
-#. * like 8:1, leave as is.
-#: src/effects/Compressor.cpp
-#, c-format
-msgid "%.1f:1"
-msgstr ""
-
 #: src/effects/Compressor.cpp
 #, c-format
 msgid "Ratio %.0f to 1"
@@ -6345,12 +6209,6 @@ msgstr "اختلاف:"
 #: src/effects/Contrast.cpp src/menus/HelpMenus.cpp src/prefs/GUIPrefs.cpp
 msgid "&Help"
 msgstr "مساعدة"
-
-#. i18n-hint: dB abbreviates decibels
-#: src/effects/Contrast.cpp
-#, c-format
-msgid "%s dB"
-msgstr ""
 
 #: src/effects/Contrast.cpp
 msgid "zero"
@@ -7180,10 +7038,6 @@ msgid "Bass Cut"
 msgstr "رفع الباس"
 
 #: src/effects/Equalization.cpp
-msgid "RIAA"
-msgstr ""
-
-#: src/effects/Equalization.cpp
 msgid "Telephone"
 msgstr "هاتف"
 
@@ -7601,10 +7455,6 @@ msgid "&Normalize"
 msgstr "طبع"
 
 #: src/effects/Loudness.cpp
-msgid "LUFS"
-msgstr ""
-
-#: src/effects/Loudness.cpp
 msgid "Normalize &stereo channels independently"
 msgstr "طبع القنوات الثنائية على حدة"
 
@@ -7830,15 +7680,7 @@ msgid "Window si&ze:"
 msgstr "حجم النافذة:"
 
 #: src/effects/NoiseReduction.cpp src/prefs/SpectrumPrefs.cpp
-msgid "16"
-msgstr ""
-
-#: src/effects/NoiseReduction.cpp src/prefs/SpectrumPrefs.cpp
 msgid "64"
-msgstr ""
-
-#: src/effects/NoiseReduction.cpp src/prefs/SpectrumPrefs.cpp
-msgid "256"
 msgstr ""
 
 #: src/effects/NoiseReduction.cpp
@@ -7848,10 +7690,6 @@ msgstr ""
 #: src/effects/NoiseReduction.cpp
 msgid "2048 (default)"
 msgstr "2048 (أساسي)"
-
-#: src/effects/NoiseReduction.cpp src/prefs/SpectrumPrefs.cpp
-msgid "8192"
-msgstr ""
 
 #: src/effects/NoiseReduction.cpp
 msgid "S&teps per window:"
@@ -8272,10 +8110,6 @@ msgid "Chebyshev Type II"
 msgstr "Chebyshev نوع II"
 
 #: src/effects/ScienFilter.cpp
-msgid "Highpass"
-msgstr ""
-
-#: src/effects/ScienFilter.cpp
 msgid "Classic Filters"
 msgstr "المراشح الكلاسيكية"
 
@@ -8298,10 +8132,6 @@ msgid "O&rder:"
 msgstr "الترتيب:"
 
 #: src/effects/ScienFilter.cpp
-msgid "Passband Ripple (dB)"
-msgstr ""
-
-#: src/effects/ScienFilter.cpp
 msgid "&Subtype:"
 msgstr "النوع الفرعي:"
 
@@ -8312,10 +8142,6 @@ msgstr "حد القطع (هرتز)"
 #: src/effects/ScienFilter.cpp
 msgid "C&utoff:"
 msgstr "حد القطع:"
-
-#: src/effects/ScienFilter.cpp
-msgid "Minimum S&topband Attenuation (dB)"
-msgstr ""
 
 #: src/effects/ScoreAlignDialog.cpp
 msgid "Align MIDI to Audio"
@@ -8801,10 +8627,6 @@ msgstr ""
 "  إلى %s."
 
 #: src/effects/audiounits/AudioUnitEffect.cpp
-msgid "Standard Audio Unit preset file"
-msgstr ""
-
-#: src/effects/audiounits/AudioUnitEffect.cpp
 #, c-format
 msgid ""
 "Could not export \"%s\" preset\n"
@@ -8839,10 +8661,6 @@ msgstr "تحويل معدل العينة"
 #, c-format
 msgid "Failed to write XML preset to \"%s\""
 msgstr "أخفقت في تدوين %s"
-
-#: src/effects/audiounits/AudioUnitEffect.cpp
-msgid "Failed to create property list for preset"
-msgstr ""
 
 #. i18n-hint: the name of an Apple audio software protocol
 #. i18n-hint: Audio Unit is the name of an Apple audio software protocol
@@ -8984,11 +8802,6 @@ msgstr "مخرجات التنقيح: "
 #: src/effects/nyquist/Nyquist.cpp
 msgid "Processing complete."
 msgstr "أنجزت المعالجة."
-
-#. i18n-hint: Don't translate ';type tool'.
-#: src/effects/nyquist/Nyquist.cpp
-msgid "';type tool' effects cannot return labels from Nyquist.\n"
-msgstr ""
 
 #. i18n-hint: "%s" is replaced by name of plug-in.
 #: src/effects/nyquist/Nyquist.cpp
@@ -9380,10 +9193,6 @@ msgstr ""
 "لا يستطيع FFmpeg إيجاد مشفر الصوت 0x%x.\n"
 "على الأرجح أن يكون دعم هذا المشفر غير مُكون."
 
-#: src/export/ExportFFmpeg.cpp
-msgid "The codec reported an invalid parameter (EINVAL)"
-msgstr ""
-
 #. i18n-hint: "codec" is short for a "coder-decoder" algorithm
 #: src/export/ExportFFmpeg.cpp
 #, c-format
@@ -9486,16 +9295,8 @@ msgstr "معدل البت:"
 msgid "Quality (kbps):"
 msgstr "الجودة (kbps):"
 
-#: src/export/ExportFFmpegDialogs.cpp
-msgid "0"
-msgstr ""
-
 #: src/export/ExportFFmpegDialogs.cpp src/export/ExportFLAC.cpp
 msgid "3"
-msgstr ""
-
-#: src/export/ExportFFmpegDialogs.cpp src/export/ExportFLAC.cpp
-msgid "5"
 msgstr ""
 
 #: src/export/ExportFFmpegDialogs.cpp src/export/ExportFLAC.cpp
@@ -9523,24 +9324,12 @@ msgid "Low Delay"
 msgstr "تأخير"
 
 #: src/export/ExportFFmpegDialogs.cpp
-msgid "5 ms"
-msgstr ""
-
-#: src/export/ExportFFmpegDialogs.cpp
 msgid "20 ms"
-msgstr ""
-
-#: src/export/ExportFFmpegDialogs.cpp
-msgid "60 ms"
 msgstr ""
 
 #: src/export/ExportFFmpegDialogs.cpp
 msgid "Mediumband"
 msgstr "متوسط"
-
-#: src/export/ExportFFmpegDialogs.cpp
-msgid "Super Wideband"
-msgstr ""
 
 #: src/export/ExportFFmpegDialogs.cpp
 msgid "Fullband"
@@ -10016,11 +9805,6 @@ msgstr "لايوجد علامات للتصدير."
 msgid "Select xml file to export presets into"
 msgstr "اختر ملف XML لتصدر المحددات مسبقا إليه"
 
-#. i18n-hint: "codec" is short for a "coder-decoder" algorithm
-#: src/export/ExportFFmpegDialogs.cpp
-msgid "Incompatible format and codec"
-msgstr ""
-
 #: src/export/ExportFFmpegDialogs.cpp
 msgid "Failed to guess format"
 msgstr "أخفقت في تخمين الصيغة"
@@ -10105,15 +9889,7 @@ msgid "220-260 kbps (Best Quality)"
 msgstr "%s kbps (أفضل جودة)"
 
 #: src/export/ExportMP3.cpp
-msgid "170-210 kbps"
-msgstr ""
-
-#: src/export/ExportMP3.cpp
 msgid "145-185 kbps"
-msgstr ""
-
-#: src/export/ExportMP3.cpp
-msgid "95-135 kbps"
 msgstr ""
 
 #: src/export/ExportMP3.cpp
@@ -10123,10 +9899,6 @@ msgstr "%.2f kbps"
 #: src/export/ExportMP3.cpp
 msgid "45-85 kbps (Smaller files)"
 msgstr "%s kbps (ملفات أصغر)"
-
-#: src/export/ExportMP3.cpp
-msgid "Extreme, 220-260 kbps"
-msgstr ""
 
 #: src/export/ExportMP3.cpp
 msgid "Medium, 145-185 kbps"
@@ -10493,10 +10265,6 @@ msgid "Unable to export - rate or quality problem"
 msgstr "غير قادر على تعيين جودة التقديم لـ QuickTime"
 
 #: src/export/ExportOGG.cpp
-msgid "Unable to export - problem initialising"
-msgstr ""
-
-#: src/export/ExportOGG.cpp
 msgid "Unable to export - problem with packets"
 msgstr ""
 
@@ -10511,10 +10279,6 @@ msgstr "أصدر الصوت المختار كـ Ogg Vorbis"
 #: src/export/ExportOGG.cpp
 msgid "Exporting the audio as Ogg Vorbis"
 msgstr "أصدر الصوت كـ Ogg Vorbis"
-
-#: src/export/ExportPCM.cpp src/import/ImportPCM.cpp
-msgid "WAV (Microsoft)"
-msgstr ""
 
 #: src/export/ExportPCM.cpp
 msgid "Header:"
@@ -10531,10 +10295,6 @@ msgstr "ملفات غير مضغوطة اخرى"
 #: src/export/ExportPCM.cpp
 msgid "Error Exporting"
 msgstr "خطأ في الاستوراد"
-
-#: src/export/ExportPCM.cpp
-msgid "GSM 6.10 requires mono"
-msgstr ""
 
 #: src/export/ExportPCM.cpp
 msgid "Cannot export audio in this format."
@@ -10802,15 +10562,7 @@ msgid "Internal error in importer...tag not recognized"
 msgstr "خطأ داخلي تم تقريره بواسطة عملية المحاذاة."
 
 #: src/import/ImportAUP.cpp
-msgid "Invalid project 'vpos' attribute."
-msgstr ""
-
-#: src/import/ImportAUP.cpp
 msgid "Invalid project 'zoom' attribute."
-msgstr ""
-
-#: src/import/ImportAUP.cpp
-msgid "Invalid project 'sel1' attribute."
 msgstr ""
 
 #: src/import/ImportAUP.cpp
@@ -10835,19 +10587,7 @@ msgid "Invalid sequence 'numsamples' attribute."
 msgstr "معدَّل عينة غير صالح"
 
 #: src/import/ImportAUP.cpp
-#, c-format
-msgid ""
-"Missing project file %s\n"
-"\n"
-"Inserting silence instead."
-msgstr ""
-
-#: src/import/ImportAUP.cpp
 msgid "Missing or invalid silentblockfile 'len' attribute."
-msgstr ""
-
-#: src/import/ImportAUP.cpp
-msgid "Missing or invalid pcmaliasblockfile 'aliasstart' attribute."
 msgstr ""
 
 #: src/import/ImportAUP.cpp
@@ -11010,17 +10750,9 @@ msgstr "خطأ منطقي داخلي"
 msgid "WAV, AIFF, and other uncompressed types"
 msgstr "AIFF ،WAV و أنواع أخرى غير مضغوطة"
 
-#: src/import/ImportPCM.cpp
-msgid "AVR (Audio Visual Research)"
-msgstr ""
-
 #. i18n-hint: "codec" is short for a "coder-decoder" algorithm
 #: src/import/ImportPCM.cpp
 msgid "FLAC (FLAC Lossless Audio Codec)"
-msgstr ""
-
-#: src/import/ImportPCM.cpp
-msgid "IFF (Amiga IFF/SVX8/SV16)"
 msgstr ""
 
 #: src/import/ImportPCM.cpp
@@ -11028,15 +10760,7 @@ msgid "MAT5 (GNU Octave 2.1 / Matlab 5.0)"
 msgstr ""
 
 #: src/import/ImportPCM.cpp
-msgid "OGG (OGG Container format)"
-msgstr ""
-
-#: src/import/ImportPCM.cpp
 msgid "PVF (Portable Voice Format)"
-msgstr ""
-
-#: src/import/ImportPCM.cpp
-msgid "RF64 (RIFF 64)"
 msgstr ""
 
 #: src/import/ImportPCM.cpp
@@ -11044,15 +10768,7 @@ msgid "SDS (Midi Sample Dump Standard)"
 msgstr ""
 
 #: src/import/ImportPCM.cpp
-msgid "VOC (Creative Labs)"
-msgstr ""
-
-#: src/import/ImportPCM.cpp
 msgid "WAV (NIST Sphere)"
-msgstr ""
-
-#: src/import/ImportPCM.cpp
-msgid "WVE (Psion Series 3)"
 msgstr ""
 
 #: src/import/ImportPCM.cpp
@@ -11066,10 +10782,6 @@ msgstr "16-بِت PCM"
 #: src/import/ImportPCM.cpp
 msgid "Signed 24 bit PCM"
 msgstr "24-بِت PCM"
-
-#: src/import/ImportPCM.cpp
-msgid "Unsigned 8 bit PCM"
-msgstr ""
 
 #: src/import/ImportPCM.cpp
 msgid "32 bit float"
@@ -11088,15 +10800,7 @@ msgid "A-Law"
 msgstr "قانون A"
 
 #: src/import/ImportPCM.cpp
-msgid "Microsoft ADPCM"
-msgstr ""
-
-#: src/import/ImportPCM.cpp
 msgid "32kbs G721 ADPCM"
-msgstr ""
-
-#: src/import/ImportPCM.cpp
-msgid "12 bit DWVW"
 msgstr ""
 
 #: src/import/ImportPCM.cpp
@@ -12231,10 +11935,6 @@ msgstr "اختر..."
 #: src/menus/PluginMenus.cpp
 msgid "Set Track Status..."
 msgstr "حدد حالة المقطع..."
-
-#: src/menus/PluginMenus.cpp
-msgid "Set Track Visuals..."
-msgstr ""
 
 #: src/menus/PluginMenus.cpp
 msgid "Get Preference..."
@@ -13509,10 +13209,6 @@ msgid "Default directories"
 msgstr "المجلدات"
 
 #: src/prefs/DirectoriesPrefs.cpp
-msgid "O&pen:"
-msgstr ""
-
-#: src/prefs/DirectoriesPrefs.cpp
 msgid "&Browse..."
 msgstr "تصفح..."
 
@@ -13862,10 +13558,6 @@ msgstr "احتفظ بالعلامات إذا كان الاختيار يتلقف 
 #: src/prefs/GUIPrefs.cpp
 msgid "B&lend system and Audacity theme"
 msgstr "ادمح موضوع النظام و Tenacity"
-
-#: src/prefs/GUIPrefs.cpp
-msgid "Never use comma as decimal point"
-msgstr ""
 
 #: src/prefs/GUIPrefs.cpp
 msgid "Show Timeline Tooltips"
@@ -14449,10 +14141,6 @@ msgstr "المدة القصيرة:"
 msgid "Lo&ng period:"
 msgstr "المدة الطويلة:"
 
-#: src/prefs/PlaybackPrefs.cpp
-msgid "&Micro-fades"
-msgstr ""
-
 #: src/prefs/PrefsDialog.cpp
 msgid "Audacity Preferences"
 msgstr "تفضيلات Tenacity"
@@ -14618,10 +14306,6 @@ msgstr "0 تعني لا نهائي"
 #: src/prefs/RecordingPrefs.cpp
 msgid "Punch and Roll Recording"
 msgstr "تسجيل مفعل بالصوت"
-
-#: src/prefs/RecordingPrefs.cpp
-msgid "Cross&fade:"
-msgstr ""
 
 #. i18n-hint: The name of a frequency scale in psychoacoustics, named for Heinrich Barkhausen
 #: src/prefs/SpectrogramSettings.cpp
@@ -15020,10 +14704,6 @@ msgstr "20 جزء من الثانية"
 #: src/prefs/TracksPrefs.cpp
 msgid "50ths of Seconds"
 msgstr "50 جزء من الثانية"
-
-#: src/prefs/TracksPrefs.cpp
-msgid "500ths of Seconds"
-msgstr ""
 
 #: src/prefs/TracksPrefs.cpp
 msgid "MilliSeconds"
@@ -16019,10 +15699,6 @@ msgstr "انقر و اسحب لتعدل، نقرة-ثنائية لـ"
 msgid "Click and drag to rearrange sub-views"
 msgstr "انقر و اسحب لتحريك المقطع في الوقت"
 
-#: src/tracks/playabletrack/wavetrack/ui/WaveTrackView.cpp
-msgid "Close sub-view"
-msgstr ""
-
 #: src/tracks/playabletrack/wavetrack/ui/WaveformVZoomHandle.cpp
 msgid "Zoom x1/2"
 msgstr "زوم 1/2x"
@@ -16809,10 +16485,6 @@ msgstr "0100000>0100 هرتز"
 msgid "kHz"
 msgstr "ألف هرتز"
 
-#: src/widgets/NumericTextCtrl.cpp
-msgid "hertz"
-msgstr ""
-
 #. i18n-hint: Name of display format that shows log of frequency
 #. * in octaves
 #: src/widgets/NumericTextCtrl.cpp
@@ -17034,22 +16706,10 @@ msgstr "الاختيار الطيفي"
 msgid "Filtering..."
 msgstr "أرشح..."
 
-#: plug-ins/SpectralEditMulti.ny plug-ins/SpectralEditParametricEQ.ny plug-ins/SpectralEditShelves.ny plug-ins/StudioFadeOut.ny plug-ins/adjustable-fade.ny plug-ins/beat.ny plug-ins/crossfadeclips.ny plug-ins/crossfadetracks.ny plug-ins/delay.ny plug-ins/eq-xml-to-txt-converter.ny plug-ins/equalabel.ny plug-ins/highpass.ny plug-ins/limiter.ny plug-ins/lowpass.ny plug-ins/notch.ny plug-ins/nyquist-plug-in-installer.ny plug-ins/pluck.ny plug-ins/rhythmtrack.ny plug-ins/rissetdrum.ny plug-ins/sample-data-export.ny plug-ins/sample-data-import.ny plug-ins/spectral-delete.ny plug-ins/tremolo.ny plug-ins/vocalrediso.ny plug-ins/vocoder.ny
-msgid "Released under terms of the GNU General Public License version 2"
-msgstr ""
-
 #: plug-ins/SpectralEditMulti.ny plug-ins/SpectralEditParametricEQ.ny plug-ins/SpectralEditShelves.ny
 #, lisp-format
 msgid "~aPlease select frequencies."
 msgstr "~aمن فضلك اختر ترددات."
-
-#: plug-ins/SpectralEditMulti.ny
-#, lisp-format
-msgid ""
-"~aNotch filter parameters cannot be applied.~%~\n"
-"                      Try increasing the low frequency bound~%~\n"
-"                      or reduce the filter 'Width'."
-msgstr ""
 
 #: plug-ins/SpectralEditMulti.ny plug-ins/SpectralEditParametricEQ.ny plug-ins/SpectralEditShelves.ny plug-ins/nyquist-plug-in-installer.ny
 #, lisp-format
@@ -17066,21 +16726,8 @@ msgstr "الزيادة (dB)"
 
 #: plug-ins/SpectralEditParametricEQ.ny
 #, lisp-format
-msgid "~aHigh frequency is undefined."
-msgstr ""
-
-#: plug-ins/SpectralEditParametricEQ.ny
-#, lisp-format
 msgid "~aCenter frequency must be above 0 Hz."
 msgstr "~aيجب أن يكون التردد المركزي فوق 0 هرتز."
-
-#: plug-ins/SpectralEditParametricEQ.ny plug-ins/SpectralEditShelves.ny
-#, lisp-format
-msgid ""
-"~aBandwidth is zero (the upper and lower~%~\n"
-"                         frequencies are both ~a Hz).~%~\n"
-"                         Please select a frequency range."
-msgstr ""
 
 #: plug-ins/SpectralEditShelves.ny
 msgid "Spectral edit shelves"
@@ -17164,10 +16811,6 @@ msgid "Linear Out"
 msgstr "خطي"
 
 #: plug-ins/adjustable-fade.ny
-msgid "Exponential Out"
-msgstr ""
-
-#: plug-ins/adjustable-fade.ny
 msgid "Logarithmic In"
 msgstr "لوغارثمي للداخل"
 
@@ -17235,10 +16878,6 @@ msgid "Reconstructing clips..."
 msgstr "حذف النقرة و الفرقعة..."
 
 #: plug-ins/clipfix.ny
-msgid "Licensing confirmed under terms of the GNU General Public License version 2"
-msgstr ""
-
-#: plug-ins/clipfix.ny
 msgid "Reduce amplitude to allow for restored peaks (dB)"
 msgstr ""
 
@@ -17296,10 +16935,6 @@ msgstr "منحنى خاص"
 msgid "Fade direction"
 msgstr "اتجاه الخبو"
 
-#: plug-ins/crossfadetracks.ny
-msgid "Alternating In / Out"
-msgstr ""
-
 #: plug-ins/delay.ny
 msgid "Delay"
 msgstr "تأخير"
@@ -17315,10 +16950,6 @@ msgstr "نوع التأخير"
 #: plug-ins/delay.ny
 msgid "Regular"
 msgstr "اعتيادي"
-
-#: plug-ins/delay.ny
-msgid "Reverse Bouncing Ball"
-msgstr ""
 
 #: plug-ins/delay.ny
 msgid "Delay time (seconds)"
@@ -17378,10 +17009,6 @@ msgstr "غير قادر على فتح ملف النوع."
 msgid "Error.~%File cannot be written:~%\"~a.txt\""
 msgstr "خطأ. ~%~s لا يمكن كتابته.~%"
 
-#: plug-ins/equalabel.ny
-msgid "Adding equally-spaced labels to the label track..."
-msgstr ""
-
 #. i18n-hint: Refers to the controls 'Number of labels' and 'Label interval'.
 #: plug-ins/equalabel.ny
 msgid "Create labels based on"
@@ -17415,10 +17042,6 @@ msgstr "طول منطقة العلامة (ثواني)"
 #: plug-ins/equalabel.ny plug-ins/label-sounds.ny
 msgid "Label text"
 msgstr "نص العلامة"
-
-#: plug-ins/equalabel.ny
-msgid "None - Text Only"
-msgstr ""
 
 #: plug-ins/equalabel.ny
 msgid "1 (Before Label)"
@@ -17469,11 +17092,6 @@ msgstr "علامات المناطق"
 msgid "point labels"
 msgstr "علامات النقاط"
 
-#: plug-ins/equalabel.ny
-#, lisp-format
-msgid "~aRegion length = ~a seconds."
-msgstr ""
-
 #: plug-ins/highpass.ny
 msgid "Performing High-Pass Filter..."
 msgstr ""
@@ -17485,10 +17103,6 @@ msgstr "حذف الضجيج من طرف دومينيك مازوني"
 #: plug-ins/highpass.ny plug-ins/lowpass.ny plug-ins/notch.ny plug-ins/rissetdrum.ny plug-ins/tremolo.ny
 msgid "Frequency (Hz)"
 msgstr "تردد (هرتز)"
-
-#: plug-ins/highpass.ny plug-ins/lowpass.ny
-msgid "6 dB"
-msgstr ""
 
 #: plug-ins/highpass.ny plug-ins/lowpass.ny
 msgid "24 dB"
@@ -17548,16 +17162,8 @@ msgid "Point after sound"
 msgstr "ثنائي مشترك"
 
 #: plug-ins/label-sounds.ny
-msgid "Region between sounds"
-msgstr ""
-
-#: plug-ins/label-sounds.ny
 msgid "Maximum leading silence"
 msgstr "أجد السكون..."
-
-#: plug-ins/label-sounds.ny
-msgid "Sound ##1"
-msgstr ""
 
 #: plug-ins/label-sounds.ny
 #, lisp-format
@@ -17569,11 +17175,6 @@ msgstr ""
 #, lisp-format
 msgid "Error.~%Selection must be less than ~a."
 msgstr "يجب أن يكون الاختيار أكير من %d عينة."
-
-#: plug-ins/label-sounds.ny
-#, lisp-format
-msgid "Labelling regions between sounds requires~%at least two sounds.~%Only one sound detected."
-msgstr ""
 
 #: plug-ins/limiter.ny
 msgid "Limiter"
@@ -17605,22 +17206,12 @@ msgid "Hard Clip"
 msgstr "قطع شديد"
 
 #: plug-ins/limiter.ny
-msgid ""
-"Input Gain (dB)\n"
-"Right channel"
-msgstr ""
-
-#: plug-ins/limiter.ny
 msgid "Limit to (dB)"
 msgstr "حد إلى (dB)"
 
 #: plug-ins/limiter.ny
 msgid "Apply Make-up Gain"
 msgstr "زيادة التعويض"
-
-#: plug-ins/lowpass.ny
-msgid "Performing Low-Pass Filter..."
-msgstr ""
 
 #: plug-ins/noisegate.ny
 msgid "Noise Gate"
@@ -17669,20 +17260,8 @@ msgstr "وقت الهجوم/التضاؤل"
 #: plug-ins/noisegate.ny
 #, lisp-format
 msgid ""
-"Error.\n"
-"Selection too long.\n"
-"Maximum length is ~a."
-msgstr ""
-
-#: plug-ins/noisegate.ny
-#, lisp-format
-msgid ""
 "Peak based on first ~a seconds ~a dB~%\n"
 "Suggested Threshold Setting ~a dB."
-msgstr ""
-
-#: plug-ins/notch.ny
-msgid "Notch Filter"
 msgstr ""
 
 #: plug-ins/notch.ny
@@ -17732,11 +17311,6 @@ msgstr "غير مسموح"
 
 #: plug-ins/nyquist-plug-in-installer.ny
 #, lisp-format
-msgid "Success.~%Files written to:~%~s~%"
-msgstr ""
-
-#: plug-ins/nyquist-plug-in-installer.ny
-#, lisp-format
 msgid "Warning.~%Failed to copy some files:~%"
 msgstr "أخفقت في إزالة %s"
 
@@ -17751,10 +17325,6 @@ msgstr "اختر ملفا"
 #: plug-ins/nyquist-plug-in-installer.ny
 msgid "Unsupported file type:"
 msgstr "نوع ملف غير مدعوم:"
-
-#: plug-ins/nyquist-plug-in-installer.ny
-msgid "Cannot be written to plug-ins folder:"
-msgstr ""
 
 #: plug-ins/pluck.ny
 msgid "Pluck"
@@ -17771,10 +17341,6 @@ msgstr "ديفيد آر.سكاي"
 #: plug-ins/pluck.ny
 msgid "Fade-out type"
 msgstr "نوع الخبو الخارج"
-
-#: plug-ins/pluck.ny
-msgid "Gradual"
-msgstr ""
 
 #: plug-ins/pluck.ny
 msgid "Duration (60s max)"
@@ -17801,10 +17367,6 @@ msgid "Swing amount"
 msgstr "كمية الأرجحة"
 
 #: plug-ins/rhythmtrack.ny
-msgid "Set 'Number of bars' to zero to enable the 'Rhythm track duration'."
-msgstr ""
-
-#: plug-ins/rhythmtrack.ny
 msgid "1 - 1000 bars"
 msgstr ""
 
@@ -17825,10 +17387,6 @@ msgid "Beat sound"
 msgstr "النقرات"
 
 #: plug-ins/rhythmtrack.ny
-msgid "Ping (short)"
-msgstr ""
-
-#: plug-ins/rhythmtrack.ny
 msgid "Cowbell"
 msgstr ""
 
@@ -17841,17 +17399,7 @@ msgid "Noise Click"
 msgstr "الحد الأدنى للضجيج"
 
 #: plug-ins/rhythmtrack.ny
-msgid "Drip (long)"
-msgstr ""
-
-#: plug-ins/rhythmtrack.ny
 msgid "18 - 116"
-msgstr ""
-
-#: plug-ins/rhythmtrack.ny
-msgid ""
-"Set either 'Number of bars' or\n"
-"'Rhythm track duration' to greater than zero."
 msgstr ""
 
 #: plug-ins/rissetdrum.ny
@@ -17982,20 +17530,10 @@ msgstr "~aكتبت البيانات إلى:~%~a"
 
 #: plug-ins/sample-data-export.ny
 #, lisp-format
-msgid "~a   ~a~%~aSample Rate: ~a Hz.~%Length processed: ~a samples ~a seconds.~a"
-msgstr ""
-
-#: plug-ins/sample-data-export.ny
-#, lisp-format
 msgid ""
 "~a~%Sample Rate: ~a Hz. Sample values on ~a scale. ~a.~%~aLength processed: ~a ~\n"
 "                  samples, ~a seconds.~%Peak amplitude: ~a (linear) ~a dB.  Unweighted RMS: ~a dB.~%~\n"
 "                  DC offset: ~a~a"
-msgstr ""
-
-#: plug-ins/sample-data-export.ny
-#, lisp-format
-msgid "Left: ~a lin, ~a dB | Right: ~a lin, ~a dB."
 msgstr ""
 
 #: plug-ins/sample-data-export.ny
@@ -18008,20 +17546,10 @@ msgstr "~a  عينات."
 msgid "~a seconds."
 msgstr "~a ثواني."
 
-#: plug-ins/sample-data-export.ny
-#, lisp-format
-msgid "<b>Sample Rate:</b> &nbsp;&nbsp;~a Hz."
-msgstr ""
-
 #. i18n-hint: RMS abbreviates root-mean-square, a method of averaging a signal; there also "weighted" versions of it but this isn't that
 #: plug-ins/sample-data-export.ny
 #, lisp-format
 msgid "<b>RMS</b> (unweighted): &nbsp;&nbsp;~a dB."
-msgstr ""
-
-#: plug-ins/sample-data-export.ny
-#, lisp-format
-msgid "~a linear, &nbsp;&nbsp;~a dB."
 msgstr ""
 
 #: plug-ins/sample-data-export.ny
@@ -18124,24 +17652,12 @@ msgstr "اقرأ كـ صفر"
 
 #: plug-ins/sample-data-import.ny
 #, lisp-format
-msgid ""
-"Error:~%~\n"
-"              The file must contain only plain ASCII text.~%~\n"
-"              (Invalid byte '~a' at byte number: ~a)"
-msgstr ""
-
-#: plug-ins/sample-data-import.ny
-#, lisp-format
 msgid "Error.~%Unable to open file"
 msgstr "غير قادر على فتح ملف النوع."
 
 #: plug-ins/spectral-delete.ny
 msgid "Spectral Delete"
 msgstr "الاختيار الطيفي"
-
-#: plug-ins/tremolo.ny
-msgid "Tremolo"
-msgstr ""
 
 #: plug-ins/tremolo.ny
 msgid "Applying Tremolo..."
@@ -18208,18 +17724,8 @@ msgid "Strength"
 msgstr "الشدة"
 
 #: plug-ins/vocalrediso.ny
-msgid "High Cut for Vocals (Hz)"
-msgstr ""
-
-#: plug-ins/vocalrediso.ny
 #, lisp-format
 msgid "Pan position: ~a~%The left and right channels are correlated by about ~a %. This means:~%~a~%"
-msgstr ""
-
-#: plug-ins/vocalrediso.ny
-msgid ""
-" - The two Channels are strongly related, i.e. nearly mono or extremely panned.\n"
-"                Most likely, the center extraction will be poor."
 msgstr ""
 
 #: plug-ins/vocalrediso.ny
@@ -18229,23 +17735,12 @@ msgid ""
 msgstr ""
 
 #: plug-ins/vocalrediso.ny
-msgid ""
-" - Although the Track is stereo, the field is obviously extra wide.\n"
-"                This can cause strange effects.\n"
-"                Especially when played by only one speaker."
-msgstr ""
-
-#: plug-ins/vocalrediso.ny
 msgid "This plug-in works only with stereo tracks."
 msgstr ""
 
 #: plug-ins/vocoder.ny
 msgid "Processing Vocoder..."
 msgstr "أنجزت المعالجة."
-
-#: plug-ins/vocoder.ny
-msgid "Distance: (1 to 120, default = 20)"
-msgstr ""
 
 #: plug-ins/vocoder.ny
 msgid "Output choice"

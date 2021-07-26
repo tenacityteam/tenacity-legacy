@@ -97,12 +97,6 @@ msgstr "पता लगाने में असमर्थ"
 msgid "%s bytes"
 msgstr "%s बाइट्स"
 
-#. i18n-hint: Abbreviation for Mega bytes
-#: libraries/lib-strings/Internat.cpp
-#, c-format
-msgid "%s MB"
-msgstr ""
-
 #: libraries/lib-strings/Languages.cpp
 msgid "Simplified"
 msgstr "सरल"
@@ -757,12 +751,6 @@ msgstr "विशेष आभार :"
 #, c-format
 msgid "%s website: "
 msgstr "%s वेबसाइट : "
-
-#. i18n-hint The registered trademark symbol (r) is substituted at %s
-#: src/AboutDialog.cpp
-#, c-format
-msgid "The Audacity%s trademark is used within this software for descriptive and informational purposes only."
-msgstr ""
 
 #: src/AdornedRulerPanel.cpp
 msgid "Timeline actions disabled during recording"
@@ -2263,17 +2251,7 @@ msgstr "आयताकार"
 
 #. i18n-hint a proper name
 #: src/FFT.cpp
-msgid "Hamming"
-msgstr ""
-
-#. i18n-hint a proper name
-#: src/FFT.cpp
 msgid "Blackman"
-msgstr ""
-
-#. i18n-hint a proper name
-#: src/FFT.cpp
-msgid "Welch"
 msgstr ""
 
 #. i18n-hint a mathematical function named for C. F. Gauss
@@ -2594,12 +2572,6 @@ msgstr "बहुत सारा ऑडियो चुना गया है.
 #: src/FreqWindow.cpp
 msgid "Not enough data selected."
 msgstr "समुचित डाटा नहीं चुना गया."
-
-#. i18n-hint: The %d's are replaced by numbers, the %s by musical notes, e.g. A#
-#: src/FreqWindow.cpp
-#, c-format
-msgid "%d Hz (%s) = %d dB"
-msgstr ""
 
 #. i18n-hint: The %d's are replaced by numbers, the %s by musical notes, e.g. A#
 #. * the %.4f are numbers, and 'sec' should be an abbreviation for seconds
@@ -5620,11 +5592,6 @@ msgstr "लेबल"
 msgid "Boxes"
 msgstr "बक्से"
 
-#. i18n-hint name of a computer programming language
-#: src/commands/GetInfoCommand.cpp src/commands/HelpCommand.cpp
-msgid "LISP"
-msgstr ""
-
 #: src/commands/GetInfoCommand.cpp src/commands/HelpCommand.cpp
 msgid "Brief"
 msgstr "सारांश"
@@ -6083,10 +6050,6 @@ msgid "Resize:"
 msgstr "आकार परिवर्तन :"
 
 #: src/commands/SetProjectCommand.cpp
-msgid "Y:"
-msgstr ""
-
-#: src/commands/SetProjectCommand.cpp
 msgid "Width:"
 msgstr "चौड़ाई :"
 
@@ -6417,10 +6380,6 @@ msgstr "प्रतिशत परिवर्तन"
 msgid "&Use high quality stretching (slow)"
 msgstr "उच्च गुणवत्ता विस्तारक का प्रयोग करें (धीमा)"
 
-#: src/effects/ChangeSpeed.cpp
-msgid "45"
-msgstr ""
-
 #. i18n-hint: n/a is an English abbreviation meaning "not applicable".
 #. i18n-hint: Can mean "not available," "not applicable," "no answer"
 #: src/effects/ChangeSpeed.cpp src/effects/audiounits/AudioUnitEffect.cpp src/effects/ladspa/LadspaEffect.cpp src/effects/lv2/LV2Effect.cpp src/effects/nyquist/Nyquist.cpp
@@ -6615,13 +6574,6 @@ msgstr "%.2f सेकेंड"
 msgid "%.1f secs"
 msgstr "%.1f सेकेंड"
 
-#. i18n-hint: Unless your language has a different convention for ratios,
-#. * like 8:1, leave as is.
-#: src/effects/Compressor.cpp
-#, c-format
-msgid "%.1f:1"
-msgstr ""
-
 #: src/effects/Compressor.cpp
 #, c-format
 msgid "Ratio %.0f to 1"
@@ -6796,12 +6748,6 @@ msgstr "अंतर(&D) :"
 #: src/effects/Contrast.cpp src/menus/HelpMenus.cpp src/prefs/GUIPrefs.cpp
 msgid "&Help"
 msgstr "सहायता(&H)"
-
-#. i18n-hint: dB abbreviates decibels
-#: src/effects/Contrast.cpp
-#, c-format
-msgid "%s dB"
-msgstr ""
 
 #: src/effects/Contrast.cpp
 msgid "zero"
@@ -7680,11 +7626,6 @@ msgstr "अधिकतम dB"
 msgid "Min dB"
 msgstr "न्यूनतम dB"
 
-#: src/effects/Equalization.cpp
-#, c-format
-msgid "%d Hz"
-msgstr ""
-
 #. i18n-hint k is SI abbreviation for x1,000.  Usually unchanged in translation.
 #: src/effects/Equalization.cpp
 #, c-format
@@ -7762,10 +7703,6 @@ msgstr "प्रक्रिया चल रही है (&P) : "
 #: src/effects/Equalization.cpp
 msgid "D&efault"
 msgstr "डिफ़ाल्ट् (&e)"
-
-#: src/effects/Equalization.cpp
-msgid "SSE &Threaded"
-msgstr ""
 
 #: src/effects/Equalization.cpp
 msgid "AV&X Threaded"
@@ -8053,10 +7990,6 @@ msgid "Loudness LUFS"
 msgstr "लाऊडनेस LUFS"
 
 #: src/effects/Loudness.cpp
-msgid "RMS dB"
-msgstr ""
-
-#: src/effects/Loudness.cpp
 msgid "Normalize &stereo channels independently"
 msgstr "स्टीरियो चैनलों को स्वतंत्र रूप से नॉरमलाइज करें"
 
@@ -8122,10 +8055,6 @@ msgstr "हान्न, कोई नहीं"
 #: src/effects/NoiseReduction.cpp
 msgid "Hann, Hann (default)"
 msgstr "Hann, Hann (डिफ़ाल्ट)"
-
-#: src/effects/NoiseReduction.cpp
-msgid "Hamming, none"
-msgstr ""
 
 #: src/effects/NoiseReduction.cpp
 msgid "Hamming, Reciprocal Hamming"
@@ -8278,15 +8207,7 @@ msgid "Window si&ze:"
 msgstr "विंडो का आकार(&s) :"
 
 #: src/effects/NoiseReduction.cpp src/prefs/SpectrumPrefs.cpp
-msgid "16"
-msgstr ""
-
-#: src/effects/NoiseReduction.cpp src/prefs/SpectrumPrefs.cpp
 msgid "64"
-msgstr ""
-
-#: src/effects/NoiseReduction.cpp src/prefs/SpectrumPrefs.cpp
-msgid "256"
 msgstr ""
 
 #: src/effects/NoiseReduction.cpp
@@ -8296,10 +8217,6 @@ msgstr ""
 #: src/effects/NoiseReduction.cpp
 msgid "2048 (default)"
 msgstr "2048 - (डिफ़ाल्ट)"
-
-#: src/effects/NoiseReduction.cpp src/prefs/SpectrumPrefs.cpp
-msgid "8192"
-msgstr ""
 
 #: src/effects/NoiseReduction.cpp
 msgid "S&teps per window:"
@@ -8823,23 +8740,7 @@ msgstr "मौन शिखर"
 #. manual we don't have a clear description of what this parameter does.
 #. It is OK to leave it in English.
 #: src/effects/ScoreAlignDialog.cpp
-msgid "Presmooth Time"
-msgstr ""
-
-#. i18n-hint: The English would be clearer if it had 'Duration' rather than 'Time'
-#. This is a NEW experimental effect, and until we have it documented in the user
-#. manual we don't have a clear description of what this parameter does.
-#. It is OK to leave it in English.
-#: src/effects/ScoreAlignDialog.cpp
 msgid "Line Time"
-msgstr ""
-
-#. i18n-hint: The English would be clearer if it had 'Duration' rather than 'Time'
-#. This is a NEW experimental effect, and until we have it documented in the user
-#. manual we don't have a clear description of what this parameter does.
-#. It is OK to leave it in English.
-#: src/effects/ScoreAlignDialog.cpp
-msgid "Smooth Time"
 msgstr ""
 
 #: src/effects/ScoreAlignDialog.cpp
@@ -10001,24 +9902,12 @@ msgstr "बिट रेट:"
 msgid "Quality (kbps):"
 msgstr "गुणवत्ता (kbps):"
 
-#: src/export/ExportFFmpegDialogs.cpp
-msgid "0"
-msgstr ""
-
 #: src/export/ExportFFmpegDialogs.cpp src/export/ExportFLAC.cpp
 msgid "3"
 msgstr ""
 
 #: src/export/ExportFFmpegDialogs.cpp src/export/ExportFLAC.cpp
-msgid "5"
-msgstr ""
-
-#: src/export/ExportFFmpegDialogs.cpp src/export/ExportFLAC.cpp
 msgid "7"
-msgstr ""
-
-#: src/export/ExportFFmpegDialogs.cpp
-msgid "10"
 msgstr ""
 
 #: src/export/ExportFFmpegDialogs.cpp
@@ -10038,15 +9927,7 @@ msgid "Low Delay"
 msgstr "अल्प विलंब"
 
 #: src/export/ExportFFmpegDialogs.cpp
-msgid "5 ms"
-msgstr ""
-
-#: src/export/ExportFFmpegDialogs.cpp
 msgid "20 ms"
-msgstr ""
-
-#: src/export/ExportFFmpegDialogs.cpp
-msgid "60 ms"
 msgstr ""
 
 #: src/export/ExportFFmpegDialogs.cpp
@@ -10632,15 +10513,7 @@ msgid "220-260 kbps (Best Quality)"
 msgstr "220-260 kbps (सर्वोत्तम गुणवत्ता)"
 
 #: src/export/ExportMP3.cpp
-msgid "170-210 kbps"
-msgstr ""
-
-#: src/export/ExportMP3.cpp
 msgid "145-185 kbps"
-msgstr ""
-
-#: src/export/ExportMP3.cpp
-msgid "95-135 kbps"
 msgstr ""
 
 #: src/export/ExportMP3.cpp
@@ -11060,10 +10933,6 @@ msgstr "चयनित ऑडियो को  Ogg वॉर्बिस  क�
 #: src/export/ExportOGG.cpp
 msgid "Exporting the audio as Ogg Vorbis"
 msgstr "ऑडियो को Ogg वॉर्बिस के रूप में निर्यात कर रहे हैं"
-
-#: src/export/ExportPCM.cpp src/import/ImportPCM.cpp
-msgid "WAV (Microsoft)"
-msgstr ""
 
 #: src/export/ExportPCM.cpp
 msgid "Header:"
@@ -11723,10 +11592,6 @@ msgid "VOC (Creative Labs)"
 msgstr "VOC (क्रिएटिव लैब्स)"
 
 #: src/import/ImportPCM.cpp
-msgid "WAV (NIST Sphere)"
-msgstr ""
-
-#: src/import/ImportPCM.cpp
 msgid "WVE (Psion Series 3)"
 msgstr ""
 
@@ -11759,15 +11624,7 @@ msgid "64 bit float"
 msgstr "64 बिट फ्लोट"
 
 #: src/import/ImportPCM.cpp
-msgid "A-Law"
-msgstr ""
-
-#: src/import/ImportPCM.cpp
 msgid "Microsoft ADPCM"
-msgstr ""
-
-#: src/import/ImportPCM.cpp
-msgid "32kbs G721 ADPCM"
 msgstr ""
 
 #: src/import/ImportPCM.cpp
@@ -11837,12 +11694,6 @@ msgstr "Raw डाटा आयात करें"
 #: src/import/ImportRaw.cpp
 msgid "No endianness"
 msgstr "कोई endianness नहीं"
-
-#. i18n-hint: Refers to byte-order.  Don't translate this if you don't
-#. know the correct technical word.
-#: src/import/ImportRaw.cpp
-msgid "Big-endian"
-msgstr ""
 
 #. i18n-hint: Refers to byte-order.  Don't translate "endianness" if you don't
 #. know the correct technical word.
@@ -14316,12 +14167,6 @@ msgstr "प्रकाशक द्वारा समूहीकृत"
 msgid "Grouped by Type"
 msgstr "प्रकार द्वारा समूहीकृत"
 
-#. i18n-hint: abbreviates
-#. "Linux Audio Developer's Simple Plugin API (LADSPA) version 2"
-#: src/prefs/EffectsPrefs.cpp
-msgid "LV&2"
-msgstr ""
-
 #. i18n-hint: Vamp is the proper name of a software protocol for sound analysis.
 #. It is not an abbreviation for anything.  See http://vamp-plugins.org
 #: src/prefs/EffectsPrefs.cpp
@@ -15360,11 +15205,6 @@ msgstr "प्रि-रोल (&l):"
 #: src/prefs/RecordingPrefs.cpp
 msgid "Cross&fade:"
 msgstr "क्रॉसफ़ेड (&f):"
-
-#. i18n-hint: The name of a frequency scale in psychoacoustics, named for Heinrich Barkhausen
-#: src/prefs/SpectrogramSettings.cpp
-msgid "Bark"
-msgstr ""
 
 #. i18n-hint: Time units, that is Period = 1 / Frequency
 #: src/prefs/SpectrogramSettings.cpp
@@ -16589,23 +16429,11 @@ msgid "Rat&e"
 msgstr "दर"
 
 #: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
-msgid "11025 Hz"
-msgstr ""
-
-#: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
 msgid "22050 Hz"
 msgstr ""
 
 #: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
-msgid "48000 Hz"
-msgstr ""
-
-#: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
 msgid "96000 Hz"
-msgstr ""
-
-#: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
-msgid "192000 Hz"
 msgstr ""
 
 #: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
@@ -17511,14 +17339,6 @@ msgstr "01000,01000 फ़्रेम्स|75"
 msgid "centihertz"
 msgstr "सेंटीहर्टज्"
 
-#. i18n-hint: Format string for displaying frequency in kilohertz. Change
-#. * the decimal point for your locale. Don't change the numbers.
-#. * The decimal separator is specified using '<' if your language uses a ',' or
-#. * to '>' if your language uses a '.'.
-#: src/widgets/NumericTextCtrl.cpp
-msgid "01000>01000 kHz|0.001"
-msgstr ""
-
 #: src/widgets/NumericTextCtrl.cpp
 msgid "hertz"
 msgstr "हर्टज्"
@@ -18298,10 +18118,6 @@ msgstr "आवृति (Hz)"
 #: plug-ins/highpass.ny plug-ins/lowpass.ny
 msgid "Roll-off (dB per octave)"
 msgstr "रॉल-ऑफ़ (dB प्रति सप्तक)"
-
-#: plug-ins/highpass.ny plug-ins/lowpass.ny
-msgid "12 dB"
-msgstr ""
 
 #: plug-ins/highpass.ny plug-ins/lowpass.ny
 msgid "36 dB"

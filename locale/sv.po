@@ -51,11 +51,6 @@ msgstr "Fel vid sökning efter uppdatering"
 
 #: libraries/lib-strings/FutureStrings.h
 msgctxt "update dialog"
-msgid "Update data was corrupted."
-msgstr ""
-
-#: libraries/lib-strings/FutureStrings.h
-msgctxt "update dialog"
 msgid "Error downloading update."
 msgstr "Fel uppstod när metadata lästes in"
 
@@ -78,12 +73,6 @@ msgstr "Inspelning"
 #: libraries/lib-strings/Internat.cpp
 msgid "Unable to determine"
 msgstr "Kunde inte fastställas"
-
-#. i18n-hint: Abbreviation for Kilo bytes
-#: libraries/lib-strings/Internat.cpp
-#, c-format
-msgid "%s KB"
-msgstr ""
 
 #. i18n-hint: Abbreviation for Giga bytes
 #: libraries/lib-strings/Internat.cpp
@@ -733,12 +722,6 @@ msgstr "Speciellt tack till:"
 #, c-format
 msgid "%s website: "
 msgstr "%ss webbplats: "
-
-#. i18n-hint The registered trademark symbol (r) is substituted at %s
-#: src/AboutDialog.cpp
-#, c-format
-msgid "The Audacity%s trademark is used within this software for descriptive and informational purposes only."
-msgstr ""
 
 #: src/AdornedRulerPanel.cpp
 msgid "Timeline actions disabled during recording"
@@ -2235,11 +2218,6 @@ msgstr "Rekangulär"
 
 #. i18n-hint a proper name
 #: src/FFT.cpp
-msgid "Hamming"
-msgstr ""
-
-#. i18n-hint a proper name
-#: src/FFT.cpp
 msgid "Blackman"
 msgstr ""
 
@@ -2247,11 +2225,6 @@ msgstr ""
 #: src/FFT.cpp
 msgid "Welch"
 msgstr "Välkommen!"
-
-#. i18n-hint a mathematical function named for C. F. Gauss
-#: src/FFT.cpp
-msgid "Gaussian(a=3.5)"
-msgstr ""
 
 #: src/FFmpeg.cpp
 msgid "FFmpeg support not compiled in"
@@ -2493,13 +2466,6 @@ msgstr "Logga frekvens"
 msgid "Scroll"
 msgstr "Rulla"
 
-#. i18n-hint: This is the abbreviation for "Hertz", or
-#. cycles per second.
-#. i18n-hint: Name of display format that shows frequency in hertz
-#: src/FreqWindow.cpp src/effects/ChangePitch.cpp src/effects/Equalization.cpp src/effects/ScienFilter.cpp src/import/ImportRaw.cpp src/widgets/NumericTextCtrl.cpp
-msgid "Hz"
-msgstr ""
-
 #: src/FreqWindow.cpp
 #, fuzzy
 msgid "Scroll Horizontal"
@@ -2558,12 +2524,6 @@ msgstr "För mycket ljud har markerats. Bara de första %.1f sekunderna av ljud 
 #: src/FreqWindow.cpp
 msgid "Not enough data selected."
 msgstr "Inte tillräckligt mycket data har markerats."
-
-#. i18n-hint: The %d's are replaced by numbers, the %s by musical notes, e.g. A#
-#: src/FreqWindow.cpp
-#, c-format
-msgid "%d Hz (%s) = %d dB"
-msgstr ""
 
 #. i18n-hint: The %d's are replaced by numbers, the %s by musical notes, e.g. A#
 #. * the %.4f are numbers, and 'sec' should be an abbreviation for seconds
@@ -2913,10 +2873,6 @@ msgstr ""
 msgid "Opening Audacity Project"
 msgstr "Öppnar Audacity-projekt"
 
-#: src/LyricsWindow.cpp
-msgid "&Karaoke..."
-msgstr ""
-
 #: src/Menus.cpp
 #, c-format
 msgid "&Undo %s"
@@ -3103,17 +3059,7 @@ msgstr "Notspår"
 
 #. i18n-hint: Name of a musical note in the 12-tone chromatic scale
 #: src/PitchName.cpp
-msgid "C♯"
-msgstr ""
-
-#. i18n-hint: Name of a musical note in the 12-tone chromatic scale
-#: src/PitchName.cpp
 msgid "D♯"
-msgstr ""
-
-#. i18n-hint: Name of a musical note in the 12-tone chromatic scale
-#: src/PitchName.cpp
-msgid "F"
 msgstr ""
 
 #. i18n-hint: Name of a musical note in the 12-tone chromatic scale
@@ -3123,17 +3069,7 @@ msgstr ""
 
 #. i18n-hint: Name of a musical note in the 12-tone chromatic scale
 #: src/PitchName.cpp
-msgid "A"
-msgstr ""
-
-#. i18n-hint: Name of a musical note in the 12-tone chromatic scale
-#: src/PitchName.cpp
 msgid "B"
-msgstr ""
-
-#. i18n-hint: Name of a musical note in the 12-tone chromatic scale
-#: src/PitchName.cpp
-msgid "E♭"
 msgstr ""
 
 #. i18n-hint: Name of a musical note in the 12-tone chromatic scale
@@ -3143,17 +3079,7 @@ msgstr ""
 
 #. i18n-hint: Two, alternate names of a musical note in the 12-tone chromatic scale
 #: src/PitchName.cpp
-msgid "C♯/D♭"
-msgstr ""
-
-#. i18n-hint: Two, alternate names of a musical note in the 12-tone chromatic scale
-#: src/PitchName.cpp
 msgid "F♯/G♭"
-msgstr ""
-
-#. i18n-hint: Two, alternate names of a musical note in the 12-tone chromatic scale
-#: src/PitchName.cpp
-msgid "A♯/B♭"
 msgstr ""
 
 #: src/PluginManager.cpp
@@ -3841,15 +3767,6 @@ msgid "Error Saving Project"
 msgstr "Fel uppstod när projektet sparades"
 
 #: src/ProjectFileIO.cpp
-#, c-format
-msgid ""
-"The project failed to open, possibly due to limited space\n"
-"on the storage device.\n"
-"\n"
-"%s"
-msgstr ""
-
-#: src/ProjectFileIO.cpp
 msgid "Backing up project"
 msgstr "&Tomma projekt sparas"
 
@@ -3893,10 +3810,6 @@ msgstr "Varning - Tomt projekt"
 #: src/ProjectFileManager.cpp
 msgid "Insufficient Disk Space"
 msgstr "Diskutrymme"
-
-#: src/ProjectFileManager.cpp
-msgid "The project exceeds the maximum size of 4GB when writing to a FAT32 formatted filesystem."
-msgstr ""
 
 #: src/ProjectFileManager.cpp src/commands/ScreenshotCommand.cpp
 #, c-format
@@ -4148,11 +4061,6 @@ msgstr "Horisontell rullningslist"
 msgid "Vertical Scrollbar"
 msgstr "Vertikalt rullningslist"
 
-#: src/Registry.cpp
-#, c-format
-msgid "Plug-in item at %s conflicts with a previously defined item and was discarded"
-msgstr ""
-
 #: src/Resample.cpp
 msgid "Low Quality (Fastest)"
 msgstr "Låg kvalitet (snabbast)"
@@ -4283,10 +4191,6 @@ msgstr "Tid:"
 #: src/Screenshot.cpp src/commands/ScreenshotCommand.cpp src/toolbars/ToolsToolBar.cpp
 msgid "Tools"
 msgstr "Verktyg"
-
-#: src/Screenshot.cpp src/commands/ScreenshotCommand.cpp src/toolbars/MixerToolBar.cpp
-msgid "Mixer"
-msgstr ""
 
 #. i18n-hint: Noun (the meter is used for playback or record level monitoring)
 #: src/Screenshot.cpp src/commands/ScreenshotCommand.cpp src/toolbars/MeterToolBar.cpp src/widgets/Meter.cpp
@@ -4558,14 +4462,6 @@ msgstr "Fel uppstod när taggfil sparades"
 #: src/TempDirectory.cpp
 msgid "Unsuitable"
 msgstr "Opassande modul"
-
-#: src/TempDirectory.cpp
-#, c-format
-msgid ""
-"%s\n"
-"\n"
-"For tips on suitable drives, click the help button."
-msgstr ""
 
 #: src/Theme.cpp
 #, c-format
@@ -5215,10 +5111,6 @@ msgstr ""
 msgid "Applying %s..."
 msgstr "Verkställer %s..."
 
-#: src/commands/AudacityCommand.h
-msgid "FAIL"
-msgstr ""
-
 #: src/commands/BatchEvalCommand.cpp
 msgid "Batch Command"
 msgstr "Batchkommando"
@@ -5243,10 +5135,6 @@ msgstr "Kommando"
 #, c-format
 msgid "Repeat %s"
 msgstr "Upprepa %s"
-
-#: src/commands/CommandManager.cpp
-msgid "The following commands have had their shortcuts removed, because their default shortcut is new or changed, and is the same shortcut that you have assigned to another command."
-msgstr ""
 
 #: src/commands/CompareAudioCommand.cpp
 msgid "Compare Audio"
@@ -5352,11 +5240,6 @@ msgstr "Etiketter"
 #: src/commands/GetInfoCommand.cpp
 msgid "Boxes"
 msgstr "Fält"
-
-#. i18n-hint name of a computer programming language
-#: src/commands/GetInfoCommand.cpp src/commands/HelpCommand.cpp
-msgid "LISP"
-msgstr ""
 
 #: src/commands/GetInfoCommand.cpp src/commands/HelpCommand.cpp
 msgid "Brief"
@@ -5473,10 +5356,6 @@ msgstr "Sparar ett projekt."
 #: src/commands/OpenSaveCommands.h
 msgid "Saves a copy of current project."
 msgstr "Sparar ett projekt."
-
-#: src/commands/OpenSaveCommands.h
-msgid "Clears the log contents."
-msgstr ""
 
 #: src/commands/PreferenceCommands.cpp
 msgid "Get Preference"
@@ -5794,10 +5673,6 @@ msgstr "Frekvens:"
 #: src/commands/SetProjectCommand.cpp
 msgid "Resize:"
 msgstr "Ändra storlek:"
-
-#: src/commands/SetProjectCommand.cpp
-msgid "Y:"
-msgstr ""
 
 #: src/commands/SetProjectCommand.cpp
 msgid "Width:"
@@ -6318,13 +6193,6 @@ msgstr "%.2f sek"
 msgid "%.1f secs"
 msgstr "%.1f sek"
 
-#. i18n-hint: Unless your language has a different convention for ratios,
-#. * like 8:1, leave as is.
-#: src/effects/Compressor.cpp
-#, c-format
-msgid "%.1f:1"
-msgstr ""
-
 #: src/effects/Compressor.cpp
 #, c-format
 msgid "Ratio %.0f to 1"
@@ -6499,12 +6367,6 @@ msgstr "&Skillnad:"
 #: src/effects/Contrast.cpp src/menus/HelpMenus.cpp src/prefs/GUIPrefs.cpp
 msgid "&Help"
 msgstr "&Hjälp"
-
-#. i18n-hint: dB abbreviates decibels
-#: src/effects/Contrast.cpp
-#, c-format
-msgid "%s dB"
-msgstr ""
 
 #: src/effects/Contrast.cpp
 msgid "zero"
@@ -6768,10 +6630,6 @@ msgstr "Perkussionsbegränsare"
 #: src/effects/Distortion.cpp
 msgid "Upper Threshold"
 msgstr "Övre tröskel"
-
-#: src/effects/Distortion.cpp
-msgid "Parameter 2"
-msgstr ""
 
 #: src/effects/Distortion.cpp
 msgid "Number of repeats"
@@ -7287,20 +7145,12 @@ msgid "Adjusts the volume levels of particular frequencies"
 msgstr "Justerar volymnivåerna för vissa frekvenser"
 
 #: src/effects/Equalization.cpp
-msgid "AM Radio"
-msgstr ""
-
-#: src/effects/Equalization.cpp
 msgid "Bass Boost"
 msgstr "Bas (dB):"
 
 #: src/effects/Equalization.cpp
 msgid "Bass Cut"
 msgstr "Bas"
-
-#: src/effects/Equalization.cpp
-msgid "RIAA"
-msgstr ""
 
 #: src/effects/Equalization.cpp
 msgid "Treble Boost"
@@ -7335,16 +7185,7 @@ msgid "Effect Unavailable"
 msgstr "Effekt otillgänglig"
 
 #: src/effects/Equalization.cpp src/effects/ScienFilter.cpp
-msgid "Max dB"
-msgstr ""
-
-#: src/effects/Equalization.cpp src/effects/ScienFilter.cpp
 msgid "Min dB"
-msgstr ""
-
-#: src/effects/Equalization.cpp
-#, c-format
-msgid "%d Hz"
 msgstr ""
 
 #. i18n-hint k is SI abbreviation for x1,000.  Usually unchanged in translation.
@@ -7684,10 +7525,6 @@ msgid "perceived loudness"
 msgstr "Normalisera högljuddhet till"
 
 #: src/effects/Loudness.cpp
-msgid "Loudness Normalization"
-msgstr ""
-
-#: src/effects/Loudness.cpp
 msgid "Sets the loudness of one or more tracks"
 msgstr "Ändrar den maximala amplituden för ett eller fler spår"
 
@@ -7713,10 +7550,6 @@ msgstr "Normalisera"
 #: src/effects/Loudness.cpp
 msgid "Loudness LUFS"
 msgstr "Högljuddhets-LUFS"
-
-#: src/effects/Loudness.cpp
-msgid "RMS dB"
-msgstr ""
 
 #: src/effects/Loudness.cpp
 msgid "Normalize &stereo channels independently"
@@ -7766,16 +7599,8 @@ msgid "Second greatest"
 msgstr "Andra spår"
 
 #: src/effects/NoiseReduction.cpp
-msgid "none, Hann (2.0.6 behavior)"
-msgstr ""
-
-#: src/effects/NoiseReduction.cpp
 msgid "Hann, Hann (default)"
 msgstr "4 (standard)"
-
-#: src/effects/NoiseReduction.cpp
-msgid "Hamming, none"
-msgstr ""
 
 #: src/effects/NoiseReduction.cpp
 msgid "Hamming, Reciprocal Hamming"
@@ -7928,15 +7753,7 @@ msgid "Window si&ze:"
 msgstr "Fönster&storlek"
 
 #: src/effects/NoiseReduction.cpp src/prefs/SpectrumPrefs.cpp
-msgid "16"
-msgstr ""
-
-#: src/effects/NoiseReduction.cpp src/prefs/SpectrumPrefs.cpp
 msgid "64"
-msgstr ""
-
-#: src/effects/NoiseReduction.cpp src/prefs/SpectrumPrefs.cpp
-msgid "256"
 msgstr ""
 
 #: src/effects/NoiseReduction.cpp
@@ -7946,10 +7763,6 @@ msgstr ""
 #: src/effects/NoiseReduction.cpp
 msgid "2048 (default)"
 msgstr "2048 (standard)"
-
-#: src/effects/NoiseReduction.cpp src/prefs/SpectrumPrefs.cpp
-msgid "8192"
-msgstr ""
 
 #: src/effects/NoiseReduction.cpp
 msgid "S&teps per window:"
@@ -8136,10 +7949,6 @@ msgstr "&Steg:"
 #: src/effects/Phaser.cpp
 msgid "Stages"
 msgstr "Steg"
-
-#: src/effects/Phaser.cpp
-msgid "Dry Wet"
-msgstr ""
 
 #: src/effects/Phaser.cpp src/effects/Wahwah.cpp
 msgid "LFO Freq&uency (Hz):"
@@ -8778,10 +8587,6 @@ msgid "This parameter file was saved from %s. Continue?"
 msgstr "Denna parameterfil sparades från %s. Vill du fortsätta?"
 
 #: src/effects/Wahwah.cpp
-msgid "Wahwah"
-msgstr ""
-
-#: src/effects/Wahwah.cpp
 msgid "Rapid tone quality variations, like that guitar sound so popular in the 1970's"
 msgstr "Snabba variationer i tonkvaliteten, som det där gitarrljudet som var populärt på 70-talet"
 
@@ -8940,10 +8745,6 @@ msgstr ""
 "Misslyckades att registrera:\n"
 "%s"
 
-#: src/effects/audiounits/AudioUnitEffect.cpp
-msgid "Failed to create property list for preset"
-msgstr ""
-
 #. i18n-hint: the name of an Apple audio software protocol
 #. i18n-hint: Audio Unit is the name of an Apple audio software protocol
 #: src/effects/audiounits/AudioUnitEffect.h src/prefs/EffectsPrefs.cpp
@@ -9005,12 +8806,6 @@ msgstr "%d kurvor exporterades till %s\n"
 #, c-format
 msgid "%s requires unsupported option %s\n"
 msgstr "%d kurvor exporterades till %s\n"
-
-#. i18n-hint: abbreviates
-#. "Linux Audio Developer's Simple Plugin API (LADSPA) version 2"
-#: src/effects/lv2/LV2Effect.h
-msgid "LV2"
-msgstr ""
 
 #: src/effects/lv2/LoadLV2.cpp
 msgid "LV2 Effects"
@@ -9273,12 +9068,6 @@ msgstr "Tyvärr, Vamp-insticksmodul misslyckades att initialiseras."
 msgid "Plugin Settings"
 msgstr "Inställningar för insticksmoduler"
 
-#. i18n-hint: Vamp is the proper name of a software protocol for sound analysis.
-#. It is not an abbreviation for anything.  See http://vamp-plugins.org
-#: src/effects/vamp/VampEffect.h
-msgid "Vamp"
-msgstr ""
-
 #: src/export/Export.cpp
 msgid "No format specific options"
 msgstr "Inget formatspecifika alternativ"
@@ -9490,10 +9279,6 @@ msgstr ""
 "FFmpeg kan inte hitta ljudkodek 0x%x.\n"
 "Stöd för denna kodek har förmodligen inte kompilerats."
 
-#: src/export/ExportFFmpeg.cpp
-msgid "The codec reported an invalid parameter (EINVAL)"
-msgstr ""
-
 #. i18n-hint: "codec" is short for a "coder-decoder" algorithm
 #: src/export/ExportFFmpeg.cpp
 #, c-format
@@ -9596,16 +9381,8 @@ msgstr "Bithastighet:"
 msgid "Quality (kbps):"
 msgstr "Kvalitet:"
 
-#: src/export/ExportFFmpegDialogs.cpp
-msgid "0"
-msgstr ""
-
 #: src/export/ExportFFmpegDialogs.cpp src/export/ExportFLAC.cpp
 msgid "3"
-msgstr ""
-
-#: src/export/ExportFFmpegDialogs.cpp src/export/ExportFLAC.cpp
-msgid "5"
 msgstr ""
 
 #: src/export/ExportFFmpegDialogs.cpp src/export/ExportFLAC.cpp
@@ -9633,24 +9410,12 @@ msgid "Low Delay"
 msgstr "Fördröjning"
 
 #: src/export/ExportFFmpegDialogs.cpp
-msgid "5 ms"
-msgstr ""
-
-#: src/export/ExportFFmpegDialogs.cpp
 msgid "20 ms"
-msgstr ""
-
-#: src/export/ExportFFmpegDialogs.cpp
-msgid "60 ms"
 msgstr ""
 
 #: src/export/ExportFFmpegDialogs.cpp
 msgid "Mediumband"
 msgstr "Mellanstor"
-
-#: src/export/ExportFFmpegDialogs.cpp
-msgid "Super Wideband"
-msgstr ""
 
 #: src/export/ExportFFmpegDialogs.cpp
 msgid "Fullband"
@@ -9719,10 +9484,6 @@ msgstr "Förinställningen \"%s\" finns inte."
 #, c-format
 msgid "Replace preset '%s'?"
 msgstr "Ersätta förinställningen \"%s\"?"
-
-#: src/export/ExportFFmpegDialogs.cpp
-msgid "Main"
-msgstr ""
 
 #: src/export/ExportFFmpegDialogs.cpp
 msgid "M4A (AAC) Files (FFmpeg)"
@@ -10106,11 +9867,6 @@ msgstr "Inga etiketter att exportera."
 msgid "Select xml file to export presets into"
 msgstr "Välj xml-fil att exportera förinställningar till"
 
-#. i18n-hint: "codec" is short for a "coder-decoder" algorithm
-#: src/export/ExportFFmpegDialogs.cpp
-msgid "Incompatible format and codec"
-msgstr ""
-
 #: src/export/ExportFFmpegDialogs.cpp
 msgid "Failed to guess format"
 msgstr "Misslyckades att gissa formatet"
@@ -10213,10 +9969,6 @@ msgid "145-185 kbps"
 msgstr "Medel, 145-185 kbps"
 
 #: src/export/ExportMP3.cpp
-msgid "95-135 kbps"
-msgstr ""
-
-#: src/export/ExportMP3.cpp
 msgid "80-120 kbps"
 msgstr "%.2f kbps"
 
@@ -10261,10 +10013,6 @@ msgstr "Medelvärde"
 #: src/export/ExportMP3.cpp
 msgid "Constant"
 msgstr "Konstant"
-
-#: src/export/ExportMP3.cpp
-msgid "Stereo"
-msgstr ""
 
 #: src/export/ExportMP3.cpp
 msgid "Bit Rate Mode:"
@@ -10325,10 +10073,6 @@ msgid ""
 msgstr ""
 "Du länkar till lame_enc.dll v%d.%d. Denna version är inte kompatibel med Audacity %d.%d.%d.\n"
 "Var vänlig och ladda ned den senaste versionen av LAME MP3-bibliotek."
-
-#: src/export/ExportMP3.cpp
-msgid "Only libmp3lame64bit.dylib"
-msgstr ""
 
 #: src/export/ExportMP3.cpp
 msgid "Only libmp3lame.so.0"
@@ -10582,10 +10326,6 @@ msgid "Unable to export - rate or quality problem"
 msgstr "Kunde inte ändra renderingskvaliteten för QuickTime"
 
 #: src/export/ExportOGG.cpp
-msgid "Unable to export - problem initialising"
-msgstr ""
-
-#: src/export/ExportOGG.cpp
 msgid "Unable to export - problem with packets"
 msgstr ""
 
@@ -10620,10 +10360,6 @@ msgstr "Andra okomprimerade filer"
 #: src/export/ExportPCM.cpp
 msgid "Error Exporting"
 msgstr "Fel uppstod under import"
-
-#: src/export/ExportPCM.cpp
-msgid "GSM 6.10 requires mono"
-msgstr ""
 
 #: src/export/ExportPCM.cpp
 msgid "Cannot export audio in this format."
@@ -10854,11 +10590,6 @@ msgstr ""
 "Audacity känner inte igen filtypen \"%s\".\n"
 "Försök att installera FFmpeg. För okomprimerade filer, försök även Arkiv > Importera rådata."
 
-#: src/import/Import.cpp src/menus/ClipMenus.cpp
-#, c-format
-msgid "%s, %s"
-msgstr ""
-
 #. i18n-hint: %s will be the filename
 #: src/import/Import.cpp
 #, c-format
@@ -10892,15 +10623,7 @@ msgid "Internal error in importer...tag not recognized"
 msgstr "Internt fel från processen med placering."
 
 #: src/import/ImportAUP.cpp
-msgid "Invalid project 'vpos' attribute."
-msgstr ""
-
-#: src/import/ImportAUP.cpp
 msgid "Invalid project 'zoom' attribute."
-msgstr ""
-
-#: src/import/ImportAUP.cpp
-msgid "Invalid project 'sel1' attribute."
 msgstr ""
 
 #: src/import/ImportAUP.cpp
@@ -10925,19 +10648,7 @@ msgid "Invalid sequence 'numsamples' attribute."
 msgstr "Felaktig samplingsfrekvens"
 
 #: src/import/ImportAUP.cpp
-#, c-format
-msgid ""
-"Missing project file %s\n"
-"\n"
-"Inserting silence instead."
-msgstr ""
-
-#: src/import/ImportAUP.cpp
 msgid "Missing or invalid silentblockfile 'len' attribute."
-msgstr ""
-
-#: src/import/ImportAUP.cpp
-msgid "Missing or invalid pcmaliasblockfile 'aliasstart' attribute."
 msgstr ""
 
 #: src/import/ImportAUP.cpp
@@ -11100,17 +10811,9 @@ msgstr "Internt logiskt fel"
 msgid "WAV, AIFF, and other uncompressed types"
 msgstr "WAV, AIFF och andra okomprimerade typer"
 
-#: src/import/ImportPCM.cpp
-msgid "AVR (Audio Visual Research)"
-msgstr ""
-
 #. i18n-hint: "codec" is short for a "coder-decoder" algorithm
 #: src/import/ImportPCM.cpp
 msgid "FLAC (FLAC Lossless Audio Codec)"
-msgstr ""
-
-#: src/import/ImportPCM.cpp
-msgid "IFF (Amiga IFF/SVX8/SV16)"
 msgstr ""
 
 #: src/import/ImportPCM.cpp
@@ -11118,23 +10821,11 @@ msgid "MAT5 (GNU Octave 2.1 / Matlab 5.0)"
 msgstr ""
 
 #: src/import/ImportPCM.cpp
-msgid "OGG (OGG Container format)"
-msgstr ""
-
-#: src/import/ImportPCM.cpp
 msgid "PVF (Portable Voice Format)"
 msgstr ""
 
 #: src/import/ImportPCM.cpp
-msgid "RF64 (RIFF 64)"
-msgstr ""
-
-#: src/import/ImportPCM.cpp
 msgid "SDS (Midi Sample Dump Standard)"
-msgstr ""
-
-#: src/import/ImportPCM.cpp
-msgid "VOC (Creative Labs)"
 msgstr ""
 
 #: src/import/ImportPCM.cpp
@@ -11146,20 +10837,12 @@ msgid "WAVEX (Microsoft)"
 msgstr "WAV (Microsoft) 32-bitars flyttal PCM"
 
 #: src/import/ImportPCM.cpp
-msgid "XI (FastTracker 2)"
-msgstr ""
-
-#: src/import/ImportPCM.cpp
 msgid "Signed 16 bit PCM"
 msgstr "16-bitars PCM"
 
 #: src/import/ImportPCM.cpp
 msgid "Signed 24 bit PCM"
 msgstr "24-bitars PCM"
-
-#: src/import/ImportPCM.cpp
-msgid "Unsigned 8 bit PCM"
-msgstr ""
 
 #: src/import/ImportPCM.cpp
 msgid "32 bit float"
@@ -11170,15 +10853,7 @@ msgid "64 bit float"
 msgstr "32-bitars flyttal"
 
 #: src/import/ImportPCM.cpp
-msgid "A-Law"
-msgstr ""
-
-#: src/import/ImportPCM.cpp
 msgid "Microsoft ADPCM"
-msgstr ""
-
-#: src/import/ImportPCM.cpp
-msgid "32kbs G721 ADPCM"
 msgstr ""
 
 #: src/import/ImportPCM.cpp
@@ -11248,12 +10923,6 @@ msgstr "Importera rådata"
 #: src/import/ImportRaw.cpp
 msgid "No endianness"
 msgstr "Ingen endian"
-
-#. i18n-hint: Refers to byte-order.  Don't translate this if you don't
-#. know the correct technical word.
-#: src/import/ImportRaw.cpp
-msgid "Big-endian"
-msgstr ""
 
 #. i18n-hint: Refers to byte-order.  Don't translate "endianness" if you don't
 #. know the correct technical word.
@@ -11626,10 +11295,6 @@ msgstr "&Raderingstangent"
 #: src/menus/EditMenus.cpp
 msgid "Delete Key&2"
 msgstr "Raderingstangent &2"
-
-#: src/menus/ExtraMenus.cpp
-msgid "Mi&xer"
-msgstr ""
 
 #: src/menus/ExtraMenus.cpp
 msgid "Ad&just Playback Volume..."
@@ -13561,10 +13226,6 @@ msgid "Default directories"
 msgstr "Kataloger"
 
 #: src/prefs/DirectoriesPrefs.cpp
-msgid "O&pen:"
-msgstr ""
-
-#: src/prefs/DirectoriesPrefs.cpp
 msgid "&Browse..."
 msgstr "Bläddra..."
 
@@ -14667,11 +14328,6 @@ msgstr "Punch and Roll-inspelning"
 #: src/prefs/RecordingPrefs.cpp
 msgid "Pre-ro&ll:"
 msgstr "&Ljud innan inspelning:"
-
-#. i18n-hint: The name of a frequency scale in psychoacoustics
-#: src/prefs/SpectrogramSettings.cpp
-msgid "Mel"
-msgstr ""
 
 #. i18n-hint: The name of a frequency scale in psychoacoustics, abbreviates Equivalent Rectangular Bandwidth
 #: src/prefs/SpectrogramSettings.cpp
@@ -15895,23 +15551,11 @@ msgid "Rat&e"
 msgstr "&Hastighet"
 
 #: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
-msgid "11025 Hz"
-msgstr ""
-
-#: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
 msgid "22050 Hz"
 msgstr ""
 
 #: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
-msgid "48000 Hz"
-msgstr ""
-
-#: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
 msgid "96000 Hz"
-msgstr ""
-
-#: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
-msgid "192000 Hz"
 msgstr ""
 
 #: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
@@ -16006,11 +15650,6 @@ msgstr "Dela till mo&no"
 
 #: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
 #, c-format
-msgid "Mono, %dHz"
-msgstr ""
-
-#: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
-#, c-format
 msgid "Left, %dHz"
 msgstr "Vänster, %dHz"
 
@@ -16044,10 +15683,6 @@ msgstr "Klicka och dra för att justera, dubbelklicka för att återställa"
 #: src/tracks/playabletrack/wavetrack/ui/WaveTrackView.cpp
 msgid "Click and drag to rearrange sub-views"
 msgstr "Klicka och dra för att flytta ett spår i tid"
-
-#: src/tracks/playabletrack/wavetrack/ui/WaveTrackView.cpp
-msgid "Close sub-view"
-msgstr ""
 
 #: src/tracks/playabletrack/wavetrack/ui/WaveformVZoomHandle.cpp
 msgid "Zoom x2"
@@ -16558,15 +16193,6 @@ msgstr "Välj vad som ska göras"
 msgid "01000,01000 seconds"
 msgstr "01000,01000 sekunder"
 
-#. i18n-hint: Format string for displaying time in hours, minutes and
-#. * seconds. Change the 'h' to the abbreviation for hours, 'm' to the
-#. * abbreviation for minutes and 's' to the abbreviation for seconds. Don't
-#. * change the numbers unless there aren't 60 seconds in a minute in your
-#. * locale
-#: src/widgets/NumericTextCtrl.cpp
-msgid "0100 h 060 m 060 s"
-msgstr ""
-
 #. i18n-hint: Format string for displaying time in days, hours, minutes and
 #. * seconds. Change the 'days' to the word for days, 'h' to the abbreviation
 #. * for hours, 'm' to the abbreviation for minutes and 's' to the
@@ -16768,11 +16394,6 @@ msgstr "01000,01000 bildrutor|75"
 #: src/widgets/NumericTextCtrl.cpp
 msgid "010,01000>0100 Hz"
 msgstr "0100000>0100 Hz"
-
-#. i18n-hint: Name of display format that shows frequency in kilohertz
-#: src/widgets/NumericTextCtrl.cpp
-msgid "kHz"
-msgstr ""
 
 #: src/widgets/NumericTextCtrl.cpp
 msgid "hertz"
@@ -17537,10 +17158,6 @@ msgid "Roll-off (dB per octave)"
 msgstr "Roll-off (dB per oktav)"
 
 #: plug-ins/highpass.ny plug-ins/lowpass.ny
-msgid "12 dB"
-msgstr ""
-
-#: plug-ins/highpass.ny plug-ins/lowpass.ny
 msgid "36 dB"
 msgstr ""
 
@@ -17615,10 +17232,6 @@ msgstr "~aOmrådeslängd = ~a sekunder."
 #: plug-ins/label-sounds.ny
 msgid "Maximum leading silence"
 msgstr "Hittar tystnad..."
-
-#: plug-ins/label-sounds.ny
-msgid "Sound ##1"
-msgstr ""
 
 #: plug-ins/label-sounds.ny
 #, lisp-format
@@ -17748,14 +17361,6 @@ msgstr "Attack/decay tid"
 #: plug-ins/noisegate.ny
 #, lisp-format
 msgid ""
-"Error.\n"
-"Selection too long.\n"
-"Maximum length is ~a."
-msgstr ""
-
-#: plug-ins/noisegate.ny
-#, lisp-format
-msgid ""
 "Peak based on first ~a seconds ~a dB~%\n"
 "Suggested Threshold Setting ~a dB."
 msgstr ""
@@ -17826,11 +17431,6 @@ msgstr "Nekad"
 
 #: plug-ins/nyquist-plug-in-installer.ny
 #, lisp-format
-msgid "Success.~%Files written to:~%~s~%"
-msgstr ""
-
-#: plug-ins/nyquist-plug-in-installer.ny
-#, lisp-format
 msgid "Warning.~%Failed to copy some files:~%"
 msgstr "Misslyckades att ta bort %s"
 
@@ -17849,10 +17449,6 @@ msgstr "Fel.~%\"~a\" kan inte skrivas."
 #: plug-ins/nyquist-plug-in-installer.ny
 msgid "Unsupported file type:"
 msgstr "Oanvända filter:"
-
-#: plug-ins/nyquist-plug-in-installer.ny
-msgid "Cannot be written to plug-ins folder:"
-msgstr ""
 
 #: plug-ins/pluck.ny
 msgid "Pluck"
@@ -18361,10 +17957,6 @@ msgstr "Fel.~%Kan inte öppna fil"
 #: plug-ins/spectral-delete.ny
 msgid "Spectral Delete"
 msgstr "Spektrumsmarkering"
-
-#: plug-ins/tremolo.ny
-msgid "Tremolo"
-msgstr ""
 
 #: plug-ins/tremolo.ny
 msgid "Applying Tremolo..."
