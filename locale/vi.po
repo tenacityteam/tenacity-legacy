@@ -2963,11 +2963,6 @@ msgstr ""
 msgid "Note Track"
 msgstr "Đặt ghi chú cho dải âm"
 
-#. i18n-hint: Name of a musical note in the 12-tone chromatic scale
-#: src/PitchName.cpp
-msgid "A♭"
-msgstr ""
-
 #: src/PluginManager.cpp
 #, c-format
 msgid "Overwrite the plug-in file %s?"
@@ -6203,17 +6198,9 @@ msgid "zero"
 msgstr "điểm không"
 
 #: src/effects/Contrast.cpp
-msgid "Foreground not yet measured"
-msgstr ""
-
-#: src/effects/Contrast.cpp
 #, c-format
 msgid "Filename = %s."
 msgstr "Filename - Tên Tập Tin = %s."
-
-#: src/effects/Distortion.cpp
-msgid "Hard Overdrive"
-msgstr ""
 
 #: src/effects/Distortion.cpp
 msgid "2nd Harmonic (Octave)"
@@ -6823,10 +6810,6 @@ msgstr "Bước 2"
 msgid "Noise:"
 msgstr "Nhiễu:"
 
-#: src/effects/NoiseReduction.cpp src/prefs/SpectrumPrefs.cpp
-msgid "4096"
-msgstr ""
-
 #: src/effects/NoiseRemoval.cpp
 msgid "Noise Removal"
 msgstr "Xoá nhiễu"
@@ -6901,17 +6884,9 @@ msgstr ""
 msgid "Repeat"
 msgstr "Lặp lại"
 
-#: src/effects/Reverb.cpp
-msgid "Cathedral"
-msgstr ""
-
 #: src/effects/Reverse.cpp
 msgid "Reverse"
 msgstr "Đảo ngược"
-
-#: src/effects/ScienFilter.cpp
-msgid "Cutoff (Hz)"
-msgstr ""
 
 #. i18n-hint: The English would be clearer if it had 'Duration' rather than 'Time'
 #. This is a NEW experimental effect, and until we have it documented in the user
@@ -6919,10 +6894,6 @@ msgstr ""
 #. It is OK to leave it in English.
 #: src/effects/ScoreAlignDialog.cpp
 msgid "Line Time"
-msgstr ""
-
-#: src/effects/TimeScale.cpp
-msgid "Final Tempo Change (%)"
 msgstr ""
 
 #: src/effects/ToneGen.cpp src/prefs/SpectrogramSettings.cpp
@@ -7317,20 +7288,12 @@ msgid "Quality (kbps):"
 msgstr "Chất lượng (kbps):"
 
 #: src/export/ExportFFmpegDialogs.cpp
-msgid "2.5 ms"
-msgstr ""
-
-#: src/export/ExportFFmpegDialogs.cpp
 msgid "Open custom FFmpeg format options"
 msgstr ""
 
 #: src/export/ExportFFmpegDialogs.cpp
 msgid "Error Saving FFmpeg Presets"
 msgstr "Lỗi khi lưu thiết lập sẵn FFmpeg"
-
-#: src/export/ExportFFmpegDialogs.cpp
-msgid "Estimate"
-msgstr ""
 
 #: src/export/ExportFFmpegDialogs.cpp
 msgid "Preset:"
@@ -8061,12 +8024,6 @@ msgstr "Nhập dự án"
 msgid "The active project already has a time track and one was encountered in the project being imported, bypassing imported time track."
 msgstr "Dự án đang hoạt động hiện có một chuỗi âm và một trong số chúng đã gây ra sung đột với dự án đang được chèn vào, bỏ qua chuỗi âm thanh được chèn."
 
-#. i18n-hint: "codec" is short for a "coder-decoder" algorithm
-#: src/import/ImportFFmpeg.cpp
-#, c-format
-msgid "Index[%02x] Codec[%s], Language[%s], Bitrate[%s], Channels[%d], Duration[%d]"
-msgstr ""
-
 #: src/import/ImportFLAC.cpp
 msgid "FLAC files"
 msgstr "Tập tin FLAC"
@@ -8156,10 +8113,6 @@ msgstr "Lỗi Logic bên trong"
 #: src/import/ImportPCM.cpp
 msgid "WAV, AIFF, and other uncompressed types"
 msgstr "WAV, AIFF, và các định dạng không nén khác"
-
-#: src/import/ImportPCM.cpp
-msgid "SDS (Midi Sample Dump Standard)"
-msgstr ""
 
 #: src/import/ImportPCM.cpp
 msgid "A-Law"
@@ -8663,10 +8616,6 @@ msgid "Label Join"
 msgstr "Ghép nối nhãn"
 
 #: src/menus/PluginMenus.cpp
-msgid "Unknown"
-msgstr ""
-
-#: src/menus/PluginMenus.cpp
 #, c-format
 msgid "Plug-in %d to %d"
 msgstr "Plug-in %d - %d"
@@ -9047,10 +8996,6 @@ msgstr "&Xoá Dải âm"
 #: src/menus/TrackMenus.cpp
 msgid "&Mute All Tracks"
 msgstr "&Tắt tiếng mọi dải âm"
-
-#: src/menus/TrackMenus.cpp
-msgid "S&ort Tracks"
-msgstr ""
 
 #: src/menus/TrackMenus.cpp
 msgid "&Track"
@@ -11038,10 +10983,6 @@ msgstr "Tìm điểm ghim"
 msgid "Finding beats..."
 msgstr "Đang tìm điểm ghim..."
 
-#: plug-ins/crossfadetracks.ny
-msgid "Constant Power 1"
-msgstr ""
-
 #: plug-ins/delay.ny
 msgid "Pitch change effect"
 msgstr ""
@@ -11124,16 +11065,8 @@ msgid "Frequency (Hz)"
 msgstr "Tần số (Hz)"
 
 #: plug-ins/label-sounds.ny
-msgid "Minimum silence duration"
-msgstr ""
-
-#: plug-ins/label-sounds.ny
 msgid "Label type"
 msgstr "Loại Nhãn"
-
-#: plug-ins/limiter.ny
-msgid "Soft Limit"
-msgstr ""
 
 #: plug-ins/limiter.ny
 msgid ""
@@ -11154,12 +11087,6 @@ msgstr ""
 #: plug-ins/noisegate.ny
 msgid "Noise Gate"
 msgstr "Noise Gate - Bộ lọc Nhiễu"
-
-#. i18n-hint: hours and minutes. Do not translate "~a".
-#: plug-ins/noisegate.ny
-#, lisp-format
-msgid "~ah ~am"
-msgstr ""
 
 #. i18n-hint: "Browse..." is text on a button that launches a file browser.
 #: plug-ins/nyquist-plug-in-installer.ny
@@ -11200,16 +11127,8 @@ msgid "Error.~%No file selected."
 msgstr "Lỗi.~% Chưa  chọn tập tin."
 
 #: plug-ins/rhythmtrack.ny
-msgid "Swing amount"
-msgstr ""
-
-#: plug-ins/rhythmtrack.ny
 msgid "Resonant Noise"
 msgstr "Resonant Noise -Nhiễu Cộng hưởng"
-
-#: plug-ins/sample-data-export.ny
-msgid "Sample Data Export"
-msgstr ""
 
 #: plug-ins/sample-data-export.ny
 msgid "Analyzing..."
@@ -11263,16 +11182,8 @@ msgid "Error.~%Unable to open file"
 msgstr "Lỗi.~% Không thể mở tập tin"
 
 #: plug-ins/vocalrediso.ny
-msgid "Remove Center: to mono"
-msgstr ""
-
-#: plug-ins/vocalrediso.ny
 msgid "Analyze"
 msgstr "Phân tích"
-
-#: plug-ins/vocoder.ny
-msgid "Edgar-RFT"
-msgstr ""
 
 #: plug-ins/vocoder.ny
 msgid "Output choice"
