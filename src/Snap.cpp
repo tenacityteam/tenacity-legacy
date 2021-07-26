@@ -77,6 +77,9 @@ void SnapManager::Reinit()
    int snapTo = settings.GetSnapTo();
    double rate = settings.GetRate();
    auto format = settings.GetSelectionFormat();
+   auto &viewInfo = ViewInfo::Get( *mProject );
+   const double t0 = viewInfo.selectedRegion.t0();
+   const double t1 = viewInfo.selectedRegion.t1();
 
    // No need to reinit if these are still the same
    if (snapTo == mSnapTo && rate == mRate && format == mFormat)
@@ -104,6 +107,10 @@ void SnapManager::Reinit()
 
    // Add a SnapPoint at t=0
    mSnapPoints.push_back(SnapPoint{});
+
+   // Add SnapPoints for selection start and end
+   mSnapPoints.push_back(SnapPoint{ t0 });
+   if (t0 != t1) mSnapPoints.push_back(SnapPoint{ t1 });
 
    // Adjust and filter the candidate points
    for (const auto &candidate : mCandidates)
