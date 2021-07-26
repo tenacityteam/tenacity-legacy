@@ -9,9 +9,10 @@ msgstr ""
 "Project-Id-Version: tenacity 3.0.4\n"
 "Report-Msgid-Bugs-To: emabrey@tenacityaudio.org\n"
 "POT-Creation-Date: 2021-07-25 03:44-0400\n"
-"PO-Revision-Date: 2021-07-24 17:25+0000\n"
-"Last-Translator: fossdd <fossdd@tutanota.com>\n"
-"Language-Team: English <https://hosted.weblate.org/projects/tenacity/tenacity/en/>\n"
+"PO-Revision-Date: 2021-07-26 02:07+0000\n"
+"Last-Translator: Emily Mabrey <emilymabrey93@gmail.com>\n"
+"Language-Team: English <https://hosted.weblate.org/projects/tenacity/"
+"tenacity/en/>\n"
 "Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -595,7 +596,7 @@ msgstr "%s, Tenacity developer"
 
 #. i18n-hint: For "About Tenacity..." credits, substituting a person's proper name
 #: src/AboutDialog.cpp
-#, fuzzy, c-format
+#, c-format
 msgid "%s, Tenacity contributor"
 msgstr "%s, Tenacity developer"
 
@@ -700,9 +701,9 @@ msgstr "<h3>"
 
 #. i18n-hint: The program's name substitutes for %s
 #: src/AboutDialog.cpp
-#, fuzzy
 msgid "Free, open source, cross-platform audio recorder and editor."
-msgstr "%s the free, open source, cross-platform software for recording and editing sounds."
+msgstr ""
+"Free, open source, cross-platform software for recording and editing sounds."
 
 #: src/AboutDialog.cpp
 msgid "Credits"
@@ -711,6 +712,8 @@ msgstr "Credits"
 #: src/AboutDialog.cpp
 msgid "Please note that names are sorted in alphabetical order, not in order of importance."
 msgstr ""
+"Please note that names are sorted in alphabetical order, not in order of "
+"importance."
 
 #: src/AboutDialog.cpp
 msgid "DarkTenacity Customisation"
@@ -718,14 +721,13 @@ msgstr "DarkTenacity Customisation"
 
 #. i18n-hint: The program's name substitutes for %s
 #: src/AboutDialog.cpp
-#, fuzzy, c-format
+#, c-format
 msgid "%s Contributors"
-msgstr "Audacity Contributors"
+msgstr "Tenacity Contributors"
 
 #: src/AboutDialog.cpp
-#, fuzzy
 msgid "Tenacity Special thanks:"
-msgstr "Audacity Special thanks:"
+msgstr "Tenacity Special thanks:"
 
 #: src/AboutDialog.cpp src/prefs/LibraryPrefs.cpp
 msgid "Libraries"
@@ -789,10 +791,13 @@ msgstr "%s %s 1999-%s %s contributors"
 #, c-format
 msgid "The Audacity%s trademark is used within this software for descriptive and informational purposes only."
 msgstr ""
+"The Audacity%s trademark is used within this software for descriptive and "
+"informational purposes only."
 
 #: src/AboutDialog.cpp
 msgid "Tenacity is not produced or endorsed by MuseCY SM Ltd. or Dominic M Mazzoni."
 msgstr ""
+"Tenacity is not produced or endorsed by MuseCY SM Ltd. or Dominic M Mazzoni."
 
 #: src/AdornedRulerPanel.cpp
 msgid "Timeline actions disabled during recording"
@@ -2014,9 +2019,8 @@ msgid "No revision identifier was provided"
 msgstr "No revision identifier was provided"
 
 #: src/BuildInfo.h
-#, fuzzy
 msgid "Unknown date and time"
-msgstr "End Date and Time"
+msgstr "Unknown date and time"
 
 #: src/BuildInfo.h
 #, c-format
@@ -2029,9 +2033,8 @@ msgid "Release build (debug level %d)"
 msgstr "Release build (debug level %d)"
 
 #: src/BuildInfo.h
-#, fuzzy
 msgid ", 64 bits"
-msgstr "%s, 64 bits"
+msgstr ", 64 bits"
 
 #. i18n-hint: %s will be replaced by the name of an action, such as Normalize, Cut, Fade.
 #: src/CommonCommandFlags.cpp
@@ -3398,8 +3401,8 @@ msgstr ""
 msgctxt "plug-ins"
 msgid "Enable this plug-in?\n"
 msgid_plural "Enable these plug-ins?\n"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Enable this plug-in?\n"
+msgstr[1] "Enable these plug-ins?\n"
 
 #: src/PluginManager.cpp
 msgid "Enable new plug-ins"
@@ -3800,7 +3803,7 @@ msgstr "<untitled project>"
 #: src/ProjectFileIO.cpp
 #, c-format
 msgid "[Project %02i] "
-msgstr ""
+msgstr "[Project %02i] "
 
 #: src/ProjectFileIO.cpp
 msgid "Failed to open the project's database"
@@ -4437,15 +4440,15 @@ msgstr "Less than 1 minute"
 #, c-format
 msgid "%d hour"
 msgid_plural "%d hours"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%d hour"
+msgstr[1] "%d hours"
 
 #: src/ProjectManager.cpp
 #, c-format
 msgid "%d minute"
 msgid_plural "%d minutes"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%d minute"
+msgstr[1] "%d minutes"
 
 #. i18n-hint: A time in hours and minutes. Only translate the "and".
 #: src/ProjectManager.cpp
@@ -12430,8 +12433,8 @@ msgstr "%s right"
 #, c-format
 msgid "%s %d of %d clip %s"
 msgid_plural "%s %d of %d clips %s"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%s %d of %d clip %s"
+msgstr[1] "%s %d of %d clips %s"
 
 #: src/menus/ClipMenus.cpp
 msgid "start"
@@ -12453,8 +12456,8 @@ msgstr "end"
 #, c-format
 msgid "%s %d and %s %d of %d clip %s"
 msgid_plural "%s %d and %s %d of %d clips %s"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%s %d and %s %d of %d clip %s"
+msgstr[1] "%s %d and %s %d of %d clips %s"
 
 #. i18n-hint:
 #. first number identifies one of a sequence of clips,
@@ -12464,8 +12467,8 @@ msgstr[1] ""
 #, c-format
 msgid "%d of %d clip %s"
 msgid_plural "%d of %d clips %s"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%d of %d clip %s"
+msgstr[1] "%d of %d clips %s"
 
 #: src/menus/ClipMenus.cpp
 msgid "Time shifted clips to the right"
