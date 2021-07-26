@@ -1,12 +1,30 @@
 name: "CodeQL Analysis"
 
+# This workflow runs:
+# 1. On every push to master
+# 2. On every PR to master which modifies this file (the configuration)
+# 3. Every 6 hours every day.
+#
+# It is restrictive and run sparingly because it takes over an hour to run a full static analysis using this tool
+# and we can't realistically run it on every PR.
+
 on:
   push:
-    branches: [ master ]
+    branches: [ master ] # Triggers on every actual push to master
   pull_request:
-    # The branches below must be a subset of the branches above
     branches: [ master ]
+    paths:
+      - ".github/workflows/codeql-analysis.yml" # Only triggers on PRs that modify the configuration
   schedule:
+    #         ┌───────────── minute (0 - 59)
+    #         │  ┌───────────── hour (0 - 23)
+    #         │  │ ┌───────────── day of the month (1 - 31)
+    #         │  │ │ ┌───────────── month (1 - 12 or JAN-DEC)
+    #         │  │ │ │ ┌───────────── day of the week (0 - 6 or SUN-SAT)
+    #         │  │ │ │ │
+    #         │  │ │ │ │
+    #         │  │ │ │ │
+    #         *  * * * *
     - cron: '00 00 * * *'
     - cron: '00 06 * * *'
     - cron: '00 12 * * *'
@@ -81,7 +99,7 @@ jobs:
     - name: Initialize CodeQL
       uses: github/codeql-action/init@v1
       with:
-        languages: ${{ matrix.language }}
+        languages: cpp
         # If you wish to specify custom queries, you can do so here or in a config file.
         # By default, queries listed here will override any specified in a config file.
         # Prefix the list here with "+" to use these queries and those in the config file.
