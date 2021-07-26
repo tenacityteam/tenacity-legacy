@@ -86,20 +86,12 @@ msgid "&Nyquist Workbench..."
 msgstr "Команда на Nyquist…"
 
 #: modules/mod-nyq-bench/NyqBench.cpp
-msgid "&Copy\tCtrl+C"
-msgstr ""
-
-#: modules/mod-nyq-bench/NyqBench.cpp
 msgid "&Paste\tCtrl+V"
 msgstr "&Поставяне"
 
 #: modules/mod-nyq-bench/NyqBench.cpp
 msgid "Select A&ll\tCtrl+A"
 msgstr "Избиране"
-
-#: modules/mod-nyq-bench/NyqBench.cpp
-msgid "&Higher S-expr\tF10"
-msgstr ""
 
 #: modules/mod-nyq-bench/NyqBench.cpp
 msgid "Select &Font..."
@@ -524,10 +516,6 @@ msgid "%s website: "
 msgstr "Първо стартиране на Tenacity "
 
 #: src/AdornedRulerPanel.cpp
-msgid "Timeline actions disabled during recording"
-msgstr ""
-
-#: src/AdornedRulerPanel.cpp
 msgid "Click and drag to adjust, double-click to reset"
 msgstr "Щракнете и плъзнете, за да настроите относителния размер на стереопистите."
 
@@ -554,10 +542,6 @@ msgstr "Щракнете и плъзнете, за да редактирате �
 #: src/AdornedRulerPanel.cpp
 msgid "Click or drag to begin Scrub"
 msgstr "Щракнете и плъзнете, за да промените височината на пистата."
-
-#: src/AdornedRulerPanel.cpp
-msgid "Drag to Seek. Release to stop seeking."
-msgstr ""
 
 #: src/AdornedRulerPanel.cpp
 msgid "Quick-Play disabled"
@@ -1419,10 +1403,6 @@ msgstr "&Измерване на производителността…"
 msgid "Number of Edits:"
 msgstr "Брой на повторенията:"
 
-#: src/Benchmark.cpp
-msgid "Show detailed info about each editing operation"
-msgstr ""
-
 #. i18n-hint verb
 #: src/Benchmark.cpp src/tracks/ui/TrackButtonHandles.cpp src/widgets/HelpSystem.cpp
 msgid "Close"
@@ -1457,21 +1437,12 @@ msgid "Paste: %lld\n"
 msgstr "Поставяне\n"
 
 #: src/Benchmark.cpp
-#, c-format
-msgid "Track # blocks: %ld\n"
-msgstr ""
-
-#: src/Benchmark.cpp
 msgid "Passed correctness check!\n"
 msgstr ""
 
 #: src/Benchmark.cpp
 msgid "Reading data again...\n"
 msgstr "Записва се звук\n"
-
-#: src/Benchmark.cpp
-msgid "Benchmark completed successfully.\n"
-msgstr ""
 
 #: src/BuildInfo.h
 #, fuzzy
@@ -1701,11 +1672,6 @@ msgstr "Сложна форма"
 #: src/FFT.cpp
 msgid "Rectangular"
 msgstr "Правоъгълен"
-
-#. i18n-hint a proper name
-#: src/FFT.cpp
-msgid "Blackman"
-msgstr ""
 
 #. i18n-hint a proper name
 #: src/FFT.cpp
@@ -2011,13 +1977,6 @@ msgstr "Не са избрани достатъчно данни."
 msgid "s"
 msgstr "с"
 
-#. i18n-hint: The %d's are replaced by numbers, the %s by musical notes, e.g. A#
-#. * the %.4f are numbers, and 'sec' should be an abbreviation for seconds
-#: src/FreqWindow.cpp
-#, c-format
-msgid "%.4f sec (%d Hz) (%s) = %.3f"
-msgstr ""
-
 #: src/FreqWindow.cpp
 msgid "Export Spectral Data As:"
 msgstr "Експорт на спектрални данни като:"
@@ -2096,10 +2055,6 @@ msgstr "Записване върху компактдиск"
 #: src/HelpText.cpp
 msgid "No Local Help"
 msgstr "Няма локална помощ"
-
-#: src/HelpText.cpp
-msgid "You can help us get Audacity ready for release by joining our [[https://www.audacityteam.org/community/|community]].<hr><br><br>"
-msgstr ""
 
 #: src/HelpText.cpp
 msgid "These are our support methods:"
@@ -2406,14 +2361,6 @@ msgid ""
 "Error: %s"
 msgstr "Не е възможно да се отвори/създаде пробен файл."
 
-#: src/ModuleManager.cpp
-#, c-format
-msgid ""
-"The module \"%s\" failed to initialize.\n"
-"\n"
-"It will not be loaded."
-msgstr ""
-
 #: src/ModuleManager.cpp src/TimerRecordDialog.cpp plug-ins/delay.ny plug-ins/equalabel.ny plug-ins/limiter.ny
 msgid "No"
 msgstr "Няма"
@@ -2435,11 +2382,6 @@ msgstr "LC"
 
 #. i18n-hint: Name of a musical note in the 12-tone chromatic scale
 #: src/PitchName.cpp
-msgid "E"
-msgstr ""
-
-#. i18n-hint: Name of a musical note in the 12-tone chromatic scale
-#: src/PitchName.cpp
 msgid "G"
 msgstr "ГБ"
 
@@ -2447,11 +2389,6 @@ msgstr "ГБ"
 #: src/PitchName.cpp
 msgid "B"
 msgstr "дБ"
-
-#. i18n-hint: Name of a musical note in the 12-tone chromatic scale
-#: src/PitchName.cpp
-msgid "A♭"
-msgstr ""
 
 #. i18n-hint: Two, alternate names of a musical note in the 12-tone chromatic scale
 #: src/PitchName.cpp
@@ -2521,10 +2458,6 @@ msgstr "Да"
 #: src/PluginRegistrationDialog.cpp
 msgid "E&nabled"
 msgstr "Да"
-
-#: src/PluginRegistrationDialog.cpp
-msgid "Path"
-msgstr ""
 
 #: src/PluginRegistrationDialog.cpp
 msgid "&Select All"
@@ -2842,13 +2775,6 @@ msgstr "Запазва се проект на Audacity"
 #: src/ProjectFileIO.cpp
 msgid "Unable to initialize the project file"
 msgstr "Не е възможно да се инициализира MP3 поток"
-
-#. i18n-hint: An error message.  Don't translate blockfiles.
-#: src/ProjectFileIO.cpp
-msgid ""
-"Project is busy\n"
-"(Unable to work with the blockfiles)"
-msgstr ""
 
 #. i18n-hint: An error message.  Don't translate blockfiles.
 #: src/ProjectFileIO.cpp
@@ -3196,10 +3122,6 @@ msgstr "Хоризонтално стерео"
 #: src/ProjectWindow.cpp
 msgid "Vertical Scrollbar"
 msgstr "Вертикално стерео"
-
-#: src/Resample.cpp
-msgid "Low Quality (Fastest)"
-msgstr ""
 
 #: src/Resample.cpp
 msgid "Medium Quality"
@@ -4154,10 +4076,6 @@ msgstr "От:"
 msgid "From Y:"
 msgstr "От:"
 
-#: src/commands/DragCommand.h
-msgid "Drags mouse from one place to another."
-msgstr ""
-
 #: src/commands/GetInfoCommand.cpp
 msgid "Get Info"
 msgstr "Информация"
@@ -4185,10 +4103,6 @@ msgstr "Обвиваща крива"
 #: src/commands/GetInfoCommand.cpp src/commands/GetTrackInfoCommand.cpp src/export/ExportMultiple.cpp
 msgid "Labels"
 msgstr "Надписи"
-
-#: src/commands/GetInfoCommand.cpp src/commands/HelpCommand.cpp
-msgid "Brief"
-msgstr ""
 
 #: src/commands/GetInfoCommand.cpp src/commands/HelpCommand.cpp src/export/ExportFFmpegDialogs.cpp src/export/ExportMultiple.cpp
 msgid "Format:"
@@ -4466,10 +4380,6 @@ msgstr "Избор на аудиохост"
 #: src/commands/SetClipCommand.cpp
 msgid "Set Clip"
 msgstr "Следващ инструмент"
-
-#: src/commands/SetClipCommand.cpp src/commands/SetTrackInfoCommand.cpp
-msgid "Color 3"
-msgstr ""
 
 #: src/commands/SetClipCommand.cpp src/commands/SetLabelCommand.cpp
 msgid "Start:"
@@ -5307,23 +5217,11 @@ msgid "Rectifier Distortion"
 msgstr "Изкривяване"
 
 #: src/effects/Distortion.cpp
-msgid "Fuzz Box"
-msgstr ""
-
-#: src/effects/Distortion.cpp
 msgid "Heavy Overdrive"
 msgstr ""
 
 #: src/effects/Distortion.cpp
-msgid "Gated Expansion Distortion"
-msgstr ""
-
-#: src/effects/Distortion.cpp
 msgid "Leveller, Heavier, -70dB noise floor"
-msgstr ""
-
-#: src/effects/Distortion.cpp
-msgid "Full-wave Rectifier (DC blocked)"
 msgstr ""
 
 #: src/effects/Distortion.cpp
@@ -5582,10 +5480,6 @@ msgid "&Bypass"
 msgstr "Лентов филтър"
 
 #: src/effects/EffectUI.cpp
-msgid "Open/close effect editor"
-msgstr ""
-
-#: src/effects/EffectUI.cpp
 msgid "Move Up"
 msgstr "Местене на&горе"
 
@@ -5600,10 +5494,6 @@ msgstr "Местене на&долу"
 #: src/effects/EffectUI.cpp
 msgid "Move effect down in the rack"
 msgstr "Клип бе преместен в друга писта"
-
-#: src/effects/EffectUI.cpp
-msgid "Name of the effect"
-msgstr ""
 
 #: src/effects/EffectUI.cpp
 #, c-format
@@ -5798,12 +5688,6 @@ msgstr "%3d дБ"
 msgid "Min dB"
 msgstr "Мин. дБ"
 
-#. i18n-hint k is SI abbreviation for x1,000.  Usually unchanged in translation.
-#: src/effects/Equalization.cpp
-#, c-format
-msgid "%gk"
-msgstr ""
-
 #: src/effects/Equalization.cpp
 msgid "&EQ Type:"
 msgstr "Филтър"
@@ -5871,10 +5755,6 @@ msgstr "Обработва се: "
 #: src/effects/Equalization.cpp
 msgid "D&efault"
 msgstr "По по&дразбиране"
-
-#: src/effects/Equalization.cpp
-msgid "AV&X Threaded"
-msgstr ""
 
 #. i18n-hint: name of the 'unnamed' custom curve
 #: src/effects/Equalization.cpp
@@ -6136,17 +6016,9 @@ msgstr "Втора писта"
 msgid "Hann, Hann (default)"
 msgstr "Подразбирано увеличение"
 
-#: src/effects/NoiseReduction.cpp
-msgid "Hamming, Reciprocal Hamming"
-msgstr ""
-
 #: src/effects/NoiseReduction.cpp src/menus/PluginMenus.cpp
 msgid "Noise Reduction"
 msgstr "Намаляване на шум"
-
-#: src/effects/NoiseReduction.cpp
-msgid "Median method is not implemented for more than four steps per window."
-msgstr ""
 
 #: src/effects/NoiseReduction.cpp
 msgid "All noise profile data must have the same sample rate."
@@ -6256,17 +6128,9 @@ msgstr "&Размер на прозореца"
 msgid "8"
 msgstr "48"
 
-#: src/effects/NoiseReduction.cpp src/prefs/SpectrumPrefs.cpp
-msgid "128"
-msgstr ""
-
 #: src/effects/NoiseReduction.cpp
 msgid "2048 (default)"
 msgstr "256 – по подразбиране"
-
-#: src/effects/NoiseReduction.cpp
-msgid "S&teps per window:"
-msgstr ""
 
 #: src/effects/NoiseReduction.cpp
 msgid "4 (default)"
@@ -6538,11 +6402,6 @@ msgstr "Обръщане"
 #: src/effects/Reverse.cpp
 msgid "Reverses the selected audio"
 msgstr "Избраният звук се експортира като %s"
-
-#. i18n-hint: Chebyshev is the name of the person after whom the filter type is named.
-#: src/effects/ScienFilter.cpp
-msgid "Chebyshev Type II"
-msgstr ""
 
 #: src/effects/ScienFilter.cpp
 msgid "Lowpass"
@@ -7056,10 +6915,6 @@ msgid "LV2 Effect Settings"
 msgstr "Настройки на ефекта"
 
 #: src/effects/lv2/LV2Effect.cpp
-msgid "Couldn't instantiate effect"
-msgstr ""
-
-#: src/effects/lv2/LV2Effect.cpp
 #, c-format
 msgid "%s requires unsupported feature %s\n"
 msgstr "%d криви бяха експортирани в %s\n"
@@ -7429,11 +7284,6 @@ msgstr ""
 msgid "FFmpeg Error"
 msgstr "Библиотека FFmpeg:"
 
-#: src/export/ExportFFmpeg.cpp
-#, c-format
-msgid "FFmpeg : ERROR - Can't write headers to output file \"%s\". Error code is %d."
-msgstr ""
-
 #. i18n-hint: "codec" is short for a "coder-decoder" algorithm
 #: src/export/ExportFFmpeg.cpp
 #, c-format
@@ -7445,15 +7295,7 @@ msgstr ""
 "Вероятно поддръжката за него не е компилирана."
 
 #: src/export/ExportFFmpeg.cpp
-msgid "FFmpeg : ERROR - Can't allocate buffer to read into from audio FIFO."
-msgstr ""
-
-#: src/export/ExportFFmpeg.cpp
 msgid "FFmpeg : ERROR - encoding frame failed"
-msgstr ""
-
-#: src/export/ExportFFmpeg.cpp
-msgid "FFmpeg : ERROR - Can't encode audio frame."
 msgstr ""
 
 #: src/export/ExportFFmpeg.cpp
@@ -7530,10 +7372,6 @@ msgstr "%.2f Кб/с"
 msgid "0"
 msgstr "60"
 
-#: src/export/ExportFFmpegDialogs.cpp src/export/ExportFLAC.cpp
-msgid "5"
-msgstr ""
-
 #: src/export/ExportFFmpegDialogs.cpp
 msgid "9"
 msgstr "96"
@@ -7557,10 +7395,6 @@ msgstr "&Звук…"
 #: src/export/ExportFFmpegDialogs.cpp
 msgid "Low Delay"
 msgstr "Закъснение"
-
-#: src/export/ExportFFmpegDialogs.cpp
-msgid "20 ms"
-msgstr ""
 
 #: src/export/ExportFFmpegDialogs.cpp
 msgid "Mediumband"
@@ -8126,20 +7960,12 @@ msgid "220-260 kbps (Best Quality)"
 msgstr "(най-добро качество)"
 
 #: src/export/ExportMP3.cpp
-msgid "145-185 kbps"
-msgstr ""
-
-#: src/export/ExportMP3.cpp
 msgid "80-120 kbps"
 msgstr "%.2f Кб/с"
 
 #: src/export/ExportMP3.cpp
 msgid "45-85 kbps (Smaller files)"
 msgstr "(по-малки файлове)"
-
-#: src/export/ExportMP3.cpp
-msgid "Medium, 145-185 kbps"
-msgstr ""
 
 # Много остроумно. :-/
 #. i18n-hint: Slightly humorous - as in use an insane precision with MP3.
@@ -8236,10 +8062,6 @@ msgid ""
 msgstr ""
 "Използвате lame_enc.dll v%d.%d. Тази версия не е съвместима с Audacity %d.%d.%d.\n"
 "Моля, изтеглете най-новата версия на библиотеката LAME."
-
-#: src/export/ExportMP3.cpp
-msgid "Only libmp3lame.so.0"
-msgstr ""
 
 #: src/export/ExportMP3.cpp
 msgid "Extended libraries"
@@ -8475,10 +8297,6 @@ msgstr "Файлове на Ogg Vorbis"
 #: src/export/ExportOGG.cpp
 msgid "Unable to export - rate or quality problem"
 msgstr "Не може да се зададе качество за рендиране на QuickTime"
-
-#: src/export/ExportOGG.cpp
-msgid "Unable to export - problem with packets"
-msgstr ""
 
 #: src/export/ExportOGG.cpp
 msgid "Unable to export - problem with file"
@@ -8774,10 +8592,6 @@ msgid "Internal error in importer...tag not recognized"
 msgstr "Възникна вътрешна грешка в процеса на подравняване."
 
 #: src/import/ImportAUP.cpp
-msgid "Invalid project 'zoom' attribute."
-msgstr ""
-
-#: src/import/ImportAUP.cpp
 msgid "Invalid project 'selHigh' attribute."
 msgstr ""
 
@@ -8797,10 +8611,6 @@ msgstr "Невалидна честота на дискретизация"
 #: src/import/ImportAUP.cpp
 msgid "Invalid sequence 'numsamples' attribute."
 msgstr "Невалидна честота на дискретизация"
-
-#: src/import/ImportAUP.cpp
-msgid "Missing or invalid silentblockfile 'len' attribute."
-msgstr ""
 
 #: src/import/ImportAUP.cpp
 #, c-format
@@ -8960,25 +8770,12 @@ msgstr "Вътрешна логическа грешка"
 msgid "WAV, AIFF, and other uncompressed types"
 msgstr "WAV, AIFF и други некомпресирани типове"
 
-#. i18n-hint: "codec" is short for a "coder-decoder" algorithm
-#: src/import/ImportPCM.cpp
-msgid "FLAC (FLAC Lossless Audio Codec)"
-msgstr ""
-
 #: src/import/ImportPCM.cpp
 msgid "MAT5 (GNU Octave 2.1 / Matlab 5.0)"
 msgstr ""
 
 #: src/import/ImportPCM.cpp
-msgid "PVF (Portable Voice Format)"
-msgstr ""
-
-#: src/import/ImportPCM.cpp
 msgid "SDS (Midi Sample Dump Standard)"
-msgstr ""
-
-#: src/import/ImportPCM.cpp
-msgid "WAV (NIST Sphere)"
 msgstr ""
 
 #: src/import/ImportPCM.cpp
@@ -9002,10 +8799,6 @@ msgstr "32-битов с ПЗ"
 #: src/import/ImportPCM.cpp
 msgid "64 bit float"
 msgstr "32-битов с ПЗ"
-
-#: src/import/ImportPCM.cpp
-msgid "Microsoft ADPCM"
-msgstr ""
 
 #: src/import/ImportPCM.cpp
 msgid "12 bit DWVW"
@@ -11351,21 +11144,11 @@ msgstr "Предпочитания: "
 msgid "Sorted by Effect Name"
 msgstr "Сортиране по име"
 
-#: src/prefs/EffectsPrefs.cpp
-msgid "Grouped by Type"
-msgstr ""
-
 #. i18n-hint: abbreviates "Linux Audio Developer's Simple Plugin API"
 #. (Application programming interface)
 #: src/prefs/EffectsPrefs.cpp
 msgid "&LADSPA"
 msgstr "Ефекти &LADSPA"
-
-#. i18n-hint: Abbreviates Virtual Studio Technology, an audio software protocol
-#. developed by Steinberg GmbH
-#: src/prefs/EffectsPrefs.cpp
-msgid "V&ST"
-msgstr ""
 
 #: src/prefs/EffectsPrefs.cpp
 msgid "Enable Effects"
@@ -11543,10 +11326,6 @@ msgstr "&Мрежа по оста Y"
 msgid "&Beep on completion of longer activities"
 msgstr "З&вуков сигнал при завършване на дълги операции"
 
-#: src/prefs/GUIPrefs.cpp
-msgid "Never use comma as decimal point"
-msgstr ""
-
 #: src/prefs/GUIPrefs.h
 msgid "GUI"
 msgstr ""
@@ -11624,10 +11403,6 @@ msgid "&Name"
 msgstr "Име"
 
 #: src/prefs/KeyConfigPrefs.cpp
-msgid "View by key"
-msgstr ""
-
-#: src/prefs/KeyConfigPrefs.cpp
 msgid "Bindings"
 msgstr "Клавишни комбинации"
 
@@ -11671,21 +11446,6 @@ msgstr "Експорт на клавишни комбинации като:"
 #: src/prefs/KeyConfigPrefs.cpp
 msgid "Error Exporting Keyboard Shortcuts"
 msgstr "Грешка при експортиране на клавишните комбинации"
-
-#: src/prefs/KeyConfigPrefs.cpp
-#, c-format
-msgid ""
-"The keyboard shortcut '%s' is already assigned to:\n"
-"\n"
-"\t%s\n"
-"\n"
-"\n"
-"Click OK to assign the shortcut to\n"
-"\n"
-"\t%s\n"
-"\n"
-"instead. Otherwise, click Cancel."
-msgstr ""
 
 #: src/prefs/KeyConfigPrefs.h
 msgid "Key Config"
@@ -11782,11 +11542,6 @@ msgstr "Модулатор"
 #: src/prefs/ModulePrefs.cpp
 msgid "Preferences for Module"
 msgstr "Предпочитания: "
-
-#. i18n-hint preserve the leading spaces
-#: src/prefs/ModulePrefs.cpp
-msgid "  'New' means no choice has been made yet."
-msgstr ""
 
 #: src/prefs/ModulePrefs.cpp
 msgid "Changes to these settings only take effect when Audacity starts up."
@@ -12203,11 +11958,6 @@ msgstr "0 означава безкрайно"
 msgid "Punch and Roll Recording"
 msgstr "Записване, задействано от звук"
 
-#. i18n-hint: The name of a frequency scale in psychoacoustics, named for Heinrich Barkhausen
-#: src/prefs/SpectrogramSettings.cpp
-msgid "Bark"
-msgstr ""
-
 #. i18n-hint: Time units, that is Period = 1 / Frequency
 #: src/prefs/SpectrogramSettings.cpp
 msgid "Period"
@@ -12584,10 +12334,6 @@ msgstr "Предпочитания: "
 #: src/prefs/TracksPrefs.cpp
 msgid "Sho&w track name as overlay"
 msgstr "&Изписване името на пистата при вълновата форма"
-
-#: src/prefs/TracksPrefs.cpp
-msgid "Pinned &head position"
-msgstr ""
 
 #: src/prefs/TracksPrefs.cpp
 msgid "Default &view mode:"
@@ -13306,10 +13052,6 @@ msgstr "&Честота на дискретизация"
 #: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
 msgid "16000 Hz"
 msgstr "0100 ч 060 м 060>0100 с"
-
-#: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
-msgid "88200 Hz"
-msgstr ""
 
 #: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
 msgid "352800 Hz"
@@ -14464,10 +14206,6 @@ msgstr "Отрязани отчети"
 msgid "Reconstructing clips..."
 msgstr "Премахва се пукане…"
 
-#: plug-ins/clipfix.ny
-msgid "Reduce amplitude to allow for restored peaks (dB)"
-msgstr ""
-
 #: plug-ins/crossfadeclips.ny
 msgid "Crossfade Clips"
 msgstr "Нотна писта"
@@ -14613,10 +14351,6 @@ msgid "Label text"
 msgstr "Редактиране на надпис"
 
 #: plug-ins/equalabel.ny
-msgid "2 (Before Label)"
-msgstr ""
-
-#: plug-ins/equalabel.ny
 msgid "3 (After Label)"
 msgstr ""
 
@@ -14661,10 +14395,6 @@ msgstr "от Dominic Mazzoni"
 #: plug-ins/highpass.ny plug-ins/lowpass.ny plug-ins/notch.ny plug-ins/rissetdrum.ny plug-ins/tremolo.ny
 msgid "Frequency (Hz)"
 msgstr "Честота (Хц)"
-
-#: plug-ins/highpass.ny plug-ins/lowpass.ny
-msgid "24 dB"
-msgstr ""
 
 #: plug-ins/highpass.ny plug-ins/lowpass.ny plug-ins/notch.ny
 msgid "Frequency must be at least 0.1 Hz."
@@ -14722,11 +14452,6 @@ msgstr "От дължина в секунди"
 #: plug-ins/label-sounds.ny
 msgid "Maximum leading silence"
 msgstr "Премахва се тишина…"
-
-#: plug-ins/label-sounds.ny
-#, lisp-format
-msgid "Too many silences detected.~%Only the first 10000 labels added."
-msgstr ""
 
 #. i18n-hint: '~a' will be replaced by a time duration
 #: plug-ins/label-sounds.ny
@@ -14827,13 +14552,6 @@ msgstr "Време за атака/затихване"
 msgid "Decay (ms)"
 msgstr "Време за атака/затихване"
 
-#: plug-ins/noisegate.ny
-#, lisp-format
-msgid ""
-"Peak based on first ~a seconds ~a dB~%\n"
-"Suggested Threshold Setting ~a dB."
-msgstr ""
-
 #: plug-ins/notch.ny
 msgid "Notch Filter"
 msgstr "Дължина на филтъра"
@@ -14901,10 +14619,6 @@ msgid "Unsupported file type:"
 msgstr "Неизползвани филтри:"
 
 #: plug-ins/pluck.ny
-msgid "Pluck"
-msgstr ""
-
-#: plug-ins/pluck.ny
 msgid "Generating pluck sound..."
 msgstr "Генерира се тон"
 
@@ -14965,20 +14679,12 @@ msgid "Beat sound"
 msgstr "Повтаряне"
 
 #: plug-ins/rhythmtrack.ny
-msgid "Cowbell"
-msgstr ""
-
-#: plug-ins/rhythmtrack.ny
 msgid "Resonant Noise"
 msgstr "Премахва се шум"
 
 #: plug-ins/rhythmtrack.ny
 msgid "Noise Click"
 msgstr "Долна граница на шума"
-
-#: plug-ins/rhythmtrack.ny
-msgid "18 - 116"
-msgstr ""
 
 #: plug-ins/rissetdrum.ny
 msgid "Risset Drum"
@@ -15044,10 +14750,6 @@ msgstr "Информация за компилата"
 msgid "All"
 msgstr "Всички"
 
-#: plug-ins/sample-data-export.ny
-msgid "Alternate Lines"
-msgstr ""
-
 #. i18n-hint: L for Left
 #: plug-ins/sample-data-export.ny
 msgid "L Channel First"
@@ -15073,13 +14775,6 @@ msgstr "Десен канал"
 
 #: plug-ins/sample-data-export.ny
 #, lisp-format
-msgid ""
-"~a   ~a~%~aSample Rate: ~a Hz. Sample values on ~a scale.~%~\n"
-"                     Length processed: ~a samples ~a seconds.~a"
-msgstr ""
-
-#: plug-ins/sample-data-export.ny
-#, lisp-format
 msgid "~a samples."
 msgstr "отчети"
 
@@ -15087,12 +14782,6 @@ msgstr "отчети"
 #, lisp-format
 msgid "~a seconds."
 msgstr "секунди"
-
-#. i18n-hint: RMS abbreviates root-mean-square, a method of averaging a signal; there also "weighted" versions of it but this isn't that
-#: plug-ins/sample-data-export.ny
-#, lisp-format
-msgid "<b>RMS</b> (unweighted): &nbsp;&nbsp;~a dB."
-msgstr ""
 
 #: plug-ins/sample-data-export.ny
 msgid "sample data"
@@ -15138,11 +14827,6 @@ msgstr "2 канала (стерео)"
 msgid "1 channel (mono)"
 msgstr "1 канал (моно)"
 
-#: plug-ins/sample-data-export.ny
-#, lisp-format
-msgid "Left and right channels on alternate lines.~%"
-msgstr ""
-
 #: plug-ins/sample-data-import.ny
 msgid "Sample Data Import"
 msgstr "Реди&скретизация чрез:"
@@ -15158,14 +14842,6 @@ msgstr "Изберете MIDI файл..."
 #: plug-ins/sample-data-import.ny
 msgid "Throw Error"
 msgstr "Грешка"
-
-#: plug-ins/sample-data-import.ny
-#, lisp-format
-msgid ""
-"Error~%~\n"
-"              Data must be numbers in plain ASCII text.~%~\n"
-"              '~a' is not a numeric value."
-msgstr ""
 
 #: plug-ins/sample-data-import.ny
 #, lisp-format
@@ -15241,18 +14917,9 @@ msgid "Strength"
 msgstr "Филтър"
 
 #: plug-ins/vocalrediso.ny
-#, lisp-format
-msgid "Pan position: ~a~%The left and right channels are correlated by about ~a %. This means:~%~a~%"
-msgstr ""
-
-#: plug-ins/vocalrediso.ny
 msgid ""
 " - An ideal value for Stereo.\n"
 "                However, the center extraction depends also on the used reverb."
-msgstr ""
-
-#: plug-ins/vocalrediso.ny
-msgid "This plug-in works only with stereo tracks."
 msgstr ""
 
 #: plug-ins/vocoder.ny

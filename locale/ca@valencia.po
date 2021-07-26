@@ -953,14 +953,6 @@ msgstr "Audacity ja es troba en funcionament"
 msgid "Audacity Startup Failure"
 msgstr "Fitxers de projecte de l'Audacity"
 
-#: src/AudacityApp.cpp
-msgid ""
-"The Audacity IPC server failed to initialize.\n"
-"\n"
-"This is likely due to a resource shortage\n"
-"and a reboot may be required."
-msgstr ""
-
 #. i18n-hint: This controls the number of bytes that Audacity will
 #. *           use when writing files to the disk
 #: src/AudacityApp.cpp
@@ -2097,11 +2089,6 @@ msgstr "Cap"
 #: src/Dither.cpp
 msgid "Shaped"
 msgstr "Perfilat"
-
-#. i18n-hint a proper name
-#: src/FFT.cpp
-msgid "Hann"
-msgstr ""
 
 #. i18n-hint a proper name
 #: src/FFT.cpp
@@ -3481,13 +3468,6 @@ msgstr "S'està guardant un projecte d'Audacity"
 #: src/ProjectFileIO.cpp
 msgid "Unable to initialize the project file"
 msgstr "No s'ha pogut inicialitzar el flux de dades MP3"
-
-#. i18n-hint: An error message.  Don't translate blockfiles.
-#: src/ProjectFileIO.cpp
-msgid ""
-"Project is busy\n"
-"(Unable to work with the blockfiles)"
-msgstr ""
 
 #. i18n-hint: An error message.  Don't translate blockfiles.
 #: src/ProjectFileIO.cpp
@@ -5416,10 +5396,6 @@ msgstr "Selecciona l'àudio."
 #: src/commands/SetClipCommand.cpp
 msgid "Set Clip"
 msgstr "Defineix clip"
-
-#: src/commands/SetClipCommand.cpp src/commands/SetTrackInfoCommand.cpp
-msgid "Color 3"
-msgstr ""
 
 #: src/commands/SetClipCommand.cpp
 msgid "At:"
@@ -7455,10 +7431,6 @@ msgstr "Segona pista"
 msgid "Hann, Hann (default)"
 msgstr "4 (per defecte)"
 
-#: src/effects/NoiseReduction.cpp
-msgid "Hamming, Reciprocal Hamming"
-msgstr ""
-
 #: src/effects/NoiseReduction.cpp src/menus/PluginMenus.cpp
 msgid "Noise Reduction"
 msgstr "Reducció de soroll"
@@ -7604,10 +7576,6 @@ msgstr "Tipus de &finestra"
 #: src/effects/NoiseReduction.cpp
 msgid "Window si&ze:"
 msgstr "Mi&da de la finestra"
-
-#: src/effects/NoiseReduction.cpp src/prefs/SpectrumPrefs.cpp
-msgid "64"
-msgstr ""
 
 #: src/effects/NoiseReduction.cpp
 msgid "1024"
@@ -9230,10 +9198,6 @@ msgid "Quality (kbps):"
 msgstr "Qualitat (kbps):"
 
 #: src/export/ExportFFmpegDialogs.cpp src/export/ExportFLAC.cpp
-msgid "3"
-msgstr ""
-
-#: src/export/ExportFFmpegDialogs.cpp src/export/ExportFLAC.cpp
 msgid "7"
 msgstr ""
 
@@ -9256,10 +9220,6 @@ msgstr "&Àudio..."
 #: src/export/ExportFFmpegDialogs.cpp
 msgid "Low Delay"
 msgstr "Retard"
-
-#: src/export/ExportFFmpegDialogs.cpp
-msgid "20 ms"
-msgstr ""
 
 #: src/export/ExportFFmpegDialogs.cpp
 msgid "Mediumband"
@@ -9951,10 +9911,6 @@ msgstr ""
 "Descarregueu l'última versió de «LAME per a Audacity»."
 
 #: src/export/ExportMP3.cpp
-msgid "Only libmp3lame.so.0"
-msgstr ""
-
-#: src/export/ExportMP3.cpp
 msgid "Extended libraries"
 msgstr "Biblioteques centrals"
 
@@ -10533,10 +10489,6 @@ msgid "Internal error in importer...tag not recognized"
 msgstr "Error intern reportat pel procés d'alineament."
 
 #: src/import/ImportAUP.cpp
-msgid "Invalid project 'zoom' attribute."
-msgstr ""
-
-#: src/import/ImportAUP.cpp
 msgid "Invalid project 'selHigh' attribute."
 msgstr ""
 
@@ -10556,10 +10508,6 @@ msgstr "Freqüència de mostreig no vàlida"
 #: src/import/ImportAUP.cpp
 msgid "Invalid sequence 'numsamples' attribute."
 msgstr "Freqüència de mostreig no vàlida"
-
-#: src/import/ImportAUP.cpp
-msgid "Missing or invalid silentblockfile 'len' attribute."
-msgstr ""
 
 #: src/import/ImportAUP.cpp
 #, c-format
@@ -10721,25 +10669,12 @@ msgstr "Fallada lògica interna"
 msgid "WAV, AIFF, and other uncompressed types"
 msgstr "WAV, AIFF i altres tipus de fitxers no comprimits"
 
-#. i18n-hint: "codec" is short for a "coder-decoder" algorithm
-#: src/import/ImportPCM.cpp
-msgid "FLAC (FLAC Lossless Audio Codec)"
-msgstr ""
-
 #: src/import/ImportPCM.cpp
 msgid "MAT5 (GNU Octave 2.1 / Matlab 5.0)"
 msgstr ""
 
 #: src/import/ImportPCM.cpp
-msgid "PVF (Portable Voice Format)"
-msgstr ""
-
-#: src/import/ImportPCM.cpp
 msgid "SDS (Midi Sample Dump Standard)"
-msgstr ""
-
-#: src/import/ImportPCM.cpp
-msgid "WAV (NIST Sphere)"
 msgstr ""
 
 #: src/import/ImportPCM.cpp
@@ -10761,10 +10696,6 @@ msgstr "Flotant de 32 bits"
 #: src/import/ImportPCM.cpp
 msgid "64 bit float"
 msgstr "Flotant de 32 bits"
-
-#: src/import/ImportPCM.cpp
-msgid "Microsoft ADPCM"
-msgstr ""
 
 #: src/import/ImportPCM.cpp
 msgid "12 bit DWVW"
@@ -13253,12 +13184,6 @@ msgstr "S'ha agrupat per editor"
 msgid "Grouped by Type"
 msgstr "S'ha agrupat per tipus"
 
-#. i18n-hint: Vamp is the proper name of a software protocol for sound analysis.
-#. It is not an abbreviation for anything.  See http://vamp-plugins.org
-#: src/prefs/EffectsPrefs.cpp
-msgid "&Vamp"
-msgstr ""
-
 #: src/prefs/EffectsPrefs.cpp
 msgid "Enable Effects"
 msgstr "Habilita els efectes"
@@ -15461,15 +15386,7 @@ msgid "Rat&e"
 msgstr "Fr&eqüència"
 
 #: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
-msgid "22050 Hz"
-msgstr ""
-
-#: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
 msgid "96000 Hz"
-msgstr ""
-
-#: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
-msgid "384000 Hz"
 msgstr ""
 
 #: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
@@ -15598,10 +15515,6 @@ msgstr "Feu clic i arrossegueu per a ajustar , doble clic per a reiniciar"
 #: src/tracks/playabletrack/wavetrack/ui/WaveTrackView.cpp
 msgid "Click and drag to rearrange sub-views"
 msgstr "Feu clic i arrossegueu per a moure una pista en el temps"
-
-#: src/tracks/playabletrack/wavetrack/ui/WaveformVZoomHandle.cpp
-msgid "Zoom x2"
-msgstr ""
 
 #: src/tracks/playabletrack/wavetrack/ui/WaveformVZoomHandle.cpp
 msgid "Half Wave"
@@ -17068,10 +16981,6 @@ msgstr "Freqüència (Hz)"
 msgid "Roll-off (dB per octave)"
 msgstr "Atenuació (dB per octava)"
 
-#: plug-ins/highpass.ny plug-ins/lowpass.ny
-msgid "36 dB"
-msgstr ""
-
 #: plug-ins/highpass.ny plug-ins/lowpass.ny plug-ins/notch.ny
 msgid "Frequency must be at least 0.1 Hz."
 msgstr "La freqüència ha de ser com a mínim de 0,1 Hz."
@@ -17143,11 +17052,6 @@ msgstr "~aDuració de la zona = ~a segons."
 #: plug-ins/label-sounds.ny
 msgid "Maximum leading silence"
 msgstr "S'està buscant el silenci..."
-
-#: plug-ins/label-sounds.ny
-#, lisp-format
-msgid "Too many silences detected.~%Only the first 10000 labels added."
-msgstr ""
 
 #. i18n-hint: '~a' will be replaced by a time duration
 #: plug-ins/label-sounds.ny
@@ -17268,13 +17172,6 @@ msgstr "Temps d'atac/esmortiment"
 #: plug-ins/noisegate.ny
 msgid "Decay (ms)"
 msgstr "Temps d'atac/esmortiment"
-
-#: plug-ins/noisegate.ny
-#, lisp-format
-msgid ""
-"Peak based on first ~a seconds ~a dB~%\n"
-"Suggested Threshold Setting ~a dB."
-msgstr ""
 
 #: plug-ins/notch.ny
 msgid "Notch Filter"

@@ -659,10 +659,6 @@ msgid "%s website: "
 msgstr "Suíomh gréasáin %s: "
 
 #: src/AdornedRulerPanel.cpp
-msgid "Timeline actions disabled during recording"
-msgstr ""
-
-#: src/AdornedRulerPanel.cpp
 msgid "Click and drag to adjust, double-click to reset"
 msgstr "Cnag is tarraing chun méad coibhneasta rianta déthónacha a ghléasadh."
 
@@ -807,14 +803,6 @@ msgstr "Tá Audacity ar siúl cheana féin"
 msgid "Audacity Startup Failure"
 msgstr "Teip Thosaithe Audacity"
 
-#: src/AudacityApp.cpp
-msgid ""
-"The Audacity IPC server failed to initialize.\n"
-"\n"
-"This is likely due to a resource shortage\n"
-"and a reboot may be required."
-msgstr ""
-
 #. i18n-hint: This displays a list of available options
 #: src/AudacityApp.cpp
 msgid "this help message"
@@ -921,11 +909,6 @@ msgstr "Fuaim Audacity"
 #: src/AudioIO.cpp
 msgid "Out of memory!"
 msgstr "Gan chuimhne!"
-
-#: src/AudioIO.cpp
-#, c-format
-msgid "Automated Recording Level Adjustment increased the volume to %.2f."
-msgstr ""
 
 #: src/AudioIOBase.cpp
 msgid "Stream is active ... unable to gather information.\n"
@@ -1119,12 +1102,6 @@ msgstr "Tabhair amach MIDI"
 msgid "Effect"
 msgstr "Maisiúchán"
 
-#. i18n-hint: %s will be replaced by the name of an action, such as "Remove Tracks".
-#: src/BatchCommands.cpp src/CommonCommandFlags.cpp
-#, c-format
-msgid "\"%s\" requires one or more tracks to be selected."
-msgstr ""
-
 #: src/BatchCommands.cpp
 msgid "Apply Macro"
 msgstr "Phaser á Fhorchur"
@@ -1308,11 +1285,6 @@ msgid "Export Benchmark Data as:"
 msgstr "Easpórtáil Sonraí Speictreacha Mar:"
 
 #: src/Benchmark.cpp
-#, c-format
-msgid "Using %lld chunks of %lld samples each, for a total of %.1f MB.\n"
-msgstr ""
-
-#: src/Benchmark.cpp
 msgid "Preparing...\n"
 msgstr "Á ullmhú...\n"
 
@@ -1340,11 +1312,6 @@ msgstr "Theip ar an ngearradh (%ld, %ld).\n"
 #, c-format
 msgid "Paste: %lld\n"
 msgstr "Greamaigh %ld\n"
-
-#: src/Benchmark.cpp
-#, c-format
-msgid "Track # blocks: %ld\n"
-msgstr ""
 
 #: src/Benchmark.cpp
 msgid "Passed correctness check!\n"
@@ -1380,12 +1347,6 @@ msgstr "Ní foláir duit rian a roghnú i dtosach."
 #: src/CommonCommandFlags.cpp
 msgid "No Audio Selected"
 msgstr "Níl Fuaim Roghnaithe"
-
-#: src/CommonCommandFlags.cpp
-msgid ""
-"You must first select some audio to perform this action.\n"
-"(Selecting other kinds of track won't work.)"
-msgstr ""
 
 #: src/DBConnection.cpp
 #, c-format
@@ -1507,17 +1468,8 @@ msgstr "Dronnuilleogach"
 
 #. i18n-hint a proper name
 #: src/FFT.cpp
-msgid "Blackman"
-msgstr ""
-
-#. i18n-hint a proper name
-#: src/FFT.cpp
 msgid "Welch"
 msgstr "Loic"
-
-#: src/FFmpeg.cpp
-msgid "FFmpeg support not compiled in"
-msgstr ""
 
 #: src/FFmpeg.cpp
 msgid "FFmpeg startup failed"
@@ -1743,13 +1695,6 @@ msgstr "Roghnaíodh an iomad fuaime.  Ní dhéanfar anailís ach ar an gcéad %.
 msgid "Not enough data selected."
 msgstr "Níl dóthain sonraí roghnaithe."
 
-#. i18n-hint: The %d's are replaced by numbers, the %s by musical notes, e.g. A#
-#. * the %.4f are numbers, and 'sec' should be an abbreviation for seconds
-#: src/FreqWindow.cpp
-#, c-format
-msgid "%.4f sec (%d Hz) (%s) = %f"
-msgstr ""
-
 #: src/FreqWindow.cpp
 msgid "Export Spectral Data As:"
 msgstr "Easpórtáil Sonraí Speictreacha Mar:"
@@ -1811,10 +1756,6 @@ msgid "No Local Help"
 msgstr "Níl Cabhair Logánta Ar Fáil"
 
 #: src/HelpText.cpp
-msgid "You can help us get Audacity ready for release by joining our [[https://www.audacityteam.org/community/|community]].<hr><br><br>"
-msgstr ""
-
-#: src/HelpText.cpp
 msgid "How to get help"
 msgstr "Conas cabhair a fháil"
 
@@ -1825,10 +1766,6 @@ msgstr "Seo iad na modhanna tacaíochta atá againn:"
 #: src/HelpText.cpp
 msgid " [[https://forum.audacityteam.org/|Forum]] - ask your question directly, online."
 msgstr " [[https://forum.audacityteam.org/|Forum]] - cuir do cheist go díreach, ar an ngréasán."
-
-#: src/HelpText.cpp
-msgid "The Manual does not appear to be installed. Please [[*URL*|view the Manual online]].<br><br>To always view the Manual online, change \"Location of Manual\" in Interface Preferences to \"From Internet\"."
-msgstr ""
 
 #: src/HistoryWindow.cpp
 msgid "History"
@@ -2088,27 +2025,12 @@ msgstr "Rian Nótaí"
 
 #. i18n-hint: Name of a musical note in the 12-tone chromatic scale
 #: src/PitchName.cpp
-msgid "D♯"
-msgstr ""
-
-#. i18n-hint: Name of a musical note in the 12-tone chromatic scale
-#: src/PitchName.cpp
 msgid "G"
 msgstr ""
 
 #. i18n-hint: Name of a musical note in the 12-tone chromatic scale
 #: src/PitchName.cpp
-msgid "B"
-msgstr ""
-
-#. i18n-hint: Name of a musical note in the 12-tone chromatic scale
-#: src/PitchName.cpp
 msgid "A♭"
-msgstr ""
-
-#. i18n-hint: Two, alternate names of a musical note in the 12-tone chromatic scale
-#: src/PitchName.cpp
-msgid "F♯/G♭"
 msgstr ""
 
 #: src/PluginManager.cpp
@@ -2268,15 +2190,6 @@ msgstr "Fuaim Thaifeadta"
 msgid "Record"
 msgstr "Déan Taifeadadh"
 
-#. i18n-hint: The audacity project file is XML and has 'tags' in it,
-#. rather like html tags <something>some stuff</something>.
-#. This error message is about the tags that hold the sequence information.
-#. The error message is confusing to users in English, and could just say
-#. "Found problems with <sequence> when checking project file."
-#: src/ProjectFSCK.cpp
-msgid "Project check read faulty Sequence tags."
-msgstr ""
-
 #: src/ProjectFSCK.cpp
 msgid "Close project immediately with no changes"
 msgstr "Dún an tionscadal láithreach gan aon athrú"
@@ -2285,33 +2198,9 @@ msgstr "Dún an tionscadal láithreach gan aon athrú"
 #, c-format
 msgid ""
 "Project check of \"%s\" folder \n"
-"detected %lld missing external audio file(s) \n"
-"('aliased files'). There is no way for Audacity \n"
-"to recover these files automatically. \n"
-"\n"
-"If you choose the first or second option below, \n"
-"you can try to find and restore the missing files \n"
-"to their previous location. \n"
-"\n"
-"Note that for the second option, the waveform \n"
-"may not show silence. \n"
-"\n"
-"If you choose the third option, this will save the \n"
-"project in its current state, unless you \"Close \n"
-"project immediately\" on further error alerts."
-msgstr ""
-
-#: src/ProjectFSCK.cpp
-#, c-format
-msgid ""
-"Project check of \"%s\" folder \n"
 "detected %lld missing alias (.auf) blockfile(s). \n"
 "Audacity can fully regenerate these files \n"
 "from the current audio in the project."
-msgstr ""
-
-#: src/ProjectFSCK.cpp
-msgid "Warning - Missing Alias Summary File(s)"
 msgstr ""
 
 #: src/ProjectFSCK.cpp
@@ -2384,13 +2273,6 @@ msgstr "Ní fhéidir a aithint"
 #. i18n-hint: An error message.  Don't translate blockfiles.
 #: src/ProjectFileIO.cpp
 msgid ""
-"Project is busy\n"
-"(Unable to work with the blockfiles)"
-msgstr ""
-
-#. i18n-hint: An error message.  Don't translate blockfiles.
-#: src/ProjectFileIO.cpp
-msgid ""
 "Not authorized\n"
 "(Unable to work with the blockfiles)"
 msgstr ""
@@ -2450,15 +2332,6 @@ msgstr "Ní fhéidir a aithint"
 #: src/ProjectFileIO.cpp
 msgid "Saving project"
 msgstr "&Sábháil Tionscadal"
-
-#: src/ProjectFileIO.cpp
-#, c-format
-msgid ""
-"Unable to remove autosave information, possibly due to limited space\n"
-"on the storage device.\n"
-"\n"
-"%s"
-msgstr ""
 
 #: src/ProjectFileIO.cpp
 msgid "Backing up project"
@@ -2677,10 +2550,6 @@ msgstr "Cúlra Gorm"
 #: src/Screenshot.cpp
 msgid "White Bkgnd"
 msgstr "Cúlra Bán"
-
-#: src/Screenshot.cpp
-msgid "Capture Full Screen"
-msgstr ""
 
 #: src/Screenshot.cpp
 msgid "All Toolbars"
@@ -2911,10 +2780,6 @@ msgid "Don't show this when exporting audio"
 msgstr "Ná taispeáin an foláireamh seo arís"
 
 #: src/Tags.cpp
-msgid "Are you sure you want to reset the genre list to defaults?"
-msgstr ""
-
-#: src/Tags.cpp
 msgid "Load Metadata As:"
 msgstr "Luchtaigh Meiteashonraí Mar:"
 
@@ -2950,12 +2815,6 @@ msgid ""
 msgstr ""
 "Níorbh fhéidir le Audacity íomhánna a scríobh chuig an gcomhad:\n"
 "  %s."
-
-#: src/Theme.cpp
-msgid ""
-"Audacity could not read its default theme.\n"
-"Please report the problem."
-msgstr ""
 
 #: src/Theme.cpp
 #, c-format
@@ -3036,10 +2895,6 @@ msgid "Error in Duration"
 msgstr "Earráid san Aga"
 
 #: src/TimerRecordDialog.cpp
-msgid "Error in Automatic Export"
-msgstr ""
-
-#: src/TimerRecordDialog.cpp
 msgid "Current Project"
 msgstr "An Tionscadal Reatha"
 
@@ -3054,10 +2909,6 @@ msgstr "Aga:"
 #: src/TimerRecordDialog.cpp
 msgid "Recording end:"
 msgstr "Críoch an taifeadta:"
-
-#: src/TimerRecordDialog.cpp
-msgid "Audacity Timer Record Progress"
-msgstr ""
 
 #: src/TimerRecordDialog.cpp
 msgid "Timer Recording stopped."
@@ -3323,14 +3174,6 @@ msgstr "Athshampláil cosctha."
 
 #: src/commands/AudacityCommand.cpp src/effects/Effect.cpp
 #, c-format
-msgid ""
-"%s: Could not load settings below. Default settings will be used.\n"
-"\n"
-"%s"
-msgstr ""
-
-#: src/commands/AudacityCommand.cpp src/effects/Effect.cpp
-#, c-format
 msgid "Applying %s..."
 msgstr "%s á Fhorchur..."
 
@@ -3469,10 +3312,6 @@ msgstr "Cineálacha:"
 #: src/commands/HelpCommand.cpp
 msgid "Comment"
 msgstr "Nótaí"
-
-#: src/commands/HelpCommand.h
-msgid "For comments in a macro."
-msgstr ""
 
 #: src/commands/ImportExportCommands.cpp
 msgid "Import2"
@@ -3949,13 +3788,6 @@ msgstr "Buaicaimplitiúid Nua (dB):"
 msgid "Allo&w clipping"
 msgstr "Ceadaigh bearradh"
 
-#. i18n-hint: Auto duck is the name of an effect that 'ducks' (reduces the volume)
-#. * of the audio automatically when there is sound on another track.  Not as
-#. * in 'Donald-Duck'!
-#: src/effects/AutoDuck.cpp
-msgid "Auto Duck needs a control track which must be placed below the selected track(s)."
-msgstr ""
-
 #: src/effects/AutoDuck.cpp
 msgid "Duck &amount:"
 msgstr "Cló Rian Lipéid"
@@ -3968,10 +3800,6 @@ msgstr "soicindí"
 #: src/effects/AutoDuck.cpp
 msgid "Ma&ximum pause:"
 msgstr "Sos uasta:"
-
-#: src/effects/AutoDuck.cpp
-msgid "Inner &fade up length:"
-msgstr ""
 
 #: src/effects/AutoDuck.cpp src/effects/Compressor.cpp src/effects/TruncSilence.cpp
 msgid "&Threshold:"
@@ -4102,10 +3930,6 @@ msgstr "Céatadán an Athraithe:"
 msgid "Percent Change"
 msgstr "Athrú Céatadáin"
 
-#: src/effects/ChangeSpeed.cpp
-msgid "78"
-msgstr ""
-
 #. i18n-hint: n/a is an English abbreviation meaning "not applicable".
 #. i18n-hint: Can mean "not available," "not applicable," "no answer"
 #: src/effects/ChangeSpeed.cpp src/effects/audiounits/AudioUnitEffect.cpp src/effects/ladspa/LadspaEffect.cpp src/effects/lv2/LV2Effect.cpp src/effects/nyquist/Nyquist.cpp
@@ -4224,11 +4048,6 @@ msgstr "g&o"
 #, c-format
 msgid "Length in seconds from %s, to"
 msgstr "Fad (soicindí)"
-
-#: src/effects/ClickRemoval.cpp
-#, c-format
-msgid "Selection must be larger than %d samples."
-msgstr ""
 
 #: src/effects/ClickRemoval.cpp src/effects/Compressor.cpp
 msgid "Threshold"
@@ -4374,10 +4193,6 @@ msgid "Current difference"
 msgstr "An difear reatha"
 
 #: src/effects/Contrast.cpp
-msgid "Foreground not yet measured"
-msgstr ""
-
-#: src/effects/Contrast.cpp
 msgid "Export Contrast Result As:"
 msgstr ""
 
@@ -4417,32 +4232,15 @@ msgid "Soft Clipping"
 msgstr "Gearrthóg Bhog"
 
 #: src/effects/Distortion.cpp
-msgid "Cubic Curve (odd harmonics)"
-msgstr ""
-
-#: src/effects/Distortion.cpp
 msgid "Expand and Compress"
 msgstr "Comhbhrúiteoir Réimse Dhinimiciúil"
-
-#: src/effects/Distortion.cpp
-#, no-c-format
-msgid "Hard clip -12dB, 80% make-up gain"
-msgstr ""
 
 #: src/effects/Distortion.cpp
 msgid "Blues drive sustain"
 msgstr ""
 
 #: src/effects/Distortion.cpp
-msgid "Valve Overdrive"
-msgstr ""
-
-#: src/effects/Distortion.cpp
 msgid "Leveller, Moderate, -70dB noise floor"
-msgstr ""
-
-#: src/effects/Distortion.cpp
-msgid "Half-wave Rectifier"
 msgstr ""
 
 #: src/effects/Distortion.cpp
@@ -4524,12 +4322,6 @@ msgstr "&Aga:"
 #: src/effects/DtmfGen.cpp
 msgid "&Tone/silence ratio:"
 msgstr "Gineadóir Ton"
-
-#. i18n-hint milliseconds
-#: src/effects/DtmfGen.cpp
-#, c-format
-msgid "%.0f ms"
-msgstr ""
 
 #: src/effects/Echo.cpp
 msgid "Echo"
@@ -4620,10 +4412,6 @@ msgstr "Na Socruithe Reatha"
 #: src/effects/EffectManager.cpp
 msgid "Factory Defaults"
 msgstr "Réamhshocruithe na Monarchan"
-
-#: src/effects/EffectManager.cpp
-msgid "Command failed to initialize"
-msgstr ""
 
 #: src/effects/EffectUI.cpp
 msgid "Effects Rack"
@@ -4838,12 +4626,6 @@ msgstr "dB uasta"
 msgid "Min dB"
 msgstr "dB íosta"
 
-#. i18n-hint k is SI abbreviation for x1,000.  Usually unchanged in translation.
-#: src/effects/Equalization.cpp
-#, c-format
-msgid "%gk"
-msgstr ""
-
 #: src/effects/Equalization.cpp
 msgid "&Draw"
 msgstr "&Tarraing"
@@ -4855,10 +4637,6 @@ msgstr "&Graf"
 #: src/effects/Equalization.cpp
 msgid "Interpolation type"
 msgstr "Idirlonnú Sinc Thapaidh"
-
-#: src/effects/Equalization.cpp
-msgid "Length of Filter"
-msgstr ""
 
 #: src/effects/Equalization.cpp
 msgid "&Select Curve:"
@@ -4888,18 +4666,10 @@ msgstr "Taispeáin na línte eang&aigh"
 msgid "D&efault"
 msgstr "Réamhshocrú"
 
-#: src/effects/Equalization.cpp
-msgid "AV&X Threaded"
-msgstr ""
-
 #. i18n-hint: name of the 'unnamed' custom curve
 #: src/effects/Equalization.cpp
 msgid "unnamed"
 msgstr "gan ainm"
-
-#: src/effects/Equalization.cpp
-msgid "Requested curve not found, using 'unnamed'"
-msgstr ""
 
 #: src/effects/Equalization.cpp
 msgid "Curve not found"
@@ -4971,23 +4741,8 @@ msgid "Delete %d items?"
 msgstr "Scrios %d mír?"
 
 #: src/effects/Equalization.cpp
-msgid "You cannot export 'unnamed' curve, it is special."
-msgstr ""
-
-#: src/effects/Equalization.cpp
 msgid "Cannot Export 'unnamed'"
 msgstr "Ní féidir fuaim a easpórtáil go %s"
-
-#: src/effects/Equalization48x.cpp
-#, c-format
-msgid ""
-"Benchmark times:\n"
-"Original: %s\n"
-"Default Segmented: %s\n"
-"Default Threaded: %s\n"
-"SSE: %s\n"
-"SSE Threaded: %s\n"
-msgstr ""
 
 #: src/effects/Fade.cpp
 msgid "Fade In"
@@ -5030,10 +4785,6 @@ msgstr "Ag miondealú: %s"
 msgid "&Normalize"
 msgstr "Normalú"
 
-#: src/effects/Loudness.cpp
-msgid "Normalize &stereo channels independently"
-msgstr ""
-
 #: src/effects/Loudness.cpp src/effects/Normalize.cpp
 msgid "(Maximum 0dB)"
 msgstr "(0dB ar a mhéad)"
@@ -5075,17 +4826,9 @@ msgstr "Sean"
 msgid "Hann, Hann (default)"
 msgstr "Hann, Hann (réamhshocrú)"
 
-#: src/effects/NoiseReduction.cpp
-msgid "Hamming, Reciprocal Hamming"
-msgstr ""
-
 #: src/effects/NoiseReduction.cpp src/menus/PluginMenus.cpp
 msgid "Noise Reduction"
 msgstr "Asbhaint Fhothraim"
-
-#: src/effects/NoiseReduction.cpp
-msgid "Median method is not implemented for more than four steps per window."
-msgstr ""
 
 #: src/effects/NoiseReduction.cpp
 msgid "All noise profile data must have the same sample rate."
@@ -5173,10 +4916,6 @@ msgstr "Cineálacha fuinneoga"
 msgid "Window si&ze:"
 msgstr "Méid na fuinneoige:"
 
-#: src/effects/NoiseReduction.cpp src/prefs/SpectrumPrefs.cpp
-msgid "64"
-msgstr ""
-
 #: src/effects/NoiseReduction.cpp
 msgid "1024"
 msgstr ""
@@ -5184,10 +4923,6 @@ msgstr ""
 #: src/effects/NoiseReduction.cpp
 msgid "2048 (default)"
 msgstr "2048 (réamhshocrú)"
-
-#: src/effects/NoiseReduction.cpp
-msgid "S&teps per window:"
-msgstr ""
 
 #: src/effects/NoiseReduction.cpp
 msgid "4 (default)"
@@ -5218,11 +4953,6 @@ msgid "Not doing anything...\n"
 msgstr "Níl aon rud ag tarlú...\n"
 
 #: src/effects/Normalize.cpp
-#, c-format
-msgid "Processing first track of stereo pair: %s"
-msgstr ""
-
-#: src/effects/Normalize.cpp
 msgid "&Normalize peak amplitude to   "
 msgstr "Buaicaimplitiúid Nua (dB):"
 
@@ -5240,10 +4970,6 @@ msgstr "Fachtóir meatha:"
 #: src/effects/Paulstretch.cpp
 msgid "&Time Resolution (seconds):"
 msgstr "Aga moille (soicindí):"
-
-#: src/effects/Phaser.cpp
-msgid "Phaser"
-msgstr ""
 
 #: src/effects/Phaser.cpp
 msgid "&Stages:"
@@ -5352,10 +5078,6 @@ msgid "Da&mping (%):"
 msgstr "Doimhneacht (%):"
 
 #: src/effects/Reverb.cpp
-msgid "Dr&y Gain (dB):"
-msgstr ""
-
-#: src/effects/Reverb.cpp
 msgid "Wet O&nly"
 msgstr "Fliuch Amhái&n"
 
@@ -5381,11 +5103,6 @@ msgstr "Cineál Chebyshev I"
 #: src/effects/ScienFilter.cpp
 msgid "Chebyshev Type II"
 msgstr "Cineál Chebyshev II"
-
-#. i18n-hint: "infinite impulse response"
-#: src/effects/ScienFilter.cpp
-msgid "Performs IIR filtering that emulates analog filters"
-msgstr ""
 
 #: src/effects/ScienFilter.cpp
 msgid "To apply a filter, all selected tracks must have the same sample rate."
@@ -5507,10 +5224,6 @@ msgid "Sliding Stretch"
 msgstr "Fachtóir meatha:"
 
 #: src/effects/TimeScale.cpp
-msgid "Initial Pitch Shift"
-msgstr ""
-
-#: src/effects/TimeScale.cpp
 msgid "(%) [-50 to 100]:"
 msgstr "(%) [-50 go 100]:"
 
@@ -5527,10 +5240,6 @@ msgid "Sawtooth"
 msgstr "Sábhfhiaclach"
 
 #: src/effects/ToneGen.cpp
-msgid "Generates an ascending or descending tone of one of four types"
-msgstr ""
-
-#: src/effects/ToneGen.cpp
 msgid "&Waveform:"
 msgstr "Tonnchruth:"
 
@@ -5539,16 +5248,8 @@ msgid "&Frequency (Hz):"
 msgstr "&Minicíocht (Hz):"
 
 #: src/effects/ToneGen.cpp
-msgid "Amplitude End"
-msgstr ""
-
-#: src/effects/ToneGen.cpp
 msgid "I&nterpolation:"
 msgstr "Idirlonnú Sinc Thapaidh"
-
-#: src/effects/TruncSilence.cpp
-msgid "Automatically reduces the length of passages where the volume is below a specified level"
-msgstr ""
 
 #: src/effects/TruncSilence.cpp
 msgid "Detect Silence"
@@ -5592,10 +5293,6 @@ msgid "Latency Compensation"
 msgstr "Teaglaim Cnaipí"
 
 #: src/effects/VST/VSTEffect.cpp
-msgid "Most VST effects have a graphical interface for setting parameter values. A basic text-only method is also available.  Reopen the effect for this to take effect."
-msgstr ""
-
-#: src/effects/VST/VSTEffect.cpp
 #, c-format
 msgid "Audio In: %d, Audio Out: %d"
 msgstr "Fuaim Isteach: %d, Fuaim Amach: %d"
@@ -5623,10 +5320,6 @@ msgstr "Socruithe Maisiúcháin"
 #: src/effects/VST/VSTEffect.cpp
 msgid "Unable to read presets file."
 msgstr "Ní fhéidir a aithint"
-
-#: src/effects/Wahwah.cpp
-msgid "Rapid tone quality variations, like that guitar sound so popular in the 1970's"
-msgstr ""
 
 #: src/effects/Wahwah.cpp
 msgid "Dept&h (%):"
@@ -5779,10 +5472,6 @@ msgid "LV2 Effect Settings"
 msgstr "Socruithe Maisiúcháin"
 
 #: src/effects/lv2/LV2Effect.cpp
-msgid "Couldn't instantiate effect"
-msgstr ""
-
-#: src/effects/lv2/LV2Effect.cpp
 msgid "Generator"
 msgstr "Gineadóir"
 
@@ -5826,12 +5515,6 @@ msgstr "Fóiríor, ní féidir an maisiúchán a chur i gcrích ar rianta défh�
 #: src/effects/nyquist/Nyquist.cpp
 msgid "Debug Output: "
 msgstr "Aschur Dífhabhtaithe: "
-
-#. i18n-hint: "%s" is replaced by name of plug-in.
-#: src/effects/nyquist/Nyquist.cpp
-#, c-format
-msgid "nyx_error returned from %s.\n"
-msgstr ""
 
 #: src/effects/nyquist/Nyquist.cpp
 msgid "plug-in"
@@ -6085,11 +5768,6 @@ msgstr "Ní féidir \"%s\" aimsiú i do chonair."
 msgid "FFmpeg Error"
 msgstr "Earráid FFmpeg"
 
-#: src/export/ExportFFmpeg.cpp
-#, c-format
-msgid "FFmpeg : ERROR - Can't write headers to output file \"%s\". Error code is %d."
-msgstr ""
-
 #. i18n-hint: "codec" is short for a "coder-decoder" algorithm
 #: src/export/ExportFFmpeg.cpp
 #, c-format
@@ -6097,10 +5775,6 @@ msgid ""
 "Can't open audio codec \"%s\" (0x%x)\n"
 "\n"
 "%s"
-msgstr ""
-
-#: src/export/ExportFFmpeg.cpp
-msgid "FFmpeg : ERROR - Could not setup audio frame"
 msgstr ""
 
 #: src/export/ExportFFmpeg.cpp
@@ -6116,10 +5790,6 @@ msgstr "Fuaim roghnaithe á heaspórtáil mar Ogg Vorbis"
 msgid "Resample"
 msgstr "Athshampláil"
 
-#: src/export/ExportFFmpeg.cpp src/export/ExportMP3.cpp
-msgid "Sample Rates"
-msgstr ""
-
 #: src/export/ExportFFmpegDialogs.cpp src/export/ExportMP2.cpp
 msgid "Bit Rate:"
 msgstr "Ráta Giotán:"
@@ -6127,10 +5797,6 @@ msgstr "Ráta Giotán:"
 #: src/export/ExportFFmpegDialogs.cpp
 msgid "Quality (kbps):"
 msgstr "Caighdeán (kbps):"
-
-#: src/export/ExportFFmpegDialogs.cpp src/export/ExportFLAC.cpp
-msgid "3"
-msgstr ""
 
 #: src/export/ExportFFmpegDialogs.cpp src/export/ExportFLAC.cpp
 msgid "7"
@@ -6147,10 +5813,6 @@ msgstr "Fuaim"
 #: src/export/ExportFFmpegDialogs.cpp
 msgid "Low Delay"
 msgstr "Moill Íseal"
-
-#: src/export/ExportFFmpegDialogs.cpp
-msgid "20 ms"
-msgstr ""
 
 #: src/export/ExportFFmpegDialogs.cpp
 msgid "Mediumband"
@@ -6280,13 +5942,6 @@ msgid "Quality:"
 msgstr "Cáilíocht:"
 
 #: src/export/ExportFFmpegDialogs.cpp
-msgid ""
-"AAC Profile\n"
-"Low Complexity - default\n"
-"Most players won't play anything other than LC"
-msgstr ""
-
-#: src/export/ExportFFmpegDialogs.cpp
 msgid "FLAC options"
 msgstr "Roghanna FLAC"
 
@@ -6297,10 +5952,6 @@ msgstr "Comhbhrú:"
 #: src/export/ExportFFmpegDialogs.cpp
 msgid "Frame:"
 msgstr "Fráma:"
-
-#: src/export/ExportFFmpegDialogs.cpp
-msgid "PdO Method:"
-msgstr ""
 
 #: src/export/ExportFFmpegDialogs.cpp
 msgid "Max. PdO"
@@ -6320,23 +5971,10 @@ msgstr "PtO uasta"
 msgid "Use LPC"
 msgstr "Bain feidhm as LPC"
 
-#. i18n-hint: 'Packet Size' is a parameter that has some bearing on compression ratio for MPEG
-#. compression.  It measures how big a chunk of audio is compressed in one piece.
-#: src/export/ExportFFmpegDialogs.cpp
-msgid ""
-"Packet size\n"
-"Optional\n"
-"0 - default"
-msgstr ""
-
 #: src/export/ExportFFmpegDialogs.cpp
 #, c-format
 msgid "Delete preset '%s'?"
 msgstr "Scrios an réamhshocrú '%s'?"
-
-#: src/export/ExportFFmpegDialogs.cpp
-msgid "Select xml file to export presets into"
-msgstr ""
 
 #. i18n-hint: "codec" is short for a "coder-decoder" algorithm
 #: src/export/ExportFFmpegDialogs.cpp
@@ -6387,10 +6025,6 @@ msgstr "Fuaim roghnaithe á heaspórtáil mar Ogg Vorbis"
 #: src/export/ExportMP3.cpp
 msgid "220-260 kbps (Best Quality)"
 msgstr "220-260 kbps (An Cháilíocht Is Fearr)"
-
-#: src/export/ExportMP3.cpp
-msgid "145-185 kbps"
-msgstr ""
 
 #: src/export/ExportMP3.cpp
 msgid "65-105 kbps"
@@ -6540,10 +6174,6 @@ msgid "Exporting the audio at %d Kbps"
 msgstr "Fuaim roghnaithe á heaspórtáil mar Ogg Vorbis"
 
 #: src/export/ExportMP3.cpp
-msgid "MP3 export library not found"
-msgstr ""
-
-#: src/export/ExportMP3.cpp
 msgid "(Built-in)"
 msgstr "(Ionsuite)"
 
@@ -6614,11 +6244,6 @@ msgstr "Roghnaigh ionad ina sábháilfear na comhaid easphortáilte"
 
 #: src/export/ExportMultiple.cpp
 #, c-format
-msgid "Export stopped after exporting the following %lld file(s)."
-msgstr ""
-
-#: src/export/ExportMultiple.cpp
-#, c-format
 msgid ""
 "\"%s\" doesn't exist.\n"
 "\n"
@@ -6639,10 +6264,6 @@ msgstr "Taisc Mar..."
 #: src/export/ExportOGG.cpp
 msgid "Ogg Vorbis Files"
 msgstr "Comhaid Ogg Vorbis"
-
-#: src/export/ExportOGG.cpp
-msgid "Unable to export - problem creating stream"
-msgstr ""
 
 #: src/export/ExportOGG.cpp
 msgid "Unable to export - problem with file"
@@ -6701,15 +6322,6 @@ msgstr "Tiomsaíodh an leagan seo d'Audacity gan cumas láimhseála %s."
 #: src/import/Import.cpp
 #, c-format
 msgid ""
-"\"%s\" is an Advanced Audio Coding file.\n"
-"Without the optional FFmpeg library, Audacity cannot open this type of file.\n"
-"Otherwise, you need to convert it to a supported audio format, such as WAV or AIFF."
-msgstr ""
-
-#. i18n-hint: %s will be the filename
-#: src/import/Import.cpp
-#, c-format
-msgid ""
 "\"%s\" is a Musepack audio file. \n"
 "Audacity cannot open this type of file. \n"
 "If you think it might be an mp3 file, rename it to end with \".mp3\" \n"
@@ -6717,29 +6329,10 @@ msgid ""
 "format, such as WAV or AIFF."
 msgstr ""
 
-#. i18n-hint: %s will be the filename
-#: src/import/Import.cpp
-#, c-format
-msgid ""
-"\"%s\" is a video file. \n"
-"Audacity cannot currently open this type of file. \n"
-"You need to extract the audio to a supported format, such as WAV or AIFF."
-msgstr ""
-
 #: src/import/Import.cpp
 #, c-format
 msgid "File \"%s\" not found."
 msgstr "Níor aimsíodh an comhad \"%s\"."
-
-#. i18n-hint: %s will be the filename
-#: src/import/Import.cpp
-#, c-format
-msgid ""
-"Audacity recognized the type of the file '%s'.\n"
-"Importers supposedly supporting such files are:\n"
-"%s,\n"
-"but none of them understood this file format."
-msgstr ""
 
 #: src/import/ImportAUP.cpp
 #, c-format
@@ -6752,10 +6345,6 @@ msgstr "Theip ar oscailt an chomhaid: \"%s\""
 #: src/import/ImportAUP.cpp
 msgid "Import Project"
 msgstr "Easpórtáil Lipéid Mar:"
-
-#: src/import/ImportAUP.cpp
-msgid "Invalid project 'vpos' attribute."
-msgstr ""
 
 #: src/import/ImportAUP.cpp
 msgid "Invalid project 'sel1' attribute."
@@ -6771,19 +6360,7 @@ msgid "Project Import"
 msgstr "Tús an Tionscadail"
 
 #: src/import/ImportAUP.cpp
-msgid "Invalid sequence 'numsamples' attribute."
-msgstr ""
-
-#: src/import/ImportAUP.cpp
 msgid "Missing or invalid silentblockfile 'len' attribute."
-msgstr ""
-
-#: src/import/ImportAUP.cpp
-#, c-format
-msgid ""
-"Error while processing %s\n"
-"\n"
-"Inserting silence."
 msgstr ""
 
 #: src/import/ImportAUP.cpp
@@ -6902,25 +6479,12 @@ msgstr "Locht inmheánach loighce"
 msgid "WAV, AIFF, and other uncompressed types"
 msgstr "WAV, AIFF, agus cineálacha neamhchomhbhrúite eile"
 
-#. i18n-hint: "codec" is short for a "coder-decoder" algorithm
-#: src/import/ImportPCM.cpp
-msgid "FLAC (FLAC Lossless Audio Codec)"
-msgstr ""
-
 #: src/import/ImportPCM.cpp
 msgid "MAT5 (GNU Octave 2.1 / Matlab 5.0)"
 msgstr ""
 
 #: src/import/ImportPCM.cpp
-msgid "PVF (Portable Voice Format)"
-msgstr ""
-
-#: src/import/ImportPCM.cpp
 msgid "SDS (Midi Sample Dump Standard)"
-msgstr ""
-
-#: src/import/ImportPCM.cpp
-msgid "WAV (NIST Sphere)"
 msgstr ""
 
 #: src/import/ImportPCM.cpp
@@ -6936,15 +6500,7 @@ msgid "Signed 24 bit PCM"
 msgstr "24-bit PCM"
 
 #: src/import/ImportPCM.cpp
-msgid "64 bit float"
-msgstr ""
-
-#: src/import/ImportPCM.cpp
 msgid "Microsoft ADPCM"
-msgstr ""
-
-#: src/import/ImportPCM.cpp
-msgid "12 bit DWVW"
 msgstr ""
 
 #: src/import/ImportPCM.cpp
@@ -6971,10 +6527,6 @@ msgstr "Ag tabhairt isteach %s"
 #: src/import/ImportQT.cpp
 msgid "QuickTime files"
 msgstr "Comhaid QuickTime"
-
-#: src/import/ImportQT.cpp
-msgid "Unable to get QuickTime sample size property"
-msgstr ""
 
 #. i18n-hint: 'Raw' means 'unprocessed' here and should usually be translated.
 #: src/import/ImportRaw.cpp
@@ -7147,10 +6699,6 @@ msgid "Select Next Clip"
 msgstr "Roghnaigh an Ghearrthóg Ar Aghaidh"
 
 #: src/menus/ClipMenus.cpp
-msgid "Cursor to Next Clip Boundary"
-msgstr ""
-
-#: src/menus/ClipMenus.cpp
 msgid "Time Shift &Left"
 msgstr "Uirlis Bhogadh in Am"
 
@@ -7254,11 +6802,6 @@ msgstr "Dúblaigh"
 #: src/menus/EditMenus.cpp
 msgid "R&emove Special"
 msgstr "Sainuirlis Bhainte"
-
-#. i18n-hint: (verb)
-#: src/menus/EditMenus.cpp
-msgid "Tri&m Audio"
-msgstr ""
 
 #. i18n-hint: (verb) It's an item on a menu.
 #: src/menus/EditMenus.cpp
@@ -7578,20 +7121,10 @@ msgstr "Greamaigh an Téacs leis an Lipéad Nua"
 msgid "Cut Labeled Audio"
 msgstr "Gearr an Mhír Fuaime a bhfuil Lipéad uirthi"
 
-#. i18n-hint: (verb) Do a special kind of cut on the labels
-#: src/menus/LabelMenus.cpp
-msgid "Split Cut Labeled Audio"
-msgstr ""
-
 #. i18n-hint: (verb)
 #: src/menus/LabelMenus.cpp
 msgid "Silence Labeled Audio"
 msgstr "Cuir an Fhuaim le Lipéad ina Tost"
-
-#. i18n-hint: (verb)
-#: src/menus/LabelMenus.cpp
-msgid "Split Labeled Audio"
-msgstr ""
 
 #. i18n-hint: (verb)
 #: src/menus/LabelMenus.cpp
@@ -8076,10 +7609,6 @@ msgstr "Reathaí Deas"
 msgid "See&k"
 msgstr "Aimsigh"
 
-#: src/menus/SelectMenus.cpp
-msgid "Long Seek Rig&ht During Playback"
-msgstr ""
-
 #: src/menus/ToolbarMenus.cpp
 msgid "&Toolbars"
 msgstr "&Barraí uirlisí"
@@ -8092,11 +7621,6 @@ msgstr "&Roghchláir Bhreise (ann/as)"
 #: src/menus/ToolbarMenus.cpp
 msgid "Reset Toolb&ars"
 msgstr "Athshocraigh na Barraí Uirlisí"
-
-#: src/menus/TrackMenus.cpp
-#, c-format
-msgid "Mixed and rendered %d tracks into one new mono track"
-msgstr ""
 
 #. i18n-hint: One or more audio tracks have been panned
 #: src/menus/TrackMenus.cpp
@@ -8219,10 +7743,6 @@ msgid "Align Together"
 msgstr "Ailínigh le Chéile"
 
 #: src/menus/TrackMenus.cpp
-msgid "Adjusted Pan"
-msgstr ""
-
-#: src/menus/TrackMenus.cpp
 msgid "Created new audio track"
 msgstr "Rian nua fuaime arna cheapadh"
 
@@ -8243,16 +7763,8 @@ msgid "Created new time track"
 msgstr "Rian nua ama arna cheapadh"
 
 #: src/menus/TrackMenus.cpp
-msgid "Resampled audio track(s)"
-msgstr ""
-
-#: src/menus/TrackMenus.cpp
 msgid "Please select at least one audio track and one MIDI track."
 msgstr "Roghnaigh aon rian fuaime amháin agus aon rian MIDI amháin ar a laghad."
-
-#: src/menus/TrackMenus.cpp
-msgid "Internal error reported by alignment process."
-msgstr ""
 
 #: src/menus/TrackMenus.cpp
 msgid "Sort by Time"
@@ -8901,10 +8413,6 @@ msgstr "Ní chuirfear athruithe ar an gcomhadlann shealadach i gcrích go dtí g
 msgid "Preferences for Effects"
 msgstr "Sainroghanna do na Maisiúcháin"
 
-#: src/prefs/EffectsPrefs.cpp
-msgid "Grouped by Publisher"
-msgstr ""
-
 #. i18n-hint: "Nyquist" is an embedded interpreted programming language in
 #. Audacity, named in honor of the Swedish-American Harry Nyquist (or Nyqvist).
 #. In the translations of this and other strings, you may transliterate the
@@ -9048,10 +8556,6 @@ msgstr "Téama:"
 #: src/prefs/GUIPrefs.cpp
 msgid "Show e&xtra menus"
 msgstr "Taispeáin roghchláir bhreise"
-
-#: src/prefs/GUIPrefs.cpp
-msgid "B&lend system and Audacity theme"
-msgstr ""
 
 #: src/prefs/GUIPrefs.cpp src/toolbars/ScrubbingToolBar.cpp
 msgid "Show Scrub Ruler"
@@ -9216,10 +8720,6 @@ msgid "MP3 Library Version:"
 msgstr "Leagan Leabharlainne MP3:"
 
 #: src/prefs/LibraryPrefs.cpp
-msgid "FFmpeg Library Version:"
-msgstr ""
-
-#: src/prefs/LibraryPrefs.cpp
 msgid "FFmpeg Library:"
 msgstr "Leabharlann FFmpeg:"
 
@@ -9258,10 +8758,6 @@ msgctxt "MIDI"
 msgid "Interface"
 msgstr "Comhéadan"
 
-#: src/prefs/MidiIOPrefs.h
-msgid "Midi IO"
-msgstr ""
-
 #. i18n-hint: Modules are optional extensions to Audacity that add NEW features.
 #: src/prefs/ModulePrefs.cpp
 msgid "Modules"
@@ -9270,11 +8766,6 @@ msgstr "Modúil"
 #: src/prefs/ModulePrefs.cpp
 msgid "Preferences for Module"
 msgstr "Sainroghanna don Mhodúl"
-
-#. i18n-hint preserve the leading spaces
-#: src/prefs/ModulePrefs.cpp
-msgid "  'New' means no choice has been made yet."
-msgstr ""
 
 #: src/prefs/ModulePrefs.cpp
 msgid "Changes to these settings only take effect when Audacity starts up."
@@ -9463,10 +8954,6 @@ msgid "Cut Preview"
 msgstr "Gearr an Réamhamharc"
 
 #: src/prefs/PlaybackPrefs.cpp
-msgid "&Short period:"
-msgstr ""
-
-#: src/prefs/PlaybackPrefs.cpp
 msgid "Always scrub un&pinned"
 msgstr ""
 
@@ -9555,10 +9042,6 @@ msgid "&Track Number"
 msgstr "Uimhir an Riain"
 
 #: src/prefs/RecordingPrefs.cpp
-msgid "Enable Automated Recording Level Adjustment."
-msgstr ""
-
-#: src/prefs/RecordingPrefs.cpp
 msgid "Within:"
 msgstr "Laistigh de:"
 
@@ -9569,11 +9052,6 @@ msgstr "milleasoicindí (aga aon mhiondealú amháin)"
 #: src/prefs/RecordingPrefs.cpp
 msgid "0 means endless"
 msgstr "Ciallaíonn 0 gan chríoch"
-
-#. i18n-hint: The name of a frequency scale in psychoacoustics
-#: src/prefs/SpectrogramSettings.cpp
-msgid "Mel"
-msgstr ""
 
 #. i18n-hint: New color scheme for spectrograms
 #: src/prefs/SpectrogramSettings.cpp
@@ -9612,10 +9090,6 @@ msgstr "Athshannú"
 #: src/prefs/SpectrogramSettings.cpp
 msgid "Pitch (EAC)"
 msgstr "Airde (EAC)"
-
-#: src/prefs/SpectrogramSettings.cpp
-msgid "The range must be at least 1 dB"
-msgstr ""
 
 #: src/prefs/SpectrumPrefs.cpp
 msgid "Spectrogram Settings"
@@ -9675,10 +9149,6 @@ msgid "1024 - default"
 msgstr "1024 - réamhshocrú"
 
 #: src/prefs/SpectrumPrefs.cpp
-msgid "&Zero padding factor:"
-msgstr ""
-
-#: src/prefs/SpectrumPrefs.cpp
 msgid "Ena&ble Spectral Selection"
 msgstr "Socraigh Pointe an Rogha"
 
@@ -9702,10 +9172,6 @@ msgstr "Socraigh Pointe an Rogha"
 msgid "The maximum frequency must be an integer"
 msgstr "Ní foláir ach gur slánuimhir í an uasmhinicíocht"
 
-#: src/prefs/SpectrumPrefs.cpp
-msgid "The frequency gain must be an integer"
-msgstr ""
-
 #. i18n-hint: A theme is a consistent visual style across an application's
 #. graphical user interface, including choices of colors, and similarity of images
 #. such as those on button controls.  Audacity can load and save alternative
@@ -9721,10 +9187,6 @@ msgstr "Sainroghanna don Téama"
 #: src/prefs/ThemePrefs.cpp
 msgid "Info"
 msgstr "Faisnéis"
-
-#: src/prefs/ThemePrefs.cpp
-msgid "Save Theme Cache"
-msgstr ""
 
 #: src/prefs/ThemePrefs.cpp
 msgid "Save Files"
@@ -9754,10 +9216,6 @@ msgstr "Cumasaigh línte gearrtha"
 #: src/prefs/TracksBehaviorsPrefs.cpp
 msgid "Enable &dragging selection edges"
 msgstr "Cuir an Rogha ina thost"
-
-#: src/prefs/TracksBehaviorsPrefs.cpp
-msgid "Use dialog for the &name of a new label"
-msgstr ""
 
 #: src/prefs/TracksBehaviorsPrefs.cpp
 msgid "Advanced &vertical zooming"
@@ -9804,10 +9262,6 @@ msgid "Seconds"
 msgstr "Soicindí"
 
 #: src/prefs/TracksPrefs.cpp
-msgid "50ths of Seconds"
-msgstr ""
-
-#: src/prefs/TracksPrefs.cpp
 msgid "MilliSeconds"
 msgstr "Milleasoicindí"
 
@@ -9822,10 +9276,6 @@ msgstr "Formhéadú Uasta"
 #: src/prefs/TracksPrefs.cpp
 msgid "Preferences for Tracks"
 msgstr "Sainroghanna do Rianta"
-
-#: src/prefs/TracksPrefs.cpp
-msgid "&Pinned Recording/Playback head"
-msgstr ""
 
 #: src/prefs/TracksPrefs.cpp
 msgid "Default &view mode:"
@@ -9867,10 +9317,6 @@ msgstr "Rabhaidh"
 #: src/prefs/WarningsPrefs.cpp
 msgid "Preferences for Warnings"
 msgstr "Sainroghanna do Rabhaí"
-
-#: src/prefs/WarningsPrefs.cpp
-msgid "Mixing down to &mono during export"
-msgstr ""
 
 #. i18n-hint: A waveform is a visual representation of vibration
 #: src/prefs/WaveformPrefs.cpp
@@ -10399,15 +9845,7 @@ msgid "Rat&e"
 msgstr "Luas"
 
 #: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
-msgid "22050 Hz"
-msgstr ""
-
-#: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
 msgid "96000 Hz"
-msgstr ""
-
-#: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
-msgid "384000 Hz"
 msgstr ""
 
 #: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
@@ -10913,10 +10351,6 @@ msgid "Refresh Rate"
 msgstr "Socraigh Ráta"
 
 #: src/widgets/Meter.cpp
-msgid "Meter Style"
-msgstr ""
-
-#: src/widgets/Meter.cpp
 msgid "Gradient"
 msgstr "Grádán"
 
@@ -11170,10 +10604,6 @@ msgstr "Frámaí CDDA (75 fps)"
 msgid "010,01000>0100 Hz"
 msgstr "0100000>0100 Hz"
 
-#: src/widgets/NumericTextCtrl.cpp
-msgid "hertz"
-msgstr ""
-
 #. i18n-hint: Name of display format that shows log of frequency
 #. * in octaves
 #: src/widgets/NumericTextCtrl.cpp
@@ -11187,11 +10617,6 @@ msgstr "Ochtáibh Síos"
 #: src/widgets/NumericTextCtrl.cpp
 msgid "100>01000 octaves|1.442695041"
 msgstr "100>01000 ochtacha|1.442695041"
-
-#. i18n-hint: a cent is a hundredth of a semitone (which is 1/12 octave)
-#: src/widgets/NumericTextCtrl.cpp
-msgid "hundredths of cents"
-msgstr ""
 
 #: src/widgets/NumericTextCtrl.cpp
 msgid "(Use context menu to change format.)"
@@ -11458,10 +10883,6 @@ msgstr "Reathaí Deas"
 msgid "Reconstructing clips..."
 msgstr "Cnaga is plaib á n-asbhaint..."
 
-#: plug-ins/clipfix.ny
-msgid "Reduce amplitude to allow for restored peaks (dB)"
-msgstr ""
-
 #: plug-ins/crossfadeclips.ny
 msgid "Crossfade Clips"
 msgstr "Rian Nótaí"
@@ -11659,10 +11080,6 @@ msgstr "Cothromú á Chur i gCrích"
 msgid "Frequency (Hz)"
 msgstr "Minicíocht (Hz):"
 
-#: plug-ins/highpass.ny plug-ins/lowpass.ny
-msgid "24 dB"
-msgstr ""
-
 #: plug-ins/highpass.ny plug-ins/lowpass.ny plug-ins/notch.ny
 msgid "Frequency must be at least 0.1 Hz."
 msgstr "Ní mór don mhinicíocht a bheith 0.1 Hz ar a laghad."
@@ -11715,11 +11132,6 @@ msgstr "Comhsteiréó"
 #: plug-ins/label-sounds.ny
 msgid "Maximum leading silence"
 msgstr "Ciúnas á aimsiú..."
-
-#: plug-ins/label-sounds.ny
-#, lisp-format
-msgid "Too many silences detected.~%Only the first 10000 labels added."
-msgstr ""
 
 #. i18n-hint: '~a' will be replaced by a time duration
 #: plug-ins/label-sounds.ny
@@ -11804,13 +11216,6 @@ msgstr "Aga Ionsaithe:"
 msgid "Decay (ms)"
 msgstr "Meath (soicindí):"
 
-#: plug-ins/noisegate.ny
-#, lisp-format
-msgid ""
-"Peak based on first ~a seconds ~a dB~%\n"
-"Suggested Threshold Setting ~a dB."
-msgstr ""
-
 #. i18n-hint: hours and minutes. Do not translate "~a".
 #: plug-ins/noisegate.ny
 #, lisp-format
@@ -11893,10 +11298,6 @@ msgid "Unsupported file type:"
 msgstr "Scagairí gan úsáid:"
 
 #: plug-ins/pluck.ny
-msgid "Pluck"
-msgstr ""
-
-#: plug-ins/pluck.ny
 msgid "Generating pluck sound..."
 msgstr "Ton á Cheapadh"
 
@@ -11927,10 +11328,6 @@ msgstr "Ton á Cheapadh"
 #: plug-ins/rhythmtrack.ny
 msgid "Tempo (bpm)"
 msgstr "Luas (bpm)"
-
-#: plug-ins/rhythmtrack.ny
-msgid "Swing amount"
-msgstr ""
 
 #: plug-ins/rhythmtrack.ny
 msgid "Number of bars"
@@ -11967,10 +11364,6 @@ msgstr "Fothram á Bhaint Amach"
 #: plug-ins/rhythmtrack.ny
 msgid "Noise Click"
 msgstr "Cléchnagadh"
-
-#: plug-ins/rhythmtrack.ny
-msgid "18 - 116"
-msgstr ""
 
 #: plug-ins/rissetdrum.ny
 msgid "Risset Drum"
@@ -12061,13 +11454,6 @@ msgstr "~%~%Bealach Deas.~%~%"
 
 #: plug-ins/sample-data-export.ny
 #, lisp-format
-msgid ""
-"~a   ~a~%~aSample Rate: ~a Hz. Sample values on ~a scale.~%~\n"
-"                     Length processed: ~a samples ~a seconds.~a"
-msgstr ""
-
-#: plug-ins/sample-data-export.ny
-#, lisp-format
 msgid "~a linear, ~a dB."
 msgstr "~a líneach, ~a dB."
 
@@ -12080,12 +11466,6 @@ msgstr "Sampla Arna Bhogadh"
 #, lisp-format
 msgid "~a seconds."
 msgstr "~a soicindí."
-
-#. i18n-hint: RMS abbreviates root-mean-square, a method of averaging a signal; there also "weighted" versions of it but this isn't that
-#: plug-ins/sample-data-export.ny
-#, lisp-format
-msgid "<b>RMS</b> (unweighted): &nbsp;&nbsp;~a dB."
-msgstr ""
 
 #: plug-ins/sample-data-export.ny
 #, lisp-format
@@ -12135,11 +11515,6 @@ msgstr "2 Cainéal (Défhónach)"
 #: plug-ins/sample-data-export.ny
 msgid "1 channel (mono)"
 msgstr "1Cainéal (Aonfhónach)"
-
-#: plug-ins/sample-data-export.ny
-#, lisp-format
-msgid "Left and right channels on alternate lines.~%"
-msgstr ""
 
 #: plug-ins/sample-data-export.ny
 #, lisp-format
@@ -12232,18 +11607,9 @@ msgid "Strength"
 msgstr "Láidreacht"
 
 #: plug-ins/vocalrediso.ny
-#, lisp-format
-msgid "Pan position: ~a~%The left and right channels are correlated by about ~a %. This means:~%~a~%"
-msgstr ""
-
-#: plug-ins/vocalrediso.ny
 msgid ""
 " - An ideal value for Stereo.\n"
 "                However, the center extraction depends also on the used reverb."
-msgstr ""
-
-#: plug-ins/vocalrediso.ny
-msgid "This plug-in works only with stereo tracks."
 msgstr ""
 
 #: plug-ins/vocoder.ny

@@ -2201,11 +2201,6 @@ msgstr "Flexibel"
 msgid "Rectangular"
 msgstr "Rechthoekig"
 
-#. i18n-hint a proper name
-#: src/FFT.cpp
-msgid "Blackman"
-msgstr ""
-
 #. i18n-hint a mathematical function named for C. F. Gauss
 #: src/FFT.cpp
 msgid "Gaussian(a=2.5)"
@@ -2514,13 +2509,6 @@ msgstr "Er was teveel audio geselecteerd.  Alleen de eerste %.1f seconden audio 
 #: src/FreqWindow.cpp
 msgid "Not enough data selected."
 msgstr "Niet genoeg data geselecteerd."
-
-#. i18n-hint: The %d's are replaced by numbers, the %s by musical notes, e.g. A#
-#. * the %.4f are numbers, and 'sec' should be an abbreviation for seconds
-#: src/FreqWindow.cpp
-#, c-format
-msgid "%.4f sec (%d Hz) (%s) = %f"
-msgstr ""
 
 #: src/FreqWindow.cpp
 msgid "Export Spectral Data As:"
@@ -3039,27 +3027,12 @@ msgstr "Notentrack"
 
 #. i18n-hint: Name of a musical note in the 12-tone chromatic scale
 #: src/PitchName.cpp
-msgid "D♯"
-msgstr ""
-
-#. i18n-hint: Name of a musical note in the 12-tone chromatic scale
-#: src/PitchName.cpp
 msgid "G"
 msgstr ""
 
 #. i18n-hint: Name of a musical note in the 12-tone chromatic scale
 #: src/PitchName.cpp
-msgid "B"
-msgstr ""
-
-#. i18n-hint: Name of a musical note in the 12-tone chromatic scale
-#: src/PitchName.cpp
 msgid "A♭"
-msgstr ""
-
-#. i18n-hint: Two, alternate names of a musical note in the 12-tone chromatic scale
-#: src/PitchName.cpp
-msgid "F♯/G♭"
 msgstr ""
 
 #: src/PluginManager.cpp
@@ -7244,10 +7217,6 @@ msgstr "Samplerate van track is te laag voor dit effect."
 msgid "Effect Unavailable"
 msgstr "Effect niet beschikbaar"
 
-#: src/effects/Equalization.cpp src/effects/ScienFilter.cpp
-msgid "Min dB"
-msgstr ""
-
 #. i18n-hint k is SI abbreviation for x1,000.  Usually unchanged in translation.
 #: src/effects/Equalization.cpp
 #, c-format
@@ -7843,10 +7812,6 @@ msgstr "Venstertypes:"
 msgid "Window si&ze:"
 msgstr "Venstergrootte:"
 
-#: src/effects/NoiseReduction.cpp src/prefs/SpectrumPrefs.cpp
-msgid "64"
-msgstr ""
-
 #: src/effects/NoiseReduction.cpp
 msgid "1024"
 msgstr ""
@@ -8249,10 +8214,6 @@ msgstr "Keert de geselecteerde audio om"
 #: src/effects/SBSMSEffect.h
 msgid "SBSMS Time / Pitch Stretch"
 msgstr "SBSMS tijd/toonhoogte uitrekken"
-
-#: src/effects/ScienFilter.cpp
-msgid "Lowpass"
-msgstr ""
 
 #: src/effects/ScienFilter.cpp
 msgid "Classic Filters"
@@ -9506,10 +9467,6 @@ msgid "Quality (kbps):"
 msgstr "Kwaliteit (kbps):"
 
 #: src/export/ExportFFmpegDialogs.cpp src/export/ExportFLAC.cpp
-msgid "3"
-msgstr ""
-
-#: src/export/ExportFFmpegDialogs.cpp src/export/ExportFLAC.cpp
 msgid "7"
 msgstr ""
 
@@ -9524,10 +9481,6 @@ msgstr "Beperkt"
 #: src/export/ExportFFmpegDialogs.cpp
 msgid "Low Delay"
 msgstr "Kleine vertraging"
-
-#: src/export/ExportFFmpegDialogs.cpp
-msgid "20 ms"
-msgstr ""
 
 #: src/export/ExportFFmpegDialogs.cpp
 msgid "Narrowband"
@@ -10081,10 +10034,6 @@ msgstr "Audio exporteren aan %ld kbps"
 #: src/export/ExportMP3.cpp
 msgid "220-260 kbps (Best Quality)"
 msgstr "220-260 kbps (beste kwaliteit)"
-
-#: src/export/ExportMP3.cpp
-msgid "145-185 kbps"
-msgstr ""
 
 #: src/export/ExportMP3.cpp
 msgid "65-105 kbps"
@@ -11097,11 +11046,6 @@ msgstr "Interne logische fout"
 msgid "WAV, AIFF, and other uncompressed types"
 msgstr "Wav, Aiff, en andere types zonder compressie"
 
-#. i18n-hint: "codec" is short for a "coder-decoder" algorithm
-#: src/import/ImportPCM.cpp
-msgid "FLAC (FLAC Lossless Audio Codec)"
-msgstr ""
-
 #: src/import/ImportPCM.cpp
 msgid "MAT5 (GNU Octave 2.1 / Matlab 5.0)"
 msgstr ""
@@ -11113,10 +11057,6 @@ msgstr "OGG (OGG-containerformaat)"
 #: src/import/ImportPCM.cpp
 msgid "RAW (header-less)"
 msgstr "RAW (zonder header)"
-
-#: src/import/ImportPCM.cpp
-msgid "SF (Berkeley/IRCAM/CARL)"
-msgstr ""
 
 #: src/import/ImportPCM.cpp
 msgid "WAVEX (Microsoft)"
@@ -11149,10 +11089,6 @@ msgstr "32-bit float"
 #: src/import/ImportPCM.cpp
 msgid "64 bit float"
 msgstr "64-bit float"
-
-#: src/import/ImportPCM.cpp
-msgid "Microsoft ADPCM"
-msgstr ""
 
 #: src/import/ImportPCM.cpp
 msgid "12 bit DWVW"
@@ -15928,15 +15864,7 @@ msgid "Rat&e"
 msgstr "Ratio"
 
 #: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
-msgid "22050 Hz"
-msgstr ""
-
-#: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
 msgid "96000 Hz"
-msgstr ""
-
-#: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
-msgid "384000 Hz"
 msgstr ""
 
 #: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
@@ -17535,10 +17463,6 @@ msgstr "Frequentie (Hz)"
 #: plug-ins/highpass.ny plug-ins/lowpass.ny
 msgid "Roll-off (dB per octave)"
 msgstr "Roll-off (dB per octaaf)"
-
-#: plug-ins/highpass.ny plug-ins/lowpass.ny
-msgid "36 dB"
-msgstr ""
 
 #: plug-ins/highpass.ny plug-ins/lowpass.ny plug-ins/notch.ny
 msgid "Frequency must be at least 0.1 Hz."

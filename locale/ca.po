@@ -980,14 +980,6 @@ msgstr "El Tenacity ja s’està executant"
 msgid "Audacity Startup Failure"
 msgstr "Fitxers de projecte d'Audacity"
 
-#: src/AudacityApp.cpp
-msgid ""
-"The Audacity IPC server failed to initialize.\n"
-"\n"
-"This is likely due to a resource shortage\n"
-"and a reboot may be required."
-msgstr ""
-
 #. i18n-hint: This controls the number of bytes that Audacity will
 #. *           use when writing files to the disk
 #: src/AudacityApp.cpp
@@ -2008,11 +2000,6 @@ msgstr "Cap"
 #: src/Dither.cpp
 msgid "Shaped"
 msgstr "Modelat"
-
-#. i18n-hint a proper name
-#: src/FFT.cpp
-msgid "Hann"
-msgstr ""
 
 #. i18n-hint a proper name
 #: src/FFT.cpp
@@ -3355,13 +3342,6 @@ msgstr "No es pot iniciar el flux de dades MP3"
 #. i18n-hint: An error message.  Don't translate blockfiles.
 #: src/ProjectFileIO.cpp
 msgid ""
-"Project is busy\n"
-"(Unable to work with the blockfiles)"
-msgstr ""
-
-#. i18n-hint: An error message.  Don't translate blockfiles.
-#: src/ProjectFileIO.cpp
-msgid ""
 "Not authorized\n"
 "(Unable to work with the blockfiles)"
 msgstr ""
@@ -4365,14 +4345,6 @@ msgstr "S'ha aturat l'enregistrament temporitzat."
 msgid "Timer Recording completed."
 msgstr "S'ha completat l'enregistrament temporitzat."
 
-#: src/TimerRecordDialog.cpp
-#, c-format
-msgid ""
-"%s\n"
-"\n"
-"Error exporting recording."
-msgstr ""
-
 #. i18n-hint a format string for hours, minutes, and seconds
 #: src/TimerRecordDialog.cpp
 msgid "099 h 060 m 060 s"
@@ -4705,10 +4677,6 @@ msgstr "Preferències"
 msgid "Labels"
 msgstr "Etiquetes"
 
-#: src/commands/GetInfoCommand.cpp src/commands/HelpCommand.cpp
-msgid "Brief"
-msgstr ""
-
 #: src/commands/GetInfoCommand.cpp src/effects/EffectManager.cpp
 msgid "Type:"
 msgstr "Tipus:"
@@ -4949,16 +4917,8 @@ msgid "Track Count:"
 msgstr "Nombre de pistes:"
 
 #: src/commands/SelectCommand.h
-msgid "Selects a range of tracks."
-msgstr ""
-
-#: src/commands/SelectCommand.h
 msgid "Selects Audio."
 msgstr "Selecciona l'àudio."
-
-#: src/commands/SetClipCommand.cpp src/commands/SetTrackInfoCommand.cpp
-msgid "Color 2"
-msgstr ""
 
 #: src/commands/SetClipCommand.cpp src/commands/SetLabelCommand.cpp
 msgid "Start:"
@@ -5689,10 +5649,6 @@ msgstr "La diferència és indeterminada."
 #, c-format
 msgid "Difference = %.2f RMS dB."
 msgstr "Diferència = %.2f RMS dB."
-
-#: src/effects/Contrast.cpp
-msgid "Background higher than foreground"
-msgstr ""
 
 #. i18n-hint: WCAG2 is the 'Web Content Accessibility Guidelines (WCAG) 2.0', see http://www.w3.org/TR/WCAG20/
 #: src/effects/Contrast.cpp
@@ -6834,10 +6790,6 @@ msgstr "Segona pista"
 msgid "Hann, Hann (default)"
 msgstr "4 (predeterminat)"
 
-#: src/effects/NoiseReduction.cpp
-msgid "Hamming, Reciprocal Hamming"
-msgstr ""
-
 #: src/effects/NoiseReduction.cpp src/menus/PluginMenus.cpp
 msgid "Noise Reduction"
 msgstr "Reducció de soroll"
@@ -6984,10 +6936,6 @@ msgstr "Tipus de &finestres"
 msgid "Window si&ze:"
 msgstr "&Mida de la finestra"
 
-#: src/effects/NoiseReduction.cpp src/prefs/SpectrumPrefs.cpp
-msgid "64"
-msgstr ""
-
 #: src/effects/NoiseReduction.cpp
 msgid "1024"
 msgstr ""
@@ -7111,10 +7059,6 @@ msgstr "Factor d'estirament:"
 #: src/effects/Paulstretch.cpp
 msgid "&Time Resolution (seconds):"
 msgstr "Resolució de temps (segons):"
-
-#: src/effects/Phaser.cpp
-msgid "Phaser"
-msgstr ""
 
 #: src/effects/Phaser.cpp
 msgid "Combines phase-shifted signals with the original signal"
@@ -7877,12 +7821,6 @@ msgstr ""
 "No s'ha pogut registrar:\n"
 "%s"
 
-#. i18n-hint: the name of an Apple audio software protocol
-#. i18n-hint: Audio Unit is the name of an Apple audio software protocol
-#: src/effects/audiounits/AudioUnitEffect.h src/prefs/EffectsPrefs.cpp
-msgid "Audio Unit"
-msgstr ""
-
 #. i18n-hint: abbreviates "Linux Audio Developer's Simple Plugin API"
 #. (Application programming interface)
 #: src/effects/ladspa/LadspaEffect.cpp
@@ -7962,13 +7900,6 @@ msgstr "Proporciona suport per utilitzar efectes Nyquist amb Audacity"
 #: src/effects/nyquist/Nyquist.cpp
 msgid "Applying Nyquist Effect..."
 msgstr "S'està aplicant l'efecte Nyquist..."
-
-#: src/effects/nyquist/Nyquist.cpp
-msgid ""
-"To use 'Spectral effects', enable 'Spectral Selection'\n"
-"in the track Spectrogram settings and select the\n"
-"frequency range for the effect to act on."
-msgstr ""
 
 #: src/effects/nyquist/Nyquist.cpp
 #, c-format
@@ -8423,10 +8354,6 @@ msgid "Quality (kbps):"
 msgstr "Qualitat:"
 
 #: src/export/ExportFFmpegDialogs.cpp src/export/ExportFLAC.cpp
-msgid "3"
-msgstr ""
-
-#: src/export/ExportFFmpegDialogs.cpp src/export/ExportFLAC.cpp
 msgid "7"
 msgstr ""
 
@@ -8449,10 +8376,6 @@ msgstr "&Àudio..."
 #: src/export/ExportFFmpegDialogs.cpp
 msgid "Low Delay"
 msgstr "Retard"
-
-#: src/export/ExportFFmpegDialogs.cpp
-msgid "20 ms"
-msgstr ""
 
 #: src/export/ExportFFmpegDialogs.cpp
 msgid "Mediumband"
@@ -9135,10 +9058,6 @@ msgstr ""
 "Si us plau, descarregueu l'última versió de la biblioteca LAME MP3."
 
 #: src/export/ExportMP3.cpp
-msgid "Only libmp3lame.so.0"
-msgstr ""
-
-#: src/export/ExportMP3.cpp
 msgid "Extended libraries"
 msgstr "Biblioteques del nucli"
 
@@ -9366,10 +9285,6 @@ msgstr "Fitxers Ogg Vorbis"
 #: src/export/ExportOGG.cpp
 msgid "Unable to export - rate or quality problem"
 msgstr "No es pot establir la qualitat de presentació del QuickTime"
-
-#: src/export/ExportOGG.cpp
-msgid "Unable to export - problem with packets"
-msgstr ""
 
 #: src/export/ExportOGG.cpp
 msgid "Unable to export - problem with file"
@@ -9650,10 +9565,6 @@ msgid "Internal error in importer...tag not recognized"
 msgstr "Error intern informat pel procés d'alineament."
 
 #: src/import/ImportAUP.cpp
-msgid "Invalid project 'zoom' attribute."
-msgstr ""
-
-#: src/import/ImportAUP.cpp
 msgid "Invalid project 'selHigh' attribute."
 msgstr ""
 
@@ -9673,10 +9584,6 @@ msgstr "Freqüència incorrecta"
 #: src/import/ImportAUP.cpp
 msgid "Invalid sequence 'numsamples' attribute."
 msgstr "Freqüència incorrecta"
-
-#: src/import/ImportAUP.cpp
-msgid "Missing or invalid silentblockfile 'len' attribute."
-msgstr ""
 
 #: src/import/ImportAUP.cpp
 #, c-format
@@ -9812,25 +9719,12 @@ msgstr "Falla lògica interna"
 msgid "WAV, AIFF, and other uncompressed types"
 msgstr "WAV, AIFF i altres tipus de fitxers no comprimits"
 
-#. i18n-hint: "codec" is short for a "coder-decoder" algorithm
-#: src/import/ImportPCM.cpp
-msgid "FLAC (FLAC Lossless Audio Codec)"
-msgstr ""
-
 #: src/import/ImportPCM.cpp
 msgid "MAT5 (GNU Octave 2.1 / Matlab 5.0)"
 msgstr ""
 
 #: src/import/ImportPCM.cpp
-msgid "PVF (Portable Voice Format)"
-msgstr ""
-
-#: src/import/ImportPCM.cpp
 msgid "SDS (Midi Sample Dump Standard)"
-msgstr ""
-
-#: src/import/ImportPCM.cpp
-msgid "WAV (NIST Sphere)"
 msgstr ""
 
 #: src/import/ImportPCM.cpp
@@ -9852,10 +9746,6 @@ msgstr "Coma flotant de 32 bits"
 #: src/import/ImportPCM.cpp
 msgid "64 bit float"
 msgstr "Coma flotant de 32 bits"
-
-#: src/import/ImportPCM.cpp
-msgid "Microsoft ADPCM"
-msgstr ""
 
 #: src/import/ImportPCM.cpp
 msgid "12 bit DWVW"
@@ -11184,10 +11074,6 @@ msgstr "Cursor es&querre"
 msgid "Cursor &Right"
 msgstr "Cursor d&ret"
 
-#: src/menus/SelectMenus.cpp
-msgid "Cursor Long Ju&mp Right"
-msgstr ""
-
 #. i18n-hint: These commands assist the user in finding a sound by ear. ...
 #. "Scrubbing" is variable-speed playback, ...
 #. "Seeking" is normal speed playback but with skips, ...
@@ -11266,23 +11152,11 @@ msgid "End to Selection En&d"
 msgstr "Acaba a l'acabament &de la selecció"
 
 #: src/menus/TrackMenus.cpp
-msgid "Align Start"
-msgstr ""
-
-#: src/menus/TrackMenus.cpp
 msgid "Aligned start to selection end"
 msgstr ""
 
 #: src/menus/TrackMenus.cpp
-msgid "Align End"
-msgstr ""
-
-#: src/menus/TrackMenus.cpp
 msgid "Aligned end to end"
-msgstr ""
-
-#: src/menus/TrackMenus.cpp
-msgid "Aligned together"
 msgstr ""
 
 #: src/menus/TrackMenus.cpp
@@ -11513,10 +11387,6 @@ msgid "&Track"
 msgstr "Pis&ta"
 
 #: src/menus/TrackMenus.cpp
-msgid "Change Gai&n on Focused Track..."
-msgstr ""
-
-#: src/menus/TrackMenus.cpp
 msgid "M&ute/Unmute Focused Track"
 msgstr "S&ilencia/Dessilencia la pista amb focus"
 
@@ -11553,10 +11423,6 @@ msgstr "Reproduint"
 #: src/menus/TransportMenus.cpp src/prefs/DevicePrefs.cpp src/prefs/MidiIOPrefs.cpp src/prefs/RecordingPrefs.cpp src/prefs/RecordingPrefs.h src/toolbars/ControlToolBar.cpp
 msgid "Recording"
 msgstr "Enregistrament"
-
-#: src/menus/TransportMenus.cpp
-msgid "no labels in label track"
-msgstr ""
 
 #: src/menus/TransportMenus.cpp
 msgid "Please select in a stereo track or two mono tracks."
@@ -11697,10 +11563,6 @@ msgstr "Reprod&ueix la vista prèvia del retall"
 #: src/menus/TransportMenus.cpp
 msgid "&Play-at-Speed"
 msgstr "Re&produeix a velocitat"
-
-#: src/menus/TransportMenus.cpp
-msgid "Ad&just Playback Speed..."
-msgstr ""
 
 #: src/menus/TransportMenus.cpp
 msgid "&Decrease Playback Speed"
@@ -12252,10 +12114,6 @@ msgstr "Mostra els menús e&xtres"
 #: src/prefs/GUIPrefs.cpp
 msgid "&Beep on completion of longer activities"
 msgstr "&Fes 'bip' quan es completi una acció de llarga durada"
-
-#: src/prefs/GUIPrefs.cpp
-msgid "Never use comma as decimal point"
-msgstr ""
 
 #: src/prefs/GUIPrefs.cpp
 msgid "Show Timeline Tooltips"
@@ -12972,11 +12830,6 @@ msgstr "0 significa sense acabament"
 msgid "Cross&fade:"
 msgstr "&Fosa de transició:"
 
-#. i18n-hint: Time units, that is Period = 1 / Frequency
-#: src/prefs/SpectrogramSettings.cpp
-msgid "Period"
-msgstr ""
-
 #. i18n-hint: New color scheme for spectrograms
 #: src/prefs/SpectrogramSettings.cpp
 msgctxt "spectrum prefs"
@@ -13385,10 +13238,6 @@ msgstr "Preferències: "
 #: src/prefs/TracksPrefs.cpp
 msgid "Sho&w track name as overlay"
 msgstr "&Mostra el nom de la pista d'àudio com una superposició"
-
-#: src/prefs/TracksPrefs.cpp
-msgid "Pinned &head position"
-msgstr ""
 
 #: src/prefs/TracksPrefs.cpp
 msgid "Default &view mode:"
@@ -14142,15 +13991,7 @@ msgid "Rat&e"
 msgstr "Fr&eqüència"
 
 #: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
-msgid "22050 Hz"
-msgstr ""
-
-#: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
 msgid "96000 Hz"
-msgstr ""
-
-#: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
-msgid "384000 Hz"
 msgstr ""
 
 #: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
@@ -14284,10 +14125,6 @@ msgstr "Feu clic i arrossegueu per ajustar, doble clic per restablir"
 #: src/tracks/playabletrack/wavetrack/ui/WaveTrackView.cpp
 msgid "Click and drag to rearrange sub-views"
 msgstr "Feu clic i arrossegueu per moure una pista en el temps"
-
-#: src/tracks/playabletrack/wavetrack/ui/WaveformVZoomHandle.cpp
-msgid "Zoom x2"
-msgstr ""
 
 #: src/tracks/playabletrack/wavetrack/ui/WaveformVZoomHandle.cpp
 msgid "Half Wave"
@@ -14956,10 +14793,6 @@ msgstr "01000,01000 fotogrames|75"
 msgid "010,01000>0100 Hz"
 msgstr "0100000>0100 Hz"
 
-#: src/widgets/NumericTextCtrl.cpp
-msgid "hertz"
-msgstr ""
-
 #. i18n-hint: an octave is a doubling of frequency
 #: src/widgets/NumericTextCtrl.cpp
 msgid "thousandths of octaves"
@@ -15164,10 +14997,6 @@ msgstr "Publicat sota els termes de la versió 2 de la llicència pública gener
 msgid "~aPlease select frequencies."
 msgstr "~aSeleccioneu les freqüències."
 
-#: plug-ins/SpectralEditParametricEQ.ny
-msgid "Spectral edit parametric EQ"
-msgstr ""
-
 #: plug-ins/SpectralEditParametricEQ.ny plug-ins/SpectralEditShelves.ny
 msgid "Gain (dB)"
 msgstr "Guany (dB):"
@@ -15186,10 +15015,6 @@ msgstr "~aLa freqüència alta està sense definir."
 #, lisp-format
 msgid "~aCenter frequency must be above 0 Hz."
 msgstr "~aLa freqüència del centre ha de ser superior a 0 Hz."
-
-#: plug-ins/StudioFadeOut.ny
-msgid "Studio Fade Out"
-msgstr ""
 
 #: plug-ins/adjustable-fade.ny
 msgid "Adjustable Fade"
@@ -15252,10 +15077,6 @@ msgid "Logarithmic Out"
 msgstr "Sortida logarítmica"
 
 #: plug-ins/adjustable-fade.ny
-msgid "Cosine Out"
-msgstr ""
-
-#: plug-ins/adjustable-fade.ny
 #, lisp-format
 msgid "~aPercentage values cannot be negative."
 msgstr ""
@@ -15267,10 +15088,6 @@ msgstr "Cercador de pulsacions"
 #: plug-ins/beat.ny
 msgid "Finding beats..."
 msgstr "S'estan cercant pulsacions..."
-
-#: plug-ins/clipfix.ny
-msgid "Benjamin Schwartz and Steve Daulton"
-msgstr ""
 
 #: plug-ins/crossfadeclips.ny
 msgid "Crossfade Clips"
@@ -15341,10 +15158,6 @@ msgstr "S'està aplicant l'efecte de retard..."
 #: plug-ins/delay.ny
 msgid "Delay type"
 msgstr "Tipus de retard"
-
-#: plug-ins/delay.ny
-msgid "Delay level per echo (dB)"
-msgstr ""
 
 #: plug-ins/delay.ny
 msgid "Pitch change effect"
@@ -15511,10 +15324,6 @@ msgstr "Freqüència (Hz)"
 msgid "Roll-off (dB per octave)"
 msgstr "Atenuació (dB per octava)"
 
-#: plug-ins/highpass.ny plug-ins/lowpass.ny
-msgid "36 dB"
-msgstr ""
-
 #: plug-ins/highpass.ny plug-ins/lowpass.ny plug-ins/notch.ny
 msgid "Frequency must be at least 0.1 Hz."
 msgstr "La freqüència ha de ser com a mínim de 0,1 Hz."
@@ -15571,11 +15380,6 @@ msgstr "Estèreo unificat"
 #: plug-ins/label-sounds.ny
 msgid "Maximum leading silence"
 msgstr "S'està cercant el silenci..."
-
-#: plug-ins/label-sounds.ny
-#, lisp-format
-msgid "Too many silences detected.~%Only the first 10000 labels added."
-msgstr ""
 
 #. i18n-hint: '~a' will be replaced by a time duration
 #: plug-ins/label-sounds.ny
@@ -15676,13 +15480,6 @@ msgstr "Temps d'atac/caiguda"
 msgid "Decay (ms)"
 msgstr "Temps d'atac/caiguda"
 
-#: plug-ins/noisegate.ny
-#, lisp-format
-msgid ""
-"Peak based on first ~a seconds ~a dB~%\n"
-"Suggested Threshold Setting ~a dB."
-msgstr ""
-
 #: plug-ins/notch.ny
 msgid "Notch Filter"
 msgstr "Filtre eliminabanda"
@@ -15754,10 +15551,6 @@ msgid "Unsupported file type:"
 msgstr "Filtres no utilitzats:"
 
 #: plug-ins/pluck.ny
-msgid "Pluck"
-msgstr ""
-
-#: plug-ins/pluck.ny
 msgid "Pluck MIDI pitch"
 msgstr ""
 
@@ -15820,10 +15613,6 @@ msgstr "Ping (curt)"
 #: plug-ins/rhythmtrack.ny
 msgid "Ping (long)"
 msgstr "Ping (llarg)"
-
-#: plug-ins/rhythmtrack.ny
-msgid "Drip (short)"
-msgstr ""
 
 #: plug-ins/rhythmtrack.ny
 msgid "MIDI pitch of weak beat"
@@ -15952,14 +15741,6 @@ msgstr "~aS'han escrit les dades a:~%~a"
 
 #: plug-ins/sample-data-export.ny
 #, lisp-format
-msgid ""
-"~a~%Sample Rate: ~a Hz. Sample values on ~a scale. ~a.~%~aLength processed: ~a ~\n"
-"                  samples, ~a seconds.~%Peak amplitude: ~a (linear) ~a dB.  Unweighted RMS: ~a dB.~%~\n"
-"                  DC offset: ~a~a"
-msgstr ""
-
-#: plug-ins/sample-data-export.ny
-#, lisp-format
 msgid "~a linear, ~a dB."
 msgstr "~a lineal, ~a dB."
 
@@ -16061,10 +15842,6 @@ msgstr "Una columna per canal.~%"
 msgid "One row per channel.~%"
 msgstr "Una fila per canal.~%"
 
-#: plug-ins/sample-data-export.ny
-msgid "Unspecified channel order"
-msgstr ""
-
 #: plug-ins/sample-data-import.ny
 msgid "Sample Data Import"
 msgstr "Importació de dades de mostres"
@@ -16161,12 +15938,6 @@ msgstr "Retall baix per a les veus (Hz)"
 #: plug-ins/vocalrediso.ny
 msgid "High Cut for Vocals (Hz)"
 msgstr "Retall alt per a les veus (Hz)"
-
-#: plug-ins/vocalrediso.ny
-msgid ""
-" - The two Channels are strongly related, i.e. nearly mono or extremely panned.\n"
-"                Most likely, the center extraction will be poor."
-msgstr ""
 
 #: plug-ins/vocalrediso.ny
 msgid ""

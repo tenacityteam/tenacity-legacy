@@ -967,14 +967,6 @@ msgstr "Tenacity يشتغل الآن"
 msgid "Audacity Startup Failure"
 msgstr "ملفات مشروع Tenacity"
 
-#: src/AudacityApp.cpp
-msgid ""
-"The Audacity IPC server failed to initialize.\n"
-"\n"
-"This is likely due to a resource shortage\n"
-"and a reboot may be required."
-msgstr ""
-
 #. i18n-hint: This controls the number of bytes that Audacity will
 #. *           use when writing files to the disk
 #: src/AudacityApp.cpp
@@ -3465,13 +3457,6 @@ msgstr "حفظ مشروع Tenacity"
 #: src/ProjectFileIO.cpp
 msgid "Unable to initialize the project file"
 msgstr "غير قادر على بدأ تيار MP3"
-
-#. i18n-hint: An error message.  Don't translate blockfiles.
-#: src/ProjectFileIO.cpp
-msgid ""
-"Project is busy\n"
-"(Unable to work with the blockfiles)"
-msgstr ""
 
 #. i18n-hint: An error message.  Don't translate blockfiles.
 #: src/ProjectFileIO.cpp
@@ -7679,10 +7664,6 @@ msgstr "أنواع النافذة"
 msgid "Window si&ze:"
 msgstr "حجم النافذة:"
 
-#: src/effects/NoiseReduction.cpp src/prefs/SpectrumPrefs.cpp
-msgid "64"
-msgstr ""
-
 #: src/effects/NoiseReduction.cpp
 msgid "1024"
 msgstr ""
@@ -9296,10 +9277,6 @@ msgid "Quality (kbps):"
 msgstr "الجودة (kbps):"
 
 #: src/export/ExportFFmpegDialogs.cpp src/export/ExportFLAC.cpp
-msgid "3"
-msgstr ""
-
-#: src/export/ExportFFmpegDialogs.cpp src/export/ExportFLAC.cpp
 msgid "7"
 msgstr ""
 
@@ -9322,10 +9299,6 @@ msgstr "صوت"
 #: src/export/ExportFFmpegDialogs.cpp
 msgid "Low Delay"
 msgstr "تأخير"
-
-#: src/export/ExportFFmpegDialogs.cpp
-msgid "20 ms"
-msgstr ""
 
 #: src/export/ExportFFmpegDialogs.cpp
 msgid "Mediumband"
@@ -9889,20 +9862,12 @@ msgid "220-260 kbps (Best Quality)"
 msgstr "%s kbps (أفضل جودة)"
 
 #: src/export/ExportMP3.cpp
-msgid "145-185 kbps"
-msgstr ""
-
-#: src/export/ExportMP3.cpp
 msgid "80-120 kbps"
 msgstr "%.2f kbps"
 
 #: src/export/ExportMP3.cpp
 msgid "45-85 kbps (Smaller files)"
 msgstr "%s kbps (ملفات أصغر)"
-
-#: src/export/ExportMP3.cpp
-msgid "Medium, 145-185 kbps"
-msgstr ""
 
 #. i18n-hint: Slightly humorous - as in use an insane precision with MP3.
 #: src/export/ExportMP3.cpp
@@ -10265,10 +10230,6 @@ msgid "Unable to export - rate or quality problem"
 msgstr "غير قادر على تعيين جودة التقديم لـ QuickTime"
 
 #: src/export/ExportOGG.cpp
-msgid "Unable to export - problem with packets"
-msgstr ""
-
-#: src/export/ExportOGG.cpp
 msgid "Unable to export - problem with file"
 msgstr "غير قادر على التصدير - مشكلة في الملف"
 
@@ -10562,10 +10523,6 @@ msgid "Internal error in importer...tag not recognized"
 msgstr "خطأ داخلي تم تقريره بواسطة عملية المحاذاة."
 
 #: src/import/ImportAUP.cpp
-msgid "Invalid project 'zoom' attribute."
-msgstr ""
-
-#: src/import/ImportAUP.cpp
 msgid "Invalid project 'selHigh' attribute."
 msgstr ""
 
@@ -10585,10 +10542,6 @@ msgstr "معدَّل عينة غير صالح"
 #: src/import/ImportAUP.cpp
 msgid "Invalid sequence 'numsamples' attribute."
 msgstr "معدَّل عينة غير صالح"
-
-#: src/import/ImportAUP.cpp
-msgid "Missing or invalid silentblockfile 'len' attribute."
-msgstr ""
 
 #: src/import/ImportAUP.cpp
 #, c-format
@@ -10750,25 +10703,12 @@ msgstr "خطأ منطقي داخلي"
 msgid "WAV, AIFF, and other uncompressed types"
 msgstr "AIFF ،WAV و أنواع أخرى غير مضغوطة"
 
-#. i18n-hint: "codec" is short for a "coder-decoder" algorithm
-#: src/import/ImportPCM.cpp
-msgid "FLAC (FLAC Lossless Audio Codec)"
-msgstr ""
-
 #: src/import/ImportPCM.cpp
 msgid "MAT5 (GNU Octave 2.1 / Matlab 5.0)"
 msgstr ""
 
 #: src/import/ImportPCM.cpp
-msgid "PVF (Portable Voice Format)"
-msgstr ""
-
-#: src/import/ImportPCM.cpp
 msgid "SDS (Midi Sample Dump Standard)"
-msgstr ""
-
-#: src/import/ImportPCM.cpp
-msgid "WAV (NIST Sphere)"
 msgstr ""
 
 #: src/import/ImportPCM.cpp
@@ -10798,10 +10738,6 @@ msgstr "قانون U"
 #: src/import/ImportPCM.cpp
 msgid "A-Law"
 msgstr "قانون A"
-
-#: src/import/ImportPCM.cpp
-msgid "32kbs G721 ADPCM"
-msgstr ""
 
 #: src/import/ImportPCM.cpp
 msgid "16 bit DWVW"
@@ -14307,11 +14243,6 @@ msgstr "0 تعني لا نهائي"
 msgid "Punch and Roll Recording"
 msgstr "تسجيل مفعل بالصوت"
 
-#. i18n-hint: The name of a frequency scale in psychoacoustics, named for Heinrich Barkhausen
-#: src/prefs/SpectrogramSettings.cpp
-msgid "Bark"
-msgstr ""
-
 #. i18n-hint: Time units, that is Period = 1 / Frequency
 #: src/prefs/SpectrogramSettings.cpp
 msgid "Period"
@@ -16877,10 +16808,6 @@ msgstr "قص اليمين"
 msgid "Reconstructing clips..."
 msgstr "حذف النقرة و الفرقعة..."
 
-#: plug-ins/clipfix.ny
-msgid "Reduce amplitude to allow for restored peaks (dB)"
-msgstr ""
-
 #: plug-ins/crossfadeclips.ny
 msgid "Crossfade Clips"
 msgstr "مقطع نغمة"
@@ -17092,10 +17019,6 @@ msgstr "علامات المناطق"
 msgid "point labels"
 msgstr "علامات النقاط"
 
-#: plug-ins/highpass.ny
-msgid "Performing High-Pass Filter..."
-msgstr ""
-
 #: plug-ins/highpass.ny plug-ins/lowpass.ny plug-ins/rhythmtrack.ny
 msgid "Dominic Mazzoni"
 msgstr "حذف الضجيج من طرف دومينيك مازوني"
@@ -17103,10 +17026,6 @@ msgstr "حذف الضجيج من طرف دومينيك مازوني"
 #: plug-ins/highpass.ny plug-ins/lowpass.ny plug-ins/notch.ny plug-ins/rissetdrum.ny plug-ins/tremolo.ny
 msgid "Frequency (Hz)"
 msgstr "تردد (هرتز)"
-
-#: plug-ins/highpass.ny plug-ins/lowpass.ny
-msgid "24 dB"
-msgstr ""
 
 #: plug-ins/highpass.ny plug-ins/lowpass.ny
 msgid "36 dB"
@@ -17164,11 +17083,6 @@ msgstr "ثنائي مشترك"
 #: plug-ins/label-sounds.ny
 msgid "Maximum leading silence"
 msgstr "أجد السكون..."
-
-#: plug-ins/label-sounds.ny
-#, lisp-format
-msgid "Too many silences detected.~%Only the first 10000 labels added."
-msgstr ""
 
 #. i18n-hint: '~a' will be replaced by a time duration
 #: plug-ins/label-sounds.ny
@@ -17257,13 +17171,6 @@ msgstr "وقت الهجوم/التضاؤل"
 msgid "Decay (ms)"
 msgstr "وقت الهجوم/التضاؤل"
 
-#: plug-ins/noisegate.ny
-#, lisp-format
-msgid ""
-"Peak based on first ~a seconds ~a dB~%\n"
-"Suggested Threshold Setting ~a dB."
-msgstr ""
-
 #: plug-ins/notch.ny
 msgid "Steve Daulton and Bill Wharrie"
 msgstr "ستيف دالتون و بيل واري"
@@ -17327,10 +17234,6 @@ msgid "Unsupported file type:"
 msgstr "نوع ملف غير مدعوم:"
 
 #: plug-ins/pluck.ny
-msgid "Pluck"
-msgstr ""
-
-#: plug-ins/pluck.ny
 msgid "MIDI values for C notes: 36, 48, 60 [middle C], 72, 84, 96."
 msgstr "قيم MIDI لنوتات C هي: 36، 48، 60 [C الوسطى]، 72، 84، 96."
 
@@ -17367,10 +17270,6 @@ msgid "Swing amount"
 msgstr "كمية الأرجحة"
 
 #: plug-ins/rhythmtrack.ny
-msgid "1 - 1000 bars"
-msgstr ""
-
-#: plug-ins/rhythmtrack.ny
 msgid "Rhythm track duration"
 msgstr "حذف المقطع"
 
@@ -17387,20 +17286,12 @@ msgid "Beat sound"
 msgstr "النقرات"
 
 #: plug-ins/rhythmtrack.ny
-msgid "Cowbell"
-msgstr ""
-
-#: plug-ins/rhythmtrack.ny
 msgid "Resonant Noise"
 msgstr "حذف الضجيج"
 
 #: plug-ins/rhythmtrack.ny
 msgid "Noise Click"
 msgstr "الحد الأدنى للضجيج"
-
-#: plug-ins/rhythmtrack.ny
-msgid "18 - 116"
-msgstr ""
 
 #: plug-ins/rissetdrum.ny
 msgid "Risset Drum"
@@ -17530,14 +17421,6 @@ msgstr "~aكتبت البيانات إلى:~%~a"
 
 #: plug-ins/sample-data-export.ny
 #, lisp-format
-msgid ""
-"~a~%Sample Rate: ~a Hz. Sample values on ~a scale. ~a.~%~aLength processed: ~a ~\n"
-"                  samples, ~a seconds.~%Peak amplitude: ~a (linear) ~a dB.  Unweighted RMS: ~a dB.~%~\n"
-"                  DC offset: ~a~a"
-msgstr ""
-
-#: plug-ins/sample-data-export.ny
-#, lisp-format
 msgid "~a samples."
 msgstr "~a  عينات."
 
@@ -17545,12 +17428,6 @@ msgstr "~a  عينات."
 #, lisp-format
 msgid "~a seconds."
 msgstr "~a ثواني."
-
-#. i18n-hint: RMS abbreviates root-mean-square, a method of averaging a signal; there also "weighted" versions of it but this isn't that
-#: plug-ins/sample-data-export.ny
-#, lisp-format
-msgid "<b>RMS</b> (unweighted): &nbsp;&nbsp;~a dB."
-msgstr ""
 
 #: plug-ins/sample-data-export.ny
 msgid "sample data"
@@ -17724,18 +17601,9 @@ msgid "Strength"
 msgstr "الشدة"
 
 #: plug-ins/vocalrediso.ny
-#, lisp-format
-msgid "Pan position: ~a~%The left and right channels are correlated by about ~a %. This means:~%~a~%"
-msgstr ""
-
-#: plug-ins/vocalrediso.ny
 msgid ""
 " - An ideal value for Stereo.\n"
 "                However, the center extraction depends also on the used reverb."
-msgstr ""
-
-#: plug-ins/vocalrediso.ny
-msgid "This plug-in works only with stereo tracks."
 msgstr ""
 
 #: plug-ins/vocoder.ny
