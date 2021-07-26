@@ -1,15 +1,4 @@
-# For most projects, this workflow file will not need changing; you simply need
-# to commit it to your repository.
-#
-# You may wish to alter this file to override the set of languages analyzed,
-# or to provide custom queries or build logic.
-#
-# ******** NOTE ********
-# We have attempted to detect the languages in your repository. Please check
-# the `language` matrix defined below to confirm you have the correct set of
-# supported CodeQL languages.
-#
-name: "CodeQL"
+name: "CodeQL Analysis"
 
 on:
   push:
@@ -32,15 +21,20 @@ jobs:
       contents: read
       security-events: write
 
-    strategy:
+    strategy:        
       fail-fast: false
       matrix:
-        language: [ 'cpp', 'python' ]
-        # CodeQL supports [ 'cpp', 'csharp', 'go', 'java', 'javascript', 'python' ]
-        # Learn more:
-        # https://docs.github.com/en/free-pro-team@latest/github/finding-security-vulnerabilities-and-errors-in-your-code/configuring-code-scanning#changing-the-languages-that-are-analyzed
-
+        config:
+          - name: Ubuntu
+            os: ubuntu-latest
+            arch: x86_64
+            generator: Unix Makefiles
+            compiler_cache: ccache
+            compiler_cache_path: ~/.ccache
+            language: 'cpp'  # CodeQL supports [ 'cpp', 'csharp', 'go', 'java', 'javascript', 'python' ]
+       
     steps:
+  
     - name: Checkout repository
       uses: actions/checkout@v2
 
@@ -54,21 +48,47 @@ jobs:
         # Prefix the list here with "+" to use these queries and those in the config file.
         # queries: ./path/to/local/query, your-org/your-repo/queries@main
 
-    # Autobuild attempts to build any compiled languages  (C/C++, C#, or Java).
-    # If this step fails, then you should remove it and run the build manually (see below)
-    - name: Autobuild
-      uses: github/codeql-action/autobuild@v1
-
-    # ℹ️ Command-line programs to run using the OS shell.
-    # 📚 https://git.io/JvXDl
-
-    # ✏️ If the Autobuild fails above, remove it and uncomment the following three lines
-    #    and modify them (or add more) to build your code if your project
-    #    uses a compiled language
-
-    #- run: |
-    #   make bootstrap
-    #   make release
-
-    - name: Perform CodeQL Analysis
-      uses: github/codeql-action/analyze@v1
+    - name: Dependencies
+      run: |
+        exec bash "scripts/ci/dependencies.sh"
+    - name: Environment
+      run: |
+        source "scripts/ci/environment.sh"
+    - name: "Set up compiler cache"
+      uses: actions/cache@v2
+      with:
+        path: ${{ matrix.config.compiler_cache_path }}
+        key: ${{ matrix.config.os }}-${{ matrix.config.arch }}-${{ github.head_ref }}-${{ github.run_number }}
+        restore-keys: |
+          ${{ matrix.config.os }}-${{ matrix.config.arch }}-${{ github.head_ref }}-
+          ${{ matrix.config.os }}-${{ matrix.config.arch }}-
+    - name: Cache for .conan
+      id: cache-conan
+      uses: actions/cache@v2
+      env:
+        cache-name: cache-conan-modules
+      with:
+        path: ${{ env.CONAN_USER_HOME }}
+        key: host-${{ matrix.config.name }}-${{ hashFiles('cmake-proxies/CMakeLists.txt') }}
+        restore-keys: |
+          host-${{ matrix.config.name }}-
+      # Install scdoc with conan TODO: Move conan pkg to own repo
+    - name: "[Linux] Install scdoc"
+      if: runner.os == 'Linux'
+      run: |
+        conan remote add -f rigs-of-rods-deps https://conan.cloudsmith.io/rigs-of-rods/deps/
+        conan install scdoc/1.11.1@anotherfoxguy/stable -g=virtualenv --build=missing
+    - name: Configure
+      env:
+        CC: ${{ matrix.config.cc }}
+        CXX: ${{ matrix.config.cxx }}
+      run: |
+        exec bash "scripts/ci/configure.sh"
+    - name: Build
+      run: |
+        exec bash "scripts/ci/build.sh"
+    - name: "Print compiler cache stats"
+      run: ${{ matrix.config.compiler_cache }} -s
+    - name: Install
+      run: |
+        exec bash "scripts/ci/install.sh"
