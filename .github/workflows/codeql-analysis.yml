@@ -1,0 +1,115 @@
+name: "CodeQL Analysis"
+
+# This workflow runs:
+# 1. On every push to master
+# 2. On every PR to master which modifies this file (the configuration)
+# 3. Every 6 hours every day.
+#
+# It is restrictive and run sparingly because it takes over an hour to run a full static analysis using this tool
+# and we can't realistically run it on every PR.
+
+on:
+  push:
+    branches: [ master ] # Triggers on every actual push to master
+  pull_request:
+    branches: [ master ]
+    paths:
+      - ".github/workflows/codeql-analysis.yml" # Only triggers on PRs that modify the configuration
+  schedule:
+    #         ┌───────────── minute (0 - 59)
+    #         │  ┌───────────── hour (0 - 23)
+    #         │  │ ┌───────────── day of the month (1 - 31)
+    #         │  │ │ ┌───────────── month (1 - 12 or JAN-DEC)
+    #         │  │ │ │ ┌───────────── day of the week (0 - 6 or SUN-SAT)
+    #         │  │ │ │ │
+    #         │  │ │ │ │
+    #         │  │ │ │ │
+    #         *  * * * *
+    - cron: '00 00 * * *'
+    - cron: '00 06 * * *'
+    - cron: '00 12 * * *'
+    - cron: '00 18 * * *'
+
+jobs:
+  analyze:
+    name: Analyze
+    runs-on: ubuntu-latest    
+    env:
+      AUDACITY_CMAKE_GENERATOR: ${{ matrix.config.generator }}
+      AUDACITY_ARCH_LABEL: ${{ matrix.config.arch }}
+      # Windows codesigning
+      # This variables will be used by all the steps
+      WINDOWS_CERTIFICATE: ${{ secrets.WINDOWS_CERTIFICATE }}
+      WINDOWS_CERTIFICATE_PASSWORD: ${{ secrets.WINDOWS_CERTIFICATE_PASSWORD }}
+      # Conan home location to be used for cache action
+      CONAN_USER_HOME: "${{ github.workspace }}/conan-home/"
+      CONAN_USER_HOME_SHORT: "${{ github.workspace }}/conan-home/short"
+    permissions:
+      actions: read
+      contents: read
+      security-events: write
+
+    strategy:        
+      fail-fast: false
+      matrix:
+        config:
+          - name: Ubuntu
+            os: ubuntu-latest
+            arch: x86_64
+            generator: Unix Makefiles
+            language: 'cpp'  # CodeQL supports [ 'cpp', 'csharp', 'go', 'java', 'javascript', 'python' ]
+       
+    steps:
+  
+    - name: Checkout repository
+      uses: actions/checkout@v2
+    - name: Dependencies
+      run: |
+        exec bash "scripts/ci/dependencies.sh"
+    - name: Environment
+      run: |
+        source "scripts/ci/environment.sh"
+    - name: Cache for .conan
+      id: cache-conan
+      uses: actions/cache@v2
+      env:
+        cache-name: cache-conan-modules
+      with:
+        path: ${{ env.CONAN_USER_HOME }}
+        key: host-${{ matrix.config.name }}-${{ hashFiles('cmake-proxies/CMakeLists.txt') }}
+        restore-keys: |
+          host-${{ matrix.config.name }}-
+      # Install scdoc with conan TODO: Move conan pkg to own repo
+    - name: "[Linux] Install scdoc"
+      if: runner.os == 'Linux'
+      run: |
+        conan remote add -f rigs-of-rods-deps https://conan.cloudsmith.io/rigs-of-rods/deps/
+        conan install scdoc/1.11.1@anotherfoxguy/stable -g=virtualenv --build=missing
+    - name: Configure
+      env:
+        # Apple code signing
+        APPLE_CODESIGN_IDENTITY: ${{ secrets.APPLE_CODESIGN_IDENTITY }}
+        APPLE_NOTARIZATION_USER_NAME: ${{ secrets.APPLE_NOTARIZATION_USER_NAME }}
+        APPLE_NOTARIZATION_PASSWORD: ${{ secrets.APPLE_NOTARIZATION_PASSWORD }}
+        CC: ${{ matrix.config.cc }}
+        CXX: ${{ matrix.config.cxx }}
+      run: |
+        exec bash "scripts/ci/configure.sh"
+    # Initializes the CodeQL tools for scanning.
+    - name: Initialize CodeQL
+      uses: github/codeql-action/init@v1
+      with:
+        languages: cpp
+        # If you wish to specify custom queries, you can do so here or in a config file.
+        # By default, queries listed here will override any specified in a config file.
+        # Prefix the list here with "+" to use these queries and those in the config file.
+        # queries: ./path/to/local/query, your-org/your-repo/queries@main
+    - name: Build
+      run: |
+        exec bash "scripts/ci/build.sh"
+    - name: Install
+      run: |
+        exec bash "scripts/ci/install.sh"
+    - name: Perform CodeQL Analysis
+      uses: github/codeql-action/analyze@v1
+
