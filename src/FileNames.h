@@ -75,7 +75,7 @@ namespace FileNames
       , DynamicLibraries // depends on the operating system
       , TextFiles // *.txt
       , XMLFiles; // *.xml, *.XML
-   
+
    using FileTypes = std::vector< FileType >;
 
    // Convert fileTypes into a single string as expected by wxWidgets file
@@ -112,10 +112,15 @@ namespace FileNames
       FilePaths &otherNames, wxFileName &newName);
 
    AUDACITY_DLL_API wxString LowerCaseAppNameInPath( const wxString & dirIn);
-   /** \brief Audacity user data directory
+   /** \brief Tenacity user config directory
     *
-    * Where audacity keeps its settings and other user data squirreled away,
-    * by default ~/.audacity-data/ on Unix, Application Data/Audacity on
+    * Where Tenacity keeps its settigns squirreled away, by default ~/.config/tenacity/
+    * on Unix, Application Data/Tenacity on Windows */
+   FilePath ConfigDir();
+   /** \brief Tenacity user data directory
+    *
+    * Where Tenacity keeps its settings and other user data squirreled away,
+    * by default ~/.local/share/tenacity/ on Unix, Application Data/Tenacity on
     * windows system */
    AUDACITY_DLL_API FilePath DataDir();
    AUDACITY_DLL_API FilePath ResourcesDir();

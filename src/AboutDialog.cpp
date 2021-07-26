@@ -187,7 +187,11 @@ void AboutDialog::CreateInformationTab(ShuttleGui& AboutDialogGUI) {
 #endif
 
     // Location of settings
-    AddBuildInfoRow(&informationStr, XO("Settings folder:"), FileNames::DataDir());
+    AddBuildInfoRow(&informationStr, XO("Config folder:"), \
+        FileNames::ConfigDir());
+    // Location of data
+    AddBuildInfoRow(&informationStr, XO("Data folder:"), \
+        FileNames::DataDir());
 
     informationStr
         << wxT("<h3>")

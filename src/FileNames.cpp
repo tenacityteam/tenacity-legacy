@@ -47,6 +47,7 @@ used throughout Audacity into this one place.
 #include <windows.h>
 #endif
 
+static wxString gConfigDir;
 static wxString gDataDir;
 
 const FileNames::FileType
@@ -176,7 +177,7 @@ bool FileNames::HardLinkFile( const FilePath& file1, const FilePath& file2 )
 #ifdef __WXMSW__
 
    // Fix forced ASCII conversions and wrong argument order - MJB - 29/01/2019
-   //return ::CreateHardLinkA( file1.c_str(), file2.c_str(), NULL );  
+   //return ::CreateHardLinkA( file1.c_str(), file2.c_str(), NULL );
    return ( 0 != ::CreateHardLink( file2, file1, NULL ) );
 
 #else
@@ -226,6 +227,36 @@ wxString FileNames::LowerCaseAppNameInPath( const wxString & dirIn){
    return dir;
 }
 
+FilePath FileNames::ConfigDir()
+{
+   if (gConfigDir.empty())
+   {
+      wxFileName exePath(PlatformCompatibility::GetExecutablePath());
+#if defined(__WXMAC__)
+      // Path ends for example in "Tenacity.app/Contents/MacOSX"
+      // just remove the MacOSX part.
+      exePath.RemoveLastDir();
+#endif
+      wxFileName portablePrefsPath(exePath.GetPath(), wxT("Portable Settings"));
+      if (::wxDirExists(portablePrefsPath.GetFullPath()))
+      {
+         // Use "Portable Settings" folder
+         gConfigDir = portablePrefsPath.GetFullPath();
+      } else {
+         // Use OS-provided user data dir folder
+#if defined(__WSMSW__)
+         wxString configDir(wxStandardPaths::Get().GetUserConfigDir() + wxT("\\Tenacity"));
+#else
+         wxString configDir(wxStandardPaths::Get().GetUserConfigDir() + wxT("/tenacity"));
+#endif
+         gConfigDir = FileNames::MkDir(configDir);
+      }
+   }
+
+   return gConfigDir;
+}
+
+
 FilePath FileNames::DataDir()
 {
    // LLL:  Wouldn't you know that as of WX 2.6.2, there is a conflict
@@ -251,12 +282,21 @@ FilePath FileNames::DataDir()
       {
          // Use "Portable Settings" folder
          gDataDir = portablePrefsPath.GetFullPath();
+#if defined(__WXGTK__)
+      } else
+      {
+         wxString dataDir;
+         // see if XDG_DATA_HOME is defined. if it is, use its value. if it isn't, use the default
+         // XDG-specified value
+         if ( !wxGetEnv(wxS("XDG_DATA_HOME"), &dataDir) || dataDir.empty() )
+            dataDir = wxFileName::GetHomeDir() + wxT("/.local/share");
+
+         dataDir = dataDir + wxT("/tenacity");
+#else
       } else
       {
          // Use OS-provided user data dir folder
          wxString dataDir( LowerCaseAppNameInPath( wxStandardPaths::Get().GetUserDataDir() ));
-#if defined( __WXGTK__ )
-         dataDir = dataDir + wxT("-data");
 #endif
          gDataDir = FileNames::MkDir(dataDir);
       }
@@ -282,7 +322,7 @@ FilePath FileNames::HtmlHelpDir()
    //for mac this puts us within the .app: Tenacity.app/Contents/SharedSupport/
    return wxFileName( exePath.GetPath()+wxT("/help/manual"), wxEmptyString ).GetFullPath();
 #else
-   //linux goes into /*prefix*/share/audacity/
+   //linux goes into /*prefix*/share/tenacity/
    //windows (probably) goes into the dir containing the .exe
    wxString dataDir = FileNames::LowerCaseAppNameInPath( wxStandardPaths::Get().GetDataDir());
    return wxFileName( dataDir+wxT("/help/manual"), wxEmptyString ).GetFullPath();
@@ -317,12 +357,12 @@ FilePath FileNames::PlugInDir()
 
 FilePath FileNames::PluginRegistry()
 {
-   return wxFileName( DataDir(), wxT("pluginregistry.cfg") ).GetFullPath();
+   return wxFileName( ConfigDir(), wxT("pluginregistry.cfg") ).GetFullPath();
 }
 
 FilePath FileNames::PluginSettings()
 {
-   return wxFileName( DataDir(), wxT("pluginsettings.cfg") ).GetFullPath();
+   return wxFileName( ConfigDir(), wxT("pluginsettings.cfg") ).GetFullPath();
 }
 
 FilePath FileNames::BaseDir()
@@ -342,7 +382,7 @@ FilePath FileNames::BaseDir()
    // the "Debug" directory in debug builds.
    baseDir = PlatformCompatibility::GetExecutablePath();
 #else
-   // Linux goes into /*prefix*/share/audacity/
+   // Linux goes into /*prefix*/share/tenacity/
    baseDir = FileNames::LowerCaseAppNameInPath(wxStandardPaths::Get().GetPluginsDir());
 #endif
 
@@ -472,7 +512,7 @@ wxFileNameWrapper FileNames::DefaultToDocumentsFolder(const wxString &preference
 
    // MJB: Bug 1899 & Bug 2007.  Only create directory if the result is the default path
    bool bIsDefaultPath = result == defaultPath;
-   if( !bIsDefaultPath ) 
+   if( !bIsDefaultPath )
    {
       // IF the prefs directory doesn't exist - (Deleted by our user perhaps?)
       //    or exists as a file
