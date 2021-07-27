@@ -232,7 +232,7 @@ function( audacity_append_common_compiler_options var use_pch )
          -DAUDACITY_MODLEVEL=${AUDACITY_MODLEVEL}
 
          # Version string for visual display
-         -DAUDACITY_VERSION_STRING=L"${AUDACITY_VERSION}.${AUDACITY_RELEASE}.${AUDACITY_REVISION}${AUDACITY_SUFFIX}"
+         -DAUDACITY_VERSION_STRING=L"${GIT_DESCRIBE}"
 
          # This value is used in the resource compiler for Windows
          -DAUDACITY_FILE_VERSION=L"${AUDACITY_VERSION},${AUDACITY_RELEASE},${AUDACITY_REVISION},${AUDACITY_MODLEVEL}"

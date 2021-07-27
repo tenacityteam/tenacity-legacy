@@ -21,22 +21,6 @@ endif ()
 # Set this value to 0 for alpha, 1 for beta, 2 for release builds
 set( AUDACITY_BUILD_LEVEL 0 )
 
-# The Audacity version
-# Increment as appropriate after release of a new version, and set back
-# AUDACITY_BUILD_LEVEL to 0
-set( AUDACITY_VERSION 3 )
-set( AUDACITY_RELEASE 0 )
-set( AUDACITY_REVISION 4 )
-set( AUDACITY_MODLEVEL 0 )
-
-if( AUDACITY_BUILD_LEVEL EQUAL 0 )
-   set( AUDACITY_SUFFIX "-alpha" )
-elseif(  AUDACITY_BUILD_LEVEL EQUAL 1 )
-   set( AUDACITY_SUFFIX "-beta" )
-else()
-   set( AUDACITY_SUFFIX "" )
-endif()
-
 # Don't allow in-source builds...no real reason, just
 # keeping those source trees nice and tidy.  :-)
 # (This can be removed if it becomes an issue.)
@@ -232,31 +216,44 @@ elseif( CMAKE_SYSTEM_NAME MATCHES "Darwin" )
 
 endif()
 
-# Try to get the current commit information
-set( GIT_COMMIT_SHORT "unknown" )
-set( GIT_COMMIT_LONG "unknown" )
-set( GIT_COMMIT_TIME "unknown" )
+# Current version and commit info
+set( AUDACITY_VERSION 0 )
+set( AUDACITY_RELEASE 0 )
+set( AUDACITY_REVISION 0 )
+set( GIT_DESCRIBE "unknown" )
 find_package( Git QUIET )
 if( GIT_FOUND )
-   execute_process(
-      COMMAND
-         ${GIT_EXECUTABLE} show -s "--format=%h;%H;%cd" --no-show-signature --no-notes
-      WORKING_DIRECTORY
-         ${topdir}
-      OUTPUT_VARIABLE
-         git_output
-      OUTPUT_STRIP_TRAILING_WHITESPACE
-      ERROR_QUIET
-   )
+    execute_process(
+        COMMAND
+            ${GIT_EXECUTABLE} describe --abbrev=7
+        WORKING_DIRECTORY
+            ${CMAKE_SOURCE_DIR}
+        OUTPUT_VARIABLE
+            GIT_DESCRIBE
+        OUTPUT_STRIP_TRAILING_WHITESPACE
+        ERROR_QUIET
+    )
 
-   if( git_output )
-      list( GET git_output 0 GIT_COMMIT_SHORT )
-      list( GET git_output 1 GIT_COMMIT_LONG )
-      list( GET git_output 2 GIT_COMMIT_TIME )
-   endif()
+    if( GIT_DESCRIBE )
+        # Copy to new variable for string manipulation
+        set( git_output ${GIT_DESCRIBE} )
+
+        # TODO: Remove this after first Tenacity release
+        string(REPLACE "Audacity-" "" git_output "${git_output}")
+
+        string( REGEX REPLACE "-.*" "" git_output "${git_output}" )
+        string( REPLACE "." ";" git_output "${git_output}" )
+
+        list( GET git_output 0 AUDACITY_VERSION )
+        list( GET git_output 1 AUDACITY_RELEASE )
+        list( GET git_output 2 AUDACITY_REVISION )
+    endif()
 endif()
-message( STATUS "  Current Commit: ${GIT_COMMIT_SHORT}" )
+message( STATUS "  Current Commit: ${GIT_DESCRIBE}" )
 message( STATUS )
+
+# Not sure what this even does
+set( AUDACITY_MODLEVEL 0 )
 
 # Organize subdirectories/targets into folders for the IDEs
 set_property( GLOBAL PROPERTY USE_FOLDERS ON )
@@ -488,10 +485,6 @@ if( CMAKE_SYSTEM_NAME MATCHES "Darwin|Windows" )
 else()
    set( AUDACITY_NAME "tenacity" )
 endif()
-
-# Create short and full version strings
-set( AUDACITY_DIST_VERSION ${AUDACITY_VERSION}.${AUDACITY_RELEASE}.${AUDACITY_REVISION} )
-set( AUDACITY_INFO_VERSION ${AUDACITY_VERSION}.${AUDACITY_RELEASE}.${AUDACITY_REVISION}.${AUDACITY_MODLEVEL} )
 
 # Python is used for the manual and (possibly) message catalogs
 find_package( Python3 )
