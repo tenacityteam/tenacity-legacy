@@ -18,8 +18,12 @@ else # Linux & others
 
 fi
 
+export CMAKE_BUILD_PARALLEL_LEVEL=$(( ${cpus} > 2 ? $((${cpus} - 2)) : ${cpus} ))
+
+echo "Using ${CMAKE_BUILD_PARALLEL_LEVEL} processors for cmake build"
+
 # Build Audacity
-cmake --build build -j "${cpus}" --config "${AUDACITY_BUILD_TYPE}"
+cmake --build build --config "${AUDACITY_BUILD_TYPE}"
 
 BIN_OUTPUT_DIR=build/bin/${AUDACITY_BUILD_TYPE}
 SYMBOLS_OUTPUT_DIR=debug
@@ -29,7 +33,7 @@ mkdir ${SYMBOLS_OUTPUT_DIR}
 if [[ "${OSTYPE}" == msys* ]]; then # Windows
     # copy PDBs to debug folder...
     find ${BIN_OUTPUT_DIR} -name '*.pdb' | xargs -I % cp % ${SYMBOLS_OUTPUT_DIR}
-    # and remove debug symbol files from the file tree before archieving
+    # and remove debug symbol files from the file tree before archiving
     find ${BIN_OUTPUT_DIR} -name '*.iobj' -o -name '*.ipdb' -o -name '*.pdb' -o -name '*.ilk' | xargs rm -f
 elif [[ "${OSTYPE}" == darwin* ]]; then # macOS
     find ${BIN_OUTPUT_DIR} -name '*.dSYM' | xargs -J % mv % ${SYMBOLS_OUTPUT_DIR}
