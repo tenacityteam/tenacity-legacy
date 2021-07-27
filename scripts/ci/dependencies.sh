@@ -10,7 +10,7 @@ if [[ "${OSTYPE}" == msys* ]]; then # Windows
 
         # Chocolatey packages
         choco_packages=(
-            sccache 
+            sccache
             conan
         )
 
@@ -44,6 +44,7 @@ else # Linux & others
             g++
             git
             wget
+            bash
 
             # GitHub Actions
             libasound2-dev
@@ -53,7 +54,7 @@ else # Linux & others
         )
         sudo apt-get update -y
         sudo apt-get install -y --no-install-recommends "${apt_packages[@]}"
-        
+
         # Download Conan from github
         wget "https://github.com/conan-io/conan/releases/latest/download/conan-ubuntu-64.deb" -nv -O /tmp/conan.deb
         sudo dpkg -i /tmp/conan.deb
