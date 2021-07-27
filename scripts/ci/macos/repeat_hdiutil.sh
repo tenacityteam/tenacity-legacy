@@ -6,7 +6,7 @@ set -uo pipefail
 
 max_retry=5
 counter=0
-num_secs_await_retry=1
+num_secs_await_retry=5
 
 echo "Trying: " /usr/bin/hdiutil "$@"
 

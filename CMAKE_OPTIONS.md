@@ -1,7 +1,7 @@
-| Name                              | Type   | Default    | Description                                                     |
-| :-------------------------------- | :----- | :--------- | :-------------------------------------------------------------- |
-| CMAKE_BUILD_TYPE                  | STRING | Debug      | Type of the build: Debug, Release, RelWithDebInfo, MinSizeRel   |
-| CMAKE_INSTALL_PREFIX              | PATH   | /usr/local | Install path prefix, prepended onto install directories.        |
+| Name                     | Type   | Default    | Description                                                     |
+| :------------------------| :----- | :--------- | :-------------------------------------------------------------- |
+| CMAKE_BUILD_TYPE         | STRING | Debug      | Type of the build: Debug, Release, RelWithDebInfo, MinSizeRel   |
+| CMAKE_INSTALL_PREFIX     | PATH   | /usr/local | Install path prefix, prepended onto install directories.        |
 | lib_preference           | STRING | local      | Library preference [system (if available), local]               |
 | obey_system_dependencies | BOOL   | Off        | Use only system packages to satisfy dependencies                |
 | use_expat                | STRING | system     | Use expat library [system (if available), local, off]           |

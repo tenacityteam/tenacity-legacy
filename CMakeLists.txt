@@ -172,6 +172,25 @@ include( CMakeDetermineASM_NASMCompiler )
 include( CMakePushCheckState )
 include( GNUInstallDirs )
 include( TestBigEndian )
+include( ProcessorCount )
+
+# Determine total number of processors to enable us to only use total_available - 1 processors
+# This helps prevent slow down of the other applications during the build process
+ProcessorCount( CMAKE_BUILD_CPU_COUNT )
+if( CMAKE_BUILD_CPU_COUNT GREATER 0 )
+  math( EXPR CMAKE_BUILD_CPU_COUNT "${CMAKE_BUILD_CPU_COUNT} - 2" OUTPUT_FORMAT DECIMAL )
+endif()
+
+if( CMAKE_BUILD_CPU_COUNT LESS_EQUAL 0 )
+  message( WARNING "Unable to optimize build CPU usage, defaulting to use all processors" )
+  set( CMAKE_BUILD_CPU_COUNT 0 )
+elseif(NOT DEFINED CMAKE_BUILD_PARALLEL_LEVEL )
+  message( STATUS "Build automatically optimized to use processor count: ${CMAKE_BUILD_CPU_COUNT}" )
+  set( CMAKE_BUILD_PARALLEL_LEVEL ${CMAKE_BUILD_CPU_COUNT} )
+#else()
+#  message( STATUS "Using CMAKE_BUILD_PARALLEL_LEVEL value to configure processor count: ${CMAKE_BUILD_PARALLEL_LEVEL}")
+#  set ( CMAKE_BUILD_CPU_COUNT ${CMAKE_BUILD_PARALLEL_LEVEL} )
+endif()
 
 # Determine 32-bit or 64-bit target
 if( CMAKE_C_COMPILER_ID MATCHES "MSVC" AND CMAKE_VS_PLATFORM_NAME MATCHES "Win64|x64" )
@@ -252,8 +271,13 @@ if( CMAKE_GENERATOR MATCHES "Visual Studio" )
    # Build using multiple processors
    foreach( config ${CMAKE_CONFIGURATION_TYPES} )
       string( TOUPPER "${config}" config )
-      string( APPEND CMAKE_C_FLAGS_${config} " /MP" )
-      string( APPEND CMAKE_CXX_FLAGS_${config} " /MP" )
+      if( NOT CMAKE_BUILD_CPU_COUNT EQUAL 0 )
+        string( APPEND CMAKE_C_FLAGS_${config} " /MP${CMAKE_BUILD_CPU_COUNT}" )
+        string( APPEND CMAKE_CXX_FLAGS_${config} " /MP${CMAKE_BUILD_CPU_COUNT}" )
+      else()
+        string( APPEND CMAKE_C_FLAGS_${config} " /MP" )
+        string( APPEND CMAKE_CXX_FLAGS_${config} " /MP" )
+      endif()
    endforeach()
 
    # Define system library information, but we'll do the install

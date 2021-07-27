@@ -1145,6 +1145,8 @@ if( CMAKE_SYSTEM_NAME MATCHES "Windows" )
                           -D DST="${_EXEDIR}"
                           -D WXWIN="${_SHARED_PROXY_BASE_PATH}/$<CONFIG>/"
                           -P ${AUDACITY_MODULE_PATH}/CopyLibs.cmake
+                          -parallel ${CMAKE_BUILD_PARALLEL_LEVEL}
+
       POST_BUILD
    )
 
@@ -1234,6 +1236,7 @@ elseif( CMAKE_SYSTEM_NAME MATCHES "Darwin" )
                           -D DST="${_PKGLIB}"
                           -D WXWIN="${_SHARED_PROXY_BASE_PATH}/$<CONFIG>"
                           -P ${AUDACITY_MODULE_PATH}/CopyLibs.cmake
+                          -parallel ${CMAKE_BUILD_PARALLEL_LEVEL}
       POST_BUILD
    )
 
@@ -1303,6 +1306,7 @@ else()
                           -D DST="${_DEST}/${_PKGLIB}"
                           -D WXWIN="${_SHARED_PROXY_BASE_PATH}/$<CONFIG>"
                           -P ${AUDACITY_MODULE_PATH}/CopyLibs.cmake
+                          -parallel ${CMAKE_BUILD_PARALLEL_LEVEL}
       POST_BUILD
    )
 endif()
