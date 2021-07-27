@@ -8,9 +8,9 @@ max_retry=5
 counter=0
 num_secs_await_retry=1
 
-echo "Trying: " /usr/bin/hdiutil "$@"
+echo "Trying: " /usr/bin/hdiutil -quiet "$@"
 
-until /usr/bin/hdiutil "$@"; do
+until /usr/bin/hdiutil -quiet "$@"; do
    sleep $num_secs_await_retry
    if [[ $counter -eq $max_retry ]]; then
         echo "CPack failed despite retry attempts!"
