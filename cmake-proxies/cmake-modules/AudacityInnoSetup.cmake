@@ -2,10 +2,10 @@
 # The target will be only generated if InnoSetup 6 is installed.
 
 find_program(
-    INNO_SETUP_COMPILER 
+    INNO_SETUP_COMPILER
     NAMES iscc ISCC
-    HINTS 
-        "C:/Program Files (x86)/Inno Setup 6" 
+    HINTS
+        "C:/Program Files (x86)/Inno Setup 6"
         "C:/Program Files/Inno Setup 6"
 )
 
@@ -27,7 +27,8 @@ if( INNO_SETUP_COMPILER )
                 -DSIGN=${${_OPT}perform_codesign}
                 -DWINDOWS_CERTIFICATE=${WINDOWS_CERTIFICATE}
                 -D WINDOWS_CERTIFICATE_PASSWORD=${WINDOWS_CERTIFICATE_PASSWORD}
-                -P "${CMAKE_SOURCE_DIR}/win/Inno_Setup_Wizard/BuildInnoSetupInstaller.cmake" 
+                -P "${CMAKE_SOURCE_DIR}/win/Inno_Setup_Wizard/BuildInnoSetupInstaller.cmake"
+                -parallel ${CMAKE_BUILD_PARALLEL_LEVEL}
         VERBATIM
     )
 

@@ -317,8 +317,13 @@ configure_file (
   "${CMAKE_CURRENT_BINARY_DIR}/deinstall.cmake"
   IMMEDIATE @ONLY)
 
-add_custom_target (deinstall
-  COMMAND ${CMAKE_COMMAND} -P "${CMAKE_CURRENT_BINARY_DIR}/deinstall.cmake")
+add_custom_target (
+    deinstall
+    COMMAND
+        ${CMAKE_COMMAND}
+            -P "${CMAKE_CURRENT_BINARY_DIR}/deinstall.cmake"
+            -parallel ${CMAKE_BUILD_PARALLEL_LEVEL}
+    )
 
 
 

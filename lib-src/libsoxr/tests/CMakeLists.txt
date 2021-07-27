@@ -32,6 +32,7 @@ macro (add_cmp_test irate orate bits)
   add_test (NAME ${name} COMMAND ${CMAKE_COMMAND} -Dbits=${bits} -DBIN=${BIN}
     -DEXAMPLES_BIN=${EXAMPLES_BIN} -DlenToSkip=${leader} -Dorate=${orate}
     -Dirate=${irate} -Dlen=${len} -P ${CMAKE_CURRENT_SOURCE_DIR}/cmp-test.cmake)
+    -parallel ${CMAKE_BUILD_PARALLEL_LEVEL}
   add_vector (${irate})
   add_vector (${orate})
 endmacro ()
