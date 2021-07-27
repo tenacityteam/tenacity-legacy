@@ -28,7 +28,6 @@ but it will probably work fine if you use it on a high level.
 #define __AUDACITY_PROFILER__
 #include <mutex>
 #include <vector>
-#include <time.h>
 #include "MemoryX.h"
 
 

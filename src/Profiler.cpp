@@ -26,6 +26,10 @@ but it will probably work fine if you use it on a high level.
 #include <stdio.h>
 #include <string.h>
 #include <wx/crt.h>
+#include <time.h>
+#include <chrono>
+#define __STDC_FORMAT_MACROS 1
+#include <inttypes.h>
 
 ///write to a profile at the end of the test.
 Profiler::~Profiler()
@@ -33,12 +37,12 @@ Profiler::~Profiler()
    if(mTasks.size())
    {
       //print everything out.  append to a log.
-      FILE* log = fopen("AudacityProfilerLog.txt", "a");
-      time_t now;
+      FILE* log = fopen("TenacityProfilerLog.txt", "a");
+      const auto now = std::chrono::system_clock::now();
+      const std::uint64_t timestamp_ms = now.time_since_epoch() / std::chrono::milliseconds(1);
 
-      time(&now);
-      wxFprintf(log,"Audacity Profiler Run, Ended at ");
-      wxFprintf(log,"%s",ctime(&now));
+      wxFprintf(log,"Tenacity Profiler Run, Ended at ");
+      wxFprintf(log,"%" PRIu64,timestamp_ms);
       wxFprintf(log,"****************************************\n");
       //print out the tasks
       for(int i=0;i<(int)mTasks.size();i++)
