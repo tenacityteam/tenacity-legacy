@@ -155,6 +155,7 @@ void MousePrefs::CreateList()
    AddItem(XO("Left-Drag"),        XO("Time-Shift"),XO("Move clip left/right or between tracks"));
    AddItem(XO("Shift-Left-Drag"),  XO("Time-Shift"),XO("Move all clips in track left/right"));
    AddItem(CTRL + XO("-Left-Drag"),XO("Time-Shift"),XO("Move clip up/down between tracks"));
+   AddItem(XO("Alt-Left-Drag"),    XO("Time-Shift"),XO("Move clips ignoring Sync-lock"));
 
    AddItem(XO("Left-Drag"),
    /* i18n-hint: The envelope is a curve that controls the audio loudness.*/

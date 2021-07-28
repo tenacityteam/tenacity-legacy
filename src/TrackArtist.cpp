@@ -334,12 +334,18 @@ void TrackArt::DrawSyncLockTiles(
    TrackPanelDrawingContext &context, const wxRect &rect )
 {
    const auto dc = &context.dc;
+   dc->SetBrush(*wxTRANSPARENT_BRUSH);
+   dc->SetPen( wxPen( theTheme.Colour( clrSelected )) );
+ //  AColor::Line(*dc, rect.x, rect.y, rect.x, rect.height);
+//   AColor::Line(*dc, rect.width, rect.y, rect.width, rect.height);
+//   dc->DrawRectangle(rect.x, rect.y, rect.width, rect.height);
+   dc->SetPen(*wxTRANSPARENT_PEN);
 
    wxBitmap syncLockBitmap(theTheme.Image(bmpSyncLockSelTile));
 
    // Grid spacing is a bit smaller than actual image size
-   int gridW = syncLockBitmap.GetWidth() - 6;
-   int gridH = syncLockBitmap.GetHeight() - 8;
+   int gridW = syncLockBitmap.GetWidth();
+   int gridH = syncLockBitmap.GetHeight() - 2;
 
    // Horizontal position within the grid, modulo its period
    int blockX = (rect.x / gridW) % 5;
@@ -394,12 +400,6 @@ void TrackArt::DrawSyncLockTiles(
          if (yy + height > rect.height)
             height = rect.height - yy;
 
-         // AWD: draw blocks according to our pattern
-         if ((blockX == 0 && blockY == 0) || (blockX == 2 && blockY == 1) ||
-             (blockX == 4 && blockY == 2) || (blockX == 1 && blockY == 3) ||
-             (blockX == 3 && blockY == 4))
-         {
-
             // Do we need to get a sub-bitmap?
             if (width != syncLockBitmap.GetWidth() || height != syncLockBitmap.GetHeight()) {
                wxBitmap subSyncLockBitmap =
@@ -409,7 +409,6 @@ void TrackArt::DrawSyncLockTiles(
             else {
                dc->DrawBitmap(syncLockBitmap, rect.x + xx, rect.y + yy, true);
             }
-         }
 
          // Updates for next row
          if (extraRow) {
