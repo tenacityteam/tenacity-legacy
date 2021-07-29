@@ -107,6 +107,7 @@ Each commit must include a DCO in its description, which looks like this:
 
 ```
 Signed-off-by: Jane Doe <j.doe@email.email>
+Signed-off-by: Grzegorz Pruchniakowski <gootector@o2.pl>
 ```
 
 You may type this line manually or, if using the command line, simply append
