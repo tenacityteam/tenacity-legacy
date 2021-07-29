@@ -1,2 +1,199 @@
-# Normalize line endings of all files that Git considers to be text
-* text=auto
+*                   text=auto
+*.*ignore           text
+*.*rc               text
+*.3gp               binary
+*.3gpp              binary
+*.7z                binary
+*.a                 binary
+*.adoc              text
+*.ai                binary
+*.app               binary
+*.as                binary
+*.asf               binary
+*.asx               binary
+*.bash              text                        eol=lf
+*.bat               text                        eol=crlf
+*.bibtex            text        diff=bibtex
+*.bmp               binary
+*.c                 text        diff=c
+*.c++               text        diff=cpp
+*.cc                text        diff=cpp
+*.cmd               text                        eol=crlf
+*.cnf               text
+*.coffee            text
+*.conf              text
+*.config            text
+*.cpp               text        diff=cpp
+*.csproj            text                        eol=crlf
+*.css               text
+*.csv               text
+*.cxx               text        diff=cpp
+*.db                binary
+*.dbproj            text                        eol=crlf
+*.dll               binary
+*.doc	                          diff=astextplain
+*.docx                          diff=astextplain
+*.dot               text        diff=astextplain
+*.dylib             binary
+*.ejs               text
+*.eot               binary
+*.eps               binary
+*.exe               binary
+*.filters           text                        eol=crlf
+*.fish              text                        eol=lf
+*.fla               binary
+*.flv               binary
+*.fsproj            text                        eol=crlf
+*.gch               binary
+*.gif               binary
+*.gifv              binary
+*.gz                binary
+*.h                 text        diff=c
+*.h++               text        diff=cpp
+*.haml              text
+*.handlebars        text
+*.hbs               text
+*.hbt               text
+*.hh                text        diff=cpp
+*.hpp               text        diff=cpp
+*.htm               text        diff=html
+*.html              text        diff=html
+*.ico               binary
+*.inc               text
+*.ini               text
+*.ipynb             text
+*.jade              text
+*.jar               binary
+*.jng               binary
+*.jp2               binary
+*.jpeg              binary
+*.jpg               binary
+*.jpx               binary
+*.js                text
+*.json              text
+*.jsx               text
+*.jxr               binary
+*.kar               binary
+*.la                binary
+*.lai               binary
+*.latte             text
+*.less              text
+*.lib               binary
+*.lo                binary
+*.lock              text        -diff
+*.ls                text
+*.lsproj            text                        eol=crlf
+*.m4a               binary
+*.m4v               binary
+*.map               text        -diff
+*.markdown          text
+*.md                text
+*.mdown             text
+*.mdtext            text
+*.mdtxt             text
+*.mdwn              text
+*.mid               binary
+*.midi              binary
+*.mkd               text
+*.mkdn              text
+*.mng               binary
+*.modelproj         text                        eol=crlf
+*.mov               binary
+*.mp3               binary
+*.mp4               binary
+*.mpeg              binary
+*.mpg               binary
+*.mustache          text
+*.njk               text
+*.o                 binary
+*.obj               binary
+*.od                text
+*.ogg               binary
+*.ogv               binary
+*.onlydata          text
+*.otf               binary
+*.out               binary
+*.p                 binary
+*.patch             -text
+*.pch               binary
+*.pdf               binary      diff=astextplain
+*.php               text        diff=php
+*.phtml             text
+*.pickle            binary
+*.pkl               binary
+*.pl                text        diff=perl
+*.pm                text        diff=perl
+*.png               binary
+*.props             text                        eol=crlf
+*.ps1               text                        eol=crlf
+*.psb               binary
+*.psd               binary
+*.pxd               text        diff=python
+*.py                text        diff=python
+*.py3               text        diff=python
+*.pyc               binary
+*.pyc               binary
+*.pyd               binary
+*.pyo               binary
+*.pyw               text        diff=python
+*.pyx               text        diff=python
+*.pyz               text        diff=python
+*.ra                binary
+*.rar               binary
+*.rb                text        diff=ruby
+*.rtf                           diff=astextplain
+*.sass              text
+*.scm               text
+*.scss              text        diff=css
+*.sh                text                        eol=lf
+*.sln               text                        eol=crlf
+*.slo               binary
+*.so                binary
+*.sql               text
+*.sqlproj           text                        eol=crlf
+*.styl              text
+*.svg               text
+*.svgz              binary
+*.swc               binary
+*.swf               binary
+*.tab               text
+*.tag               text
+*.tar               binary
+*.tex               text        diff=tex
+*.textile           text
+*.tgz               binary
+*.tif               binary
+*.tiff              binary
+*.tmpl              text
+*.toml              text
+*.tpl               text
+*.ts                text
+*.tsv               text
+*.tsx               text
+*.ttf               binary
+*.twig              text
+*.txt               text
+*.vbproj            text                        eol=crlf
+*.vcproj            text                        eol=crlf
+*.vcxitems          text                        eol=crlf
+*.vcxproj           text                        eol=crlf
+*.vue               text
+*.wbmp              binary
+*.webm              binary
+*.webp              binary
+*.wixproj           text                        eol=crlf
+*.wmaproj           text                        eol=crlf
+*.woff              binary
+*.woff2             binary
+*.xhtml             text        diff=html
+*.xml               text
+*.xproj             text                        eol=crlf
+*.yaml              text
+*.yml               text
+*.zip               binary
+.editorconfig       text
+.env                text
+.gitattributes      text                                export-ignore
+.gitconfig          text                                export-ignore
+.htaccess           text
+package-lock.json   text        -diff

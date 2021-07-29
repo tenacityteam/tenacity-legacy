@@ -4,9 +4,16 @@ root = true
 # Unix-style newlines with a newline ending every file
 [*]
 charset = utf-8
-trim_trailing_whitespace = true
 end_of_line = lf
+trim_trailing_whitespace = true
 insert_final_newline = true
+
+[*.{bat,cmd,ps1}]
+end_of_line = crlf
+
+[*.{csproj,dbproj,filters,fsproj,lsproj,modelproj,props,sln,sqlproj,vbproj,vcproj,vcxitems,vcxproj,wixproj,wmaproj,xproj}]
+charset = utf-8-bom
+end_of_line = crlf
 
 # 4-wide spaces
 [*.{c,h,cpp,hpp}]
