@@ -15,9 +15,10 @@ msgstr ""
 "Project-Id-Version: tenacity 3.0.4\n"
 "Report-Msgid-Bugs-To: emabrey@tenacityaudio.org\n"
 "POT-Creation-Date: 2021-07-25 03:44-0400\n"
-"PO-Revision-Date: 2021-07-25 05:47+0000\n"
+"PO-Revision-Date: 2021-07-26 06:19+0000\n"
 "Last-Translator: Eric <spice2wolf@gmail.com>\n"
-"Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/tenacity/tenacity/zh_Hans/>\n"
+"Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
+"tenacity/tenacity/zh_Hans/>\n"
 "Language: zh\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -575,7 +576,7 @@ msgstr "%s, Tenacity 开发者"
 
 #. i18n-hint: For "About Tenacity..." credits, substituting a person's proper name
 #: src/AboutDialog.cpp
-#, fuzzy, c-format
+#, c-format
 msgid "%s, Tenacity contributor"
 msgstr "%s, Tenacity 开发者"
 
@@ -676,9 +677,8 @@ msgstr "%s (包含入 %s, %s, %s, %s 和 %s)"
 
 #. i18n-hint: The program's name substitutes for %s
 #: src/AboutDialog.cpp
-#, fuzzy
 msgid "Free, open source, cross-platform audio recorder and editor."
-msgstr "%s，免费、开源、跨平台的声音录制编辑软件。"
+msgstr "免费、开源、跨平台的声音录制和编辑软件。"
 
 #: src/AboutDialog.cpp
 msgid "Credits"
@@ -690,14 +690,13 @@ msgstr "DarkTenacity 自定义"
 
 #. i18n-hint: The program's name substitutes for %s
 #: src/AboutDialog.cpp
-#, fuzzy, c-format
+#, c-format
 msgid "%s Contributors"
-msgstr "Audacity 贡献者"
+msgstr "Tenacity 贡献者"
 
 #: src/AboutDialog.cpp
-#, fuzzy
 msgid "Tenacity Special thanks:"
-msgstr "Audacity 特别鸣谢："
+msgstr "Tenacity 特别鸣谢："
 
 #: src/AboutDialog.cpp src/prefs/LibraryPrefs.cpp
 msgid "Libraries"
@@ -1966,9 +1965,8 @@ msgid "No revision identifier was provided"
 msgstr "没有提供修订标识符"
 
 #: src/BuildInfo.h
-#, fuzzy
 msgid "Unknown date and time"
-msgstr "结束日期和时间"
+msgstr "日期和时间不详"
 
 #: src/BuildInfo.h
 #, c-format
@@ -1981,9 +1979,8 @@ msgid "Release build (debug level %d)"
 msgstr "发布版本 (调试级别 %d)"
 
 #: src/BuildInfo.h
-#, fuzzy
 msgid ", 64 bits"
-msgstr "%s, 64 位"
+msgstr ", 64 比特位"
 
 #. i18n-hint: %s will be replaced by the name of an action, such as Normalize, Cut, Fade.
 #: src/CommonCommandFlags.cpp
@@ -3162,7 +3159,7 @@ msgstr ""
 msgctxt "plug-ins"
 msgid "Enable this plug-in?\n"
 msgid_plural "Enable these plug-ins?\n"
-msgstr[0] "启动这些插件吗？\n"
+msgstr[0] "启用这些插件吗？\n"
 
 #: src/PluginManager.cpp
 msgid "Enable new plug-ins"
@@ -4193,7 +4190,7 @@ msgstr "不到1分钟"
 #, c-format
 msgid "%d hour"
 msgid_plural "%d hours"
-msgstr[0] "%d 小时"
+msgstr[0] "%d 个小时"
 
 #: src/ProjectManager.cpp
 #, c-format
@@ -21255,3 +21252,88 @@ msgstr "错误。~%需要立体声轨。"
 
 #~ msgid "[Project %02i] Audacity "
 #~ msgstr "[工程 %02i] Tenacity "
+
+#: src/prefs/MousePrefs.cpp
+msgid "Ctrl"
+msgstr "Ctrl"
+
+#: src/prefs/GUIPrefs.h
+msgid "GUI"
+msgstr "用户界面"
+
+#: src/commands/Demo.cpp
+msgid "Demo"
+msgstr "演示"
+
+#: src/ProjectFileIO.cpp
+#, c-format
+msgid "[Project %02i] "
+msgstr "[工程 %02i] "
+
+#: src/ProjectFileIO.cpp src/menus/WindowMenus.cpp
+msgid "<untitled>"
+msgstr "<无标题工程>"
+
+#. i18n-hint: The %d's are replaced by numbers, the %s by musical notes, e.g. A#
+#: src/FreqWindow.cpp
+#, c-format
+msgid "%d Hz (%s) = %.1f dB"
+msgstr "%d Hz (%s) = %.1f dB"
+
+#. i18n-hint: The %d's are replaced by numbers, the %s by musical notes, e.g. A#
+#: src/FreqWindow.cpp
+#, c-format
+msgid "%d Hz (%s) = %d dB"
+msgstr "%d Hz (%s) = %d dB"
+
+#: src/FileNames.cpp
+msgid ", "
+msgstr ", "
+
+#: src/Dependencies.cpp
+#, c-format
+msgid "\"%s\", \"%s\", \"%s\"\n"
+msgstr "\"%s\", \"%s\", \"%s\"\n"
+
+#: src/DBConnection.cpp
+#, c-format
+msgid "(%d): %s"
+msgstr "(%d): %s"
+
+#: src/BatchCommands.cpp src/FileNames.cpp
+#, c-format
+msgid "(%s)"
+msgstr "(%s)"
+
+#: src/AudioIOBase.cpp
+#, c-format
+msgid "%d - %s\n"
+msgstr "%d - %s\n"
+
+#. i18n-hint The registered trademark symbol (r) is substituted at %s
+#: src/AboutDialog.cpp
+#, c-format
+msgid "The Audacity%s trademark is used within this software for descriptive and informational purposes only."
+msgstr "Audacity%s 商标在本软件中仅用于说明和信息目的。"
+
+#. i18n-hint: Abbreviation for Giga bytes
+#: libraries/lib-strings/Internat.cpp
+#, c-format
+msgid "%s GB"
+msgstr "%s GB"
+
+#. i18n-hint: Abbreviation for Mega bytes
+#: libraries/lib-strings/Internat.cpp
+#, c-format
+msgid "%s MB"
+msgstr "%s MB"
+
+#. i18n-hint: Abbreviation for Kilo bytes
+#: libraries/lib-strings/Internat.cpp
+#, c-format
+msgid "%s KB"
+msgstr "%s kB"
+
+#: src/AboutDialog.cpp
+msgid "Please note that names are sorted in alphabetical order, not in order of importance."
+msgstr "请注意名称是按字母顺序而不是按重要性排序的。"
