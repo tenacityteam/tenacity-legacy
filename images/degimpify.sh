@@ -17,9 +17,8 @@ if [ $# -eq 0 ]; then
     input_dirs[2]="./ControlButtons"
 fi
 
-for arg in "${input_dirs[@]}"
+for dir in "${input_dirs[@]}"
 do
-    dir=${arg}
     for xpm_file in "${dir}"/*.xpm; do
       echo "Degimpify: ${xpm_file}"
       sed -e 's/\_xpm\[\]/\[\]/' -e 's/^static char \*/static const char  \*/' -i "$xpm_file"
