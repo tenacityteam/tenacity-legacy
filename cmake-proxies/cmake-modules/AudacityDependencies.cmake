@@ -18,7 +18,7 @@ set( CONAN_RESOLVE_LIST )
 # Add a Conan dependency
 # Example usage:
 # add_conan_lib( 
-#   wxWdidget 
+#   wxWidgets 
 #   wxwidgets/3.1.3-audacity
 #   OPTION_NAME wxwidgets
 #   SYMBOL WXWIDGET
@@ -189,9 +189,13 @@ function (add_conan_lib package conan_package_name )
         endif()
     endif()
 
+    # We only want the name of the library
+    string(REPLACE "/" ";" pkg_name_split ${conan_package_name})
+    list(GET pkg_name_split 0 conan_package_name_only)
+
     list( APPEND CONAN_REQUIRES ${conan_package_name} )
     list( APPEND CONAN_PACKAGE_OPTIONS ${conan_package_options} )
-    list( APPEND CONAN_RESOLVE_LIST ${package} )
+    list( APPEND CONAN_RESOLVE_LIST "${conan_package_name_only}|${interface_name}" )
 
     if ( only_debug_release )
         message( STATUS "${package} only has Debug and Release versions" )
@@ -217,7 +221,7 @@ endmacro()
 function ( _conan_install build_type )
     conan_cmake_configure (
         REQUIRES ${CONAN_REQUIRES}
-        GENERATORS cmake_find_package_multi
+        GENERATORS cmake_multi
         BUILD_REQUIRES ${CONAN_BUILD_REQUIRES}
         ${CONAN_CONFIG_OPTIONS}
         IMPORTS "bin, *.dll -> ./${_SHARED_PROXY_BASE}/${build_type} @ keep_path=False"
@@ -226,6 +230,17 @@ function ( _conan_install build_type )
         IMPORTS "lib, *.so* -> ./${_SHARED_PROXY_BASE}/${build_type} @ keep_path=False"
         OPTIONS ${CONAN_PACKAGE_OPTIONS}
     )
+
+    # Hash the conanfile.txt to check if it has changed, so we can skip running conan
+    set(hash_name "${build_type}_CONAN_HASH")
+    file(MD5 "${CMAKE_CURRENT_BINARY_DIR}/conanfile.txt" conanfile_hash)
+
+    if( "_${conanfile_hash}" STREQUAL "_${${hash_name}}" AND EXISTS "${CMAKE_CURRENT_BINARY_DIR}/conanbuildinfo_multi.cmake")
+        message(STATUS "Conanfile up to date for ${build_type}, not running conan")
+        return()
+    endif()
+
+    set(${hash_name} ${conanfile_hash} CACHE INTERNAL "MD5 hash of conanfile.txt for ${build_type}" FORCE)
 
     message(STATUS "Configuring packages for ${build_type}")
 
@@ -250,6 +265,15 @@ function ( _conan_install build_type )
         endforeach()
     endif()
 
+    message(STATUS 
+    "Executing Conan: \
+        REQUIRES ${CONAN_REQUIRES}
+        GENERATORS cmake_multi
+        BUILD_REQUIRES ${CONAN_BUILD_REQUIRES}
+        ${CONAN_CONFIG_OPTIONS}
+        OPTIONS ${CONAN_PACKAGE_OPTIONS}
+        SETTINGS ${settings}
+    ")
 
     conan_cmake_install(PATH_OR_REFERENCE .
         BUILD missing
@@ -259,14 +283,6 @@ endfunction()
 
 macro( resolve_conan_dependencies )
 if(USE_CONAN)
-    message(STATUS 
-    "Executing Conan: \
-        REQUIRES ${CONAN_REQUIRES}
-        GENERATORS cmake_find_package_multi
-        BUILD_REQUIRES ${CONAN_BUILD_REQUIRES}
-        ${CONAN_CONFIG_OPTIONS}
-        OPTIONS ${CONAN_PACKAGE_OPTIONS}
-    ")
 
     if(MSVC OR XCODE AND NOT DEFINED CMAKE_BUILD_TYPE)
         foreach(TYPE ${CMAKE_CONFIGURATION_TYPES})
@@ -278,13 +294,22 @@ if(USE_CONAN)
 
     list( REMOVE_DUPLICATES CONAN_REQUIRES )
 
-    foreach( package ${CONAN_RESOLVE_LIST} )
-        message(STATUS "Resolving Conan library ${package}")
+    set(CONAN_CMAKE_SILENT_OUTPUT TRUE)
+    include(${CMAKE_CURRENT_BINARY_DIR}/conanbuildinfo_multi.cmake)
+    conan_define_targets()
 
-        find_package(${package} CONFIG)
+    foreach( package_raw ${CONAN_RESOLVE_LIST} )
+        string(REPLACE "|" ";" package_list ${package_raw})
+        list(GET package_list 0 package)
+        list(GET package_list 1 target_name)
 
-        if (NOT ${package}_FOUND)
-            message( FATAL_ERROR "Failed to find the conan package ${package}" )
+        # Alias the CONAN_PKG target to the propper target name
+        set(_curr_conan_target "CONAN_PKG::${package}")
+        if (TARGET ${_curr_conan_target})
+            set_target_properties(${_curr_conan_target} PROPERTIES IMPORTED_GLOBAL TRUE)
+            add_library( ${target_name} ALIAS ${_curr_conan_target} )
+        else()
+            message(WARNING "Conan target ${_curr_conan_target} not found" )
         endif()
     endforeach()
 
