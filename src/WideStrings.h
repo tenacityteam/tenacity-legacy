@@ -7,7 +7,7 @@
 **********************************************************************/
 
 #ifndef WIDE_STRINGS_H
-#define WIDE_STRING_H
+#define WIDE_STRINGS_H
 
 #include <string>
 #include <locale>
