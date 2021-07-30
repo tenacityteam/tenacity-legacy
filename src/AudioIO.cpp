@@ -3844,12 +3844,13 @@ bool AudioIoCallback::FillOutputBuffers(
 
    // ------ MEMORY ALLOCATION ----------------------
    // These are small structures.
-   WaveTrack **chans = (WaveTrack **) alloca(numPlaybackChannels * sizeof(WaveTrack *));
-   float **tempBufs = (float **) alloca(numPlaybackChannels * sizeof(float *));
+   auto chans = new WaveTrack * [numPlaybackChannels];
+   auto tempBufs = new float* [numPlaybackChannels];
 
    // And these are larger structures....
-   for (unsigned int c = 0; c < numPlaybackChannels; c++)
-      tempBufs[c] = (float *) alloca(framesPerBuffer * sizeof(float));
+   for (unsigned int c = 0; c < numPlaybackChannels; c++) {
+       tempBufs[c] = new float[framesPerBuffer];
+   }
    // ------ End of MEMORY ALLOCATION ---------------
 
    auto & em = RealtimeEffectManager::Get();
@@ -4001,6 +4002,8 @@ bool AudioIoCallback::FillOutputBuffers(
    if (outputMeterFloats != outputFloats)
       ClampBuffer( outputMeterFloats, framesPerBuffer*numPlaybackChannels );
 
+   delete[] chans;
+   delete[] tempBufs;
    return false;
 }
 
