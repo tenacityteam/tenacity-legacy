@@ -21,11 +21,8 @@
       Widen<wchar_t> to_wstring;
       std::wstring w_s = to_wstring(s);
 */ 
-template<class E,
-    class T = std::char_traits<E>,
-    class A = std::allocator<E> >
-
-    class Widen : public std::string, std::basic_string<E, T, A>{
+template<class E, class T = std::char_traits<E>, class A = std::allocator<E>>
+class Widen : public std::string, std::basic_string<E, T, A>{
     std::locale locale;
     const std::ctype<E>* c_type;
 
@@ -33,28 +30,20 @@ template<class E,
     inline Widen(const Widen&) {};
     inline Widen& operator= (const Widen&) {};
 
+
     public:
-    Widen(const std::locale& given_locale = std::locale()) : locale(given_locale) {
-        #if defined(_MSC_VER) && (_MSC_VER < 1300)
-            constexpr bool MSVC_LOCALE = true;
-        #else
-            constexpr bool MSVC_LOCALE = false;
-        #endif
-        if constexpr (MSVC_LOCALE) {
-            c_type = &_USE(std::locale, std::ctype<E>);
-        } else {
-            c_type = &std::use_facet<std::ctype<E> >(given_locale);
+        inline Widen(const std::locale& given_locale = std::locale()) : locale(given_locale){
+                c_type = &std::use_facet<std::ctype<E> >(given_locale);
         }
-    }
 
-    std::basic_string<E, T, A> operator() (const std::string& str) const {
-        typename std::basic_string<E, T, A>::size_type const string_length = str.length();
-        const char* pointer_begin = str.c_str();
-        std::vector<E> result(string_length);
+        std::basic_string<E, T, A> operator() (const std::string& str) const {
+            typename std::basic_string<E, T, A>::size_type const string_length = str.length();
+            const char* pointer_begin = str.c_str();
+            std::vector<E> result(string_length);
 
-        c_type->widen(pointer_begin, pointer_begin + string_length, &result[0]);
-        return std::basic_string<E, T, A>(&result[0], string_length);
-    }
+            c_type->widen(pointer_begin, pointer_begin + string_length, &result[0]);
+            return std::basic_string<E, T, A>(&result[0], string_length);
+        }
+
 };
-
 #endif
