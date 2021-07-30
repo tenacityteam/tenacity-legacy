@@ -20,6 +20,7 @@
 #include <cstdint>
 #include <mutex>
 #include <wx/ustring.h>
+#include <WideStrings.h>
 
 ///
 /// ProjectSerializer class
@@ -409,30 +410,30 @@ wxString ProjectSerializer::Decode(const wxMemoryBuffer &buffer)
 
    auto ReadString = [&mCharSize, &in, &bytes](int len) -> wxString
    {
-      bytes.reserve( len + 4 );
+      bytes.reserve( (size_t)len + 4 );
       auto data = bytes.data();
       in.Read( data, len );
       // Make a null terminator of the widest type
       memset( data + len, '\0', 4 );
       wxUString str;
-      
-      switch (mCharSize)
-      {
-         case 1:
-            str.assignFromUTF8(data, len);
-         break;
+      Widen<wchar_t> to_wstring;
 
-         case 2:
-            str.assignFromUTF16((wxChar16 *) data, len / 2);
-         break;
+      switch (mCharSize) {
+          case 1:
+              str.assignFromUTF8(data, len);
+              break;
 
-         case 4:
-            str = wxU32CharBuffer::CreateNonOwned((wxChar32 *) data, len / 4);
-         break;
+          case 2:
+              str.assignFromUTF16((wxChar16*)data, len / 2);
+              break;
 
-         default:
-            wxASSERT_MSG(false, wxT("Characters size not 1, 2, or 4"));
-         break;
+          case 4:
+              str.assign(wxUString(to_wstring(data)));
+              break;
+
+          default:
+              wxASSERT_MSG(false, wxT("Characters size not 1, 2, or 4"));
+              break;
       }
 
       return str;

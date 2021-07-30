@@ -335,6 +335,7 @@ list( APPEND SOURCES
       WaveTrack.cpp
       WaveTrack.h
       WaveTrackLocation.h
+      WideStrings.h
       WrappedType.cpp
       WrappedType.h
       ZoomInfo.cpp
