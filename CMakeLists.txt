@@ -24,9 +24,9 @@ set( AUDACITY_BUILD_LEVEL 0 )
 # The Audacity version
 # Increment as appropriate after release of a new version, and set back
 # AUDACITY_BUILD_LEVEL to 0
-set( AUDACITY_VERSION 3 )
-set( AUDACITY_RELEASE 0 )
-set( AUDACITY_REVISION 4 )
+set( AUDACITY_VERSION 0 )
+set( AUDACITY_RELEASE 1 )
+set( AUDACITY_REVISION 0 )
 set( AUDACITY_MODLEVEL 0 )
 
 if( AUDACITY_BUILD_LEVEL EQUAL 0 )
