@@ -323,15 +323,15 @@ size_t RealtimeEffectManager::RealtimeProcess(int group, unsigned chans, float *
    wxMilliClock_t start = wxGetUTCTimeMillis();
 
    // Allocate the in/out buffer arrays
-   float **ibuf = (float **) alloca(chans * sizeof(float *));
-   float **obuf = (float **) alloca(chans * sizeof(float *));
+   auto ibuf = new float* [chans];
+   auto obuf = new float* [chans];
 
    // And populate the input with the buffers we've been given while allocating
    // NEW output buffers
    for (unsigned int i = 0; i < chans; i++)
    {
       ibuf[i] = buffers[i];
-      obuf[i] = (float *) alloca(numSamples * sizeof(float));
+      obuf[i] = new float[numSamples];
    }
 
    // Now call each effect in the chain while swapping buffer pointers to feed the
@@ -365,6 +365,9 @@ size_t RealtimeEffectManager::RealtimeProcess(int group, unsigned chans, float *
          memcpy(buffers[i], ibuf[i], numSamples * sizeof(float));
       }
    }
+
+   delete ibuf;
+   delete[] obuf;
 
    // Remember the latency
    mRealtimeLatency = (int) (wxGetUTCTimeMillis() - start).GetValue();
@@ -516,9 +519,10 @@ size_t RealtimeEffectState::RealtimeProcess(int group,
    const auto numAudioIn = mEffect.GetAudioInCount();
    const auto numAudioOut = mEffect.GetAudioOutCount();
 
-   float **clientIn = (float **) alloca(numAudioIn * sizeof(float *));
-   float **clientOut = (float **) alloca(numAudioOut * sizeof(float *));
-   float *dummybuf = (float *) alloca(numSamples * sizeof(float));
+   auto clientIn = new float* [numAudioIn];
+   auto clientOut = new float* [numAudioOut];
+   auto dummybuf = new float [numSamples];
+
    decltype(numSamples) len = 0;
    auto ichans = chans;
    auto ochans = chans;
@@ -613,6 +617,9 @@ size_t RealtimeEffectState::RealtimeProcess(int group,
       // Bump to next processor
       processor++;
    }
+   delete[] clientIn;
+   delete[] clientOut;
+   delete[] dummybuf;
 
    return len;
 }
