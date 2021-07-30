@@ -50,7 +50,7 @@ if( ${_OPT}use_wxwidgets STREQUAL "system" )
     endif() 
 
     target_compile_definitions( wxwidgets::wxwidgets INTERFACE
-        ${wxWidgets_DEFINITIONS_GENERAL}
+        ${wxWidgets_DEFINITIONS_GENERAL} ${wxWidgets_DEFINITIONS}
         $<$<CONFIG:Debug>:
             ${wxWidgets_DEFINITIONS_DEBUG}
         >

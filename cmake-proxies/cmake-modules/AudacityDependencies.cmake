@@ -1,10 +1,12 @@
 # Load Conan
 include( conan )
 
-conan_add_remote(NAME audacity
-    URL https://artifactory.audacityteam.org/artifactory/api/conan/conan-local
-    VERIFY_SSL True
-)
+if(USE_CONAN)
+    conan_add_remote(NAME audacity
+        URL https://artifactory.audacityteam.org/artifactory/api/conan/conan-local
+        VERIFY_SSL True
+    )
+endif()
 
 set( CONAN_BUILD_REQUIRES )
 set( CONAN_REQUIRES )
@@ -21,6 +23,7 @@ set( CONAN_RESOLVE_LIST )
 #   OPTION_NAME wxwidgets
 #   SYMBOL WXWIDGET
 #   REQUIRED 
+#   FIND_PACKAGE
 #   ALWAYS_ALLOW_CONAN_FALLBACK
 #   PKG_CONFIG "wxwidgets >= 3.1.3"
 #   FIND_PACKAGE_OPTIONS COMPONENTS adv base core html qa xml
@@ -39,13 +42,18 @@ function (add_conan_lib package conan_package_name )
     set( current_var "conan_package_options" )
 
     set( option_name_base ${package} )
-    set( allow_find_package off )
     set( find_package_options )
     set( conan_package_options )
     set( required off )
+    set( no_pkg off )
     set( pkg_config_options )
     set( system_only ${${_OPT}obey_system_dependencies})
     set( interface_name "${package}::${package}")
+    if(USE_CONAN)
+        set( allow_find_package off )
+    else()
+        set( allow_find_package on )
+    endif()
     
     # Parse function arguments
 
@@ -54,6 +62,9 @@ function (add_conan_lib package conan_package_name )
             set( list_mode on )
             set( allow_find_package on )
             set( current_var "find_package_options" )
+        elseif ( opt STREQUAL "FIND_PACKAGE" )
+            set( list_mode on )
+            set( allow_find_package on )
         elseif ( opt STREQUAL "CONAN_OPTIONS" )
             set( list_mode on )
             set( current_var "conan_package_options" )
@@ -93,7 +104,11 @@ function (add_conan_lib package conan_package_name )
 
     set( option_desc "local" )
 
-    if( pkg_config_options OR allow_find_package )
+    if(NOT USE_CONAN)
+        set( sysopt "system" )
+        set( default "system" )
+        set( option_desc "system (forced), " )
+    elseif( pkg_config_options OR allow_find_package )
         set( sysopt "system" )
         string( PREPEND option_desc "system (if available), " )
         set( default "${${_OPT}lib_preference}" )
@@ -129,12 +144,12 @@ function (add_conan_lib package conan_package_name )
         return()
     endif()
 
-    if( ${option_name} STREQUAL "system" )
-        if( pkg_config_options )
+    if( ${option_name} STREQUAL "system" OR NOT USE_CONAN)
+        if( pkg_config_options AND NOT no_pkg )
             pkg_check_modules( PKG_${package} ${pkg_config_options} )
 
             if( PKG_${package}_FOUND )
-                message( STATUS "Using '${package}' system library" )
+                message( STATUS "Using '${package}' system library (Found by pkg_config)" )
     
                 # Create the target interface library
                 add_library( ${interface_name} INTERFACE IMPORTED GLOBAL)
@@ -152,15 +167,21 @@ function (add_conan_lib package conan_package_name )
         endif()
 
         if( allow_find_package )
-            find_package( ${package} QUIET ${find_package_options} )
+            find_package( ${package} ${find_package_options} )
 
             if ( ${package}_FOUND )
-                message( STATUS "Using '${package}' system library" )
+                message( STATUS "Using '${package}' system library (Found by find_package)" )
+
+                # wxwidgets needs to have vars in the global scope 
+                if("${package}" STREQUAL "wxWidgets")
+                    patch_wxwidgets_vars()
+                endif()
+
                 return()
             endif()
         endif()
 
-        if( system_only )
+        if( system_only OR NOT USE_CONAN )
             message( FATAL_ERROR "Failed to find the system package ${package}" )
         else()
             set( ${option_name} "local" )
@@ -237,6 +258,7 @@ function ( _conan_install build_type )
 endfunction()
 
 macro( resolve_conan_dependencies )
+if(USE_CONAN)
     message(STATUS 
     "Executing Conan: \
         REQUIRES ${CONAN_REQUIRES}
@@ -266,6 +288,8 @@ macro( resolve_conan_dependencies )
         endif()
     endforeach()
 
+endif(USE_CONAN)
+
     file(GLOB dependency_helpers "${AUDACITY_MODULE_PATH}/dependencies/*.cmake")
 
     foreach(f ${dependency_helpers})
@@ -283,4 +307,16 @@ macro ( find_required_package package_name system_package_name )
             message( FATAL_ERROR "Error: ${package_name} is required.\nPlease install it with using command like:\n\t\$ sudo apt install ${system_package_name}" )
         endif()
     endif()
+endmacro()
+
+macro ( patch_wxwidgets_vars )
+    message("patch_wxwidgets_vars")
+    set(wxWidgets_INCLUDE_DIRS          "${wxWidgets_INCLUDE_DIRS}"         CACHE INTERNAL "wxWidgets_INCLUDE_DIRS")
+    set(wxWidgets_LIBRARIES             "${wxWidgets_LIBRARIES}"            CACHE INTERNAL "wxWidgets_LIBRARIES")
+    set(wxWidgets_LIBRARY_DIRS          "${wxWidgets_LIBRARY_DIRS}"         CACHE INTERNAL "wxWidgets_LIBRARY_DIRS")
+    set(wxWidgets_DEFINITIONS           "${wxWidgets_DEFINITIONS}"          CACHE INTERNAL "wxWidgets_DEFINITIONS")
+    set(wxWidgets_DEFINITIONS_GENERAL   "${wxWidgets_DEFINITIONS_GENERAL}"  CACHE INTERNAL "wxWidgets_DEFINITIONS_GENERAL")
+    set(wxWidgets_DEFINITIONS_DEBUG     "${wxWidgets_DEFINITIONS_DEBUG}"    CACHE INTERNAL "wxWidgets_DEFINITIONS_DEBUG")
+    set(wxWidgets_CXX_FLAGS             "${wxWidgets_CXX_FLAGS}"            CACHE INTERNAL "wxWidgets_CXX_FLAGS")
+    set(wxWidgets_USE_FILE              "${wxWidgets_USE_FILE}"             CACHE INTERNAL "wxWidgets_DEFINITIONS_DEBUG")
 endmacro()

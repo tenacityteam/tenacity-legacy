@@ -137,6 +137,13 @@ else()
    message( STATUS "Could NOT find ccache nor sccache, no compiler caching enabled" )
 endif()
 
+include( CMakeDependentOption )
+
+# Test if conan is installed
+find_program(CONAN_CMD_TEST conan NO_CACHE)
+cmake_dependent_option(USE_CONAN "Build without conan" ON "NOT CONAN_CMD_TEST STREQUAL CONAN_CMD_TEST-NOTFOUND" OFF)
+message("Using conan: ${USE_CONAN}")
+
 # Our very own project
 project( Tenacity )
 
@@ -167,7 +174,6 @@ include( CheckIncludeFiles )
 include( CheckLibraryExists )
 include( CheckSymbolExists )
 include( CheckTypeSize )
-include( CMakeDependentOption )
 include( CMakeDetermineASM_NASMCompiler )
 include( CMakePushCheckState )
 include( GNUInstallDirs )
