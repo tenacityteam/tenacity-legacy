@@ -9,34 +9,34 @@ class AudioIOBufferHelper
 
     private:
 
-        unsigned int numPlaybackChannels;
-        unsigned long framesPerBuffer;
+    unsigned int numPlaybackChannels;
+    unsigned long framesPerBuffer;
 
     public:
-        WaveTrack** chans;
-        float** tempBufs;
+    WaveTrack** chans;
+    float** tempBufs;
 
-        AudioIOBufferHelper(const unsigned int numPlaybackChannels, const unsigned long framesPerBuffer) {
-            this->numPlaybackChannels = numPlaybackChannels;
-            this->framesPerBuffer = framesPerBuffer;
+    AudioIOBufferHelper(const unsigned int numPlaybackChannels, const unsigned long framesPerBuffer) {
+        this->numPlaybackChannels = numPlaybackChannels;
+        this->framesPerBuffer = framesPerBuffer;
 
-            this->chans = safenew WaveTrack * [numPlaybackChannels];
-            this->tempBufs = safenew float* [numPlaybackChannels];
+        this->chans = safenew WaveTrack * [numPlaybackChannels];
+        this->tempBufs = safenew float* [numPlaybackChannels];
 
-            for (unsigned int c = 0; c < numPlaybackChannels; c++) {
-                tempBufs[c] = safenew float[framesPerBuffer];
-            }
+        tempBufs[0] = safenew float[numPlaybackChannels * framesPerBuffer];
+
+        for (unsigned int c = 1; c < numPlaybackChannels; c++) {
+            tempBufs[c] = tempBufs[c - 1] + framesPerBuffer;
         }
+    }
 
-        ~AudioIOBufferHelper() {
-            for (unsigned int c = 0; c < numPlaybackChannels; c++) {
-                delete[] tempBufs[c];
-            }
+    ~AudioIOBufferHelper() {
+        delete tempBufs[0];
 
-            delete[] tempBufs;
+        delete[] tempBufs;
 
-            delete[] chans;
-        }
+        delete[] chans;
+    }
 };
 
 #endif
