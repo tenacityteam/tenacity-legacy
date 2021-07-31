@@ -464,6 +464,7 @@ time warp info and AudioIOListener and whether the playback is looped.
 #include "DBConnection.h"
 #include "ProjectFileIO.h"
 #include "WaveTrack.h"
+#include "AudioIOBufferHelper.h"
 
 #include "effects/RealtimeEffectManager.h"
 #include "prefs/QualitySettings.h"
@@ -3843,14 +3844,10 @@ bool AudioIoCallback::FillOutputBuffers(
    }
 
    // ------ MEMORY ALLOCATION ----------------------
-   // These are small structures.
-   auto chans = new WaveTrack * [numPlaybackChannels];
-   auto tempBufs = new float* [numPlaybackChannels];
+   std::shared_ptr<AudioIOBufferHelper> bufHelper = std::make_shared<AudioIOBufferHelper>(numPlaybackChannels, framesPerBuffer);
+   auto chans = bufHelper.get()->chans;
+   auto tempBufs = bufHelper.get()->tempBufs;
 
-   // And these are larger structures....
-   for (unsigned int c = 0; c < numPlaybackChannels; c++) {
-       tempBufs[c] = new float[framesPerBuffer];
-   }
    // ------ End of MEMORY ALLOCATION ---------------
 
    auto & em = RealtimeEffectManager::Get();
@@ -4002,8 +3999,6 @@ bool AudioIoCallback::FillOutputBuffers(
    if (outputMeterFloats != outputFloats)
       ClampBuffer( outputMeterFloats, framesPerBuffer*numPlaybackChannels );
 
-   delete[] chans;
-   delete[] tempBufs;
    return false;
 }
 

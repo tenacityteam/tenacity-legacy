@@ -580,8 +580,7 @@ protected:
    PlaybackSchedule mPlaybackSchedule;
 };
 
-class AUDACITY_DLL_API AudioIO final
-   : public AudioIoCallback
+class AUDACITY_DLL_API AudioIO final : public AudioIoCallback
 {
 
    AudioIO();

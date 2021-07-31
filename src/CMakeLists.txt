@@ -100,6 +100,7 @@ list( APPEND SOURCES
       AudioIO.h
       AudioIOBase.cpp
       AudioIOBase.h
+      AudioIOBufferHelper.h
       AudioIOListener.h
       AutoRecoveryDialog.cpp
       AutoRecoveryDialog.h
