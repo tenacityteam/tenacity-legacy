@@ -588,7 +588,6 @@ wxString ProjectSerializer::Decode(const wxMemoryBuffer &buffer)
    }
    catch( const Error& e)
    {
-       throw e;
       // Document was corrupt, or platform differences in size or endianness
       // were not well canonicalized
       return {};
