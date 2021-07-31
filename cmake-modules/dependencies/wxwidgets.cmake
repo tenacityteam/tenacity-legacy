@@ -2,46 +2,6 @@ if( ${_OPT}use_wxwidgets STREQUAL "system" )
     if( NOT TARGET wxwidgets::wxwidgets )
         add_library( wxwidgets::wxwidgets INTERFACE IMPORTED GLOBAL)
     endif()
-    
-    if( NOT TARGET wxwidgets::base )
-        add_library( wxwidgets::base ALIAS wxwidgets::wxwidgets )
-    endif()
-
-    if( NOT TARGET wxwidgets::core )
-        add_library( wxwidgets::core ALIAS wxwidgets::wxwidgets )
-    endif()
-
-    if( NOT TARGET wxwidgets::html )
-        add_library( wxwidgets::html ALIAS wxwidgets::wxwidgets )
-    endif()
-
-    if( NOT TARGET wxwidgets::xml )
-        add_library( wxwidgets::xml ALIAS wxwidgets::wxwidgets )
-    endif()
-
-    if( NOT TARGET wxwidgets::xrc )
-        add_library( wxwidgets::xrc ALIAS wxwidgets::wxwidgets )
-    endif()
-
-    if( NOT TARGET wxwidgets::qa )
-        add_library( wxwidgets::qa ALIAS wxwidgets::wxwidgets )
-    endif()
-
-    if( NOT TARGET wxwidgets::aui )
-        add_library( wxwidgets::aui ALIAS wxwidgets::wxwidgets )
-    endif()
-
-    if( NOT TARGET wxwidgets::adv )
-        add_library( wxwidgets::adv ALIAS wxwidgets::wxwidgets )
-    endif()
-
-    if( NOT TARGET wxBase )
-        add_library( wxBase ALIAS wxwidgets::wxwidgets )
-    endif()
-
-    if( NOT TARGET wxwidgets::wxwidgets )
-        add_library( wxwidgets::wxwidgets ALIAS wxwidgets::wxwidgets )
-    endif()
 
     if( wxWidgets_INCLUDE_DIRS_NO_SYSTEM )
         target_include_directories( wxwidgets::wxwidgets INTERFACE ${wxWidgets_INCLUDE_DIRS_NO_SYSTEM} )
@@ -84,11 +44,8 @@ if( ${_OPT}use_wxwidgets STREQUAL "system" )
         set( gtk gtk+-4.0 )
         set( glib glib-2.0 )
     endif()
-else()
-    set_target_properties(CONAN_PKG::wxwidgets PROPERTIES IMPORTED_GLOBAL On)
-    add_library( wxBase ALIAS CONAN_PKG::wxwidgets )
-    add_library( wxwidgets::base ALIAS CONAN_PKG::wxwidgets )
 endif()
+
 
 if( NOT CMAKE_SYSTEM_NAME MATCHES "Windows|Darwin" )
 

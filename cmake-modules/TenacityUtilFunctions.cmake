@@ -604,7 +604,7 @@ function( addlib dir name symbol required check )
    if( packages )
       set( sysopt "system" )
       string( PREPEND desc "system (if available), " )
-      set( default "${${_OPT}lib_preference}" )
+      set( default "${${_OPT}local_lib_preference}" )
    else()
       set( default "local" )
    endif()
@@ -685,3 +685,43 @@ function( addlib dir name symbol required check )
    endif()
 endfunction()
 
+
+# Argument parser helper. This may look like magic, but it is pretty simple:
+# - Call this at the top of a function
+# - It takes three "list" arguments: `.`, `-` and `+`.
+# - The `.` arguments specify the "option/boolean" values to parse out.
+# - The `-` arguments specify the one-value arguments to parse out.
+# - The `+` argumenst specify mult-value arguments to parse out.
+# - Specify `-nocheck` to disable warning on unparse arguments.
+# - Parse values are prefixed with `ARG`
+#
+# This macro makes use of some very horrible aspects of CMake macros:
+# - Values appear the caller's scope, so no need to set(PARENT_SCOPE)
+# - The ${${}ARGV} eldritch horror evaluates to the ARGV *OF THE CALLER*, while
+#   ${ARGV} evaluates to the macro's own ARGV value. This is because ${${}ARGV}
+#   inhibits macro argument substitution. It is painful, but it makes this magic
+#   work.
+macro(better_parse_args)
+    cmake_parse_arguments(_ "-nocheck;-hardcheck" "" ".;-;+" "${ARGV}")
+    set(__arglist "${${}ARGV}")
+    better_parse_arglist("${__.}" "${__-}" "${__+}")
+endmacro()
+
+macro(better_parse_arglist opt args list_args)
+    cmake_parse_arguments(ARG "${opt}" "${args}" "${list_args}" "${__arglist}")
+    if (NOT __-nocheck)
+        foreach (arg IN LISTS ARG_UNPARSED_ARGUMENTS)
+            message(WARNING "Unknown argument: ${arg}")
+        endforeach ()
+        if (__-hardcheck AND NOT ("${ARG_UNPARSED_ARGUMENTS}" STREQUAL ""))
+            message(FATAL_ERROR "Unknown arguments provided.")
+        endif ()
+    endif ()
+endmacro()
+
+
+macro(lift_var)
+    foreach (varname IN ITEMS ${ARGN})
+        set("${varname}" "${${varname}}" PARENT_SCOPE)
+    endforeach ()
+endmacro()

@@ -1,5 +1,6 @@
 # Load Conan
 include( conan )
+include( FindPkgConfig )
 
 if(USE_CONAN)
     conan_add_remote(NAME audacity
@@ -14,10 +15,11 @@ set( CONAN_PACKAGE_OPTIONS )
 set( CONAN_ONLY_DEBUG_RELEASE )
 set( CONAN_CONFIG_OPTIONS )
 set( CONAN_RESOLVE_LIST )
+set( FIND_LIBS_RESOLVE_LIST )
 
-# Add a Conan dependency
+# Add a external dependency
 # Example usage:
-# add_conan_lib( 
+# add_external_lib( 
 #   wxWidgets 
 #   wxwidgets/3.1.3-audacity
 #   OPTION_NAME wxwidgets
@@ -33,67 +35,44 @@ set( CONAN_RESOLVE_LIST )
 #        wxwidgets:shared=True
 # )
 
-
-function (add_conan_lib package conan_package_name )
-    # Extract the list of packages from the function args
-    list( SUBLIST ARGV 2 -1 options )
-
-    set( list_mode on )
-    set( current_var "conan_package_options" )
+function( add_external_lib package conan_package_name )
+    list(REMOVE_AT ARGV 0 1 )
+    better_parse_args(
+        . REQUIRED FIND_PACKAGE ALWAYS_ALLOW_CONAN_FALLBACK HAS_ONLY_DEBUG_RELEASE
+        - OPTION_NAME SYMBOL PKG_CONFIG INTERFACE_NAME
+        + CONAN_OPTIONS FIND_PACKAGE_OPTIONS
+    )
 
     set( option_name_base ${package} )
-    set( find_package_options )
-    set( conan_package_options )
     set( required off )
     set( no_pkg off )
-    set( pkg_config_options )
     set( system_only ${${_OPT}obey_system_dependencies})
     set( interface_name "${package}::${package}")
-    if(USE_CONAN)
-        set( allow_find_package off )
-    else()
-        set( allow_find_package on )
-    endif()
     
     # Parse function arguments
+    # TODO: Remove last leftovers from the old way of parsing args
 
-    foreach( opt IN LISTS options )
-        if( opt STREQUAL "FIND_PACKAGE_OPTIONS" )
-            set( list_mode on )
-            set( allow_find_package on )
-            set( current_var "find_package_options" )
-        elseif ( opt STREQUAL "FIND_PACKAGE" )
-            set( list_mode on )
-            set( allow_find_package on )
-        elseif ( opt STREQUAL "CONAN_OPTIONS" )
-            set( list_mode on )
-            set( current_var "conan_package_options" )
-        elseif ( opt STREQUAL "PKG_CONFIG" )
-            set( list_mode on )
-            set( current_var "pkg_config_options" )
-        elseif ( opt STREQUAL "OPTION_NAME" )
-            set( list_mode off )
-            set( current_var "option_name_base" )
-        elseif ( opt STREQUAL "SYMBOL" )
-            set( list_mode off )
-            set( current_var "symbol" )
-        elseif ( opt STREQUAL "INTERFACE_NAME" )
-            set( list_mode off )
-            set( current_var "interface_name" )
-        elseif ( opt STREQUAL "REQUIRED" )
-            set( required on )
-        elseif ( opt STREQUAL "ALWAYS_ALLOW_CONAN_FALLBACK" )
-            set( system_only off )
-        elseif ( opt STREQUAL "HAS_ONLY_DEBUG_RELEASE" )
-            set ( only_debug_release on )
-        else()
-            if( list_mode )
-                list( APPEND ${current_var} ${opt} )
-            else()
-                set (${current_var} ${opt})
-            endif()
-        endif()
-    endforeach()
+    if (ARG_FIND_PACKAGE_OPTIONS )
+        set( ARG_FIND_PACKAGE on )
+    endif()
+    if (ARG_OPTION_NAME )
+        set( option_name_base ${ARG_OPTION_NAME})
+    endif()
+    if (ARG_SYMBOL )
+        set( symbol ${ARG_SYMBOL})
+    endif()
+    if (ARG_INTERFACE_NAME )
+        set( interface_name ${ARG_INTERFACE_NAME})
+    endif()
+    if (ARG_REQUIRED )
+        set( required on )
+    endif()
+    if (ARG_ALWAYS_ALLOW_CONAN_FALLBACK )
+        set( system_only off )
+    endif()
+    if (ARG_HAS_ONLY_DEBUG_RELEASE )
+        set ( only_debug_release on )
+    endif()
 
     if( NOT DEFINED symbol )
         string( TOUPPER "${option_name_base}" symbol)
@@ -102,18 +81,19 @@ function (add_conan_lib package conan_package_name )
     # Generate CMake option
     set( option_name ${_OPT}use_${option_name_base} )
 
-    set( option_desc "local" )
+    set( option_desc "conan" )
 
     if(NOT USE_CONAN)
         set( sysopt "system" )
         set( default "system" )
         set( option_desc "system (forced), " )
-    elseif( pkg_config_options OR allow_find_package )
+        set( system_only on)
+    elseif( ARG_PKG_CONFIG OR ARG_FIND_PACKAGE )
         set( sysopt "system" )
         string( PREPEND option_desc "system (if available), " )
-        set( default "${${_OPT}lib_preference}" )
+        set( default "${${_OPT}external_lib_preference}" )
     else()
-        set( default "local" )
+        set( default "conan" )
     endif()
 
     if( NOT required )
@@ -124,7 +104,7 @@ function (add_conan_lib package conan_package_name )
     cmd_option( ${option_name}
                 "Use ${option_name_base} library [${option_desc}]"
                 "${default}"
-                STRINGS ${sysopt} "local" ${reqopt}
+                STRINGS ${sysopt} "conan" ${reqopt}
     )
     
     # Early bail out
@@ -144,9 +124,9 @@ function (add_conan_lib package conan_package_name )
         return()
     endif()
 
-    if( ${option_name} STREQUAL "system" OR NOT USE_CONAN)
-        if( pkg_config_options AND NOT no_pkg )
-            pkg_check_modules( PKG_${package} ${pkg_config_options} )
+    if( ${option_name} STREQUAL "system")
+        if( ARG_PKG_CONFIG AND PKG_CONFIG_FOUND )
+            pkg_check_modules( PKG_${package} ${ARG_PKG_CONFIG} )
 
             if( PKG_${package}_FOUND )
                 message( STATUS "Using '${package}' system library (Found by pkg_config)" )
@@ -166,26 +146,25 @@ function (add_conan_lib package conan_package_name )
             endif()
         endif()
 
-        if( allow_find_package )
+        if( ARG_FIND_PACKAGE OR NOT PKG_CONFIG_FOUND )
             find_package( ${package} ${find_package_options} )
 
             if ( ${package}_FOUND )
                 message( STATUS "Using '${package}' system library (Found by find_package)" )
 
-                # wxwidgets needs to have vars in the global scope 
-                if("${package}" STREQUAL "wxWidgets")
-                    patch_wxwidgets_vars()
-                endif()
-
+                # Need to refind the package later since we are in a function scope
+                list( JOIN ARG_FIND_PACKAGE_OPTIONS "|" joined_package_options )
+                list( APPEND FIND_LIBS_RESOLVE_LIST "${package}|${joined_package_options}" )
+                lift_var( FIND_LIBS_RESOLVE_LIST )
                 return()
             endif()
         endif()
 
-        if( system_only OR NOT USE_CONAN )
+        if( system_only )
             message( FATAL_ERROR "Failed to find the system package ${package}" )
         else()
-            set( ${option_name} "local" )
-            set_property( CACHE ${option_name} PROPERTY VALUE "local" )
+            set( ${option_name} "conan" )
+            set_property( CACHE ${option_name} PROPERTY VALUE "conan" )
         endif()
     endif()
 
@@ -194,7 +173,7 @@ function (add_conan_lib package conan_package_name )
     list(GET pkg_name_split 0 conan_package_name_only)
 
     list( APPEND CONAN_REQUIRES ${conan_package_name} )
-    list( APPEND CONAN_PACKAGE_OPTIONS ${conan_package_options} )
+    list( APPEND CONAN_PACKAGE_OPTIONS ${ARG_CONAN_OPTIONS} )
     list( APPEND CONAN_RESOLVE_LIST "${conan_package_name_only}|${interface_name}" )
 
     if ( only_debug_release )
@@ -202,21 +181,13 @@ function (add_conan_lib package conan_package_name )
         list( APPEND CONAN_ONLY_DEBUG_RELEASE ${package})
     endif()
 
-    set( CONAN_REQUIRES           ${CONAN_REQUIRES}           PARENT_SCOPE )
-    set( CONAN_PACKAGE_OPTIONS    ${CONAN_PACKAGE_OPTIONS}    PARENT_SCOPE )
-    set( CONAN_RESOLVE_LIST       ${CONAN_RESOLVE_LIST}       PARENT_SCOPE )
-    set( CONAN_ONLY_DEBUG_RELEASE ${CONAN_ONLY_DEBUG_RELEASE} PARENT_SCOPE )
-
+    lift_var( CONAN_REQUIRES 
+        CONAN_PACKAGE_OPTIONS
+        CONAN_RESOLVE_LIST 
+        CONAN_ONLY_DEBUG_RELEASE )
+    
     message (STATUS "Adding Conan dependency ${package}")
 endfunction()
-
-macro( set_conan_vars_to_parent )
-    set( CONAN_REQUIRES        ${CONAN_REQUIRES}        PARENT_SCOPE )
-    set( CONAN_PACKAGE_OPTIONS ${CONAN_PACKAGE_OPTIONS} PARENT_SCOPE )
-    set( CONAN_RESOLVE_LIST    ${CONAN_RESOLVE_LIST}    PARENT_SCOPE )
-    set( CONAN_BUILD_REQUIRES  ${CONAN_BUILD_REQUIRES}  PARENT_SCOPE )
-    set( CONAN_ONLY_DEBUG_RELEASE ${CONAN_ONLY_DEBUG_RELEASE} PARENT_SCOPE )
-endmacro()
 
 function ( _conan_install build_type )
     conan_cmake_configure (
@@ -282,38 +253,37 @@ function ( _conan_install build_type )
 endfunction()
 
 macro( resolve_conan_dependencies )
-if(USE_CONAN)
-
-    if(MSVC OR XCODE AND NOT DEFINED CMAKE_BUILD_TYPE)
-        foreach(TYPE ${CMAKE_CONFIGURATION_TYPES})
-            _conan_install(${TYPE})
-        endforeach()
-    else()
-        _conan_install(${CMAKE_BUILD_TYPE})
-    endif()
-
-    list( REMOVE_DUPLICATES CONAN_REQUIRES )
-
-    set(CONAN_CMAKE_SILENT_OUTPUT TRUE)
-    include(${CMAKE_CURRENT_BINARY_DIR}/conanbuildinfo_multi.cmake)
-    conan_define_targets()
-
-    foreach( package_raw ${CONAN_RESOLVE_LIST} )
-        string(REPLACE "|" ";" package_list ${package_raw})
-        list(GET package_list 0 package)
-        list(GET package_list 1 target_name)
-
-        # Alias the CONAN_PKG target to the propper target name
-        set(_curr_conan_target "CONAN_PKG::${package}")
-        if (TARGET ${_curr_conan_target})
-            set_target_properties(${_curr_conan_target} PROPERTIES IMPORTED_GLOBAL TRUE)
-            add_library( ${target_name} ALIAS ${_curr_conan_target} )
+    if(USE_CONAN)
+        if(MSVC OR XCODE AND NOT DEFINED CMAKE_BUILD_TYPE)
+            foreach(TYPE ${CMAKE_CONFIGURATION_TYPES})
+                _conan_install(${TYPE})
+            endforeach()
         else()
-            message(WARNING "Conan target ${_curr_conan_target} not found" )
+            _conan_install(${CMAKE_BUILD_TYPE})
         endif()
-    endforeach()
 
-endif(USE_CONAN)
+        list( REMOVE_DUPLICATES CONAN_REQUIRES )
+
+        set(CONAN_CMAKE_SILENT_OUTPUT TRUE)
+        include(${CMAKE_CURRENT_BINARY_DIR}/conanbuildinfo_multi.cmake)
+        conan_define_targets()
+
+        foreach( package_raw ${CONAN_RESOLVE_LIST} )
+            string(REPLACE "|" ";" package_list ${package_raw})
+            list(GET package_list 0 package)
+            list(GET package_list 1 target_name)
+
+            # Alias the CONAN_PKG target to the propper target name
+            set(_curr_conan_target "CONAN_PKG::${package}")
+            if (TARGET ${_curr_conan_target})
+                set_target_properties(${_curr_conan_target} PROPERTIES IMPORTED_GLOBAL TRUE)
+                add_library( ${target_name} ALIAS ${_curr_conan_target} )
+            else()
+                message(WARNING "Conan target ${_curr_conan_target} not found" )
+            endif()
+        endforeach()
+
+    endif(USE_CONAN)
 
     file(GLOB dependency_helpers "${AUDACITY_MODULE_PATH}/dependencies/*.cmake")
 
@@ -321,6 +291,21 @@ endif(USE_CONAN)
         include(${f})
     endforeach()
 endmacro()
+
+
+# Refind the packages since some packages dont set vars outside the function scope 
+macro(resolve_find_packages)
+    foreach( package_raw ${FIND_LIBS_RESOLVE_LIST} )
+        string(REPLACE "|" ";" package_list ${package_raw})
+        list(GET package_list 0 package)
+        list(GET package_list 1 find_package_options)
+
+        find_package( ${package} QUIET ${find_package_options} )
+
+        message("${package} ${${package}_FOUND}")
+    endforeach()
+endmacro()
+
 
 macro ( find_required_package package_name system_package_name )
     find_package ( ${package_name} QUIET ${ARGN} )
@@ -332,16 +317,4 @@ macro ( find_required_package package_name system_package_name )
             message( FATAL_ERROR "Error: ${package_name} is required.\nPlease install it with using command like:\n\t\$ sudo apt install ${system_package_name}" )
         endif()
     endif()
-endmacro()
-
-macro ( patch_wxwidgets_vars )
-    message("patch_wxwidgets_vars")
-    set(wxWidgets_INCLUDE_DIRS          "${wxWidgets_INCLUDE_DIRS}"         CACHE INTERNAL "wxWidgets_INCLUDE_DIRS")
-    set(wxWidgets_LIBRARIES             "${wxWidgets_LIBRARIES}"            CACHE INTERNAL "wxWidgets_LIBRARIES")
-    set(wxWidgets_LIBRARY_DIRS          "${wxWidgets_LIBRARY_DIRS}"         CACHE INTERNAL "wxWidgets_LIBRARY_DIRS")
-    set(wxWidgets_DEFINITIONS           "${wxWidgets_DEFINITIONS}"          CACHE INTERNAL "wxWidgets_DEFINITIONS")
-    set(wxWidgets_DEFINITIONS_GENERAL   "${wxWidgets_DEFINITIONS_GENERAL}"  CACHE INTERNAL "wxWidgets_DEFINITIONS_GENERAL")
-    set(wxWidgets_DEFINITIONS_DEBUG     "${wxWidgets_DEFINITIONS_DEBUG}"    CACHE INTERNAL "wxWidgets_DEFINITIONS_DEBUG")
-    set(wxWidgets_CXX_FLAGS             "${wxWidgets_CXX_FLAGS}"            CACHE INTERNAL "wxWidgets_CXX_FLAGS")
-    set(wxWidgets_USE_FILE              "${wxWidgets_USE_FILE}"             CACHE INTERNAL "wxWidgets_DEFINITIONS_DEBUG")
 endmacro()

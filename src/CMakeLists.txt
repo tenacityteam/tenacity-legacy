@@ -1077,7 +1077,7 @@ list( APPEND LIBRARIES
       ZLIB::ZLIB
       wxwidgets::wxwidgets
       expat::expat
-      libmp3lame::libmp3lame
+      LAME::LAME
       libsndfile
       libsoxr
       portaudio-v19

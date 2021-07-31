@@ -21,7 +21,7 @@ endif ()
 # Set this value to 0 for alpha, 1 for beta, 2 for release builds
 set( AUDACITY_BUILD_LEVEL 0 )
 
-# The Audacity version
+# The Tenacity version
 # Increment as appropriate after release of a new version, and set back
 # AUDACITY_BUILD_LEVEL to 0
 set( AUDACITY_VERSION 3 )
@@ -96,18 +96,8 @@ if( APPLE )
 endif()
 
 # Add our module path
-# CMAKE_BINARY_DIR is required for Conan to work
-set( AUDACITY_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake-proxies/cmake-modules")
-set( CMAKE_MODULE_PATH
-   ${AUDACITY_MODULE_PATH}
-   ${CMAKE_BINARY_DIR}
-   ${CMAKE_MODULE_PATH}
-)
-
-set( CMAKE_PREFIX_PATH
-   ${CMAKE_BINARY_DIR}
-   ${CMAKE_PREFIX_PATH}
-)
+set( AUDACITY_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake-modules" )
+list( APPEND CMAKE_MODULE_PATH ${AUDACITY_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake-modules/find-modules" )
 
 # This "is a good thing" but greatly increases link time on Linux
 #set( CMAKE_INTERPROCEDURAL_OPTIMIZATION ON )
@@ -137,35 +127,46 @@ else()
    message( STATUS "Could NOT find ccache nor sccache, no compiler caching enabled" )
 endif()
 
+
+# Define option() prefix
+set( _OPT "tenacity_" )
+
 include( CMakeDependentOption )
 
 # Test if conan is installed
 find_program(CONAN_CMD_TEST conan NO_CACHE)
 cmake_dependent_option(USE_CONAN "Build without conan" ON "NOT CONAN_CMD_TEST STREQUAL CONAN_CMD_TEST-NOTFOUND" OFF)
-message("Using conan: ${USE_CONAN}")
+message(STATUS "Using conan: ${USE_CONAN}")
 
 # Our very own project
 project( Tenacity )
 
 # Load our functions/macros
-include( AudacityFunctions )
+include( TenacityUtilFunctions )
 
 set_from_env(AUDACITY_ARCH_LABEL) # e.g. x86_64
 
-# Allow user to globally set the library preference
-cmd_option( ${_OPT}lib_preference
+# Allow user to globally set the library preference for external libraries
+cmd_option( ${_OPT}external_lib_preference
+            "Library preference [system (if available), conan]"
+            "conan"
+            STRINGS "system" "conan"
+)
+
+# Allow user to globally set the library preference for local libraries
+cmd_option( ${_OPT}local_lib_preference
             "Library preference [system (if available), local]"
             "local"
             STRINGS "system" "local"
 )
 
-# Special mode, that will force dependencies to the packages provided by system unless they were set to local explicitly.
+# Special mode, that will force dependencies to the packages provided by system unless they were set to conan explicitly.
 cmd_option( ${_OPT}obey_system_dependencies
             "Use system packages to satisfy dependencies"
             Off
 )
 
-include( AudacityDependencies )
+include( DependenciesConfig )
 
 # Pull all the modules we'll need
 include( CheckCXXCompilerFlag )
@@ -179,6 +180,7 @@ include( CMakePushCheckState )
 include( GNUInstallDirs )
 include( TestBigEndian )
 include( ProcessorCount )
+include( FeatureSummary )
 
 # Determine total number of processors to enable us to only use total_available - 1 processors
 # This helps prevent slow down of the other applications during the build process
@@ -488,7 +490,7 @@ if( NOT CMAKE_INSTALL_LIBDIR STREQUAL "lib" AND NOT EXISTS "${CMAKE_BINARY_DIR}/
    file( CREATE_LINK "${CMAKE_BINARY_DIR}/lib" "${CMAKE_BINARY_DIR}/lib64" SYMBOLIC )
 endif()
 
-# Define Audacity's name
+# Define Tenacity's name
 if( CMAKE_SYSTEM_NAME MATCHES "Darwin|Windows" )
    set( AUDACITY_NAME "Tenacity" )
 else()
@@ -516,7 +518,8 @@ include( "src/Experimental.cmake" )
 # Add our children
 add_subdirectory( "cmake-proxies" )
 
-# Conan uses find_package and does not set GLOBAL flag
+
+resolve_find_packages()
 resolve_conan_dependencies()
 
 add_subdirectory( "help" )
@@ -570,7 +573,7 @@ cmake_dependent_option(
 )
 
 if( ${_OPT}perform_codesign )
-   include( AudacityCodeSigning )
+   include( TenacityCodeSigning )
 endif()
 
 #
@@ -585,7 +588,7 @@ cmd_option( ${_OPT}package_manual
 # Variables, that are common for all package targets
 
 if( CMAKE_SYSTEM_NAME MATCHES "Windows" )
-   include( AudacityInnoSetup )
+   include( TenacityInnoSetup )
 endif()
 
 # Uncomment what follows for symbol values.
@@ -601,3 +604,5 @@ endif()
 #]]
 
 include( Package ) # do this last
+
+feature_summary(WHAT ALL)
