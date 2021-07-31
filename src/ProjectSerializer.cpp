@@ -20,6 +20,7 @@
 #include <cstdint>
 #include <mutex>
 #include <wx/ustring.h>
+#include <cstring>
 
 ///
 /// ProjectSerializer class
