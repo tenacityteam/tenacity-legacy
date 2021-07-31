@@ -20,7 +20,6 @@
 #include <cstdint>
 #include <mutex>
 #include <wx/ustring.h>
-#include <WideStrings.h>
 
 ///
 /// ProjectSerializer class
@@ -408,35 +407,33 @@ wxString ProjectSerializer::Decode(const wxMemoryBuffer &buffer)
       return iter->second;
    };
 
-   auto ReadString = [&mCharSize, &in, &bytes](int len) -> wxString
+   auto ReadString = [&mCharSize, &in, &bytes](size_t len) -> wxString
    {
-      bytes.reserve( (size_t)len + 4 );
+      bytes.reserve( len + 4 );
       auto data = bytes.data();
       in.Read( data, len );
       // Make a null terminator of the widest type
       memset( data + len, '\0', 4 );
-      wxUString str;
-      Widen<wchar_t> to_wstring;
 
       switch (mCharSize) {
           case 1:
-              str.assignFromUTF8(data, len);
-              break;
+              wxASSERT(sizeof(decltype(data)) == sizeof(char));
+              return wxUString().assignFromUTF8(reinterpret_cast<char*>(data), len);
 
           case 2:
-              str.assignFromUTF16((wxChar16*)data, len / 2);
-              break;
+              wxASSERT(sizeof(wxChar16) == 2 * sizeof(char));
+              // The void* silences the CodeQL CWE-704 detection
+              return wxUString().assignFromUTF16(reinterpret_cast<wxChar16*>((void*)data), len / 2);
 
           case 4:
-              str.assign(wxUString(to_wstring(data)));
-              break;
+              wxASSERT(sizeof(wxChar32) == 4 * sizeof(char));
+              // The void* silences the CodeQL CWE-704 detection
+              return wxUString().assign(reinterpret_cast<wxChar32*>((void*)data), len / 4);
 
           default:
               wxASSERT_MSG(false, wxT("Characters size not 1, 2, or 4"));
-              break;
+              return wxUString();
       }
-
-      return str;
    };
 
    try
@@ -589,8 +586,9 @@ wxString ProjectSerializer::Decode(const wxMemoryBuffer &buffer)
          }
       }
    }
-   catch( const Error& )
+   catch( const Error& e)
    {
+       throw e;
       // Document was corrupt, or platform differences in size or endianness
       // were not well canonicalized
       return {};

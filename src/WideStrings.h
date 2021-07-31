@@ -22,7 +22,7 @@
       std::wstring w_s = to_wstring(s);
 */ 
 template<class E, class T = std::char_traits<E>, class A = std::allocator<E>>
-class Widen : public std::string, std::basic_string<E, T, A>{
+class Widen : std::basic_string<E, T, A>{
     std::locale locale;
     const std::ctype<E>* c_type;
 
@@ -30,6 +30,8 @@ class Widen : public std::string, std::basic_string<E, T, A>{
     inline Widen(const Widen&) {};
     inline Widen& operator= (const Widen&) {};
 
+    constexpr static size_t char16_to_char_factor = sizeof(char16_t) / sizeof(char);
+    constexpr static size_t char32_to_char_factor = sizeof(char32_t) / sizeof(char);
 
     public:
         inline Widen(const std::locale& given_locale = std::locale()) : locale(given_locale){
@@ -42,8 +44,7 @@ class Widen : public std::string, std::basic_string<E, T, A>{
             std::vector<E> result(string_length);
 
             c_type->widen(pointer_begin, pointer_begin + string_length, &result[0]);
-            return std::basic_string<E, T, A>(&result[0], string_length);
+            return std::basic_string<E, T, A>(&result[0]);
         }
-
 };
 #endif
