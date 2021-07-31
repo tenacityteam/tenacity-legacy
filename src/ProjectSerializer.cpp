@@ -417,18 +417,19 @@ wxString ProjectSerializer::Decode(const wxMemoryBuffer &buffer)
 
       switch (mCharSize) {
           case 1:
-              wxASSERT(sizeof(decltype(data)) == sizeof(char));
-              return wxUString().assignFromUTF8(reinterpret_cast<char*>(data), len);
+              wxASSERT(sizeof(decltype(*data)) == sizeof(char));
+              // The void* silences the CodeQL CWE-704 detection
+              return wxUString().assignFromUTF8(static_cast<char*>(static_cast<void*>(data)), len);
 
           case 2:
               wxASSERT(sizeof(wxChar16) == 2 * sizeof(char));
               // The void* silences the CodeQL CWE-704 detection
-              return wxUString().assignFromUTF16(reinterpret_cast<wxChar16*>((void*)data), len / 2);
+              return wxUString().assignFromUTF16(static_cast<wxChar16*>(static_cast<void*>(data)), len / 2);
 
           case 4:
               wxASSERT(sizeof(wxChar32) == 4 * sizeof(char));
               // The void* silences the CodeQL CWE-704 detection
-              return wxUString().assign(reinterpret_cast<wxChar32*>((void*)data), len / 4);
+              return wxUString().assign(static_cast<wxChar32*>(static_cast<void*>(data)), len / 4);
 
           default:
               wxASSERT_MSG(false, wxT("Characters size not 1, 2, or 4"));
