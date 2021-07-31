@@ -3979,6 +3979,7 @@ bool AudioIoCallback::FillOutputBuffers(
        // wxASSERT( maxLen == toGet );
 
        em.RealtimeProcessEnd();
+       delete bufHelper.release();
    }
    mLastPlaybackTimeMillis = ::wxGetUTCTimeMillis();
 
