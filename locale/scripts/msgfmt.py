@@ -5,8 +5,7 @@
 
 This program converts a textual Uniforum-style message catalog (.po file) into
 a binary GNU catalog (.mo file).  This is essentially the same function as the
-GNU msgfmt program, however, it is a simpler implementation.  Currently it
-does not handle plural forms but it does handle message contexts.
+GNU msgfmt program, however, it is a simpler implementation.
 
 Usage: msgfmt.py [OPTIONS] filename.po
 
@@ -33,11 +32,12 @@ import struct
 import array
 from email.parser import HeaderParser
 
-__version__ = "1.2"
+__version__ = "1.1"
 
 MESSAGES = {}
 
 
+
 def usage(code, msg=''):
     print(__doc__, file=sys.stderr)
     if msg:
@@ -45,16 +45,15 @@ def usage(code, msg=''):
     sys.exit(code)
 
 
-def add(ctxt, id, str, fuzzy):
+
+def add(id, str, fuzzy):
     "Add a non-fuzzy translation to the dictionary."
     global MESSAGES
     if not fuzzy and str:
-        if ctxt is None:
-            MESSAGES[id] = str
-        else:
-            MESSAGES[b"%b\x04%b" % (ctxt, id)] = str
+        MESSAGES[id] = str
 
 
+
 def generate():
     "Return the generated output."
     global MESSAGES
@@ -96,10 +95,10 @@ def generate():
     return output
 
 
+
 def make(filename, outfile):
     ID = 1
     STR = 2
-    CTXT = 3
 
     # Compute .mo name from .po name and arguments
     if filename.endswith('.po'):
@@ -116,7 +115,7 @@ def make(filename, outfile):
         print(msg, file=sys.stderr)
         sys.exit(1)
 
-    section = msgctxt = None
+    section = None
     fuzzy = 0
 
     # Start off assuming Latin-1, so everything decodes without failure,
@@ -130,8 +129,8 @@ def make(filename, outfile):
         lno += 1
         # If we get a comment line after a msgstr, this is a new entry
         if l[0] == '#' and section == STR:
-            add(msgctxt, msgid, msgstr, fuzzy)
-            section = msgctxt = None
+            add(msgid, msgstr, fuzzy)
+            section = None
             fuzzy = 0
         # Record a fuzzy mark
         if l[:2] == '#,' and 'fuzzy' in l:
@@ -139,16 +138,10 @@ def make(filename, outfile):
         # Skip comments
         if l[0] == '#':
             continue
-        # Now we are in a msgid or msgctxt section, output previous section
-        if l.startswith('msgctxt'):
+        # Now we are in a msgid section, output previous section
+        if l.startswith('msgid') and not l.startswith('msgid_plural'):
             if section == STR:
-                add(msgctxt, msgid, msgstr, fuzzy)
-            section = CTXT
-            l = l[7:]
-            msgctxt = b''
-        elif l.startswith('msgid') and not l.startswith('msgid_plural'):
-            if section == STR:
-                add(msgctxt, msgid, msgstr, fuzzy)
+                add(msgid, msgstr, fuzzy)
                 if not msgid:
                     # See whether there is an encoding declaration
                     p = HeaderParser()
@@ -190,9 +183,7 @@ def make(filename, outfile):
         if not l:
             continue
         l = ast.literal_eval(l)
-        if section == CTXT:
-            msgctxt += l.encode(encoding)
-        elif section == ID:
+        if section == ID:
             msgid += l.encode(encoding)
         elif section == STR:
             msgstr += l.encode(encoding)
@@ -203,7 +194,7 @@ def make(filename, outfile):
             sys.exit(1)
     # Add last entry
     if section == STR:
-        add(msgctxt, msgid, msgstr, fuzzy)
+        add(msgid, msgstr, fuzzy)
 
     # Compute output
     output = generate()
@@ -215,6 +206,7 @@ def make(filename, outfile):
         print(msg, file=sys.stderr)
 
 
+
 def main():
     try:
         opts, args = getopt.getopt(sys.argv[1:], 'hVo:',

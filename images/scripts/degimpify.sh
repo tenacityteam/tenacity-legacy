@@ -12,9 +12,9 @@ shopt -s nullglob
 input_dirs="$*"
 
 if [ $# -eq 0 ]; then
-    input_dirs[0]="./EditButtons"
-    input_dirs[1]="./TranscriptionImages"
-    input_dirs[2]="./ControlButtons"
+    input_dirs[0]="${BASH_SOURCE[0]}/../../images/EditButtons"
+    input_dirs[1]="${BASH_SOURCE[0]}/../../images/TranscriptionImages"
+    input_dirs[2]="${BASH_SOURCE[0]}/../../images/ControlButtons"
 fi
 
 for dir in "${input_dirs[@]}"

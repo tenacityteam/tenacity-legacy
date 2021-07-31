@@ -1,7 +1,7 @@
 import polib
 import os
 
-localedir = './'
+localedir = '../'
 count_seen = 0
 count_modified = 0
 
