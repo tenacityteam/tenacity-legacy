@@ -23,7 +23,7 @@ class AudioIOBufferHelper
         this->chans = safenew WaveTrack * [numPlaybackChannels];
         this->tempBufs = safenew float* [numPlaybackChannels];
 
-        tempBufs[0] = safenew float[numPlaybackChannels * framesPerBuffer];
+        tempBufs[0] = safenew float[(size_t)numPlaybackChannels * framesPerBuffer];
 
         for (unsigned int c = 1; c < numPlaybackChannels; c++) {
             tempBufs[c] = tempBufs[c - 1] + framesPerBuffer;
@@ -31,11 +31,16 @@ class AudioIOBufferHelper
     }
 
     ~AudioIOBufferHelper() {
-        delete tempBufs[0];
+
+        delete[] tempBufs[0];
 
         delete[] tempBufs;
 
+        tempBufs = nullptr;
+
         delete[] chans;
+
+        chans = nullptr;
     }
 };
 
