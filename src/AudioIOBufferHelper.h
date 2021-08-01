@@ -33,14 +33,8 @@ class AudioIOBufferHelper
     ~AudioIOBufferHelper() {
 
         delete[] tempBufs[0];
-
         delete[] tempBufs;
-
-        tempBufs = nullptr;
-
         delete[] chans;
-
-        chans = nullptr;
     }
 };
 

@@ -11,9 +11,6 @@ Paul Licameli split from AudioIO.h
 #ifndef __AUDACITY_AUDIO_IO_BASE__
 #define __AUDACITY_AUDIO_IO_BASE__
 
-
-
-
 #include <cfloat>
 #include <functional>
 #include <vector>
@@ -38,7 +35,7 @@ class BoundedEnvelope;
 // Windows build needs complete type for parameter of wxWeakRef
 // class MeterPanelBase;
 #include "widgets/MeterPanelBase.h"
-using PRCrossfadeData = std::vector< std::vector < float > >;
+using PRCrossfadeData = std::vector< std::vector<float>>;
 
 #define BAD_STREAM_TIME (-DBL_MAX)
 
