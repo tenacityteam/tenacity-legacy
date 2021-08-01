@@ -307,7 +307,20 @@ void RealtimeEffectManager::RealtimeProcessStart()
 //
 size_t RealtimeEffectManager::RealtimeProcess(int group, unsigned chans, float **buffers, size_t numSamples)
 {
-   // Protect ourselves from the main thread
+
+    // Allocate the in/out buffer arrays
+    auto ibuf = new float* [chans];
+    auto obuf = new float* [chans];
+    float* temp = safenew float[numSamples];
+
+    // And populate the input with the buffers we've been given while allocating
+    // NEW output buffers
+    for (unsigned int i = 0; i < chans; i++) {
+        ibuf[i] = buffers[i];
+        obuf[i] = new float[numSamples];
+    }
+
+    // Protect ourselves from the main thread
    mRealtimeLock.Enter();
 
    // Can be suspended because of the audio stream being paused or because effects
@@ -322,21 +335,10 @@ size_t RealtimeEffectManager::RealtimeProcess(int group, unsigned chans, float *
    // are introducing
    wxMilliClock_t start = wxGetUTCTimeMillis();
 
-   // Allocate the in/out buffer arrays
-   auto ibuf = new float* [chans];
-   auto obuf = new float* [chans];
-
-   // And populate the input with the buffers we've been given while allocating
-   // NEW output buffers
-   for (unsigned int i = 0; i < chans; i++)
-   {
-      ibuf[i] = buffers[i];
-      obuf[i] = new float[numSamples];
-   }
-
    // Now call each effect in the chain while swapping buffer pointers to feed the
    // output of one effect as the input to the next effect
    size_t called = 0;
+   const size_t memcpy_size = numSamples * sizeof(float);
    for (auto &state : mStates)
    {
       if (state->IsRealtimeActive())
@@ -345,12 +347,11 @@ size_t RealtimeEffectManager::RealtimeProcess(int group, unsigned chans, float *
          called++;
       }
 
-      for (unsigned int j = 0; j < chans; j++)
+      for (size_t j = 0; j < chans; j++)
       {
-         float *temp;
-         temp = ibuf[j];
-         ibuf[j] = obuf[j];
-         obuf[j] = temp;
+          memcpy(temp, ibuf[j], memcpy_size);
+          memcpy(ibuf[j], obuf[j], memcpy_size);
+          memcpy(obuf[j], temp, memcpy_size);
       }
    }
 
@@ -360,20 +361,25 @@ size_t RealtimeEffectManager::RealtimeProcess(int group, unsigned chans, float *
    // is odd.
    if (called & 1)
    {
-      for (unsigned int i = 0; i < chans; i++)
+      for (size_t i = 0; i < chans; i++)
       {
-         memcpy(buffers[i], ibuf[i], numSamples * sizeof(float));
+         memcpy(buffers[i], ibuf[i], memcpy_size);
       }
    }
-
-   delete ibuf;
-   delete[] obuf;
 
    // Remember the latency
    mRealtimeLatency = (int) (wxGetUTCTimeMillis() - start).GetValue();
 
    mRealtimeLock.Leave();
 
+   delete[] temp;
+
+   for (size_t i = 0; i < chans; i++) {
+       delete[] obuf[i];
+   }
+
+   delete[] obuf;
+   delete[] ibuf;
    //
    // This is wrong...needs to handle tails
    //
@@ -519,9 +525,9 @@ size_t RealtimeEffectState::RealtimeProcess(int group,
    const auto numAudioIn = mEffect.GetAudioInCount();
    const auto numAudioOut = mEffect.GetAudioOutCount();
 
-   auto clientIn = new float* [numAudioIn];
-   auto clientOut = new float* [numAudioOut];
-   auto dummybuf = new float [numSamples];
+   auto clientIn = safenew float* [numAudioIn];
+   auto clientOut = safenew float* [numAudioOut];
+   auto dummybuf = safenew float [numSamples];
 
    decltype(numSamples) len = 0;
    auto ichans = chans;
@@ -617,6 +623,7 @@ size_t RealtimeEffectState::RealtimeProcess(int group,
       // Bump to next processor
       processor++;
    }
+
    delete[] clientIn;
    delete[] clientOut;
    delete[] dummybuf;
