@@ -122,7 +122,7 @@ void Grabber::DrawGrabber( wxDC & dc )
    // So use 0,0 as origin for draw, so that the grabber draws right if 
    // positioned in its parent at some non zero position.
    r.SetPosition( wxPoint(0,0) );
-   int y, left, right, top, bottom;
+   int x, y, left, right, top, bottom;
 
    AColor::Medium(&dc, mOver );
    dc.DrawRectangle(r);
@@ -131,25 +131,21 @@ void Grabber::DrawGrabber( wxDC & dc )
    if( mAsSpacer )
       r.width -= 1;
 
-#ifndef __WXMAC__
 
-   // Add a box
-   r.width -= 1;
-   r.height -= 1;
-   AColor::Bevel(dc, !mPressed, r);
-   r.width += 1;
-   r.height += 1;
+   //if vertical toolbar...
+   //could make this check more uniform with others.
+   if (r.GetSize().GetHeight() <= r.GetSize().GetWidth()) {
+      SetSize(GetSize().GetWidth(),10);
+      r.SetHeight(10);
 
-#endif
+   }
+
 
    // No bumps in a spacer grabber.
    if( mAsSpacer )
       return;
    // Calculate the bump rectangle
    r.Deflate(3, 3);
-   if ((r.GetHeight() % 4) < 2) {
-      r.Offset(0, 1);
-   }
 
    // Cache
    left = r.GetLeft();
@@ -157,29 +153,18 @@ void Grabber::DrawGrabber( wxDC & dc )
    top = r.GetTop();
    bottom = r.GetBottom();
 
-   // Draw the raised bumps
-   if (mPressed) {
-      AColor::Dark(&dc, false);
+
+   // Draw the line
+   if (!mPressed) {
+      dc.SetPen(wxPen( theTheme.Colour( clrDark )));
+      dc.SetBrush(wxBrush( theTheme.Colour( clrDark )));
    }
    else {
-      AColor::Light(&dc, false);
+      dc.SetPen(wxPen( theTheme.Colour( clrLight )));
+      dc.SetBrush(wxBrush( theTheme.Colour( clrLight )));
    }
 
-   for (y = top; y < bottom; y += 4) {
-      AColor::Line(dc, left, y, right, y);
-   }
-
-   // Draw the pushed bumps
-   if (mPressed) {
-      AColor::Light(&dc, false);
-   }
-   else {
-      AColor::Dark(&dc, false);
-   }
-
-   for (y = top + 1; y <= bottom; y += 4) {
-      AColor::Line(dc, left, y, right, y);
-   }
+   dc.DrawRectangle(left+1,top+1,right-4,bottom-4);
 }
 
 //
