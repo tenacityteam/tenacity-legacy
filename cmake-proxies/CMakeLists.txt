@@ -109,15 +109,6 @@ else()
    set ( curl_ssl "openssl" )
 endif ()
 
-
-# TODO: is threadpool still needed?
-# add_conan_lib(
-#    ThreadPool
-#    threadpool/20140926
-#    REQUIRED
-#    ALWAYS_ALLOW_CONAN_FALLBACK
-# )
-
 add_conan_lib(
    RapidJSON
    rapidjson/1.1.0
