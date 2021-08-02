@@ -205,10 +205,7 @@ void AboutDialog::CreateInformationTab(ShuttleGui& AboutDialogGUI) {
     AddBuildInfoRow(&informationStr, wxT("PortAudio"), XO("Audio playback and recording"), Verbatim(wxT("v19")));
     AddBuildInfoRow(&informationStr, wxT("libsoxr"), XO("Sample rate conversion"), enabled);
 
-    #ifdef USE_LIBMAD
-        AddBuildInfoRow(&informationStr, wxT("libmad"), XO("MP3 Importing"), USE_LIBMAD ? enabled : disabled);
-    #endif
-
+    const auto buildInfo_libmad = XO("MP3 Importing");
     const auto buildInfo_libvorbis = XO("Ogg Vorbis Import and Export");
     const auto buildInfo_libid3tag = XO("ID3 tag support");
     const auto buildInfo_libflac = XO("FLAC import and export");
@@ -221,6 +218,9 @@ void AboutDialog::CreateInformationTab(ShuttleGui& AboutDialogGUI) {
     const auto buildInfo_pitchTempoSupport = XO("Pitch and Tempo Change support");
     const auto buildInfo_extremePitchTempoSupport = XO("Extreme Pitch and Tempo Change support");
 
+    #ifdef USE_LIBMAD
+        AddBuildInfoRow(&informationStr, wxT("libmad"), buildInfo_libmad, USE_LIBMAD ? enabled : disabled);
+    #endif
     #ifdef USE_LIBVORBIS
         /* i18n-hint: Ogg is the container format. Vorbis is the compression codec. Both are proper nouns and shouldn't be translated */
         AddBuildInfoRow(&informationStr, wxT("libvorbis"), buildInfo_libvorbis, USE_LIBVORBIS ? enabled : disabled);
