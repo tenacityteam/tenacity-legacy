@@ -204,19 +204,99 @@ void AboutDialog::CreateInformationTab(ShuttleGui& AboutDialogGUI) {
     AddBuildInfoRow(&informationStr, wxT("wxWidgets"), XO("Cross-platform GUI library"), Verbatim(wxVERSION_NUM_DOT_STRING_T));
     AddBuildInfoRow(&informationStr, wxT("PortAudio"), XO("Audio playback and recording"), Verbatim(wxT("v19")));
     AddBuildInfoRow(&informationStr, wxT("libsoxr"), XO("Sample rate conversion"), enabled);
-    AddBuildInfoRow(&informationStr, wxT("libmad"), XO("MP3 Importing"), USE_LIBMAD ? enabled : disabled);
-    /* i18n-hint: Ogg is the container format. Vorbis is the compression codec. Both are proper nouns and shouldn't be translated */
-    AddBuildInfoRow(&informationStr, wxT("libvorbis"), XO("Ogg Vorbis Import and Export"), USE_LIBVORBIS ? enabled : disabled);
-    AddBuildInfoRow(&informationStr, wxT("libid3tag"), XO("ID3 tag support"), USE_LIBID3TAG ? enabled : disabled);
-    /* i18n-hint: FLAC stands for Free Lossless Audio Codec, but is effectively a proper noun and so shouldn't be translated */
-    AddBuildInfoRow(&informationStr, wxT("libflac"), XO("FLAC import and export"), USE_LIBFLAC ? enabled : disabled);
-    AddBuildInfoRow(&informationStr, wxT("libtwolame"), XO("MP2 export"), USE_LIBTWOLAME ? enabled : disabled);
-    #ifdef USE_QUICKTIME
-        AddBuildInfoRow(&informationStr, wxT("QuickTime"), XO("Import via QuickTime"), USE_QUICKTIME ? enabled : disabled);
+
+    // This huge set of preprocessor statements can be eliminated if the CMake setup is
+    // changed to set OFF options to something falsey instead of nothing
+    #ifndef USE_LIBMAD
+    #define USE_LIBMAD 0
     #endif
-    AddBuildInfoRow(&informationStr, wxT("ffmpeg"), XO("FFmpeg Import/Export"), USE_FFMPEG ? enabled : disabled);
+    #ifndef USE_LIBVORBIS
+    #define USE_LIBVORBIS 0
+    #endif
+    #ifndef USE_LIBID3TAG
+    #define USE_LIBID3TAG 0
+    #endif
+    #ifndef USE_LIBFLAC
+    #define USE_LIBFLAC 0
+    #endif
+    #ifndef USE_LIBTWOLAME
+    #define USE_LIBTWOLAME 0
+    #endif
+    #ifndef USE_QUICKTIME
+    #define USE_QUICKTIME 0
+    #endif
+    #ifndef USE_FFMPEG
+    #define USE_FFMPEG 0
+    #endif
+    #ifndef USE_GSTREAMER
+    #define USE_GSTREAMER 0
+    #endif
+    #ifndef USE_NYQUIST
+    #define USE_NYQUIST 0
+    #endif
+    #ifndef USE_LADSPA
+    #define USE_LADPSA 0
+    #endif
+    #ifndef USE_VAMP
+    #define USE_VAMP 0
+    #endif
+    #ifndef USE_AUDIO_UNITS
+    #define USE_AUDIO_UNITS 0
+    #endif
+    #ifndef USE_VST
+    #define USE_VST 0
+    #endif
+    #ifndef USE_LV2
+    #define USE_LV2 0
+    #endif
+    #ifndef USE_PORTMIXER
+    #define USE_PORTMIXER 0
+    #endif
+    #ifndef USE_SOUNDTOUCH
+    #define USE_SOUNDTOUCH 0
+    #endif
+    #ifndef USE_SBSMS
+    #define USE_SBSMS 0
+    #endif
+
+    const auto buildInfo_libmad = XO("MP3 Importing");
+    const auto buildInfo_libvorbis = XO("Ogg Vorbis Import and Export");
+    const auto buildInfo_libid3tag = XO("ID3 tag support");
+    const auto buildInfo_libflac = XO("FLAC import and export");
+    const auto buildInfo_libtwolame = XO("MP2 export");
+    const auto buildInfo_libquicktime = XO("Import via QuickTime");
+    const auto buildInfo_libffmpeg = XO("FFmpeg Import/Export");
+    const auto buildInfo_libgstreamer = XO("Import via GStreamer");
+    const auto buildInfo_pluginSupport = XO("Plug-in support");
+    const auto buildInfo_soundCardMixerSupport = XO("Sound card mixer support");
+    const auto buildInfo_pitchTempoSupport = XO("Pitch and Tempo Change support");
+    const auto buildInfo_extremePitchTempoSupport = XO("Extreme Pitch and Tempo Change support");
+
+    #ifndef USE_LIBMAD
+        AddBuildInfoRow(&informationStr, wxT("libmad"), buildInfo_libmad, USE_LIBMAD ? enabled : disabled);
+    #endif
+    #ifdef USE_LIBVORBIS
+        /* i18n-hint: Ogg is the container format. Vorbis is the compression codec. Both are proper nouns and shouldn't be translated */
+        AddBuildInfoRow(&informationStr, wxT("libvorbis"), buildInfo_libvorbis, USE_LIBVORBIS ? enabled : disabled);
+    #endif
+    #ifdef USE_LIBID3TAG
+        AddBuildInfoRow(&informationStr, wxT("libid3tag"), buildInfo_libid3tag, USE_LIBID3TAG ? enabled : disabled);
+    #endif
+    #ifdef USE_LIBFLAC
+        /* i18n-hint: FLAC stands for Free Lossless Audio Codec, but is effectively a proper noun and so shouldn't be translated */
+        AddBuildInfoRow(&informationStr, wxT("libflac"), buildInfo_libflac, USE_LIBFLAC ? enabled : disabled);
+    #endif
+    #ifdef USE_LIBTWOLAME
+        AddBuildInfoRow(&informationStr, wxT("libtwolame"), buildInfo_libtwolame, USE_LIBTWOLAME ? enabled : disabled);
+    #endif
+    #ifdef USE_QUICKTIME
+        AddBuildInfoRow(&informationStr, wxT("QuickTime"), buildInfo_libquicktime, USE_QUICKTIME ? enabled : disabled);
+    #endif
+    #ifdef USE_FFMPEG
+        AddBuildInfoRow(&informationStr, wxT("ffmpeg"), buildInfo_libffmpeg, USE_FFMPEG ? enabled : disabled);
+    #endif
     #ifdef USE_GSTREAMER
-        AddBuildInfoRow(&informationStr, wxT("gstreamer"), XO("Import via GStreamer"), USE_GSTREAMER ? enabled : disabled);
+        AddBuildInfoRow(&informationStr, wxT("gstreamer"), buildInfo_libgstreamer, USE_GSTREAMER ? enabled : disabled);
     #endif
     informationStr << wxT("</table>\n");  //end table of file formats supported
 
@@ -227,21 +307,33 @@ void AboutDialog::CreateInformationTab(ShuttleGui& AboutDialogGUI) {
 
     //AddBuildInfoRow(&informationStr, wxT("Theme"), XO("Dark Theme Extras"),  DA_EXPERIMENTAL ? enabled : disabled);
 
-    AddBuildInfoRow(&informationStr, wxT("Nyquist"), XO("Plug-in support"), USE_NYQUIST ? enabled : disabled);
-    AddBuildInfoRow(&informationStr, wxT("LADSPA"), XO("Plug-in support"), USE_LADSPA ? enabled : disabled);
-    AddBuildInfoRow(&informationStr, wxT("Vamp"), XO("Plug-in support"), USE_VAMP ? enabled : disabled);
-
-    #ifdef USE_AUDIO_UNITS
-        AddBuildInfoRow(&informationStr, wxT("Audio Units"), XO("Plug-in support"), USE_AUDIO_UNITS ? enabled : disabled);
+    #ifdef USE_NYQUIST
+        AddBuildInfoRow(&informationStr, wxT("Nyquist"), buildInfo_pluginSupport, USE_NYQUIST ? enabled : disabled);
     #endif
-
-    AddBuildInfoRow(&informationStr, wxT("VST"), XO("Plug-in support"), USE_VST ? enabled : disabled);
-    AddBuildInfoRow(&informationStr, wxT("LV2"), XO("Plug-in support"), USE_LV2 ? enabled : disabled);
-
-    AddBuildInfoRow(&informationStr, wxT("PortMixer"), XO("Sound card mixer support"), USE_PORTMIXER ? enabled : disabled);
-    AddBuildInfoRow(&informationStr, wxT("SoundTouch"), XO("Pitch and Tempo Change support"), USE_SOUNDTOUCH ? enabled : disabled);
-    AddBuildInfoRow(&informationStr, wxT("SBSMS"), XO("Extreme Pitch and Tempo Change support"), USE_SBSMS ? enabled : disabled);
-
+    #ifdef USE_LADSPA
+        AddBuildInfoRow(&informationStr, wxT("LADSPA"), buildInfo_pluginSupport, USE_LADSPA ? enabled : disabled);
+    #endif
+    #ifdef USE_VAMP
+        AddBuildInfoRow(&informationStr, wxT("Vamp"), buildInfo_pluginSupport, USE_VAMP ? enabled : disabled);
+    #endif
+    #ifdef USE_AUDIO_UNITS
+        AddBuildInfoRow(&informationStr, wxT("Audio Units"), buildInfo_pluginSupport, USE_AUDIO_UNITS ? enabled : disabled);
+    #endif
+    #ifdef USE_VST
+        AddBuildInfoRow(&informationStr, wxT("VST"), buildInfo_pluginSupport, USE_VST ? enabled : disabled);
+    #endif
+    #ifdef USE_LV2
+        AddBuildInfoRow(&informationStr, wxT("LV2"), buildInfo_pluginSupport, USE_LV2 ? enabled : disabled);
+    #endif
+    #ifdef USE_PORTMIXER
+        AddBuildInfoRow(&informationStr, wxT("PortMixer"), buildInfo_soundCardMixerSupport, USE_PORTMIXER ? enabled : disabled);
+    #endif
+    #ifdef USE_SOUNDTOUCH
+        AddBuildInfoRow(&informationStr, wxT("SoundTouch"), buildInfo_pitchTempoSupport, USE_SOUNDTOUCH ? enabled : disabled);
+    #endif
+    #ifdef USE_SBSMS
+        AddBuildInfoRow(&informationStr, wxT("SBSMS"), buildInfo_extremePitchTempoSupport, USE_SBSMS ? enabled : disabled);
+    #endif
     informationStr << wxT("</table>\n");   // end of table of features
 
     html->SetPage(FormatHtmlText(o.GetString()));
