@@ -313,10 +313,12 @@ size_t RealtimeEffectManager::RealtimeProcess(int group, unsigned chans, float *
     auto obuf = new float* [chans];
     float* temp = safenew float[numSamples];
 
-    // And populate the input with the buffers we've been given while allocating
-    // NEW output buffers
+    const size_t memcpy_size = numSamples * sizeof(float);
+
+    // Allocate new output buffers and copy buffer input into newly allocated input buffers
     for (unsigned int i = 0; i < chans; i++) {
-        ibuf[i] = buffers[i];
+        ibuf[i] = new float[numSamples];
+        memcpy(ibuf[i], buffers[i], memcpy_size);
         obuf[i] = new float[numSamples];
     }
 
@@ -338,7 +340,6 @@ size_t RealtimeEffectManager::RealtimeProcess(int group, unsigned chans, float *
    // Now call each effect in the chain while swapping buffer pointers to feed the
    // output of one effect as the input to the next effect
    size_t called = 0;
-   const size_t memcpy_size = numSamples * sizeof(float);
    for (auto &state : mStates)
    {
       if (state->IsRealtimeActive())
@@ -379,6 +380,11 @@ size_t RealtimeEffectManager::RealtimeProcess(int group, unsigned chans, float *
    }
 
    delete[] obuf;
+
+   for (size_t i = 0; i < chans; i++) {
+       delete[] ibuf[i];
+   }
+
    delete[] ibuf;
    //
    // This is wrong...needs to handle tails
