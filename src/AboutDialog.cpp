@@ -205,6 +205,60 @@ void AboutDialog::CreateInformationTab(ShuttleGui& AboutDialogGUI) {
     AddBuildInfoRow(&informationStr, wxT("PortAudio"), XO("Audio playback and recording"), Verbatim(wxT("v19")));
     AddBuildInfoRow(&informationStr, wxT("libsoxr"), XO("Sample rate conversion"), enabled);
 
+    // This huge set of preprocessor statements can be eliminated if the CMake setup is
+    // changed to set OFF options to something falsey instead of nothing
+    #ifndef USE_LIBMAD
+    #define USE_LIBMAD 0
+    #endif
+    #ifndef USE_LIBVORBIS
+    #define USE_LIBVORBIS 0
+    #endif
+    #ifndef USE_LIBID3TAG
+    #define USE_LIBID3TAG 0
+    #endif
+    #ifndef USE_LIBFLAC
+    #define USE_LIBFLAC 0
+    #endif
+    #ifndef USE_LIBTWOLAME
+    #define USE_LIBTWOLAME 0
+    #endif
+    #ifndef USE_QUICKTIME
+    #define USE_QUICKTIME 0
+    #endif
+    #ifndef USE_FFMPEG
+    #define USE_FFMPEG 0
+    #endif
+    #ifndef USE_GSTREAMER
+    #define USE_GSTREAMER 0
+    #endif
+    #ifndef USE_NYQUIST
+    #define USE_NYQUIST 0
+    #endif
+    #ifndef USE_LADSPA
+    #define USE_LADPSA 0
+    #endif
+    #ifndef USE_VAMP
+    #define USE_VAMP 0
+    #endif
+    #ifndef USE_AUDIO_UNITS
+    #define USE_AUDIO_UNITS 0
+    #endif
+    #ifndef USE_VST
+    #define USE_VST 0
+    #endif
+    #ifndef USE_LV2
+    #define USE_LV2 0
+    #endif
+    #ifndef USE_PORTMIXER
+    #define USE_PORTMIXER 0
+    #endif
+    #ifndef USE_SOUNDTOUCH
+    #define USE_SOUNDTOUCH 0
+    #endif
+    #ifndef USE_SBSMS
+    #define USE_SBSMS 0
+    #endif
+
     const auto buildInfo_libmad = XO("MP3 Importing");
     const auto buildInfo_libvorbis = XO("Ogg Vorbis Import and Export");
     const auto buildInfo_libid3tag = XO("ID3 tag support");
@@ -218,7 +272,7 @@ void AboutDialog::CreateInformationTab(ShuttleGui& AboutDialogGUI) {
     const auto buildInfo_pitchTempoSupport = XO("Pitch and Tempo Change support");
     const auto buildInfo_extremePitchTempoSupport = XO("Extreme Pitch and Tempo Change support");
 
-    #ifdef USE_LIBMAD
+    #ifndef USE_LIBMAD
         AddBuildInfoRow(&informationStr, wxT("libmad"), buildInfo_libmad, USE_LIBMAD ? enabled : disabled);
     #endif
     #ifdef USE_LIBVORBIS
