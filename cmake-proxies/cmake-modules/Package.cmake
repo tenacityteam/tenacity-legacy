@@ -1,16 +1,8 @@
-set(CPACK_PACKAGE_VERSION_MAJOR "${AUDACITY_VERSION}") # X
-set(CPACK_PACKAGE_VERSION_MINOR "${AUDACITY_RELEASE}") # Y
-set(CPACK_PACKAGE_VERSION_PATCH "${AUDACITY_REVISION}") # Z
 set(CPACK_PACKAGE_VENDOR "Tenacity")
 set(CPACK_PACKAGE_HOMEPAGE_URL "https://tenacityaudio.org")
 
-# X.Y.Z-alpha-20210615
-set(CPACK_PACKAGE_VERSION "${AUDACITY_VERSION}.${AUDACITY_RELEASE}.${AUDACITY_REVISION}${AUDACITY_SUFFIX}")
-
-if(NOT AUDACITY_BUILD_LEVEL EQUAL 2)
-   # X.Y.Z-alpha-20210615+a1b2c3d
-   set(CPACK_PACKAGE_VERSION "${CPACK_PACKAGE_VERSION}+${GIT_COMMIT_SHORT}")
-endif()
+# X.Y.Z-alpha-1337-gdeadbee
+set(CPACK_PACKAGE_VERSION "${GIT_DESCRIBE}")
 
 # Custom variables use CPACK_AUDACITY_ prefix. CPACK_ to expose to CPack,
 # AUDACITY_ to show it is custom and avoid conflicts with other projects.
@@ -24,12 +16,12 @@ elseif(CMAKE_SYSTEM_NAME MATCHES "Linux")
    set(os "linux")
 endif()
 
-# tenacity-linux-X.Y.Z-alpha-20210615
+# tenacity-linux-X.Y.Z-alpha-1337-gdeadbee
 set(CPACK_PACKAGE_FILE_NAME "tenacity-${os}-${CPACK_PACKAGE_VERSION}")
 set(zsync_name "tenacity-${os}-*") # '*' is wildcard (here it means any version)
 
 if(DEFINED AUDACITY_ARCH_LABEL)
-   # tenacity-linux-X.Y.Z-alpha-20210615-x86_64
+   # tenacity-linux-X.Y.Z-alpha-1337-gdeadbee-x86_64
    set(CPACK_PACKAGE_FILE_NAME "${CPACK_PACKAGE_FILE_NAME}-${AUDACITY_ARCH_LABEL}")
    set(zsync_name "${zsync_name}-${AUDACITY_ARCH_LABEL}")
    set(CPACK_AUDACITY_ARCH_LABEL "${AUDACITY_ARCH_LABEL}")

@@ -269,14 +269,10 @@ eval $(cpp -E <<CPPEOF | sed -e 's/wxT("//g' \
                              -e '/^v_/p' \
                              -e 'd'
 #include "src/Audacity.h"
-v_major=AUDACITY_VERSION
-v_minor=AUDACITY_RELEASE
-v_micro=AUDACITY_REVISION
-v_suffix=AUDACITY_SUFFIX
 CPPEOF
 )
 
-version="${v_major}.${v_minor}.${v_micro}${v_suffix}"
+version="${GIT_DESCRIBE}"
 printf "${version}\n"
 
 # now clean out the directory of all the things we don't need in the
