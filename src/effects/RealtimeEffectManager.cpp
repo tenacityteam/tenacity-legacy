@@ -326,50 +326,43 @@ size_t RealtimeEffectManager::RealtimeProcess(int group, unsigned chans, float *
    mRealtimeLock.Enter();
 
    // Can be suspended because of the audio stream being paused or because effects
-   // have been suspended, so allow the samples to pass as-is.
-   if (mRealtimeSuspended || mStates.empty())
-   {
-      mRealtimeLock.Leave();
-      return numSamples;
+   // have been suspended, so in that case do nothing.
+   if (!mRealtimeSuspended && !mStates.empty()){
+
+
+       // Remember when we started so we can calculate the amount of latency we
+       // are introducing
+       wxMilliClock_t start = wxGetUTCTimeMillis();
+
+       // Now call each effect in the chain while swapping buffer pointers to feed the
+       // output of one effect as the input to the next effect
+       size_t called = 0;
+       for (auto& state : mStates) {
+           if (state->IsRealtimeActive()) {
+               state->RealtimeProcess(group, chans, ibuf, obuf, numSamples);
+               called++;
+           }
+
+           for (size_t j = 0; j < chans; j++) {
+               memcpy(temp, ibuf[j], memcpy_size);
+               memcpy(ibuf[j], obuf[j], memcpy_size);
+               memcpy(obuf[j], temp, memcpy_size);
+           }
+       }
+
+       // Once we're done, we might wind up with the last effect storing its results
+       // in the temporary buffers.  If that's the case, we need to copy it over to
+       // the caller's buffers.  This happens when the number of effects processed
+       // is odd.
+       if (called & 1) {
+           for (size_t i = 0; i < chans; i++) {
+               memcpy(buffers[i], ibuf[i], memcpy_size);
+           }
+       }
+
+       // Remember the latency
+       mRealtimeLatency = (int)(wxGetUTCTimeMillis() - start).GetValue();
    }
-
-   // Remember when we started so we can calculate the amount of latency we
-   // are introducing
-   wxMilliClock_t start = wxGetUTCTimeMillis();
-
-   // Now call each effect in the chain while swapping buffer pointers to feed the
-   // output of one effect as the input to the next effect
-   size_t called = 0;
-   for (auto &state : mStates)
-   {
-      if (state->IsRealtimeActive())
-      {
-         state->RealtimeProcess(group, chans, ibuf, obuf, numSamples);
-         called++;
-      }
-
-      for (size_t j = 0; j < chans; j++)
-      {
-          memcpy(temp, ibuf[j], memcpy_size);
-          memcpy(ibuf[j], obuf[j], memcpy_size);
-          memcpy(obuf[j], temp, memcpy_size);
-      }
-   }
-
-   // Once we're done, we might wind up with the last effect storing its results
-   // in the temporary buffers.  If that's the case, we need to copy it over to
-   // the caller's buffers.  This happens when the number of effects processed
-   // is odd.
-   if (called & 1)
-   {
-      for (size_t i = 0; i < chans; i++)
-      {
-         memcpy(buffers[i], ibuf[i], memcpy_size);
-      }
-   }
-
-   // Remember the latency
-   mRealtimeLatency = (int) (wxGetUTCTimeMillis() - start).GetValue();
 
    mRealtimeLock.Leave();
 
@@ -386,6 +379,7 @@ size_t RealtimeEffectManager::RealtimeProcess(int group, unsigned chans, float *
    }
 
    delete[] ibuf;
+
    //
    // This is wrong...needs to handle tails
    //
