@@ -16,6 +16,7 @@
 
 #include <atomic>
 #include <wx/time.h>
+#include <effects/RealtimeEffectBufferHelper.h>
 
 class RealtimeEffectState
 {
@@ -307,20 +308,9 @@ void RealtimeEffectManager::RealtimeProcessStart()
 //
 size_t RealtimeEffectManager::RealtimeProcess(int group, unsigned chans, float **buffers, size_t numSamples)
 {
-
-    // Allocate the in/out buffer arrays
-    auto ibuf = new float* [chans];
-    auto obuf = new float* [chans];
-    float* temp = safenew float[numSamples];
+    std::unique_ptr<RealtimeEffectBufferHelper> bufHelper = std::make_unique<RealtimeEffectBufferHelper>(buffers, chans, numSamples);
 
     const size_t memcpy_size = numSamples * sizeof(float);
-
-    // Allocate new output buffers and copy buffer input into newly allocated input buffers
-    for (unsigned int i = 0; i < chans; i++) {
-        ibuf[i] = new float[numSamples];
-        memcpy(ibuf[i], buffers[i], memcpy_size);
-        obuf[i] = new float[numSamples];
-    }
 
     // Protect ourselves from the main thread
    mRealtimeLock.Enter();
@@ -339,14 +329,14 @@ size_t RealtimeEffectManager::RealtimeProcess(int group, unsigned chans, float *
        size_t called = 0;
        for (auto& state : mStates) {
            if (state->IsRealtimeActive()) {
-               state->RealtimeProcess(group, chans, ibuf, obuf, numSamples);
+               state->RealtimeProcess(group, chans, bufHelper->ibuf, bufHelper->obuf, numSamples);
                called++;
            }
 
            for (size_t j = 0; j < chans; j++) {
-               memcpy(temp, ibuf[j], memcpy_size);
-               memcpy(ibuf[j], obuf[j], memcpy_size);
-               memcpy(obuf[j], temp, memcpy_size);
+               memcpy(bufHelper->temp, bufHelper->ibuf[j], memcpy_size);
+               memcpy(bufHelper->ibuf[j], bufHelper->obuf[j], memcpy_size);
+               memcpy(bufHelper->obuf[j], bufHelper->temp, memcpy_size);
            }
        }
 
@@ -356,7 +346,7 @@ size_t RealtimeEffectManager::RealtimeProcess(int group, unsigned chans, float *
        // is odd.
        if (called & 1) {
            for (size_t i = 0; i < chans; i++) {
-               memcpy(buffers[i], ibuf[i], memcpy_size);
+               memcpy(buffers[i], bufHelper->ibuf[i], memcpy_size);
            }
        }
 
@@ -366,21 +356,8 @@ size_t RealtimeEffectManager::RealtimeProcess(int group, unsigned chans, float *
 
    mRealtimeLock.Leave();
 
-   delete[] temp;
+   bufHelper.reset();
 
-   for (size_t i = 0; i < chans; i++) {
-       delete[] obuf[i];
-   }
-
-   delete[] obuf;
-
-   for (size_t i = 0; i < chans; i++) {
-       delete[] ibuf[i];
-   }
-
-   delete[] ibuf;
-
-   //
    // This is wrong...needs to handle tails
    //
    return numSamples;
