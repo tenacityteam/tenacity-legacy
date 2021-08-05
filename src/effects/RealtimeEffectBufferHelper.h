@@ -12,10 +12,7 @@ class RealtimeEffectBufferHelper
     size_t numSamples;
 
     const static void deleteAllChannels(unsigned int chans, float** channeledBuf) {
-        for (size_t i = 0; i < chans; i++) {
-            delete[] channeledBuf[i];
-        }
-
+        delete[] channeledBuf[0];
         delete[] channeledBuf;
     }
 
@@ -38,11 +35,14 @@ class RealtimeEffectBufferHelper
 
         const size_t memcpy_size = numSamples * sizeof(float);
 
+        ibuf[0] = safenew float[chans * numSamples];
+        obuf[0] = safenew float[chans * numSamples];
+
         // Allocate new output buffers and copy buffer input into newly allocated input buffers
-        for (unsigned int i = 0; i < chans; i++) {
-            ibuf[i] = new float[numSamples];
+        for (unsigned int i = 1; i < chans; i++) {
+            ibuf[i] = ibuf[i - 1] + numSamples;
             memcpy(ibuf[i], buffers[i], memcpy_size);
-            obuf[i] = new float[numSamples];
+            obuf[i] = obuf[i - 1] + numSamples;
         }
     }
 
