@@ -298,6 +298,7 @@ list( APPEND SOURCES PRIVATE
   TrackPanelAx.h
   TrackPanelCell.cpp
   TrackPanelCell.h
+  TrackPanelConstants.h
   TrackPanelDrawable.cpp
   TrackPanelDrawable.h
   TrackPanelDrawingContext.h
