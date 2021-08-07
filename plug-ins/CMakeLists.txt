@@ -1,6 +1,6 @@
 
 set( TARGET plug-ins )
-set( TARGET_ROOT ${topdir}/plug-ins )
+set( TARGET_ROOT ${CMAKE_SOURCE_DIR}/plug-ins )
 
 message( STATUS "========== Configuring ${TARGET} ==========" )
 
