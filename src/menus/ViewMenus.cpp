@@ -154,7 +154,7 @@ void DoZoomFitV(AudacityProject &project)
    height = std::max( (int)TrackInfo::MinimumTrackHeight(), height );
 
    for (auto t : range)
-      TrackView::Get( *t ).SetHeight(height);
+      TrackView::Get( *t ).SetExpandedHeight(height);
 }
 }
 
