@@ -518,13 +518,14 @@ UIHandle::Result TimeShiftHandle::Click
       // just do shifting of one whole track
    }
 
+   bool syncLocked = (event.AltDown()) ? false : ProjectSettings::Get( *pProject ).IsSyncLocked();
+
    mClipMoveState.Init( *pProject, *pTrack,
       hitTestResult,
       std::move( pShifter ),
       clickTime,
 
-      viewInfo, trackList,
-      ProjectSettings::Get( *pProject ).IsSyncLocked() );
+      viewInfo, trackList, syncLocked);
 
    mSlideUpDownOnly = event.CmdDown() && !multiToolModeActive;
    mRect = rect;
