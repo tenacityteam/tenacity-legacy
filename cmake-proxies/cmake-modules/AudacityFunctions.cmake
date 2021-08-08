@@ -586,7 +586,7 @@ function( addlib dir name symbol required check )
 
    # Define target's name and it's source directory
    set( TARGET ${dir} )
-   set( TARGET_ROOT ${libsrc}/${dir} )
+   set( TARGET_ROOT ${CMAKE_SOURCE_DIR}/lib-src/${dir} )
 
    # Define the option name
    set( use ${_OPT}use_${name} )

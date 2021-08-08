@@ -1,6 +1,6 @@
 
 set( TARGET images )
-set( TARGET_ROOT ${topdir}/images )
+set( TARGET_ROOT ${CMAKE_SOURCE_DIR}/images )
 
 message( STATUS "========== Configuring ${TARGET} ==========" )
 

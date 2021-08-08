@@ -1,5 +1,5 @@
 set( TARGET locale )
-set( TARGET_ROOT ${topdir}/locale )
+set( TARGET_ROOT ${CMAKE_SOURCE_DIR}/locale )
 
 message( STATUS "========== Configuring ${TARGET} ==========" )
 

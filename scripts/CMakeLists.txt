@@ -1,6 +1,6 @@
 
 set( TARGET minsrc )
-set( TARGET_ROOT ${topdir} )
+set( TARGET_ROOT ${CMAKE_SOURCE_DIR} )
 
 message( STATUS "========== Configuring ${TARGET} ==========" )
 

@@ -1,5 +1,5 @@
 set( TARGET manual )
-set( TARGET_ROOT ${topdir}/manual )
+set( TARGET_ROOT ${CMAKE_SOURCE_DIR}/manual )
 
 message( STATUS "========== Configuring ${TARGET} ==========" )
 
@@ -13,7 +13,7 @@ endif()
 set( host "alphamanual.audacityteam.org" )
 set( src "https://${host}/man" )
 set( dst "${_DEST}/help/manual" )
-set( script_dir "${topdir}/scripts/mw2html_audacity" )
+set( script_dir "${CMAKE_SOURCE_DIR}/scripts/mw2html_audacity" )
 set( script "mw2html.py" )
 set( out_dir "${_INTDIR}" )
 set( out "${out_dir}/${host}/index.html" )
