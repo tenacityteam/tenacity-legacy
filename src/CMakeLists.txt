@@ -1346,7 +1346,7 @@ target_link_options( ${TARGET} PRIVATE ${LDFLAGS} )
 target_link_libraries( ${TARGET} ${LIBRARIES} )
 target_link_libraries( ${TARGET} PUBLIC ${AUDACITY_LIBRARIES} )
 
-if( CMAKE_VERSION VERSION_GREATER_EQUAL "3.16" AND NOT CCACHE_PROGRAM )
+if( CMAKE_VERSION VERSION_GREATER_EQUAL "3.16" AND NOT CCACHE_PROGRAM AND NOT SCCACHE_PROGRAM )
    if( ${_OPT}use_pch )
       message( STATUS "Using precompiled headers" )
       target_precompile_headers( ${TARGET} PRIVATE
