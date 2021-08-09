@@ -918,26 +918,6 @@ void ToolDock::OnPaint( wxPaintEvent & WXUNUSED(event) )
       if (!toolbar)
          continue;
 
-      wxRect r = toolbar->GetRect();
-
-      // Draw a horizontal line under the bar extending to the right edge of
-      // the dock
-      AColor::Line( dc,
-                   r.GetLeft(),
-                   r.GetBottom() + 1,
-                   sz.GetWidth(),
-                   r.GetBottom() + 1 );
-
-      // For all bars but the last...
-      // ...and for bars that aren't the last in a row, draw a
-      // vertical gap line
-      if (!mConfiguration.IsRightmost(toolbar)) {
-         AColor::Line(dc,
-            r.GetRight() + 1,
-            r.GetTop(),
-            r.GetRight() + 1,
-            r.GetBottom() + 1 );
-      }
    }
 }
 
