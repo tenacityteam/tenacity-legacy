@@ -14,37 +14,32 @@ jobs:
   build:
     name: ${{ matrix.config.name }}
     runs-on: ${{ matrix.config.os }}
-    env:
-      AUDACITY_CMAKE_GENERATOR: ${{ matrix.config.generator }}
-      AUDACITY_ARCH_LABEL: ${{ matrix.config.arch }}
-      # Windows codesigning
-      # This variables will be used by all the steps
-      WINDOWS_CERTIFICATE: ${{ secrets.WINDOWS_CERTIFICATE }}
-      WINDOWS_CERTIFICATE_PASSWORD: ${{ secrets.WINDOWS_CERTIFICATE_PASSWORD }}
-      # Conan home location to be used for cache action
-      CONAN_USER_HOME: "${{ github.workspace }}/conan-home/"
-      CONAN_USER_HOME_SHORT: "${{ github.workspace }}/conan-home/short"
     strategy:
       fail-fast: false
       matrix:
         config:
 
-        - name: Ubuntu_18.04
-          os: ubuntu-18.04
+        - name: Ubuntu_20.04
+          os: ubuntu-20.04
           arch: x86_64 # as reported by `arch` or `uname -m`
-          generator: Unix Makefiles
           compiler_cache: ccache
           compiler_cache_path: ~/.ccache
+          vcpkg_binary_cache: ~/.cache/vcpkg
+          vcpkg_triplet: x64-linux
+          wxwidgets_git_url: https://github.com/wxWidgets/wxWidgets.git
+          wxwidgets_git_ref: v3.1.5
+          WX_CONFIG: /home/runner/work/tenacity/tenacity/wxwidgets-install/bin/wx-config
 
         - name: macOS_Intel
           os: macos-latest
           arch: Intel # as reported by Apple menu > About This Mac
-          generator: Unix Makefiles
-          # LAME only builds in Conan when not using the Xcode generator if explicitly setting GCC
-          cc: gcc
-          cxx: g++
           compiler_cache: ccache
           compiler_cache_path: ~/Library/Caches/ccache
+          vcpkg_binary_cache: ~/.cache/vcpkg
+          vcpkg_triplet: x64-osx-10.12min
+          wxwidgets_git_url: https://github.com/wxWidgets/wxWidgets.git
+          wxwidgets_git_ref: v3.1.5
+          WX_CONFIG: /Users/runner/work/tenacity/tenacity/wxwidgets-install/bin/wx-config
 
         - name: Windows_32bit
           os: windows-latest
@@ -52,9 +47,11 @@ jobs:
           # required so CMake uses MSVC rather than MinGW
           cc: cl
           cxx: cl
-          generator: Ninja
           compiler_cache: sccache
           compiler_cache_path: C:\Users\runneradmin\AppData\Local\Mozilla\sccache\cache
+          vcpkg_binary_cache: C:\Users\runneradmin\AppData\Local\vcpkg
+          vcpkg_triplet: x86-windows
+          exe_suffix: .exe
 
         - name: Windows_64bit
           os: windows-latest
@@ -62,27 +59,38 @@ jobs:
           # required so CMake uses MSVC rather than MinGW
           cc: cl
           cxx: cl
-          generator: Ninja
           compiler_cache: sccache
           compiler_cache_path: C:\Users\runneradmin\AppData\Local\Mozilla\sccache\cache
+          vcpkg_binary_cache: C:\Users\runneradmin\AppData\Local\vcpkg
+          vcpkg_triplet: x64-windows
+          exe_suffix: .exe
+
+    env:
+      CMAKE_BUILD_TYPE: RelWithDebInfo
+      CMAKE_C_COMPILER_LAUNCHER: ${{ matrix.config.os.compiler_cache }}
+      CMAKE_CXX_COMPILER_LAUNCHER: ${{ matrix.config.os.compiler_cache }}
+      MACOSX_DEPLOYMENT_TARGET: 10.12
+
+      VCPKG_DISABLE_METRICS: true
+      VCPKG_DEFAULT_TRIPLET: ${{ matrix.config.vcpkg_triplet }}
+
+      # Windows codesigning
+      # This variables will be used by all the steps
+      WINDOWS_CERTIFICATE: ${{ secrets.WINDOWS_CERTIFICATE }}
+      WINDOWS_CERTIFICATE_PASSWORD: ${{ secrets.WINDOWS_CERTIFICATE_PASSWORD }}
+
+      AUDACITY_ARCH_LABEL: ${{ matrix.config.arch }}
 
     steps:
 
-    - name: Checkout
+    - name: Checkout Git repository
       uses: actions/checkout@v2
+      with:
+        submodules: true
 
-    - name: Add conan to path
-      if: runner.os == 'Windows'
-      run: echo "C:\Program Files\Conan\conan\" | Out-File -FilePath $env:GITHUB_PATH -Encoding utf8 -Append
-      shell: pwsh
-
-    - name: Dependencies
+    - name: Install dependencies
       run: |
         exec bash "scripts/ci/dependencies.sh"
-
-    - name: Environment
-      run: |
-        source "scripts/ci/environment.sh"
 
     - name: Install Apple codesigning certificates
       uses: apple-actions/import-codesign-certs@v1
@@ -98,10 +106,52 @@ jobs:
       with:
         arch: ${{ matrix.config.arch }}
 
-    # Having this in PATH breaks building LAME in Conan when not using Visual Studio CMake generator
-    - name: "[Windows] Remove MinGW link"
+    - name: Get Git commit of vcpkg submodule
+      run: echo VCPKG_COMMIT=$(git ls-tree HEAD vcpkg | awk '{print $3}') >> ${GITHUB_ENV}
+
+    - name: Setup vcpkg cache
+      uses: actions/cache@v2
+      with:
+        # cache the vcpkg executable to avoid having to bootstrap vcpkg every time
+        path: |
+          ${{ github.workspace }}/vcpkg/vcpkg${{ matrix.config.exe_suffix }}
+          ${{ matrix.config.vcpkg_binary_cache }}
+        key: ${{ matrix.config.name }}-${{ hashFiles('**/vcpkg.json') }}-${{ env.VCPKG_COMMIT }}-${{ github.run_number }}
+        restore-keys: |
+          ${{ matrix.config.name }}-${{ hashFiles(' **/vcpkg.json') }}-${{ env.VCPKG_COMMIT }}-
+          ${{ matrix.config.name }}-${{ hashFiles(' **/vcpkg.json') }}-
+          ${{ matrix.config.name }}-
+
+    # FIXME: hack around bad SSL certificate, needed to build ffmpeg
+    # https://github.com/microsoft/vcpkg/issues/19121
+    - name: "[Windows] Install yasm"
       if: runner.os == 'Windows'
-      run: rm "C:/Program Files/Git/usr/bin/link.EXE"
+      run: |
+        mkdir -p "vcpkg/downloads/tools/yasm/1.3.0.6"
+        curl -k -o "vcpkg/downloads/tools/yasm/1.3.0.6/yasm.exe" \
+          "http://www.tortall.net/projects/yasm/snapshots/v1.3.0.6.g1962/yasm-1.3.0.6.g1962.exe"
+
+    - name: "Set up wxwidgets cache"
+      uses: actions/cache@v2
+      id: wxwidgets-cache
+      if: runner.os != 'Windows'
+      with:
+        path: ${{ github.workspace }}/wxwidgets-install
+        key: ${{ matrix.config.os }}-${{ matrix.config.arch }}-${{ matrix.config.wxwidgets_git_url }}-${{ matrix.config.wxwidgets_git_ref }}
+
+    # FIXME: use wxWidgets from vcpkg for all OSes when bugs are fixed for Linux and macOS
+    # https://github.com/microsoft/vcpkg/pull/17111
+    - name: Build and install wxWidgets
+      if: steps.wxwidgets-cache.outputs.cache-hit != 'true' && runner.os != 'Windows'
+      run: |
+        # wxWidgets' build system does not find dependencies from vcpkg, so use its vendored Git submodules
+        git clone --recurse-submodules ${{ matrix.config.wxwidgets_git_url }}
+        cd wxWidgets
+        git checkout ${{ matrix.config.wxwidgets_git_ref }}
+        cmake -G Ninja -D CMAKE_INSTALL_PREFIX=${{ github.workspace }}/wxwidgets-install \
+          -S . -B cmake_build
+        cmake --build cmake_build
+        cmake --install cmake_build
 
     - name: "Set up compiler cache"
       uses: actions/cache@v2
@@ -112,25 +162,15 @@ jobs:
           ${{ matrix.config.os }}-${{ matrix.config.arch }}-${{ github.head_ref }}-
           ${{ matrix.config.os }}-${{ matrix.config.arch }}-
 
-    - name: Cache for .conan
-      id: cache-conan
-      uses: actions/cache@v2
-      env:
-        cache-name: cache-conan-modules
-      with:
-        path: ${{ env.CONAN_USER_HOME }}
-        key: host-${{ matrix.config.name }}-${{ hashFiles('cmake-proxies/CMakeLists.txt') }}
-        restore-keys: |
-          host-${{ matrix.config.name }}-
-
-      # Install scdoc with conan TODO: Move conan pkg to own repo
-    - name: "[Linux] Install scdoc"
-      if: runner.os == 'Linux'
-      run: |
-        conan remote add -f rigs-of-rods-deps https://conan.cloudsmith.io/rigs-of-rods/deps/
-        conan install scdoc/1.11.1@anotherfoxguy/stable -g=virtualenv --build=missing
-
     - name: Configure
+      run: >-
+        cmake
+        -G Ninja
+        -D CMAKE_BUILD_TYPE=${{ env.CMAKE_BUILD_TYPE }}
+        -D CMAKE_INSTALL_PREFIX=${{ github.workspace }}/build/install
+        -D VCPKG=ON
+        -S .
+        -B build
       env:
         # Apple code signing
         APPLE_CODESIGN_IDENTITY: ${{ secrets.APPLE_CODESIGN_IDENTITY }}
@@ -138,29 +178,46 @@ jobs:
         APPLE_NOTARIZATION_PASSWORD: ${{ secrets.APPLE_NOTARIZATION_PASSWORD }}
         CC: ${{ matrix.config.cc }}
         CXX: ${{ matrix.config.cxx }}
-      run: |
-        exec bash "scripts/ci/configure.sh"
+        # hack to get CMake to find wxWidgets until vcpkg wxWidgets port is fixed
+        # https://github.com/microsoft/vcpkg/pull/17111
+        WX_CONFIG: ${{ matrix.config.WX_CONFIG }}
 
     - name: Build
-      run: |
-        exec bash "scripts/ci/build.sh"
+      run: cmake --build build --config ${{ env.CMAKE_BUILD_TYPE }} --verbose
 
     - name: "Print compiler cache stats"
       run: ${{ matrix.config.compiler_cache }} -s
 
     - name: Install
-      run: |
-        exec bash "scripts/ci/install.sh"
+      run: cmake --install build --config ${{ env.CMAKE_BUILD_TYPE }} --verbose
 
-    - name: Package
-      run: |
-        exec bash "scripts/ci/package.sh"
+    - name: "[Windows] Package"
+      if: runner.os == 'Windows'
+      run: cmake --build build --target innosetup --config ${{ env.CMAKE_BUILD_TYPE }}
 
-    - name: Upload artifact
+    - name: "[Ubuntu/macOS] Package"
+      if: runner.os != 'Windows'
+      working-directory: build
+      run: >-
+        cpack
+        -C ${{ env.CMAKE_BUILD_TYPE }}
+        -D CPACK_COMMAND_HDIUTIL=${{ github.workspace }}/scripts/ci/macos/repeat_hdiutil.sh
+        --verbose
+        && rm -r package/_CPack_Packages
+      env:
+        # Required for linuxdeploy to find wxWidgets libraries installed without a package manager
+        WXWIDGETS_LD_LIBRARY_PATH: ${{ github.workspace }}/wxwidgets-install/lib
+
+    - name: Upload package artifact
       uses: actions/upload-artifact@v2
       with:
         name: Tenacity_${{ matrix.config.name }}_${{ github.run_id }}_${{ env.GIT_HASH_SHORT }}
-        path: |
-          build/package/*
-          !build/package/_CPack_Packages
+        path: build/package/*
         if-no-files-found: error
+
+    - name: Upload artifact of vcpkg build logs
+      if: always()
+      uses: actions/upload-artifact@v2
+      with:
+        name: vcpkg-logs-${{ runner.os }}
+        path: ${{ github.workspace }}/vcpkg/buildtrees/**/*.log

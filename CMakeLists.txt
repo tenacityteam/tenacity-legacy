@@ -14,6 +14,54 @@
 # generator expressions.
 cmake_minimum_required( VERSION 3.15 )
 
+find_package(Git)
+
+if(WIN32 OR APPLE)
+  option(VCPKG "Use vcpkg for dependencies" ON)
+else()
+  option(VCPKG "Use vcpkg for dependencies" OFF)
+endif()
+
+if(VCPKG)
+  set(ENV{VCPKG_DISABLE_METRICS} true)
+
+  if(VCPKG_ROOT)
+    message(STATUS "Using dependencies from vcpkg repository at ${VCPKG_ROOT}")
+    if(NOT EXISTS "${VCPKG_ROOT}/bootstrap-vcpkg.sh")
+      message(FATAL_ERROR "${VCPKG_ROOT} is not a vcpkg Git repository.")
+    endif()
+  else()
+    message(STATUS "Using dependencies from vcpkg Git submodule")
+    set(VCPKG_ROOT "${CMAKE_SOURCE_DIR}/vcpkg")
+
+    if(NOT EXISTS "${VCPKG_ROOT}/bootstrap-vcpkg.sh")
+      message(STATUS "Initializing vcpkg Git submodule")
+      execute_process(COMMAND ${GIT_EXECUTABLE} submodule init WORKING_DIRECTORY "${CMAKE_SOURCE_DIR}")
+      execute_process(COMMAND ${GIT_EXECUTABLE} submodule update WORKING_DIRECTORY "${CMAKE_SOURCE_DIR}")
+    endif()
+  endif()
+
+  if(NOT DEFINED VCPKG_OVERLAY_PORTS)
+    set(VCPKG_OVERLAY_PORTS "${VCPKG_ROOT}/overlay/ports")
+  endif()
+
+  if(NOT DEFINED VCPKG_OVERLAY_TRIPLETS)
+    set(VCPKG_OVERLAY_TRIPLETS "${VCPKG_ROOT}/overlay/triplets")
+  endif()
+
+  if(NOT DEFINED ENV{VCPKG_DEFAULT_TRIPLET} AND NOT DEFINED VCPKG_TARGET_TRIPLET)
+    if(APPLE)
+      set(VCPKG_TARGET_TRIPLET "x64-osx-10.12min")
+    endif()
+  elseif(DEFINED ENV{VCPKG_DEFAULT_TRIPLET})
+    set(VCPKG_TARGET_TRIPLET "$ENV{VCPKG_DEFAULT_TRIPLET}")
+  endif()
+
+  set(CMAKE_TOOLCHAIN_FILE "${VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake")
+else()
+  message(STATUS "Searching for dependencies from system, not using vcpkg.")
+endif()
+
 # If building with GNU compiler, then must be 4.9 or later.
 if (CMAKE_CXX_COMPILER_ID STREQUAL "GNU" AND
     CMAKE_CXX_COMPILER_VERSION VERSION_LESS "4.9")
@@ -108,6 +156,10 @@ set( CMAKE_PREFIX_PATH
 set( CMAKE_CXX_STANDARD 17 )
 set( CMAKE_CXX_STANDARD_REQUIRED ON )
 
+include( CMakeDependentOption )
+
+project( Tenacity )
+
 # Use ccache if available
 find_program( CCACHE_PROGRAM ccache )
 mark_as_advanced( FORCE CCACHE_PROGRAM )
@@ -126,11 +178,6 @@ elseif( SCCACHE_PROGRAM )
 else()
    message( STATUS "Could NOT find ccache nor sccache, no compiler caching enabled" )
 endif()
-
-include( CMakeDependentOption )
-
-# Our very own project
-project( Tenacity )
 
 # Load our functions/macros
 include( AudacityFunctions )
@@ -213,7 +260,6 @@ set( AUDACITY_VERSION 0 )
 set( AUDACITY_RELEASE 0 )
 set( AUDACITY_REVISION 0 )
 set( GIT_DESCRIBE "unknown" )
-find_package( Git QUIET )
 if( GIT_FOUND )
     execute_process(
         COMMAND
@@ -633,19 +679,31 @@ endif()
 if(NOT CMAKE_SYSTEM_NAME MATCHES "Darwin|Windows")
     find_package(GLIB REQUIRED)
     find_package(GTK 3.0 REQUIRED)
+
 endif()
 
-set(wxWidgets_CONFIG_OPTIONS --version=3.1)
-find_package(wxWidgets 3.1 REQUIRED COMPONENTS adv base core html qa xml net)
-include(${wxWidgets_USE_FILE})
-# The FindwxWidgets.cmake module does not create an IMPORT target, so hack one together.
-# This makes it easy to add the compile definitions to the lib-strings and lib-strings-utils targets.
-if(NOT TARGET wxWidgets::wxWidgets)
-  add_library(wxWidgets::wxWidgets INTERFACE IMPORTED)
-  target_link_libraries(wxWidgets::wxWidgets INTERFACE ${wxWidgets_LIBRARIES})
-  target_compile_definitions(wxWidgets::wxWidgets INTERFACE ${wxWidgets_DEFINITIONS} ${wxWidgets_DEFINITIONS_DEBUG})
-  if(WIN32)
-    target_compile_definitions(wxWidgets::wxWidgets INTERFACE WXUSINGDLL)
+if(NOT WIN32)
+  set(wxWidgets_CONFIG_OPTIONS --version=3.1)
+  find_package(wxWidgets 3.1 COMPONENTS adv base core html qa xml net)
+  include(${wxWidgets_USE_FILE})
+  # The FindwxWidgets.cmake module does not create an IMPORT target, so hack one together.
+  # This makes it easy to add the compile definitions to the lib-strings and lib-strings-utils targets.
+  if(NOT TARGET wxWidgets::wxWidgets)
+    add_library(wxWidgets::wxWidgets INTERFACE IMPORTED)
+    target_link_libraries(wxWidgets::wxWidgets INTERFACE ${wxWidgets_LIBRARIES})
+    target_compile_definitions(wxWidgets::wxWidgets INTERFACE ${wxWidgets_DEFINITIONS} ${wxWidgets_DEFINITIONS_DEBUG})
+  endif()
+else()
+  # On Windows we are using wxWidgets from an unmerged vcpkg branch in our vcpkg overlay
+  # https://github.com/microsoft/vcpkg/pull/17111
+  # This requires using 'unofficial-wxWidgets' rather than simply 'wxWidgets'.
+  # This is required for CMAKE_BUILD_TYPE=Debug to work. Refer to
+  # https://github.com/microsoft/vcpkg/issues/18066
+  # for background about the bug.
+  find_package(unofficial-wxWidgets COMPONENTS adv base core html qa xml net)
+  if(NOT TARGET wxWidgets::wxWidgets)
+    add_library(wxWidgets::wxWidgets INTERFACE IMPORTED)
+    target_link_libraries(wxWidgets::wxWidgets INTERFACE wx::wxadv wx::wxbase wx::wxcore wx::wxhtml wx::wxqa wx::wxxml wx::wxnet)
   endif()
 endif()
 
