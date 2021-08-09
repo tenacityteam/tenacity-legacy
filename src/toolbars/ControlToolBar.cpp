@@ -466,8 +466,6 @@ void ControlToolBar::Repaint( wxDC *dc )
    wxSize s = mSizer->GetSize();
    wxPoint p = mSizer->GetPosition();
 
-   wxRect bevelRect( p.x, p.y, s.GetWidth() - 1, s.GetHeight() - 1 );
-   AColor::Bevel( *dc, true, bevelRect );
 #endif
 }
 
