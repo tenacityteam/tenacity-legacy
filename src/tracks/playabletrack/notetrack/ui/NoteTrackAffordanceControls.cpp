@@ -8,6 +8,8 @@
 
  **********************************************************************/
 
+#ifdef USE_MIDI
+
 #include "NoteTrackAffordanceControls.h"
 
 #include <wx/dc.h>
@@ -91,3 +93,4 @@ bool NoteTrackAffordanceControls::IsSelected() const
     }
     return false;
 }
+#endif // USE_MIDI
