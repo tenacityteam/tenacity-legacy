@@ -34,6 +34,5 @@ public:
 // The void * return is actually a Lisp LVAL and will be cast to such as needed.
 extern void * ExecForLisp( char * pIn );
 extern void * nyq_make_opaque_string( int size, unsigned char *src );
-extern void * nyq_reformat_aud_do_response(const wxString & Str);
 
 #endif /* End of include guard: __SCRIPT_COMMAND_RELAY__ */

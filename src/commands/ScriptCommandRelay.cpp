@@ -89,6 +89,20 @@ void ScriptCommandRelay::StartScriptServer(tpRegScriptServerFunc scriptFn)
    std::thread(server, scriptFn).detach();
 }
 
+// FIXME: Why is this mixing private libnyquist symbols with wxString???????
+#include "../../lib-src/libnyquist/nyquist/xlisp/xlisp.h"
+void * nyq_reformat_aud_do_response(const wxString & Str) {
+   LVAL dst;
+   LVAL message;
+   LVAL success;
+   wxString Left = Str.BeforeLast('\n').BeforeLast('\n').ToAscii();
+   wxString Right = Str.BeforeLast('\n').AfterLast('\n').ToAscii();
+   message = cvstring(Left);
+   success = Right.EndsWith("OK") ? s_true : nullptr;
+   dst = cons(message, success);
+   return (void *)dst;
+}
+
 void * ExecForLisp( char * pIn )
 {
    wxString Str1(pIn);

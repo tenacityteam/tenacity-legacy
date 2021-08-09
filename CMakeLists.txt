@@ -91,6 +91,7 @@ set( CMAKE_MODULE_PATH
    ${AUDACITY_MODULE_PATH}
    ${CMAKE_BINARY_DIR}
    ${CMAKE_MODULE_PATH}
+   "${CMAKE_SOURCE_DIR}/cmake-modules"
 )
 
 set( CMAKE_PREFIX_PATH
@@ -128,11 +129,6 @@ endif()
 
 include( CMakeDependentOption )
 
-# Test if conan is installed
-find_program(CONAN_CMD_TEST conan NO_CACHE)
-cmake_dependent_option(USE_CONAN "Build without conan" ON "NOT CONAN_CMD_TEST STREQUAL CONAN_CMD_TEST-NOTFOUND" OFF)
-message("Using conan: ${USE_CONAN}")
-
 # Our very own project
 project( Tenacity )
 
@@ -140,21 +136,6 @@ project( Tenacity )
 include( AudacityFunctions )
 
 set_from_env(AUDACITY_ARCH_LABEL) # e.g. x86_64
-
-# Allow user to globally set the library preference
-cmd_option( ${_OPT}lib_preference
-            "Library preference [system (if available), local]"
-            "local"
-            STRINGS "system" "local"
-)
-
-# Special mode, that will force dependencies to the packages provided by system unless they were set to local explicitly.
-cmd_option( ${_OPT}obey_system_dependencies
-            "Use system packages to satisfy dependencies"
-            Off
-)
-
-include( AudacityDependencies )
 
 # Pull all the modules we'll need
 include( CheckCXXCompilerFlag )
@@ -511,11 +492,165 @@ endif()
 # Do this before consistency checks for added third-party libraries
 include( "src/Experimental.cmake" )
 
-# Add our children
-add_subdirectory( "cmake-proxies" )
+find_package(Threads REQUIRED)
+find_package(ZLIB REQUIRED)
+find_package(EXPAT REQUIRED)
+find_package(mp3lame REQUIRED)
+find_package(SndFile REQUIRED)
+find_package(Soxr REQUIRED)
+find_package(SQLite3 REQUIRED)
+find_package(PortAudio REQUIRED)
 
-# Conan uses find_package and does not set GLOBAL flag
-resolve_conan_dependencies()
+find_package(PortMidi)
+find_package(PortSMF)
+cmake_dependent_option(MIDI "MIDI support requires PortMidi and PortSMF." ON "PortMidi_FOUND;PortSMF_FOUND" OFF)
+if(MIDI)
+    set(USE_MIDI ON)
+    message(STATUS "MIDI support enabled.")
+else()
+    message(STATUS "MIDI support disabled. Requires both PortMidi and PortSMF.")
+endif()
+
+find_package(id3tag)
+cmake_dependent_option(ID3TAG "ID3 Tag support for MP3s." ON "id3tag_FOUND" OFF)
+if(ID3TAG)
+    set(USE_LIBID3TAG ON)
+    message(STATUS "ID3 tag support for MP3s enabled.")
+else()
+    message(STATUS "ID3 tag support for MP3s disabled. Requires libid3tag.")
+endif()
+
+find_package(MAD)
+cmake_dependent_option(MP3_DECODING "MP3 decoding support with libmad" ON "MAD_FOUND" OFF)
+if(MP3_DECODING)
+    set(USE_LIBMAD ON)
+    message(STATUS "MP3 decoding support enabled.")
+else()
+    message(STATUS "MP3 decoding support disabled. Requires libmad.")
+endif()
+
+find_package(libtwolame)
+cmake_dependent_option(MP2 "MP2 support with Twolame" ON "libtwolame_FOUND" OFF)
+if(MP2)
+    set(USE_LIBTWOLAME ON)
+    message(STATUS "MP2 encoding support enabled.")
+else()
+    message(STATUS "MP2 encoding support disabled. Requires Twolame library.")
+endif()
+
+find_package(Ogg)
+cmake_dependent_option(OGG "OGG container format support" ON "Ogg_FOUND" OFF)
+if(OGG)
+    set(USE_LIBOGG ON)
+    message(STATUS "OGG container format support enabled.")
+else()
+    message(STATUS "OGG container format support disabled. Requires libogg.")
+endif()
+
+find_package(Vorbis)
+cmake_dependent_option(VORBIS "Vorbis codec support" ON "Vorbis_FOUND" OFF)
+if(VORBIS)
+    set(USE_LIBVORBIS ON)
+    message(STATUS "Vorbis codec support enabled.")
+else()
+    message(STATUS "Voribs codec support disabled. Requires libvorbis.")
+endif()
+
+find_package(FLAC++)
+cmake_dependent_option(FLAC "FLAC codec support" ON "FLAC++_FOUND" OFF)
+if(FLAC)
+    set(USE_LIBFLAC ON)
+    message(STATUS "FLAC codec support enabled.")
+else()
+    message(STATUS "FLAC codec support disabled. Requires libflac and libflac++ C++ bindings.")
+endif()
+
+# FIXME: requires vendored fork of PortMixer which requires vendored fork of PortAudio
+# https://github.com/audacity/audacity/issues/840#issuecomment-837795388
+#find_package(PortMixer)
+#cmake_dependent_option(PORTMIXER "PortMixer support" ON "PortMixer_FOUND" OFF)
+#if(PORTMIXER)
+    #set(USE_PORTMIXER ON)
+    #message(STATUS "PortMixer support enabled.")
+#else()
+    #message(STATUS "PortMixer support disabled.")
+#endif()
+
+find_package(sbsms)
+cmake_dependent_option(SBSMS "SBSMS timestretching" ON "sbsms_FOUND" OFF)
+if(SBSMS)
+    set(USE_SBSMS ON)
+    message(STATUS "SBSMS timestretching support enabled.")
+else()
+    message(STATUS "SBSMS timestretching support disabled. Requires libsbsms.")
+endif()
+
+find_package(SoundTouch)
+cmake_dependent_option(SOUNDTOUCH "SoundTouch timestretching" ON "SoundTouch_FOUND" OFF)
+if(SOUNDTOUCH)
+    set(USE_SOUNDTOUCH ON)
+    message(STATUS "SoundTouch timestretching support enabled.")
+else()
+    message(STATUS "SoundTouch timestretching support disabled. Requires SoundTouch library.")
+endif()
+
+find_package(FFMPEG)
+cmake_dependent_option(FFMPEG "FFMPEG codecs support." ON "FFMPEG_FOUND" OFF)
+if(FFMPEG)
+    set(USE_FFMPEG ON)
+    message(STATUS "FFMPEG codecs support enabled.")
+else()
+    message(STATUS "FFMPEG codecs support disabled. Requires FFMPEG libraries.")
+endif()
+
+find_package(VampHostSDK)
+cmake_dependent_option(VAMP "VAMP plugin hosting." ON "VampHostSDK_FOUND" OFF)
+if(VAMP)
+    set(USE_VAMP ON)
+    message(STATUS "VAMP plugin hosting enabled.")
+else()
+    message(STATUS "VAMP plugin hosting disabled. Requires VAMP host SDK.")
+endif()
+
+find_package(LV2)
+find_package(lilv)
+find_package(suil)
+cmake_dependent_option(LV2 "LV2 plugin host support" ON "LV2_FOUND;lilv_FOUND;suil_FOUND" OFF)
+if(LV2)
+    message(STATUS "LV2 plugin hosting enabled.")
+    set(USE_LV2 ON)
+else()
+    message(STATUS "LV2 plugin hosting disabled. Requires LV2, lilv, and suil libraries.")
+endif()
+
+option(VST2 "VST2 plugin host support" ON)
+if(VST2)
+    message(STATUS "VST2 plugin host support enabled.")
+else()
+    message(STATUS "VST2 plugin host support disabled.")
+endif()
+
+if(NOT CMAKE_SYSTEM_NAME MATCHES "Darwin|Windows")
+    find_package(GLIB REQUIRED)
+    find_package(GTK 3.0 REQUIRED)
+endif()
+
+set(wxWidgets_CONFIG_OPTIONS --version=3.1)
+find_package(wxWidgets 3.1 REQUIRED COMPONENTS adv base core html qa xml net)
+include(${wxWidgets_USE_FILE})
+# The FindwxWidgets.cmake module does not create an IMPORT target, so hack one together.
+# This makes it easy to add the compile definitions to the lib-strings and lib-strings-utils targets.
+if(NOT TARGET wxWidgets::wxWidgets)
+  add_library(wxWidgets::wxWidgets INTERFACE IMPORTED)
+  target_link_libraries(wxWidgets::wxWidgets INTERFACE ${wxWidgets_LIBRARIES})
+  target_compile_definitions(wxWidgets::wxWidgets INTERFACE ${wxWidgets_DEFINITIONS} ${wxWidgets_DEFINITIONS_DEBUG})
+  if(WIN32)
+    target_compile_definitions(wxWidgets::wxWidgets INTERFACE WXUSINGDLL)
+  endif()
+endif()
+
+add_subdirectory(lib-src/libnyquist)
+set(USE_NYQUIST ON)
 
 add_subdirectory( "help" )
 add_subdirectory( "images" )
