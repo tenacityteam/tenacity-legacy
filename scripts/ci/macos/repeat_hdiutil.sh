@@ -4,7 +4,7 @@
 
 set -uo pipefail
 
-max_retry=5
+max_retry=10
 counter=0
 num_secs_await_retry=5
 
