@@ -1,3 +1,12 @@
+#                 /\_/\
+#        ________(' - ')
+#  _____(              )
+# /     (______________)
+# '     | |          | |
+#       | |          | |  hello
+#       '"'          '"'
+
+
 # If you want built-in precompiled header support
 # then make sure you have cmake 3.16 or higher.
 #
