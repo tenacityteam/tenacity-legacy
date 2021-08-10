@@ -2,196 +2,242 @@
 
 ## Prerequisites
 
-* **python3** >= 3.5
-* **conan** >= 1.32.0
-* **cmake** >= 3.16
-* A working C++ 14 compiler
+### Linux
 
-### Conan
+Most distributions do not package all of Tenacity's dependencies (yet).
+wxWidgets 3.1 is required for building Tenacity but many distributions only
+package wxWidgets 3.0. [PortMidi](https://github.com/mixxxdj/portmidi) and
+[PortSMF](https://github.com/tenacityteam/portsmf) are required for MIDI support
+but some distributions do not package PortSMF (Tenacity can still build without
+MIDI support). [libsbsms](https://github.com/claytonotey/libsbsms) is an
+optional dependency used for time stretching that is not available in many Linux
+distribution package managers either. Optionally,
+[vcpkg can be used](#vcpkg-on-Linux) to build dependencies from source which
+may be helpful if your distribution is missing some packages.
 
-[The best way to install Conan is `pip`.](https://docs.conan.io/en/latest/installation.html)
+Installing ccache and ninja-build is highly recommended for faster builds but
+not required. CMake will automatically use ccache if it is installed.
 
-To install Conan on Windows:
+#### Debian, Ubuntu, and derived distributions
+
+To install Tenacity's dependencies, run:
 
 ```
-$ pip install conan
+sudo apt-get install build-essential libavcodec-dev libavformat-dev libavutil-dev libflac++-dev libglib2.0-dev libgtk-3-dev libid3tag0-dev libjack-dev liblilv-dev libmad0-dev libmp3lame-dev libogg-dev libpng-dev portaudio19-dev libportmidi-dev libportsmf-dev libserd-dev libsndfile1-dev libsord-dev libsoundtouch-dev libsoxr-dev libsuil-dev libtwolame-dev vamp-plugin-sdk libvorbis-dev lv2-dev zlib1g-dev cmake ninja-build libjpeg-dev libtiff-dev liblzma-dev libsqlite3-dev
 ```
 
-To install Conan on macOS and Linux:
+wxWidgets 3.1 is required but not packaged in Debian or Ubuntu. Refer
+to the
+[wxWidgets documentation](https://docs.wxwidgets.org/3.1/overview_cmake.html)
+for how to install it from source code. The above package list
+includes wxWidgets' build dependencies. If you install wxWidgets
+somewhere other than the default /usr/local, you need to set the
+`WX_CONFIG` environment variable to the location of the `wx-config`
+script installed by wxWidgets to get CMake to find wxWidgets 3.1. For
+example, if you installed wxWidgets to /home/user/local:
 
 ```
-$ sudo pip3 install conan
+export WX_CONFIG=/home/user/local/bin/wx-config
 ```
 
-Alternatively, on macOS, Conan is available from `brew`.
+#### Fedora
 
-### CMake
+First, if you want to build Tenacity with FFmpeg support, enable the
+[RPM Fusion](https://rpmfusion.org/) free repository if you do not
+have enabled already. The nonfree RPM Fusion repository is not
+required. If you do not mind building without FFmpeg support,
+RPM Fusion is not required and this first step can be skipped (also
+remove `ffmpeg-devel` from the end of the package list in the second
+step below).
 
-On Windows, please use the [prebuilt binaries](https://cmake.org/download/).
+```
+sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
+```
 
-On macOS, the easiest way to install CMake is `brew install cmake`.
+Then install Tenacity's dependencies:
 
-On Linux, `cmake` is usually available from the system package manager.
+```
+sudo dnf install alsa-lib-devel cmake expat-devel flac-devel gcc-g++ gettext-devel lame-devel libid3tag-devel libmad-devel libogg-devel libsndfile-devel libvorbis-devel lilv-devel lv2-devel portaudio-devel portmidi-devel serd-devel sord-devel soundtouch-devel soxr-devel sqlite-devel sratom-devel suil-devel taglib-devel twolame-devel vamp-plugin-sdk-devel wxGTK-devel zlib-devel ccache ninja-build git ffmpeg-devel
+```
+
+If you use a high DPI screen, the wxWidgets 3.1.4 package in Fedora does
+not work well for that. You can compile wxWidgets 3.1.5 instead of using
+the Fedora package. Refer to the
+[wxWidgets documentation](https://docs.wxwidgets.org/3.1/overview_cmake.html)
+for details. If you install wxWidgets somewhere other than the default
+/usr/local, you need to set the `WX_CONFIG` environment variable to
+the location of the `wx-config` script installed by wxWidgets to get
+CMake to find wxWidgets 3.1. For example, if you installed wxWidgets to
+/home/user/local:
+
+```
+export WX_CONFIG=/home/user/local/bin/wx-config
+```
+
+#### Arch
+
+Install `wxgtk3-dev-light` with your AUR helper of choice, for example:
+
+```
+paru -S wxgtk3-dev-light
+```
+
+CMake requires explicitly specifying the path to the wx-config script from
+this AUR package:
+
+```
+export WX_CONFIG=/usr/bin/wx-config-gtk3-3.1
+```
+
+Install the rest of the build dependencies from the main Arch repository:
+
+```
+sudo pacman -S cmake ninja ccache expat gcc-libs gdk-pixbuf2 glibc flac gtk3 glib2 libid3tag lilv libmad libogg portaudio portmidi libsndfile libsoxr suil twolame vamp-plugin-sdk libvorbis soundtouch ffmpeg
+```
+
+TODO: add portsmf and sbsms to this package list when those packages are updated.
+
+#### vcpkg on Linux
+
+Optionally, you can build dependencies from source using vcpkg, with the
+exception of wxWidgets due to
+[bugs in vcpkg's wxwidgets package](https://github.com/microsoft/vcpkg/pull/17111).
+vcpkg is not set up to build GTK or GLib either. To use vcpkg for
+dependencies, pass `-D VCPKG=ON` to the CMake configure command. You will need
+[nasm](https://www.nasm.us/) installed to build ffmpeg from vcpkg which you can
+install from your distribution's package manager. If you use vcpkg, you need to
+set the `WX_CONFIG` environment variable to the path of the wx-config script
+installed by wxWidgets. For example, if you installed wxWidgets to /usr/local:
+
+```
+export WX_CONFIG=/usr/local/bin/wx-config
+```
+
+If you switch between system packages and vcpkg, you may need to delete
+`CMakeCache.txt` inside your CMake build directory.
 
 ### Windows
 
-We build Tenacity using [Microsoft Visual Studio 2019](https://visualstudio.microsoft.com/vs/community/). In order to build Tenacity **Desktop development with C++** workload is required.
+Install
+[Microsoft Visual Studio](https://visualstudio.microsoft.com/vs/community/)
+with the **Desktop development with C++** installation option.
 
-As we require only C++14 - MSVC 2017 should work just fine too.
-
-### MacOS
-
-We build Tenacity using XCode 12. However, it is likely possible to build it with XCode 7.
-
-### Linux
-
-We use GCC 9, but any C++14 compliant compiler should work.
-
-On Debian or Ubuntu, you can install everything required using the following commands:
+Installing [sccache](https://github.com/mozilla/sccache) is highly recommended
+for faster builds but not required. CMake will automatically use sccache if you
+have it installed. You can install it from
+[Chocolatey](https://community.chocolatey.org/packages/sccache):
 
 ```
-$ sudo apt-get update
-$ sudo apt-get install -y build-essential cmake git python3-pip
-$ sudo pip3 install conan
-$ sudo apt-get install libgtk2.0-dev libasound2-dev libavformat-dev libjack-jackd2-dev uuid-dev
+choco install sccache
 ```
 
-## Building on Windows
-
-1. Clone Tenacity from the Tenacity GitHub project. 
-  
-   For example, in the **git-bash** run:
-
-    ```
-    $ git clone https://github.com/tenacityteam/tenacity/
-    ```
-
-2. Open CMake GUI. 
-   
-   Set the **Where is the source code** to the location where Tenacity was cloned. 
-   
-   Set **Where to build the binaries** to the location you want to place your build in. It is preferred that this location is not within the directory with the source code.
-
-3. Press **Configure**. You can choose which version of Visual Studio to use and the platform to build for in the pop-up. We support **x64** and **Win32** platforms. The **x64** platform is a default option. Press **Finish** to start the configuration process.
-
-4. After successful configuration, you will see `Configuring done` in the last line of the log. Press **Generate** to generate the Visual Studio project. 
-
-5. After you see "Generating done", press **Open Project** to open the project in Visual Studio.
-   
-6. Select "Build -> Build Solution".
-   
-7. You can now run and debug Tenacity!
-      
-Generally, steps 1-5 are only needed the first-time you configure. Then, after you've generated the solution, you can open it in Visual Studio next time. If the project configuration has changed, the IDE will invoke CMake internally. 
-
-> Conan Center provides prebuilt binaries only for **x64**. Configuring the project for Win32 will take much longer, as all the 3rd party libraries will be built during the configuration.
-
-## macOS
-
-1. Clone Tenacity from the Tenacity GitHub project. 
-  
-    ```
-    $ git clone https://github.com/tenacityteam/tenacity/
-    ```
-
-2. Configure Tenacity using CMake:
-   ```
-   $ mkdir build && cd build
-   $ cmake -GXcode -T buildsystem=1 ../tenacity
-   ```
-
-3. Open the created XCode project:
-   ```
-   $ open Audacity.xcodeproj
-   ```
-   and build using the XCode IDE. 
-
-Steps 1 and 2 are only required for first-time builds. 
-
-Alternatively, you can use **CLion**. If you chose to do so, open the directory where you have cloned Tenacity using CLion and you are good to go.
-
-At the moment we only support **x86_64** builds. It is possible to build using AppleSilicon hardware but **mad** and **id3tag** should be disabled:
+Alternatively, if you have a [Rust toolchain
+installed](https://forge.rust-lang.org/infra/other-installation-methods.html),
+you can build sccache from source:
 
 ```
-cmake -GXcode -T buildsystem=1 -Duse_mad="off" -Duse_id3tag=off ../tenacity
+cargo install sccache
 ```
 
-## Linux & Other OS
+Tenacity's dependencies will be built automatically with vcpkg when configuring
+CMake. You can turn off vcpkg by passing `-D VCPKG=OFF` to the CMake
+configuration command, but then it is up to you to install all of Tenacity's
+dependencies.
 
-1. Clone Tenacity from the Tenacity GitHub project. 
-  
-    ```
-    $ git clone https://github.com/tenacityteam/tenacity/
-    $ cd tenacity
-    ```
+Note that building the dependencies requires 10 GB of storage space.
 
-2. Configure Tenacity using CMake:
-   ```bash
-   $ mkdir build && cd build
-   $ cmake -G "Unix Makefiles" -Duse_ffmpeg=loaded ..
-   ```
-   By default, Debug build will be configured. To change that, pass `-DCMAKE_BUILD_TYPE=Release` to CMake.
+### macOS
 
-3. Build Tenacity:
-   ```bash
-   $ make -j`nproc`
-   ```
-   Note that this may slow your computer down quite a bit. To avoid this, you can use the alternate command:
-   ```bash
-   $ make -j$(($(nproc)-2))
-   ```
-   This will use 2 fewer CPU cores than the default, which is to use the absolute maximum number of cores. Feel free to change this to `make -j$(($(nproc)-3))` if you want to use (MAX-3) cores, or any other custom values.
-   Alternatively, you can manually specify the number of CPU cores to use:
-   ```bash
-   $ make -j2
-   # Uses only 2 cores
-   ```
-
-4. Testing the build:
-   Adding a "Portable Settings" folder allows Tenacity to ignore the settings of any existing Tenacity installation.
-   ```
-   $ cd bin/Debug
-   $ mkdir "Portable Settings"
-   $ ./tenacity
-   ```
-
-At the moment, you are unable to install tenacity system-wide due conflits with libraries. You have to run Step 4 to use Tenacity. We are trying to fix that for the first stable release.
-
-## Advanced
-
-### CMake options
-
-You can use `cmake -LH` to get a list of the options available (or use CMake GUI or `ccmake`). The list will include documentation about each option. For convenience, [here is a list](CMAKE_OPTIONS.md) of the most notable options.
-
-### Building using system libraries
-
-On Linux it is possible to build Tenacity using (almost) only the libraries provided by the package manager. Please, see the list of required libraries [here](linux/required_libraries.md).
-
-Follow the steps from [Linux & Other OS](#linux--other-os) section but run CMake with the following arguments:
+Install the Clang C++ compiler and macOS SDK from the Xcode command line tools.
+If you have the Xcode IDE installed, you already have the command line tools
+too. To install the Xcode command line tools without the Xcode IDE, launch the
+Terminal application, and type the following command:
 
 ```
-$ cmake -G "Unix Makefiles" \
-        -Duse_ffmpeg=loaded \
-        -Dlib_preference=system \
-        -Dobey_system_dependencies=On \
-         ../tenacity
+xcode-select --install
 ```
 
-There are a few cases when the local library build is preferred:
+Click "Install" on the software update popup window that will appear and wait
+for the download and installation to finish.
 
-1. **wxWidgets**: While Tenacity on **Linux** uses vanilla version of wxWidgets, we **require** that version **3.1.3** is used. This version is not available in most of the distributions.
-2. **portaudio-v19**: Tenacity currently uses [some private APIs](https://github.com/audacity/audacity/issues/871), so using system portaudio is not yet possible.
-3. **vamp-host-sdk**: Development packages are not available in Ubuntu 20.04.
-4. **libnyquist** & **portmixer**: Libraries are not available in Ubuntu 20.04.
-5. **sqlite3** & **libsmbs**: Libraries are very outdated in Ubuntu 20.04.
-
-It is not advised to mix system and local libraries, except for the list above. `ZLib` is a very common dependency; it is possible to mix system and local libraries in one build. However, we advise against doing so.
-
-There is a [`Dockerfile`](linux/build-environment/Dockerfile) that can be used as an example of how to build Tenacity using system libraries: 
+You will also need to install a few build tools and dependencies, which can be
+installed from [Homebrew](https://brew.sh/):
 
 ```
-$ docker build -t tenacity_linux_env .\linux\build-environment\
-$ docker run --rm -v ${pwd}:/tenacity/tenacity/ -v ${pwd}/../build/linux-system:/tenacity/build -it tenacity_linux_env
+brew install cmake ccache ninja nasm wxwidgets
 ```
 
-To find system packages, we rely on `pkg-config`. There are several packages that have broken `*.pc` or do not use `pkg-config` at all. For the docker image - we handle this issue by installing the correct [`pc` files](linux/build-environment/pkgconfig/).
+The rest of the dependencies will be built automatically with vcpkg when
+configuring CMake. You turn off vcpkg by passing `-D VCPKG=OFF` to the CMake
+configuration command, but then it is up to you to install all of Tenacity's
+dependencies.
+
+## Building Tenacity
+
+On Windows, run the commands below from the x64 Native Tools Command Prompt. For
+other operating systems, run them from a normal shell.
+
+First, download the Tenacity source code:
+
+```
+git clone https://github.com/tenacityteam/tenacity.git
+cd tenacity
+```
+
+Then, configure CMake. This will take a long time the first time on macOS and
+Windows (or if you use `-D VCPKG=ON` on Linux) because vcpkg will compile
+itself, then compile Tenacity's dependencies. `-G Ninja` is recommended for
+faster builds but not required. Add `-D CMAKE_INSTALL_PREFIX=/some/path` to
+change the installation path from the default /usr/local:
+
+```
+cmake -G Ninja -S . -B build
+```
+
+Build Tenacity:
+
+```
+cmake --build build
+```
+
+Run Tenacity:
+
+```
+build/bin/Debug/tenacity
+```
+
+Optionally, install Tenacity:
+
+```
+cmake --install build
+```
+
+## Build options
+
+  * **VCPKG** (ON|OFF): whether to use dependencies from vcpkg. ON by default
+    for Windows and macOS; OFF by default for Linux.
+  * **VCPKG_ROOT** (file path): path to vcpkg Git repository, defaults to
+    using the vcpkg submodule in the Tenacity repository
+
+The following feature options are enabled by default if the required libraries
+are found. You may explicitly disable them if you prefer or your distribution
+has outdated libraries that do not build with Tenacity.
+
+  * **MIDI** (ON|OFF): MIDI support. Requires PortMidi and PortSMF.
+  * **ID3TAG** (ON|OFF): ID3 tag support for MP3 files. Requires libid3tag.
+  * **MP3_DECODING** (ON|OFF): MP3 decoding support. Requires libmad.
+  * **MP2** (ON|OFF): MP2 codec support. Requires Twolame library.
+  * **OGG** (ON|OFF): Ogg container format support. Requires libogg.
+  * **VORBIS** (ON|OFF): Vorbis codec support. Requires libvorbis.
+  * **FLAC** (ON|OFF): FLAC codec support. Requires libflac and libflac++ C++
+    bindings.
+  * **SBSMS** (ON|OFF): SBSMS timestretching support. Requires libsbsms.
+  * **SOUNDTOUCH** (ON|OFF): SoundTouch timestretching support. Requires
+    SoundTouch library.
+  * **FFMPEG** (ON|OFF): Support for a wide variety of codecs with FFmpeg.
+    Requires FFmpeg libraries.
+  * **VAMP** (ON|OFF): VAMP plugin hosting support. Requires VAMP host SDK.
+  * **LV2** (ON|OFF): LV2 plugin hosting support. Requires LV2, lilv, and
+    suil libraries.
+  * **VST2** (ON|OFF): VST2 plugin hosting support. No libraries are required.
+    ON by default.
