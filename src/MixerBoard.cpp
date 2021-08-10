@@ -279,7 +279,7 @@ MixerTrackCluster::MixerTrackCluster(wxWindow* parent,
    mToggleButton_Mute->SetAlternateImages(
       1,
       *(mMixerBoard->mImageMuteUp), *(mMixerBoard->mImageMuteOver),
-      *(mMixerBoard->mImageMuteDown), *(mMixerBoard->mImageMuteDown), 
+      *(mMixerBoard->mImageMuteDown), *(mMixerBoard->mImageMuteDown),
       *(mMixerBoard->mImageMuteDisabled));
 
    ctrlPos.y += MUTE_SOLO_HEIGHT;
@@ -287,7 +287,7 @@ MixerTrackCluster::MixerTrackCluster(wxWindow* parent,
       safenew AButton(this, ID_TOGGLEBUTTON_SOLO,
                   ctrlPos, ctrlSize,
                   *(mMixerBoard->mImageSoloUp), *(mMixerBoard->mImageSoloOver),
-                  *(mMixerBoard->mImageSoloDown), *(mMixerBoard->mImageSoloDown), 
+                  *(mMixerBoard->mImageSoloDown), *(mMixerBoard->mImageSoloDown),
                   *(mMixerBoard->mImageSoloDisabled),
                   true); // toggle button
    mToggleButton_Solo->SetName(_("Solo"));
@@ -1230,7 +1230,7 @@ void MixerBoard::CreateMuteSoloImages()
    wxBitmap bitmap(mMuteSoloWidth, MUTE_SOLO_HEIGHT,24);
    dc.SelectObject(bitmap);
    wxRect bev(0, 0, mMuteSoloWidth, MUTE_SOLO_HEIGHT);
-   
+
    const bool up=true;
    const bool down=false;
 
@@ -1306,7 +1306,7 @@ void MixerBoard::LoadMusicalInstruments()
    wxMemoryDC dc;
 
    for (const auto &data : table) {
-      auto bmp = std::make_unique<wxBitmap>(data.bitmap,24);
+      auto bmp = std::make_unique<wxBitmap>(data.bitmap);
       dc.SelectObject(*bmp);
       AColor::Bevel(dc, false, bev);
       mMusicalInstruments.push_back(std::make_unique<MusicalInstrument>(
