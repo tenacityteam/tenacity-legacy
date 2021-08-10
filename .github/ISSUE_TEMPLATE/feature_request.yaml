@@ -1,0 +1,59 @@
+name: Feature request
+description: Propose a new feature to be added
+#title: "[FR] "
+labels: [enhancement]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        # Note
+        Issues are not a place to go ask support questions.
+        Please ask support questions on the [mailing list](https://lists.sr.ht/~tenacity/tenacity-discuss) or IRC (#tenacity on irc.libera.chat) ([Web](https://web.libera.chat/#tenacity) | [Matrix](https://matrix.to/#/#tenacity:libera.chat))
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Guidelines
+      description: Please read the guidelines above, then check the box below.
+      options:
+        - label: I have read the guidelines.
+          required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Is your feature request related to a problem? Please describe.
+      description: A clear and concise description of what the problem is.
+      placeholder: "I'm always frustrated when [...]"
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: Describe the solution you'd like
+      description: A clear and concise description of what you want to happen.
+    validations:
+      required: true
+  - type: textarea
+    id: alternative
+    attributes:
+      label: Describe alternatives you've considered
+      description: A clear and concise description of any alternative solutions or features you've considered.
+    validations:
+      required: true
+  - type: textarea
+    id: otherinfo
+    attributes:
+      label: Additional context
+      description: |
+        Add any other context or screenshots about the feature request here.
+        You may drag-and-drop screenshots.
+    validations:
+      required: false
+  - type: checkboxes
+    id: confirmnonduplicate
+    attributes:
+      label: This issue is not a duplicate
+      description: I have checked the [open issues](https://github.com/tenacityteam/tenacity/issues) and can confirm this issue is not a duplicate.
+      options:
+        - label: I have confirmed this issue isn't a duplicate.
+          required: true

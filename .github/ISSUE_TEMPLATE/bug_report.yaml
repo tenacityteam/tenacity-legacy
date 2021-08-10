@@ -1,0 +1,74 @@
+name: Bug Report
+description: File a bug report
+#title: "[Bug] "
+labels: [bug]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        # Note
+        Issues are not a place to go ask support questions.
+        Please ask support questions on the [mailing list](https://lists.sr.ht/~tenacity/tenacity-discuss) or IRC (#tenacity on irc.libera.chat) ([Web](https://web.libera.chat/#tenacity) | [Matrix](https://matrix.to/#/#tenacity:libera.chat))
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Guidelines
+      description: Please read the guidelines above, then check the box below.
+      options:
+        - label: I have read the guidelines.
+          required: true
+  - type: input
+    id: chash
+    attributes:
+      label: "Version/Commit hash"
+      description: |
+        If using releases, enter the version.
+        If using nightly builds, enter commit hash of the build, you can find it via `About -> Build Info -> Commit Id`
+      placeholder: 0.1.0, 8c4278
+    validations:
+      required: false
+  - type: textarea
+    id: info
+    attributes:
+      label: Describe the bug.
+      description: A clear and concise description of what the bug is.
+      placeholder: |
+        1. Go to '...'
+        2. Click on '....'
+        3. Scroll down to '....'
+        4. See error
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: A clear and concise description of what you expected to happen.
+    validations:
+      required: true
+  - type: input
+    id: os
+    attributes:
+      label: OS
+      description: The operating system and version
+      placeholder: Ubuntu 18.04, macOS High Sierra, ...
+    validations:
+      required: false
+  - type: textarea
+    id: otherinfo
+    attributes:
+      label: Additional context
+      description: |
+        Add additional information here.
+        You may drag-and-drop screenshots and log files here, or paste the log file in code blocks.
+    validations:
+      required: false
+  - type: checkboxes
+    id: confirmnonduplicate
+    attributes:
+      label: This issue is not a duplicate
+      description: I have checked the [open issues](https://github.com/tenacityteam/tenacity/issues) and can confirm this issue is not a duplicate.
+      options:
+        - label: I have confirmed this issue isn't a duplicate.
+          required: true
