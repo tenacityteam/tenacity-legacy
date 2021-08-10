@@ -49,6 +49,7 @@
 #include <wx/window.h>
 #endif  /*  */
 
+#include <wx/eventfilter.h> // to inherit
 #include <wx/minifram.h>
 #include <wx/popupwin.h>
 
