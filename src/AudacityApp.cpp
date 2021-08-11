@@ -2237,14 +2237,14 @@ void AudacityApp::AssociateFileTypes() {
         }
 
         if (!root_key.empty()) {
-            associateFileTypes = wxT("Audacity.Project"); // Finally set value for the key
+            associateFileTypes = wxT("Tenacity.Project"); // Finally set value for the key
         }
 
         return root_key;
     };
 
     // Check for legacy and UP types
-    if (IsDefined(wxT(".aup3")) && IsDefined(wxT(".aup")) && IsDefined(wxT("Audacity.Project"))) {
+    if (IsDefined(wxT(".aup3")) && IsDefined(wxT(".aup")) && IsDefined(wxT("Tenacity.Project"))) {
         // Already defined, so bail
         return;
     }
@@ -2276,25 +2276,25 @@ void AudacityApp::AssociateFileTypes() {
     } else {
         DefineType(wxT(".aup"));
 
-        associateFileTypes = wxT("Audacity.Project"); // Finally set value for .AUP key
-        associateFileTypes.SetName(root_key + wxT("Audacity.Project"));
+        associateFileTypes = wxT("Tenacity.Project"); // Finally set value for .AUP key
+        associateFileTypes.SetName(root_key + wxT("Tenacity.Project"));
         if (!associateFileTypes.Exists()) {
             associateFileTypes.Create(true);
             associateFileTypes = wxT("Audacity Project File");
         }
 
-        associateFileTypes.SetName(root_key + wxT("Audacity.Project\\shell"));
+        associateFileTypes.SetName(root_key + wxT("Tenacity.Project\\shell"));
         if (!associateFileTypes.Exists()) {
             associateFileTypes.Create(true);
             associateFileTypes = wxT("");
         }
 
-        associateFileTypes.SetName(root_key + wxT("Audacity.Project\\shell\\open"));
+        associateFileTypes.SetName(root_key + wxT("Tenacity.Project\\shell\\open"));
         if (!associateFileTypes.Exists()) {
             associateFileTypes.Create(true);
         }
 
-        associateFileTypes.SetName(root_key + wxT("Audacity.Project\\shell\\open\\command"));
+        associateFileTypes.SetName(root_key + wxT("Tenacity.Project\\shell\\open\\command"));
         wxString tmpRegAudPath;
         if (associateFileTypes.Exists()) {
             tmpRegAudPath = associateFileTypes.QueryDefaultValue().Lower();
@@ -2310,19 +2310,19 @@ void AudacityApp::AssociateFileTypes() {
         // These can be use later to support more startup messages
         // like maybe "Import into existing project" or some such.
         // Leaving here for an example...
-        associateFileTypes.SetName(root_key + wxT("Audacity.Project\\shell\\open\\ddeexec"));
+        associateFileTypes.SetName(root_key + wxT("Tenacity.Project\\shell\\open\\ddeexec"));
         if (!associateFileTypes.Exists()) {
             associateFileTypes.Create(true);
             associateFileTypes = wxT("%1");
         }
 
-        associateFileTypes.SetName(root_key + wxT("Audacity.Project\\shell\\open\\ddeexec\\Application"));
+        associateFileTypes.SetName(root_key + wxT("Tenacity.Project\\shell\\open\\ddeexec\\Application"));
         if (!associateFileTypes.Exists()) {
             associateFileTypes.Create(true);
             associateFileTypes = IPC_APPL;
         }
 
-        associateFileTypes.SetName(root_key + wxT("Audacity.Project\\shell\\open\\ddeexec\\Topic"));
+        associateFileTypes.SetName(root_key + wxT("Tenacity.Project\\shell\\open\\ddeexec\\Topic"));
         if (!associateFileTypes.Exists()) {
             associateFileTypes.Create(true);
             associateFileTypes = IPC_TOPIC;
