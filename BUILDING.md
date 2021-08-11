@@ -218,6 +218,11 @@ cmake --install build
     for Windows and macOS; OFF by default for Linux.
   * **VCPKG_ROOT** (file path): path to vcpkg Git repository, defaults to
     using the vcpkg submodule in the Tenacity repository
+  * **SCCACHE** (ON|OFF): whether to use sccache for compiler caching to
+    speed up rebuilds. ON by default if sccache is installed.
+  * **CCACHE** (ON|OFF): whether to use ccache for compiler caching to speed
+    up rebuilds. ON by default if ccache is installed. If sccache and ccache
+    are both installed, sccache will be prefered.
 
 The following feature options are enabled by default if the required libraries
 are found. You may explicitly disable them if you prefer or your distribution
