@@ -4,6 +4,11 @@
 #include "../libraries/lib-utility/MemoryX.h"
 #include <string>
 
+/**
+\class RealtimeEffectBufferHelper
+\brief RealtimeEffectBufferHelper is a class that hides the implementation details of exactly how buffers are allocated and managed
+when they are used inside of the real-time effect processing chain.
+**/
 class RealtimeEffectBufferHelper
 {
 
@@ -19,7 +24,6 @@ class RealtimeEffectBufferHelper
 
     public:
 
-    // Allocate the in/out buffer arrays
     float** ibuf;
     float** obuf;
     float* temp;
@@ -29,10 +33,9 @@ class RealtimeEffectBufferHelper
         this->chans = chans;
         this->numSamples = numSamples;
 
-        // Allocate the in/out buffer arrays
+        // Allocate the in/out buffers
         ibuf = safenew float* [chans];
         obuf = safenew float* [chans];
-        temp = safenew float[numSamples];
 
         const size_t memcpy_size = (size_t)numSamples * chans * sizeof(float);
 
@@ -42,16 +45,19 @@ class RealtimeEffectBufferHelper
         memset(ibuf[0], 0, memcpy_size);
         memset(obuf[0], 0, memcpy_size);
 
-        // Allocate new output buffers and copy buffer input into newly allocated input buffers
-
+        // Do pointer arithmetic to fully setup input and output buffers
         for (unsigned int i = 1; i < chans; i++) {
             ibuf[i] = ibuf[i - 1] + numSamples;
             obuf[i] = obuf[i - 1] + numSamples;
         }
 
+        // Copy given buffer data into the input buffer
         for (size_t j = 0; j < chans; j++) {
             memcpy(ibuf[j], buffers[j], (size_t)numSamples * sizeof(float));
         }
+
+        // Allocate a temp buffer
+        temp = safenew float[numSamples];
     }
 
     ~RealtimeEffectBufferHelper() {
