@@ -369,7 +369,6 @@ void ThemeBase::RecolourTheme()
    RecolourBitmap( bmpHiliteButtonSmall, From, To );
 
    Colour( clrTrackInfo ) = To;
-   RecolourBitmap( bmpUpButtonExpand, From, To );
 }
 
 wxImage ThemeBase::MaskedImage( char const ** pXpm, char const ** pMask )
