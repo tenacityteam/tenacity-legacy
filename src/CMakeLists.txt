@@ -22,6 +22,7 @@ if( GIT_FOUND )
       version
       COMMAND
          ${CMAKE_COMMAND} -D GIT="${GIT_EXECUTABLE}"
+                          -D GIT_DESCRIBE="${GIT_DESCRIBE}"
                           -D "_PRVDIR=${_PRVDIR}"
                           -P "${AUDACITY_MODULE_PATH}/Version.cmake"
       WORKING_DIRECTORY
