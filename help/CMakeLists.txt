@@ -52,7 +52,7 @@ if( NOT CMAKE_SYSTEM_NAME MATCHES "Darwin" )
       install( DIRECTORY "${dst}" OPTIONAL
                DESTINATION "${_DATADIR}/tenacity/help" )
       
-      install( FILES "${_SRCDIR}/tenacity.appdata.xml"
+      install( FILES "${_SRCDIR}/tenacity.metainfo.xml"
                DESTINATION "${_DATADIR}/metainfo" )
    endif()
 endif()
