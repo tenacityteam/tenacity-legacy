@@ -176,7 +176,7 @@ void AboutDialog::CreateInformationTab(ShuttleGui& AboutDialogGUI) {
         << XO("The Build")
         << wxT("</h3>\n<table>"); // start build info table
 
-    AddBuildInfoRow(&informationStr, XO("Commit Id:"), BuildInfo::getRevisionIdentifier());
+    AddBuildInfoRow(&informationStr, XO("Version:"), BuildInfo::getRevisionIdentifier());
     AddBuildInfoRow(&informationStr, XO("Build type:"), BuildInfo::getBuildType());
     AddBuildInfoRow(&informationStr, XO("Compiler:"), BuildInfo::getCompilerVersionString());
 
@@ -862,15 +862,15 @@ void AboutDialog::GenerateTenacityPageDescription(wxTextOutputStream& tos) {
     #undef _
     #define _(s) wxGetTranslation((s))
         << wxT("<h3>DarkTenacity ")
-        << wxString(AUDACITY_VERSION_STRING)
+        << wxString(GIT_DESCRIBE)
         << wxT("</h3>")
         << wxT("Customised version of the free, open source, cross-platform audio recorder and editor Tenacity.")
 
     #else
         << XO("<h3>")
         << ProgramName
-        // << wxT(" ")
-        // << wxString(AUDACITY_VERSION_STRING)
+        << wxT(" ")
+        << wxString(GIT_DESCRIBE)
         << wxT("</h3>")
         /* i18n-hint: The program's name substitutes for %s */
         << XO("Free, open source, cross-platform audio recorder and editor.")
