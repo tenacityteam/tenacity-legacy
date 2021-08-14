@@ -1343,6 +1343,7 @@ list( APPEND DEFINES PRIVATE "${export_symbol}" INTERFACE "${import_symbol}" )
 
 target_sources( ${TARGET} PRIVATE ${HEADERS} ${SOURCES} ${RESOURCES} ${MAC_RESOURCES} ${WIN_RESOURCES} )
 target_compile_definitions( ${TARGET} PRIVATE ${DEFINES} )
+target_compile_definitions( ${TARGET} PRIVATE ${CXX_WARNINGS_SILENCE_DEFINES})
 target_compile_options( ${TARGET} PRIVATE ${OPTIONS} )
 target_include_directories( ${TARGET} PRIVATE ${INCLUDES} )
 target_link_options( ${TARGET} PRIVATE ${LDFLAGS} )

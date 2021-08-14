@@ -97,6 +97,11 @@ if( NOT CMAKE_BUILD_TYPE AND NOT CMAKE_CONFIGURATION_TYPES )
    set( CMAKE_BUILD_TYPE "Debug" )
 endif()
 
+# List of defines which are intended to silence C++17 warnings
+# These will be added to each CMAKE target as PRIVATE compilation definitions
+list( APPEND CXX_WARNINGS_SILENCE_DEFINES _SILENCE_CXX17_ITERATOR_BASE_CLASS_DEPRECATION_WARNING=1 )
+list( APPEND CXX_WARNINGS_SILENCE_DEFINES _SILENCE_CXX17_NEGATORS_DEPRECATION_WARNING=1 )
+
 # Ignore COMPILE_DEFINITIONS_<Config> properties
 cmake_policy( SET CMP0043 NEW )
 
@@ -699,6 +704,7 @@ if(NOT WIN32)
   if(NOT TARGET wxWidgets::wxWidgets)
     add_library(wxWidgets::wxWidgets INTERFACE IMPORTED)
     target_link_libraries(wxWidgets::wxWidgets INTERFACE ${wxWidgets_LIBRARIES})
+    target_compile_definitions(wxWidgets::wxWidgets INTERFACE ${CXX_WARNINGS_SILENCE_DEFINES})
     target_compile_definitions(wxWidgets::wxWidgets INTERFACE ${wxWidgets_DEFINITIONS} ${wxWidgets_DEFINITIONS_DEBUG})
   endif()
 else()
