@@ -659,10 +659,6 @@ list( APPEND SOURCES
          import/ImportFLAC.cpp
       >
 
-      $<$<BOOL:${USE_GSTREAMER}>:
-         import/ImportGStreamer.cpp
-      >
-
       $<$<BOOL:${USE_MIDI}>:
          import/ImportMIDI.cpp
          import/ImportMIDI.h

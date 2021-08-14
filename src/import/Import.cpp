@@ -139,7 +139,7 @@ bool Importer::Initialize()
    static OrderingPreferenceInitializer init{
       PathStart,
       { {wxT(""), wxT("AUP,PCM,OGG,FLAC,MP3,LOF,FFmpeg") } }
-      // QT and GStreamer are only conditionally compiled and would get
+      // QT is only conditionally compiled and would get
       // placed at the end if present
    };
    
