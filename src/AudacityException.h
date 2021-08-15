@@ -168,10 +168,10 @@ inline SimpleGuard< void > MakeSimpleGuard() { return {}; }
 
 /*!
   Executes a given function (typically a lamba), in any thread.
- 
+
   If there is any exception, can invoke another given function as handler, which may rethrow that or
   another exception, but usually just returns the value for the GuardedCall.
- 
+
   If AudacityException is handled, then it queues up a delayed handler action for execution later in
   the event loop at idle time, on the main thread; typically this informs the user of the error.
 
@@ -211,7 +211,7 @@ R GuardedCall(
          // At this point, e is the "current" exception, but not "uncaught"
          // unless it was rethrown by handler.  handler might also throw some
          // other exception object.
-         if (!std::uncaught_exception()) {
+         if (std::uncaught_exceptions() == 0) {
             auto pException = std::current_exception(); // This points to e
             wxTheApp->CallAfter( [=] { // capture pException by value
                try { std::rethrow_exception(pException); }
