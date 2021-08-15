@@ -2244,7 +2244,10 @@ void AudacityApp::AssociateFileTypes() {
     };
 
     // Check for legacy and UP types
-    if (IsDefined(wxT(".aup3")) && IsDefined(wxT(".aup")) && IsDefined(wxT("Tenacity.Project"))) {
+    if (IsDefined(wxT(".aup3"))
+        && IsDefined(wxT(".aup"))
+        && IsDefined(wxT("Tenacity.Project"))
+        && IsDefined(wxT("Audacity.Project"))) {
         // Already defined, so bail
         return;
     }
