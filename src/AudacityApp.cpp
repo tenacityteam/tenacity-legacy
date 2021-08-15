@@ -2282,7 +2282,7 @@ void AudacityApp::AssociateFileTypes() {
         associateFileTypes.SetName(root_key + wxT("Tenacity.Project"));
         if (!associateFileTypes.Exists()) {
             associateFileTypes.Create(true);
-            associateFileTypes = wxT("Audacity Project File");
+            associateFileTypes = wxT("Tenacity Project File");
         }
 
         associateFileTypes.SetName(root_key + wxT("Tenacity.Project\\shell"));
