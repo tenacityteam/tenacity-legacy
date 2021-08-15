@@ -74,7 +74,7 @@ public:
    ~AUPImportPlugin();
 
    wxString GetPluginStringID() override;
-   
+
    TranslatableString GetPluginFormatDescription() override;
 
    ImportHandle Open(const FilePath &fileName,
@@ -235,7 +235,7 @@ wxString AUPImportPlugin::GetPluginStringID()
 {
    return wxT("legacyaup");
 }
-   
+
 TranslatableString AUPImportPlugin::GetPluginFormatDescription()
 {
    return DESC;
@@ -478,7 +478,7 @@ bool AUPImportFileHandle::Open()
       char buf[256];
 
       int numRead = ff.Read(buf, sizeof(buf));
-      
+
       ff.Close();
 
       buf[sizeof(buf) - 1] = '\0';
@@ -531,7 +531,7 @@ void AUPImportFileHandle::HandleXMLEndTag(const wxChar *tag)
    {
       node.handler->HandleXMLEndTag(tag);
    }
-   
+
    mHandlers.pop_back();
 
    if (mHandlers.size())
@@ -923,7 +923,7 @@ bool AUPImportFileHandle::HandleTags(XMLTagHandler *&handler)
       {
          break;
       }
-      
+
       // Ignore empty tags
       if (!*value)
       {
@@ -1199,7 +1199,7 @@ bool AUPImportFileHandle::HandleSimpleBlockFile(XMLTagHandler *&handler)
 {
    FilePath filename;
    size_t len = 0;
-   
+
    while (*mAttrs)
    {
       const wxChar *attr =  *mAttrs++;
@@ -1251,7 +1251,7 @@ bool AUPImportFileHandle::HandleSilentBlockFile(XMLTagHandler *&handler)
 {
    FilePath filename;
    size_t len = 0;
-   
+
    while (*mAttrs)
    {
       const wxChar *attr =  *mAttrs++;
@@ -1527,7 +1527,7 @@ bool AUPImportFileHandle::AddSamples(const FilePath &blockFilename,
 
          // If we are unwinding for an exception, don't do another
          // potentially throwing operation
-         if (!std::uncaught_exception())
+         if (std::uncaught_exceptions() == 0)
             // If this does throw, let that propagate, don't guard the call
             AddSilence(len);
       }
@@ -1572,7 +1572,7 @@ bool AUPImportFileHandle::AddSamples(const FilePath &blockFilename,
    samplePtr bufptr = buffer.ptr();
 
    size_t framesRead = 0;
-   
+
    // These cases preserve the logic formerly in BlockFile.cpp,
    // which was deleted at commit 98d1468.
    if (channels == 1 && format == int16Sample && sf_subtype_is_integer(info.format))
