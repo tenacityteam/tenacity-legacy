@@ -58,10 +58,22 @@ class MeterToolBar final : public ToolBar {
  private:
    void RegenerateTooltips() override;
 
+   void OnInputButton(wxCommandEvent & event);
+   void OnOutputButton(wxCommandEvent & event);
+
    int mWhichMeters;
    wxGridBagSizer *mSizer;
    MeterPanel *mPlayMeter;
    MeterPanel *mRecordMeter;
+
+   enum
+   {
+      ID_INPUT_BUTTON = 14000,
+      ID_OUTPUT_BUTTON
+   };
+
+   AButton *mInButton;
+   AButton *mOutButton;
 
  public:
 
