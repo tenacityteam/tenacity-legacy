@@ -178,6 +178,7 @@ class TENACITY_DLL_API MeterPanel final
 
    void StartMonitoring();
    void StopMonitoring();
+   void ShowPreferences();
 
    // These exist solely for the purpose of resetting the toolbars
    struct State{ bool mSaved, mMonitoring, mActive; };

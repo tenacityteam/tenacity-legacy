@@ -61,10 +61,28 @@ class MeterToolBar final : public ToolBar {
    void OnInputButton(wxCommandEvent & event);
    void OnOutputButton(wxCommandEvent & event);
 
+   // Menu
+   void ShowMenu(bool InputMenu, wxPoint pos);
+   void BuildMenus(bool InputMenu);
+   void ClearMenus();
+   static void SetOutDevice(wxCommandEvent &);
+   static void SetInDevice(wxCommandEvent &);
+   static void SetChannelCount(wxCommandEvent &event);
+   void OnHost(wxCommandEvent &);
+   static void UpdateChannelCount();
+
+   void OnMonitor(wxCommandEvent &);
+   void OnPlayPreferences(wxCommandEvent &event);
+   void OnRecPreferences(wxCommandEvent &event);
+
+
    int mWhichMeters;
    wxGridBagSizer *mSizer;
    MeterPanel *mPlayMeter;
    MeterPanel *mRecordMeter;
+
+   wxMenu *mChannelsMenu;
+   wxMenu *mIOMenu;
 
    enum
    {

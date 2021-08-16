@@ -1889,6 +1889,10 @@ void MeterPanel::OnMonitor(wxCommandEvent & WXUNUSED(event))
 
 void MeterPanel::OnPreferences(wxCommandEvent & WXUNUSED(event))
 {
+   ShowPreferences();
+}
+
+void MeterPanel::ShowPreferences() {
    wxTextCtrl *rate;
    wxRadioButton *gradient;
    wxRadioButton *rms;

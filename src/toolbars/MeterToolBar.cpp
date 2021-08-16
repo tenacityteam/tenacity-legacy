@@ -19,6 +19,7 @@
 
 
 #include "MeterToolBar.h"
+#include "ToolBar.h"
 
 // For compilers that support precompilation, includes "wx/wx.h".
 #include <wx/wxprec.h>
@@ -28,24 +29,42 @@
 #ifndef WX_PRECOMP
 #include <wx/event.h>
 #include <wx/intl.h>
+#include <wx/menu.h>
 #include <wx/tooltip.h>
 #endif
 
+#include <wx/window.h>
 #include <wx/gbsizer.h>
 
 #include "../AllThemeResources.h"
 #include "../ProjectAudioIO.h"
+#include "../DeviceManager.h"
+#include "../prefs/PrefsDialog.h"
+#include "../Project.h"
+#include "../AudioIO.h"
+
 #include "../widgets/AButton.h"
 #include "../widgets/Meter.h"
 
+#if wxUSE_ACCESSIBILITY
+#include "../widgets/WindowAccessible.h"
+#endif
 IMPLEMENT_CLASS(MeterToolBar, ToolBar);
 
 ////////////////////////////////////////////////////////////
 /// Methods for MeterToolBar
 ////////////////////////////////////////////////////////////
+enum {
+   OnHostID,
+   OnMonitorID,
+   OnRecPreferencesID,
+   OnPlayPreferencesID,
+   OnDeviceID
+};
 
 BEGIN_EVENT_TABLE( MeterToolBar, ToolBar )
    EVT_SIZE( MeterToolBar::OnSize )
+   EVT_MENU(OnHostID, MeterToolBar::OnHost)
    EVT_MENU(OnMonitorID, MeterToolBar::OnMonitor)
    EVT_MENU(OnRecPreferencesID, MeterToolBar::OnRecPreferences)
    EVT_MENU(OnPlayPreferencesID, MeterToolBar::OnPlayPreferences)
@@ -69,10 +88,16 @@ MeterToolBar::MeterToolBar(AudacityProject &project, int type)
    mSizer = NULL;
    mPlayMeter = NULL;
    mRecordMeter = NULL;
+   mChannelsMenu = safenew wxMenu();
+   mIOMenu = safenew wxMenu();
+
 }
 
 MeterToolBar::~MeterToolBar()
 {
+   mChannelsMenu=nullptr;
+   delete mIOMenu;
+   delete mChannelsMenu;
 }
 
 void MeterToolBar::Create(wxWindow * parent)
@@ -127,10 +152,11 @@ void MeterToolBar::Populate()
          bmpRecoloredUpSmall, bmpRecoloredDownSmall, bmpRecoloredUpHiliteSmall, bmpRecoloredHiliteSmall,
          bmpMic, bmpMic, bmpMic,
          wxWindowID(ID_INPUT_BUTTON),
-         wxDefaultPosition, true,
+         wxDefaultPosition, false,
          theTheme.ImageSize( bmpRecoloredUpSmall ));
-      mInButton->SetLabel(XO("a"));
+      mInButton->SetLabel(XO("Input"));
       mInButton->SetFocusRect( mInButton->GetClientRect().Deflate( 1, 1 ) );
+      mInButton->SetToolTip(XO("Input settings"));
       mSizer->Add( mInButton, wxGBPosition( 0, (mWhichMeters & kWithPlayMeter)?2:0 ), wxGBSpan(2,1), wxALIGN_CENTER_VERTICAL );
 
       //JKC: Record on left, playback on right.  Left to right flow
@@ -160,8 +186,9 @@ void MeterToolBar::Populate()
          wxWindowID(ID_OUTPUT_BUTTON),
          wxDefaultPosition, false,
          theTheme.ImageSize( bmpRecoloredUpSmall ));
-      mOutButton->SetLabel(XO("a"));
+      mOutButton->SetLabel(XO("Output"));
       mOutButton->SetFocusRect( mOutButton->GetClientRect().Deflate( 1, 1 ) );
+      mOutButton->SetToolTip(XO("Output settings"));
       mSizer->Add( mOutButton, wxGBPosition( 0, 0 ), wxGBSpan(2,1), wxALIGN_CENTER_VERTICAL );
 
       mPlayMeter = safenew MeterPanel( &mProject,
@@ -241,14 +268,21 @@ void MeterToolBar::OnSize( wxSizeEvent & event) //WXUNUSED(event) )
          width /= nMeters;
          pos = wxGBPosition( 0, 1 );
       }
+
+   float tmp;
+
+   if( mRecordMeter && mWhichMeters & kWithRecordMeter ) {
+      //auto inButton = static_cast<AButton*>(FindWindow(ID_INPUT_BUTTON));
+
+      mRecordMeter->SetMinSize( wxSize( std::max(width-wd,20), std::max(height-hd,20)));
+      mInSizer->SetItemPosition( mRecordMeter, pos );
+
    }
 
-   if( mRecordMeter ) {
-      mRecordMeter->SetMinSize( wxSize( width, height ));
-   }
-   if( mPlayMeter ) {
-      mPlayMeter->SetMinSize( wxSize( width, height));
-      mSizer->SetItemPosition( mPlayMeter, pos );
+   if( mPlaydMeter && mWhichMeters & kWithPlayMeter ) {
+
+      mPlayMeter->SetMinSize( wxSize( std::max(width-wd,20), std::max(height-hd,20)));
+      mOutSizer->SetItemPosition( mPlayMeter, pos );
    }
 
    // And make it happen
@@ -301,10 +335,244 @@ static RegisteredToolbarFactory factory2{ PlayMeterBarID,
 
 void MeterToolBar::OnInputButton(wxCommandEvent &event)
 {
+   auto Button = static_cast<AButton*>(FindWindow(ID_INPUT_BUTTON));
+   auto pos=Button->GetPosition();
+   pos.y+=Button->GetMinHeight();
+
+   ShowMenu(true, pos);
+   Button->InteractionOver();
+
 }
 void MeterToolBar::OnOutputButton(wxCommandEvent &event)
 {
+   auto Button = static_cast<AButton*>(FindWindow(ID_OUTPUT_BUTTON));
+   auto pos=Button->GetPosition();
+   pos.y+=Button->GetMinHeight();
+
+   ShowMenu(false, pos);
+   Button->InteractionOver();
 }
+
+void MeterToolBar::OnHost(wxCommandEvent &) {
+   //workaround to set prefs dialog to devices
+   gPrefs->Write(wxT("/Prefs/PrefsCategory"), 0);
+   gPrefs->Flush();
+
+   GlobalPrefsDialog dialog(&GetProjectPanel( mProject ) , &mProject );
+
+// Doesn't work?
+//   dialog.SelectPageByName(XO("Devices").Translation());
+
+   dialog.ShowModal();
+}
+
+void MeterToolBar::BuildMenus (bool InputMenu){
+   auto gAudioIO = AudioIOBase::Get();
+   bool mMonitoring= gAudioIO->IsMonitoring();
+   bool mActive= false;
+
+   int i=0;
+
+   bool audioStreamActive=false;
+   auto host = AudioIOHost.Read();
+
+   if (gAudioIO) {
+      audioStreamActive = gAudioIO->IsStreamActive() && !mMonitoring;
+      }
+   if  (!audioStreamActive) {
+      mIOMenu->Append(OnHostID, host+"...");
+      mIOMenu->AppendSeparator();
+   }
+
+   if (InputMenu) {
+      const std::vector<DeviceSourceMap> &inMaps  = DeviceManager::Instance()->GetInputDeviceMaps();
+      if  (!audioStreamActive) {
+
+         auto devUseName = AudioIORecordingDevice.Read();
+         for (auto & device : inMaps) {
+            if (host == device.hostString) {
+               auto devName=MakeDeviceSourceString(&device);
+               bool check=(devName==devUseName);
+
+               mIOMenu->AppendCheckItem(OnDeviceID+i,devName)->Check(check);
+               Bind(wxEVT_COMMAND_MENU_SELECTED, MeterToolBar::SetInDevice, (OnDeviceID+i));
+               i++;
+            }
+         }
+
+         auto device = AudioIORecordingDevice.Read();
+         auto source = AudioIORecordingSource.Read();
+
+         long oldChannels = AudioIORecordChannels.Read();
+         for (auto & dev: inMaps) {
+            if (source == dev.sourceString &&
+               device == dev.deviceString &&
+               host   == dev.hostString) {
+
+               // add one selection for each channel of this source
+               for (size_t j = 0; j < (unsigned int) dev.numChannels; j++) {
+                  wxString name;
+
+                  if (j == 0) {
+                     name = _("1 (Mono)");
+                  }
+                  else if (j == 1) {
+                     name = _("2 (Stereo)");
+                  }
+                  else {
+                     name = wxString::Format(wxT("%d"), (int) j + 1);
+                  }
+                     mChannelsMenu->AppendCheckItem(j+1000, name)->Check(oldChannels==j+1);
+                     Bind(wxEVT_COMMAND_MENU_SELECTED, MeterToolBar::SetChannelCount, j+1000);
+               }
+               break;
+            }
+         }
+         mIOMenu->AppendSubMenu(mChannelsMenu, _("Channels"));
+         mIOMenu->AppendSeparator();
+      }
+      mIOMenu->Append(OnRecPreferencesID, _("Meter Options..."));
+      wxMenuItem *mi;
+      if (mMonitoring)
+         mi = mIOMenu->Append(OnMonitorID, _("Stop Monitoring"));
+      else
+         mi = mIOMenu->Append(OnMonitorID, _("Start Monitoring"));
+      mi->Enable(!mActive || mMonitoring);
+
+   } else {
+      const std::vector<DeviceSourceMap> &outMaps = DeviceManager::Instance()->GetOutputDeviceMaps();
+      if (!audioStreamActive) {
+         auto devUseName = AudioIOPlaybackDevice.Read();
+         for (auto & device : outMaps) {
+            if (host == device.hostString) {
+               auto devName=MakeDeviceSourceString(&device);
+               bool check=(devName==devUseName);
+
+               mIOMenu->AppendCheckItem(OnDeviceID+i,devName)->Check(check);
+               Bind(wxEVT_COMMAND_MENU_SELECTED, MeterToolBar::SetOutDevice, (OnDeviceID+i));
+               i++;
+            }
+         }
+         mIOMenu->AppendSeparator();
+       }
+      mIOMenu->Append(OnPlayPreferencesID, _("Meter Options..."));
+   }
+
+}
+
+void MeterToolBar::ClearMenus() {
+   while ( mIOMenu->GetMenuItemCount() > 0 )
+   {
+      mIOMenu->Delete( *( mIOMenu->GetMenuItems().begin() ) );
+   }
+   while ( mChannelsMenu->GetMenuItemCount() > 0 )
+   {
+      mChannelsMenu->Delete( *( mChannelsMenu->GetMenuItems().begin() ) );
+   }
+}
+
+void MeterToolBar::ShowMenu(bool InputMenu, wxPoint pos)
+{
+   BuildMenus(InputMenu);
+   PopupMenu(mIOMenu, pos);
+
+#if wxUSE_ACCESSIBILITY
+   GetAccessible()->NotifyEvent(wxACC_EVENT_OBJECT_FOCUS,
+                                this,
+                                wxOBJID_CLIENT,
+                                wxACC_SELF);
+#endif
+   ClearMenus();
+}
+
+void MeterToolBar::SetChannelCount(wxCommandEvent &event){
+int id=event.GetId()-999;
+   AudioIORecordChannels.Write(id);
+}
+
+void MeterToolBar::UpdateChannelCount() {
+   const std::vector<DeviceSourceMap> &inMaps = DeviceManager::Instance()->GetInputDeviceMaps();
+   auto host = AudioIOHost.Read();
+   auto device = AudioIORecordingDevice.Read();
+   auto source = AudioIORecordingSource.Read();
+   long newChannels;
+
+   auto oldChannels = AudioIORecordChannels.Read();
+   for (auto & dev: inMaps) {
+      if (source == dev.sourceString &&
+          device == dev.deviceString &&
+          host   == dev.hostString) {
+
+         newChannels = dev.numChannels;
+         if (oldChannels <= newChannels && oldChannels >= 1) {
+            newChannels = oldChannels;
+         }
+         AudioIORecordChannels.Write(newChannels);
+         break;
+      }
+   }
+}
+
+void MeterToolBar::SetOutDevice(wxCommandEvent &event){
+
+   const std::vector<DeviceSourceMap> &outMaps = DeviceManager::Instance()->GetOutputDeviceMaps();
+   auto host = AudioIOHost.Read();
+   int i=0; //HostIndex doesnt match array index in all versions of PortAudio. Count manually
+   for (auto & dev: outMaps) {
+      if ( host == dev.hostString ) {
+         int id= i + event.GetId() - OnDeviceID;
+         auto &device = outMaps[id];
+         AudioIOPlaybackDevice.Write(device.deviceString);
+         if (device.totalSources >= 1) {
+            gPrefs->Write(wxT("/AudioIO/PlaybackSource"), device.sourceString);
+         } else {
+            gPrefs->Write(wxT("/AudioIO/PlaybackSource"), wxT(""));
+         }
+         break;
+      }
+      i++;
+   }
+   gPrefs->Flush();
+
+}
+
+void MeterToolBar::SetInDevice(wxCommandEvent &event){
+
+   const std::vector<DeviceSourceMap> &inMaps = DeviceManager::Instance()->GetInputDeviceMaps();
+   auto host = AudioIOHost.Read();
+   int i=0; //HostIndex doesnt match array index in all versions of PortAudio. Count manually
+   for (auto & dev: inMaps) {
+      if ( host == dev.hostString ) {
+          int id = i + event.GetId() - OnDeviceID;
+         auto &device = inMaps[id];
+         AudioIORecordingDevice.Write(device.deviceString);
+         AudioIORecordingSourceIndex.Write(device.sourceIndex);
+         if (device.totalSources >= 1) {
+            AudioIORecordingSource.Write(device.sourceString);
+         } else {
+            AudioIORecordingSource.Reset();
+         }
+         break;
+      }
+      i++;
+   }
+   UpdateChannelCount();
+   gPrefs->Flush();
+
+}
+
+
+void MeterToolBar::OnMonitor(wxCommandEvent &){
+   mRecordMeter->StartMonitoring();
+}
+
+void MeterToolBar::OnRecPreferences(wxCommandEvent &event){
+   mRecordMeter->ShowPreferences();
+}
+void MeterToolBar::OnPlayPreferences(wxCommandEvent &event){
+   mPlayMeter->ShowPreferences();
+}
+
 
 #include "ToolManager.h"
 
