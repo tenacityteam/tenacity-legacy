@@ -88,6 +88,7 @@ MeterToolBar::MeterToolBar(AudacityProject &project, int type)
    mSizer = NULL;
    mPlayMeter = NULL;
    mRecordMeter = NULL;
+
    mChannelsMenu = safenew wxMenu();
    mIOMenu = safenew wxMenu();
 
@@ -107,8 +108,8 @@ void MeterToolBar::Create(wxWindow * parent)
    UpdatePrefs();
 
    // Simulate a size event to set initial meter placement/size
-   wxSizeEvent dummy;
-   OnSize(dummy);
+ /*  wxSizeEvent dummy;
+   OnSize(dummy);*/
 }
 
 void MeterToolBar::ReCreateButtons()
@@ -157,7 +158,7 @@ void MeterToolBar::Populate()
       mInButton->SetLabel(XO("Input"));
       mInButton->SetFocusRect( mInButton->GetClientRect().Deflate( 1, 1 ) );
       mInButton->SetToolTip(XO("Input settings"));
-      mSizer->Add( mInButton, wxGBPosition( 0, (mWhichMeters & kWithPlayMeter)?2:0 ), wxGBSpan(2,1), wxALIGN_CENTER_VERTICAL );
+      mSizer->Add( mInButton, wxGBPosition( 0, 0), wxGBSpan(2,2), wxALIGN_CENTER_VERTICAL | wxALIGN_CENTER );
 
       //JKC: Record on left, playback on right.  Left to right flow
       //(maybe we should do it differently for Arabic language :-)  )
@@ -173,12 +174,13 @@ void MeterToolBar::Populate()
        This is the name used in screen reader software, where having 'Meter' first
        apparently is helpful to partially sighted people.  */
       mRecordMeter->SetLabel( XO("Meter-Record") );
-      mSizer->Add( mRecordMeter, wxGBPosition( 0,  (mWhichMeters & kWithPlayMeter)?3:1 ), wxDefaultSpan, wxEXPAND );
+      mSizer->Add( mRecordMeter, wxGBPosition( 0, 2 ), wxDefaultSpan, wxEXPAND );
 
       Bind(wxEVT_BUTTON, &MeterToolBar::OnInputButton, this, ID_INPUT_BUTTON);
    }
 
    if( mWhichMeters & kWithPlayMeter ){
+
       //Add Button
       AButton *mOutButton = MeterToolBar::MakeButton(this,
          bmpRecoloredUpSmall, bmpRecoloredDownSmall, bmpRecoloredUpHiliteSmall, bmpRecoloredHiliteSmall,
@@ -189,7 +191,7 @@ void MeterToolBar::Populate()
       mOutButton->SetLabel(XO("Output"));
       mOutButton->SetFocusRect( mOutButton->GetClientRect().Deflate( 1, 1 ) );
       mOutButton->SetToolTip(XO("Output settings"));
-      mSizer->Add( mOutButton, wxGBPosition( 0, 0 ), wxGBSpan(2,1), wxALIGN_CENTER_VERTICAL );
+      mSizer->Add( mOutButton, wxGBPosition( 0, 0 ), wxGBSpan(2,2), wxALIGN_CENTER_VERTICAL | wxALIGN_CENTER );
 
       mPlayMeter = safenew MeterPanel( &mProject,
                               this,
@@ -203,8 +205,8 @@ void MeterToolBar::Populate()
        This is the name used in screen reader software, where having 'Meter' first
        apparently is helpful to partially sighted people.  */
       mPlayMeter->SetLabel( XO("Meter-Play"));
+      mSizer->Add( mPlayMeter, wxGBPosition( 0, 2 ), wxDefaultSpan, wxEXPAND );
 
-      mOutSizer->Add( mPlayMeter, wxGBPosition( 0, 2 ), wxDefaultSpan, wxEXPAND );
       Bind(wxEVT_BUTTON, &MeterToolBar::OnOutputButton, this, ID_OUTPUT_BUTTON);
    }
 
@@ -238,57 +240,59 @@ void MeterToolBar::OnSize( wxSizeEvent & event) //WXUNUSED(event) )
    int width, height;
 
    // We can be resized before populating...protect against it
-   if( !mSizer ) {
+   if( !mSizer && mRecordMeter || !mSizer && mPlayMeter || !GetSizer() ) {
       return;
    }
 
    // Update the layout
    Layout();
-
    // Get the usable area
    wxSize sz = GetSizer()->GetSize();
    width = sz.x; height = sz.y;
-   width -= 27;// get button size
+
+   //Check propotions
+   //20 is the initial reset size for toolbars. Makes sure toolbars are treated 
+   //as horizontal on reset.
+   bHorizontal = ( width > height || width==20 || height==20 );
+
+   //Update MinSize
+   sz.SetWidth(GetMinToolbarWidth());
+   sz.SetHeight(GetMinToolbarHeight());
+   SetMinSize(sz);
+
 
    int nMeters = 
       ((mRecordMeter ==NULL) ? 0:1) +
       ((mPlayMeter ==NULL) ? 0:1);
 
-   bool bHorizontal = ( width > height );
-   bool bEndToEnd   = ( nMeters > 1 ) && wxMin( width, height ) < (60 * nMeters);
 
    // Default location for second meter
-   wxGBPosition pos( 0, 0 );
+   wxGBPosition pos;
    // If 2 meters, share the height or width.
-   if( nMeters > 1 ){
-      if( bHorizontal ^ bEndToEnd ){
-         height /= nMeters;
-         pos = wxGBPosition( 1, 0 );
-      } else {
+      if( bHorizontal ){
          width /= nMeters;
-         pos = wxGBPosition( 0, 1 );
+         width -= 27;// get button size + extra för att de är flera cells
+         pos = wxGBPosition( 0, 2 );
+      } else {
+         height /= nMeters;
+         height -= 27;// get button size + extra för att de är flera cells
+         pos = wxGBPosition( 2, 0 );
       }
-
-   float tmp;
 
    if( mRecordMeter && mWhichMeters & kWithRecordMeter ) {
       //auto inButton = static_cast<AButton*>(FindWindow(ID_INPUT_BUTTON));
-
-      mRecordMeter->SetMinSize( wxSize( std::max(width-wd,20), std::max(height-hd,20)));
-      mInSizer->SetItemPosition( mRecordMeter, pos );
-
+      mSizer->SetItemPosition( mRecordMeter, pos );
+      mRecordMeter->SetMinSize( wxSize( width, height));
    }
-
-   if( mPlaydMeter && mWhichMeters & kWithPlayMeter ) {
-
-      mPlayMeter->SetMinSize( wxSize( std::max(width-wd,20), std::max(height-hd,20)));
-      mOutSizer->SetItemPosition( mPlayMeter, pos );
+   if( mPlayMeter && mWhichMeters & kWithPlayMeter ) {
+      mSizer->SetItemPosition( mPlayMeter, pos );
+      mPlayMeter->SetMinSize( wxSize( width, height));
    }
-
    // And make it happen
    Layout();
    Fit();
 }
+
 
 bool MeterToolBar::Expose( bool show )
 {

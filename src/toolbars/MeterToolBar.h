@@ -35,7 +35,6 @@ class MeterToolBar final : public ToolBar {
 
    MeterToolBar(AudacityProject &project, int type);
    virtual ~MeterToolBar();
-
    void Create(wxWindow *parent) override;
 
    void Populate() override;
@@ -48,8 +47,9 @@ class MeterToolBar final : public ToolBar {
    bool Expose(bool show) override;
 
    int GetInitialWidth() override {return (mWhichMeters ==
-      (kWithRecordMeter + kWithPlayMeter)) ? 338 : 460;} // Separate bars used to be smaller.
-   int GetMinToolbarWidth()  override { return 150; }
+      (kWithRecordMeter + kWithPlayMeter)) ? 554 : 277;} // Separate bars used to be smaller.
+   int GetMinToolbarWidth() override {return  (bHorizontal) ? 145 : toolbarSingle+11; }
+   int GetMinToolbarHeight() {return  (bHorizontal) ? toolbarSingle : 145; }
    wxSize GetDockedSize() override {
       return GetSmartDockedSize();
    };
@@ -76,6 +76,7 @@ class MeterToolBar final : public ToolBar {
    void OnRecPreferences(wxCommandEvent &event);
 
 
+ bool bHorizontal;
    int mWhichMeters;
    wxGridBagSizer *mSizer;
    MeterPanel *mPlayMeter;
