@@ -55,8 +55,13 @@ else()
     DOC "id3tag library"
   )
 
-  find_package(ZLIB REQUIRED)
-  list(APPEND id3tag_LINK_LIBRARIES ZLIB::ZLIB)
+  if(NOT ZLIB_FOUND)
+    if(VCPKG)
+      set (ZLIB_ROOT ${env}/bin)
+    endif()
+
+    find_library(ZLIB REQUIRED)
+  endif()
 endif()
 
 include(FindPackageHandleStandardArgs)
@@ -67,10 +72,20 @@ find_package_handle_standard_args(
   id3tag_INCLUDEDIR
 )
 
+# Remove default reference to link "z" since we already found it
+if(ZLIB_FOUND AND NOT UNIX)
+  list(FILTER id3tag_LINK_LIBRARIES EXCLUDE REGEX "[z]")
+  list(APPEND id3tag_LINK_LIBRARIES ZLIB::ZLIB)
+endif()
+
 if(id3tag_FOUND)
+  set(id3tag_LIBRARIES "${id3tag_LIBRARY}")
+  set(id3tag_INCLUDE_DIRS "${id3tag_INCLUDE_DIR}")
+  set(id3tag_DEFINITIONS "${PC_id3tag_CFLAGS_OTHER}")
+
   if(NOT TARGET id3tag::id3tag)
     add_library(id3tag::id3tag INTERFACE IMPORTED)
-    target_link_libraries(id3tag::id3tag INTERFACE "${id3tag_LINK_LIBRARIES}")
+    target_link_libraries(id3tag::id3tag INTERFACE ${id3tag_LINK_LIBRARIES})
     target_include_directories(id3tag::id3tag INTERFACE "${id3tag_INCLUDEDIR}")
   endif()
 endif()
