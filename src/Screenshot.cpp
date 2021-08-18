@@ -727,7 +727,6 @@ void ScreenshotBigDialog::OnCaptureSomething(wxCommandEvent &  event)
       ScreenshotCommand::kplaymeter,
       ScreenshotCommand::krecordmeter,
       ScreenshotCommand::kedit,
-      ScreenshotCommand::kdevice,
       ScreenshotCommand::ktranscription,
       ScreenshotCommand::kscrub,
       ScreenshotCommand::ktrackpanel,

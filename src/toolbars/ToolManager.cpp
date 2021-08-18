@@ -550,7 +550,7 @@ static struct DefaultConfigEntry {
 
    // start another top dock row
    { ScrubbingBarID,         NoBarID,                TransportBarID         },
-   { DeviceBarID,            ScrubbingBarID,         TransportBarID         },
+   { NoBarID,                ScrubbingBarID,         TransportBarID         },
 
    // Bottom dock
    { SelectionBarID,         NoBarID,                NoBarID                },
@@ -637,7 +637,6 @@ void ToolManager::Reset()
 #endif
 // DA: Hides three more toolbars.
 #ifdef EXPERIMENTAL_DA
-         || ndx == DeviceBarID
          || ndx == TranscriptionBarID
          || ndx == SelectionBarID
 #endif

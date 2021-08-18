@@ -57,7 +57,6 @@ public:
       kplaymeter,
       krecordmeter,
       kedit,
-      kdevice,
       kscrub,
       ktranscription,
       ktrackpanel,
