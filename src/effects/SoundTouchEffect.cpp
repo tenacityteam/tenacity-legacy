@@ -37,7 +37,7 @@ effect that uses SoundTouch to do its processing (ChangeTempo
 #undef PACKAGE_BUGREPORT
 #undef PACKAGE
 #undef VERSION
-#include "SoundTouch.h"
+#include "soundtouch/SoundTouch.h"
 
 #ifdef USE_MIDI
 EffectSoundTouch::EffectSoundTouch()

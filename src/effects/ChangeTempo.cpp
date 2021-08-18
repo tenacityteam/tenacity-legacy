@@ -49,7 +49,7 @@
 #undef PACKAGE_BUGREPORT
 #undef PACKAGE
 #undef VERSION
-#include "SoundTouch.h"
+#include "soundtouch/SoundTouch.h"
 
 enum
 {

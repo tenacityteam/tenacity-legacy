@@ -118,7 +118,7 @@ set( EXPERIMENTAL_OPTIONS_LIST
    # RBD, 1 Sep 2008
    # Enables MIDI Output of NoteTrack (MIDI) data during playback
    # USE_MIDI must be defined in order for MIDI_OUT to work
-   MIDI_OUT
+   #MIDI_OUT
 
    # JKC, 17 Aug 2017
    # Enables the MIDI note stretching feature, which currently

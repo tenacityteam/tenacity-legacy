@@ -24,7 +24,7 @@ if( GIT_FOUND )
          ${CMAKE_COMMAND} -D GIT="${GIT_EXECUTABLE}"
                           -D GIT_DESCRIBE="${GIT_DESCRIBE}"
                           -D "_PRVDIR=${_PRVDIR}"
-                          -P "${AUDACITY_MODULE_PATH}/Version.cmake"
+                          -P "cmake-proxies/cmake-modules/Version.cmake"
       WORKING_DIRECTORY
          ${CMAKE_SOURCE_DIR}
    )
@@ -1028,7 +1028,6 @@ list( APPEND RESOURCES
 list( APPEND DEFINES
    PRIVATE
       BUILDING_AUDACITY
-      WXUSINGDLL
       CMAKE
       $<$<BOOL:${HAVE_LRINT}>:
          HAVE_LRINT
@@ -1049,7 +1048,7 @@ list( APPEND DEFINES
 # If we have cmake 3.16 or higher, we can use precompiled headers, but
 # only use them if ccache is not available and the user hasn't disabled
 # it.
-if( CMAKE_VERSION VERSION_GREATER_EQUAL "3.16" AND NOT CCACHE_PROGRAM )
+if( CMAKE_VERSION VERSION_GREATER_EQUAL "3.16" AND NOT CCACHE_PROGRAM AND NOT SCCACHE_PROGRAM )
    cmd_option(
       ${_OPT}use_pch
       "Use precompiled headers [yes, no]"
@@ -1072,32 +1071,34 @@ list( APPEND LIBRARIES
    PUBLIC
       ${CMAKE_REQUIRED_LIBRARIES}
       ZLIB::ZLIB
-      wxwidgets::wxwidgets
-      expat::expat
-      libmp3lame::libmp3lame
-      libsndfile
-      libsoxr
-      portaudio-v19
-      sqlite
-      $<$<BOOL:${USE_FFMPEG}>:ffmpeg>
-      $<$<BOOL:${USE_LIBID3TAG}>:libid3tag::libid3tag>
-      $<$<BOOL:${USE_LIBFLAC}>:libflac>
-      $<$<BOOL:${USE_LIBMAD}>:libmad::libmad>
-      $<$<BOOL:${USE_LIBOGG}>:libogg>
-      $<$<BOOL:${USE_LIBVORBIS}>:libvorbis>
-      $<$<BOOL:${USE_LIBTWOLAME}>:twolame>
-      $<$<BOOL:${USE_LV2}>:lv2>
-      $<$<BOOL:${USE_MIDI}>:portmidi>
-      $<$<BOOL:${USE_MIDI}>:portsmf>
-      $<$<BOOL:${USE_NYQUIST}>:libnyquist>
+      wxWidgets::wxWidgets
+      EXPAT::EXPAT
+      mp3lame::mp3lame
+      SndFile::sndfile
+      Soxr::soxr
+      PortAudio::PortAudio
+      ${SQLite3_LIBRARIES}
+      $<$<BOOL:${USE_FFMPEG}>:FFMPEG::FFMPEG>
+      $<$<BOOL:${USE_LIBID3TAG}>:id3tag::id3tag>
+      $<$<BOOL:${USE_LIBFLAC}>:FLAC++::FLAC++>
+      $<$<BOOL:${USE_LIBMAD}>:MAD::MAD>
+      $<$<BOOL:${USE_LIBOGG}>:Ogg::ogg>
+      $<$<BOOL:${USE_LIBVORBIS}>:Vorbis::vorbis>
+      $<$<BOOL:${USE_LIBVORBIS}>:Vorbis::vorbisenc>
+      $<$<BOOL:${USE_LIBVORBIS}>:Vorbis::vorbisfile>
+      $<$<BOOL:${USE_LIBTWOLAME}>:libtwolame::libtwolame>
+      $<$<BOOL:${USE_LV2}>:lilv::lilv>
+      $<$<BOOL:${USE_LV2}>:suil::suil>
+      $<$<BOOL:${USE_MIDI}>:PortMidi::PortMidi>
+      $<$<BOOL:${USE_MIDI}>:PortSMF::PortSMF>
+      libnyquist
       $<$<BOOL:${USE_PORTMIXER}>:portmixer>
-      $<$<BOOL:${USE_SBSMS}>:libsbsms>
-      $<$<BOOL:${USE_SOUNDTOUCH}>:soundtouch>
-      $<$<BOOL:${USE_VAMP}>:libvamp>
-      $<$<PLATFORM_ID:Linux,FreeBSD,OpenBSD,NetBSD,CYGWIN>:PkgConfig::GLIB>
-      $<$<PLATFORM_ID:Linux,FreeBSD,OpenBSD,NetBSD,CYGWIN>:PkgConfig::GTK>
-      $<$<PLATFORM_ID:Linux,FreeBSD,OpenBSD,NetBSD,CYGWIN>:z>
-      $<$<PLATFORM_ID:Linux,FreeBSD,OpenBSD,NetBSD,CYGWIN>:pthread>
+      $<$<BOOL:${USE_SBSMS}>:sbsms::sbsms>
+      $<$<BOOL:${USE_SOUNDTOUCH}>:SoundTouch::SoundTouch>
+      $<$<BOOL:${USE_VAMP}>:VampHostSDK::VampHostSDK>
+      $<$<PLATFORM_ID:Linux,FreeBSD,OpenBSD,NetBSD,CYGWIN>:${GLIB_LIBRARIES}>
+      $<$<PLATFORM_ID:Linux,FreeBSD,OpenBSD,NetBSD,CYGWIN>:GTK::GTK>
+      $<$<PLATFORM_ID:Linux,FreeBSD,OpenBSD,NetBSD,CYGWIN>:Threads::Threads>
 )
 
 set( BUILDING_AUDACITY YES )
@@ -1110,11 +1111,11 @@ set( HAVE_GTK ${GTK_FOUND} )
 # can be done against ExportMP3.cpp.  If either are defined, the
 # build will fail.
 if( NOT CMAKE_SYSTEM_NAME MATCHES "Windows|Darwin" )
-   if( "${${_OPT}use_lame}" STREQUAL "local" )
+   if( LAME_FOUND )
       set( DISABLE_DYNAMIC_LOADING_LAME YES )
    endif()
 
-   if( "${${_OPT}use_ffmpeg}" STREQUAL "linked" )
+   if( FFMPEG_FOUND )
       set( DISABLE_DYNAMIC_LOADING_FFMPEG YES )
    endif()
 endif()
@@ -1210,17 +1211,22 @@ elseif( CMAKE_SYSTEM_NAME MATCHES "Darwin" )
       menus/WindowMenus.cpp
       widgets/FileDialog/mac/FileDialogPrivate.mm
       PROPERTIES
-         COMPILE_FLAGS "-x objective-c++"
+         COMPILE_FLAGS "-ObjC++"
          SKIP_PRECOMPILE_HEADERS YES
    )
 
-   # Add our required frameworks
    list( APPEND LIBRARIES
       PRIVATE
-         "-framework AudioUnit"
-         "-framework CoreAudio"
-         "-framework CoreAudioKit"
+         "-framework Foundation"
+         "-framework Cocoa"
+         "-framework Carbon"
    )
+   if(USE_AUDIO_UNITS)
+      list(APPEND LIBRARIES
+        PRIVATE
+          "-framework AudioUnit"
+          "-framework CoreAudioKit")
+   endif()
 
    # Use the Aqua theme
    set( USE_AQUA_THEME 1 )
@@ -1337,13 +1343,16 @@ list( APPEND DEFINES PRIVATE "${export_symbol}" INTERFACE "${import_symbol}" )
 
 target_sources( ${TARGET} PRIVATE ${HEADERS} ${SOURCES} ${RESOURCES} ${MAC_RESOURCES} ${WIN_RESOURCES} )
 target_compile_definitions( ${TARGET} PRIVATE ${DEFINES} )
+target_compile_definitions( ${TARGET} PRIVATE ${CXX_WARNINGS_SILENCE_DEFINES})
 target_compile_options( ${TARGET} PRIVATE ${OPTIONS} )
 target_include_directories( ${TARGET} PRIVATE ${INCLUDES} )
 target_link_options( ${TARGET} PRIVATE ${LDFLAGS} )
+# Somehow the "version" target gets added to the LIBRARIES list? But only on Windows??
+list(REMOVE_ITEM LIBRARIES version)
 target_link_libraries( ${TARGET} ${LIBRARIES} )
 target_link_libraries( ${TARGET} PUBLIC ${AUDACITY_LIBRARIES} )
 
-if( CMAKE_VERSION VERSION_GREATER_EQUAL "3.16" AND NOT CCACHE_PROGRAM AND NOT SCCACHE_PROGRAM )
+if( CMAKE_VERSION VERSION_GREATER_EQUAL "3.16" )
    if( ${_OPT}use_pch )
       message( STATUS "Using precompiled headers" )
       target_precompile_headers( ${TARGET} PRIVATE

@@ -5,7 +5,7 @@ def_vars()
 
 set(SOURCES
     HexHelpers.h
-    
+
     UrlEncode.h
     UrlEncode.cpp
 
@@ -21,7 +21,7 @@ set(SOURCES
 
 set( LIBRARIES
    PRIVATE
-   wxwidgets::base
+   wxWidgets::wxWidgets
 )
 
 audacity_library( ${TARGET} "${SOURCES}" "${LIBRARIES}" "" "" )
