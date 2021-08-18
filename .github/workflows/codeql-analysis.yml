@@ -33,32 +33,37 @@ on:
 jobs:
   analyze:
     name: Analyze
-    runs-on: ubuntu-latest    
+    runs-on: ubuntu-latest
     env:
-      AUDACITY_CMAKE_GENERATOR: ${{ matrix.config.generator }}
-      AUDACITY_ARCH_LABEL: ${{ matrix.config.arch }}
+      CMAKE_BUILD_TYPE: Release
       # Windows codesigning
-      # This variables will be used by all the steps
       WINDOWS_CERTIFICATE: ${{ secrets.WINDOWS_CERTIFICATE }}
       WINDOWS_CERTIFICATE_PASSWORD: ${{ secrets.WINDOWS_CERTIFICATE_PASSWORD }}
-      # Conan home location to be used for cache action
-      CONAN_USER_HOME: "${{ github.workspace }}/conan-home/"
-      CONAN_USER_HOME_SHORT: "${{ github.workspace }}/conan-home/short"
+      # Apple code signing
+      APPLE_CODESIGN_IDENTITY: ${{ secrets.APPLE_CODESIGN_IDENTITY }}
+      APPLE_NOTARIZATION_USER_NAME: ${{ secrets.APPLE_NOTARIZATION_USER_NAME }}
+      APPLE_NOTARIZATION_PASSWORD: ${{ secrets.APPLE_NOTARIZATION_PASSWORD }}
     permissions:
       actions: read
       contents: read
       security-events: write
 
-    strategy:        
+    strategy:
       fail-fast: false
       matrix:
         config:
-          - name: Ubuntu
-            os: ubuntu-latest
-            arch: x86_64
-            generator: Unix Makefiles
-            language: 'cpp'  # CodeQL supports [ 'cpp', 'csharp', 'go', 'java', 'javascript', 'python' ]
-       
+        - name: Ubuntu_20.04
+          os: ubuntu-latest
+          arch: x86_64 # as reported by `arch` or `uname -m`
+          compiler_cache: ccache
+          compiler_cache_path: ~/.ccache
+          language: 'cpp'  # CodeQL supports [ 'cpp', 'csharp', 'go', 'java', 'javascript', 'python' ]
+          vcpkg_binary_cache: ~/.cache/vcpkg
+          vcpkg_triplet: x64-linux
+          wxwidgets_git_url: https://github.com/wxWidgets/wxWidgets.git
+          wxwidgets_git_ref: v3.1.5
+          WX_CONFIG: /home/runner/work/tenacity/tenacity/wxwidgets-install/bin/wx-config
+
     steps:
     # Setup 64-bit GCC 11
     - name: Set up GCC
@@ -69,36 +74,44 @@ jobs:
 
     - name: Checkout repository
       uses: actions/checkout@v2
-    - name: Dependencies
+
+    - name: Install dependencies
       run: |
         exec bash "scripts/ci/dependencies.sh"
-    - name: Environment
+
+    - name: Get Git commit of vcpkg submodule
+      run: echo VCPKG_COMMIT=$(git ls-tree HEAD vcpkg | awk '{print $3}') >> ${GITHUB_ENV}
+
+    # FIXME: use wxWidgets from vcpkg for all OSes when bugs are fixed for Linux and macOS
+    # https://github.com/microsoft/vcpkg/pull/17111
+    - name: Build and install wxWidgets
+      if: steps.wxwidgets-cache.outputs.cache-hit != 'true' && runner.os != 'Windows'
       run: |
-        source "scripts/ci/environment.sh"
-    - name: Cache for .conan
-      id: cache-conan
-      uses: actions/cache@v2
-      env:
-        cache-name: cache-conan-modules
-      with:
-        path: ${{ env.CONAN_USER_HOME }}
-        key: host-${{ matrix.config.name }}-${{ hashFiles('cmake-proxies/CMakeLists.txt') }}
-        restore-keys: |
-          host-${{ matrix.config.name }}-
-      # Install scdoc with conan TODO: Move conan pkg to own repo
-    - name: "[Linux] Install scdoc"
-      if: runner.os == 'Linux'
-      run: |
-        conan remote add -f rigs-of-rods-deps https://conan.cloudsmith.io/rigs-of-rods/deps/
-        conan install scdoc/1.11.1@anotherfoxguy/stable -g=virtualenv --build=missing
+        # wxWidgets' build system does not find dependencies from vcpkg, so use its vendored Git submodules
+        git clone --recurse-submodules ${{ matrix.config.wxwidgets_git_url }}
+        cd wxWidgets
+        git checkout ${{ matrix.config.wxwidgets_git_ref }}
+        cmake -G Ninja -D CMAKE_INSTALL_PREFIX=${{ github.workspace }}/wxwidgets-install \
+          -S . -B cmake_build
+        cmake --build cmake_build
+        cmake --install cmake_build
+
     - name: Configure
+      run: >-
+        cmake
+        -G Ninja
+        -D CMAKE_BUILD_TYPE=${{ env.CMAKE_BUILD_TYPE }}
+        -D CMAKE_INSTALL_PREFIX=${{ github.workspace }}/build/install
+        -D VCPKG=ON
+        -S .
+        -B build
       env:
-        # Apple code signing
-        APPLE_CODESIGN_IDENTITY: ${{ secrets.APPLE_CODESIGN_IDENTITY }}
-        APPLE_NOTARIZATION_USER_NAME: ${{ secrets.APPLE_NOTARIZATION_USER_NAME }}
-        APPLE_NOTARIZATION_PASSWORD: ${{ secrets.APPLE_NOTARIZATION_PASSWORD }}
-      run: |
-        exec bash "scripts/ci/configure.sh"
+        CC: ${{ matrix.config.cc }}
+        CXX: ${{ matrix.config.cxx }}
+        # hack to get CMake to find wxWidgets until vcpkg wxWidgets port is fixed
+        # https://github.com/microsoft/vcpkg/pull/17111
+        WX_CONFIG: ${{ matrix.config.WX_CONFIG }}
+
     # Initializes the CodeQL tools for scanning.
     - name: Initialize CodeQL
       uses: github/codeql-action/init@v1
@@ -108,9 +121,10 @@ jobs:
         # By default, queries listed here will override any specified in a config file.
         # Prefix the list here with "+" to use these queries and those in the config file.
         # queries: ./path/to/local/query, your-org/your-repo/queries@main
+
     - name: Build
-      run: |
-        exec bash "scripts/ci/build.sh"
+      run: cmake --build build --config ${{ env.CMAKE_BUILD_TYPE }} --verbose
+
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v1
 
