@@ -16,6 +16,8 @@ until /usr/bin/hdiutil "$@"; do
         echo "CPack failed despite retry attempts!"
         exit 1
    else
+        echo "Attempting to kill com.apple.IconServicesAgent"
+        killall -KILL com.apple.IconServicesAgent
         echo "Trying CPack hdiutil call again. Retry attempt #$counter"
         ((counter++))
    fi
