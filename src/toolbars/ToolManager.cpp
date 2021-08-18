@@ -189,7 +189,6 @@ void ToolFrame::OnPaint( wxPaintEvent & WXUNUSED(event) )
    dc.SetBackground( wxBrush( theTheme.Colour( clrMedium ) ) );
    dc.Clear();
    dc.SetBrush( *wxTRANSPARENT_BRUSH );
-   dc.DrawRectangle( 0, 0, sz.GetWidth(), sz.GetHeight() );
 
    if( mBar && mBar->IsResizable() )
    {
