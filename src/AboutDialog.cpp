@@ -723,15 +723,18 @@ void AboutDialog::PopulateCreditsList() {
     AddCredit(wxT("[[https://wxwidgets.org/|wxWidgets]]"), roleLibrary);
 
     // The Prefork Team section
-    AddCredit(wxT("James Crook"), prefork_developerFormat, rolePreforkEmeritusTeam);
+    AddCredit(wxT("James Crook"), prefork_developerFormat, rolePreforkTeamMember);
     AddCredit(wxT("Roger Dannenberg"), prefork_coFounderFormat, rolePreforkTeamMember);
     AddCredit(wxT("Steve Daulton"), rolePreforkTeamMember);
     AddCredit(wxT("Anton Gerasimov"), prefork_developerFormat, rolePreforkTeamMember);
+    AddCredit(wxT("Jouni Helminen"), rolePreforkTeamMember);
+    AddCredit(wxT("Peter Jonas"), prefork_developerFormat, rolePreforkTeamMember);
+    AddCredit(wxT("Martin Keary"), rolePreforkTeamMember);
     AddCredit(wxT("Greg Kozikowski"), prefork_documentationAndSupportFormat, rolePreforkTeamMember);
     AddCredit(wxT("Paul Licameli"), prefork_developerFormat, rolePreforkTeamMember);
+    AddCredit(wxT("Anita Sudan"), rolePreforkTeamMember);
     AddCredit(wxT("Vitaly Sverchinsky"), prefork_developerFormat, rolePreforkTeamMember);
     AddCredit(wxT("Dmitry Vedenko"), prefork_developerFormat, rolePreforkTeamMember);
-
 
     // The Prefork Emertitus section
     AddCredit(wxT("Gale Andrews"), prefork_qualityAssuranceFormat, rolePreforkEmeritusTeam);
