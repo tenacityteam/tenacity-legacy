@@ -97,6 +97,28 @@ sudo pacman -S cmake ninja ccache expat gcc-libs gdk-pixbuf2 glibc flac gtk3 gli
 
 TODO: add portsmf and sbsms to this package list when those packages are updated.
 
+#### Alpine
+
+The build dependencies for Tenacity and wxWidgets can be found on Alpine's
+community repository:
+
+```
+sudo apk add cmake samurai lame-dev libsndfile-dev soxr-dev sqlite-dev portaudio-dev portmidi-dev libid3tag-dev soundtouch-dev libmad-dev ffmpeg-dev
+```
+
+wxWidgets 3.1 is required but not packaged in Alpine Linux. Refer to the
+[wxWidgets documentation](https://github.com/wxWidgets/wxWidgets/blob/master/docs/gtk/install.md)
+for how to install it from source code, and make sure to set
+`--disable-xlocale` in the configuration.
+
+To install wxWidgets' dependencies:
+
+```
+sudo apk add gtk+3.0-dev zlib-dev libpng-dev tiff-dev libjpeg-turbo-dev expat-dev
+```
+
+TODO: add portsmf and libsbsms to this package list when aports are accepted.
+
 #### vcpkg on Linux
 
 Optionally, you can build dependencies from source using vcpkg, with the
