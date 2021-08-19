@@ -16,6 +16,8 @@ jobs:
       fail-fast: false
     steps:
     - uses: actions/checkout@v2
+      with:
+        submodule: recursive
     - uses: bilelmoussaoui/flatpak-github-actions/flatpak-builder@v3
       with:
         bundle: tenacity.flatpak
