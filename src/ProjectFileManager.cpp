@@ -1113,7 +1113,7 @@ ProjectFileManager::AddImportedTracks(const FilePath &fileName,
          auto newTrack = tracks.Add( uNewTrack );
          results.push_back(newTrack->SharedPointer());
       }
-      tracks.GroupChannels(*first, nChannels);
+      tracks.MakeMultiChannelTrack(*first, nChannels, true);
    }
    newTracks.clear();
       

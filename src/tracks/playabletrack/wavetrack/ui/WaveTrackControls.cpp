@@ -828,7 +828,7 @@ void WaveTrackMenuTable::OnMergeStereo(wxCommandEvent &)
       ((TrackView::Get( *pTrack ).GetMinimized()) &&
        (TrackView::Get( *partner ).GetMinimized()));
 
-   tracks.GroupChannels( *pTrack, 2 );
+   tracks.MakeMultiChannelTrack( *pTrack, 2, false );
 
    // Set partner's parameters to match target.
    partner->Merge(*pTrack);
@@ -884,7 +884,7 @@ void WaveTrackMenuTable::SplitStereo(bool stereo)
       ++nChannels;
    }
 
-   TrackList::Get( *project ).GroupChannels( *pTrack, 1 );
+   TrackList::Get( *project ).UnlinkChannels( *pTrack );
    int averageHeight = totalHeight / nChannels;
 
    for (auto channel : channels)
@@ -898,6 +898,7 @@ void WaveTrackMenuTable::OnSwapChannels(wxCommandEvent &)
    AudacityProject *const project = &mpData->project;
 
    WaveTrack *const pTrack = static_cast<WaveTrack*>(mpData->pTrack);
+   const auto linkType = pTrack->GetLinkType();
    auto channels = TrackList::Channels( pTrack );
    if (channels.size() != 2)
       return;
@@ -911,9 +912,8 @@ void WaveTrackMenuTable::OnSwapChannels(wxCommandEvent &)
    SplitStereo(false);
 
    auto &tracks = TrackList::Get( *project );
-   tracks.MoveUp( partner );
-   tracks.GroupChannels( *partner, 2 );
-
+   tracks.MoveUp(partner);
+   tracks.MakeMultiChannelTrack(*partner, 2, linkType == Track::LinkType::Aligned);
    if (hasFocus)
       trackFocus.Set(partner);
 
