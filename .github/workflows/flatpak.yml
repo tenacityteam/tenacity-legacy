@@ -1,4 +1,4 @@
-name: CI
+name: Packaging
 on:
   push:
     branches: [master]
@@ -20,5 +20,5 @@ jobs:
     - uses: bilelmoussaoui/flatpak-github-actions/flatpak-builder@v3
       with:
         bundle: tenacity.flatpak
-        manifest-path: CI/flatpak/org.tenacity.Tenacity.json
+        manifest-path: packaging/flatpak/org.tenacity.Tenacity.json
         cache-key: flatpak-builder-${{ github.sha }}
