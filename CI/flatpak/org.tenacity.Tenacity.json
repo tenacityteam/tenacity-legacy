@@ -79,9 +79,6 @@
     {
       "name": "libid3tag",
       "buildsystem": "cmake-ninja",
-      "post-install": [
-        "install -Dm644 -t /app/lib/pkgconfig/ id3tag.pc"
-      ],
       "sources": [
         {
           "type": "git",
