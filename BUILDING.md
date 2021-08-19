@@ -231,7 +231,7 @@ has outdated libraries that do not build with Tenacity.
   * **MIDI** (ON|OFF): MIDI support. Requires PortMidi and PortSMF.
   * **ID3TAG** (ON|OFF): ID3 tag support for MP3 files. Requires libid3tag.
   * **MP3_DECODING** (ON|OFF): MP3 decoding support. Requires libmad.
-  * **MP2** (ON|OFF): MP2 codec support. Requires Twolame library.
+  * **MP2_ENCODING** (ON|OFF): MP2 encoding support. Requires Twolame library.
   * **OGG** (ON|OFF): Ogg container format support. Requires libogg.
   * **VORBIS** (ON|OFF): Vorbis codec support. Requires libvorbis.
   * **FLAC** (ON|OFF): FLAC codec support. Requires libflac and libflac++ C++
