@@ -1824,6 +1824,16 @@ int AudioIO::StartStream(const TransportTracks &tracks,
    return mStreamToken;
 }
 
+void AudioIO::DelayActions(bool recording)
+{
+   mDelayingActions = recording;
+}
+
+bool AudioIO::DelayingActions() const
+{
+   return mDelayingActions || (mPortStreamV19 && mNumCaptureChannels > 0);
+}
+
 void AudioIO::CallAfterRecording(PostRecordingAction action)
 {
    if (!action)
@@ -1840,7 +1850,7 @@ void AudioIO::CallAfterRecording(PostRecordingAction action)
          ]{ prevAction(); nextAction(); };
          return;
       }
-      else if (mPortStreamV19 && mNumCaptureChannels > 0) {
+      else if (DelayingActions()) {
          mPostRecordingAction = std::move(action);
          return;
       }
@@ -2457,6 +2467,7 @@ void AudioIO::StopStream()
          mPostRecordingAction();
          mPostRecordingAction = {};
       }
+      DelayActions(false);
    });
 
    //
