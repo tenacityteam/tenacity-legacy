@@ -76,7 +76,7 @@ endif ()
 # still link to the alpha manual online.
 
 # Set this value to 0 for alpha, 1 for beta, 2 for release builds
-set( AUDACITY_BUILD_LEVEL 0 )
+set( AUDACITY_BUILD_LEVEL 0 CACHE STRING "0 for alpha, 1 for beta, 2 for release builds" )
 
 # Don't allow in-source builds...no real reason, just
 # keeping those source trees nice and tidy.  :-)
