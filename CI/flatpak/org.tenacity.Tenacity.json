@@ -327,6 +327,12 @@
         {
           "type": "patch",
           "path": "patches/audacity-suil-fix.patch"
+        },
+        {
+          "type": "shell",
+          "commands": [
+            "sed -e '42i <release version=\"commit-62a523f4f7324d5f28d9da9947995b72059905c4\" date=\"2021-08-12\"/>' -i help/tenacity.metainfo.xml"
+          ]
         }
       ]
     }

@@ -1,0 +1,9 @@
+prefix=/app
+libdir=/app/lib
+includedir=/app/include/lame
+
+Name: lame
+Description: encoder that converts audio to the MP3 file format.
+Version: 3.100
+Libs: -L${libdir} -lmp3lame
+Cflags: -I${includedir}
