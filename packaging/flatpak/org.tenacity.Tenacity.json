@@ -12,15 +12,14 @@
     "--socket=x11",
     "--share=network",
     "--socket=pulseaudio",
+    "--filesystem=xdg-run/pipewire-0",
+    "--system-talk-name=org.freedesktop.RealtimeKit1"
     "--device=all",
     "--filesystem=host",
-    "--env=LD_LIBRARY_PATH=/app/lib/tenacity",
     "--env=ALSA_CONFIG_PATH=",
     "--env=LADSPA_PATH=/app/extensions/Plugins/ladspa",
     "--env=LV2_PATH=/app/extensions/Plugins/lv2",
     "--env=VST_PATH=/app/extensions/Plugins/lxvst",
-    "--filesystem=xdg-run/pipewire-0",
-    "--system-talk-name=org.freedesktop.RealtimeKit1"
   ],
   "add-extensions": {
     "org.audacityteam.Audacity.Codecs": {
@@ -145,22 +144,6 @@
           "type": "archive",
           "url": "https://www.ffmpeg.org/releases/ffmpeg-4.2.3.tar.xz",
           "sha256": "9df6c90aed1337634c1fb026fb01c154c29c82a64ea71291ff2da9aacb9aad31"
-        }
-      ]
-    },
-    {
-      "name": "sqlite",
-      "build-options": {
-        "cflags": "-DSQLITE_ENABLE_COLUMN_METADATA=1 -DSQLITE_SECURE_DELETE=1 -DSQLITE_ENABLE_FTS3=1 -DSQLITE_ENABLE_UNLOCK_NOTIFY=1 -DSQLITE_ENABLE_DBPAGE_VTAB=1 -DSQLITE_ENABLE_DBSTAT_VTAB=1\n"
-      },
-      "config-opts": [
-        "--enable-fts5"
-      ],
-      "sources": [
-        {
-          "type": "archive",
-          "url": "https://www.sqlite.org/2020/sqlite-autoconf-3340000.tar.gz",
-          "sha256": "bf6db7fae37d51754737747aaaf413b4d6b3b5fbacd52bdb2d0d6e5b2edd9aee"
         }
       ]
     },
