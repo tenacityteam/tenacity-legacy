@@ -183,23 +183,6 @@
     "shared-modules/linux-audio/lilv.json",
     "deps/suil.json",
     {
-      "name": "rapidjson",
-      "buildsystem": "cmake-ninja",
-      "config-opts": [
-        "-DRAPIDJSON_BUILD_DOC=OFF",
-        "-DRAPIDJSON_BUILD_EXAMPLES=OFF",
-        "-DRAPIDJSON_BUILD_TESTS=OFF",
-        "-DRAPIDJSON_BUILD_THIRDPARTY_GTEST=OFF"
-      ],
-      "sources": [
-        {
-          "type": "archive",
-          "url": "https://github.com/miloyip/rapidjson/archive/v1.1.0.tar.gz",
-          "sha256": "bf7ced29704a1e696fbccf2a2b4ea068e7774fa37f6d7dd4039d0787f8bed98e"
-        }
-      ]
-    },
-    {
       "name": "portaudio",
       "buildsystem": "cmake-ninja",
       "sources": [
@@ -299,26 +282,8 @@
       "buildsystem": "cmake-ninja",
       "builddir": true,
       "config-opts": [
-        "-DCMAKE_BUILD_TYPE=Release",
-        "-DCMAKE_INSTALL_LIBDIR=/app/lib",
-        "-Dgtk=gtk+-3.0",
-        "-Dglib=glib-2.0",
-        "-DwxWidgets_INCLUDE_DIRS=/app/include/wx-3.1;/app/lib/wx/include/gtk3-unicode-3.1",
-        "-DwxWidgets_CXX_FLAGS=-pthread",
-        "-DwxWidgets_DEFINITIONS_GENERAL=WXUSINGDLL;__WXGTK__;_FILE_OFFSET_BITS=64",
-        "-DwxWidgets_LIBRARIES=-lwx_gtk3u_xrc-3.1;-lwx_gtk3u_html-3.1;-lwx_gtk3u_qa-3.1;-lwx_gtk3u_core-3.1;-lwx_baseu_xml-3.1;-lwx_baseu_net-3.1;-lwx_baseu-3.1",
-        "-DWX_CONFIG=/app/bin/wx-config",
-        "-Dlib_preference=system",
-        "-Dobey_system_dependencies=On",
-        "-Duse_wxwidgets=system",
-        "-Duse_soxr=system",
-        "-Duse_portaudio=system",
-        "-Duse_portmixer=off",
-        "-Duse_vamp=system",
-        "-Duse_pa_jack=linked",
-        "-Duse_soundtouch=system",
-        "-Duse_twolame=system",
-        "-Dhas_networking=no"
+        "-DCMAKE_BUILD_TYPE=RelWithDebInfo",
+        "-DWX_CONFIG=/app/bin/wx-config"
       ],
       "post-install": [
         "chrpath -d /app/bin/tenacity",
