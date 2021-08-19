@@ -88,41 +88,6 @@
       ]
     },
     {
-      "name": "ffmpeg",
-      "config-opts": [
-        "--enable-shared",
-        "--disable-static",
-        "--disable-programs",
-        "--disable-doc",
-        "--disable-everything",
-        "--enable-libopus",
-        "--enable-libmp3lame",
-        "--enable-decoder=ac3",
-        "--enable-decoder=opus",
-        "--enable-decoder=mp3",
-        "--enable-encoder=ac3",
-        "--enable-demuxer=ac3",
-        "--enable-demuxer=mov",
-        "--enable-demuxer=mp3",
-        "--enable-demuxer=ogg",
-        "--enable-muxer=ac3",
-        "--enable-muxer=ipod",
-        "--enable-muxer=opus",
-        "--enable-parser=ac3",
-        "--enable-parser=opus"
-      ],
-      "cleanup": [
-        "/share/ffmpeg/examples"
-      ],
-      "sources": [
-        {
-          "type": "archive",
-          "url": "https://www.ffmpeg.org/releases/ffmpeg-4.2.3.tar.xz",
-          "sha256": "9df6c90aed1337634c1fb026fb01c154c29c82a64ea71291ff2da9aacb9aad31"
-        }
-      ]
-    },
-    {
       "name": "ffmpeg-codecs",
       "config-opts": [
         "--enable-shared",
@@ -184,8 +149,8 @@
         {
           "type": "git",
           "url": "https://github.com/tenacityteam/portsmf.git",
-          "tag": "238",
-          "commit": "f9191b5cf2fee63635e14328e5b235d859a81cb5"
+          "tag": "239",
+          "commit": "951b636f7d0cba370d483a91f1897c71f3d98530"
         }
       ]
     },
