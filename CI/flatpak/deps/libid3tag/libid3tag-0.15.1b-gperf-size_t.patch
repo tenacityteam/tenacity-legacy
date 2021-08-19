@@ -1,0 +1,25 @@
+Index: libid3tag-0.15.1b/frametype.h
+===================================================================
+--- libid3tag-0.15.1b.orig/frametype.h
++++ libid3tag-0.15.1b/frametype.h
+@@ -37,6 +37,6 @@ extern struct id3_frametype const id3_fr
+ extern struct id3_frametype const id3_frametype_obsolete;
+ 
+ struct id3_frametype const *id3_frametype_lookup(register char const *,
+-						 register unsigned int);
++						 register size_t);
+ 
+ # endif
+Index: libid3tag-0.15.1b/compat.h
+===================================================================
+--- libid3tag-0.15.1b.orig/compat.h
++++ libid3tag-0.15.1b/compat.h
+@@ -34,7 +34,7 @@ struct id3_compat {
+ };
+ 
+ struct id3_compat const *id3_compat_lookup(register char const *,
+-					   register unsigned int);
++					   register size_t);
+ 
+ int id3_compat_fixup(struct id3_tag *);
+ 

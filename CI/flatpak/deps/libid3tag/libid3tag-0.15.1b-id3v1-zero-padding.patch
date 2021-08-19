@@ -1,0 +1,37 @@
+#! /bin/sh /usr/share/dpatch/dpatch-run
+## 10_id3v1_zeropadding.dpatch by  <sm17hs@gmail.com>
+##
+## All lines beginning with `## DP:' are a description of the patch.
+## DP: Use zero padding instead of space padding for ID3V1 fields
+## DP: (as requested by http://id3lib.sourceforge.net/id3/id3v1.html).
+
+@DPATCH@
+diff -urNad libid3tag-0.15.1b~/render.c libid3tag-0.15.1b/render.c
+--- libid3tag-0.15.1b~/render.c	2004-01-23 10:41:32.000000000 +0100
++++ libid3tag-0.15.1b/render.c	2009-11-09 17:17:48.000000000 +0100
+@@ -183,18 +183,16 @@
+   end  = data + length;
+ 
+   if (ucs4) {
+-    while (*ucs4 && end - data > 0) {
++    while (*ucs4 && end - data > 0)
+       *data++ = *ucs4++;
+-
+-      if (data[-1] == '\n')
+-	data[-1] = ' ';
+-    }
+   }
+ 
+-  while (end - data > 0)
+-    *data++ = ' ';
+-
+   *data = 0;
+ 
+-  return id3_latin1_serialize(ptr, padded, 0);
++  id3_latin1_serialize(ptr, padded, 0);
++
++  if (end - data > 0)
++    id3_render_padding(ptr, 0, end - data);
++
++  return length;
+ }

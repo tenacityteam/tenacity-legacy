@@ -1,0 +1,13 @@
+ diff --git a/src/effects/lv2/LoadLV2.cpp b/src/effects/lv2/LoadLV2.cpp
+index b101ee734..be665c5a6 100755
+--- a/src/effects/lv2/LoadLV2.cpp
++++ b/src/effects/lv2/LoadLV2.cpp
+@@ -180,7 +180,7 @@ bool LV2EffectsModule::Initialize()
+    newVar += wxT(":") + libdir.GetPath();
+ 
+    // Tell SUIL where to find his GUI support modules
+-   wxSetEnv(wxT("SUIL_MODULE_DIR"), wxT(PKGLIBDIR));
++   wxSetEnv(wxT("SUIL_MODULE_DIR"), wxT("/app/lib/suil-0"));
+ #endif
+ 
+    // Start with the LV2_PATH environment variable (if any)

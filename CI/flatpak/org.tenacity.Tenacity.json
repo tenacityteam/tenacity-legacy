@@ -1,0 +1,334 @@
+{
+  "app-id": "org.tenacityaudio.Tenacity",
+  "runtime": "org.gnome.Platform",
+  "runtime-version": "40",
+  "sdk": "org.gnome.Sdk",
+  "command": "tenacity",
+  "rename-desktop-file": "tenacity.desktop",
+  "rename-icon": "tenacity",
+  "rename-appdata-file": "tenacity.metainfo.xml",
+  "finish-args": [
+    "--share=ipc",
+    "--socket=x11",
+    "--share=network",
+    "--socket=pulseaudio",
+    "--device=all",
+    "--filesystem=host",
+    "--env=LD_LIBRARY_PATH=/app/lib/tenacity",
+    "--env=ALSA_CONFIG_PATH=",
+    "--env=LADSPA_PATH=/app/extensions/Plugins/ladspa",
+    "--env=LV2_PATH=/app/extensions/Plugins/lv2",
+    "--env=VST_PATH=/app/extensions/Plugins/lxvst",
+    "--filesystem=xdg-run/pipewire-0",
+    "--system-talk-name=org.freedesktop.RealtimeKit1"
+  ],
+  "add-extensions": {
+    "org.audacityteam.Audacity.Codecs": {
+      "directory": "lib/codecs",
+      "add-ld-path": "lib",
+      "bundle": true,
+      "autodelete": true
+    },
+    "org.freedesktop.LinuxAudio.Plugins": {
+      "directory": "extensions/Plugins",
+      "version": "20.08",
+      "add-ld-path": "lib",
+      "merge-dirs": "ladspa;lv2;lxvst",
+      "subdirectories": true,
+      "no-autodownload": true
+    }
+  },
+  "cleanup": [
+    "/include",
+    "/lib/pkgconfig",
+    "/share/aclocal",
+    "/share/man",
+    "*.la",
+    "*.a"
+  ],
+  "modules": [
+    {
+      "name": "wxwidgets",
+      "rm-configure": true,
+      "config-opts": [
+        "--with-libpng",
+        "--with-zlib",
+        "--with-cxx=14",
+        "--disable-sdltest",
+        "--disable-webview",
+        "--disable-webviewwebkit",
+        "--disable-ribbon",
+        "--disable-propgrid",
+        "--disable-richtext",
+        "--with-expat=builtin",
+        "--with-libiconv=/usr"
+      ],
+      "cleanup": [
+        "/share/bakefile"
+      ],
+      "sources": [
+        {
+          "type": "git",
+          "url": "https://github.com/wxWidgets/wxWidgets",
+          "tag": "v3.1.5",
+          "commit": "9c0a8be1dc32063d91ed1901fd5fcd54f4f955a1"
+        }
+      ]
+    },
+    "deps/lame-3.100.json",
+    "deps/libid3tag/libid3tag.json",
+    {
+      "name": "ffmpeg",
+      "config-opts": [
+        "--enable-shared",
+        "--disable-static",
+        "--disable-programs",
+        "--disable-doc",
+        "--disable-everything",
+        "--enable-libopus",
+        "--enable-libmp3lame",
+        "--enable-decoder=ac3",
+        "--enable-decoder=opus",
+        "--enable-decoder=mp3",
+        "--enable-encoder=ac3",
+        "--enable-demuxer=ac3",
+        "--enable-demuxer=mov",
+        "--enable-demuxer=mp3",
+        "--enable-demuxer=ogg",
+        "--enable-muxer=ac3",
+        "--enable-muxer=ipod",
+        "--enable-muxer=opus",
+        "--enable-parser=ac3",
+        "--enable-parser=opus"
+      ],
+      "cleanup": [
+        "/share/ffmpeg/examples"
+      ],
+      "sources": [
+        {
+          "type": "archive",
+          "url": "https://www.ffmpeg.org/releases/ffmpeg-4.2.3.tar.xz",
+          "sha256": "9df6c90aed1337634c1fb026fb01c154c29c82a64ea71291ff2da9aacb9aad31"
+        }
+      ]
+    },
+    {
+      "name": "ffmpeg-codecs",
+      "config-opts": [
+        "--enable-shared",
+        "--disable-static",
+        "--disable-programs",
+        "--disable-doc",
+        "--disable-avdevice",
+        "--enable-libopus",
+        "--enable-libmp3lame",
+        "--prefix=/app/lib/codecs"
+      ],
+      "cleanup": [
+        "/lib/codecs/include",
+        "/lib/codecs/lib/pkgconfig",
+        "/lib/codecs/share"
+      ],
+      "sources": [
+        {
+          "type": "archive",
+          "url": "https://www.ffmpeg.org/releases/ffmpeg-4.2.3.tar.xz",
+          "sha256": "9df6c90aed1337634c1fb026fb01c154c29c82a64ea71291ff2da9aacb9aad31"
+        }
+      ]
+    },
+    {
+      "name": "sqlite",
+      "build-options": {
+        "cflags": "-DSQLITE_ENABLE_COLUMN_METADATA=1 -DSQLITE_SECURE_DELETE=1 -DSQLITE_ENABLE_FTS3=1 -DSQLITE_ENABLE_UNLOCK_NOTIFY=1 -DSQLITE_ENABLE_DBPAGE_VTAB=1 -DSQLITE_ENABLE_DBSTAT_VTAB=1\n"
+      },
+      "config-opts": [
+        "--enable-fts5"
+      ],
+      "sources": [
+        {
+          "type": "archive",
+          "url": "https://www.sqlite.org/2020/sqlite-autoconf-3340000.tar.gz",
+          "sha256": "bf6db7fae37d51754737747aaaf413b4d6b3b5fbacd52bdb2d0d6e5b2edd9aee"
+        }
+      ]
+    },
+    {
+      "name": "chrpath",
+      "cleanup": [
+        "*"
+      ],
+      "sources": [
+        {
+          "type": "archive",
+          "url": "https://alioth-archive.debian.org/releases/chrpath/chrpath/0.16/chrpath-0.16.tar.gz",
+          "sha256": "bb0d4c54bac2990e1bdf8132f2c9477ae752859d523e141e72b3b11a12c26e7b"
+        }
+      ]
+    },
+    "shared-modules/libmad/libmad.json",
+    "shared-modules/linux-audio/jack2.json",
+    "shared-modules/linux-audio/lv2.json",
+    "shared-modules/linux-audio/lilv.json",
+    "deps/suil.json",
+    {
+      "name": "rapidjson",
+      "buildsystem": "cmake-ninja",
+      "config-opts": [
+        "-DRAPIDJSON_BUILD_DOC=OFF",
+        "-DRAPIDJSON_BUILD_EXAMPLES=OFF",
+        "-DRAPIDJSON_BUILD_TESTS=OFF",
+        "-DRAPIDJSON_BUILD_THIRDPARTY_GTEST=OFF"
+      ],
+      "sources": [
+        {
+          "type": "archive",
+          "url": "https://github.com/miloyip/rapidjson/archive/v1.1.0.tar.gz",
+          "sha256": "bf7ced29704a1e696fbccf2a2b4ea068e7774fa37f6d7dd4039d0787f8bed98e"
+        }
+      ]
+    },
+    {
+      "name": "portaudio",
+      "buildsystem": "cmake-ninja",
+      "sources": [
+        {
+          "type": "git",
+          "url": "https://github.com/PortAudio/portaudio.git",
+          "tag": "v19.7.0",
+          "commit": "147dd722548358763a8b649b3e4b41dfffbcfbb6"
+        }
+      ]
+    },
+    {
+      "name": "portsmf",
+      "buildsystem": "cmake-ninja",
+      "sources": [
+        {
+          "type": "git",
+          "url": "https://github.com/tenacityteam/portsmf.git",
+          "tag": "238",
+          "commit": "f9191b5cf2fee63635e14328e5b235d859a81cb5"
+        }
+      ]
+    },
+    {
+      "name": "portmidi-mixxxdj",
+      "buildsystem": "cmake-ninja",
+      "sources": [
+        {
+          "type": "git",
+          "url": "https://github.com/mixxxdj/portmidi.git",
+          "tag": "236",
+          "commit": "fda97c3be2baf10438574d10bb2a6b8b4f1140c4"
+        }
+      ]
+    },
+    {
+      "name": "soxr",
+      "buildsystem": "cmake-ninja",
+      "sources": [
+        {
+          "type": "git",
+          "url": "https://github.com/chirlu/soxr.git",
+          "tag": "0.1.3",
+          "commit": "945b592b70470e29f917f4de89b4281fbbd540c0"
+        }
+      ]
+    },
+    {
+      "name": "libsbsms",
+      "buildsystem": "cmake-ninja",
+      "sources": [
+        {
+          "type": "git",
+          "url": "https://github.com/claytonotey/libsbsms.git",
+          "tag": "2.3.0",
+          "commit": "e99cd7e6c6367e476577be34d2fdbe2023904d7e"
+        }
+      ]
+    },
+    {
+      "name": "vamp-plugin-sdk",
+      "sources": [
+        {
+          "type": "git",
+          "url": "https://github.com/c4dm/vamp-plugin-sdk.git",
+          "tag": "vamp-plugin-sdk-v2.10",
+          "commit": "67adfc2bf9486912a0fce5123cf54360ea2678bc"
+        }
+      ],
+      "cleanup": [
+        "/bin"
+      ]
+    },
+    {
+      "name": "soundtouch",
+      "sources": [
+        {
+          "type": "git",
+          "url": "https://gitlab.com/soundtouch/soundtouch.git",
+          "tag": "2.2",
+          "commit": "762f56024b7ade81f6565903161dffec0ad4741e"
+        }
+      ]
+    },
+    {
+      "name": "twolame",
+      "sources": [
+        {
+          "type": "archive",
+          "url": "https://downloads.sourceforge.net/twolame/twolame-0.4.0.tar.gz",
+          "sha256": "cc35424f6019a88c6f52570b63e1baf50f62963a3eac52a03a800bb070d7c87d"
+        }
+      ]
+    },
+    {
+      "name": "tenacity",
+      "buildsystem": "cmake-ninja",
+      "builddir": true,
+      "config-opts": [
+        "-DCMAKE_BUILD_TYPE=Release",
+        "-DCMAKE_INSTALL_LIBDIR=/app/lib",
+        "-Dgtk=gtk+-3.0",
+        "-Dglib=glib-2.0",
+        "-DwxWidgets_INCLUDE_DIRS=/app/include/wx-3.1;/app/lib/wx/include/gtk3-unicode-3.1",
+        "-DwxWidgets_CXX_FLAGS=-pthread",
+        "-DwxWidgets_DEFINITIONS_GENERAL=WXUSINGDLL;__WXGTK__;_FILE_OFFSET_BITS=64",
+        "-DwxWidgets_LIBRARIES=-lwx_gtk3u_xrc-3.1;-lwx_gtk3u_html-3.1;-lwx_gtk3u_qa-3.1;-lwx_gtk3u_core-3.1;-lwx_baseu_xml-3.1;-lwx_baseu_net-3.1;-lwx_baseu-3.1",
+        "-DWX_CONFIG=/app/bin/wx-config",
+        "-Dlib_preference=system",
+        "-Dobey_system_dependencies=On",
+        "-Duse_wxwidgets=system",
+        "-Duse_soxr=system",
+        "-Duse_portaudio=system",
+        "-Duse_portmixer=off",
+        "-Duse_vamp=system",
+        "-Duse_pa_jack=linked",
+        "-Duse_soundtouch=system",
+        "-Duse_twolame=system",
+        "-Dhas_networking=no"
+      ],
+      "post-install": [
+        "chrpath -d /app/bin/tenacity",
+        "install -Dm644 ../help/tenacity.metainfo.xml -t /app/share/metainfo",
+        "install -d /app/extensions/Plugins"
+      ],
+      "cleanup": [
+        "/share/tenacity/include",
+        "/share/audacity/include",
+        "/share/pixmaps"
+      ],
+      "sources": [
+        {
+          "type": "directory",
+          "path": ".."
+        },
+        {
+          "type": "patch",
+          "path": "patches/audacity-suil-fix.patch"
+        }
+      ]
+    }
+  ]
+}

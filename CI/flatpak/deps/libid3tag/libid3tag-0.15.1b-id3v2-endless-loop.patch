@@ -1,0 +1,11 @@
+--- utf16.c.old	2005-01-07 12:35:28.622883237 +0100
++++ utf16.c	2005-01-07 12:35:36.603673548 +0100
+@@ -250,6 +250,8 @@
+   id3_ucs4_t *ucs4;
+ 
+   end = *ptr + (length & ~1);
++  if (end == *ptr)
++    return 0;
+ 
+   utf16 = malloc((length / 2 + 1) * sizeof(*utf16));
+   if (utf16 == 0)
