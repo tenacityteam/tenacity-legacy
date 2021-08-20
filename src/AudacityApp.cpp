@@ -1049,7 +1049,9 @@ bool AudacityApp::OnInit() {
     wxFileSystem::AddHandler(safenew wxZipFSHandler);
 
     // encouraged by wxwidgets
+#if wxCHECK_VERSION(3, 1, 1)
     wxStandardPaths::Get().SetFileLayout(wxStandardPaths::FileLayout::FileLayout_XDG);
+#endif
 
     //
     // Paths: set search path and temp dir path
