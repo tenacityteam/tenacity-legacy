@@ -26,7 +26,7 @@ class Effect;
 //
 ///////////////////////////////////////////////////////////////////////////////
 
-class AUDACITY_DLL_API BuiltinEffectsModule final : public ModuleInterface
+class TENACITY_DLL_API BuiltinEffectsModule final : public ModuleInterface
 {
 public:
    BuiltinEffectsModule();

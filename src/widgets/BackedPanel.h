@@ -16,7 +16,7 @@
 /// \brief BackedPanel is for a panel that consists of a bitmap with something drawn
 /// over it.  It supports efficient repainting when the overlays change and
 /// recreation of the bitmap when the panel size is changed.
-class AUDACITY_DLL_API BackedPanel /* not final */ : public wxPanelWrapper {
+class TENACITY_DLL_API BackedPanel /* not final */ : public wxPanelWrapper {
 public:
    BackedPanel(wxWindow * parent, wxWindowID id,
                const wxPoint & pos,

@@ -37,7 +37,7 @@ class TranslatableString;
 #endif
 
 // Scrub state object
-class AUDACITY_DLL_API Scrubber final
+class TENACITY_DLL_API Scrubber final
    : public wxEvtHandler
    , public ClientData::Base
    , private PrefsListener

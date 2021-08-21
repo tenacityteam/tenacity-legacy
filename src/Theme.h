@@ -62,7 +62,7 @@ enum teThemeType
 
 
 
-class AUDACITY_DLL_API FlowPacker
+class TENACITY_DLL_API FlowPacker
 {
 public:
    FlowPacker(){;};
@@ -95,7 +95,7 @@ private:
 
 };
 
-class AUDACITY_DLL_API ThemeBase /* not final */
+class TENACITY_DLL_API ThemeBase /* not final */
 {
 public:
    ThemeBase(void);
@@ -160,7 +160,7 @@ protected:
 };
 
 
-class AUDACITY_DLL_API Theme final : public ThemeBase
+class TENACITY_DLL_API Theme final : public ThemeBase
 {
 public:
    Theme(void);
@@ -179,7 +179,7 @@ class wxWindow;
 class wxString;
 class wxPaintEvent;
 
-class AUDACITY_DLL_API auStaticText : public wxWindow
+class TENACITY_DLL_API auStaticText : public wxWindow
 {
 public:
    auStaticText(wxWindow* parent, wxString text);
@@ -191,9 +191,9 @@ public:
    DECLARE_EVENT_TABLE();
 };
 
-extern AUDACITY_DLL_API Theme theTheme;
+extern TENACITY_DLL_API Theme theTheme;
 
-extern AUDACITY_DLL_API ChoiceSetting
+extern TENACITY_DLL_API ChoiceSetting
      GUITheme
 ;
 

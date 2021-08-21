@@ -58,7 +58,7 @@ plugins.  It is what makes a class a plug-in.  Additionally it provides an
 optional parameter definitions function, for those components such as commands,
 effects and (soon) preference pagess that define parameters.
 ********************************************************************************/
-class AUDACITY_DLL_API ComponentInterface /* not final */
+class TENACITY_DLL_API ComponentInterface /* not final */
 {
 public:
    virtual ~ComponentInterface() {};

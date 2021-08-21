@@ -21,7 +21,7 @@ Paul Licameli split from TrackPanel.cpp
 class Track;
 class XMLWriter;
 
-class AUDACITY_DLL_API CommonTrackPanelCell /* not final */
+class TENACITY_DLL_API CommonTrackPanelCell /* not final */
    : public TrackPanelCell
 {
 public:
@@ -54,7 +54,7 @@ protected:
 
 };
 
-class AUDACITY_DLL_API CommonTrackCell /* not final */
+class TENACITY_DLL_API CommonTrackCell /* not final */
    : public CommonTrackPanelCell
 {
 public:

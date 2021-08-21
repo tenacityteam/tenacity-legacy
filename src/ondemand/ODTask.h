@@ -32,7 +32,7 @@ class Track;
 class WaveTrack;
 
 
-wxDECLARE_EXPORTED_EVENT(AUDACITY_DLL_API,
+wxDECLARE_EXPORTED_EVENT(TENACITY_DLL_API,
                          EVT_ODTASK_COMPLETE, wxCommandEvent);
 
 /// A class representing a modular task to be used with the On-Demand structures.

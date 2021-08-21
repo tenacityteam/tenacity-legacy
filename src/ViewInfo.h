@@ -33,12 +33,12 @@ struct SelectedRegionEvent : public wxEvent
 };
 
 // To do:  distinguish time changes from frequency changes perhaps?
-wxDECLARE_EXPORTED_EVENT( AUDACITY_DLL_API,
+wxDECLARE_EXPORTED_EVENT( TENACITY_DLL_API,
                           EVT_SELECTED_REGION_CHANGE, SelectedRegionEvent );
 
 // This heavyweight wrapper of the SelectedRegion structure emits events
 // on mutating operations, that other classes can listen for.
-class AUDACITY_DLL_API NotifyingSelectedRegion : public wxEvtHandler
+class TENACITY_DLL_API NotifyingSelectedRegion : public wxEvtHandler
 {
 public:
    // Expose SelectedRegion's const accessors
@@ -168,7 +168,7 @@ private:
    bool mLocked{ false };
 };
 
-class AUDACITY_DLL_API ViewInfo final
+class TENACITY_DLL_API ViewInfo final
    : public wxEvtHandler, public ZoomInfo
 {
 public:

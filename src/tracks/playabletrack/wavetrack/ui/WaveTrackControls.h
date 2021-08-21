@@ -23,7 +23,7 @@ class WaveTrack;
 class wxEvent;
 class wxWindow;
 
-class AUDACITY_DLL_API WaveTrackControls final : public PlayableTrackControls
+class TENACITY_DLL_API WaveTrackControls final : public PlayableTrackControls
 {
    WaveTrackControls(const WaveTrackControls&) = delete;
    WaveTrackControls &operator=(const WaveTrackControls&) = delete;
@@ -70,7 +70,7 @@ private:
 
 #include "../../../../widgets/PopupMenuTable.h"
 
-struct AUDACITY_DLL_API WaveTrackPopupMenuTable : public PopupMenuTable
+struct TENACITY_DLL_API WaveTrackPopupMenuTable : public PopupMenuTable
 {
    using PopupMenuTable::PopupMenuTable;
    PlayableTrackControls::InitMenuData *mpData{};
@@ -81,7 +81,7 @@ protected:
 };
 
 // Expose the wave track menu table to registration of menu items
-AUDACITY_DLL_API
+TENACITY_DLL_API
 WaveTrackPopupMenuTable &GetWaveTrackMenuTable();
 
 #endif

@@ -25,7 +25,7 @@ public:
     static DitherType FastDitherChoice();
     static DitherType BestDitherChoice();
 
-    static AUDACITY_DLL_API EnumSetting< DitherType > FastSetting, BestSetting;
+    static TENACITY_DLL_API EnumSetting< DitherType > FastSetting, BestSetting;
 
     /// Default constructor
     Dither();

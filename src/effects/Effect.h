@@ -63,7 +63,7 @@ class WaveTrack;
 // TODO:  Much more cleanup of old methods and variables is needed, but
 // TODO:  can't be done until after all effects are using the NEW API.
 
-class AUDACITY_DLL_API Effect /* not final */ : public wxEvtHandler,
+class TENACITY_DLL_API Effect /* not final */ : public wxEvtHandler,
                                 public EffectClientInterface,
                                 public EffectUIClientInterface,
                                 public EffectHostInterface
@@ -375,7 +375,7 @@ protected:
 
    // For the use of analyzers, which don't need to make output wave tracks,
    // but may need to add label tracks.
-   class AUDACITY_DLL_API AddedAnalysisTrack {
+   class TENACITY_DLL_API AddedAnalysisTrack {
       friend Effect;
       AddedAnalysisTrack(Effect *pEffect, const wxString &name);
       AddedAnalysisTrack(const AddedAnalysisTrack&) PROHIBITED;
@@ -405,7 +405,7 @@ protected:
 
    // For the use of analyzers, which don't need to make output wave tracks,
    // but may need to modify label tracks.
-   class AUDACITY_DLL_API ModifiedAnalysisTrack {
+   class TENACITY_DLL_API ModifiedAnalysisTrack {
       friend Effect;
       ModifiedAnalysisTrack
          (Effect *pEffect, const LabelTrack *pOrigTrack, const wxString &name);

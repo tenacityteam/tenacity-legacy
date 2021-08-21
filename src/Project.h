@@ -25,16 +25,16 @@ class wxWindow;
 
 class AudacityProject;
 
-AUDACITY_DLL_API AudacityProject *GetActiveProject();
+TENACITY_DLL_API AudacityProject *GetActiveProject();
 // For use by ProjectManager only:
-AUDACITY_DLL_API void SetActiveProject(AudacityProject * project);
+TENACITY_DLL_API void SetActiveProject(AudacityProject * project);
 
 /// \brief an object of class AllProjects acts like a standard library
 /// container, but refers to a global array of open projects.  So you can
 /// iterate easily over shared pointers to them with range-for :
 /// for (auto pProject : AllProjects{}) { ... }
 /// The pointers are never null.
-class AUDACITY_DLL_API AllProjects
+class TENACITY_DLL_API AllProjects
 {
    // Use shared_ptr to projects, because elsewhere we need weak_ptr
    using AProjectHolder = std::shared_ptr< AudacityProject >;
@@ -90,12 +90,12 @@ using AttachedProjectWindows = ClientData::Site<
    AudacityProject, wxWindow, ClientData::SkipCopying, ClientData::BarePtr
 >;
 
-wxDECLARE_EXPORTED_EVENT(AUDACITY_DLL_API,
+wxDECLARE_EXPORTED_EVENT(TENACITY_DLL_API,
                          EVT_TRACK_PANEL_TIMER, wxCommandEvent);
 
 // This event is emitted by the application object when there is a change
 // in the activated project
-wxDECLARE_EXPORTED_EVENT(AUDACITY_DLL_API,
+wxDECLARE_EXPORTED_EVENT(TENACITY_DLL_API,
                          EVT_PROJECT_ACTIVATION, wxCommandEvent);
 
 ///\brief The top-level handle to an Audacity project.  It serves as a source
@@ -104,7 +104,7 @@ wxDECLARE_EXPORTED_EVENT(AUDACITY_DLL_API,
 /// message and a few other things.
 /// There is very little in this class, most of the intelligence residing in
 /// the cooperating attached objects.
-class AUDACITY_DLL_API AudacityProject final
+class TENACITY_DLL_API AudacityProject final
    : public wxEvtHandler
    , public AttachedProjectObjects
    , public AttachedProjectWindows
@@ -164,8 +164,8 @@ private:
 
 ///\brief Get the top-level window associated with the project (as a wxFrame
 /// only, when you do not need to use the subclass ProjectWindow)
-AUDACITY_DLL_API wxFrame &GetProjectFrame( AudacityProject &project );
-AUDACITY_DLL_API const wxFrame &GetProjectFrame( const AudacityProject &project );
+TENACITY_DLL_API wxFrame &GetProjectFrame( AudacityProject &project );
+TENACITY_DLL_API const wxFrame &GetProjectFrame( const AudacityProject &project );
 
 ///\brief Get a pointer to the window associated with a project, or null if
 /// the given pointer is null.
@@ -178,8 +178,8 @@ inline const wxFrame *FindProjectFrame( const AudacityProject *project ) {
 
 ///\brief Get the main sub-window of the project frame that displays track data
 // (as a wxWindow only, when you do not need to use the subclass TrackPanel)
-AUDACITY_DLL_API wxWindow &GetProjectPanel( AudacityProject &project );
-AUDACITY_DLL_API const wxWindow &GetProjectPanel(
+TENACITY_DLL_API wxWindow &GetProjectPanel( AudacityProject &project );
+TENACITY_DLL_API const wxWindow &GetProjectPanel(
    const AudacityProject &project );
 
 #endif

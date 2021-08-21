@@ -36,7 +36,7 @@ constexpr int MAX_NUM_ROWS =80;
 
 class wxKeyEvent;
 
-class AUDACITY_DLL_API LabelTrackView final : public CommonTrackView
+class TENACITY_DLL_API LabelTrackView final : public CommonTrackView
 {
    LabelTrackView( const LabelTrackView& ) = delete;
    LabelTrackView &operator=( const LabelTrackView& ) = delete;

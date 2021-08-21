@@ -22,7 +22,7 @@ class ShuttleGui;
 
 #define GUI_PREFS_PLUGIN_SYMBOL ComponentInterfaceSymbol{ XO("GUI") }
 
-class AUDACITY_DLL_API GUIPrefs final : public PrefsPanel
+class TENACITY_DLL_API GUIPrefs final : public PrefsPanel
 {
  public:
    GUIPrefs(wxWindow * parent, wxWindowID winid);
@@ -55,12 +55,12 @@ class AUDACITY_DLL_API GUIPrefs final : public PrefsPanel
    int mDefaultRangeIndex;
 };
 
-AUDACITY_DLL_API
+TENACITY_DLL_API
 int ShowClippingPrefsID();
-AUDACITY_DLL_API
+TENACITY_DLL_API
 int ShowTrackNameInWaveformPrefsID();
 
-extern AUDACITY_DLL_API ChoiceSetting
+extern TENACITY_DLL_API ChoiceSetting
      GUIManualLocation
 ;
 

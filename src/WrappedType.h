@@ -27,7 +27,7 @@ enum teWrappedType
 class wxString;
 class ShuttlePrefs;
 
-class AUDACITY_DLL_API WrappedType
+class TENACITY_DLL_API WrappedType
 {
 public:
 

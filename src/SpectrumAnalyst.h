@@ -17,7 +17,7 @@
 
 class FreqGauge;
 
-class AUDACITY_DLL_API SpectrumAnalyst
+class TENACITY_DLL_API SpectrumAnalyst
 {
 public:
 
@@ -59,7 +59,7 @@ private:
    std::vector<float> mProcessed;
 };
 
-class AUDACITY_DLL_API FreqGauge final : public wxStatusBar
+class TENACITY_DLL_API FreqGauge final : public wxStatusBar
 {
 public:
    FreqGauge(wxWindow * parent, wxWindowID winid);

@@ -1336,9 +1336,9 @@ source_group(
         ${_INTDIR}/CMakeFiles/Tenacity.dir/cmake_pch.hxx
 )
 
-# Define AUDACITY_DLL_API
-import_symbol_define( import_symbol AUDACITY_DLL )
-export_symbol_define( export_symbol AUDACITY_DLL )
+# Define TENACITY_DLL_API
+import_symbol_define( import_symbol TENACITY_DLL )
+export_symbol_define( export_symbol TENACITY_DLL )
 list( APPEND DEFINES PRIVATE "${export_symbol}" INTERFACE "${import_symbol}" )
 
 target_sources( ${TARGET} PRIVATE ${HEADERS} ${SOURCES} ${RESOURCES} ${MAC_RESOURCES} ${WIN_RESOURCES} )

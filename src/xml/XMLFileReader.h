@@ -17,7 +17,7 @@ typedef struct XML_ParserStruct *XML_Parser;
 #include "XMLTagHandler.h"
 #include "Internat.h" // for TranslatableString
 
-class AUDACITY_DLL_API XMLFileReader final {
+class TENACITY_DLL_API XMLFileReader final {
  public:
    XMLFileReader();
    ~XMLFileReader();

@@ -57,7 +57,7 @@ enum {
 
 const int DragThreshold = 3;// Anything over 3 pixels is a drag, else a click.
 
-class AUDACITY_DLL_API TrackPanel final
+class TENACITY_DLL_API TrackPanel final
    : public CellularPanel
    , public NonKeystrokeInterceptingWindow
    , private PrefsListener
@@ -174,7 +174,7 @@ protected:
 
    std::unique_ptr<TrackArtist> mTrackArtist;
 
-   class AUDACITY_DLL_API AudacityTimer final : public wxTimer {
+   class TENACITY_DLL_API AudacityTimer final : public wxTimer {
    public:
      void Notify() override{
        // (From Debian)
@@ -213,7 +213,7 @@ protected:
 };
 
 // A predicate class
-struct AUDACITY_DLL_API IsVisibleTrack
+struct TENACITY_DLL_API IsVisibleTrack
 {
    IsVisibleTrack(AudacityProject *project);
 
