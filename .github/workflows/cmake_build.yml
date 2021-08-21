@@ -5,6 +5,7 @@ on:
     branches:
       - master
   pull_request:
+  workflow_dispatch:
 
 defaults:
   run:
@@ -73,6 +74,7 @@ jobs:
 
       VCPKG_DISABLE_METRICS: true
       VCPKG_DEFAULT_TRIPLET: ${{ matrix.config.vcpkg_triplet }}
+      VCPKG_BINARY_SOURCES: "clear;default,readwrite;nuget,https://tenacityteam.jfrog.io/artifactory/api/nuget/tenacity-nuget,readwrite"
 
       # Windows codesigning
       # This variables will be used by all the steps
@@ -88,13 +90,31 @@ jobs:
       with:
         submodules: true
 
+
+    - name: Install Nuget
+      uses: nuget/setup-nuget@v1
+      with:
+        # Nuget versions needs to be the same version that vcpkg expects
+        # So update them in parallel
+        nuget-version: 5.10.0
+
+    - name: Authenticate CI to Artifactory
+      if:  github.event_name == 'push' && github.repository_owner == 'tenacityteam'
+      run: |
+        nuget sources Add -Name Artifactory -Source https://tenacityteam.jfrog.io/artifactory/api/nuget/tenacity-nuget -username ${JFROG_ARTIFACTORY_NUGET_USER} -password ${JFROG_ARTIFACTORY_NUGET_PASS} -ForceEnglishOutput -NonInteractive
+        nuget setapikey ${JFROG_ARTIFACTORY_NUGET_USER}:${JFROG_ARTIFACTORY_NUGET_TOKEN} -Source Artifactory -ForceEnglishOutput -NonInteractive
+      env:
+        JFROG_ARTIFACTORY_NUGET_USER: ${{secrets.JFROG_ARTIFACTORY_NUGET_USER}}
+        JFROG_ARTIFACTORY_NUGET_PASS: ${{secrets.JFROG_ARTIFACTORY_NUGET_PASS}}
+        JFROG_ARTIFACTORY_NUGET_TOKEN: ${{secrets.JFROG_ARTIFACTORY_NUGET_TOKEN}}
+
     - name: Install dependencies
       run: |
         exec bash "scripts/ci/dependencies.sh"
 
     - name: Install Apple codesigning certificates
       uses: apple-actions/import-codesign-certs@v1
-      if: startswith( matrix.config.os, 'macos' ) && github.event_name == 'push' && github.repository_owner == 'audacity'
+      if: startswith( matrix.config.os, 'macos' ) && github.event_name == 'push' && github.repository_owner == 'tenacityteam'
       with:
         p12-file-base64: ${{ secrets.APPLE_CERTIFICATE }}
         p12-password: ${{ secrets.APPLE_CERTIFICATE_PASSWORD }}
