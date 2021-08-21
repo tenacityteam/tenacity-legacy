@@ -25,7 +25,7 @@ struct soxr_deleter {
 };
 using soxrHandle = std::unique_ptr<soxr, soxr_deleter>;
 
-class AUDACITY_DLL_API Resample final
+class TENACITY_DLL_API Resample final
 {
  public:
    /// Resamplers may have more than one method, offering a

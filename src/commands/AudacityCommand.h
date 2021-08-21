@@ -36,7 +36,7 @@ class EffectUIHostInterface;
 class ProgressDialog;
 
 
-class AUDACITY_DLL_API AudacityCommand /* not final */ : public wxEvtHandler,
+class TENACITY_DLL_API AudacityCommand /* not final */ : public wxEvtHandler,
                                 public ComponentInterface
 {
  public:
@@ -139,7 +139,7 @@ private:
 
 
 // Base dialog for command dialog.
-class AUDACITY_DLL_API AudacityCommandDialog /* not final */ : public wxDialogWrapper
+class TENACITY_DLL_API AudacityCommandDialog /* not final */ : public wxDialogWrapper
 {
 public:
    // constructors and destructors

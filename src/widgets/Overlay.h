@@ -90,7 +90,7 @@ AdornedRulerPanel.
 
 */
 
-class AUDACITY_DLL_API Overlay
+class TENACITY_DLL_API Overlay
 {
 public:
    Overlay() = default;

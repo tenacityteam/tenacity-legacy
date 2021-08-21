@@ -22,7 +22,7 @@ class AudacityProject;
 
 ///\ brief Holds per-project state needed for interaction with AudioIO,
 /// including the audio stream token and pointers to meters
-class AUDACITY_DLL_API ProjectAudioIO final
+class TENACITY_DLL_API ProjectAudioIO final
    : public ClientData::Base
 {
 public:

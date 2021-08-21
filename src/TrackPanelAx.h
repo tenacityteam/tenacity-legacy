@@ -34,7 +34,7 @@ class Track;
 class TrackList;
 
 // An event sent to the project
-wxDECLARE_EXPORTED_EVENT(AUDACITY_DLL_API,
+wxDECLARE_EXPORTED_EVENT(TENACITY_DLL_API,
                          EVT_TRACK_FOCUS_CHANGE, wxCommandEvent);
 
 class TrackPanelAx final
@@ -156,7 +156,7 @@ private:
    int mMessageCount;
 };
 
-class AUDACITY_DLL_API TrackFocus final
+class TENACITY_DLL_API TrackFocus final
    : public ClientData::Base
 {
 public:

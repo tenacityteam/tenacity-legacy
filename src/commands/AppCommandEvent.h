@@ -21,7 +21,7 @@
 #include <wx/event.h> // to declare custom event types
 #include <memory>
 
-DECLARE_EXPORTED_EVENT_TYPE(AUDACITY_DLL_API, wxEVT_APP_COMMAND_RECEIVED, -1);
+DECLARE_EXPORTED_EVENT_TYPE(TENACITY_DLL_API, wxEVT_APP_COMMAND_RECEIVED, -1);
 
 class OldStyleCommand;
 using OldStyleCommandPointer = std::shared_ptr<OldStyleCommand>;

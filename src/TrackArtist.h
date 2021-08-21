@@ -40,30 +40,30 @@ namespace TrackArt {
 
    static constexpr int ClipFrameRadius{ 6 };
 
-   AUDACITY_DLL_API
+   TENACITY_DLL_API
    void DrawClipAffordance(wxDC& dc, const wxRect& affordanceRect, bool highlight = false, bool selected = false);
 
-   AUDACITY_DLL_API
+   TENACITY_DLL_API
    void DrawClipEdges(wxDC& dc, const wxRect& clipRect, bool selected = false);
 
    // Helper: draws the "sync-locked" watermark tiled to a rectangle
-   AUDACITY_DLL_API
+   TENACITY_DLL_API
    void DrawSyncLockTiles(
       TrackPanelDrawingContext &context, const wxRect &rect );
 
    // Helper: draws background with selection rect
-   AUDACITY_DLL_API
+   TENACITY_DLL_API
    void DrawBackgroundWithSelection(TrackPanelDrawingContext &context,
          const wxRect &rect, const Track *track,
          const wxBrush &selBrush, const wxBrush &unselBrush,
          bool useSelection = true);
 
-   AUDACITY_DLL_API
+   TENACITY_DLL_API
    void DrawNegativeOffsetTrackArrows( TrackPanelDrawingContext &context,
                                        const wxRect & rect );
 }
 
-class AUDACITY_DLL_API TrackArtist final : private PrefsListener {
+class TENACITY_DLL_API TrackArtist final : private PrefsListener {
 
 public:
 
@@ -148,11 +148,11 @@ public:
    bool hasSolo{ false };
 };
 
-extern AUDACITY_DLL_API int GetWaveYPos(float value, float min, float max,
+extern TENACITY_DLL_API int GetWaveYPos(float value, float min, float max,
                        int height, bool dB, bool outer, float dBr,
                        bool clip);
 extern float FromDB(float value, double dBRange);
-extern AUDACITY_DLL_API float ValueOfPixel(int yy, int height, bool offset,
+extern TENACITY_DLL_API float ValueOfPixel(int yy, int height, bool offset,
                           bool dB, double dBRange, float zoomMin, float zoomMax);
 
 #endif                          // define __AUDACITY_TRACKARTIST__

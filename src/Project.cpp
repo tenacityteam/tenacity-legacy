@@ -104,7 +104,7 @@ static AudacityProject *gActiveProject;
 //This array holds onto all of the projects currently open
 AllProjects::Container AllProjects::gAudacityProjects;
 
-AUDACITY_DLL_API AudacityProject *GetActiveProject()
+TENACITY_DLL_API AudacityProject *GetActiveProject()
 {
    return gActiveProject;
 }
@@ -183,7 +183,7 @@ void AudacityProject::SetInitialImportPath(const FilePath &path)
    }
 }
 
-AUDACITY_DLL_API wxFrame &GetProjectFrame( AudacityProject &project )
+TENACITY_DLL_API wxFrame &GetProjectFrame( AudacityProject &project )
 {
    auto ptr = project.GetFrame();
    if ( !ptr )
@@ -191,7 +191,7 @@ AUDACITY_DLL_API wxFrame &GetProjectFrame( AudacityProject &project )
    return *ptr;
 }
 
-AUDACITY_DLL_API const wxFrame &GetProjectFrame( const AudacityProject &project )
+TENACITY_DLL_API const wxFrame &GetProjectFrame( const AudacityProject &project )
 {
    auto ptr = project.GetFrame();
    if ( !ptr )
@@ -199,7 +199,7 @@ AUDACITY_DLL_API const wxFrame &GetProjectFrame( const AudacityProject &project 
    return *ptr;
 }
 
-AUDACITY_DLL_API wxWindow &GetProjectPanel( AudacityProject &project )
+TENACITY_DLL_API wxWindow &GetProjectPanel( AudacityProject &project )
 {
    auto ptr = project.GetPanel();
    if ( !ptr )
@@ -207,7 +207,7 @@ AUDACITY_DLL_API wxWindow &GetProjectPanel( AudacityProject &project )
    return *ptr;
 }
 
-AUDACITY_DLL_API const wxWindow &GetProjectPanel(
+TENACITY_DLL_API const wxWindow &GetProjectPanel(
    const AudacityProject &project )
 {
    auto ptr = project.GetPanel();

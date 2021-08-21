@@ -34,7 +34,7 @@ typedef wxArrayString PluginIDs;
 
 namespace Registry{ class Visitor; }
 
-class AUDACITY_DLL_API MenuCreator
+class TENACITY_DLL_API MenuCreator
 {
 public:
    MenuCreator();
@@ -70,7 +70,7 @@ public:
 
 struct ToolbarMenuVisitor;
 
-class AUDACITY_DLL_API MenuManager final
+class TENACITY_DLL_API MenuManager final
    : public MenuCreator
    , public ClientData::Base
    , private PrefsListener

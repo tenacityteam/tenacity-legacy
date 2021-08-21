@@ -19,7 +19,7 @@ struct TrackPanelDrawingContext;
 class wxRect;
 
 /// \brief Drawing interface common to cells, groups of cells, and temporary handles in CellularPanel
-class AUDACITY_DLL_API TrackPanelDrawable {
+class TENACITY_DLL_API TrackPanelDrawable {
 public:
    virtual ~TrackPanelDrawable() = 0;
 

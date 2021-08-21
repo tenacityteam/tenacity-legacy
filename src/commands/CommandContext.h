@@ -19,7 +19,7 @@ class wxEvent;
 class CommandOutputTargets;
 using CommandParameter = CommandID;
 
-class AUDACITY_DLL_API CommandContext {
+class TENACITY_DLL_API CommandContext {
 public:
    CommandContext(
       AudacityProject &p

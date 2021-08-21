@@ -16,7 +16,7 @@ Paul Licameli split from Prefs.h
 #include "widgets/FileConfig.h" // to inherit
 
 /// \brief Our own specialisation of FileConfig.
-class AUDACITY_DLL_API AudacityFileConfig final : public FileConfig
+class TENACITY_DLL_API AudacityFileConfig final : public FileConfig
 {
 public:
    //! Require a call to this factory, to guarantee proper two-phase initialization

@@ -182,7 +182,7 @@ private:
 };
 
 //! Optional extra information about an interval, appropriate to a subtype of Track
-struct AUDACITY_DLL_API TrackIntervalData {
+struct TENACITY_DLL_API TrackIntervalData {
    virtual ~TrackIntervalData();
 };
 
@@ -231,7 +231,7 @@ using AttachedTrackObjects = ClientData::Site<
 >;
 
 //! Abstract base class for an object holding data associated with points on a time axis
-class AUDACITY_DLL_API Track /* not final */
+class TENACITY_DLL_API Track /* not final */
    : public XMLTagHandler
    , public AttachedTrackObjects
    , public std::enable_shared_from_this<Track> // see SharedPointer()
@@ -817,7 +817,7 @@ protected:
 };
 
 //! Track subclass holding data representing sound (as notes, or samples, or ...)
-class AUDACITY_DLL_API AudioTrack /* not final */ : public Track
+class TENACITY_DLL_API AudioTrack /* not final */ : public Track
 {
 public:
    AudioTrack()
@@ -833,7 +833,7 @@ public:
 };
 
 //! AudioTrack subclass that can also be audibly replayed by the program
-class AUDACITY_DLL_API PlayableTrack /* not final */ : public AudioTrack
+class TENACITY_DLL_API PlayableTrack /* not final */ : public AudioTrack
 {
 public:
    PlayableTrack()
@@ -1223,39 +1223,39 @@ struct TrackListEvent : public wxCommandEvent
 };
 
 //! Posted when the set of selected tracks changes.
-wxDECLARE_EXPORTED_EVENT(AUDACITY_DLL_API,
+wxDECLARE_EXPORTED_EVENT(TENACITY_DLL_API,
                          EVT_TRACKLIST_SELECTION_CHANGE, TrackListEvent);
 
 //! Posted when certain fields of a track change.
-wxDECLARE_EXPORTED_EVENT(AUDACITY_DLL_API,
+wxDECLARE_EXPORTED_EVENT(TENACITY_DLL_API,
                          EVT_TRACKLIST_TRACK_DATA_CHANGE, TrackListEvent);
 
 //! Posted when a track needs to be scrolled into view.
-wxDECLARE_EXPORTED_EVENT(AUDACITY_DLL_API,
+wxDECLARE_EXPORTED_EVENT(TENACITY_DLL_API,
                          EVT_TRACKLIST_TRACK_REQUEST_VISIBLE, TrackListEvent);
 
 //! Posted when tracks are reordered but otherwise unchanged.
 /*! mpTrack points to the moved track that is earliest in the New ordering. */
-wxDECLARE_EXPORTED_EVENT(AUDACITY_DLL_API,
+wxDECLARE_EXPORTED_EVENT(TENACITY_DLL_API,
                          EVT_TRACKLIST_PERMUTED, TrackListEvent);
 
 //! Posted when some track changed its height.
-wxDECLARE_EXPORTED_EVENT(AUDACITY_DLL_API,
+wxDECLARE_EXPORTED_EVENT(TENACITY_DLL_API,
                          EVT_TRACKLIST_RESIZING, TrackListEvent);
 
 //! Posted when a track has been added to a tracklist.  Also posted when one track replaces another
-wxDECLARE_EXPORTED_EVENT(AUDACITY_DLL_API,
+wxDECLARE_EXPORTED_EVENT(TENACITY_DLL_API,
                          EVT_TRACKLIST_ADDITION, TrackListEvent);
 
 //! Posted when a track has been deleted from a tracklist. Also posted when one track replaces another
 /*! mpTrack points to the first track after the deletion, if there is one. */
-wxDECLARE_EXPORTED_EVENT(AUDACITY_DLL_API,
+wxDECLARE_EXPORTED_EVENT(TENACITY_DLL_API,
                          EVT_TRACKLIST_DELETION, TrackListEvent);
 
 /*! @brief A flat linked list of tracks supporting Add,  Remove,
  * Clear, and Contains, serialization of the list of tracks, event notifications
  */
-class AUDACITY_DLL_API TrackList final
+class TENACITY_DLL_API TrackList final
    : public wxEvtHandler
    , public ListOfTracks
    , public std::enable_shared_from_this<TrackList>

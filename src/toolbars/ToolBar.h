@@ -51,7 +51,7 @@ class ToolBarResizer;
 //
 // Custom event
 //
-DECLARE_EXPORTED_EVENT_TYPE(AUDACITY_DLL_API, EVT_TOOLBAR_UPDATED, -1);
+DECLARE_EXPORTED_EVENT_TYPE(TENACITY_DLL_API, EVT_TOOLBAR_UPDATED, -1);
 
 //
 // Height of a single line toolbar
@@ -92,7 +92,7 @@ enum { ToolBarFloatMargin = 1 };
 
 class AudacityProject;
 
-class AUDACITY_DLL_API ToolBar /* not final */
+class TENACITY_DLL_API ToolBar /* not final */
 : public wxPanelWrapper
 , protected PrefsListener
 {
@@ -260,7 +260,7 @@ public:
    friend class ToolBarResizer;
 };
 
-struct AUDACITY_DLL_API RegisteredToolbarFactory {
+struct TENACITY_DLL_API RegisteredToolbarFactory {
    using Function = std::function< ToolBar::Holder( AudacityProject & ) >;
    using Functions = std::vector< Function >;
 

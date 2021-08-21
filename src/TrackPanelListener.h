@@ -20,7 +20,7 @@ enum class UndoPush : unsigned char;
 TrackPanel code pretend it doesn't completely know what an AudacityProject is
 and use only a limited number of its services.
 */
-class AUDACITY_DLL_API TrackPanelListener /* not final */ {
+class TENACITY_DLL_API TrackPanelListener /* not final */ {
 
  public:
    TrackPanelListener(){};

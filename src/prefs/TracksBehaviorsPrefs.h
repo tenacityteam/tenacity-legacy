@@ -21,7 +21,7 @@ class ShuttleGui;
 
 #define TRACKS_BEHAVIORS_PREFS_PLUGIN_SYMBOL ComponentInterfaceSymbol{ XO("Tracks Behaviors") }
 
-class AUDACITY_DLL_API TracksBehaviorsPrefs final : public PrefsPanel
+class TENACITY_DLL_API TracksBehaviorsPrefs final : public PrefsPanel
 {
  public:
    TracksBehaviorsPrefs(wxWindow * parent, wxWindowID winid);
@@ -40,8 +40,8 @@ class AUDACITY_DLL_API TracksBehaviorsPrefs final : public PrefsPanel
    void PopulateOrExchange(ShuttleGui & S) override;
 };
 
-extern AUDACITY_DLL_API ChoiceSetting TracksBehaviorsSolo;
+extern TENACITY_DLL_API ChoiceSetting TracksBehaviorsSolo;
 
-AUDACITY_DLL_API bool GetEditClipsCanMove();
+TENACITY_DLL_API bool GetEditClipsCanMove();
 
 #endif

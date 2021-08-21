@@ -15,12 +15,12 @@ Paul Licameli
 
 class EnumValueSymbols;
 
-class AUDACITY_DLL_API WaveformSettings : public PrefsListener
+class TENACITY_DLL_API WaveformSettings : public PrefsListener
 {
 public:
 
    // Singleton for settings that are not per-track
-   class AUDACITY_DLL_API Globals
+   class TENACITY_DLL_API Globals
    {
    public:
       static Globals &Get();

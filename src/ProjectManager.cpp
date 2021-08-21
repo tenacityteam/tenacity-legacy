@@ -92,7 +92,7 @@ ProjectManager::~ProjectManager() = default;
 // a bad compilation dependency.  The event was never emitted anywhere.  I
 // preserve it and its handler here but I move it to remove the dependency.
 // Asynchronous open
-wxDECLARE_EXPORTED_EVENT(AUDACITY_DLL_API,
+wxDECLARE_EXPORTED_EVENT(TENACITY_DLL_API,
                          EVT_OPEN_AUDIO_FILE, wxCommandEvent);
 wxDEFINE_EVENT(EVT_OPEN_AUDIO_FILE, wxCommandEvent);
 

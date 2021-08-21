@@ -23,7 +23,7 @@ class wxFont;
 class Envelope;
 class ZoomInfo;
 
-class AUDACITY_DLL_API Ruler {
+class TENACITY_DLL_API Ruler {
  public:
 
    enum RulerFormat {
@@ -225,7 +225,7 @@ private:
    NumberScale mNumberScale;
 };
 
-class AUDACITY_DLL_API RulerPanel final : public wxPanelWrapper {
+class TENACITY_DLL_API RulerPanel final : public wxPanelWrapper {
    DECLARE_DYNAMIC_CLASS(RulerPanel)
 
  public:

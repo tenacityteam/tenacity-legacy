@@ -16,7 +16,7 @@
  and certain navigation keys with commands, but certain windows do not, and
  those inherit this class.
  */
-struct AUDACITY_DLL_API NonKeystrokeInterceptingWindow
+struct TENACITY_DLL_API NonKeystrokeInterceptingWindow
 {
    virtual ~NonKeystrokeInterceptingWindow();
 };
@@ -25,7 +25,7 @@ struct AUDACITY_DLL_API NonKeystrokeInterceptingWindow
  \brief Top-level windows that do redirect keystrokes to the associated
  project's CommandManager inherit this class.
 */
-struct AUDACITY_DLL_API TopLevelKeystrokeHandlingWindow
+struct TENACITY_DLL_API TopLevelKeystrokeHandlingWindow
 {
    virtual ~TopLevelKeystrokeHandlingWindow();
 };

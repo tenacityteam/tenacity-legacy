@@ -33,5 +33,5 @@
 #include "Cursors32/ArrowRightCursor.xpm"
 #include "Cursors32/DrawToolSmoothing.xpm"
 
-AUDACITY_DLL_API
+TENACITY_DLL_API
 std::unique_ptr<wxCursor> MakeCursor(int WXUNUSED(CursorId), const char * const pXpm[36], int HotX, int HotY);
