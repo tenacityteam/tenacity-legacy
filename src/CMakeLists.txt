@@ -86,9 +86,6 @@ list( APPEND SOURCES
       AllThemeResources.cpp
       AllThemeResources.h
       AttachedVirtualFunction.h
-      AudacityApp.cpp
-      AudacityApp.h
-      $<$<BOOL:${wxIS_MAC}>:AudacityApp.mm>
       AudacityException.cpp
       AudacityException.h
       AudacityFileConfig.cpp
@@ -290,6 +287,9 @@ list( APPEND SOURCES
       Tags.h
       TempDirectory.cpp
       TempDirectory.h
+      TenacityApp.cpp
+      TenacityApp.h
+      $<$<BOOL:${wxIS_MAC}>:TenacityApp.mm>
       Theme.cpp
       Theme.h
       ThemeAsCeeCode.h
@@ -1203,7 +1203,7 @@ elseif( CMAKE_SYSTEM_NAME MATCHES "Darwin" )
    # These sources must be compiled as Objective C++ and excluded
    # from precompiled header usage
    set_source_files_properties(
-      AudacityApp.mm
+      TenacityApp.mm
       KeyboardCapture.cpp
       effects/EffectUI.cpp
       effects/VST/VSTControlOSX.mm

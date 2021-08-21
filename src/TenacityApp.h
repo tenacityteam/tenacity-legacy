@@ -2,17 +2,17 @@
 
   Tenacity
 
-  AudacityApp.h
+  TenacityApp.h
 
   Dominic Mazzoni
 
-  This is the main source file for Audacity which handles
+  This is the main source file for Tenacity which handles
   initialization and termination by subclassing wxApp.
 
 **********************************************************************/
 
-#ifndef __AUDACITY_APP__
-#define __AUDACITY_APP__
+#ifndef __TENACITY_APP__
+#define __TENACITY_APP__
 
 
 #include "Identifier.h"
@@ -34,10 +34,10 @@ class CommandHandler;
 class AppCommandEvent;
 class AudacityProject;
 
-class AudacityApp final : public wxApp {
+class TenacityApp final : public wxApp {
  public:
-   AudacityApp();
-   ~AudacityApp();
+   TenacityApp();
+   ~TenacityApp();
    bool OnInit(void) override;
    bool InitPart2();
    int OnExit(void) override;
@@ -117,6 +117,6 @@ class AudacityApp final : public wxApp {
     DECLARE_EVENT_TABLE()
 };
 
-extern AudacityApp & wxGetApp();
+extern TenacityApp & wxGetApp();
 
 #endif
