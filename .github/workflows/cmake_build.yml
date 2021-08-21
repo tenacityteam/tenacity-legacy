@@ -150,7 +150,7 @@ jobs:
         git checkout ${{ matrix.config.wxwidgets_git_ref }}
         cmake -G Ninja -D CMAKE_INSTALL_PREFIX=${{ github.workspace }}/wxwidgets-install \
           -S . -B cmake_build
-        cmake --build cmake_build
+        cmake --build cmake_build -j$(nproc)
         cmake --install cmake_build
 
     - name: "Set up compiler cache"
@@ -183,7 +183,7 @@ jobs:
         WX_CONFIG: ${{ matrix.config.WX_CONFIG }}
 
     - name: Build
-      run: cmake --build build --config ${{ env.CMAKE_BUILD_TYPE }} --verbose
+      run: cmake --build build --config ${{ env.CMAKE_BUILD_TYPE }} --verbose -j$(nproc)
 
     - name: "Print compiler cache stats"
       run: ${{ matrix.config.compiler_cache }} -s
@@ -193,7 +193,7 @@ jobs:
 
     - name: "[Windows] Package"
       if: runner.os == 'Windows'
-      run: cmake --build build --target innosetup --config ${{ env.CMAKE_BUILD_TYPE }}
+      run: cmake --build build --target innosetup --config ${{ env.CMAKE_BUILD_TYPE }} -j$(nproc)
 
     - name: "[Ubuntu/macOS] Package"
       if: runner.os != 'Windows'
