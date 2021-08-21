@@ -2,21 +2,21 @@
 
   Tenacity
 
-  AudacityApp.cpp
+  TenacityApp.cpp
 
   Dominic Mazzoni
 
 ******************************************************************//**
 
-\class AudacityApp
-\brief AudacityApp is the 'main' class for Audacity
+\class TenacityApp
+\brief TenacityApp is the 'main' class for Tenacity
 
 It handles initialization and termination by subclassing wxApp.
 
 *//*******************************************************************/
 
 
-#include "AudacityApp.h"
+#include "TenacityApp.h"
 
 
 
@@ -375,7 +375,7 @@ namespace
 static bool gInited = false;
 static bool gIsQuitting = false;
 
-static void QuitAudacity(bool bForce) {
+static void QuitTenacity(bool bForce) {
     // guard against recursion
     if (gIsQuitting)
         return;
@@ -435,8 +435,8 @@ static void QuitAudacity(bool bForce) {
     }
 }
 
-static void QuitAudacity() {
-    QuitAudacity(false);
+static void QuitTenacity() {
+    QuitTenacity(false);
 }
 
 #if defined(__WXGTK__) && defined(HAVE_GTK)
@@ -664,7 +664,7 @@ class IPCServ final : public wxServer
 
 #if defined(__WXMAC__)
 
-IMPLEMENT_APP_NO_MAIN(AudacityApp)
+IMPLEMENT_APP_NO_MAIN(TenacityApp)
 IMPLEMENT_WX_THEME_SUPPORT
 
 int main(int argc, char* argv[]) {
@@ -675,7 +675,7 @@ int main(int argc, char* argv[]) {
 
 #elif defined(__WXGTK__) && defined(NDEBUG)
 
-IMPLEMENT_APP_NO_MAIN(AudacityApp)
+IMPLEMENT_APP_NO_MAIN(TenacityApp)
 IMPLEMENT_WX_THEME_SUPPORT
 
 int main(int argc, char* argv[]) {
@@ -693,23 +693,23 @@ int main(int argc, char* argv[]) {
 }
 
 #else
-IMPLEMENT_APP(AudacityApp)
+IMPLEMENT_APP(TenacityApp)
 #endif
 
 #ifdef __WXMAC__
 
 // in response of an open-document apple event
-void AudacityApp::MacOpenFile(const wxString& fileName) {
+void TenacityApp::MacOpenFile(const wxString& fileName) {
     ofqueue.push_back(fileName);
 }
 
 // in response of a print-document apple event
-void AudacityApp::MacPrintFile(const wxString& fileName) {
+void TenacityApp::MacPrintFile(const wxString& fileName) {
     ofqueue.push_back(fileName);
 }
 
 // in response of a open-application apple event
-void AudacityApp::MacNewFile() {
+void TenacityApp::MacNewFile() {
     if (!gInited)
         return;
 
@@ -727,48 +727,48 @@ void AudacityApp::MacNewFile() {
 #define ID_IPC_SOCKET   6201
 
 // we don't really care about the timer id, but set this value just in case we do in the future
-#define kAudacityAppTimerID 0
+#define kTenacityAppTimerID 0
 
-BEGIN_EVENT_TABLE(AudacityApp, wxApp)
-EVT_QUERY_END_SESSION(AudacityApp::OnQueryEndSession)
-EVT_END_SESSION(AudacityApp::OnEndSession)
+BEGIN_EVENT_TABLE(TenacityApp, wxApp)
+EVT_QUERY_END_SESSION(TenacityApp::OnQueryEndSession)
+EVT_END_SESSION(TenacityApp::OnEndSession)
 
-EVT_TIMER(kAudacityAppTimerID, AudacityApp::OnTimer)
+EVT_TIMER(kTenacityAppTimerID, TenacityApp::OnTimer)
 #ifdef __WXMAC__
-EVT_MENU(wxID_NEW, AudacityApp::OnMenuNew)
-EVT_MENU(wxID_OPEN, AudacityApp::OnMenuOpen)
-EVT_MENU(wxID_ABOUT, AudacityApp::OnMenuAbout)
-EVT_MENU(wxID_PREFERENCES, AudacityApp::OnMenuPreferences)
+EVT_MENU(wxID_NEW, TenacityApp::OnMenuNew)
+EVT_MENU(wxID_OPEN, TenacityApp::OnMenuOpen)
+EVT_MENU(wxID_ABOUT, TenacityApp::OnMenuAbout)
+EVT_MENU(wxID_PREFERENCES, TenacityApp::OnMenuPreferences)
 #endif
 
 // Associate the handler with the menu id on all operating systems, even
 // if they don't have an application menu bar like in macOS, so that
 // other parts of the program can send the application a shut-down
 // event
-EVT_MENU(wxID_EXIT, AudacityApp::OnMenuExit)
+EVT_MENU(wxID_EXIT, TenacityApp::OnMenuExit)
 
 #ifndef __WXMSW__
-EVT_SOCKET(ID_IPC_SERVER, AudacityApp::OnServerEvent)
-EVT_SOCKET(ID_IPC_SOCKET, AudacityApp::OnSocketEvent)
+EVT_SOCKET(ID_IPC_SERVER, TenacityApp::OnServerEvent)
+EVT_SOCKET(ID_IPC_SOCKET, TenacityApp::OnSocketEvent)
 #endif
 
 // Recent file event handlers.
-EVT_MENU(FileHistory::ID_RECENT_CLEAR, AudacityApp::OnMRUClear)
+EVT_MENU(FileHistory::ID_RECENT_CLEAR, TenacityApp::OnMRUClear)
 EVT_MENU_RANGE(FileHistory::ID_RECENT_FIRST, FileHistory::ID_RECENT_LAST,
-               AudacityApp::OnMRUFile)
+               TenacityApp::OnMRUFile)
 
     // Handle AppCommandEvents (usually from a script)
-    EVT_APP_COMMAND(wxID_ANY, AudacityApp::OnReceiveCommand)
+    EVT_APP_COMMAND(wxID_ANY, TenacityApp::OnReceiveCommand)
 
     // Global ESC key handling
-    EVT_KEY_DOWN(AudacityApp::OnKeyDown)
+    EVT_KEY_DOWN(TenacityApp::OnKeyDown)
     END_EVENT_TABLE()
 
     // backend for OnMRUFile
     // TODO: Would be nice to make this handle not opening a file with more panache.
     //  - Inform the user if DefaultOpenPath not set.
     //  - Switch focus to correct instance of project window, if already open.
-    bool AudacityApp::MRUOpen(const FilePath& fullPathStr) {
+    bool TenacityApp::MRUOpen(const FilePath& fullPathStr) {
     // Most of the checks below are copied from ProjectManager::OpenFiles.
     // - some rationalisation might be possible.
 
@@ -800,18 +800,18 @@ EVT_MENU_RANGE(FileHistory::ID_RECENT_FIRST, FileHistory::ID_RECENT_LAST,
     return(true);
 }
 
-bool AudacityApp::SafeMRUOpen(const wxString& fullPathStr) {
+bool TenacityApp::SafeMRUOpen(const wxString& fullPathStr) {
     return GuardedCall< bool >([&] { return MRUOpen(fullPathStr); });
 }
 
-void AudacityApp::OnMRUClear(wxCommandEvent& WXUNUSED(event)) {
+void TenacityApp::OnMRUClear(wxCommandEvent& WXUNUSED(event)) {
     FileHistory::Global().Clear();
 }
 
 //vvv Basically, anything from Recent Files is treated as a .aup3, until proven otherwise,
 // then it tries to Import(). Very questionable handling, imo.
 // Better, for example, to check the file type early on.
-void AudacityApp::OnMRUFile(wxCommandEvent& event) {
+void TenacityApp::OnMRUFile(wxCommandEvent& event) {
     int n = event.GetId() - FileHistory::ID_RECENT_FIRST;
     auto& history = FileHistory::Global();
     const auto& fullPathStr = history[n];
@@ -819,7 +819,7 @@ void AudacityApp::OnMRUFile(wxCommandEvent& event) {
     // Try to open only if not already open.
     // Test IsAlreadyOpen() here even though AudacityProject::MRUOpen() also now checks,
     // because we don't want to Remove() just because it already exists,
-    // and AudacityApp::OnMacOpenFile() calls MRUOpen() directly.
+    // and TenacityApp::OnMacOpenFile() calls MRUOpen() directly.
     // that method does not return the bad result.
     // PRL: Don't call SafeMRUOpen
     // -- if open fails for some exceptional reason of resource exhaustion that
@@ -828,7 +828,7 @@ void AudacityApp::OnMRUFile(wxCommandEvent& event) {
         history.Remove(n);
 }
 
-void AudacityApp::OnTimer(wxTimerEvent& WXUNUSED(event)) {
+void TenacityApp::OnTimer(wxTimerEvent& WXUNUSED(event)) {
     // Filenames are queued when Audacity receives a few of the
     // AppleEvent messages (via wxWidgets).  So, open any that are
     // in the queue and clean the queue.
@@ -887,7 +887,7 @@ wxLanguageInfo userLangs[] =
 };
 #endif
 
-void AudacityApp::OnFatalException() {
+void TenacityApp::OnFatalException() {
     exit(-1);
 }
 
@@ -898,7 +898,7 @@ void AudacityApp::OnFatalException() {
 #pragma warning( disable : 4702) // unreachable code warning.
 #endif //_MSC_VER
 
-bool AudacityApp::OnExceptionInMainLoop() {
+bool TenacityApp::OnExceptionInMainLoop() {
     // This function is invoked from catch blocks in the wxWidgets framework,
     // and throw; without argument re-throws the exception being handled,
     // letting us dispatch according to its type.
@@ -946,7 +946,7 @@ bool AudacityApp::OnExceptionInMainLoop() {
 #pragma warning( pop )
 #endif //_MSC_VER
 
-AudacityApp::AudacityApp() {
+TenacityApp::TenacityApp() {
 #if defined(USE_BREAKPAD)
     // Do not capture crashes in debug builds
 #elif !defined(_DEBUG)
@@ -956,12 +956,12 @@ AudacityApp::AudacityApp() {
 #endif
 }
 
-AudacityApp::~AudacityApp() {
+TenacityApp::~TenacityApp() {
 }
 
 // The `main program' equivalent, creating the windows and returning the
 // main frame
-bool AudacityApp::OnInit() {
+bool TenacityApp::OnInit() {
     // JKC: ANSWER-ME: Who actually added the event loop guarantor?
     // Although 'blame' says Leland, I think it came from a donated patch.
 
@@ -980,7 +980,7 @@ bool AudacityApp::OnInit() {
         this->CallAfter([] {
         ::AudacityMessageBox(
             XO("SQLite library failed to initialize.  Audacity cannot continue."));
-        QuitAudacity(true);
+        QuitTenacity(true);
                         });
 
 
@@ -1249,7 +1249,7 @@ bool AudacityApp::OnInit() {
 #endif
 }
 
-bool AudacityApp::InitPart2() {
+bool TenacityApp::InitPart2() {
 #if defined(__WXMAC__)
     SetExitOnFrameDelete(false);
 #endif
@@ -1426,7 +1426,7 @@ bool AudacityApp::InitPart2() {
         bool didRecoverAnything = false;
         // This call may reassign project (passed by reference)
         if (!ShowAutoRecoveryDialogIfNeeded(project, &didRecoverAnything)) {
-            QuitAudacity(true);
+            QuitTenacity(true);
         }
 
         //
@@ -1435,7 +1435,7 @@ bool AudacityApp::InitPart2() {
         if (project && !didRecoverAnything) {
             if (parser->Found(wxT("t"))) {
                 RunBenchmark(nullptr, *project);
-                QuitAudacity(true);
+                QuitTenacity(true);
             }
 
             for (size_t i = 0, cnt = parser->GetParamCount(); i < cnt; i++) {
@@ -1450,7 +1450,7 @@ bool AudacityApp::InitPart2() {
 
     ModuleManager::Get().Dispatch(AppInitialized);
 
-    mTimer.SetOwner(this, kAudacityAppTimerID);
+    mTimer.SetOwner(this, kTenacityAppTimerID);
     mTimer.Start(200);
 
 #ifdef EXPERIMENTAL_EASY_CHANGE_KEY_BINDINGS
@@ -1502,18 +1502,18 @@ bool AudacityApp::InitPart2() {
     return TRUE;
 }
 
-void AudacityApp::InitCommandHandler() {
+void TenacityApp::InitCommandHandler() {
     mCmdHandler = std::make_unique<CommandHandler>();
     //SetNextHandler(mCmdHandler);
 }
 
 // AppCommandEvent callback - just pass the event on to the CommandHandler
-void AudacityApp::OnReceiveCommand(AppCommandEvent& event) {
+void TenacityApp::OnReceiveCommand(AppCommandEvent& event) {
     wxASSERT(NULL != mCmdHandler);
     mCmdHandler->OnReceiveCommand(event);
 }
 
-void AudacityApp::OnKeyDown(wxKeyEvent& event) {
+void TenacityApp::OnKeyDown(wxKeyEvent& event) {
     if (event.GetKeyCode() == WXK_ESCAPE) {
         // Stop play, including scrub, but not record
         auto project = ::GetActiveProject();
@@ -1554,7 +1554,7 @@ void SetToExtantDirectory(wxString& result, const wxString& dir) {
         result = dir;
 }
 
-bool AudacityApp::InitTempDir() {
+bool TenacityApp::InitTempDir() {
     // We need to find a temp directory location.
     auto tempFromPrefs = TempDirectory::TempDir();
     auto &tempDefaultLoc = TempDirectory::DefaultTempDir();
@@ -1629,7 +1629,7 @@ bool AudacityApp::InitTempDir() {
 // Return true if there are no other instances of Audacity running,
 // false otherwise.
 
-bool AudacityApp::CreateSingleInstanceChecker(const wxString& dir) {
+bool TenacityApp::CreateSingleInstanceChecker(const wxString& dir) {
     wxString name = wxString::Format(wxT("audacity-lock-%s"), wxGetUserId());
     mChecker.reset();
     auto checker = std::make_unique<wxSingleInstanceChecker>();
@@ -1731,7 +1731,7 @@ bool AudacityApp::CreateSingleInstanceChecker(const wxString& dir) {
 // Return true if there are no other instances of Audacity running,
 // false otherwise.
 
-bool AudacityApp::CreateSingleInstanceChecker(const wxString& dir) {
+bool TenacityApp::CreateSingleInstanceChecker(const wxString& dir) {
     mIPCServ.reset();
 
     bool isServer = false;
@@ -1936,7 +1936,7 @@ bool AudacityApp::CreateSingleInstanceChecker(const wxString& dir) {
 
 #if defined(__WXMAC__)
     // On macOS the client gets events from the wxWidgets framework that
-    // go to AudacityApp::MacOpenFile. Forward the file names to the prior
+    // go to TenacityApp::MacOpenFile. Forward the file names to the prior
     // instance via the socket.
     for (const auto& filename : ofqueue) {
         auto str = filename.c_str().AsWChar();
@@ -1962,7 +1962,7 @@ bool AudacityApp::CreateSingleInstanceChecker(const wxString& dir) {
     return false;
 }
 
-void AudacityApp::OnServerEvent(wxSocketEvent& /* evt */) {
+void TenacityApp::OnServerEvent(wxSocketEvent& /* evt */) {
     wxSocketBase* sock;
 
     // Accept all pending connection requests
@@ -1978,7 +1978,7 @@ void AudacityApp::OnServerEvent(wxSocketEvent& /* evt */) {
     while (sock);
 }
 
-void AudacityApp::OnSocketEvent(wxSocketEvent& evt) {
+void TenacityApp::OnSocketEvent(wxSocketEvent& evt) {
     wxSocketBase* sock = evt.GetSocket();
 
     if (evt.GetSocketEvent() == wxSOCKET_LOST) {
@@ -1998,7 +1998,7 @@ void AudacityApp::OnSocketEvent(wxSocketEvent& evt) {
 
 #endif
 
-std::unique_ptr<wxCmdLineParser> AudacityApp::ParseCommandLine() {
+std::unique_ptr<wxCmdLineParser> TenacityApp::ParseCommandLine() {
     auto parser = std::make_unique<wxCmdLineParser>(argc, argv);
     if (!parser) {
         return nullptr;
@@ -2032,7 +2032,7 @@ std::unique_ptr<wxCmdLineParser> AudacityApp::ParseCommandLine() {
     return{};
 }
 
-void AudacityApp::OnQueryEndSession(wxCloseEvent& event) {
+void TenacityApp::OnQueryEndSession(wxCloseEvent& event) {
     bool mustVeto = false;
 
 #ifdef __WXMAC__
@@ -2045,7 +2045,7 @@ void AudacityApp::OnQueryEndSession(wxCloseEvent& event) {
         OnEndSession(event);
 }
 
-void AudacityApp::OnEndSession(wxCloseEvent& event) {
+void TenacityApp::OnEndSession(wxCloseEvent& event) {
     bool force = !event.CanVeto();
 
     // Try to close each open window.  If the user hits Cancel
@@ -2062,7 +2062,7 @@ void AudacityApp::OnEndSession(wxCloseEvent& event) {
     }
 }
 
-int AudacityApp::OnExit()
+int TenacityApp::OnExit()
 {
    gIsQuitting = true;
    while(Pending())
@@ -2118,7 +2118,7 @@ int AudacityApp::OnExit()
 // and skip the event unless none are open (which should only happen
 // on the Mac, at least currently.)
 
-void AudacityApp::OnMenuAbout(wxCommandEvent& WXUNUSED(event)) {
+void TenacityApp::OnMenuAbout(wxCommandEvent& WXUNUSED(event)) {
     // This function shadows a similar function
     // in Menus.cpp, but should only be used on the Mac platform.
 #ifdef __WXMAC__
@@ -2128,7 +2128,7 @@ void AudacityApp::OnMenuAbout(wxCommandEvent& WXUNUSED(event)) {
 #endif
 }
 
-void AudacityApp::OnMenuNew(wxCommandEvent& event) {
+void TenacityApp::OnMenuNew(wxCommandEvent& event) {
     // This function shadows a similar function
     // in Menus.cpp, but should only be used on the Mac platform
     // when no project windows are open. This check assures that
@@ -2142,7 +2142,7 @@ void AudacityApp::OnMenuNew(wxCommandEvent& event) {
 }
 
 
-void AudacityApp::OnMenuOpen(wxCommandEvent& event) {
+void TenacityApp::OnMenuOpen(wxCommandEvent& event) {
     // This function shadows a similar function
     // in Menus.cpp, but should only be used on the Mac platform
     // when no project windows are open. This check assures that
@@ -2158,7 +2158,7 @@ void AudacityApp::OnMenuOpen(wxCommandEvent& event) {
 
 }
 
-void AudacityApp::OnMenuPreferences(wxCommandEvent& event) {
+void TenacityApp::OnMenuPreferences(wxCommandEvent& event) {
     // This function shadows a similar function
     // in Menus.cpp, but should only be used on the Mac platform
     // when no project windows are open. This check assures that
@@ -2173,7 +2173,7 @@ void AudacityApp::OnMenuPreferences(wxCommandEvent& event) {
 
 }
 
-void AudacityApp::OnMenuExit(wxCommandEvent& event) {
+void TenacityApp::OnMenuExit(wxCommandEvent& event) {
     // This function shadows a similar function
     // in Menus.cpp, but should only be used on the Mac platform
     // when no project windows are open. This check assures that
@@ -2182,7 +2182,7 @@ void AudacityApp::OnMenuExit(wxCommandEvent& event) {
 
     // LL:  Removed "if" to allow closing based on final project count.
     // if(AllProjects{}.empty())
-    QuitAudacity();
+    QuitTenacity();
 
     // LL:  Veto quit if projects are still open.  This can happen
     //      if the user selected Cancel in a Save dialog.
@@ -2199,7 +2199,7 @@ void AudacityApp::OnMenuExit(wxCommandEvent& event) {
    //      if people want to manually change associations.
 */
 #if defined(__WXMSW__) && !defined(__WXUNIVERSAL__) && !defined(__CYGWIN__)
-void AudacityApp::AssociateFileTypes() {
+void TenacityApp::AssociateFileTypes() {
     // Check pref in case user has already decided against it.
     bool bWantAssociateFiles = true;
     if (gPrefs->Read(wxT("/WantAssociateFiles"), &bWantAssociateFiles) &&
