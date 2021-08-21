@@ -1,4 +1,4 @@
-﻿;   Tenacity: A Digital Audio Editor
+;   Tenacity: A Digital Audio Editor
 ;   Tenacity(R) is copyright (c) 1999-2021 Tenacity Team.
 ;   License: GPL v2.  See License.txt.
 ;
@@ -25,8 +25,9 @@ Filename: "{app}\unins*.*";
 ; compiler-related directives
 OutputBaseFilename=tenacity-win-{#AppVersion}-@INSTALLER_SUFFIX@
 
-WizardImageFile=".\tenacity_InnoWizardImage.bmp"
-WizardSmallImageFile=".\tenacity_InnoWizardSmallImage.bmp"
+; Use 100% images by default
+WizardImageFile=".\tenacity_InnoWizardImage_100.bmp"
+WizardSmallImageFile=".\tenacity_InnoWizardSmallImage_100.bmp"
 
 SolidCompression=yes
 
@@ -113,6 +114,49 @@ Source: "Package\languages\*"; DestDir: "{app}\Languages\"; Flags: ignoreversion
 Source: "Package\nyquist\*"; DestDir: "{app}\Nyquist\"; Flags: ignoreversion recursesubdirs
 Source: "Package\plug-ins\*"; DestDir: "{app}\Plug-Ins\"; Flags: ignoreversion
 Source: "Package\modules\*"; DestDir: "{app}\modules\"; Flags: ignoreversion recursesubdirs
+
+; Include scaled WizardImages
+Source: "tenacity_InnoWizardImage_*.bmp"; Excludes: "*100.bmp"; Flags: dontcopy
+Source: "tenacity_InnoWizardSmallImage_*.bmp"; Excludes: "*100.bmp"; Flags: dontcopy
+
+; load images based on monitor scale
+; by Martin Prikryl (CC BY-SA 3.0)
+; https://stackoverflow.com/a/31003152/13384771
+
+[Code]
+
+function GetScalingFactor: Integer;
+begin
+  if WizardForm.Font.PixelsPerInch >= 192 then Result := 200
+    else
+  if WizardForm.Font.PixelsPerInch >= 144 then Result := 150
+    else
+  if WizardForm.Font.PixelsPerInch >= 120 then Result := 125
+    else Result := 100;
+end;
+
+procedure LoadEmbededScaledBitmap(Image: TBitmapImage; NameBase: string);
+var
+  Name: String;
+  FileName: String;
+begin
+  Name := Format('%s_%d.bmp', [NameBase, GetScalingFactor]);
+  ExtractTemporaryFile(Name);
+  FileName := ExpandConstant('{tmp}\' + Name);
+  Image.Bitmap.LoadFromFile(FileName);
+  DeleteFile(FileName);
+end;
+
+procedure InitializeWizard;
+begin
+  { If using larger scaling, load the correct size of images }
+  if GetScalingFactor > 100 then 
+  begin
+    LoadEmbededScaledBitmap(WizardForm.WizardBitmapImage, 'tenacity_InnoWizardImage');
+    LoadEmbededScaledBitmap(WizardForm.WizardBitmapImage2, 'tenacity_InnoWizardImage');
+    LoadEmbededScaledBitmap(WizardForm.WizardSmallBitmapImage, 'tenacity_InnoWizardSmallImage');
+  end;
+end;
 
 [Icons]
 Name: "{commonprograms}\Tenacity"; Filename: "{app}\tenacity.exe"
