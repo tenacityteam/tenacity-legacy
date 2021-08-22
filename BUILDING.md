@@ -47,9 +47,24 @@ To install Tenacity's dependencies, run:
 sudo apt-get install build-essential libavcodec-dev libavformat-dev libavutil-dev libflac++-dev libglib2.0-dev libgtk-3-dev libid3tag0-dev libjack-dev liblilv-dev libmad0-dev libmp3lame-dev libogg-dev libpng-dev portaudio19-dev libportmidi-dev libserd-dev libsndfile1-dev libsord-dev libsoundtouch-dev libsoxr-dev libsuil-dev libtwolame-dev vamp-plugin-sdk libvorbis-dev lv2-dev zlib1g-dev cmake ninja-build libjpeg-dev libtiff-dev liblzma-dev libsqlite3-dev
 ```
 
-Note that you may need to install `libjack-jackd2-dev` instead of `libjack-dev` if you see a package conflict involving `libjack0`.
+##### Notes
 
-wxWidgets 3.1 is required but not packaged in Debian or Ubuntu. Refer
+- The version of PortSMF included in Debian & Ubuntu distributions
+(`libportsmf-dev`) is not included in the above list because it is outdated
+and using it will cause Tenacity to fail to build. If you want to use MIDI, it
+is recommended to use our modified version of
+[PortSMF](https://github.com/tenacityteam/portsmf) that you should build
+from source until the packaged version gets updated. If you are installing
+PortSMF to any other location than the default location where libraries get
+installed (`/usr/local/lib`, `/usr/lib`, etc.) such as your `$HOME` directory,
+you should point CMake to it by adding `-DCMAKE_PREFIX_PATH=/path/to/portsmf`
+to the CMake configuration step.
+
+- Additionally, if you happen to come across a package conflict involving a
+package called `libjack0`, you may need to install `libjack-jack2-dev` instead
+of `libjack-dev`.
+
+- wxWidgets 3.1 is required but not packaged in Debian or Ubuntu. Refer
 to the
 [wxWidgets documentation](https://docs.wxwidgets.org/3.1/overview_cmake.html)
 for how to install it from source code, or see the [previous section](#wxwidgets-from-source). The above package list
