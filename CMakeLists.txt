@@ -156,11 +156,6 @@ set( CMAKE_PREFIX_PATH
    ${CMAKE_PREFIX_PATH}
 )
 
-# This "is a good thing" but greatly increases link time on Linux
-#set( CMAKE_INTERPROCEDURAL_OPTIMIZATION ON )
-#set( CMAKE_INTERPROCEDURAL_OPTIMIZATION_RELEASE ON )
-#set( CMAKE_INTERPROCEDURAL_OPTIMIZATION_DEBUG OFF )
-
 # Set the required C++ standard
 set( CMAKE_CXX_STANDARD 17 )
 set( CMAKE_CXX_STANDARD_REQUIRED ON )
@@ -168,6 +163,19 @@ set( CMAKE_CXX_STANDARD_REQUIRED ON )
 include( CMakeDependentOption )
 
 project( Tenacity )
+
+#This must appear after the project declaration so it can detect ENABLED_LANGUAGES
+include(CheckIPOSupported)
+check_ipo_supported(RESULT IPO_SUPPORTED OUTPUT IPO_OUTPUT)
+mark_as_advanced( FORCE IPO_SUPPORTED )
+if(IPO_SUPPORTED)
+  set( CMAKE_INTERPROCEDURAL_OPTIMIZATION ON )
+  set( CMAKE_INTERPROCEDURAL_OPTIMIZATION_RELEASE ON )
+  set( CMAKE_INTERPROCEDURAL_OPTIMIZATION_DEBUG OFF )
+  message(STATUS "Interprocedural optimization is supported")
+else()
+  message(STATUS "Interprocedural optimization is not supported: ${IPO_OUTPUT}")
+endif()
 
 # Use ccache if available
 find_program( CCACHE_PROGRAM ccache )
