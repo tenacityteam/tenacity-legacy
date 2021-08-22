@@ -9,8 +9,7 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_KEY_CONFIG_PREFS__
-#define __AUDACITY_KEY_CONFIG_PREFS__
+#pragma once
 
 class CommandManager;
 class ShuttleGui;
@@ -113,4 +112,3 @@ private:
 /// focused initially
 extern PrefsPanel::Factory KeyConfigPrefsFactory(
    const CommandID &name = {} );
-#endif

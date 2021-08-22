@@ -16,8 +16,7 @@
 
 *//*******************************************************************/
 
-#ifndef __AUDACITY_SCREENSHOT__
-#define __AUDACITY_SCREENSHOT__
+#pragma once
 
 
 
@@ -27,5 +26,3 @@ class AudacityProject;
 
 TENACITY_DLL_API void OpenScreenshotTools( AudacityProject &project );
 void CloseScreenshotTools();
-
-#endif // __AUDACITY_SCREENSHOT__

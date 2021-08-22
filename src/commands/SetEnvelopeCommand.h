@@ -13,8 +13,7 @@
 
 *//*******************************************************************/
 
-#ifndef __SET_ENVELOPE_COMMAND__
-#define __SET_ENVELOPE_COMMAND__
+#pragma once
 
 #include "SetTrackInfoCommand.h"
 
@@ -43,6 +42,3 @@ public:
    bool bHasV;
    bool bHasDelete;
 };
-
-
-#endif /* End of include guard: __SETTRACKINFOCOMMAND__ */

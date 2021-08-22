@@ -22,10 +22,9 @@ but it will probably work fine if you use it on a high level.
 
 
 
+#pragma once
 
 
-#ifndef __AUDACITY_PROFILER__
-#define __AUDACITY_PROFILER__
 #include <mutex>
 #include <vector>
 #include "MemoryX.h"
@@ -85,7 +84,3 @@ class Profiler
       clock_t mCumTime;
       clock_t mLastTime;
    };
-
-
-#endif
-

@@ -10,8 +10,7 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_EFFECT_TONEGEN__
-#define __AUDACITY_EFFECT_TONEGEN__
+#pragma once
 
 #include "Effect.h"
 
@@ -91,5 +90,3 @@ public:
 
    EffectTone() : EffectToneGen{ false } {}
 };
-
-#endif

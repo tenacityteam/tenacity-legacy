@@ -9,8 +9,7 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_MACROS_WINDOW__
-#define __AUDACITY_MACROS_WINDOW__
+#pragma once
 
 #include <wx/defs.h>
 
@@ -145,5 +144,3 @@ private:
 
    DECLARE_EVENT_TABLE()
 };
-
-#endif

@@ -8,9 +8,7 @@ Paul Licameli
 
 **********************************************************************/
 
-#ifndef __AUDACITY_PROJECT_STATUS__
-#define __AUDACITY_PROJECT_STATUS__
-#endif
+#pragma once
 
 #include <utility>
 #include <vector>

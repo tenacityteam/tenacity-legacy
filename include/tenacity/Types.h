@@ -39,8 +39,7 @@
    
 **********************************************************************/
 
-#ifndef __AUDACITY_TYPES_H__
-#define __AUDACITY_TYPES_H__
+#pragma once
 
 #include <algorithm>
 #include <functional>
@@ -255,5 +254,3 @@ typedef enum
    ChannelNameBottomFrontLeft,
    ChannelNameBottomFrontRight,
 } ChannelName, *ChannelNames;
-
-#endif // __AUDACITY_TYPES_H__

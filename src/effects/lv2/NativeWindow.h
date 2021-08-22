@@ -11,8 +11,7 @@
 
 *********************************************************************/
 
-#ifndef NATIVEWINDOW_H
-#define NATIVEWINDOW_H
+#pragma once
 
 #if defined(__WXMSW__)
 #include <wx/msw/private.h>
@@ -116,6 +115,3 @@ public:
    }
 #endif
 };
-
-#endif
-

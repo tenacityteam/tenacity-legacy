@@ -8,8 +8,7 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_EFFECT_AUTODUCK__
-#define __AUDACITY_EFFECT_AUTODUCK__
+#pragma once
 
 #include "Effect.h"
 
@@ -131,5 +130,3 @@ private:
 
    DECLARE_EVENT_TABLE()
 };
-
-#endif

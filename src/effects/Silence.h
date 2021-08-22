@@ -10,8 +10,7 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_EFFECT_SILENCE__
-#define __AUDACITY_EFFECT_SILENCE__
+#pragma once
 
 #include "Generator.h"
 
@@ -49,5 +48,3 @@ protected:
 private:
    NumericTextCtrl *mDurationT;
 };
-
-#endif

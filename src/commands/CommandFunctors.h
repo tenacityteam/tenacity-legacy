@@ -6,8 +6,7 @@
 //
 //
 
-#ifndef __AUDACITY_COMMAND_FUNCTORS__
-#define __AUDACITY_COMMAND_FUNCTORS__
+#pragma once
 
 class AudacityProject;
 class AudacityApp;
@@ -36,5 +35,3 @@ using CommandHandlerFinder =
 // to a member function of the handler object
 using CommandFunctorPointer =
    void (CommandHandlerObject::*)(const CommandContext &context );
-
-#endif

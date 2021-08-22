@@ -6,8 +6,7 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_MOUSE_PREFS__
-#define __AUDACITY_MOUSE_PREFS__
+#pragma once
 
 #include <wx/defs.h>
 
@@ -45,5 +44,3 @@ class MousePrefs final : public PrefsPanel
 
    wxListCtrl * mList;
 };
-
-#endif

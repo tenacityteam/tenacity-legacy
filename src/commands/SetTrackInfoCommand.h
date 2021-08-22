@@ -14,8 +14,7 @@
 
 *//*******************************************************************/
 
-#ifndef __SET_TRACK_COMMAND__
-#define __SET_TRACK_COMMAND__
+#pragma once
 
 #include "Command.h"
 #include "CommandType.h"
@@ -182,7 +181,3 @@ private:
    SetTrackAudioCommand mSetAudio;
    SetTrackVisualsCommand mSetVisuals;
 };
-
-
-
-#endif /* End of include guard: __SETTRACKINFOCOMMAND__ */

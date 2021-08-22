@@ -11,8 +11,7 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_APP__
-#define __AUDACITY_APP__
+#pragma once
 
 
 #include "Identifier.h"
@@ -118,5 +117,3 @@ class AudacityApp final : public wxApp {
 };
 
 extern AudacityApp & wxGetApp();
-
-#endif

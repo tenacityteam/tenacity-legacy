@@ -8,8 +8,7 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_COMPONENT_INTERFACE_SYMBOL__
-#define __AUDACITY_COMPONENT_INTERFACE_SYMBOL__
+#pragma once
 
 #include "Identifier.h"
 #include "Internat.h"
@@ -78,5 +77,3 @@ private:
 using EnumValueSymbol = ComponentInterfaceSymbol;
 using NumericFormatSymbol = EnumValueSymbol;
 using EffectFamilySymbol = ComponentInterfaceSymbol;
-
-#endif

@@ -8,8 +8,7 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_SHUTTLE__
-#define __AUDACITY_SHUTTLE__
+#pragma once
 
 #include "../include/tenacity/ComponentInterface.h"
 #include "ComponentInterfaceSymbol.h"
@@ -171,5 +170,3 @@ public:
 
 #define SHUTTLE_ENUM_PARAM( var, name, strings, nStrings ) \
   DefineEnum( var, KEY_ ## name, DEF_ ## name, strings, nStrings )
-
-#endif

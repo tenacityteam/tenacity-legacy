@@ -9,8 +9,7 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_EFFECT_ECHO__
-#define __AUDACITY_EFFECT_ECHO__
+#pragma once
 
 #include "Effect.h"
 
@@ -60,5 +59,3 @@ private:
    size_t histPos;
    size_t histLen;
 };
-
-#endif // __AUDACITY_EFFECT_ECHO__

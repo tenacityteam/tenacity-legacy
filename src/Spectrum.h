@@ -8,8 +8,7 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_SPECTRUM__
-#define __AUDACITY_SPECTRUM__
+#pragma once
 
 #include "FFT.h"
 
@@ -25,5 +24,3 @@ TENACITY_DLL_API
 bool ComputeSpectrum(const float * data, size_t width, size_t windowSize,
                      double rate, float *out, bool autocorrelation,
                      int windowFunc = eWinFuncHann);
-
-#endif

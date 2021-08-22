@@ -8,8 +8,7 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_NOTETRACK__
-#define __AUDACITY_NOTETRACK__
+#pragma once
 
 
 
@@ -289,7 +288,4 @@ public:
 #define SonifyEndAutoSave()
 #define SonifyBeginModifyState()
 #define SonifyEndModifyState()
-#endif
-
-
 #endif

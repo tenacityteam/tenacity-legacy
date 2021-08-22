@@ -10,8 +10,7 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_GUI_PREFS__
-#define __AUDACITY_GUI_PREFS__
+#pragma once
 
 #include <wx/defs.h>
 
@@ -63,5 +62,3 @@ int ShowTrackNameInWaveformPrefsID();
 extern TENACITY_DLL_API ChoiceSetting
      GUIManualLocation
 ;
-
-#endif

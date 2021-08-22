@@ -16,10 +16,9 @@ the pitch without changing the tempo.
 *//*******************************************************************/
 
 
-#if USE_SOUNDTOUCH
+#pragma once
 
-#ifndef __AUDACITY_EFFECT_CHANGEPITCH__
-#define __AUDACITY_EFFECT_CHANGEPITCH__
+#if USE_SOUNDTOUCH
 
 #if USE_SBSMS
 #include "SBSMSEffect.h"
@@ -148,7 +147,5 @@ private:
 
    DECLARE_EVENT_TABLE()
 };
-
-#endif // __AUDACITY_EFFECT_CHANGEPITCH__
 
 #endif // USE_SOUNDTOUCH

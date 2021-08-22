@@ -25,8 +25,7 @@ robust enough to allow all the user changes such as copy/paste, DELETE, and so o
 
 
 
-#ifndef __AUDACITY_ODDecodeTask__
-#define __AUDACITY_ODDecodeTask__
+#pragma once
 
 #include <vector>
 #include "ODTask.h"
@@ -94,8 +93,3 @@ protected:
    int mMaxBlockFiles;
 
 };
-
-#endif
-
-
-

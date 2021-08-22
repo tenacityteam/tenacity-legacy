@@ -9,8 +9,7 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_COMMAND_MANAGER__
-#define __AUDACITY_COMMAND_MANAGER__
+#pragma once
 
 #include "Identifier.h"
 
@@ -704,5 +703,3 @@ namespace MenuTable {
    void DestroyRegistry();
 
 }
-
-#endif

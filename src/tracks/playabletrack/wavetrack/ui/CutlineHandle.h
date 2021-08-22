@@ -8,8 +8,7 @@ Paul Licameli
 
 **********************************************************************/
 
-#ifndef __AUDACITY_CUTLINE_HANDLE__
-#define __AUDACITY_CUTLINE_HANDLE__
+#pragma once
 
 #include "../../../../UIHandle.h"
 #include "../../../../WaveTrackLocation.h"
@@ -70,5 +69,3 @@ private:
    double mStartTime{}, mEndTime{};
    WaveTrackLocation mLocation {};
 };
-
-#endif

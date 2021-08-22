@@ -7,8 +7,7 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_DITHER_H__
-#define __AUDACITY_DITHER_H__
+#pragma once
 
 #include "tenacity/Types.h" // for samplePtr
 
@@ -61,5 +60,3 @@ private:
     float mTriangleState;
     float mBuffer[8 /* = BUF_SIZE */];
 };
-
-#endif /* __AUDACITY_DITHER_H__ */

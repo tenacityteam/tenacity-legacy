@@ -8,8 +8,7 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_SELECTION_BAR__
-#define __AUDACITY_SELECTION_BAR__
+#pragma once
 
 #include <wx/defs.h>
 
@@ -120,6 +119,3 @@ class TENACITY_DLL_API SelectionBar final : public ToolBar {
    DECLARE_CLASS(SelectionBar)
    DECLARE_EVENT_TABLE()
 };
-
-#endif
-

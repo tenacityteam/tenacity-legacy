@@ -8,8 +8,7 @@
  
  **********************************************************************/
 
-#ifndef __AUDACITY_TEMP_DIRECTORY__
-#define __AUDACITY_TEMP_DIRECTORY__
+#pragma once
 
 
 #include "Identifier.h"
@@ -32,5 +31,3 @@ namespace TempDirectory
                             const TranslatableString &msg,
                             wxWindow *window = nullptr);
 };
-
-#endif

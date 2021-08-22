@@ -42,8 +42,7 @@ but little else.
 
 *//*******************************************************************/
 
-#ifndef __AUDACITY_IMPORTER__
-#define __AUDACITY_IMPORTER__
+#pragma once
 
 
 
@@ -182,5 +181,3 @@ private:
    TranslatableString mFormatName;
    const FileExtensions mExtensions;
 };
-
-#endif

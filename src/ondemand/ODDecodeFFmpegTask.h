@@ -9,8 +9,7 @@
 
 ******************************************************************/
 
-#ifndef __ODDECODEFFMPEGTASK__
-#define __ODDECODEFFMPEGTASK__
+#pragma once
 
 #ifdef EXPERIMENTAL_OD_FFMPEG
 
@@ -56,6 +55,4 @@ protected:
    std::shared_ptr<FFmpegContext> mContext;
    int   mStreamIndex;
 };
-#endif //__ODDECODEFFMPEGTASK__
-
-#endif //EXPERIMENTAL_OD_FFMPEG
+#endif // EXPERIMENTAL_OD_FFMPEG

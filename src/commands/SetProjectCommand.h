@@ -14,8 +14,7 @@
 
 *//*******************************************************************/
 
-#ifndef __SET_PROJECT_COMMAND__
-#define __SET_PROJECT_COMMAND__
+#pragma once
 
 #include "Command.h"
 #include "CommandType.h"
@@ -51,6 +50,3 @@ public:
    bool bHasSizing;
    bool bHasRate;
 };
-
-
-#endif /* End of include guard: __SETTRACKINFOCOMMAND__ */

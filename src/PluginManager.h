@@ -8,8 +8,7 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_PLUGINMANAGER_H__
-#define __AUDACITY_PLUGINMANAGER_H__
+#pragma once
 
 #include <wx/defs.h>
 
@@ -360,5 +359,3 @@ private:
 #define NYQUIST_PROMPT_ID wxT("Nyquist Prompt")
 // User-visible name might change in later versions
 #define NYQUIST_PROMPT_NAME XO("Nyquist Prompt")
-
-#endif /* __AUDACITY_PLUGINMANAGER_H__ */

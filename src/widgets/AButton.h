@@ -9,8 +9,7 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_BUTTON__
-#define __AUDACITY_BUTTON__
+#pragma once
 
 #include <vector>
 
@@ -190,5 +189,3 @@ public:
 
     DECLARE_EVENT_TABLE()
 };
-
-#endif

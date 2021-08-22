@@ -11,8 +11,7 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_COLOR__
-#define __AUDACITY_COLOR__
+#pragma once
 
 #include <memory>
 #include <wx/brush.h> // member variable
@@ -151,5 +150,3 @@ inline void GetColorGradient(float value,
    *green = AColor::gradient_pre[selected][colorScheme][idx][1];
    *blue = AColor::gradient_pre[selected][colorScheme][idx][2];
 }
-
-#endif

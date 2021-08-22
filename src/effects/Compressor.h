@@ -8,8 +8,7 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_EFFECT_COMPRESSOR__
-#define __AUDACITY_EFFECT_COMPRESSOR__
+#pragma once
 
 #include "TwoPassSimpleMono.h"
 
@@ -146,6 +145,3 @@ private:
 
    DECLARE_EVENT_TABLE()
 };
-
-#endif
-

@@ -8,8 +8,7 @@ Paul Licameli split from TrackPanel.cpp
 
 **********************************************************************/
 
-#ifndef __AUDACITY_TRACK_CONTROLS__
-#define __AUDACITY_TRACK_CONTROLS__
+#pragma once
 
 #include "CommonTrackPanelCell.h"
 
@@ -38,5 +37,3 @@ AttachedVirtualFunction<
    std::shared_ptr< TrackControls >,
    Track
 >;
-
-#endif

@@ -8,8 +8,7 @@ Paul Licameli split from class NoteTrack
 
 **********************************************************************/
 
-#ifndef __AUDACITY_NOTE_TRACK_VIEW__
-#define __AUDACITY_NOTE_TRACK_VIEW__
+#pragma once
 
 #include "../../../ui/CommonTrackView.h"
 
@@ -37,4 +36,3 @@ private:
       TrackPanelDrawingContext &context,
       const wxRect &rect, unsigned iPass ) override;
 };
-#endif

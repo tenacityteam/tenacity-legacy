@@ -39,8 +39,7 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_CONFIGINTERFACE_H__
-#define __AUDACITY_CONFIGINTERFACE_H__
+#pragma once
 
 #include "Identifier.h"
 
@@ -94,5 +93,3 @@ public:
    virtual bool RemovePrivateConfigSubgroup(const RegistryPath & group) = 0;
    virtual bool RemovePrivateConfig(const RegistryPath & group, const RegistryPath & key) = 0;
 };
-
-#endif // __AUDACITY_CONFIGINTERFACE_H__

@@ -8,8 +8,7 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_EFFECT_TIMESCALE__
-#define __AUDACITY_EFFECT_TIMESCALE__
+#pragma once
 
 
 
@@ -104,7 +103,5 @@ private:
 
    DECLARE_EVENT_TABLE()
 };
-
-#endif // __AUDACITY_EFFECT_TIMESCALE
 
 #endif // USE_SBSMS

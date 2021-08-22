@@ -8,8 +8,7 @@ Paul Licameli
 
 **********************************************************************/
 
-#ifndef __AUDACITY_WXFILENAMEWRAPPER__
-#define __AUDACITY_WXFILENAMEWRAPPER__
+#pragma once
 
 class wxArrayString;
 
@@ -87,6 +86,3 @@ public:
       return *this;
    }
 };
-
-#endif
-

@@ -8,8 +8,7 @@ Paul Licameli split from TrackPanel.cpp
 
 **********************************************************************/
 
-#ifndef __AUDACITY_NOTE_TRACK_CONTROLS__
-#define __AUDACITY_NOTE_TRACK_CONTROLS__
+#pragma once
 
 #include "../../ui/PlayableTrackControls.h" // to inherit
 class wxEvent;
@@ -66,5 +65,3 @@ public:
 private:
    static void ReCreateVelocitySlider( wxEvent& );
 };
-
-#endif

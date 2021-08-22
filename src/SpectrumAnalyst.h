@@ -9,8 +9,7 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_SPECTRUM_ANALYST__
-#define __AUDACITY_SPECTRUM_ANALYST__
+#pragma once
 
 #include <vector>
 #include <wx/statusbr.h>
@@ -78,5 +77,3 @@ private:
    int mGap;
    int mMargin;
 };
-
-#endif

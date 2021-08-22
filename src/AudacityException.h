@@ -1,6 +1,3 @@
-#ifndef __AUDACITY_EXCEPTION__
-#define __AUDACITY_EXCEPTION__
-
 /*!********************************************************************
 
  Tenacity
@@ -10,6 +7,9 @@
 
  Paul Licameli
  **********************************************************************/
+
+#pragma once
+
 
 #include "MemoryX.h"
 #include <wx/app.h> // used in inline function template
@@ -227,5 +227,3 @@ R GuardedCall(
       return handler( nullptr );
    }
 }
-
-#endif

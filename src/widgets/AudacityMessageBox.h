@@ -8,8 +8,7 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_MESSAGE_BOX__
-#define __AUDACITY_MESSAGE_BOX__
+#pragma once
 
 #include <wx/msgdlg.h>
 #include "Internat.h"
@@ -26,5 +25,3 @@ inline int AudacityMessageBox(const TranslatableString& message,
    return ::wxMessageBox(message.Translation(), caption.Translation(),
       style, parent, x, y);
 }
-
-#endif

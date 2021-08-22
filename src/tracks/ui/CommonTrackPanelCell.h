@@ -8,8 +8,7 @@ Paul Licameli split from TrackPanel.cpp
 
 **********************************************************************/
 
-#ifndef __AUDACITY_COMMON_TRACK_PANEL_CELL__
-#define __AUDACITY_COMMON_TRACK_PANEL_CELL__
+#pragma once
 
 
 #include "../../TrackPanelCell.h"
@@ -79,5 +78,3 @@ public:
 private:
    std::weak_ptr< Track > mwTrack;
 };
-
-#endif

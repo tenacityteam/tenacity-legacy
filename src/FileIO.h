@@ -8,8 +8,7 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_FILEIO__
-#define __AUDACITY_FILEIO__
+#pragma once
 
 #include <memory>
 
@@ -46,5 +45,3 @@ class TENACITY_DLL_API FileIO
    std::unique_ptr<wxFFileOutputStream> mOutputStream;
    bool mOpen;
 };
-
-#endif

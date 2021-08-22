@@ -8,8 +8,7 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_SPECTRAL_SELECTION_BAR_LISTENER__
-#define __AUDACITY_SPECTRAL_SELECTION_BAR_LISTENER__
+#pragma once
 
 
 #include "Identifier.h"
@@ -31,5 +30,3 @@ class TENACITY_DLL_API SpectralSelectionBarListener /* not final */ {
 
    virtual void SSBL_ModifySpectralSelection(double &bottom, double &top, bool done) = 0;
 };
-
-#endif

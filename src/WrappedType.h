@@ -9,8 +9,7 @@
 
 *************************************************************************/
 
-#ifndef __WRAPPED_TYPE__
-#define __WRAPPED_TYPE__
+#pragma once
 
 
 
@@ -68,5 +67,3 @@ public :
    bool *const mpBool {};
 
 };
-
-#endif

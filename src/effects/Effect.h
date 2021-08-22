@@ -9,8 +9,7 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_EFFECT__
-#define __AUDACITY_EFFECT__
+#pragma once
 
 
 
@@ -632,5 +631,3 @@ inline long TrapLong(long x, long min, long max)
 #define ReadAndVerifyFloat(name) ReadParam(float, name)
 #define ReadAndVerifyBool(name) ReadBasic(bool, name)
 #define ReadAndVerifyString(name) ReadBasic(wxString, name)
-
-#endif

@@ -6,8 +6,7 @@
 
 **********************************************************************/
 
-#ifndef BUILD_INFO_H
-#define BUILD_INFO_H
+#pragma once
 
 #include "wx/cpp.h"
 #include <wx/ctrlsub.h>
@@ -140,4 +139,3 @@ public:
             return o.GetString();
         }
 };
-#endif

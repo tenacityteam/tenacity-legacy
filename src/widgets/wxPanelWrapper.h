@@ -6,8 +6,7 @@
 //
 //
 
-#ifndef __AUDACITY_WXPANEL_WRAPPER__
-#define __AUDACITY_WXPANEL_WRAPPER__
+#pragma once
 
 #include <memory>
 #include <wx/panel.h> // to inherit
@@ -224,5 +223,3 @@ public:
       ( parent, message.Translation(), caption.Translation(), style, pos )
    {}
 };
-
-#endif

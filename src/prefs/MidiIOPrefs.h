@@ -9,14 +9,13 @@
 
 **********************************************************************/
 
+#pragma once
+
 class wxChoice;
 class wxTextCtrl;
 class ShuttleGui;
 
 #ifdef EXPERIMENTAL_MIDI_OUT
-
-#ifndef __AUDACITY_MIDI_IO_PREFS__
-#define __AUDACITY_MIDI_IO_PREFS__
 
 #include <wx/defs.h>
 
@@ -63,7 +62,5 @@ class MidiIOPrefs final : public PrefsPanel
 
    DECLARE_EVENT_TABLE()
 };
-
-#endif
 
 #endif

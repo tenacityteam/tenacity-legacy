@@ -8,8 +8,7 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_DIRECTORIES_PREFS__
-#define __AUDACITY_DIRECTORIES_PREFS__
+#pragma once
 
 #include "PrefsPanel.h"
 
@@ -57,4 +56,3 @@ class DirectoriesPrefs final : public PrefsPanel
 /// A PrefsPanel::Factory that creates one DirectoriesPrefs panel.
 /// This one is used not only in the Preferences command.
 extern PrefsPanel::Factory DirectoriesPrefsFactory();
-#endif

@@ -19,8 +19,7 @@
 
 
 
-#ifndef __AUDACITY_ODTASKTHREAD__
-#define __AUDACITY_ODTASKTHREAD__
+#pragma once
 
 #include "../Audacity.h"	// contains the set-up of TENACITY_DLL_API
 
@@ -148,6 +147,3 @@ public:
    ODLocker(const ODLocker &that) PROHIBITED;
    ODLocker &operator= (const ODLocker &that) PROHIBITED;
 };
-
-#endif //__AUDACITY_ODTASKTHREAD__
-

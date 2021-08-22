@@ -39,8 +39,7 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_MODULEINTERFACE_H__
-#define __AUDACITY_MODULEINTERFACE_H__
+#pragma once
 
 #include <functional>
 #include <memory>
@@ -177,5 +176,3 @@ void name::Unregister()                               \
 {                                                     \
    UnregisterProvider(AudacityModule);                \
 }
-
-#endif // __AUDACITY_MODULEINTERFACE_H__

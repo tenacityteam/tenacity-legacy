@@ -8,8 +8,8 @@
   Leland Lucius
 
 **********************************************************************/
-#ifndef AUDACITY_AUDIOUNIT_EFFECT_H
 
+#pragma once
 
 
 #if USE_AUDIO_UNITS
@@ -272,7 +272,5 @@ public:
    wxString FromOSType(OSType type);
    OSType ToOSType(const wxString & type);
 };
-
-#endif
 
 #endif

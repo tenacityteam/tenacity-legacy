@@ -13,8 +13,7 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_EFFECT_CLICK_REMOVAL__
-#define __AUDACITY_EFFECT_CLICK_REMOVAL__
+#pragma once
 
 #include "Effect.h"
 
@@ -83,5 +82,3 @@ private:
 
    DECLARE_EVENT_TABLE()
 };
-
-#endif

@@ -7,8 +7,7 @@
 
 */
 
-#ifndef __AUDACITY_FILE_EXCEPTION__
-#define __AUDACITY_FILE_EXCEPTION__
+#pragma once
 
 #include "AudacityException.h"
 #include <wx/filename.h> // wxFileName member variable
@@ -63,5 +62,3 @@ public:
    wxFileName fileName;
    wxFileName renameTarget;
 };
-
-#endif

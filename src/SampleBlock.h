@@ -6,8 +6,7 @@ SampleBlock.h
 
 **********************************************************************/
 
-#ifndef __AUDACITY_SAMPLE_BLOCK__
-#define __AUDACITY_SAMPLE_BLOCK__
+#pragma once
 
 #include "tenacity/Types.h"
 
@@ -161,5 +160,3 @@ protected:
       sampleFormat srcformat,
       const wxChar **attrs) = 0;
 };
-
-#endif

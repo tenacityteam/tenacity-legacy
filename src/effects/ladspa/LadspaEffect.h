@@ -8,6 +8,8 @@
 
 **********************************************************************/
 
+#pragma once
+
 class wxSlider;
 class wxStaticText;
 class wxTextCtrl;
@@ -244,4 +246,3 @@ public:
 
    FilePaths GetSearchPaths();
 };
-

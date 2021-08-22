@@ -8,8 +8,7 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_COMMAND_MANAGER_WINDOW_CLASSES__
-#define __AUDACITY_COMMAND_MANAGER_WINDOW_CLASSES__
+#pragma once
 
 /*
  \brief By default, windows when focused override the association of the digits
@@ -29,5 +28,3 @@ struct TENACITY_DLL_API TopLevelKeystrokeHandlingWindow
 {
    virtual ~TopLevelKeystrokeHandlingWindow();
 };
-
-#endif

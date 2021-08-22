@@ -8,8 +8,7 @@ Paul Licameli
 
 **********************************************************************/
 
-#ifndef __AUDACITY_UI_HANDLE__
-#define __AUDACITY_UI_HANDLE__
+#pragma once
 
 #include <utility>
 #include <memory>
@@ -160,5 +159,3 @@ std::shared_ptr<Subclass> AssignUIHandlePtr
       return ptr;
    }
 }
-
-#endif

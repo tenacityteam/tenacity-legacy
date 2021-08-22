@@ -8,8 +8,7 @@ Paul Licameli split from TrackPanel.cpp
 
 **********************************************************************/
 
-#ifndef __AUDACITY_WAVE_TRACK_VZOOM_HANDLE__
-#define __AUDACITY_WAVE_TRACK_VZOOM_HANDLE__
+#pragma once
 
 class wxMouseState;
 class PopupMenuTable;
@@ -127,5 +126,3 @@ enum {
    OnFirstSpectrumScaleID,
    OnLastSpectrumScaleID = OnFirstSpectrumScaleID + 19,
 };
-
-#endif

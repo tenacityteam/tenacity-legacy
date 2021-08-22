@@ -15,8 +15,7 @@
 
 *//*******************************************************************/
 
-#ifndef __AUDACITY_DEVICEMANAGER__
-#define __AUDACITY_DEVICEMANAGER__
+#pragma once
 
 #include <chrono>
 #include <vector>
@@ -97,6 +96,3 @@ private:
 
    static DeviceManager dm;
 };
-
-#endif
-

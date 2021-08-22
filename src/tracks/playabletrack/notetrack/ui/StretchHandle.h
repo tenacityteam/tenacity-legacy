@@ -8,8 +8,7 @@ Paul Licameli split from TrackPanel.cpp
 
 **********************************************************************/
 
-#ifndef __AUDACITY_STRETCH_HANDLE__
-#define __AUDACITY_STRETCH_HANDLE__
+#pragma once
 
 #include "../../../../UIHandle.h"
 
@@ -98,5 +97,3 @@ private:
 
    StretchState mStretchState{};
 };
-
-#endif

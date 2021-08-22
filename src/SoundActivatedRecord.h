@@ -13,8 +13,7 @@
 
 ********************************************************************/
 
-#ifndef __AUDACITY_SOUND_ACTIVATED_RECORD__
-#define __AUDACITY_SOUND_ACTIVATED_RECORD__
+#pragma once
 
 #include "widgets/wxPanelWrapper.h" // to inherit
 
@@ -33,5 +32,3 @@ private:
 
    DECLARE_EVENT_TABLE()
 };
-
-#endif

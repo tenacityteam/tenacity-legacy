@@ -8,8 +8,7 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_RULER__
-#define __AUDACITY_RULER__
+#pragma once
 
 #include "wxPanelWrapper.h" // to inherit
 #include "../NumberScale.h" // member variable
@@ -290,5 +289,3 @@ class TENACITY_DLL_API RulerPanel final : public wxPanelWrapper {
 private:
     DECLARE_EVENT_TABLE()
 };
-
-#endif //define __AUDACITY_RULER__

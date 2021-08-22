@@ -9,8 +9,7 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_KEYBOARD__
-#define __AUDACITY_KEYBOARD__
+#pragma once
 
 #include "Identifier.h"
 #include <wx/defs.h>
@@ -37,5 +36,3 @@ namespace std
 
 TENACITY_DLL_API
 NormalizedKeyString KeyEventToKeyString(const wxKeyEvent & keyEvent);
-
-#endif

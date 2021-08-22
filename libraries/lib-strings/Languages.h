@@ -8,8 +8,7 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_LANGUAGES__
-#define __AUDACITY_LANGUAGES__
+#pragma once
 
 class wxArrayString;
 class wxString;
@@ -56,5 +55,3 @@ STRINGS_API
 wxString GetLocaleName();
 
 }
-
-#endif // __AUDACITY_LANGUAGES__

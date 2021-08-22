@@ -17,8 +17,7 @@ responsible for calling the appropriate callback functions.
 **********************************************************************/
 
 
-#ifndef __AUDACITY_REGISTRAR__
-#define __AUDACITY_REGISTRAR__
+#pragma once
 
 
 
@@ -47,5 +46,3 @@ public:
    virtual void AddModule(std::unique_ptr<LoadableModule> && WXUNUSED(module) ){;};
    virtual void AddEffect(std::unique_ptr<Effect> && WXUNUSED(effect) ){;};
 };
-
-#endif

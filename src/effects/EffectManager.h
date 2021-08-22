@@ -9,8 +9,7 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_EFFECTMANAGER__
-#define __AUDACITY_EFFECTMANAGER__
+#pragma once
 
 #include <memory>
 #include <vector>
@@ -156,5 +155,3 @@ private:
 #endif
 
 };
-
-#endif

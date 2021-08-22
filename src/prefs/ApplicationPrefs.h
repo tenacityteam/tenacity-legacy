@@ -8,8 +8,7 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_APPLICATION_PREFS__
-#define __AUDACITY_APPLICATION_PREFS__
+#pragma once
 
 #include <wx/defs.h>
 
@@ -33,5 +32,3 @@ class ApplicationPrefs final : public PrefsPanel
    void Populate();
    void PopulateOrExchange(ShuttleGui & S) override;
 };
-
-#endif

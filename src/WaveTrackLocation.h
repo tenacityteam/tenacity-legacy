@@ -8,8 +8,7 @@ Paul Licameli -- split from WaveTrack.h
 
 **********************************************************************/
 
-#ifndef __AUDACITY_WAVE_TRACK_LOCATION__
-#define __AUDACITY_WAVE_TRACK_LOCATION__
+#pragma once
 
 struct WaveTrackLocation {
 
@@ -50,5 +49,3 @@ bool operator != (const WaveTrackLocation &a, const WaveTrackLocation &b)
 {
    return !( a == b );
 }
-
-#endif

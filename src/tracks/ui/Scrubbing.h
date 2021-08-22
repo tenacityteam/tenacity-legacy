@@ -8,8 +8,7 @@ Paul Licameli split from TrackPanel.cpp
 
 **********************************************************************/
 
-#ifndef __AUDACITY_SCRUBBING__
-#define __AUDACITY_SCRUBBING__
+#pragma once
 
 
 
@@ -198,5 +197,3 @@ private:
    bool mShowScrubbing { false };
    bool mMayDragToSeek{ false };
 };
-
-#endif

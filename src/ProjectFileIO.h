@@ -8,8 +8,7 @@ Paul Licameli split from AudacityProject.h
 
 **********************************************************************/
 
-#ifndef __AUDACITY_PROJECT_FILE_IO__
-#define __AUDACITY_PROJECT_FILE_IO__
+#pragma once
 
 #include <memory>
 #include <unordered_set>
@@ -339,5 +338,3 @@ public:
 private:
    std::shared_ptr<AudacityProject> mpProject;
 };
-
-#endif

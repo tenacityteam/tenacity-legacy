@@ -8,8 +8,7 @@ Paul Licameli split from TrackPanel.cpp
 
 **********************************************************************/
 
-#ifndef __AUDACITY_TIME_TRACK_CONTROLS__
-#define __AUDACITY_TIME_TRACK_CONTROLS__
+#pragma once
 
 #include "../../ui/CommonTrackControls.h" // to inherit
 
@@ -60,5 +59,3 @@ private:
    void OnTimeTrackLog(wxCommandEvent & /*event*/);
    void OnTimeTrackLogInt(wxCommandEvent & /*event*/);
 };
-
-#endif

@@ -6,8 +6,7 @@
 
 */
 
-#ifndef __AUDACITY_INCONSISTENCY_EXCEPTION__
-#define __AUDACITY_INCONSISTENCY_EXCEPTION__
+#pragma once
 
 #include "AudacityException.h"
 
@@ -77,5 +76,3 @@ For cases where the exception object is not immediately thrown */
 @brief Throw InconsistencyException, using C++ preprocessor to identify the source code location
 */
 #define THROW_INCONSISTENCY_EXCEPTION throw CONSTRUCT_INCONSISTENCY_EXCEPTION
-
-#endif

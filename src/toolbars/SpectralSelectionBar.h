@@ -8,8 +8,7 @@ Paul Licameli
 
 **********************************************************************/
 
-#ifndef __AUDACITY_SPECTRAL_SELECTION_BAR__
-#define __AUDACITY_SPECTRAL_SELECTION_BAR__
+#pragma once
 
 #include <wx/defs.h>
 
@@ -81,6 +80,3 @@ public:
    DECLARE_CLASS(SpectralSelectionBar)
    DECLARE_EVENT_TABLE()
 };
-
-#endif
-

@@ -8,8 +8,7 @@ Paul Licameli split from class WaveTrack
 
 **********************************************************************/
 
-#ifndef __AUDACITY_WAVE_TRACK_VIEW__
-#define __AUDACITY_WAVE_TRACK_VIEW__
+#pragma once
 
 #include "../../../ui/CommonTrackView.h"
 #include "../../../../ClientData.h"
@@ -200,5 +199,3 @@ struct TENACITY_DLL_API ClipParameters
    // and with clipOffsetX - clip horizontal origin offset within view rect
    static wxRect GetClipRect(const WaveClip& clip, const ZoomInfo& zoomInfo, const wxRect& viewRect, int clipOffsetX = 0);
 };
-
-#endif

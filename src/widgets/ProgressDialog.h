@@ -15,8 +15,7 @@
 
 *************************************************************************/
 
-#ifndef __AUDACITY_WIDGETS_PROGRESSDIALOG__
-#define __AUDACITY_WIDGETS_PROGRESSDIALOG__
+#pragma once
 
 
 
@@ -173,5 +172,3 @@ protected:
    // doesn't support changes of message
    using ProgressDialog::Update;
 };
-
-#endif

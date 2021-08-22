@@ -12,8 +12,7 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_DIAGS__
-#define __AUDACITY_DIAGS__
+#pragma once
 
 typedef long t_diag_timer;
 
@@ -77,7 +76,3 @@ extern void diagnostics_do_perfmon_stop( t_diag_struct ** ppDiag);
    if( timername != NULL )\
       diagnostics_do_perfmon_stop( &timername );\
 }
-
-
-
-#endif

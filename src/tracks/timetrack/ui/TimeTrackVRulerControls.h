@@ -8,8 +8,7 @@ Paul Licameli split from TrackPanel.cpp
 
 **********************************************************************/
 
-#ifndef __AUDACITY_TIME_TRACK_VRULER_CONTROLS__
-#define __AUDACITY_TIME_TRACK_VRULER_CONTROLS__
+#pragma once
 
 #include "../../ui/TrackVRulerControls.h"
 
@@ -44,5 +43,3 @@ private:
 
    std::weak_ptr<TimeTrackVZoomHandle> mVZoomHandle;
 };
-
-#endif

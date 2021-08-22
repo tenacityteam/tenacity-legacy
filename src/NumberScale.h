@@ -8,8 +8,7 @@ Paul Licameli
 
 **********************************************************************/
 
-#ifndef __AUDACITY_NUMBER_SCALE__
-#define __AUDACITY_NUMBER_SCALE__
+#pragma once
 
 #include <algorithm>
 #include <cmath>
@@ -279,5 +278,3 @@ private:
    float mValue0;
    float mValue1;
 };
-
-#endif

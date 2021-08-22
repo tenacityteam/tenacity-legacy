@@ -8,10 +8,6 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_EFFECT_LEVELER__
-#define __AUDACITY_EFFECT_LEVELER__
+#pragma once
 
 // PRL: no longer used
-
-#endif
-

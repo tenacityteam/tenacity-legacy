@@ -8,8 +8,7 @@ Paul Licameli split from AudacityProject.h
 
 **********************************************************************/
 
-#ifndef __PROJECT_AUDIO_IO__
-#define __PROJECT_AUDIO_IO__
+#pragma once
 
 #include "ClientData.h" // to inherit
 #include <wx/weakref.h>
@@ -52,5 +51,3 @@ private:
 
    int  mAudioIOToken{ -1 };
 };
-
-#endif

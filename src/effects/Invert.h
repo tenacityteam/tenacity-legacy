@@ -10,8 +10,7 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_EFFECT_INVERT__
-#define __AUDACITY_EFFECT_INVERT__
+#pragma once
 
 #include "Effect.h"
 
@@ -39,5 +38,3 @@ public:
    unsigned GetAudioOutCount() override;
    size_t ProcessBlock(float **inBlock, float **outBlock, size_t blockLen) override;
 };
-
-#endif

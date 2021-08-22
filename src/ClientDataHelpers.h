@@ -9,8 +9,7 @@ Paul Licameli
 
 **********************************************************************/
 
-#ifndef __AUDACITY_CLIENT_DATA_HELPERS__
-#define __AUDACITY_CLIENT_DATA_HELPERS__
+#pragma once
 
 #include <memory>
 #include <mutex>
@@ -149,5 +148,3 @@ template< typename Container > struct Copyable< Container, DeepCopying >
 };
 
 }
-
-#endif

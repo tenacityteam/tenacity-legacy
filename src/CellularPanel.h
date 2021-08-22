@@ -8,8 +8,7 @@
 
  **********************************************************************/
 
-#ifndef __AUDACITY_CELLULAR_PANEL__
-#define __AUDACITY_CELLULAR_PANEL__
+#pragma once
 
 #include "widgets/OverlayPanel.h" // to inherit
 
@@ -171,5 +170,3 @@ private:
    
    DECLARE_EVENT_TABLE()
 };
-
-#endif

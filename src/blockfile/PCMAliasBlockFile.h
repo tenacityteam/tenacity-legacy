@@ -8,8 +8,7 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_PCMALIASBLOCKFILE__
-#define __AUDACITY_PCMALIASBLOCKFILE__
+#pragma once
 
 #include "../BlockFile.h"
 
@@ -47,6 +46,3 @@ class PCMAliasBlockFile /* not final */ : public AliasBlockFile
 
    static BlockFilePtr BuildFromXML(DirManager &dm, const wxChar **attrs);
 };
-
-#endif
-

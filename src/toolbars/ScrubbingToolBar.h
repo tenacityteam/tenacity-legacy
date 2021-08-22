@@ -9,9 +9,7 @@
 
  **********************************************************************/
 
-#ifndef __AUDACITY_SCRUBBING_TOOLBAR__
-#define __AUDACITY_SCRUBBING_TOOLBAR__
-
+#pragma once
 
 
 #include <wx/defs.h>
@@ -86,5 +84,3 @@ private:
    bool mLastSeek{ false };
    bool mLastRuler{ false };
 };
-
-#endif

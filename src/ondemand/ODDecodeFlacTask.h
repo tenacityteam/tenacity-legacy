@@ -25,8 +25,7 @@ robust enough to allow all the user changes such as copy/paste, DELETE, and so o
 
 
 
-#ifndef __AUDACITY_ODDecodeFLACTask__
-#define __AUDACITY_ODDecodeFLACTask__
+#pragma once
 
 #include <vector>
 #include <wx/ffile.h> // data member
@@ -138,8 +137,3 @@ private:
    unsigned int         mDecodeBufferLen;
    samplePtr            mDecodeBuffer;
 };
-
-#endif
-
-
-

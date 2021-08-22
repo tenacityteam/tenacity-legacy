@@ -10,8 +10,7 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_SLIDER__
-#define __AUDACITY_SLIDER__
+#pragma once
 
 #include <wx/setup.h> // for wxUSE_* macros
 #include <wx/defs.h>
@@ -362,5 +361,3 @@ class SliderDialog final : public wxDialogWrapper
  public:
    DECLARE_EVENT_TABLE()
 };
-
-#endif

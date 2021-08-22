@@ -1,5 +1,4 @@
-#ifndef __AUDACITY_MEMORY_X_H__
-#define __AUDACITY_MEMORY_X_H__
+#pragma once
 
 // C++ standard header <memory> with a few extensions
 #include <iterator>
@@ -634,5 +633,3 @@ template< typename T > struct NonInterfering
 #define LINEAR_TO_DB(x) (20.0 * log10(x))
 
 #define MAX_AUDIO (1. - 1./(1<<15))
-
-#endif // __AUDACITY_MEMORY_X_H__

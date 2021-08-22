@@ -10,8 +10,7 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_AUDIO_IO__
-#define __AUDACITY_AUDIO_IO__
+#pragma once
 
 
 
@@ -789,5 +788,3 @@ private:
 };
 
 static constexpr unsigned ScrubPollInterval_ms = 50;
-
-#endif

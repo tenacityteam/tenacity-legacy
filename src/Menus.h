@@ -7,8 +7,7 @@
   Dominic Mazzoni
 
 **********************************************************************/
-#ifndef __AUDACITY_MENUS__
-#define __AUDACITY_MENUS__
+#pragma once
 
 #include "Identifier.h"
 
@@ -122,5 +121,3 @@ public:
    int  mWhatIfNoSelection;
    bool mStopIfWasPaused;
 };
-
-#endif

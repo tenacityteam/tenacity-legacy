@@ -1,5 +1,4 @@
-#ifndef __realfftf48x_h
-#define __realfftf48x_h
+#pragma once
 
 #include "MemoryX.h"
 
@@ -97,7 +96,3 @@ public:
 
 int SmallRB(int bits, int numberBits);
 extern int (*SmallVRB[])(int bits);
-
-
-#endif
-

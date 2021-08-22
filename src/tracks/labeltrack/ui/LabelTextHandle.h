@@ -8,8 +8,7 @@ Paul Licameli split from TrackPanel.cpp
 
 **********************************************************************/
 
-#ifndef __AUDACITY_LABEL_TEXT_HANDLE__
-#define __AUDACITY_LABEL_TEXT_HANDLE__
+#pragma once
 
 #include "LabelDefaultClickHandle.h"
 #include "../../../SelectedRegion.h"
@@ -74,5 +73,3 @@ private:
    /// flag to tell if it's a valid dragging
    bool mRightDragging{ false };
 };
-
-#endif

@@ -10,8 +10,7 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_IMPORT_EXPORT_PREFS__
-#define __AUDACITY_IMPORT_EXPORT_PREFS__
+#pragma once
 
 #include <wx/defs.h>
 
@@ -42,5 +41,3 @@ class TENACITY_DLL_API ImportExportPrefs final : public PrefsPanel
  private:
    void Populate();
 };
-
-#endif

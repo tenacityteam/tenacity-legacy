@@ -8,8 +8,7 @@
  
  **********************************************************************/
 
-#ifndef __AUDACITY_SELECT_UTILITIES__
-#define __AUDACITY_SELECT_UTILITIES__
+#pragma once
 
 class AudacityProject;
 class Track;
@@ -30,5 +29,3 @@ TENACITY_DLL_API void DoSelectAllAudio( AudacityProject &project );
 TENACITY_DLL_API void DoSelectSomething( AudacityProject &project );
 
 }
-
-#endif

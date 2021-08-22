@@ -13,8 +13,7 @@
 
 *//*******************************************************************/
 
-#ifndef __DRAG_COMMAND__
-#define __DRAG_COMMAND__
+#pragma once
 
 #include "Command.h"
 #include "CommandType.h"
@@ -54,6 +53,3 @@ public:
    bool bHasWinName;
 
 };
-
-
-#endif /* End of include guard: __DRAG_COMMAND__ */

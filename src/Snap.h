@@ -12,8 +12,7 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_SNAP__
-#define __AUDACITY_SNAP__
+#pragma once
 
 #include <vector>
 #include <wx/defs.h>
@@ -112,5 +111,3 @@ private:
    double mRate{ 0.0 };
    NumericFormatSymbol mFormat{};
 };
-
-#endif

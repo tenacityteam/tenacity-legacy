@@ -9,8 +9,7 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_IMAGE_ROLL__
-#define __AUDACITY_IMAGE_ROLL__
+#pragma once
 
 #include <vector>
 // #include <wx/dc.h> // for enum wxRasterOperationMode
@@ -96,5 +95,3 @@ class ImageRollPanel final : public wxPanelWrapper
    DECLARE_EVENT_TABLE()
 
 };
-
-#endif // __AUDACITY_IMAGE_ROLL__

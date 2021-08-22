@@ -9,8 +9,7 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_MODULEMANAGER_H__
-#define __AUDACITY_MODULEMANAGER_H__
+#pragma once
 
 #include "MemoryX.h"
 #include <functional>
@@ -152,5 +151,3 @@ void UnregisterProvider(ModuleMain rtn);
 // be destroyed only after the un-registrations
 static struct Init{
    Init() { RegisterProvider(nullptr); } } sInitBuiltinModules;
-
-#endif /* __AUDACITY_MODULEMANAGER_H__ */

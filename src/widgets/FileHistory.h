@@ -8,8 +8,7 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_WIDGETS_FILEHISTORY__
-#define __AUDACITY_WIDGETS_FILEHISTORY__
+#pragma once
 
 #include <vector>
 #include <algorithm>
@@ -73,5 +72,3 @@ class TENACITY_DLL_API FileHistory
 
    wxString mGroup;
 };
-
-#endif

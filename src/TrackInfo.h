@@ -8,8 +8,7 @@ Paul Licameli split from TrackPanel.cpp
 
 **********************************************************************/
 
-#ifndef __AUDACITY_TRACK_INFO__
-#define __AUDACITY_TRACK_INFO__
+#pragma once
 
 
 
@@ -143,5 +142,3 @@ namespace TrackInfo
    TENACITY_DLL_API
    bool HasSoloButton();
 };
-
-#endif

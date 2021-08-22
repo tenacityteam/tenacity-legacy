@@ -8,8 +8,7 @@ Paul Licameli
 
 **********************************************************************/
 
-#ifndef __AUDACITY_TRACK_PANEL_MOUSE_EVENT__
-#define __AUDACITY_TRACK_PANEL_MOUSE_EVENT__
+#pragma once
 
 class wxMouseEvent;
 class wxMouseState;
@@ -61,5 +60,3 @@ struct TrackPanelMouseEvent
    std::shared_ptr<TrackPanelCell> pCell; // may be NULL
    double steps;  // for mouse wheel rotation
 };
-
-#endif

@@ -8,8 +8,7 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_TIME_TOOLBAR__
-#define __AUDACITY_TIME_TOOLBAR__
+#pragma once
 
 #include <wx/defs.h>
 
@@ -69,5 +68,3 @@ inline wxSize TimeToolBar::ComputeSizing(int digitH)
 {
    return mAudioTime->ComputeSizing(false, digitH * mDigitRatio, digitH);
 }
-
-#endif

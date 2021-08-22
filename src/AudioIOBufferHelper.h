@@ -1,5 +1,4 @@
-#ifndef AUDIOIO_BUFFER_HELPER_H
-#define AUDIOIO_BUFFER_HELPER_H
+#pragma once
 
 #include "AudioIO.h"
 #include "../libraries/lib-utility/MemoryX.h"
@@ -38,5 +37,3 @@ class AudioIOBufferHelper
             delete[] chans;
         }
 };
-
-#endif

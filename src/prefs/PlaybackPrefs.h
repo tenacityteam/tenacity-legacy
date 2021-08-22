@@ -9,8 +9,7 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_PLAYBACK_PREFS__
-#define __AUDACITY_PLAYBACK_PREFS__
+#pragma once
 
 #include <wx/defs.h>
 
@@ -37,5 +36,3 @@ class PlaybackPrefs final : public PrefsPanel
  private:
    void Populate();
 };
-
-#endif

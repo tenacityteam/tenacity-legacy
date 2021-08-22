@@ -6,8 +6,7 @@
 
  **********************************************************************/
 
-#ifndef __AUDACITY_SELECTION_STATE__
-#define __AUDACITY_SELECTION_STATE__
+#pragma once
 
 class AudacityProject;
 class Track;
@@ -68,5 +67,3 @@ private:
    std::weak_ptr<Track> mInitialLastPickedTrack;
    std::vector<bool> mInitialTrackSelection;
 };
-
-#endif

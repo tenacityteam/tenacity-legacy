@@ -8,8 +8,7 @@ Paul Licameli split from AudacityProject.h
 
 **********************************************************************/
 
-#ifndef __AUDACITY_PROJECT_FILE_MANAGER__
-#define __AUDACITY_PROJECT_FILE_MANAGER__
+#pragma once
 
 #include <functional>
 #include <memory>
@@ -134,5 +133,3 @@ private:
    // Are we currently closing as the result of a menu command?
    bool mMenuClose{ false };
 };
-
-#endif

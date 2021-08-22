@@ -17,8 +17,7 @@
 
 *//********************************************************************/
 
-#ifndef __AUDACITY_MIX__
-#define __AUDACITY_MIX__
+#pragma once
 
 #include "SampleFormat.h"
 #include <vector>
@@ -196,6 +195,3 @@ class TENACITY_DLL_API Mixer {
 
    const bool       mMayThrow;
 };
-
-#endif
-

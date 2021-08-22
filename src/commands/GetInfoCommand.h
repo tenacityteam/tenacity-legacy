@@ -17,8 +17,7 @@ channel.
 
 *//*******************************************************************/
 
-#ifndef __GET_INFO_COMMAND__
-#define __GET_INFO_COMMAND__
+#pragma once
 
 #include "Command.h"
 #include "CommandType.h"
@@ -65,5 +64,3 @@ private:
       wxPoint P, wxWindow * pWin, int Id, int depth );
 
 };
-
-#endif /* End of include guard: __GET_INFO_COMMAND__ */

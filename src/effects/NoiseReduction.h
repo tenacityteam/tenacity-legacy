@@ -10,8 +10,7 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_EFFECT_NOISE_REDUCTION__
-#define __AUDACITY_EFFECT_NOISE_REDUCTION__
+#pragma once
 
 #include "Effect.h"
 
@@ -55,5 +54,3 @@ private:
    std::unique_ptr<Settings> mSettings;
    std::unique_ptr<Statistics> mStatistics;
 };
-
-#endif

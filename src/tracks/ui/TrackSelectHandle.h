@@ -8,8 +8,7 @@ Paul Licameli split from TrackPanel.cpp
 
 **********************************************************************/
 
-#ifndef __AUDACITY_TRACK_SELECT_HANDLE__
-#define __AUDACITY_TRACK_SELECT_HANDLE__
+#pragma once
 
 #include "../../UIHandle.h"
 
@@ -62,5 +61,3 @@ private:
    void CalculateRearrangingThresholds(
       const wxMouseEvent & event, AudacityProject *project);
 };
-
-#endif

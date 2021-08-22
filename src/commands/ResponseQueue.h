@@ -31,8 +31,7 @@ force the script thread to wait until a response is available.
 
 *//*******************************************************************/
 
-#ifndef __RESPONSEQUEUE__
-#define __RESPONSEQUEUE__
+#pragma once
 
 #include <queue>
 #include <string>
@@ -70,5 +69,3 @@ class ResponseQueue {
       void AddResponse(Response response);
       Response WaitAndGetResponse();
 };
-
-#endif /* End of include guard: __RESPONSEQUEUE__ */

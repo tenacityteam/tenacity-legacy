@@ -8,8 +8,7 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_WINDOW_ACCESSIBLE__
-#define __AUDACITY_WINDOW_ACCESSIBLE__
+#pragma once
 
 #include <wx/setup.h> // for wxUSE_* macros
 
@@ -99,4 +98,3 @@ private:
 };
 
 #endif      // wxUSE_ACCESSIBILITY
-#endif      // __AUDACITY_WINDOW_ACCESSIBLE__

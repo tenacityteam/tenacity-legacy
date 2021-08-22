@@ -13,8 +13,7 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_EFFECT_WAHWAH__
-#define __AUDACITY_EFFECT_WAHWAH__
+#pragma once
 
 #include "Effect.h"
 
@@ -137,6 +136,3 @@ private:
 
    DECLARE_EVENT_TABLE()
 };
-
-#endif
-

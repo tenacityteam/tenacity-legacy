@@ -9,8 +9,7 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_QUALITY_PREFS__
-#define __AUDACITY_QUALITY_PREFS__
+#pragma once
 
 #include <vector>
 #include <wx/defs.h>
@@ -51,5 +50,3 @@ class TENACITY_DLL_API QualityPrefs final : public PrefsPanel
 
    DECLARE_EVENT_TABLE()
 };
-
-#endif

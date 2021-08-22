@@ -9,8 +9,7 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_RECORDING_PREFS__
-#define __AUDACITY_RECORDING_PREFS__
+#pragma once
 
 
 
@@ -61,5 +60,3 @@ class RecordingPrefs final : public PrefsPanel
 
    DECLARE_EVENT_TABLE()
 };
-
-#endif

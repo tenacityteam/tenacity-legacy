@@ -6,8 +6,7 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_SCORE_ALIGN_DIALOG__
-#define __AUDACITY_SCORE_ALIGN_DIALOG__
+#pragma once
 
 #ifdef EXPERIMENTAL_SCOREALIGN
 
@@ -127,7 +126,5 @@ private:
    DECLARE_EVENT_TABLE()
 
 };
-
-#endif
 
 #endif

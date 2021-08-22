@@ -39,8 +39,7 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_PLUGININTERFACE_H__
-#define __AUDACITY_PLUGININTERFACE_H__
+#pragma once
 
 #include "tenacity/ConfigInterface.h"
 #include "tenacity/EffectInterface.h"
@@ -111,5 +110,3 @@ public:
    virtual bool RemovePrivateConfigSubgroup(const PluginID & ID, const RegistryPath & group) = 0;
    virtual bool RemovePrivateConfig(const PluginID & ID, const RegistryPath & group, const RegistryPath & key) = 0;
 };
-
-#endif // __AUDACITY_PLUGININTERFACE_H__

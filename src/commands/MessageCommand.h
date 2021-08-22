@@ -18,8 +18,7 @@
 
 *//*******************************************************************/
 
-#ifndef __MESSAGE_COMMAND__
-#define __MESSAGE_COMMAND__
+#pragma once
 
 #include "CommandType.h"
 #include "Command.h"
@@ -41,6 +40,3 @@ public:
 public:
    wxString mMessage;
 };
-
-
-#endif /* End of include guard: __MESSAGECOMMAND__ */

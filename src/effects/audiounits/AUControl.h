@@ -15,8 +15,7 @@
 \brief a wxWidgetCocoaImpl 
 
 *//********************************************************************/
-#ifndef AUDACITY_AUCONTROL_H
-#define AUDACITY_AUCONTROL_H
+#pragma once
 
 #if !defined(_LP64)
 #include <Carbon/Carbon.h>
@@ -77,5 +76,3 @@ private:
 
    DECLARE_EVENT_TABLE()
 };
-
-#endif

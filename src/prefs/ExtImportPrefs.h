@@ -8,8 +8,7 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_EXT_IMPORT_PREFS__
-#define __AUDACITY_EXT_IMPORT_PREFS__
+#pragma once
 
 #include <wx/defs.h>
 #include <wx/dnd.h> // to inherit wxDropTarget
@@ -116,5 +115,3 @@ class ExtImportPrefs final : public PrefsPanel
    void Populate();
    DECLARE_EVENT_TABLE()
 };
-
-#endif

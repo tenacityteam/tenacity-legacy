@@ -8,8 +8,7 @@
 
  **********************************************************************/
 
-#ifndef __AUDACITY_NOTE_TRACK_SLIDER_HANDLES__
-#define __AUDACITY_NOTE_TRACK_SLIDER_HANDLES__
+#pragma once
 
 #ifdef EXPERIMENTAL_MIDI_OUT
 
@@ -51,7 +50,5 @@ public:
        const wxMouseState &state, const wxRect &rect,
        const std::shared_ptr<Track> &pTrack);
 };
-
-#endif
 
 #endif

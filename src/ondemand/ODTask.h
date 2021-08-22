@@ -20,8 +20,7 @@ in a background thread.
 
 
 
-#ifndef __AUDACITY_ODTASK__
-#define __AUDACITY_ODTASK__
+#pragma once
 
 #include "../BlockFile.h"
 
@@ -175,6 +174,3 @@ class ODTask /* not final */
 
 
 };
-
-#endif
-

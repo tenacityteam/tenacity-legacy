@@ -8,8 +8,7 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_SAMPLE_FORMAT__
-#define __AUDACITY_SAMPLE_FORMAT__
+#pragma once
 
 
 
@@ -174,5 +173,3 @@ void      InitDitherers();
 using Floats = ArrayOf<float>;
 using FloatBuffers = ArraysOf<float>;
 using Doubles = ArrayOf<double>;
-
-#endif

@@ -8,8 +8,7 @@ Paul Licameli split from AudioIO.h
 
 **********************************************************************/
 
-#ifndef __AUDACITY_AUDIO_IO_BASE__
-#define __AUDACITY_AUDIO_IO_BASE__
+#pragma once
 
 
 
@@ -339,8 +338,6 @@ protected:
    /** \brief How many sample rates to try */
    static const int NumRatesToTry;
 };
-
-#endif
 
 #include "Prefs.h"
 

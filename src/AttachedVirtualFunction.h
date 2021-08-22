@@ -9,8 +9,7 @@ Paul Licameli
 
 **********************************************************************/
 
-#ifndef __AUDACITY_ATTACHED_VIRTUAL_FUNCTION__
-#define __AUDACITY_ATTACHED_VIRTUAL_FUNCTION__
+#pragma once
 
 
 #include <functional>
@@ -286,5 +285,3 @@ private:
       return registry;
    }
 };
-
-#endif

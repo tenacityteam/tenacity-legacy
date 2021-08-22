@@ -8,8 +8,7 @@
  
  **********************************************************************/
 
-#ifndef __AUDACITY_PLAYBACK_SCHEDULE__
-#define __AUDACITY_PLAYBACK_SCHEDULE__
+#pragma once
 
 #include <atomic>
 #include <vector>
@@ -163,5 +162,3 @@ struct TENACITY_DLL_API PlaybackSchedule {
    void RealTimeRestart();
 
 };
-
-#endif

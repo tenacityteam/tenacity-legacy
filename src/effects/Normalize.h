@@ -9,8 +9,7 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_EFFECT_NORMALIZE__
-#define __AUDACITY_EFFECT_NORMALIZE__
+#pragma once
 
 #include "Effect.h"
 #include "Biquad.h"
@@ -90,5 +89,3 @@ private:
 
    DECLARE_EVENT_TABLE()
 };
-
-#endif

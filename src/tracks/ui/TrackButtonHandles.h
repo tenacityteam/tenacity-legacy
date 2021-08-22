@@ -8,8 +8,7 @@ Paul Licameli split from TrackPanel.cpp
 
 **********************************************************************/
 
-#ifndef __AUDACITY_TRACK_BUTTON_HANDLES__
-#define __AUDACITY_TRACK_BUTTON_HANDLES__
+#pragma once
 
 #include "../ui/ButtonHandle.h"
 
@@ -125,5 +124,3 @@ public:
 private:
    std::weak_ptr<TrackPanelCell> mpCell;
 };
-
-#endif

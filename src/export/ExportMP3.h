@@ -8,8 +8,7 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_EXPORTMP3__
-#define __AUDACITY_EXPORTMP3__
+#pragma once
 
 /* --------------------------------------------------------------------------*/
 
@@ -36,6 +35,3 @@ class wxWindow;
 // Get MP3 library version
 //----------------------------------------------------------------------------
 TranslatableString GetMP3Version(wxWindow *parent, bool prompt);
-
-#endif
-

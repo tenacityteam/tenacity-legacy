@@ -10,8 +10,7 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_MODULE_PREFS__
-#define __AUDACITY_MODULE_PREFS__
+#pragma once
 
 #include <wx/defs.h>
 
@@ -42,5 +41,3 @@ class ModulePrefs final : public PrefsPanel
    std::vector<int> mStatuses;
    FilePaths mPaths;
 };
-
-#endif

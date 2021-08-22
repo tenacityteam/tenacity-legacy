@@ -8,8 +8,7 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_EFFECT_STEREO_TO_MONO__
-#define __AUDACITY_EFFECT_STEREO_TO_MONO__
+#pragma once
 
 #include "Effect.h"
 
@@ -47,6 +46,3 @@ private:
    bool ProcessOne(sampleCount & curTime, sampleCount totalTime, WaveTrack *left, WaveTrack *right);
 
 };
-
-#endif
-

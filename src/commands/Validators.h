@@ -40,8 +40,7 @@ a certain criterion. This is a base validator which allows anything.
 
 *//*******************************************************************/
 
-#ifndef __VALIDATORS__
-#define __VALIDATORS__
+#pragma once
 
 class wxArrayString;
 
@@ -266,5 +265,3 @@ public:
       return std::make_unique<AndValidator>(v1->GetClone(), v2->GetClone());
    }
 };*/
-
-#endif /* End of include guard: __VALIDATORS__ */

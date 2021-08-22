@@ -8,8 +8,7 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_FREQ_WINDOW__
-#define __AUDACITY_FREQ_WINDOW__
+#pragma once
 
 #include <vector>
 #include <wx/font.h> // member variable
@@ -170,5 +169,3 @@ private:
 
    friend class FreqPlot;
 };
-
-#endif

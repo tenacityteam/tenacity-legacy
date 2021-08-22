@@ -8,8 +8,7 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_VIEWINFO__
-#define __AUDACITY_VIEWINFO__
+#pragma once
 
 #include <utility>
 #include <vector>
@@ -231,5 +230,3 @@ public:
 private:
    int mHeight{ 0 };
 };
-
-#endif

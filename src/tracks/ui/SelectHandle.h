@@ -8,8 +8,7 @@ Paul Licameli split from TrackPanel.cpp
 
 **********************************************************************/
 
-#ifndef __AUDACITY_SELECT_HANDLE__
-#define __AUDACITY_SELECT_HANDLE__
+#pragma once
 
 #include "../../UIHandle.h"
 #include "../../SelectedRegion.h"
@@ -172,4 +171,3 @@ private:
    friend TimerHandler;
    std::shared_ptr<TimerHandler> mTimerHandler;
 };
-#endif

@@ -53,8 +53,7 @@ of the warped region.
 
 *//*******************************************************************/
 
-#ifndef __TIMEWARPER__
-#define __TIMEWARPER__
+#pragma once
 
 #include <memory>
 
@@ -215,5 +214,3 @@ public:
       }
    }
 };
-
-#endif /* End of include guard: __TIMEWARPER__ */

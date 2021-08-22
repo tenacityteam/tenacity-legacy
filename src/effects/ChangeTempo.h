@@ -11,11 +11,9 @@
 
 **********************************************************************/
 
+#pragma once
 
 #if USE_SOUNDTOUCH
-
-#ifndef __AUDACITY_EFFECT_CHANGETEMPO__
-#define __AUDACITY_EFFECT_CHANGETEMPO__
 
 #if USE_SBSMS
 #include "SBSMSEffect.h"
@@ -104,7 +102,5 @@ private:
 
    DECLARE_EVENT_TABLE()
 };
-
-#endif // __AUDACITY_EFFECT_CHANGETEMPO__
 
 #endif // USE_SOUNDTOUCH

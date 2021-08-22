@@ -6,8 +6,7 @@
 
 */
 
-#ifndef __AUDACITY_USER_EXCEPTION__
-#define __AUDACITY_USER_EXCEPTION__
+#pragma once
 
 #include "AudacityException.h"
 
@@ -22,5 +21,3 @@ public:
 
    void DelayedHandlerAction() override;
 };
-
-#endif

@@ -8,8 +8,7 @@ Paul Licameli split from AudacityProject.h
 
 **********************************************************************/
 
-#ifndef __AUDACITY_PROJECT_MANAGER__
-#define __AUDACITY_PROJECT_MANAGER__
+#pragma once
 
 #include <memory>
 
@@ -128,5 +127,3 @@ private:
    static bool sbWindowRectAlreadySaved;
    static bool sbSkipPromptingForSave;
 };
-
-#endif

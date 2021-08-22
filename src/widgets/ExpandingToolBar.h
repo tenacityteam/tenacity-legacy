@@ -8,8 +8,7 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_EXPANDING_TOOL_BAR__
-#define __AUDACITY_EXPANDING_TOOL_BAR__
+#pragma once
 
 #include <vector>
 #include <wx/defs.h>
@@ -248,5 +247,3 @@ class ToolBarArea final : public wxPanelWrapper
 
    DECLARE_EVENT_TABLE()
 };
-
-#endif // __AUDACITY_EXPANDING_TOOL_BAR__

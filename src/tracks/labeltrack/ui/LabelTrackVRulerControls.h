@@ -8,8 +8,7 @@ Paul Licameli split from TrackPanel.cpp
 
 **********************************************************************/
 
-#ifndef __AUDACITY_LABEL_TRACK_VRULER_CONTROLS__
-#define __AUDACITY_LABEL_TRACK_VRULER_CONTROLS__
+#pragma once
 
 #include "../../ui/TrackVRulerControls.h"
 
@@ -38,5 +37,3 @@ private:
    void UpdateRuler( const wxRect &rect ) override;
 
 };
-
-#endif

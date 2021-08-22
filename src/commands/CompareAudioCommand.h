@@ -15,8 +15,7 @@ classes
 
 *//*******************************************************************/
 
-#ifndef __COMPAREAUDIOCOMMAND__
-#define __COMPAREAUDIOCOMMAND__
+#pragma once
 
 #include "Command.h"
 #include "CommandType.h"
@@ -52,5 +51,3 @@ protected:
    double CompareSample(double value1, double value2) /* not override */;
 
 };
-
-#endif /* End of include guard: __COMPAREAUDIOCOMMAND__ */

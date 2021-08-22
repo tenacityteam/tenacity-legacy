@@ -11,8 +11,7 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_MULTIDIALOG__
-#define __AUDACITY_MULTIDIALOG__
+#pragma once
 
 #include <wx/defs.h>
 
@@ -31,5 +30,3 @@ int ShowMultiDialog(const TranslatableString &message,
                     const TranslatableString &boxMsg
                        = DefaultMultiDialogMessage(),
                     bool log = true);
-
-#endif // __AUDACITY_MULTIDIALOG__

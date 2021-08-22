@@ -9,8 +9,7 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_EFFECT_BASS_TREBLE__
-#define __AUDACITY_EFFECT_BASS_TREBLE__
+#pragma once
 
 #include "Effect.h"
 
@@ -120,5 +119,3 @@ private:
 
    DECLARE_EVENT_TABLE()
 };
-
-#endif

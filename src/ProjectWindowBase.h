@@ -8,8 +8,7 @@ Paul Licameli split from ProjectWindow.h
 
 **********************************************************************/
 
-#ifndef __AUDACITY_PROJECT_WINDOW_BASE__
-#define __AUDACITY_PROJECT_WINDOW_BASE__
+#pragma once
 
 #include <wx/frame.h> // to inherit
 
@@ -35,6 +34,3 @@ protected:
 
 TENACITY_DLL_API AudacityProject *FindProjectFromWindow( wxWindow *pWindow );
 const AudacityProject *FindProjectFromWindow( const wxWindow *pWindow );
-
-#endif
-

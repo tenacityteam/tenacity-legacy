@@ -8,8 +8,7 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_SELECTION_BAR_LISTENER__
-#define __AUDACITY_SELECTION_BAR_LISTENER__
+#pragma once
 
 #include "tenacity/Types.h"
 #include "ComponentInterfaceSymbol.h"
@@ -42,5 +41,3 @@ class TENACITY_DLL_API TimeToolBarListener /* not final */ {
    virtual const NumericFormatSymbol & TT_GetAudioTimeFormat() = 0;
    virtual void TT_SetAudioTimeFormat(const NumericFormatSymbol & format) = 0;
 };
-
-#endif

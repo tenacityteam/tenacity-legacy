@@ -8,8 +8,7 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_TRACK_PANEL__
-#define __AUDACITY_TRACK_PANEL__
+#pragma once
 
 
 
@@ -221,5 +220,3 @@ struct TENACITY_DLL_API IsVisibleTrack
 
    wxRect mPanelRect;
 };
-
-#endif

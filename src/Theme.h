@@ -11,8 +11,7 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_THEME__
-#define __AUDACITY_THEME__
+#pragma once
 
 
 
@@ -196,5 +195,3 @@ extern TENACITY_DLL_API Theme theTheme;
 extern TENACITY_DLL_API ChoiceSetting
      GUITheme
 ;
-
-#endif // __AUDACITY_THEME__

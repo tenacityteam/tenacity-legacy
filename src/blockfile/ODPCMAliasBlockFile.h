@@ -33,8 +33,7 @@ Some of these methods have been overridden only because they used the unsafe wxL
 
 
 
-#ifndef __AUDACITY_ODPCMALIASBLOCKFILE__
-#define __AUDACITY_ODPCMALIASBLOCKFILE__
+#pragma once
 
 #include "PCMAliasBlockFile.h"
 
@@ -162,6 +161,3 @@ protected:
    ///the ODTask needs to know where this blockfile lies in the track, so for convenience, we have this here.
    sampleCount mClipOffset;
 };
-
-#endif
-

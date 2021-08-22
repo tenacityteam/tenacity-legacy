@@ -10,8 +10,7 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_TOOLBAR__
-#define __AUDACITY_TOOLBAR__
+#pragma once
 
 #include <functional>
 #include <vector>
@@ -268,5 +267,3 @@ struct TENACITY_DLL_API RegisteredToolbarFactory {
 
    static const Functions &GetFactories();
 };
-
-#endif

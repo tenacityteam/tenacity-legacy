@@ -8,8 +8,7 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_SHUTTLE_GET_DEFINITION__
-#define __AUDACITY_SHUTTLE_GET_DEFINITION__
+#pragma once
 
 #include "Shuttle.h" // to inherit
 #include "commands/CommandTargets.h" // to inherit
@@ -35,5 +34,3 @@ public:
    void DefineEnum( int &var, const wxChar * key, const int vdefault,
       const EnumValueSymbol strings[], size_t nStrings ) override;
 };
-
-#endif

@@ -46,8 +46,7 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_UNDOMANAGER__
-#define __AUDACITY_UNDOMANAGER__
+#pragma once
 
 #include <vector>
 #include <wx/event.h> // to declare custom event types
@@ -223,5 +222,3 @@ class TENACITY_DLL_API UndoManager final
    SpaceArray space;
    unsigned long long mClipboardSpaceUsage {};
 };
-
-#endif

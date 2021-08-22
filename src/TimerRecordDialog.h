@@ -13,8 +13,7 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_TIMERRECORD_DIALOG__
-#define __AUDACITY_TIMERRECORD_DIALOG__
+#pragma once
 
 #include <wx/textctrl.h> // to inherit
 #include <wx/timer.h> // member variable
@@ -146,5 +145,3 @@ private:
 
    DECLARE_EVENT_TABLE()
 };
-
-#endif

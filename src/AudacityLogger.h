@@ -11,8 +11,7 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_LOGGER__
-#define __AUDACITY_LOGGER__
+#pragma once
 
 
 
@@ -64,5 +63,3 @@ class TENACITY_DLL_API AudacityLogger final : public wxEvtHandler,
    wxString mBuffer;
    bool mUpdated;
 };
-
-#endif

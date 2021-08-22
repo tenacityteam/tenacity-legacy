@@ -8,8 +8,7 @@ Paul Licameli split from WaveTrackVRulerControls.h
 
 **********************************************************************/
 
-#ifndef __AUDACITY_WAVEFORM_VRULER_CONTROLS__
-#define __AUDACITY_WAVEFORM_VRULER_CONTROLS__
+#pragma once
 
 #include "../../../ui/TrackVRulerControls.h" // to inherit
 
@@ -51,5 +50,3 @@ private:
 
    std::weak_ptr<WaveformVZoomHandle> mVZoomHandle;
 };
-
-#endif

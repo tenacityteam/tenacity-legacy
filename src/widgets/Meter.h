@@ -13,8 +13,7 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_METER__
-#define __AUDACITY_METER__
+#pragma once
 
 #include <wx/setup.h> // for wxUSE_* macros
 #include <wx/brush.h> // member variable
@@ -295,5 +294,3 @@ class TENACITY_DLL_API MeterPanel final
 
    DECLARE_EVENT_TABLE()
 };
-
-#endif // __AUDACITY_METER__

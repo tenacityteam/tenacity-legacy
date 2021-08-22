@@ -8,8 +8,7 @@
 
 **********************************************************************/
 
-#ifndef AUDACITY_VSTCONTROLMSW_H
-#define AUDACITY_VSTCONTROLMSW_H
+#pragma once
 
 #include <Windows.h>
 
@@ -26,5 +25,3 @@ public:
 private:
    HANDLE mHwnd;
 };
-
-#endif

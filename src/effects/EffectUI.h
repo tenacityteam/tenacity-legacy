@@ -11,8 +11,7 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_EFFECTUI_H__
-#define __AUDACITY_EFFECTUI_H__
+#pragma once
 
 #include <wx/bitmap.h> // member variables
 
@@ -264,5 +263,3 @@ private:
    DECLARE_EVENT_TABLE()
    wxDECLARE_NO_COPY_CLASS(EffectDialog);
 };
-
-#endif // __AUDACITY_EFFECTUI_H__

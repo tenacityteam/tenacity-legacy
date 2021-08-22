@@ -8,8 +8,7 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_SEQUENCE__
-#define __AUDACITY_SEQUENCE__
+#pragma once
 
 
 #include <vector>
@@ -280,6 +279,3 @@ private:
        sampleCount numSamples, const wxChar *whereStr);
 
 };
-
-#endif // __AUDACITY_SEQUENCE__
-

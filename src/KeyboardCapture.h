@@ -8,9 +8,7 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_KEYBOARD_CAPTURE__
-#define __AUDACITY_KEYBOARD_CAPTURE__
-
+#pragma once
 
 
 #include <functional>
@@ -60,5 +58,3 @@ namespace KeyboardCapture
    TENACITY_DLL_API
    void OnFocus( wxWindow &window, wxFocusEvent &event );
 }
-
-#endif

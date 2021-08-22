@@ -8,8 +8,7 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_MIXER_TOOLBAR__
-#define __AUDACITY_MIXER_TOOLBAR__
+#pragma once
 
 #include "ToolBar.h"
 
@@ -74,6 +73,3 @@ class MixerToolBar final : public ToolBar {
    DECLARE_CLASS(MixerToolBar)
    DECLARE_EVENT_TABLE()
 };
-
-#endif
-

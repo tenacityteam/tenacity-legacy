@@ -12,8 +12,7 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_EFFECT_AMPLIFY__
-#define __AUDACITY_EFFECT_AMPLIFY__
+#pragma once
 
 #include "Effect.h"
 
@@ -84,5 +83,3 @@ private:
 
    DECLARE_EVENT_TABLE()
 };
-
-#endif // __AUDACITY_EFFECT_AMPLIFY__

@@ -16,8 +16,7 @@ updating the ODPCMAliasBlockFile and the GUI of the newly available data.
 
 *//*******************************************************************/
 
-#ifndef __AUDACITY_ODComputeSummaryTask__
-#define __AUDACITY_ODComputeSummaryTask__
+#pragma once
 
 #include <vector>
 #include "ODTask.h"
@@ -79,6 +78,3 @@ protected:
    ODLock  mHasUpdateRanMutex;
    bool mHasUpdateRan;
 };
-
-#endif
-

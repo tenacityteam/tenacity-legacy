@@ -8,8 +8,7 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_WAVETRACK__
-#define __AUDACITY_WAVETRACK__
+#pragma once
 
 #include "Track.h"
 
@@ -725,5 +724,3 @@ class TENACITY_DLL_API WaveTrackFactory final
       sampleFormat format = (sampleFormat)0,
       double rate = 0);
 };
-
-#endif // __AUDACITY_WAVETRACK__

@@ -8,8 +8,7 @@
 
 *******************************************************************/
 
-#ifndef __AUDACITY_PROJECTSERIALIZER__
-#define __AUDACITY_PROJECTSERIALIZER__
+#pragma once
 
 #include "xml/XMLTagHandler.h"
 
@@ -78,5 +77,3 @@ private:
    static NameMap mNames;
    static wxMemoryBuffer mDict;
 };
-
-#endif

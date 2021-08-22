@@ -8,8 +8,7 @@ Paul Licameli split from class TrackView
 
 **********************************************************************/
 
-#ifndef __AUDACITY_COMMON_TRACK_VIEW__
-#define __AUDACITY_COMMON_TRACK_VIEW__
+#pragma once
 
 #include "TrackView.h" // to inherit
 
@@ -47,5 +46,3 @@ protected:
 public:
    std::weak_ptr<TimeShiftHandle> mTimeShiftHandle;
 };
-
-#endif

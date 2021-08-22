@@ -8,8 +8,7 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_FILE_NAMES__
-#define __AUDACITY_FILE_NAMES__
+#pragma once
 
 
 
@@ -263,6 +262,4 @@ namespace FileNames
 #define OSFILENAME(X) ((char *) (const char *)(X).mb_str())
 #define OSINPUT(X) OSFILENAME(X)
 #define OSOUTPUT(X) OSFILENAME(X)
-#endif
-
 #endif

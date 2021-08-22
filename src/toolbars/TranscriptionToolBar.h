@@ -10,8 +10,7 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_TRANSCRIPTION_TOOLBAR__
-#define __AUDACITY_TRANSCRIPTION_TOOLBAR__
+#pragma once
 
 #include "ToolBar.h"
 
@@ -157,6 +156,3 @@ class TranscriptionToolBar final : public ToolBar {
    DECLARE_CLASS(TranscriptionToolBar)
    DECLARE_EVENT_TABLE()
 };
-
-#endif
-

@@ -8,8 +8,7 @@
    Distributed under the terms of the GPL Version 2 or later.
 
 ***************************************************************************/
-#ifndef __AUDACITY_VOICEKEY__
-#define __AUDACITY_VOICEKEY__
+#pragma once
 
 
 #ifndef M_PI
@@ -101,4 +100,3 @@ inline int sgn(int  number){ return (number<0) ? -1: 1;}
 // a logistic distn has variance (pi*s)^2/3
 
 //inline float inline float logistic(float z){   return fexp(-1 * z/(pi / sqrt(3)) / (1 + pow(fexp(-1 * z(pi / sqrt(3))),2)));}
-#endif

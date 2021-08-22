@@ -20,8 +20,7 @@ they are kept separate to make things simpler.
 
 *//*******************************************************************/
 
-#ifndef __COMMANDDIRECTORY__
-#define __COMMANDDIRECTORY__
+#pragma once
 
 #include "CommandType.h"
 
@@ -55,5 +54,3 @@ public:
 private:
    CommandDirectory();
 };
-
-#endif /* End of include guard: __COMMANDDIRECTORY__ */

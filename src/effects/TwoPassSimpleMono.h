@@ -9,8 +9,7 @@
   This bit by Martyn Shaw.
 
 **********************************************************************/
-#ifndef __AUDACITY_EFFECT_TWOPASSSIMPLEMONO__
-#define __AUDACITY_EFFECT_TWOPASSSIMPLEMONO__
+#pragma once
 
 #include "SimpleMono.h"
 
@@ -83,5 +82,3 @@ private:
                    sampleCount start, sampleCount end);
    bool ProcessPass() override;
 };
-
-#endif

@@ -13,8 +13,7 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_EFFECT_PHASER__
-#define __AUDACITY_EFFECT_PHASER__
+#pragma once
 
 #include "Effect.h"
 
@@ -145,5 +144,3 @@ private:
 
    DECLARE_EVENT_TABLE()
 };
-
-#endif

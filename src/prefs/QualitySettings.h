@@ -8,8 +8,7 @@
  
  **********************************************************************/
 
-#ifndef __AUDACITY_QUALITY_SETTINGS__
-#define __AUDACITY_QUALITY_SETTINGS__
+#pragma once
 
 #include "Prefs.h" // for EnumSetting
 
@@ -20,5 +19,3 @@ extern TENACITY_DLL_API IntSetting DefaultSampleRate;
 extern TENACITY_DLL_API EnumSetting< sampleFormat > SampleFormatSetting;
 extern TENACITY_DLL_API sampleFormat SampleFormatChoice();
 }
-
-#endif

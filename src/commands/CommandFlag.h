@@ -6,8 +6,7 @@
 //
 //
 
-#ifndef __AUDACITY_COMMAND_FLAG__
-#define __AUDACITY_COMMAND_FLAG__
+#pragma once
 
 // Flags used in command handling.
 
@@ -122,5 +121,3 @@ struct TENACITY_DLL_API RegisteredMenuItemEnabler{
 
 // Unnecessary #include to indicate otherwise hidden link dependencies
 #include "Menus.h"
-
-#endif

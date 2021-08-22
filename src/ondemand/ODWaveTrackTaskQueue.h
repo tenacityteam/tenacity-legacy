@@ -19,8 +19,7 @@ tasks associated with a WaveTrack.
 
 
 
-#ifndef __AUDACITY_ODWAVETRACKTASKQUEUE__
-#define __AUDACITY_ODWAVETRACKTASKQUEUE__
+#pragma once
 
 #include <vector>
 #include "ODTaskThread.h"
@@ -108,6 +107,3 @@ class ODWaveTrackTaskQueue final
   ODLock    mTasksMutex;
 
 };
-
-#endif
-

@@ -8,8 +8,7 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_ZOOM_INFO__
-#define __AUDACITY_ZOOM_INFO__
+#pragma once
 
 #include "ClientData.h" // to inherit
 #include "Prefs.h" // to inherit
@@ -178,5 +177,3 @@ public:
    int mWidth{ 0 };
    int mVRulerWidth{ 36 };
 };
-
-#endif

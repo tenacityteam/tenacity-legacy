@@ -8,8 +8,7 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_EXPORT__
-#define __AUDACITY_EXPORT__
+#pragma once
 
 #include <functional>
 #include <vector>
@@ -335,5 +334,3 @@ TENACITY_DLL_API void ShowExportErrorDialog(wxString ErrorCode,
 
 TENACITY_DLL_API
 void ShowDiskFullExportErrorDialog(const wxFileNameWrapper &fileName);
-
-#endif
