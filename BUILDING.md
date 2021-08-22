@@ -18,6 +18,27 @@ may be helpful if your distribution is missing some packages.
 Installing ccache and ninja-build is highly recommended for faster builds but
 not required. CMake will automatically use ccache if it is installed.
 
+#### wxWidgets from source
+
+Where wxWidgets is not provided as a binary package,
+a possible way to build and install wxWidgets from source is given by the
+following example. After [downloading](https://www.wxwidgets.org/downloads/) and extracting the
+source code into a location, such as `~/Downloads/wxWidgets-3.1.5`, it can be built in a local
+directory, such as `~/Downloads/wxWidgets-build`:
+
+```
+cd ~/Downloads
+mkdir wxWidgets-build && cd wxWidgets-build  # create and go to a new empty build directory
+cmake -G Ninja ~/Downloads/wxWidgets-3.1.5   # configure wxWidgets from the assumed download location 
+cmake --build .  # actual compilation
+```
+
+Then to install wxWidgets in the default location, run
+
+```
+sudo cmake --build . --target install
+```
+
 #### Debian, Ubuntu, and derived distributions
 
 To install Tenacity's dependencies, run:
@@ -26,10 +47,12 @@ To install Tenacity's dependencies, run:
 sudo apt-get install build-essential libavcodec-dev libavformat-dev libavutil-dev libflac++-dev libglib2.0-dev libgtk-3-dev libid3tag0-dev libjack-dev liblilv-dev libmad0-dev libmp3lame-dev libogg-dev libpng-dev portaudio19-dev libportmidi-dev libserd-dev libsndfile1-dev libsord-dev libsoundtouch-dev libsoxr-dev libsuil-dev libtwolame-dev vamp-plugin-sdk libvorbis-dev lv2-dev zlib1g-dev cmake ninja-build libjpeg-dev libtiff-dev liblzma-dev libsqlite3-dev
 ```
 
+Note that you may need to install `libjack-jackd2-dev` instead of `libjack-dev` if you see a package conflict involving `libjack0`.
+
 wxWidgets 3.1 is required but not packaged in Debian or Ubuntu. Refer
 to the
 [wxWidgets documentation](https://docs.wxwidgets.org/3.1/overview_cmake.html)
-for how to install it from source code. The above package list
+for how to install it from source code, or see the [previous section](#wxwidgets-from-source). The above package list
 includes wxWidgets' build dependencies. If you install wxWidgets
 somewhere other than the default /usr/local, you need to set the
 `WX_CONFIG` environment variable to the location of the `wx-config`
@@ -235,6 +258,8 @@ cmake --install build
 ```
 
 ## Build options
+
+These are set with a `-D` prefix, for example `cmake -DLV2=OFF ...`
 
   * **VCPKG** (ON|OFF): whether to use dependencies from vcpkg. ON by default
     for Windows and macOS; OFF by default for Linux.
