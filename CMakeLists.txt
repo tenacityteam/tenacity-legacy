@@ -24,6 +24,10 @@ endif()
 
 if(VCPKG)
   set(ENV{VCPKG_DISABLE_METRICS} true)
+  if(NOT DEFINED ENV{VCPKG_BINARY_SOURCES})
+    set(ENV{VCPKG_BINARY_SOURCES} "clear;default,readwrite;nuget,https://tenacityteam.jfrog.io/artifactory/api/nuget/tenacity-nuget,read")
+  endif()
+  set(ENV{VCPKG_FEATURE_FLAGS} "-compilertracking,manifests,registries,versions")
 
   if(VCPKG_ROOT)
     message(STATUS "Using dependencies from vcpkg repository at ${VCPKG_ROOT}")
