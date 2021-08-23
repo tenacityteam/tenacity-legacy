@@ -67,8 +67,7 @@ else()
 endif()
 
 # If building with GNU compiler, then must be 4.9 or later.
-if (CMAKE_CXX_COMPILER_ID STREQUAL "GNU" AND
-    CMAKE_CXX_COMPILER_VERSION VERSION_LESS "4.9")
+if (CMAKE_CXX_COMPILER_ID STREQUAL "GNU" AND CMAKE_CXX_COMPILER_VERSION VERSION_LESS "4.9")
    message(FATAL_ERROR "Tenacity requires at least GCC 4.9")
 endif ()
 
@@ -100,11 +99,6 @@ endif()
 if( NOT CMAKE_BUILD_TYPE AND NOT CMAKE_CONFIGURATION_TYPES )
    set( CMAKE_BUILD_TYPE "Debug" )
 endif()
-
-# List of defines which are intended to silence C++17 warnings
-# These will be added to each CMAKE target as PRIVATE compilation definitions
-list( APPEND CXX_WARNINGS_SILENCE_DEFINES _SILENCE_CXX17_ITERATOR_BASE_CLASS_DEPRECATION_WARNING=1 )
-list( APPEND CXX_WARNINGS_SILENCE_DEFINES _SILENCE_CXX17_NEGATORS_DEPRECATION_WARNING=1 )
 
 # Ignore COMPILE_DEFINITIONS_<Config> properties
 cmake_policy( SET CMP0043 NEW )
@@ -159,6 +153,11 @@ set( CMAKE_PREFIX_PATH
 # Set the required C++ standard
 set( CMAKE_CXX_STANDARD 17 )
 set( CMAKE_CXX_STANDARD_REQUIRED ON )
+
+# List of defines which are intended to silence C++17 warnings
+# These will be added to each CMAKE target as PRIVATE compilation definitions
+list( APPEND CXX_WARNINGS_SILENCE_DEFINES _SILENCE_CXX17_ITERATOR_BASE_CLASS_DEPRECATION_WARNING=1 )
+list( APPEND CXX_WARNINGS_SILENCE_DEFINES _SILENCE_CXX17_NEGATORS_DEPRECATION_WARNING=1 )
 
 include( CMakeDependentOption )
 
@@ -247,37 +246,47 @@ elseif( NOT CMAKE_SIZEOF_VOID_P STREQUAL "4" )
    set( IS_64BIT ON )
 endif()
 
-message( STATUS "Build Info:" )
-message( STATUS "  Host System: ${CMAKE_HOST_SYSTEM}" )
-message( STATUS "  Host System Name: ${CMAKE_HOST_SYSTEM_NAME}" )
-message( STATUS "  Host System Processor: ${CMAKE_HOST_SYSTEM_PROCESSOR}" )
-message( STATUS "  Host System Version: ${CMAKE_HOST_SYSTEM_VERSION}" )
+#Determine 32-bit or 64-bit host
+cmake_host_system_information(RESULT IS_HOST_64BIT QUERY "IS_64BIT")
 
-if( IS_64BIT )
-   message( STATUS "  Host System Architecture: 64-bit" )
+message( STATUS "Build Info:" )
+message( STATUS "\tHost System Name: ${CMAKE_HOST_SYSTEM_NAME}" )
+message( STATUS "\tHost System Version: ${CMAKE_HOST_SYSTEM_VERSION}" )
+message( STATUS "\tHost System Processor: ${CMAKE_HOST_SYSTEM_PROCESSOR}" )
+
+if( IS_HOST_64BIT )
+   message( STATUS "\tHost System Arch: 64-bit" )
 else()
-   message( STATUS "  Host System Architecture: 32-bit" )
+   message( STATUS "\tHost System Arch: 32-bit" )
 endif()
 
 message( STATUS )
-message( STATUS "  Compiler: ${CMAKE_CXX_COMPILER}" )
-message( STATUS "  Compiler Version: ${CMAKE_CXX_COMPILER_VERSION}" )
-message( STATUS "  Compiler Standard: ${CMAKE_CXX_STANDARD}" )
-message( STATUS "  Compiler Standard Required: ${CMAKE_CXX_STANDARD_REQUIRED}" )
-message( STATUS "  Compiler Extensions: ${CMAKE_CXX_EXTENSIONS}" )
+message( STATUS "\tTarget System Name: ${CMAKE_SYSTEM_NAME}" )
+message( STATUS "\tTarget System Version: ${CMAKE_SYSTEM_VERSION}" )
+message( STATUS "\tTarget System Processor: ${CMAKE_SYSTEM_PROCESSOR}" )
+
+if( IS_64BIT )
+   message( STATUS "\tTarget System Arch: 64-bit" )
+else()
+   message( STATUS "\tTarget System Arch: 32-bit" )
+endif()
+
+message( STATUS )
+message( STATUS "\tCompiler: ${CMAKE_CXX_COMPILER}" )
+message( STATUS "\tCompiler Version: ${CMAKE_CXX_COMPILER_VERSION}" )
+message( STATUS "\tCompiler Standard: ${CMAKE_CXX_STANDARD}" )
+message( STATUS "\tCompiler Standard Required: ${CMAKE_CXX_STANDARD_REQUIRED}" )
+message( STATUS "\tCompiler Extensions: ${CMAKE_CXX_EXTENSIONS}" )
 message( STATUS )
 
 if( MSVC )
-   message( STATUS "  MSVC Version: ${MSVC_VERSION}" )
-   message( STATUS "  MSVC Toolset: ${MSVC_TOOLSET_VERSION}" )
-   message( STATUS )
+   message( STATUS "\tMSVC Version: ${MSVC_VERSION}" )
+   message( STATUS "\tMSVC Toolset: ${MSVC_TOOLSET_VERSION}" )
 elseif( CMAKE_SYSTEM_NAME MATCHES "Darwin" )
    if( CMAKE_GENERATOR MATCHES "Xcode" )
-      message( STATUS "  Xcode Version: ${XCODE_VERSION}" )
+      message( STATUS "\tXcode Version: ${XCODE_VERSION}" )
    endif()
-   message( STATUS "  MacOS SDK: ${CMAKE_OSX_SYSROOT}" )
-   message( STATUS )
-
+   message( STATUS "\tMacOS SDK: ${CMAKE_OSX_SYSROOT}" )
 endif()
 
 # Current version and commit info
@@ -312,7 +321,7 @@ if( GIT_FOUND )
         list( GET git_output 2 AUDACITY_REVISION )
     endif()
 endif()
-message( STATUS "  Current Commit: ${GIT_DESCRIBE}" )
+message( STATUS "\tCurrent Commit: ${GIT_DESCRIBE}" )
 message( STATUS )
 
 # Not sure what this even does
