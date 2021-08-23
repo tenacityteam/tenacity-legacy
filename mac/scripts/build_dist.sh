@@ -178,7 +178,7 @@ then
                   ${DSTROOT}/Tenacity.app
 
    # Create the ZIP archive for notarization
-   xcrun ditto -c -k --keepParent "${DSTROOT}/Tenacity.app" "${DSTROOT}.zip" 
+   xcrun ditto -c -k --keepParent "${DSTROOT}/Tenacity.app" "${DSTROOT}.zip"
 
    # Send it off for notarization
    notarize "${DSTROOT}.zip"
@@ -196,7 +196,7 @@ cp -pR "${DSTROOT}/" "${DMG}"
 
 # Copy over the background image
 mkdir "${DMG}/.background"
-cp "${SRCROOT}/Resources/Audacity-DMG-background.png" "${DMG}/.background"
+cp "${SRCROOT}/Resources/Tenacity-DMG-background.tiff" "${DMG}/.background"
 
 #Add a custom icon for the DMG
 #cp -p mac/Resources/Audacity.icns "${DMG}"/.VolumeIcon.icns
@@ -243,13 +243,13 @@ echo '
               set current view of container window to icon view
               set toolbar visible of container window to false
               set statusbar visible of container window to false
-              set the bounds of container window to {400, 100, 1000, 550}
+              set the bounds of container window to {400, 100, 1000, 558}
               set theViewOptions to the icon view options of container window
               set arrangement of theViewOptions to not arranged
               set icon size of theViewOptions to 72
-              set background picture of theViewOptions to file ".background:Audacity-DMG-background.png" 
+              set background picture of theViewOptions to file ".background:Tenacity-DMG-background.tiff"
               make new alias file at container window to POSIX file "/Applications" with properties {name:"Applications"}
-              set position of item "Audacity" of container window to {170, 350}
+              set position of item "Tenacity" of container window to {170, 350}
               set position of item "Applications" of container window to {430, 350}
               close
               open

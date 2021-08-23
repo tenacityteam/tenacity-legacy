@@ -7,11 +7,11 @@ on run argv
               set current view of container window to icon view
               set toolbar visible of container window to false
               set statusbar visible of container window to false
-              set the bounds of container window to {400, 100, 1000, 550}
+              set the bounds of container window to {400, 100, 1000, 558}
               set theViewOptions to the icon view options of container window
               set arrangement of theViewOptions to not arranged
               set icon size of theViewOptions to 72
-              set background picture of theViewOptions to file ".background:background.png"
+              set background picture of theViewOptions to file ".background:background.tiff"
               set position of item "Tenacity" of container window to {170, 350}
               set position of item "Applications" of container window to {430, 350}
               close
