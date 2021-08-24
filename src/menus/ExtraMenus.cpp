@@ -4,7 +4,6 @@
 #include "../Project.h"
 #include "../commands/CommandContext.h"
 #include "../commands/CommandManager.h"
-#include "../toolbars/MixerToolBar.h"
 #include "../toolbars/DeviceToolBar.h"
 
 #include <wx/frame.h>
@@ -22,66 +21,6 @@ namespace ExtraActions {
 // Menu handler functions
 
 struct Handler : CommandHandlerObject {
-
-void OnOutputGain(const CommandContext &context)
-{
-   auto &project = context.project;
-   auto tb = &MixerToolBar::Get( project );
-
-   if (tb) {
-      tb->ShowOutputGainDialog();
-   }
-}
-
-void OnOutputGainInc(const CommandContext &context)
-{
-   auto &project = context.project;
-   auto tb = &MixerToolBar::Get( project );
-
-   if (tb) {
-      tb->AdjustOutputGain(1);
-   }
-}
-
-void OnOutputGainDec(const CommandContext &context)
-{
-   auto &project = context.project;
-   auto tb = &MixerToolBar::Get( project );
-
-   if (tb) {
-      tb->AdjustOutputGain(-1);
-   }
-}
-
-void OnInputGain(const CommandContext &context)
-{
-   auto &project = context.project;
-   auto tb = &MixerToolBar::Get( project );
-
-   if (tb) {
-      tb->ShowInputGainDialog();
-   }
-}
-
-void OnInputGainInc(const CommandContext &context)
-{
-   auto &project = context.project;
-   auto tb = &MixerToolBar::Get( project );
-
-   if (tb) {
-      tb->AdjustInputGain(1);
-   }
-}
-
-void OnInputGainDec(const CommandContext &context)
-{
-   auto &project = context.project;
-   auto tb = &MixerToolBar::Get( project );
-
-   if (tb) {
-      tb->AdjustInputGain(-1);
-   }
-}
 
 void OnInputDevice(const CommandContext &context)
 {
@@ -140,7 +79,6 @@ static CommandHandlerObject &findCommandHandler(AudacityProject &) {
 namespace {
 using namespace MenuTable;
 
-BaseItemSharedPtr ExtraMixerMenu();
 BaseItemSharedPtr ExtraDeviceMenu();
 
 BaseItemSharedPtr ExtraMenu()
@@ -149,8 +87,7 @@ BaseItemSharedPtr ExtraMenu()
    // TODO:  devise a registration system instead.
    static BaseItemSharedPtr extraItems{ Items( wxEmptyString,
       Section( "Part1",
-           ExtraMixerMenu()
-         , ExtraDeviceMenu()
+         ExtraDeviceMenu()
       ),
 
       Section( "Part2" )
@@ -169,28 +106,6 @@ AttachedItem sAttachment1{
    wxT(""),
    Shared( ExtraMenu() )
 };
-
-// Under /MenuBar/Optional/Extra/Part1
-BaseItemSharedPtr ExtraMixerMenu()
-{
-   static BaseItemSharedPtr menu{
-   ( FinderScope{ findCommandHandler },
-   Menu( wxT("Mixer"), XXO("Mi&xer"),
-      Command( wxT("OutputGain"), XXO("Ad&just Playback Volume..."),
-         FN(OnOutputGain), AlwaysEnabledFlag ),
-      Command( wxT("OutputGainInc"), XXO("&Increase Playback Volume"),
-         FN(OnOutputGainInc), AlwaysEnabledFlag ),
-      Command( wxT("OutputGainDec"), XXO("&Decrease Playback Volume"),
-         FN(OnOutputGainDec), AlwaysEnabledFlag ),
-      Command( wxT("InputGain"), XXO("Adj&ust Recording Volume..."),
-         FN(OnInputGain), AlwaysEnabledFlag ),
-      Command( wxT("InputGainInc"), XXO("I&ncrease Recording Volume"),
-         FN(OnInputGainInc), AlwaysEnabledFlag ),
-      Command( wxT("InputGainDec"), XXO("D&ecrease Recording Volume"),
-         FN(OnInputGainDec), AlwaysEnabledFlag )
-   ) ) };
-   return menu;
-}
 
 // Under /MenuBar/Optional/Extra/Part1
 BaseItemSharedPtr ExtraDeviceMenu()
