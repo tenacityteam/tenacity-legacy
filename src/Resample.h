@@ -9,7 +9,8 @@
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_RESAMPLE_H__
+#define __AUDACITY_RESAMPLE_H__
 
 
 
@@ -81,3 +82,5 @@ class TENACITY_DLL_API Resample final
    soxrHandle mHandle; // constant-rate or variable-rate resampler (XOR per instance)
    bool mbWantConstRateResampling;
 };
+
+#endif // __AUDACITY_RESAMPLE_H__

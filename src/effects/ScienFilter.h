@@ -10,7 +10,8 @@ Vaughan Johnson (Preview)
 
 ***********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_EFFECT_SCIENFILTER__
+#define __AUDACITY_EFFECT_SCIENFILTER__
 
 #include <wx/setup.h> // for wxUSE_* macros
 
@@ -167,3 +168,5 @@ private:
 
    DECLARE_EVENT_TABLE()
 };
+
+#endif

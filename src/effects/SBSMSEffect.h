@@ -11,7 +11,8 @@
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_EFFECT_SBSMS__
+#define __AUDACITY_EFFECT_SBSMS__
 
 
 
@@ -59,5 +60,7 @@ private:
    friend class EffectChangeTempo;
    friend class EffectChangePitch;
 };
+
+#endif
 
 #endif

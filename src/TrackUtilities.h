@@ -8,7 +8,8 @@
  
  **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_TRACK_UTILITIES__
+#define __AUDACITY_TRACK_UTILITIES__
 
 class AudacityProject;
 class Track;
@@ -34,3 +35,5 @@ namespace TrackUtilities {
    void DoRemoveTracks( AudacityProject & );
 
 }
+
+#endif

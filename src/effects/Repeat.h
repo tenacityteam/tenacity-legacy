@@ -8,7 +8,8 @@
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_EFFECT_REPEAT__
+#define __AUDACITY_EFFECT_REPEAT__
 
 #include "Effect.h"
 
@@ -63,3 +64,6 @@ private:
 
    DECLARE_EVENT_TABLE()
 };
+
+#endif
+

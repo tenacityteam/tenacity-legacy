@@ -26,7 +26,8 @@
   track of...
 
 **********************************************************************/
-#pragma once
+#ifndef __AUDACITY_PREFS__
+#define __AUDACITY_PREFS__
 
 
 
@@ -422,3 +423,5 @@ struct TENACITY_DLL_API PreferenceInitializer {
 
    static void ReinitializeAll();
 };
+
+#endif

@@ -9,7 +9,8 @@
 
 *********************************************************************/
 
-#pragma once
+#ifndef LV2EFFECTSMODULE_H
+#define LV2EFFECTSMODULE_H
 
 #include <memory>
 
@@ -201,3 +202,5 @@ private:
 };
 
 extern LilvWorld *gWorld;
+
+#endif

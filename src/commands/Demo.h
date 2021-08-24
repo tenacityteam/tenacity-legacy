@@ -8,7 +8,8 @@
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_DEMO_COMMAND__
+#define __AUDACITY_DEMO_COMMAND__
 
 #include "AudacityCommand.h"
 #include "../SampleFormat.h"
@@ -34,3 +35,5 @@ private:
    double delay;
    double decay;
 };
+
+#endif // __AUDACITY_DEMO_COMMAND__

@@ -10,7 +10,8 @@
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_PROJECT_FSCK__
+#define __AUDACITY_PROJECT_FSCK__
 
 class DirManager;
 
@@ -27,3 +28,5 @@ enum : unsigned {
 //    Too complicated during auto-recover. Just correct problems the "safest" way.
 int ProjectFSCK(
    DirManager &dm, const bool bForceError, const bool bAutoRecoverMode);
+
+#endif

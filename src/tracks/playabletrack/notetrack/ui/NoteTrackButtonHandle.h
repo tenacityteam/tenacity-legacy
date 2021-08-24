@@ -8,7 +8,8 @@ Paul Licameli split from TrackPanel.cpp
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_NOTE_TRACK_BUTTON_HANDLE__
+#define __AUDACITY_NOTE_TRACK_BUTTON_HANDLE__
 
 class wxMouseState;
 class NoteTrack;
@@ -67,3 +68,5 @@ protected:
    int mChannel{ -1 };
    wxRect mRect{};
 };
+
+#endif

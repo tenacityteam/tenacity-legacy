@@ -13,7 +13,8 @@
 
 *//******************************************************************/
 
-#pragma once
+#ifndef __COMMANDHANDLER__
+#define __COMMANDHANDLER__
 
 #include <memory>
 class AudacityApp;
@@ -30,3 +31,5 @@ class CommandHandler
       // Whenever a command is received, process it.
       void OnReceiveCommand(AppCommandEvent &event);
 };
+
+#endif /* End of include guard: __COMMANDHANDLER__ */

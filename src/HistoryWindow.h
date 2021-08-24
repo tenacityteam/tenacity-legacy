@@ -8,7 +8,8 @@
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_HISTORY_WINDOW__
+#define __AUDACITY_HISTORY_WINDOW__
 
 #include "Prefs.h"
 #include "widgets/wxPanelWrapper.h" // to inherit
@@ -69,3 +70,5 @@ class HistoryDialog final : public wxDialogWrapper,
  public:
    DECLARE_EVENT_TABLE()
 };
+
+#endif

@@ -8,7 +8,8 @@
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_IMPORT_RAW__
+#define __AUDACITY_IMPORT_RAW__
 
 #include <memory>
 
@@ -28,3 +29,5 @@ using TrackHolders = std::vector< NewChannelGroup >;
 
 void ImportRaw(const AudacityProject &project, wxWindow *parent, const wxString &fileName,
    WaveTrackFactory *trackFactory, TrackHolders &outTracks);
+
+#endif

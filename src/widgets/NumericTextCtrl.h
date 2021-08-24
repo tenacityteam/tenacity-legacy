@@ -12,7 +12,8 @@
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_TIME_TEXT_CTRL__
+#define __AUDACITY_TIME_TEXT_CTRL__
 
 
 
@@ -298,3 +299,5 @@ private:
 
    DECLARE_EVENT_TABLE()
 };
+
+#endif // __AUDACITY_TIME_TEXT_CTRL__

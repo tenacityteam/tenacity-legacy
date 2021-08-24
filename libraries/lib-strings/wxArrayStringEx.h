@@ -8,7 +8,8 @@
  
  **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_WX_ARRAY_STRING_EX__
+#define __AUDACITY_WX_ARRAY_STRING_EX__
 
 #include <wx/arrstr.h>
 
@@ -68,3 +69,5 @@ public:
       return result;
    }
 };
+
+#endif

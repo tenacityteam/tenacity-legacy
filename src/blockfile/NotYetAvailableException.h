@@ -6,7 +6,8 @@
 //
 //
 
-#pragma once
+#ifndef __AUDACITY_NOT_YET_AVAILABLE_EXCEPTION__
+#define __AUDACITY_NOT_YET_AVAILABLE_EXCEPTION__
 
 #include "../FileException.h"
 
@@ -22,3 +23,5 @@ public:
 protected:
    TranslatableString ErrorMessage() const override;
 };
+
+#endif

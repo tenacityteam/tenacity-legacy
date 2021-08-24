@@ -8,7 +8,8 @@ Paul Licameli split from Menus.cpp
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_COMMON_COMMAND_FLAGS__
+#define __AUDACITY_COMMON_COMMAND_FLAGS__
 
 
 
@@ -61,3 +62,5 @@ extern TENACITY_DLL_API const ReservedCommandFlag
    &AudioTracksSelectedFlag(),
    &NoAutoSelect() // jkc
 ;
+
+#endif

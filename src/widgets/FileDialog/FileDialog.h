@@ -14,7 +14,8 @@ custom controls.
 
 *//*******************************************************************/
 
-#pragma once
+#ifndef _FILEDIALOG_H_
+#define _FILEDIALOG_H_
 
 #include <wx/filedlg.h> // to inherit
 
@@ -87,3 +88,5 @@ FileSelectorEx(const wxString& message = wxFileSelectorPromptStr,
                int flags = 0,
                wxWindow *parent = NULL,
                int x = wxDefaultCoord, int y = wxDefaultCoord);
+
+#endif

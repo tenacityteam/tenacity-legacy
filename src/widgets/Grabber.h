@@ -26,7 +26,8 @@ flicker-free use.
 
 *//**********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_WIDGETS_GRABBER__
+#define __AUDACITY_WIDGETS_GRABBER__
 
 
 
@@ -169,3 +170,7 @@ class TENACITY_DLL_API AStaticBitmap : public wxStaticBitmap {
     };
     DECLARE_EVENT_TABLE()
 };
+
+
+
+#endif

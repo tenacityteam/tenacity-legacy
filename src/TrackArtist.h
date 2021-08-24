@@ -15,7 +15,8 @@
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_TRACKARTIST__
+#define __AUDACITY_TRACKARTIST__
 
 
 
@@ -153,3 +154,5 @@ extern TENACITY_DLL_API int GetWaveYPos(float value, float min, float max,
 extern float FromDB(float value, double dBRange);
 extern TENACITY_DLL_API float ValueOfPixel(int yy, int height, bool offset,
                           bool dB, double dBRange, float zoomMin, float zoomMax);
+
+#endif                          // define __AUDACITY_TRACKARTIST__

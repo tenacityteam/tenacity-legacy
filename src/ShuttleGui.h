@@ -11,7 +11,8 @@
 
 **********************************************************************/
 
-#pragma once
+#ifndef SHUTTLE_GUI
+#define SHUTTLE_GUI
 
 
 #include "Identifier.h"
@@ -766,3 +767,5 @@ TENACITY_DLL_API TranslatableStrings Msgids(
 
 //! Convenience function often useful when adding choice controls
 TENACITY_DLL_API TranslatableStrings Msgids( const std::vector<EnumValueSymbol> &strings );
+
+#endif

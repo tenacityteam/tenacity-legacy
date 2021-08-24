@@ -10,7 +10,8 @@
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_TOOLDOCK__
+#define __AUDACITY_TOOLDOCK__
 
 #include <vector>
 #include <wx/defs.h>
@@ -346,3 +347,5 @@ public:
    DECLARE_CLASS( ToolDock )
    DECLARE_EVENT_TABLE()
 };
+
+#endif

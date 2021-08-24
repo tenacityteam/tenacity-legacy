@@ -8,7 +8,8 @@ Paul Licameli split from TrackPanel.cpp
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_TRACK_VRULER_CONTROLS__
+#define __AUDACITY_TRACK_VRULER_CONTROLS__
 
 #include "CommonTrackPanelCell.h"
 
@@ -62,3 +63,5 @@ protected:
 
    std::weak_ptr<TrackView> mwTrackView;
 };
+
+#endif

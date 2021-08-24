@@ -8,7 +8,8 @@
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_CLIPBOARD__
+#define __AUDACITY_CLIPBOARD__
 
 
 
@@ -54,3 +55,5 @@ private:
    double mT0{ 0 };
    double mT1{ 0 };
 };
+
+#endif

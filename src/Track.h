@@ -9,7 +9,8 @@
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_TRACK__
+#define __AUDACITY_TRACK__
 
 
 
@@ -1696,3 +1697,5 @@ private:
    //! This is in correspondence with mPendingUpdates
    std::vector< Updater > mUpdaters;
 };
+
+#endif

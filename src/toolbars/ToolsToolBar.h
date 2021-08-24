@@ -11,7 +11,8 @@
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_TOOLS_TOOLBAR__
+#define __AUDACITY_TOOLS_TOOLBAR__
 
 #include <wx/defs.h>
 
@@ -74,3 +75,6 @@ class ToolsToolBar final : public ToolBar {
    DECLARE_CLASS(ToolsToolBar)
    DECLARE_EVENT_TABLE()
 };
+
+#endif
+

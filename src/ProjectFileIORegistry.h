@@ -8,7 +8,8 @@
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_PROJECT_FILE_IO_REGISTRY__
+#define __AUDACITY_PROJECT_FILE_IO_REGISTRY__
 
 #include <functional>
 
@@ -30,3 +31,5 @@ struct TENACITY_DLL_API Entry{
 TagHandlerFactory Lookup( const wxString &tag );
 
 }
+
+#endif

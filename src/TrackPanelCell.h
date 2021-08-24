@@ -8,7 +8,8 @@ Paul Licameli
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_TRACK_PANEL_CELL__
+#define __AUDACITY_TRACK_PANEL_CELL__
 
 
 
@@ -134,3 +135,5 @@ public:
       (wxKeyEvent & event, ViewInfo &viewInfo, wxWindow *pParent,
        AudacityProject *project);
 };
+
+#endif

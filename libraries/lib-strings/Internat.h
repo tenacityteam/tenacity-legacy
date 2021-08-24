@@ -9,7 +9,8 @@
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_INTERNAT__
+#define __AUDACITY_INTERNAT__
 
 #include <vector>
 #include <wx/longlong.h>
@@ -162,3 +163,5 @@ private:
 // If not, then the program builds and runs, but strings in the catalog with
 // contexts will fail to translate
 #define HAS_I18N_CONTEXTS wxCHECK_VERSION(3, 1, 1)
+
+#endif

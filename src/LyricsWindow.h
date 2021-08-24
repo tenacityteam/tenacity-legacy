@@ -9,7 +9,8 @@
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_LYRICS_WINDOW__
+#define __AUDACITY_LYRICS_WINDOW__
 
 #include <wx/frame.h> // to inherit
 
@@ -45,3 +46,5 @@ class LyricsWindow final : public wxFrame,
  public:
    DECLARE_EVENT_TABLE()
 };
+
+#endif

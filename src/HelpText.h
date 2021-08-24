@@ -8,7 +8,8 @@
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_HELP_TEXT__
+#define __AUDACITY_HELP_TEXT__
 
 class TranslatableString;
 class wxString;
@@ -23,3 +24,5 @@ TENACITY_DLL_API TranslatableString TitleText( const wxString & Key );
 
 extern TENACITY_DLL_API const wxString VerCheckArgs();
 extern TENACITY_DLL_API wxString FormatHtmlText( const wxString & Text );
+
+#endif

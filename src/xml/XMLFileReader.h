@@ -8,7 +8,7 @@
 
 **********************************************************************/
 
-#pragma once
+
 
 #include <vector>
 struct XML_ParserStruct;

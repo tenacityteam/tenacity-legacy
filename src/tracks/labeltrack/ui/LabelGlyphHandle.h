@@ -8,7 +8,8 @@ Paul Licameli split from TrackPanel.cpp
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_LABEL_GLYPH_HANDLE__
+#define __AUDACITY_LABEL_GLYPH_HANDLE__
 
 #include "LabelDefaultClickHandle.h"
 
@@ -109,3 +110,5 @@ private:
    /// Displacement of mouse cursor from the centre being dragged.
    int mxMouseDisplacement;
 };
+
+#endif

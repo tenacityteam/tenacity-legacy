@@ -8,7 +8,8 @@
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_TimeDialog__
+#define __AUDACITY_TimeDialog__
 
 #include <wx/defs.h>
 
@@ -54,3 +55,5 @@ class TENACITY_DLL_API TimeDialog final : public wxDialogWrapper
 
    DECLARE_EVENT_TABLE()
 };
+
+#endif

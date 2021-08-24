@@ -15,8 +15,9 @@
   input values from XML files.
 
 **********************************************************************/
+#ifndef __AUDACITY_XML_TAG_HANDLER__
+#define __AUDACITY_XML_TAG_HANDLER__
 
-#pragma once
 
 
 #include <stdio.h>
@@ -114,3 +115,6 @@ class TENACITY_DLL_API XMLTagHandler /* not final */ {
    void ReadXMLContent(const char *s, int len);
    XMLTagHandler *ReadXMLChild(const char *tag);
 };
+
+#endif // define __AUDACITY_XML_TAG_HANDLER__
+

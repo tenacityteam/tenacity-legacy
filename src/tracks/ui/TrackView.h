@@ -8,7 +8,8 @@ Paul Licameli split from class Track
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_TRACK_VIEW__
+#define __AUDACITY_TRACK_VIEW__
 
 #include <memory>
 #include "CommonTrackPanelCell.h" // to inherit
@@ -121,3 +122,5 @@ AttachedVirtualFunction<
    int,
    Track
 >;
+
+#endif

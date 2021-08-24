@@ -8,7 +8,8 @@
  
  **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_REALTIME_EFFECT_MANAGER__
+#define __AUDACITY_REALTIME_EFFECT_MANAGER__
 
 #include <memory>
 #include <vector>
@@ -55,3 +56,5 @@ private:
    std::vector<unsigned> mRealtimeChans;
    std::vector<double> mRealtimeRates;
 };
+
+#endif

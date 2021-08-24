@@ -8,7 +8,8 @@ Paul Licameli split from class TimeTrack
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_TIME_TRACK_VIEW__
+#define __AUDACITY_TIME_TRACK_VIEW__
 
 #include "../../ui/CommonTrackView.h"
 
@@ -39,3 +40,5 @@ private:
       TrackPanelDrawingContext &context,
       const wxRect &rect, unsigned iPass ) override;
 };
+
+#endif

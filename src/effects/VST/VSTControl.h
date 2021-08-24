@@ -8,7 +8,8 @@
 
 **********************************************************************/
 
-#pragma once
+#ifndef AUDACITY_VSTCONTROL_H
+#define AUDACITY_VSTCONTROL_H
 
 #include <wx/control.h> // to inherit
 
@@ -51,3 +52,5 @@ protected:
    wxWindow *mParent;
    VSTEffectLink *mLink;
 };
+
+#endif

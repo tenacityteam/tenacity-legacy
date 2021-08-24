@@ -16,7 +16,8 @@
 
 *//*******************************************************************/
 
-#pragma once
+#ifndef __COMMANDSIGNATURE__
+#define __COMMANDSIGNATURE__
 
 #include "CommandMisc.h"
 
@@ -47,3 +48,5 @@ public:
    ParamValueMap GetDefaults() const;
    Validator &GetValidator(const wxString &paramName);
 };
+
+#endif /* End of include guard: __COMMANDSIGNATURE__ */

@@ -8,7 +8,8 @@ Paul Licameli split from TrackPanel.cpp
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_WAVE_TRACK_CONTROLS__
+#define __AUDACITY_WAVE_TRACK_CONTROLS__
 
 #include "../../ui/PlayableTrackControls.h" // to inherit
 
@@ -82,3 +83,5 @@ protected:
 // Expose the wave track menu table to registration of menu items
 TENACITY_DLL_API
 WaveTrackPopupMenuTable &GetWaveTrackMenuTable();
+
+#endif

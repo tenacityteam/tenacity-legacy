@@ -11,7 +11,8 @@
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_TRACKSBEHAVIORS_PREFS__
+#define __AUDACITY_TRACKSBEHAVIORS_PREFS__
 
 #include "PrefsPanel.h"
 
@@ -42,3 +43,5 @@ class TENACITY_DLL_API TracksBehaviorsPrefs final : public PrefsPanel
 extern TENACITY_DLL_API ChoiceSetting TracksBehaviorsSolo;
 
 TENACITY_DLL_API bool GetEditClipsCanMove();
+
+#endif

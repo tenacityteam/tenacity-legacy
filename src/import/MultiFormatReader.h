@@ -8,7 +8,8 @@
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_MULTIFORMATREADER_H__
+#define __AUDACITY_MULTIFORMATREADER_H__
 
 #include <stdio.h>
 #include <stdint.h>
@@ -79,3 +80,5 @@ private:
    size_t Read(void* buffer, size_t size, size_t len, size_t stride);
    void SwapBytes(void* buffer, size_t size, size_t len);
 };
+
+#endif

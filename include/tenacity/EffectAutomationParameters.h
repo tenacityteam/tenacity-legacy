@@ -40,7 +40,8 @@
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_COMMAND_PARAMETERS_H__
+#define __AUDACITY_COMMAND_PARAMETERS_H__
 
 #include <locale.h>
 
@@ -337,3 +338,5 @@ public:
       return val;
    }
 };
+
+#endif

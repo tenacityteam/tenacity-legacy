@@ -15,7 +15,8 @@
 *//*******************************************************************/
 
 
-#pragma once
+#ifndef __AUDACITY_PITCHNAME__
+#define __AUDACITY_PITCHNAME__
 
 class TranslatableString;
 
@@ -59,3 +60,5 @@ double PitchToMIDInote(const unsigned int nPitchIndex, const int nPitchOctave);
 
 TENACITY_DLL_API
 double PitchToFreq(const unsigned int nPitchIndex, const int nPitchOctave);
+
+#endif	// __AUDACITY_PITCHNAME__

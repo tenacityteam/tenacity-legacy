@@ -8,7 +8,8 @@
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_MODULE_CONSTANTS__
+#define __AUDACITY_MODULE_CONSTANTS__
 
 #define ModuleDispatchName "ModuleDispatch"
 
@@ -51,3 +52,5 @@ extern "C" {                                                           \
 #define DEFINE_MODULE_ENTRIES                                          \
 DEFINE_VERSION_CHECK                                                   \
 extern "C" DLL_API int ModuleDispatch(ModuleDispatchTypes type){ return 1; }
+
+#endif

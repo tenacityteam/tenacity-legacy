@@ -11,7 +11,8 @@
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_DEPENDENCIES__
+#define __AUDACITY_DEPENDENCIES__
 
 #include <list>
 #include "MemoryX.h"
@@ -61,3 +62,5 @@ bool ShowDependencyDialogIfNeeded(AudacityProject *project,
 // Returns a list of aliased files associated with a project.
 void FindDependencies(AudacityProject *project,
                       AliasedFileArray &outAliasedFiles);
+
+#endif

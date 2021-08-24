@@ -10,7 +10,8 @@
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_TOOLMANAGER__
+#define __AUDACITY_TOOLMANAGER__
 
 #include <functional>
 
@@ -232,3 +233,5 @@ struct TENACITY_DLL_API AttachedToolBarMenuItem : CommandHandlerObject {
    const MenuTable::AttachedItem mAttachedItem;
    const std::vector< ToolBarID > mExcludeIds;
 };
+
+#endif

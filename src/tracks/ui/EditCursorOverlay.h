@@ -8,7 +8,8 @@ Paul Licameli split from TrackPanel.cpp
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_EDIT_CURSOR_OVERLAY__
+#define __AUDACITY_EDIT_CURSOR_OVERLAY__
 
 #include <memory>
 #include "../../ClientData.h" // to inherit
@@ -37,3 +38,5 @@ private:
    double mCursorTime;
    int mNewCursorX;
 };
+
+#endif

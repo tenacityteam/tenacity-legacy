@@ -13,7 +13,8 @@
 
 *//*******************************************************************/
 
-#pragma once
+#ifndef __GETTRACKINFOCOMMAND__
+#define __GETTRACKINFOCOMMAND__
 
 #include "Command.h"
 #include "CommandType.h"
@@ -37,3 +38,5 @@ public:
 public:
    int mInfoType;
 };
+
+#endif /* End of include guard: __GETTRACKINFOCOMMAND__ */

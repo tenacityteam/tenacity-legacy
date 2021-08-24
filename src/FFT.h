@@ -29,7 +29,8 @@
   you need to use doubles.
 
 **********************************************************************/
-#pragma once
+#ifndef __AUDACITY_FFT_H__
+#define __AUDACITY_FFT_H__
 
 #include <wx/defs.h>
 
@@ -154,3 +155,5 @@ TENACITY_DLL_API const TranslatableString WindowFuncName(int whichFunction);
 TENACITY_DLL_API int NumWindowFuncs();
 
 void DeinitFFT();
+
+#endif

@@ -6,7 +6,8 @@
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_WIDGETS_KEYVIEW__
+#define __AUDACITY_WIDGETS_KEYVIEW__
 
 
 #include "tenacity/Types.h"
@@ -166,3 +167,6 @@ private:
 
    DECLARE_EVENT_TABLE()
 };
+
+#endif
+

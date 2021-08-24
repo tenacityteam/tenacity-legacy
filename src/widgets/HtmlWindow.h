@@ -20,7 +20,8 @@ around to NEW positions.
 
 *//**********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_WIDGETS_HtmlWindow__
+#define __AUDACITY_WIDGETS_HtmlWindow__
 
 
 
@@ -43,3 +44,5 @@ public:
               const wxString& name = wxT("htmlWindow"));
    virtual ~HtmlWindow();
 };
+
+#endif

@@ -6,7 +6,8 @@
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_ACTIVE_PROJECTS__
+#define __AUDACITY_ACTIVE_PROJECTS__
 
 
 #include "Identifier.h"
@@ -18,3 +19,5 @@ namespace ActiveProjects
    void Remove(const FilePath &path);
    wxString Find(const FilePath &path);
 };
+
+#endif

@@ -10,7 +10,8 @@
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_TRACKS_PREFS__
+#define __AUDACITY_TRACKS_PREFS__
 
 //#include <wx/defs.h>
 
@@ -54,3 +55,5 @@ class TENACITY_DLL_API TracksPrefs final : public PrefsPanel
 
    static int iPreferencePinned;
 };
+
+#endif

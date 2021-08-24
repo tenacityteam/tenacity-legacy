@@ -59,7 +59,8 @@ misrepresented as being the original software.
 
 (this is the zlib license)
 */
-#pragma once
+#ifndef SSE_MATHFUN
+#define SSE_MATHFUN
 /* SIMD (SSE1+MMX or SSE2) implementation of sin, cos, exp and log
 
    Inspired by Intel Approximate Math library, and based on the
@@ -770,3 +771,5 @@ void sincos_ps(v4sf x, v4sf *s, v4sf *c) {
   *s = _mm_xor_ps(xmm1, sign_bit_sin);
   *c = _mm_xor_ps(xmm2, sign_bit_cos);
 }
+
+#endif

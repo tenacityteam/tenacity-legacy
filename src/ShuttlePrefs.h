@@ -9,7 +9,8 @@
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_SHUTTLE_PREFS__
+#define __AUDACITY_SHUTTLE_PREFS__
 
 #include "Shuttle.h"
 
@@ -29,3 +30,5 @@ public:
    bool TransferWrappedType(const wxString & Name, WrappedType & W) override;
    bool ExchangeWithMaster(const wxString & Name) override;
 };
+
+#endif

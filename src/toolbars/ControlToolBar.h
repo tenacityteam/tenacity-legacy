@@ -11,7 +11,8 @@
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_CONTROL_TOOLBAR__
+#define __AUDACITY_CONTROL_TOOLBAR__
 
 #include "ToolBar.h"
 
@@ -128,3 +129,6 @@ class TENACITY_DLL_API ControlToolBar final : public ToolBar {
    DECLARE_CLASS(ControlToolBar)
    DECLARE_EVENT_TABLE()
 };
+
+#endif
+

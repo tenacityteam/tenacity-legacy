@@ -11,7 +11,8 @@
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_SILENT_BLOCKFILE__
+#define __AUDACITY_SILENT_BLOCKFILE__
 
 #include "../BlockFile.h"
 
@@ -44,3 +45,6 @@ class SilentBlockFile final : public BlockFile {
 
    static BlockFilePtr BuildFromXML(DirManager &dm, const wxChar **attrs);
 };
+
+#endif
+

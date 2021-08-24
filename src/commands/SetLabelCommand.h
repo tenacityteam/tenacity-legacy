@@ -13,7 +13,8 @@
 
 *//*******************************************************************/
 
-#pragma once
+#ifndef __SET_LABEL_COMMAND__
+#define __SET_LABEL_COMMAND__
 
 #include "Command.h"
 #include "CommandType.h"
@@ -50,3 +51,6 @@ public:
    bool bHasT1;
    bool bHasSelected;
 };
+
+
+#endif /* End of include guard: __SETTRACKINFOCOMMAND__ */

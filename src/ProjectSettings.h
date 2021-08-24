@@ -8,7 +8,8 @@ Paul Licameli split from AudacityProject.h
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_PROJECT_SETTINGS__
+#define __AUDACITY_PROJECT_SETTINGS__
 
 #include <atomic>
 #include <wx/event.h> // to declare custom event type
@@ -145,3 +146,5 @@ private:
    bool mEmptyCanBeDirty;
    bool mShowSplashScreen;
 };
+
+#endif

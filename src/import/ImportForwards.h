@@ -6,7 +6,8 @@
 //
 //
 
-#pragma once
+#ifndef __AUDACITY_IMPORT_FORWARDS__
+#define __AUDACITY_IMPORT_FORWARDS__
 
 #include <vector>
 #include <memory>
@@ -18,3 +19,5 @@ using ImportPluginList =
    std::vector< ImportPlugin * >;
 using UnusableImportPluginList =
    std::vector< std::unique_ptr<UnusableImportPlugin> >;
+
+#endif

@@ -9,7 +9,8 @@
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_EFFECT_REVERB__
+#define __AUDACITY_EFFECT_REVERB__
 
 #include "Effect.h"
 
@@ -121,3 +122,5 @@ private:
 
    DECLARE_EVENT_TABLE()
 };
+
+#endif

@@ -14,7 +14,8 @@
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_EFFECT_SIMPLE_MONO__
+#define __AUDACITY_EFFECT_SIMPLE_MONO__
 
 #include "Effect.h"
 
@@ -46,3 +47,5 @@ protected:
 private:
    bool ProcessOne(WaveTrack * t, sampleCount start, sampleCount end);
 };
+
+#endif

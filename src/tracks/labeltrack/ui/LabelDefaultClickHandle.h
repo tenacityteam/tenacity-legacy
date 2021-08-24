@@ -8,7 +8,8 @@ Paul Licameli split from TrackPanel.cpp
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_LABEL_DEFAULT_CLICK_HANDLE__
+#define __AUDACITY_LABEL_DEFAULT_CLICK_HANDLE__
 
 #include "../../../UIHandle.h"
 
@@ -46,3 +47,5 @@ private:
    void SaveState( AudacityProject *pProject );
    void RestoreState( AudacityProject *pProject );
 };
+
+#endif

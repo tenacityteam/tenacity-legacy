@@ -8,7 +8,8 @@
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_WARNING__
+#define __AUDACITY_WARNING__
 
 
 
@@ -32,3 +33,5 @@ int ShowWarningDialog(wxWindow *parent,
                       bool showCancelButton = false,
                       // This message appears by the checkbox:
                       const TranslatableString &footer = DefaultWarningFooter());
+
+#endif // __AUDACITY_WARNING__

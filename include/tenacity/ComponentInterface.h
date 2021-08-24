@@ -39,7 +39,8 @@
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_COMPONENT_INTERFACE_H__
+#define __AUDACITY_COMPONENT_INTERFACE_H__
 
 #include "Identifier.h"
 #include "tenacity/Types.h"
@@ -83,3 +84,5 @@ public:
    // Parameters, if defined.  false means no defined parameters.
    virtual bool DefineParams( ShuttleParams & WXUNUSED(S) ){ return false;};
 };
+
+#endif // __AUDACITY_IDENTINTERFACE_H__

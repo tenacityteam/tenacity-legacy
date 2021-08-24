@@ -8,7 +8,8 @@
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_SIMPLE_BLOCKFILE__
+#define __AUDACITY_SIMPLE_BLOCKFILE__
 
 #include "../BlockFile.h"
 
@@ -71,3 +72,5 @@ class PROFILE_DLL_API SimpleBlockFile /* not final */ : public BlockFile {
  private:
    mutable sampleFormat mFormat; // may be found lazily
 };
+
+#endif

@@ -8,7 +8,8 @@
 
  **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_TRACK_PANEL_DRAWING_CONTEXT__
+#define __AUDACITY_TRACK_PANEL_DRAWING_CONTEXT__
 
 #include <memory>
 
@@ -28,3 +29,5 @@ struct TrackPanelDrawingContext {
    // This redundancy fixes an MSVC compiler warning:
    TrackPanelDrawingContext() = delete;
 };
+
+#endif

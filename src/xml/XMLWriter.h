@@ -7,7 +7,8 @@
   Leland Lucius
 
 **********************************************************************/
-#pragma once
+#ifndef __AUDACITY_XML_XML_FILE_WRITER__
+#define __AUDACITY_XML_XML_FILE_WRITER__
 
 #include <vector>
 #include <wx/ffile.h> // to inherit
@@ -144,3 +145,5 @@ class XMLStringWriter final : public wxString, public XMLWriter {
  private:
 
 };
+
+#endif

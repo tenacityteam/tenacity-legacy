@@ -16,7 +16,8 @@ number of threads.
 
 *//*******************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_ODMANAGER__
+#define __AUDACITY_ODMANAGER__
 
 #include <vector>
 #include "ODTaskThread.h"
@@ -240,3 +241,6 @@ class ODManagerHelperThread {
    };
 #endif //__WXMAC__
 };
+
+#endif
+

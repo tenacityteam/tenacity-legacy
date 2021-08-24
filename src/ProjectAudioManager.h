@@ -8,7 +8,8 @@ Paul Licameli split from ProjectManager.h
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_PROJECT_AUDIO_MANAGER__
+#define __AUDACITY_PROJECT_AUDIO_MANAGER__
 
 #include <memory>
 #include <vector>
@@ -181,3 +182,5 @@ PropertiesOfSelected GetPropertiesOfSelected(const AudacityProject &proj);
 
 extern TENACITY_DLL_API const ReservedCommandFlag
    &CanStopAudioStreamFlag();
+
+#endif

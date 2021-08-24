@@ -13,7 +13,8 @@
 
 *//*******************************************************************/
 
-#pragma once
+#ifndef __COMMANDTYPE__
+#define __COMMANDTYPE__
 
 #include "CommandSignature.h"
 #include "../commands/AudacityCommand.h"
@@ -65,3 +66,5 @@ public:
    virtual OldStyleCommandPointer Create(
       AudacityProject *project, std::unique_ptr<CommandOutputTargets> &&target) = 0;
 };
+
+#endif /* End of include guard: __COMMANDTYPE__ */

@@ -10,7 +10,8 @@
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_EFFECT_REVERSE__
+#define __AUDACITY_EFFECT_REVERSE__
 
 #include "Effect.h"
 
@@ -43,3 +44,6 @@ private:
                    sampleCount start, sampleCount len, sampleCount originalStart, sampleCount originalEnd);
    bool ProcessOneWave(int count, WaveTrack* track, sampleCount start, sampleCount len);
  };
+
+#endif
+

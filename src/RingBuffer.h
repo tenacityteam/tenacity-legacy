@@ -8,7 +8,8 @@
 
 *******************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_RING_BUFFER__
+#define __AUDACITY_RING_BUFFER__
 
 #include "SampleFormat.h"
 #include <atomic>
@@ -50,3 +51,5 @@ class RingBuffer final : public NonInterferingBase {
    sampleFormat  mFormat;
    SampleBuffer  mBuffer;
 };
+
+#endif /*  __AUDACITY_RING_BUFFER__ */

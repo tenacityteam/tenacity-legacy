@@ -11,7 +11,8 @@
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_THEME_PREFS__
+#define __AUDACITY_THEME_PREFS__
 
 #include <wx/defs.h>
 #include <wx/event.h> // to declare a custom event type
@@ -51,3 +52,5 @@ class ThemePrefs final : public PrefsPanel
 
    DECLARE_EVENT_TABLE()
 };
+
+#endif

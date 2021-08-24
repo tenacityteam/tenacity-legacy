@@ -8,7 +8,8 @@ Paul Licameli split from ProjectManager.cpp
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_PROJECT_SELECTION_MANAGER__
+#define __AUDACITY_PROJECT_SELECTION_MANAGER__
 
 #include "ClientData.h" // to inherit
 #include "toolbars/SelectionBarListener.h" // to inherit
@@ -60,3 +61,5 @@ private:
 
    AudacityProject &mProject;
 };
+
+#endif

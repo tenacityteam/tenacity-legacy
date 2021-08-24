@@ -18,7 +18,8 @@
 
 *//*******************************************************************/
 
-#pragma once
+#ifndef __PREFERENCE_COMMANDS__
+#define __PREFERENCE_COMMANDS__
 
 #include "Command.h"
 #include "CommandType.h"
@@ -65,3 +66,5 @@ public:
    bool mbReload;
    bool bHasReload;
 };
+
+#endif /* End of include guard: __PREFERENCE_COMMANDS__ */

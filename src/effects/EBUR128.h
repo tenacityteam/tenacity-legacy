@@ -8,7 +8,8 @@ Max Maisel
 
 ***********************************************************************/
 
-#pragma once
+#ifndef __EBUR128_H__
+#define __EBUR128_H__
 
 #include "Biquad.h"
 #include <memory>
@@ -56,3 +57,5 @@ private:
    /// FILTER  = HSF/HPF    (0/1)
    ArrayOf<ArrayOf<Biquad>> mWeightingFilter;
 };
+
+#endif

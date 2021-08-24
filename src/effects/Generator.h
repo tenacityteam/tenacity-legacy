@@ -15,7 +15,8 @@
 **********************************************************************/
 
 
-#pragma once
+#ifndef __AUDACITY_GENERATOR__
+#define __AUDACITY_GENERATOR__
 
 #include "Effect.h"
 
@@ -70,3 +71,5 @@ protected:
    // Generate the track, one block at a time, & adding the results to tmp
    bool GenerateTrack(WaveTrack *tmp, const WaveTrack &track, int ntrack) override;
 };
+
+#endif

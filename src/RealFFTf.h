@@ -1,4 +1,5 @@
-#pragma once
+#ifndef __realfftf_h
+#define __realfftf_h
 
 
 
@@ -30,3 +31,6 @@ TENACITY_DLL_API void InverseRealFFTf(fft_type *, const FFTParam *);
 TENACITY_DLL_API void ReorderToTime(const FFTParam *hFFT, const fft_type *buffer, fft_type *TimeOut);
 TENACITY_DLL_API void ReorderToFreq(const FFTParam *hFFT, const fft_type *buffer,
 		   fft_type *RealOut, fft_type *ImagOut);
+
+#endif
+

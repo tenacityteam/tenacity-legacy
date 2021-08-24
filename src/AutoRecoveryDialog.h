@@ -8,7 +8,8 @@ Paul Licameli split from AutoRecovery.h
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_AUTO_RECOVERY_DIALOG__
+#define __AUDACITY_AUTO_RECOVERY_DIALOG__
 
 class AudacityProject;
 
@@ -27,3 +28,5 @@ class AudacityProject;
 //
 bool ShowAutoRecoveryDialogIfNeeded(AudacityProject*& pproj,
                                     bool *didRecoverAnything);
+
+#endif

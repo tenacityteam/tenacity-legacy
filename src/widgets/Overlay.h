@@ -6,7 +6,8 @@
 //
 //
 
-#pragma once
+#ifndef __AUDACITY_OVERLAY__
+#define __AUDACITY_OVERLAY__
 
 
 
@@ -116,3 +117,5 @@ public:
    // as context
    virtual void Draw(OverlayPanel &panel, wxDC &dc) = 0;
 };
+
+#endif

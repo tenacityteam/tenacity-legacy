@@ -6,7 +6,8 @@
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_CONTRAST_DIALOG__
+#define __AUDACITY_CONTRAST_DIALOG__
 
 #include "../widgets/wxPanelWrapper.h" // to inherit
 
@@ -82,3 +83,5 @@ private:
    DECLARE_EVENT_TABLE()
 
 };
+
+#endif

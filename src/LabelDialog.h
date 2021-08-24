@@ -8,7 +8,8 @@
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_LABELDIALOG__
+#define __AUDACITY_LABELDIALOG__
 
 #include <vector>
 #include <wx/defs.h>
@@ -113,3 +114,5 @@ class LabelDialog final : public wxDialogWrapper
 
    DECLARE_EVENT_TABLE()
 };
+
+#endif

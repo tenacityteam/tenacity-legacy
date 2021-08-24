@@ -26,7 +26,8 @@
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_TAGS__
+#define __AUDACITY_TAGS__
 
 
 
@@ -201,3 +202,5 @@ class TagsEditorDialog final : public wxDialogWrapper
 
    DECLARE_EVENT_TABLE()
 };
+
+#endif

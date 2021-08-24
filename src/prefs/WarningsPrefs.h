@@ -10,7 +10,8 @@
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_WARNINGS_PREFS__
+#define __AUDACITY_WARNINGS_PREFS__
 
 #include <wx/defs.h>
 
@@ -35,3 +36,5 @@ class WarningsPrefs final : public PrefsPanel
    void Populate();
    void PopulateOrExchange(ShuttleGui & S) override;
 };
+
+#endif

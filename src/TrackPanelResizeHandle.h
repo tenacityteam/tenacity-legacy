@@ -8,7 +8,8 @@ Paul Licameli split from TrackPanel.cpp
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_TRACK_PANEL_RESIZE_HANDLE__
+#define __AUDACITY_TRACK_PANEL_RESIZE_HANDLE__
 
 #include "UIHandle.h"
 
@@ -63,3 +64,5 @@ private:
 
    int mMouseClickY{};
 };
+
+#endif

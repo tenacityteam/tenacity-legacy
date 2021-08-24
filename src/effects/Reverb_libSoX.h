@@ -12,8 +12,6 @@
 
 **********************************************************************/
 
-#pragma once
-
 #include <cstring>
 #include <cstdlib>
 #ifdef __WXMSW__
@@ -269,3 +267,4 @@ static void reverb_delete(reverb_t * p)
    }
    fifo_delete(&p->input_fifo);
 }
+

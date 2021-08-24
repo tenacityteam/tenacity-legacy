@@ -10,7 +10,8 @@
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_FILE_FORMAT_PREFS__
+#define __AUDACITY_FILE_FORMAT_PREFS__
 
 #include <wx/defs.h>
 
@@ -50,3 +51,5 @@ class LibraryPrefs final : public PrefsPanel
 
    DECLARE_EVENT_TABLE()
 };
+
+#endif

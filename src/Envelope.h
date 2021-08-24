@@ -8,7 +8,8 @@
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_ENVELOPE__
+#define __AUDACITY_ENVELOPE__
 
 #include <stdlib.h>
 #include <algorithm>
@@ -293,3 +294,5 @@ public:
 private:
    double mRangeLower{}, mRangeUpper{};
 };
+
+#endif

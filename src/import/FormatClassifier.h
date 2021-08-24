@@ -8,7 +8,8 @@
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_FORMATCLASSIFIER_H_
+#define __AUDACITY_FORMATCLASSIFIER_H_
 
 #include <vector>
 #include "MultiFormatReader.h"
@@ -112,3 +113,5 @@ private:
 
    template<class T> void ToFloat(T* in, float* out, size_t len);
 };
+
+#endif

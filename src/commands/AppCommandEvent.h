@@ -13,7 +13,8 @@
 
 *//*******************************************************************/
 
-#pragma once
+#ifndef __APPCOMMANDEVENT__
+#define __APPCOMMANDEVENT__
 
 
 
@@ -50,3 +51,5 @@ typedef void (wxEvtHandler::*wxAppCommandEventFunction)(AppCommandEvent&);
     (wxObjectEventFunction)(wxEventFunction)wxStaticCastEvent(wxAppCommandEventFunction, &func)
 
 #define EVT_APP_COMMAND(winid, fn) DECLARE_EVENT_TABLE_ENTRY( wxEVT_APP_COMMAND_RECEIVED, winid, wxID_ANY, wxAppCommandEventHandler(fn), (wxObject *) NULL ),
+
+#endif /* End of include guard: __APPCOMMANDEVENT__ */

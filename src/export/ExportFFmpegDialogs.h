@@ -8,7 +8,8 @@ LRN
 
 **********************************************************************/
 
-#pragma once
+#if !defined(__EXPORT_FFMPEG_DIALOGS_H__)
+#define __EXPORT_FFMPEG_DIALOGS_H__
 
 
 
@@ -342,3 +343,5 @@ private:
 };
 
 #endif
+
+#endif //__EXPORT_FFMPEG_DIALOGS_H__

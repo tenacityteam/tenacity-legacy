@@ -8,7 +8,8 @@ Paul Licameli
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_TIMESHIFT_HANDLE__
+#define __AUDACITY_TIMESHIFT_HANDLE__
 
 #include <functional>
 #include <unordered_map>
@@ -338,3 +339,5 @@ private:
    ClipMoveState mClipMoveState{};
    bool mGripHit {};
 };
+
+#endif

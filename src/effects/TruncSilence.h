@@ -14,7 +14,8 @@
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_EFFECT_TRUNC_SILENCE__
+#define __AUDACITY_EFFECT_TRUNC_SILENCE__
 
 #include "Effect.h"
 
@@ -110,3 +111,5 @@ private:
 
    DECLARE_EVENT_TABLE()
 };
+
+#endif

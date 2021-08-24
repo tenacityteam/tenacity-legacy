@@ -24,7 +24,8 @@ Also, see ODPCMAliasBlockFile for a similar file.
 
 
 
-#pragma once
+#ifndef __AUDACITY_ODDecodeBlockFile__
+#define __AUDACITY_ODDecodeBlockFile__
 
 #include "SimpleBlockFile.h"
 #include <wx/atomic.h> // member variable
@@ -229,3 +230,6 @@ protected:
    unsigned int mNumSamples;//this may depend on the channel - so TODO: we should probably let the decoder create/modify the track info directly.
    unsigned int mNumChannels;
 };
+
+#endif
+

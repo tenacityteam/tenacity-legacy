@@ -9,7 +9,8 @@ Paul Licameli
 **********************************************************************/
 
 
-#pragma once
+#ifndef __AUDACITY_WAVEFORM_PREFS__
+#define __AUDACITY_WAVEFORM_PREFS__
 
 #include "PrefsPanel.h"
 #include "WaveformSettings.h"
@@ -67,3 +68,4 @@ private:
 /// This factory can be parametrized by a single track, to change settings
 /// non-globally
 extern PrefsPanel::Factory WaveformPrefsFactory(WaveTrack *wt);
+#endif

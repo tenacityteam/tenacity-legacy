@@ -8,7 +8,8 @@
 
 **********************************************************************/
 
-#pragma once
+#ifndef _IMPORT_
+#define _IMPORT_
 
 #include "ImportForwards.h"
 #include "Identifier.h"
@@ -209,3 +210,5 @@ private:
 private:
    DECLARE_EVENT_TABLE()
 };
+
+#endif

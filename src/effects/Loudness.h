@@ -8,7 +8,8 @@
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_EFFECT_LOUDNESS__
+#define __AUDACITY_EFFECT_LOUDNESS__
 
 #include <wx/checkbox.h>
 #include <wx/choice.h>
@@ -110,3 +111,5 @@ private:
 
    DECLARE_EVENT_TABLE()
 };
+
+#endif

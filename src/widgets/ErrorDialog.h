@@ -9,7 +9,8 @@
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_ERRORDIALOG__
+#define __AUDACITY_ERRORDIALOG__
 
 
 
@@ -97,3 +98,5 @@ public:
 private:
    bool mSetInsertionPointEnd{};
 };
+
+#endif // __AUDACITY_ERRORDIALOG__

@@ -9,7 +9,8 @@ Paul Licameli -- split from ProjectFileIO.h
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_DB_CONNECTION__
+#define __AUDACITY_DB_CONNECTION__
 
 #include <atomic>
 #include <condition_variable>
@@ -167,3 +168,5 @@ public:
 
    Connection mpConnection;
 };
+
+#endif

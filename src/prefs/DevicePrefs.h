@@ -9,7 +9,8 @@
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_DEVICE_PREFS__
+#define __AUDACITY_DEVICE_PREFS__
 
 #include <wx/defs.h>
 
@@ -54,3 +55,5 @@ class DevicePrefs final : public PrefsPanel
 
    DECLARE_EVENT_TABLE()
 };
+
+#endif

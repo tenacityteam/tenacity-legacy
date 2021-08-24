@@ -8,7 +8,8 @@
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_EFFECT_DISTORTION__
+#define __AUDACITY_EFFECT_DISTORTION__
 
 #include <queue>
 
@@ -211,3 +212,5 @@ private:
 
    DECLARE_EVENT_TABLE()
 };
+
+#endif

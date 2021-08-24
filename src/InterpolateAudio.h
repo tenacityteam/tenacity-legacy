@@ -22,7 +22,8 @@
 
 *//*******************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_INTERPOLATE_AUDIO__
+#define __AUDACITY_INTERPOLATE_AUDIO__
 
 
 #include <cstddef>
@@ -37,3 +38,5 @@
 // the other.
 void TENACITY_DLL_API InterpolateAudio(float *buffer, size_t len,
                                        size_t firstBad, size_t numBad);
+
+#endif // __AUDACITY_INTERPOLATE_AUDIO__

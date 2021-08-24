@@ -8,7 +8,8 @@ Paul Licameli split from TrackPanel.cpp
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_ENVELOPE_HANDLE__
+#define __AUDACITY_ENVELOPE_HANDLE__
 
 #include "../../UIHandle.h"
 
@@ -88,3 +89,5 @@ private:
 
    bool mTimeTrack{};
 };
+
+#endif

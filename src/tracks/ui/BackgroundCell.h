@@ -8,7 +8,8 @@ Paul Licameli split from TrackPanel.cpp
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_BACKGROUND_CELL__
+#define __AUDACITY_BACKGROUND_CELL__
 
 #include "../../ClientData.h"
 #include "CommonTrackPanelCell.h"
@@ -61,3 +62,5 @@ public:
    // For want of a better place...
    mutable std::weak_ptr<ZoomHandle> mZoomHandle;
 };
+
+#endif

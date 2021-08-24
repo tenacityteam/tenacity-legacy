@@ -8,7 +8,8 @@
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_WIDGETS_GRID__
+#define __AUDACITY_WIDGETS_GRID__
 
 #include <vector>
 #include <wx/setup.h> // for wxUSE_* macros
@@ -225,3 +226,6 @@ class TENACITY_DLL_API Grid final : public wxGrid
 
    DECLARE_EVENT_TABLE()
 };
+
+#endif
+

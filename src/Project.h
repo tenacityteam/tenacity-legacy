@@ -8,7 +8,8 @@
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_PROJECT__
+#define __AUDACITY_PROJECT__
 
 #include "Identifier.h"
 
@@ -180,3 +181,5 @@ inline const wxFrame *FindProjectFrame( const AudacityProject *project ) {
 TENACITY_DLL_API wxWindow &GetProjectPanel( AudacityProject &project );
 TENACITY_DLL_API const wxWindow &GetProjectPanel(
    const AudacityProject &project );
+
+#endif

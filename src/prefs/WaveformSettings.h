@@ -8,7 +8,8 @@ Paul Licameli
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_WAVEFORM_SETTINGS__
+#define __AUDACITY_WAVEFORM_SETTINGS__
 
 #include "../Prefs.h"
 
@@ -69,3 +70,4 @@ public:
    // Convenience
    bool isLinear() const { return stLinear == scaleType; }
 };
+#endif

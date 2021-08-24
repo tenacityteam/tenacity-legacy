@@ -13,7 +13,8 @@
 
 *//*******************************************************************/
 
-#pragma once
+#ifndef __COMMANDBUILDER__
+#define __COMMANDBUILDER__
 
 #include <memory>
 #include <wx/string.h>
@@ -50,3 +51,4 @@ class CommandBuilder
       OldStyleCommandPointer GetCommand();
       wxString GetResponse();
 };
+#endif /* End of include guard: __COMMANDBUILDER__ */

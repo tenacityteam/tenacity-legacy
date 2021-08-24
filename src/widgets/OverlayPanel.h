@@ -6,7 +6,8 @@
 //
 //
 
-#pragma once
+#ifndef __AUDACITY_OVERLAY_PANEL__
+#define __AUDACITY_OVERLAY_PANEL__
 
 #include <memory>
 #include <vector>
@@ -74,3 +75,5 @@ public:
    ADCChanger() : Base{} {}
    ADCChanger(wxDC *pDC);
 };
+
+#endif

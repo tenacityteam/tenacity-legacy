@@ -9,7 +9,8 @@
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_BATCH_COMMANDS_DIALOG__
+#define __AUDACITY_BATCH_COMMANDS_DIALOG__
 
 #include <wx/defs.h>
 
@@ -124,3 +125,5 @@ private:
    Exporter mExporter;
    wxString mFileName;
 };
+
+#endif

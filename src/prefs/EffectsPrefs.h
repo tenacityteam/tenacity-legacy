@@ -10,7 +10,8 @@
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_EFFECTS_PREFS__
+#define __AUDACITY_EFFECTS_PREFS__
 
 #include <wx/defs.h>
 
@@ -38,3 +39,4 @@ class EffectsPrefs final : public PrefsPanel
 };
 
 TENACITY_DLL_API extern ChoiceSetting EffectsGroupBy;
+#endif

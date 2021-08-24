@@ -12,9 +12,12 @@
 
 **********************************************************************/
 
-#pragma once
+
 
 #if USE_SOUNDTOUCH
+
+#ifndef __AUDACITY_EFFECT_SOUNDTOUCH__
+#define __AUDACITY_EFFECT_SOUNDTOUCH__
 
 #include "Effect.h"
 
@@ -76,5 +79,7 @@ private:
 
    double m_maxNewLength;
 };
+
+#endif
 
 #endif

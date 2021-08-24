@@ -24,7 +24,8 @@ MousePrefs, QualityPrefs, SpectrumPrefs and ThemePrefs.
 
 *//*******************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_PREFS_PANEL__
+#define __AUDACITY_PREFS_PANEL__
 
 #include <functional>
 #include "../widgets/wxPanelWrapper.h" // to inherit
@@ -120,3 +121,5 @@ class TENACITY_DLL_API PrefsPanel /* not final */
 
    virtual void Cancel();
 };
+
+#endif

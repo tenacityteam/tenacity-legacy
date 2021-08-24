@@ -18,7 +18,8 @@
 */
 
 
-#pragma once
+#ifndef __AUDACITY_SPECTRUM_PREFS__
+#define __AUDACITY_SPECTRUM_PREFS__
 
 #include <vector>
 #include <wx/defs.h>
@@ -108,3 +109,4 @@ class SpectrumPrefs final : public PrefsPanel
 /// This factory can be parametrized by a single track, to change settings
 /// non-globally
 extern PrefsPanel::Factory SpectrumPrefsFactory( WaveTrack *wt = 0 );
+#endif

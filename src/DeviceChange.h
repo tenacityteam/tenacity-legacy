@@ -8,7 +8,8 @@
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_DEVICECHANGE_H__
+#define __AUDACITY_DEVICECHANGE_H__
 
 
 
@@ -54,6 +55,8 @@ private:
 
    DECLARE_EVENT_TABLE()
 };
+
+#endif
 
 #endif
 

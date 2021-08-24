@@ -8,7 +8,8 @@ Paul Licameli split from TrackPanel.cpp
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_NOTE_TRACK_VRULER_CONTROLS__
+#define __AUDACITY_NOTE_TRACK_VRULER_CONTROLS__
 
 #include "../../../ui/TrackVRulerControls.h"
 
@@ -44,3 +45,5 @@ private:
 
    std::weak_ptr<NoteTrackVZoomHandle> mVZoomHandle;
 };
+
+#endif

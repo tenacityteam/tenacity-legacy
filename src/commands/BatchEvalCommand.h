@@ -19,7 +19,8 @@ to that system.
 
 *//*******************************************************************/
 
-#pragma once
+#ifndef __BATCHEVALCOMMAND__
+#define __BATCHEVALCOMMAND__
 
 #include "Command.h"
 #include "CommandType.h"
@@ -46,3 +47,5 @@ public:
    virtual ~BatchEvalCommand();
    bool Apply(const CommandContext &context) override;
 };
+
+#endif /* End of include guard: __BATCHEVALCOMMAND__ */

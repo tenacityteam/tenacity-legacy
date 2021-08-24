@@ -8,7 +8,8 @@
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_LOAD_EFFECTS__
+#define __AUDACITY_LOAD_EFFECTS__
 
 #include "tenacity/ModuleInterface.h"
 
@@ -85,3 +86,5 @@ private:
    using EffectHash = std::unordered_map< wxString, const Entry* > ;
    EffectHash mEffects;
 };
+
+#endif

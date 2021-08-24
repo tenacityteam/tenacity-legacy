@@ -9,7 +9,8 @@ Paul Licameli
    Define the key string in one place here too
 
 **********************************************************************/
-#pragma once
+#ifndef __AUDACITY_GUI_SETTINGS__
+#define __AUDACITY_GUI_SETTINGS__
 
 #define ENV_DB_KEY (wxT("/GUI/EnvdBRange"))
 #define ENV_DB_RANGE 60
@@ -22,4 +23,6 @@ Paul Licameli
        pWnd->SetLayoutDirection(wxLayout_LeftToRight);
 #else
    #define RTL_WORKAROUND( pWnd )
+#endif
+
 #endif

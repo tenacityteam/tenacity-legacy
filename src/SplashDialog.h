@@ -8,7 +8,8 @@
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_SPLASH_DLG__
+#define __AUDACITY_SPLASH_DLG__
 
 #include "widgets/wxPanelWrapper.h" // to inherit
 
@@ -40,3 +41,5 @@ private:
    std::unique_ptr<wxBitmap> m_pLogo; //vvv
    static SplashDialog * pSelf;
 };
+
+#endif

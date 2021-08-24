@@ -8,7 +8,8 @@
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_EFFECT_NYQUIST__
+#define __AUDACITY_EFFECT_NYQUIST__
 
 #include "../Effect.h"
 #include "../../FileNames.h"
@@ -304,3 +305,6 @@ private:
 private:
    DECLARE_EVENT_TABLE()
 };
+
+
+#endif

@@ -15,7 +15,8 @@ tables, and automatically attaches and detaches the event handlers.
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_POPUP_MENU_TABLE__
+#define __AUDACITY_POPUP_MENU_TABLE__
 
 class wxCommandEvent;
 
@@ -317,3 +318,5 @@ void HandlerClass::Populate() { \
 
 // ends function
 #define END_POPUP_MENU() }
+
+#endif

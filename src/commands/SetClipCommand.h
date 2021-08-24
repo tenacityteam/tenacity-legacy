@@ -13,7 +13,8 @@
 
 *//*******************************************************************/
 
-#pragma once
+#ifndef __SET_CLIP_COMMAND__
+#define __SET_CLIP_COMMAND__
 
 #include "SetTrackInfoCommand.h"
 
@@ -43,3 +44,6 @@ public:
    bool bHasColour;
    bool bHasT0;
 };
+
+
+#endif /* End of include guard: __SETTRACKINFOCOMMAND__ */

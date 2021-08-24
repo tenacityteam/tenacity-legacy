@@ -8,7 +8,8 @@
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_COMMAND__
+#define __AUDACITY_COMMAND__
 
 
 
@@ -168,3 +169,7 @@ private:
    DECLARE_EVENT_TABLE()
    wxDECLARE_NO_COPY_CLASS(AudacityCommandDialog);
 };
+
+
+
+#endif

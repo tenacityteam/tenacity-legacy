@@ -8,7 +8,8 @@
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_COMMAND_CONTEXT__
+#define __AUDACITY_COMMAND_CONTEXT__
 
 #include <memory>
 #include "Identifier.h"
@@ -54,3 +55,4 @@ public:
    int index;
    CommandParameter parameter;
 };
+#endif

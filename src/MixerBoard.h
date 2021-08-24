@@ -11,7 +11,8 @@
 
 
 
-#pragma once
+#ifndef __AUDACITY_MIXER_BOARD__
+#define __AUDACITY_MIXER_BOARD__
 
 #include <wx/frame.h> // to inherit
 #include <wx/scrolwin.h> // to inherit
@@ -287,3 +288,7 @@ public:
 public:
    DECLARE_EVENT_TABLE()
 };
+
+#endif // __AUDACITY_MIXER_BOARD__
+
+

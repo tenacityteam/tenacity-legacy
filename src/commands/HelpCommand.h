@@ -17,7 +17,8 @@
 
 *//*******************************************************************/
 
-#pragma once
+#ifndef __HELPCOMMAND__
+#define __HELPCOMMAND__
 
 #include "CommandType.h"
 #include "Command.h"
@@ -61,3 +62,6 @@ public:
 public:
    wxString mComment;
 };
+
+
+#endif /* End of include guard: __HELPCOMMAND__ */

@@ -8,7 +8,8 @@
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_DEVICE_TOOLBAR__
+#define __AUDACITY_DEVICE_TOOLBAR__
 
 #include <vector>
 #include "ToolBar.h"
@@ -78,3 +79,6 @@ class DeviceToolBar final : public ToolBar {
    DECLARE_CLASS(DeviceToolBar)
    DECLARE_EVENT_TABLE()
 };
+
+#endif
+

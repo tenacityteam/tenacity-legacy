@@ -14,7 +14,8 @@
 
 *//*******************************************************************/
 
-#pragma once
+#ifndef __COMMAND__
+#define __COMMAND__
 
 #include "CommandSignature.h"
 #include "../commands/AudacityCommand.h"
@@ -120,3 +121,5 @@ public:
    bool Apply() override { return false;};// No longer supported.
    bool Apply(const CommandContext &context) override;
 };
+
+#endif /* End of include guard: __COMMAND__ */

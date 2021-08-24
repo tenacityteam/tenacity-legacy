@@ -8,7 +8,8 @@ Paul Licameli
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_SPECTROGRAM_SETTINGS__
+#define __AUDACITY_SPECTROGRAM_SETTINGS__
 
 #include "../Prefs.h"
 #include "../SampleFormat.h"
@@ -182,3 +183,4 @@ public:
    mutable Floats         tWindow; // Window times time parameter
    mutable Floats         dWindow; // Derivative of window
 };
+#endif

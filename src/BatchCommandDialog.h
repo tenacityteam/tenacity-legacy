@@ -9,7 +9,8 @@
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_MACRO_COMMAND_DIALOG__
+#define __AUDACITY_MACRO_COMMAND_DIALOG__
 
 #include <wx/defs.h>
 
@@ -60,3 +61,6 @@ class MacroCommandDialog final : public wxDialogWrapper {
 
    DECLARE_EVENT_TABLE()
 };
+
+
+#endif

@@ -8,7 +8,8 @@
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_PRINTING__
+#define __AUDACITY_PRINTING__
 
 #include <wx/defs.h>
 
@@ -21,3 +22,6 @@ void HandlePageSetup(wxWindow *parent);
 void HandlePrint(
    wxWindow *parent, const wxString &name, TrackList *tracks,
    TrackPanel &panel);
+
+#endif // __AUDACITY_PRINTING__
+

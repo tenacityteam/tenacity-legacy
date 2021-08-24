@@ -6,7 +6,8 @@
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_READONLYTEXT__
+#define __AUDACITY_READONLYTEXT__
 
 
 #include <wx/wx.h>
@@ -132,3 +133,5 @@ public:
       SetValue(value.Translation());
    }
 };
+
+#endif // __AUDACITY_READONLYTEXT__

@@ -11,7 +11,8 @@
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_EFFECT_DTMF__
+#define __AUDACITY_EFFECT_DTMF__
 
 #include "Effect.h"
 
@@ -98,3 +99,5 @@ private:
 
    DECLARE_EVENT_TABLE()
 };
+
+#endif

@@ -8,7 +8,8 @@
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_TIMETRACK__
+#define __AUDACITY_TIMETRACK__
 
 #include "Track.h"
 
@@ -117,3 +118,7 @@ class TENACITY_DLL_API TimeTrack final : public Track {
 private:
    Track::Holder Clone() const override;
 };
+
+
+#endif // __AUDACITY_TIMETRACK__
+

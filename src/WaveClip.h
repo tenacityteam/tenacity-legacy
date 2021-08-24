@@ -9,7 +9,8 @@
 
 *******************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_WAVECLIP__
+#define __AUDACITY_WAVECLIP__
 
 
 
@@ -377,3 +378,5 @@ protected:
    // AWD, Oct. 2009: for whitespace-at-end-of-selection pasting
    bool mIsPlaceholder { false };
 };
+
+#endif

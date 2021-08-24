@@ -8,7 +8,8 @@ Paul Licameli
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_BUTTON_HANDLE__
+#define __AUDACITY_BUTTON_HANDLE__
 
 #include "../../UIHandle.h"
 
@@ -73,3 +74,5 @@ protected:
    bool mWasIn{ true };
    bool mIsClicked{};
 };
+
+#endif

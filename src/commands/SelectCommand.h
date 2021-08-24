@@ -14,7 +14,8 @@
 
 *//*******************************************************************/
 
-#pragma once
+#ifndef __SELECT_COMMAND__
+#define __SELECT_COMMAND__
 
 
 
@@ -130,3 +131,5 @@ private:
 
 
 };
+
+#endif /* End of include guard: __SELECT_COMMAND__ */

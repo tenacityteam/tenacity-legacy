@@ -8,7 +8,8 @@
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_TRACK_PANEL_LISTENER__
+#define __AUDACITY_TRACK_PANEL_LISTENER__
 
 
 
@@ -32,3 +33,5 @@ class TENACITY_DLL_API TrackPanelListener /* not final */ {
    virtual bool TP_ScrollUpDown(int delta) = 0;
    virtual void TP_HandleResize() = 0;
 };
+
+#endif

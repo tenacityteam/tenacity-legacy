@@ -11,7 +11,8 @@
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_EDIT_TOOLBAR__
+#define __AUDACITY_EDIT_TOOLBAR__
 
 #include <wx/defs.h>
 
@@ -108,3 +109,6 @@ class EditToolBar final : public ToolBar {
    DECLARE_CLASS(EditToolBar)
    DECLARE_EVENT_TABLE()
 };
+
+#endif
+

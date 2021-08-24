@@ -8,7 +8,8 @@ Paul Licameli split from Meter.h
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_METER_PANEL_BASE__
+#define __AUDACITY_METER_PANEL_BASE__
 
 #include "wxPanelWrapper.h"
 
@@ -40,3 +41,5 @@ private:
 public:
    static TempAllowFocus TemporarilyAllowFocus();
 };
+
+#endif

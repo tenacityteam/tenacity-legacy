@@ -8,7 +8,8 @@ Paul Licameli split from TrackControls.h
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_COMMON_TRACK_CONTROLS__
+#define __AUDACITY_COMMON_TRACK_CONTROLS__
 
 #include "TrackControls.h" // to inherit
 
@@ -72,3 +73,5 @@ protected:
    std::weak_ptr<SelectButtonHandle> mSelectButtonHandle;
    std::weak_ptr<TrackSelectHandle> mSelectHandle;
 };
+
+#endif

@@ -8,7 +8,8 @@ Paul Licameli split from class WaveTrack
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_WAVE_TRACK_VIEW_CONSTANTS__
+#define __AUDACITY_WAVE_TRACK_VIEW_CONSTANTS__
 
 #include "ComponentInterfaceSymbol.h" // for EnumValueSymbol
 
@@ -114,3 +115,5 @@ struct TENACITY_DLL_API WaveTrackSubViewType {
    //! Return a preferred type
    static Display Default();
 };
+
+#endif

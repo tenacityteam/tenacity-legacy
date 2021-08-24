@@ -17,7 +17,8 @@
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_COMPATIBILITY__
+#define __AUDACITY_COMPATIBILITY__
 
 #include "Identifier.h"
 
@@ -39,3 +40,5 @@ public:
    //
    static const FilePath &GetExecutablePath();
 };
+
+#endif

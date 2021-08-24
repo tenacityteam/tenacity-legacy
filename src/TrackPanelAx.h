@@ -8,7 +8,8 @@
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_TRACK_PANEL_ACCESSIBILITY__
+#define __AUDACITY_TRACK_PANEL_ACCESSIBILITY__
 
 
 
@@ -199,3 +200,5 @@ private:
    std::unique_ptr<TrackPanelAx> mAx;
 #endif
 };
+
+#endif // __AUDACITY_TRACK_PANEL_ACCESSIBILITY__

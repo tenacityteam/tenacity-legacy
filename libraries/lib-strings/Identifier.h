@@ -8,7 +8,8 @@
  
  **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_IDENTIFIER__
+#define __AUDACITY_IDENTIFIER__
 
 #include <vector>
 #include <wx/string.h>
@@ -233,3 +234,6 @@ using CommandIDs = std::vector<CommandID>;
 
 struct ManualPageIDTag;
 using ManualPageID = TaggedIdentifier< ManualPageIDTag >;
+
+#endif
+

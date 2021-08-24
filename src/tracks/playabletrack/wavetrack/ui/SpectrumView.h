@@ -8,7 +8,8 @@ Paul Licameli split from WaveTrackView.h
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_SPECTRUM_VIEW__
+#define __AUDACITY_SPECTRUM_VIEW__
 
 #include "WaveTrackView.h" // to inherit
 
@@ -48,3 +49,5 @@ private:
 protected:
    void DoSetMinimized( bool minimized ) override;
 };
+
+#endif

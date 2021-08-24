@@ -8,7 +8,8 @@
 
 **********************************************************************/
 
-#pragma once
+#ifndef AUDACITY_VSTCONTROLGTK_H
+#define AUDACITY_VSTCONTROLGTK_H
 
 
 // Must include after ours since we have a lot of name collisions
@@ -32,3 +33,5 @@ private:
    Display *mXdisp;
    Window mXwin;
 };
+
+#endif

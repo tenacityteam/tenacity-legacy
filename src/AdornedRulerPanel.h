@@ -8,7 +8,8 @@
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_ADORNED_RULER_PANEL__
+#define __AUDACITY_ADORNED_RULER_PANEL__
 
 #include "CellularPanel.h"
 #include "widgets/Ruler.h" // member variable
@@ -236,3 +237,5 @@ private:
    double mLastDrawnZoom{};
    bool mDirtySelectedRegion{};
 };
+
+#endif //define __AUDACITY_ADORNED_RULER_PANEL__

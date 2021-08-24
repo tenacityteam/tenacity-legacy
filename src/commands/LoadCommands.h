@@ -9,7 +9,8 @@
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_LOAD_COMMANDS__
+#define __AUDACITY_LOAD_COMMANDS__
 
 #include "tenacity/ModuleInterface.h"
 
@@ -85,3 +86,5 @@ private:
    using CommandHash = std::unordered_map< wxString, const Entry* > ;
    CommandHash mCommands;
 };
+
+#endif

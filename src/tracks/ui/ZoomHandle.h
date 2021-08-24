@@ -8,7 +8,8 @@ Paul Licameli split from TrackPanel.cpp
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_ZOOM_HANDLE__
+#define __AUDACITY_ZOOM_HANDLE__
 
 #include "../../UIHandle.h"
 
@@ -65,3 +66,5 @@ private:
    int mZoomStart{}, mZoomEnd{};
    wxRect mRect{};
 };
+
+#endif

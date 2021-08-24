@@ -8,7 +8,8 @@
 
  **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_PLAYABLE_TRACK_CONTROLS__
+#define __AUDACITY_PLAYABLE_TRACK_CONTROLS__
 
 #include "../../ui/CommonTrackControls.h"
 
@@ -28,3 +29,5 @@ public:
 
    using CommonTrackControls::CommonTrackControls;
 };
+
+#endif

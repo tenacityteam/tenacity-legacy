@@ -8,7 +8,8 @@
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_SPECPOWERMETER_H_
+#define __AUDACITY_SPECPOWERMETER_H_
 
 #include <cstddef>
 #include "../SampleFormat.h"
@@ -29,3 +30,6 @@ public:
    
    float CalcPower(float* sig, float fc, float bw);
 };
+
+#endif
+

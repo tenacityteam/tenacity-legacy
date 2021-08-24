@@ -8,7 +8,8 @@ Paul Licameli split from AudacityProject.h
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_PROJECT_WINDOW__
+#define __AUDACITY_PROJECT_WINDOW__
 
 #include <memory>
 #include "ProjectWindowBase.h" // to inherit
@@ -203,3 +204,5 @@ private:
 
 void GetDefaultWindowRect(wxRect *defRect);
 void GetNextWindowPlacement(wxRect *nextRect, bool *pMaximized, bool *pIconized);
+
+#endif

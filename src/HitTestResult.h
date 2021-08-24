@@ -8,7 +8,8 @@ Paul Licameli
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_HIT_TEST_RESULT__
+#define __AUDACITY_HIT_TEST_RESULT__
 
 #include <memory>
 #include "Internat.h" // for TranslatableString
@@ -29,3 +30,5 @@ struct HitTestPreview
    wxCursor *cursor {};
    TranslatableString tooltip{};
 };
+
+#endif

@@ -8,7 +8,8 @@ Paul Licameli split from TimeTrackVZoomHandle.h
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_TIMETRACK_VZOOM_HANDLE__
+#define __AUDACITY_TIMETRACK_VZOOM_HANDLE__
 
 #include "../../../UIHandle.h" // to inherit
 
@@ -47,3 +48,5 @@ public:
 private:
    std::weak_ptr<TimeTrack> mpTrack;
 };
+
+#endif

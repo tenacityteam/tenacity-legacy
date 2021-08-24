@@ -8,7 +8,8 @@
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_WIDGETS_FILECONFIG__
+#define __AUDACITY_WIDGETS_FILECONFIG__
 
 #include <memory>
 
@@ -97,3 +98,6 @@ private:
 
    bool mDirty;
 };
+
+#endif
+

@@ -39,7 +39,8 @@
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_EFFECTINTERFACE_H__
+#define __AUDACITY_EFFECTINTERFACE_H__
 
 #include <functional>
 
@@ -245,3 +246,5 @@ public:
    virtual bool HasOptions() = 0;
    virtual void ShowOptions() = 0;
 };
+
+#endif // __AUDACITY_EFFECTINTERFACE_H__

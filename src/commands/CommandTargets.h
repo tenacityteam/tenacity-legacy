@@ -52,7 +52,8 @@ and sends it to that message target.
 
 *//*******************************************************************/
 
-#pragma once
+#ifndef __COMMANDTARGETS__
+#define __COMMANDTARGETS__
 
 #include <memory>
 #include <vector>
@@ -410,3 +411,5 @@ public:
    InteractiveOutputTargets();
 
 };
+
+#endif /* End of include guard: __COMMANDTARGETS__ */

@@ -8,7 +8,8 @@
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_ENVELOPE_EDITOR__
+#define __AUDACITY_ENVELOPE_EDITOR__
 
 class wxMouseEvent;
 class wxRect;
@@ -67,3 +68,6 @@ private:
    int mButton;
    bool mDirty;
 };
+
+
+#endif

@@ -18,7 +18,8 @@
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_HELPSYSTEM__
+#define __AUDACITY_HELPSYSTEM__
 
 
 
@@ -154,3 +155,5 @@ public:
    bool mDismissed{};
    DECLARE_EVENT_TABLE()
 };
+
+#endif // __AUDACITY_HELPSYSTEM__

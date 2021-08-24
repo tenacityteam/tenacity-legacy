@@ -8,7 +8,8 @@ Paul Licameli
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_TRACK_PANEL_DRAWABLE__
+#define __AUDACITY_TRACK_PANEL_DRAWABLE__
 
 
 
@@ -53,3 +54,5 @@ public:
       return { rect.x, panelRect.y, rect.width, panelRect.height };
    }
 };
+
+#endif

@@ -8,7 +8,8 @@ Paul Licameli split from ProjectManager.h
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_PROJECT_HISTORY__
+#define __AUDACITY_PROJECT_HISTORY__
 
 #include "ClientData.h"
 
@@ -55,3 +56,5 @@ private:
 
    bool mDirty{ false };
 };
+
+#endif

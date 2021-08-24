@@ -22,7 +22,8 @@
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_SELECTEDREGION__
+#define __AUDACITY_SELECTEDREGION__
 
 
 
@@ -283,3 +284,5 @@ inline bool operator != (const SelectedRegion &lhs, const SelectedRegion &rhs)
 {
    return !(lhs == rhs);
 }
+
+#endif

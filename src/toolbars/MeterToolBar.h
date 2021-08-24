@@ -11,7 +11,8 @@
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_METER_TOOLBAR__
+#define __AUDACITY_METER_TOOLBAR__
 
 #include "ToolBar.h"
 
@@ -68,3 +69,6 @@ class MeterToolBar final : public ToolBar {
    DECLARE_EVENT_TABLE()
 
 };
+
+#endif
+

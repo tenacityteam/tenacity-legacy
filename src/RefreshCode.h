@@ -8,7 +8,8 @@ Paul Licameli
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_REFRESH_CODE__
+#define __AUDACITY_REFRESH_CODE__
 
 /// Namespace containing an enum 'what to do on a refresh?'
 namespace RefreshCode
@@ -34,3 +35,7 @@ namespace RefreshCode
    };
 
 }
+
+
+
+#endif

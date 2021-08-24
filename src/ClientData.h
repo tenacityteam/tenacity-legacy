@@ -9,7 +9,8 @@ Paul Licameli
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_CLIENT_DATA__
+#define __AUDACITY_CLIENT_DATA__
 
 #include "ClientDataHelpers.h"
 
@@ -563,3 +564,5 @@ private:
 };
 
 }
+
+#endif

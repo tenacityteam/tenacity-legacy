@@ -9,7 +9,8 @@ Paul Licameli split from Prefs.h
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_FILE_CONFIG__
+#define __AUDACITY_FILE_CONFIG__
 
 #include <memory>
 #include "widgets/FileConfig.h" // to inherit
@@ -44,3 +45,4 @@ private:
       const wxMBConv& conv
    );
 };
+#endif

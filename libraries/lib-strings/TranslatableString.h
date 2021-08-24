@@ -8,7 +8,8 @@
  
  **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_TRANSLATABLE_STRING__
+#define __AUDACITY_TRANSLATABLE_STRING__
 
 #include <stddef.h> // for size_t
 #include <functional>
@@ -319,3 +320,5 @@ inline Sink &operator <<( Sink &sink, const TranslatableString &str )
    review the uses of this function, separately from the uses of the type. */
 inline TranslatableString Verbatim( wxString str )
 { return TranslatableString( std::move( str ) ); }
+
+#endif

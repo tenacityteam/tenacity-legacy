@@ -9,7 +9,8 @@
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_LYRICS__
+#define __AUDACITY_LYRICS__
 
 
 
@@ -160,3 +161,5 @@ private:
 
    DECLARE_EVENT_TABLE()
 };
+
+#endif // __AUDACITY_LYRICS__

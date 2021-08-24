@@ -8,7 +8,8 @@ Paul Licameli split from class LabelTrack
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_LABEL_TRACK_VIEW__
+#define __AUDACITY_LABEL_TRACK_VIEW__
 
 #include "../../ui/CommonTrackView.h"
 
@@ -255,3 +256,5 @@ private:
    // Bug #2571: See explanation in ShowContextMenu()
    int mEditIndex;
 };
+
+#endif

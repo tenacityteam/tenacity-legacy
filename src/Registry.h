@@ -8,7 +8,8 @@ Paul Licameli split from CommandManager.h
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_REGISTRY__
+#define __AUDACITY_REGISTRY__
 
 #include "Prefs.h"
 
@@ -289,3 +290,6 @@ namespace Registry {
       Literal mRoot;
    };
 }
+
+#endif
+

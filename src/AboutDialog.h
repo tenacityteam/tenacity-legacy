@@ -6,7 +6,8 @@
 
 **********************************************************************/
 
-#pragma once
+#ifndef TENACITY_ABOUT_DLG
+#define TENACITY_ABOUT_DLG
 
 #include <vector>
 #include "widgets/wxPanelWrapper.h" // to inherit
@@ -88,3 +89,5 @@ class TENACITY_DLL_API AboutDialog final : public wxDialogWrapper{
     static void AddBuildInfoRow(wxTextOutputStream * str, const wxChar * libname, const TranslatableString & libdesc, const TranslatableString & status);
     static void AddBuildInfoRow(wxTextOutputStream * str, const TranslatableString & description, const wxChar * spec);
 };
+
+#endif

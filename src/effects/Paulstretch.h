@@ -7,7 +7,8 @@
 
  **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_EFFECT_PAULSTRETCH__
+#define __AUDACITY_EFFECT_PAULSTRETCH__
 
 #include "Effect.h"
 
@@ -60,3 +61,6 @@ private:
 
    DECLARE_EVENT_TABLE()
 };
+
+#endif
+

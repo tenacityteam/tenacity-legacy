@@ -8,7 +8,8 @@ Paul Licameli split from WaveTrackView.h
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_WAVEFORM_VIEW__
+#define __AUDACITY_WAVEFORM_VIEW__
 
 #include "WaveTrackView.h" // to inherit
 
@@ -52,3 +53,5 @@ protected:
    std::weak_ptr<SampleHandle> mSampleHandle;
    std::weak_ptr<EnvelopeHandle> mEnvelopeHandle;
 };
+
+#endif

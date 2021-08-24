@@ -10,7 +10,8 @@
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_EFFECT_NOISE__
+#define __AUDACITY_EFFECT_NOISE__
 
 #include "Effect.h"
 
@@ -61,3 +62,5 @@ private:
 
    NumericTextCtrl *mNoiseDurationT;
 };
+
+#endif

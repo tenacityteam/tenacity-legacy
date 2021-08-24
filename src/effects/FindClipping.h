@@ -9,7 +9,8 @@
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_EFFECT_FINDCLIPPING__
+#define __AUDACITY_EFFECT_FINDCLIPPING__
 
 class wxString;
 
@@ -58,3 +59,5 @@ private:
    int mStart;   ///< Using int rather than sampleCount because values are only ever small numbers
    int mStop;    ///< Using int rather than sampleCount because values are only ever small numbers
 };
+
+#endif // __AUDACITY_EFFECT_FINDCLIPPING__

@@ -9,7 +9,8 @@ Max Maisel
 
 ***********************************************************************/
 
-#pragma once
+#ifndef __BIQUAD_H__
+#define __BIQUAD_H__
 
 #include "MemoryX.h"
 
@@ -74,3 +75,5 @@ struct Biquad
    static const double s_fChebyCoeffs[MAX_Order][MAX_Order + 1];
    static double ChebyPoly(int Order, double NormFreq);
 };
+
+#endif

@@ -9,7 +9,8 @@
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_PREFS_DIALOG__
+#define __AUDACITY_PREFS_DIALOG__
 
 #include <functional>
 #include <vector>
@@ -90,3 +91,5 @@ public:
 
 class AudacityProject;
 void TENACITY_DLL_API DoReloadPreferences( AudacityProject &project );
+
+#endif

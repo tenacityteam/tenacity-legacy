@@ -8,7 +8,8 @@
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_EFFECT_REPAIR__
+#define __AUDACITY_EFFECT_REPAIR__
 
 #include "Effect.h"
 
@@ -45,3 +46,5 @@ private:
                    size_t repairStart, // offset relative to start
                    size_t repairLen);
 };
+
+#endif // __AUDACITY_EFFECT_REPAIT__

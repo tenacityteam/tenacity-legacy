@@ -10,7 +10,8 @@
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_AUDIO_IO_LISTENER__
+#define __AUDACITY_AUDIO_IO_LISTENER__
 
 
 
@@ -38,3 +39,5 @@ public:
    virtual void OnSoundActivationThreshold() = 0;
 
 };
+
+#endif

@@ -8,7 +8,8 @@
   Licensed under the GPL version 2.0
 
 **********************************************************************/
-#pragma once
+#ifndef __AUDACITY_CROSSFADE__
+#define __AUDACITY_CROSSFADE__
 
 /// This defines a crossfader class that
 /// accepts a list of WaveClips and can do a mini-mixing
@@ -53,3 +54,7 @@ class CrossFader
 
 
 };
+
+
+
+#endif

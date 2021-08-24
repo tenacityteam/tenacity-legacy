@@ -8,7 +8,8 @@
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_MODULE_SETTINGS__
+#define __AUDACITY_MODULE_SETTINGS__
 
 #include "Identifier.h"
 
@@ -26,3 +27,5 @@ int GetModuleStatus( const FilePath &fname );
 void SetModuleStatus( const FilePath &fname, int iStatus );
 
 }
+
+#endif

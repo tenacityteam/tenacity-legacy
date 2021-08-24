@@ -8,7 +8,8 @@
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_EFFECT_FADE__
+#define __AUDACITY_EFFECT_FADE__
 
 #include "Effect.h"
 
@@ -58,3 +59,5 @@ public:
 
    EffectFadeOut() : EffectFade{ false } {}
 };
+
+#endif

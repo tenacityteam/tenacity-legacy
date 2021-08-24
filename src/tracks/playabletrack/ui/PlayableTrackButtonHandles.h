@@ -8,7 +8,8 @@ Paul Licameli split from TrackPanel.cpp
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_PLAYABLE_TRACK_BUTTON_HANDLES__
+#define __AUDACITY_PLAYABLE_TRACK_BUTTON_HANDLES__
 
 #include "../../ui/ButtonHandle.h"
 class wxMouseState;
@@ -72,3 +73,5 @@ public:
        const wxMouseState &state, const wxRect &rect,
        const AudacityProject *pProject, const std::shared_ptr<Track> &pTrack);
 };
+
+#endif

@@ -8,7 +8,8 @@
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_WXTEXTCTRLWRAPPER__
+#define __AUDACITY_WXTEXTCTRLWRAPPER__
 
 
 
@@ -70,3 +71,5 @@ public:
 private:
    bool mReadOnly;
 };
+
+#endif // __AUDACITY_WXTEXTCTRLWRAPPER__

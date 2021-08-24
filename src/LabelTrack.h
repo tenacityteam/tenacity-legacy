@@ -10,7 +10,8 @@
 
 **********************************************************************/
 
-#pragma once
+#ifndef _LABELTRACK_
+#define _LABELTRACK_
 
 #include "SelectedRegion.h"
 #include "Track.h"
@@ -224,3 +225,4 @@ wxDECLARE_EXPORTED_EVENT(TENACITY_DLL_API,
 // Posted when the track is selected or unselected.
 wxDECLARE_EXPORTED_EVENT(TENACITY_DLL_API,
                          EVT_LABELTRACK_SELECTION, LabelTrackEvent);
+#endif

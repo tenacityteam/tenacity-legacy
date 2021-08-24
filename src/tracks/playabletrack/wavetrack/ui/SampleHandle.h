@@ -8,7 +8,8 @@ Paul Licameli
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_SAMPLE_HANDLE__
+#define __AUDACITY_SAMPLE_HANDLE__
 
 #include "../../../../UIHandle.h"
 #include "tenacity/Types.h"
@@ -75,3 +76,5 @@ private:
    float mLastDragSampleValue{};
    bool mAltKey{};
 };
+
+#endif

@@ -8,4 +8,9 @@
  
  **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_SCRUB_UI__
+#define __AUDACITY_SCRUB_UI__
+
+
+
+#endif

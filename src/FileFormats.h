@@ -8,7 +8,8 @@
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_FILE_FORMATS__
+#define __AUDACITY_FILE_FORMATS__
 
 
 
@@ -156,3 +157,5 @@ struct SFFile : public std::unique_ptr<SNDFILE, ::SFFileCloser>
 
 extern ChoiceSetting FileFormatsCopyOrEditSetting;
 extern ChoiceSetting FileFormatsSaveWithDependenciesSetting;
+
+#endif

@@ -10,7 +10,8 @@
 
 **********************************************************************/
 
-#pragma once
+#ifndef __SCREENSHOT_COMMAND__
+#define __SCREENSHOT_COMMAND__
 
 #include "Command.h"
 
@@ -147,3 +148,5 @@ public:
    void CaptureWindowOnIdle( const CommandContext & context, wxWindow * pWin );
    wxTopLevelWindow *GetFrontWindow(AudacityProject *project);
 };
+
+#endif /* End of include guard: __SCREENSHOT_COMMAND__ */

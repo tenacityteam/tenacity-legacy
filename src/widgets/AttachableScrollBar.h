@@ -14,7 +14,8 @@
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_ATTACHABLE_SCROLL_BAR__
+#define __AUDACITY_ATTACHABLE_SCROLL_BAR__
 
 #include <wx/scrolbar.h> // to inherit
 
@@ -41,3 +42,5 @@ public:
    ViewInfo * mpViewInfo;
    DECLARE_EVENT_TABLE()
 };
+
+#endif // __AUDACITY_ATTACHABLE_SCROLL_BAR__

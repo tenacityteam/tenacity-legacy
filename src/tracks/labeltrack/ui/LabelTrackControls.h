@@ -8,7 +8,8 @@ Paul Licameli split from TrackPanel.cpp
 
 **********************************************************************/
 
-#pragma once
+#ifndef __AUDACITY_LABEL_TRACK_CONTROLS__
+#define __AUDACITY_LABEL_TRACK_CONTROLS__
 
 #include "../../ui/CommonTrackControls.h" // to inherit
 
@@ -29,3 +30,5 @@ public:
 
    PopupMenuTable *GetMenuExtension(Track *pTrack) override;
 };
+
+#endif
