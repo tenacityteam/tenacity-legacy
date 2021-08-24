@@ -42,7 +42,7 @@ public:
    FilePaths GetRecoverables();
 
 private:
-   void PopulateOrExchange(ShuttleGui &S);
+   void Populate(ShuttleGui &S);
    void PopulateList();
    bool HaveChecked();
 
@@ -79,7 +79,7 @@ AutoRecoveryDialog::AutoRecoveryDialog(AudacityProject *project)
 {
    SetName();
    ShuttleGui S(this, eIsCreating);
-   PopulateOrExchange(S);
+   Populate(S);
 }
 
 bool AutoRecoveryDialog::HasRecoverables() const
@@ -92,7 +92,7 @@ FilePaths AutoRecoveryDialog::GetRecoverables()
    return mFiles;
 }
 
-void AutoRecoveryDialog::PopulateOrExchange(ShuttleGui &S)
+void AutoRecoveryDialog::Populate(ShuttleGui &S)
 {
    S.SetBorder(5);
    S.StartVerticalLay(wxEXPAND, 1);
