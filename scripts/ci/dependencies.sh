@@ -13,7 +13,27 @@ if [[ "${OSTYPE}" == msys* ]]; then # Windows
             sccache
         )
 
-        choco install "${choco_packages[@]}" -y
+        # This retry workaround is because on Github actions this just randomly fails when
+        # the CI server isn't able to connect to the choco server for some reason...
+
+        set +ex
+
+        max_retry=5
+        counter=0
+        num_secs_await_retry=5
+
+        until choco install "${choco_packages[@]}" -y; do
+           sleep $num_secs_await_retry
+           if [[ $counter -eq $max_retry ]]; then
+                echo "choco install failed despite retry attempts"
+                exit 1
+           else
+                echo "Trying choco install again..."
+                ((counter++))
+           fi
+        done
+
+       set -ex
     else
         echo >&2 "$0: Error: You don't have a recognized package manager installed."
         exit 1

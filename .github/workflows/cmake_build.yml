@@ -65,7 +65,7 @@ jobs:
       # vcpkg settings
       VCPKG_DISABLE_METRICS: true
       VCPKG_DEFAULT_TRIPLET: ${{ matrix.config.vcpkg_triplet }}
-      VCPKG_BINARY_SOURCES: "clear;default,readwrite;nuget,https://tenacityteam.jfrog.io/artifactory/api/nuget/tenacity-nuget,readwrite"
+      VCPKG_BINARY_SOURCES: "clear;default,readwrite;nuget,https://nuget.pkg.github.com/tenacityteam/index.json,readwrite"
 
       # Artifactory cache settings
       JFROG_ARTIFACTORY_NUGET_USER: ${{secrets.JFROG_ARTIFACTORY_NUGET_USER}}
@@ -221,7 +221,7 @@ jobs:
         else
           cd build
           cpack -C ${{ env.CMAKE_BUILD_TYPE }} -D CPACK_COMMAND_HDIUTIL=${{ env.CPACK_COMMAND_HDIUTIL }} --verbose
-          rm -r /package/_CPack_Packages
+          rm -r package/_CPack_Packages
         fi
       env:
         # Workaround for CPack hdiutil/ finder service race condition bug
