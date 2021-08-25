@@ -3,7 +3,7 @@
   "runtime": "org.gnome.Platform",
   "runtime-version": "40",
   "sdk": "org.gnome.Sdk",
-  "command": "tenacity",
+  "command": "tenacity.sh",
   "rename-desktop-file": "tenacity.desktop",
   "rename-icon": "tenacity",
   "rename-appdata-file": "tenacity.metainfo.xml",
@@ -230,7 +230,8 @@
       "post-install": [
         "chrpath -d /app/bin/tenacity",
         "install -Dm644 ../help/tenacity.metainfo.xml -t /app/share/metainfo",
-        "install -d /app/extensions/Plugins"
+        "install -d /app/extensions/Plugins",
+        "install -Dm755 zoom.sh /app/bin/zoom"
       ],
       "cleanup": [
         "/share/tenacity/include",
@@ -250,6 +251,15 @@
           "type": "shell",
           "commands": [
             "sed -e '42i <release version=\"master\" date=\"2021-08-12\"/>' -i help/tenacity.metainfo.xml"
+          ]
+        },
+        {
+          "type": "script",
+          "dest-filename": "tenacity.sh",
+          "commands": [
+          /* FIXME following variable needs to be fixed in CMake. */
+            "export LD_LIBRARY_PATH=/app/lib/tenacity",
+            "tenacity"
           ]
         }
       ]
