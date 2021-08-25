@@ -801,11 +801,19 @@ if( NOT CMAKE_SYSTEM_NAME MATCHES "Darwin|Windows" )
 endif()
 
 if( NOT WIN32 )
-  set( wxWidgets_CONFIG_OPTIONS --version=3.1 )
+  # wxWidgets 3.1 can be explicitly selected if both 3.0 and 3.1 are installed by setting
+  # the WX_CONFIG environment variable to path of the wx-config script for 3.1.
   find_package(
-    wxWidgets 3.1
+    wxWidgets 3.0
     COMPONENTS adv base core html qa xml net
   )
+
+  if(NOT wxWidgets_FOUND)
+    message(FATAL_ERROR "wxWidgets NOT found. "
+      "Install wxWidgets and its development headers and try again. "
+      "If wxWidgets is installed, set the WX_CONFIG environment variable to the path of the wx-config script.")
+  endif()
+
   include( ${wxWidgets_USE_FILE} )
   # The FindwxWidgets.cmake module does not create an IMPORT target, so hack one together. This makes it easy to add the compile definitions
   # to the lib-strings and lib-strings-utils targets.
