@@ -140,11 +140,11 @@ jobs:
       with:
         nuget-version: 5.10.0
 
-    - name: "[On Push] Authenticate CI to Artifactory"
+    - name: "[On Push] Authenticate CI to Github Packages"
       if: github.event_name == 'push' && github.repository_owner == 'tenacityteam'
       run: |
-        nuget sources Add -Name Artifactory -Source https://tenacityteam.jfrog.io/artifactory/api/nuget/tenacity-nuget -username ${JFROG_ARTIFACTORY_NUGET_USER} -password ${JFROG_ARTIFACTORY_NUGET_PASS} -ForceEnglishOutput -NonInteractive
-        nuget setapikey ${JFROG_ARTIFACTORY_NUGET_USER}:${JFROG_ARTIFACTORY_NUGET_TOKEN} -Source Artifactory -ForceEnglishOutput -NonInteractive
+        nuget sources Add -Name Github -Source https://nuget.pkg.github.com/tenacityteam/index.json --username tenacityteam --password ${{ secrets.GITHUB_TOKEN }}
+        nuget setapikey tenacityteam:${{ secrets.GITHUB_TOKEN }} -Source Github -ForceEnglishOutput -NonInteractive
 
     - name: Install dependencies
       run: |
