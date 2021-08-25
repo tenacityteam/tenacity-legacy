@@ -71,7 +71,7 @@ typedef enum EffectType : int
 flag-functions for interactivity, play-preview and whether the effect can run without a GUI.
 
 *******************************************************************************************/
-class AUDACITY_DLL_API EffectDefinitionInterface  /* not final */ : public ComponentInterface
+class TENACITY_DLL_API EffectDefinitionInterface  /* not final */ : public ComponentInterface
 {
 public:
    virtual ~EffectDefinitionInterface() {};
@@ -116,7 +116,7 @@ virtual (abstract) functions to get presets and actually apply the effect.  It u
 ConfigClientInterface to add Getters/setters for private and shared configs.
 
 *******************************************************************************************/
-class AUDACITY_DLL_API EffectHostInterface  /* not final */ : public ConfigClientInterface
+class TENACITY_DLL_API EffectHostInterface  /* not final */ : public ConfigClientInterface
 {
 public:
    virtual ~EffectHostInterface() {};
@@ -141,7 +141,7 @@ Effect into a plug-in command.  It has functions for realtime that are not part 
 AudacityCommand.
 
 *******************************************************************************************/
-class AUDACITY_DLL_API EffectClientInterface  /* not final */ : public EffectDefinitionInterface
+class TENACITY_DLL_API EffectClientInterface  /* not final */ : public EffectDefinitionInterface
 {
 public:
    using EffectDialogFactory = std::function<
@@ -213,7 +213,7 @@ can call SetHostUI passing in a pointer to an EffectUIHostInterface.  It contain
 functionality and is provided, apparently, for type checking.  Since only EffectUIHost
 uses it, EffectUIHost could be used instead.
 *******************************************************************************************/
-class AUDACITY_DLL_API EffectUIHostInterface
+class TENACITY_DLL_API EffectUIHostInterface
 {
 public:
    virtual ~EffectUIHostInterface() {};
@@ -227,7 +227,7 @@ public:
 values.  It can import and export presets.
 
 *******************************************************************************************/
-class AUDACITY_DLL_API EffectUIClientInterface /* not final */
+class TENACITY_DLL_API EffectUIClientInterface /* not final */
 {
 public:
    virtual ~EffectUIClientInterface() {};

@@ -58,7 +58,7 @@ class TipWindow;
 // which uses this class, is below.
 //
 
-class AUDACITY_DLL_API LWSlider
+class TENACITY_DLL_API LWSlider
 {
    friend class ASlider;
    friend class ASliderAx;
@@ -230,7 +230,7 @@ class AUDACITY_DLL_API LWSlider
    bool mEnabled;
 };
 
-class AUDACITY_DLL_API ASlider /* not final */ : public wxPanel
+class TENACITY_DLL_API ASlider /* not final */ : public wxPanel
 {
    friend class ASliderAx;
 

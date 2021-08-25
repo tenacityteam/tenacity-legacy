@@ -61,7 +61,7 @@ using QuantizedTimeAndBeat = std::pair< double, double >;
 class StretchHandle;
 class TimeWarper;
 
-class AUDACITY_DLL_API NoteTrack final
+class TENACITY_DLL_API NoteTrack final
    : public NoteTrackBase
 {
 public:

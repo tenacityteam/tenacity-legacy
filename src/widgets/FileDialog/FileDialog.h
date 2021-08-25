@@ -19,7 +19,7 @@ custom controls.
 
 #include <wx/filedlg.h> // to inherit
 
-class AUDACITY_DLL_API FileDialogBase : public wxFileDialogBase
+class TENACITY_DLL_API FileDialogBase : public wxFileDialogBase
 {
 public:
    FileDialogBase();

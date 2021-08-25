@@ -18,7 +18,7 @@ Paul Licameli split from ProjectManager.cpp
 
 class AudacityProject;
 
-class AUDACITY_DLL_API ProjectSelectionManager final
+class TENACITY_DLL_API ProjectSelectionManager final
    : public ClientData::Base
    , public SelectionBarListener
    , public SpectralSelectionBarListener

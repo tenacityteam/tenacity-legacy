@@ -19,7 +19,7 @@ class wxDC;
 
 const int kGuard = 5; // 5 pixels to reduce risk of VZooming accidentally
 
-class AUDACITY_DLL_API TrackVRulerControls /* not final */
+class TENACITY_DLL_API TrackVRulerControls /* not final */
    : public CommonTrackPanelCell
    , public std::enable_shared_from_this< TrackVRulerControls >
 {

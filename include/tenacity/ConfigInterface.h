@@ -53,7 +53,7 @@ differentiates between private and shared config.  It should probably be replace
 with a Shuttle.
 
 *******************************************************************************************/
-class AUDACITY_DLL_API ConfigClientInterface /* not final */
+class TENACITY_DLL_API ConfigClientInterface /* not final */
 {
 public:
    virtual ~ConfigClientInterface() {};

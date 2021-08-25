@@ -14,7 +14,7 @@
 
 #include "Identifier.h"
 
-class AUDACITY_DLL_API SpectralSelectionBarListener /* not final */ {
+class TENACITY_DLL_API SpectralSelectionBarListener /* not final */ {
 
  public:
 

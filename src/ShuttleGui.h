@@ -237,7 +237,7 @@ struct Item {
 
 }
 
-class AUDACITY_DLL_API ShuttleGuiBase /* not final */
+class TENACITY_DLL_API ShuttleGuiBase /* not final */
 {
 public:
    ShuttleGuiBase(
@@ -629,12 +629,12 @@ enum
     GROWING_PROPORTION = 1
 };
 
-AUDACITY_DLL_API std::unique_ptr<wxSizer> CreateStdButtonSizer( wxWindow *parent,
+TENACITY_DLL_API std::unique_ptr<wxSizer> CreateStdButtonSizer( wxWindow *parent,
                                long buttons = eOkButton | eCancelButton,
                                wxWindow *extra = NULL );
 
 // ShuttleGui extends ShuttleGuiBase with Audacity specific extensions.
-class AUDACITY_DLL_API ShuttleGui /* not final */ : public ShuttleGuiBase
+class TENACITY_DLL_API ShuttleGui /* not final */ : public ShuttleGuiBase
 {
 public:
    ShuttleGui(
@@ -762,10 +762,10 @@ public:
 class ComponentInterfaceSymbol;
 
 //! Convenience function often useful when adding choice controls
-AUDACITY_DLL_API TranslatableStrings Msgids(
+TENACITY_DLL_API TranslatableStrings Msgids(
    const EnumValueSymbol strings[], size_t nStrings);
 
 //! Convenience function often useful when adding choice controls
-AUDACITY_DLL_API TranslatableStrings Msgids( const std::vector<EnumValueSymbol> &strings );
+TENACITY_DLL_API TranslatableStrings Msgids( const std::vector<EnumValueSymbol> &strings );
 
 #endif

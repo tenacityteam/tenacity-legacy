@@ -39,7 +39,7 @@ using WaveTrackConstArray = std::vector < std::shared_ptr < const WaveTrack > >;
 enum class ProgressResult : unsigned;
 class wxFileNameWrapper;
 
-class AUDACITY_DLL_API FormatInfo
+class TENACITY_DLL_API FormatInfo
 {
    public:
       FormatInfo() {}
@@ -61,7 +61,7 @@ class AUDACITY_DLL_API FormatInfo
 //----------------------------------------------------------------------------
 // ExportPlugin
 //----------------------------------------------------------------------------
-class AUDACITY_DLL_API ExportPlugin /* not final */
+class TENACITY_DLL_API ExportPlugin /* not final */
 {
 public:
 
@@ -158,10 +158,10 @@ using ExportPluginArray = std::vector < std::unique_ptr< ExportPlugin > > ;
 //----------------------------------------------------------------------------
 
 // For a file suffix change from the options.
-wxDECLARE_EXPORTED_EVENT(AUDACITY_DLL_API,
+wxDECLARE_EXPORTED_EVENT(TENACITY_DLL_API,
    AUDACITY_FILE_SUFFIX_EVENT, wxCommandEvent);
 
-class  AUDACITY_DLL_API Exporter final : public wxEvtHandler
+class  TENACITY_DLL_API Exporter final : public wxEvtHandler
 {
 public:
 
@@ -173,7 +173,7 @@ public:
    // Register factories, not plugin objects themselves, which allows them
    // to have some fresh state variables each time export begins again
    // and to compute translated strings for the current locale
-   struct AUDACITY_DLL_API RegisteredExportPlugin{
+   struct TENACITY_DLL_API RegisteredExportPlugin{
       RegisteredExportPlugin(
          const Identifier &id, // an internal string naming the plug-in
          const ExportPluginFactory&,
@@ -323,17 +323,17 @@ private:
    DECLARE_EVENT_TABLE()
 };
 
-AUDACITY_DLL_API TranslatableString AudacityExportCaptionStr();
-AUDACITY_DLL_API TranslatableString AudacityExportMessageStr();
+TENACITY_DLL_API TranslatableString AudacityExportCaptionStr();
+TENACITY_DLL_API TranslatableString AudacityExportMessageStr();
 
 /// We have many Export errors that are essentially anonymous
 /// and are distinguished only by an error code number.
 /// Rather than repeat the code, we have it just once.
-AUDACITY_DLL_API void ShowExportErrorDialog(wxString ErrorCode,
+TENACITY_DLL_API void ShowExportErrorDialog(wxString ErrorCode,
    TranslatableString message = AudacityExportMessageStr(),
    const TranslatableString& caption = AudacityExportCaptionStr());
 
-AUDACITY_DLL_API
+TENACITY_DLL_API
 void ShowDiskFullExportErrorDialog(const wxFileNameWrapper &fileName);
 
 #endif

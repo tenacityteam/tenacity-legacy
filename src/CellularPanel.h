@@ -31,7 +31,7 @@ using UIHandlePtr = std::shared_ptr<UIHandle>;
 // cells, that each implement hit tests returning click-drag-release handler
 // objects, and other services.
 // It has no dependency on the Track class.
-class AUDACITY_DLL_API CellularPanel : public OverlayPanel {
+class TENACITY_DLL_API CellularPanel : public OverlayPanel {
 public:
    CellularPanel(wxWindow * parent, wxWindowID id,
                  const wxPoint & pos,

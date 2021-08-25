@@ -31,7 +31,7 @@ class wxCommandEvent;
 class PopupMenuHandler;
 class PopupMenuTable;
 
-struct AUDACITY_DLL_API PopupMenuTableEntry : Registry::SingleItem
+struct TENACITY_DLL_API PopupMenuTableEntry : Registry::SingleItem
 {
    enum Type { Item, RadioItem, CheckItem };
    using InitFunction =
@@ -60,7 +60,7 @@ struct AUDACITY_DLL_API PopupMenuTableEntry : Registry::SingleItem
    ~PopupMenuTableEntry() override;
 };
 
-struct AUDACITY_DLL_API PopupSubMenu : Registry::ConcreteGroupItem< false >
+struct TENACITY_DLL_API PopupSubMenu : Registry::ConcreteGroupItem< false >
    , MenuTable::WholeMenu
 {
    TranslatableString caption;
@@ -100,7 +100,7 @@ struct PopupMenuVisitor : public MenuVisitor {
    PopupMenuTable &mTable;
 };
 
-class AUDACITY_DLL_API PopupMenuTable : public PopupMenuHandler
+class TENACITY_DLL_API PopupMenuTable : public PopupMenuHandler
 {
 public:
    using Entry = PopupMenuTableEntry;

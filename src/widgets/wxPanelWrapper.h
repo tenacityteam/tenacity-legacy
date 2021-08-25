@@ -17,10 +17,10 @@
 
 #include "Identifier.h"
 
-AUDACITY_DLL_API void wxTabTraversalWrapperCharHook(wxKeyEvent &event);
+TENACITY_DLL_API void wxTabTraversalWrapperCharHook(wxKeyEvent &event);
 
 template <typename Base>
-class AUDACITY_DLL_API wxTabTraversalWrapper : public Base
+class TENACITY_DLL_API wxTabTraversalWrapper : public Base
 {
 public:
    template <typename... Args>
@@ -37,7 +37,7 @@ public:
 
 };
 
-class AUDACITY_DLL_API wxPanelWrapper : public wxTabTraversalWrapper<wxPanel>
+class TENACITY_DLL_API wxPanelWrapper : public wxTabTraversalWrapper<wxPanel>
 {
 public:
    // Constructors
@@ -77,7 +77,7 @@ public:
    void SetName();
 };
 
-class AUDACITY_DLL_API wxDialogWrapper : public wxTabTraversalWrapper<wxDialog>
+class TENACITY_DLL_API wxDialogWrapper : public wxTabTraversalWrapper<wxDialog>
 {
 public:
    // Constructors
@@ -121,7 +121,7 @@ public:
 
 #include <wx/dirdlg.h> // to inherit
 
-class AUDACITY_DLL_API wxDirDialogWrapper
+class TENACITY_DLL_API wxDirDialogWrapper
    : public wxTabTraversalWrapper<wxDirDialog>
 {
 public:
@@ -160,7 +160,7 @@ public:
 #include "FileDialog/FileDialog.h"
 #include "../FileNames.h" // for FileTypes
 
-class AUDACITY_DLL_API FileDialogWrapper
+class TENACITY_DLL_API FileDialogWrapper
    : public wxTabTraversalWrapper<FileDialog>
 {
 public:

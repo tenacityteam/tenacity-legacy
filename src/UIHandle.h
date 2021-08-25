@@ -30,7 +30,7 @@ struct TrackPanelMouseState;
 // A TrackPanelCell reports a handle object of some subclass, in response to a
 // hit test at a mouse position; then this handle processes certain events,
 // and maintains necessary state through click-drag-release event sequences.
-class AUDACITY_DLL_API UIHandle /* not final */ : public TrackPanelDrawable
+class TENACITY_DLL_API UIHandle /* not final */ : public TrackPanelDrawable
 {
 public:
    // See RefreshCode.h for bit flags:

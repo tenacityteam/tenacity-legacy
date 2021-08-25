@@ -28,7 +28,7 @@ class AdornedRulerPanel;
 class AudacityProject;
 class CommandContext;
 
-class AUDACITY_DLL_API ScreenshotCommand : public AudacityCommand
+class TENACITY_DLL_API ScreenshotCommand : public AudacityCommand
 {
 public:
    enum kBackgrounds

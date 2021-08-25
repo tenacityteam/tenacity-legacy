@@ -15,19 +15,19 @@ Paul Licameli split from Menus.cpp
 
 #include "commands/CommandFlag.h"
 
-AUDACITY_DLL_API
+TENACITY_DLL_API
 bool EditableTracksSelectedPred( const AudacityProject &project );
 
-AUDACITY_DLL_API
+TENACITY_DLL_API
 bool AudioIOBusyPred( const AudacityProject &project );
 
-AUDACITY_DLL_API
+TENACITY_DLL_API
 bool TimeSelectedPred( const AudacityProject &project );
 
-AUDACITY_DLL_API
+TENACITY_DLL_API
 const CommandFlagOptions &cutCopyOptions();
 
-extern AUDACITY_DLL_API const ReservedCommandFlag
+extern TENACITY_DLL_API const ReservedCommandFlag
    &AudioIONotBusyFlag(),
    &StereoRequiredFlag(),  //lda
    &NoiseReductionTimeSelectedFlag(),
@@ -38,11 +38,11 @@ extern AUDACITY_DLL_API const ReservedCommandFlag
    &AnyTracksSelectedFlag(),
    &TrackPanelHasFocus();  //lll
 
-extern AUDACITY_DLL_API const ReservedCommandFlag
+extern TENACITY_DLL_API const ReservedCommandFlag
    &AudioIOBusyFlag(), // lll
    &CaptureNotBusyFlag();
 
-extern AUDACITY_DLL_API const ReservedCommandFlag
+extern TENACITY_DLL_API const ReservedCommandFlag
    &LabelTracksExistFlag(),
    &UnsavedChangesFlag(),
    &UndoAvailableFlag(),

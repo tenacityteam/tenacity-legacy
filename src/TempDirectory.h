@@ -18,17 +18,17 @@ class wxWindow;
 
 namespace TempDirectory
 {
-   AUDACITY_DLL_API wxString TempDir();
-   AUDACITY_DLL_API void ResetTempDir();
+   TENACITY_DLL_API wxString TempDir();
+   TENACITY_DLL_API void ResetTempDir();
 
-   AUDACITY_DLL_API const FilePath &DefaultTempDir();
-   AUDACITY_DLL_API void SetDefaultTempDir( const FilePath &tempDir );
-   AUDACITY_DLL_API bool IsTempDirectoryNameOK( const FilePath & Name );
+   TENACITY_DLL_API const FilePath &DefaultTempDir();
+   TENACITY_DLL_API void SetDefaultTempDir( const FilePath &tempDir );
+   TENACITY_DLL_API bool IsTempDirectoryNameOK( const FilePath & Name );
 
    // Create a filename for an unsaved/temporary project file
-   AUDACITY_DLL_API wxString UnsavedProjectFileName();
+   TENACITY_DLL_API wxString UnsavedProjectFileName();
 
-   AUDACITY_DLL_API bool FATFilesystemDenied(const FilePath &path,
+   TENACITY_DLL_API bool FATFilesystemDenied(const FilePath &path,
                             const TranslatableString &msg,
                             wxWindow *window = nullptr);
 };

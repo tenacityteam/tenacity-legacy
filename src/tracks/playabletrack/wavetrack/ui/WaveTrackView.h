@@ -23,7 +23,7 @@ class WaveTrack;
 class WaveTrackView;
 class WaveClip;
 
-class AUDACITY_DLL_API WaveTrackSubView : public CommonTrackView
+class TENACITY_DLL_API WaveTrackSubView : public CommonTrackView
 {
 public:
 
@@ -69,7 +69,7 @@ using WaveTrackSubViews = ClientData::Site<
    WaveTrackView, WaveTrackSubView, ClientData::SkipCopying, std::shared_ptr
 >;
 
-class AUDACITY_DLL_API WaveTrackView final
+class TENACITY_DLL_API WaveTrackView final
    : public CommonTrackView
    , public WaveTrackSubViews
 {
@@ -165,7 +165,7 @@ class SelectedRegion;
 class WaveClip;
 class ZoomInfo;
 
-struct AUDACITY_DLL_API ClipParameters
+struct TENACITY_DLL_API ClipParameters
 {
    // Do a bunch of calculations common to waveform and spectrum drawing.
    ClipParameters

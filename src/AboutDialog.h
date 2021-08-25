@@ -27,7 +27,7 @@ struct AboutDialogCreditItem
 
 using AboutDialogCreditItemsList = std::vector<AboutDialogCreditItem>;
 
-class AUDACITY_DLL_API AboutDialog final : public wxDialogWrapper{
+class TENACITY_DLL_API AboutDialog final : public wxDialogWrapper{
     DECLARE_DYNAMIC_CLASS(AboutDialog)
 
     public:

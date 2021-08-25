@@ -83,12 +83,12 @@ namespace WaveTrackViewConstants
    Display ConvertLegacyDisplayValue(int oldValue);
 
    //! String identifier for a preference for one of each type of view
-   extern AUDACITY_DLL_API const EnumValueSymbol MultiViewSymbol;
+   extern TENACITY_DLL_API const EnumValueSymbol MultiViewSymbol;
 }
 
 #include <vector>
 
-struct AUDACITY_DLL_API WaveTrackSubViewType {
+struct TENACITY_DLL_API WaveTrackSubViewType {
    using Display = WaveTrackViewConstants::Display;
 
    // Identifies the type session-wide, and determines relative position in
@@ -105,7 +105,7 @@ struct AUDACITY_DLL_API WaveTrackSubViewType {
    { return id == other.id; }
 
    // Typically a file scope statically constructed object
-   struct AUDACITY_DLL_API RegisteredType {
+   struct TENACITY_DLL_API RegisteredType {
       RegisteredType( WaveTrackSubViewType type );
    };
 

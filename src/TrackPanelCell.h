@@ -34,7 +34,7 @@ using UIHandlePtr = std::shared_ptr<UIHandle>;
 
 /// \brief The TrackPanel is built up of nodes, subtrees of the CellularPanel's area
 /// Common base class for TrackPanelCell (leaf) and TrackPanelGroup (nonleaf)
-class AUDACITY_DLL_API /* not final */ TrackPanelNode
+class TENACITY_DLL_API /* not final */ TrackPanelNode
    : public TrackPanelDrawable
 {
 public:
@@ -43,7 +43,7 @@ public:
 };
 
 // A node of the TrackPanel that contains other nodes.
-class AUDACITY_DLL_API TrackPanelGroup /* not final */ : public TrackPanelNode
+class TENACITY_DLL_API TrackPanelGroup /* not final */ : public TrackPanelNode
 {
 public:
    TrackPanelGroup();
@@ -70,7 +70,7 @@ public:
 
 /// Abstract base class defining TrackPanel's access to specialist classes that
 /// implement drawing and user interactions
-class AUDACITY_DLL_API TrackPanelCell /* not final */ : public TrackPanelNode
+class TENACITY_DLL_API TrackPanelCell /* not final */ : public TrackPanelNode
 {
 public:
    TrackPanelCell() = default;

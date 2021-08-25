@@ -66,11 +66,11 @@ bool ValidateDeviceNames();
 #define MAX_MIDI_BUFFER_SIZE 5000
 #define DEFAULT_SYNTH_LATENCY 5
 
-wxDECLARE_EXPORTED_EVENT(AUDACITY_DLL_API,
+wxDECLARE_EXPORTED_EVENT(TENACITY_DLL_API,
                          EVT_AUDIOIO_PLAYBACK, wxCommandEvent);
-wxDECLARE_EXPORTED_EVENT(AUDACITY_DLL_API,
+wxDECLARE_EXPORTED_EVENT(TENACITY_DLL_API,
                          EVT_AUDIOIO_CAPTURE, wxCommandEvent);
-wxDECLARE_EXPORTED_EVENT(AUDACITY_DLL_API,
+wxDECLARE_EXPORTED_EVENT(TENACITY_DLL_API,
                          EVT_AUDIOIO_MONITOR, wxCommandEvent);
 
 // PRL:
@@ -228,7 +228,7 @@ void MessageBuffer<Data>::Write( Data &&data )
    mSlots[idx].mBusy.store( false, std::memory_order_release );
 }
 
-class AUDACITY_DLL_API AudioIoCallback /* not final */
+class TENACITY_DLL_API AudioIoCallback /* not final */
    : public AudioIOBase
 {
 public:
@@ -580,7 +580,7 @@ protected:
    PlaybackSchedule mPlaybackSchedule;
 };
 
-class AUDACITY_DLL_API AudioIO final : public AudioIoCallback
+class TENACITY_DLL_API AudioIO final : public AudioIoCallback
 {
 
    AudioIO();
