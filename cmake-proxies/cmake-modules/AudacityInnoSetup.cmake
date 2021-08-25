@@ -27,6 +27,7 @@ if( INNO_SETUP_COMPILER )
                 -DSIGN=${${_OPT}perform_codesign}
                 -DWINDOWS_CERTIFICATE=${WINDOWS_CERTIFICATE}
                 -D WINDOWS_CERTIFICATE_PASSWORD=${WINDOWS_CERTIFICATE_PASSWORD}
+                -D CMAKE_BUILD_TYPE=${CMAKE_BUILD_TYPE}
                 -P "${CMAKE_SOURCE_DIR}/win/Inno_Setup_Wizard/BuildInnoSetupInstaller.cmake"
                 -parallel ${CMAKE_BUILD_PARALLEL_LEVEL}
         VERBATIM

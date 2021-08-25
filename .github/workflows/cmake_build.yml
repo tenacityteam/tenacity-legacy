@@ -219,8 +219,9 @@ jobs:
         if [[ ${{runner.os}} == "Windows" ]]; then
           cmake --build build --target innosetup --config ${{ env.CMAKE_BUILD_TYPE }}
         else
-          cpack -B build -C ${{ env.CMAKE_BUILD_TYPE }} -D CPACK_COMMAND_HDIUTIL=${{ env.CPACK_COMMAND_HDIUTIL }} --verbose
-          rm -r build/package/_CPack_Packages
+          cd build
+          cpack -C ${{ env.CMAKE_BUILD_TYPE }} -D CPACK_COMMAND_HDIUTIL=${{ env.CPACK_COMMAND_HDIUTIL }} --verbose
+          rm -r /package/_CPack_Packages
         fi
       env:
         # Workaround for CPack hdiutil/ finder service race condition bug
