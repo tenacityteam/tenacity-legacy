@@ -248,18 +248,13 @@
           "path": "patches/audacity-suil-fix.patch"
         },
         {
+          "type": "file",
+          "path": "tenacity.sh"
+        },
+        {
           "type": "shell",
           "commands": [
             "sed -e '42i <release version=\"master\" date=\"2021-08-12\"/>' -i help/tenacity.metainfo.xml"
-          ]
-        },
-        {
-          "type": "script",
-          "dest-filename": "tenacity.sh",
-          "commands": [
-            "# FIXME following variable needs to be fixed in CMake.",
-            "export LD_LIBRARY_PATH=/app/lib/tenacity",
-            "tenacity"
           ]
         }
       ]
