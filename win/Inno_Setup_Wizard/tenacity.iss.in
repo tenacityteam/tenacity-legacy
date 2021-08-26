@@ -3,10 +3,6 @@
 ;   License: GPL v2.  See License.txt.
 ;
 ;   tenacity.iss
-;   Vaughan Johnson, Leland Lucius, Martyn Shaw, Richard Ash, & others
-;
-
-; This requires that the ISS Preprocessor be installed
 
 #define AppExe "Package\tenacity.exe"
 #define AppMajor ""
@@ -19,41 +15,37 @@
 
 [UninstallRun]
 ; Uninstall prior installations.
-Filename: "{app}\unins*.*";
+Filename: "{app}\unins*.*"; RunOnceId: "UninstallPrior"
 
 [Setup]
-; compiler-related directives
-OutputBaseFilename=tenacity-win-{#AppVersion}-@INSTALLER_SUFFIX@
+; Icons
+SetupIconFile="Additional\tenacity.ico"
+UninstallDisplayIcon="{app}\tenacity.exe"
+WizardImageFile=".\tenacity_InnoWizardImage.bmp"
+WizardSmallImageFile=".\tenacity_InnoWizardSmallImage.bmp"
 
-; Use 100% images by default
-WizardImageFile=".\tenacity_InnoWizardImage_100.bmp"
-WizardSmallImageFile=".\tenacity_InnoWizardSmallImage_100.bmp"
-
-SolidCompression=yes
-
-; installer-related directives
-; From Inno 5.5.7, Inno defaults to disabling the Welcome page as recommended
-; by Microsoft's desktop applications guideline, but we don't want to do that.
-DisableWelcomePage=no
-
+; App/Version information
 AppName={#AppName}
 AppVerName=Tenacity {#AppVersion}
-; Specify AppVersion as well, so it appears in the Add/Remove Programs entry.
 AppVersion={#AppVersion}
 AppPublisher="Tenacity Team"
 AppPublisherURL=https://tenacityaudio.org/
 AppSupportURL=https://tenacityaudio.org/
 AppUpdatesURL=https://tenacityaudio.org/
-ChangesAssociations=yes
-@INSTALLER_X64_MODE@
-
-DefaultDirName={commonpf}\Tenacity
-
 VersionInfoProductName={#AppName}
 VersionInfoProductTextVersion={#GetFileProductVersion(AppExe)}
 VersionInfoDescription={#AppName + " " + AppVersion + " Setup"}
 VersionInfoVersion={#GetVersionNumbersString(AppExe)}
 VersionInfoCopyright={#GetFileCopyright(AppExe)}
+
+; Default install location
+DefaultDirName={commonpf}\Tenacity
+
+; Tells explorer to refresh file assocations to pickup any changes
+ChangesAssociations=yes
+
+; Does package->compress instead of compress->package
+SolidCompression=yes
 
 ; Don't disable the "Select Destination Location" wizard, even if
 ; Tenacity is already installed.
@@ -62,22 +54,20 @@ DisableDirPage=no
 ; Always warn if dir exists, because we'll overwrite previous Tenacity.
 DirExistsWarning=yes
 DisableProgramGroupPage=yes
-UninstallDisplayIcon="{app}\tenacity.exe"
 
-; No longer force them to accept the license, just display it.   LicenseFile=..\LICENSE.txt
+; Always show welcome page
+DisableWelcomePage=no
+
+; Display license information before install
 InfoBeforeFile=".\tenacity_InnoWizard_InfoBefore.rtf"
-InfoAfterFile=Additional\README.md
 
-; We no longer produce new ANSI builds.
-; As we use Inno Setup (u), the Unicode version, to build this script,
-; the MinVersion will automatically be set to what we need.
-; We no longer explicitly set it.
-;   MinVersion=4.0,5.0
+; Display README after install
+InfoAfterFile=Additional\README.rtf
 
-; cosmetic-related directives
-SetupIconFile="Additional\tenacity.ico"
-
+; Directives using information passed by CMake
+@INSTALLER_X64_MODE@
 @SIGN_TOOL@
+OutputBaseFilename=tenacity-win-{#AppVersion}-@INSTALLER_SUFFIX@
 
 [INI]
 Filename: "{app}\FirstTime.ini"; Section: "FromInno"; Key: "ResetPrefs"; String: "1"; Tasks: resetPrefs;
@@ -163,31 +153,30 @@ Name: "{commonprograms}\Tenacity"; Filename: "{app}\tenacity.exe"
 Name: "{commondesktop}\Tenacity"; Filename: "{app}\tenacity.exe"; Tasks: desktopicon
 
 [InstallDelete]
-; Get rid of Tenacity 1.0.0 stuff that's no longer used.
-Type: files; Name: "{app}\tenacity-help.htb"
-Type: files; Name: "{app}\tenacity-1.2-help.htb"
 
-; Get rid of previous versions of MSVC runtimes.
+; Get rid of previous versions of MSVC runtimes
+; Currently MSVC runtime versions 8, 9, 10, 11, 12, 13
 Type: files; Name: "{app}\Microsoft.VC80.CRT.manifest"
-Type: files; Name: "{app}\Microsoft.VC90.CRT.manifest"
 Type: files; Name: "{app}\msvcp80.dll"
 Type: files; Name: "{app}\msvcr80.dll"
+Type: files; Name: "{app}\Microsoft.VC90.CRT.manifest"
 Type: files; Name: "{app}\msvcp90.dll"
 Type: files; Name: "{app}\msvcr90.dll"
+Type: files; Name: "{app}\Microsoft.VC100.CRT.manifest"
+Type: files; Name: "{app}\msvcp100.dll"
+Type: files; Name: "{app}\msvcr100.dll"
+Type: files; Name: "{app}\Microsoft.VC110.CRT.manifest"
+Type: files; Name: "{app}\msvcp110.dll"
+Type: files; Name: "{app}\msvcr110.dll"
+Type: files; Name: "{app}\Microsoft.VC120.CRT.manifest"
 Type: files; Name: "{app}\msvcp120.dll"
 Type: files; Name: "{app}\msvcr120.dll"
+Type: files; Name: "{app}\Microsoft.VC130.CRT.manifest"
+Type: files; Name: "{app}\msvcp130.dll"
+Type: files; Name: "{app}\msvcr130.dll"
 
 ; Get rid of previous help folder.
 Type: filesandordirs; Name: "{app}\help"
-
-; Don't want to do this because user may have stored their own.
-;   Type: filesandordirs; Name: "{app}\vst"
-
-; We've switched from a folder in the start menu to just the Tenacity.exe at the top level.
-; Get rid of 1.0.0 folder and its icons.
-Type: files; Name: "{commonprograms}\Tenacity\tenacity.exe"
-Type: files; Name: "{commonprograms}\Tenacity\unins000.exe"
-Type: dirifempty; Name: "{commonprograms}\Tenacity"
 
 ;Get rid of previous uninstall item
 Type: files; Name: "{app}\unins*.*"
@@ -248,7 +237,7 @@ Filename: "{app}\tenacity.exe"; Description: "{cm:LaunchProgram,Tenacity}"; Flag
 ; http://www.jrsoftware.org/files/istrans/
 ;
 ; Set this to the base of the unofficial  Inno Setup translations
-#define UrlBase "http://raw.github.com/jrsoftware/issrc/master/Files/Languages/Unofficial/"
+#define UrlBase "https://raw.githubusercontent.com/jrsoftware/issrc/main/Files/Languages/Unofficial/"
 
 ; This macro will use the Windows PowerShell to download the given translation into
 ; the Inno Setup Languages folder if it hasn't already been downloaded.

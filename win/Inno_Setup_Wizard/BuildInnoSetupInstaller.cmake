@@ -4,13 +4,13 @@
 # SOURCE_DIR - should be set to CMAKE_SOURCE_DIR by teh caller
 # OUTPUT_DIR - directory, where installer will be built
 # INNO_SETUP_COMPILER - InnoSetup compiler executable
-# BUILDING_64_BIT - Flag, that indicates that we are building a 64-bit installer
+# IS_64_BIT - Flag, that indicates that we are building a 64-bit installer
 # EMBED_MANUAL - embed a fresh copy of manual
 # SIGN - sign the installer
 # WINDOWS_CERTIFICATE - path to PFX file. If not present, env:WINDOWS_CERTIFICATE will be used
 # WINDOWS_CERTIFICATE_PASSWORD - password for the PFX file. If not present, env:WINDOWS_CERTIFICATE_PASSWORD will be used
 
-if( BUILDING_64_BIT )
+if( IS_64_BIT )
     set( INSTALLER_SUFFIX "x64" )
     set( INSTALLER_X64_MODE "ArchitecturesInstallIn64BitMode=x64")
 else()
@@ -50,8 +50,9 @@ file(COPY "${SOURCE_DIR}/presets" DESTINATION "${OUTPUT_DIR}/Additional")
 
 file(COPY
         "${SOURCE_DIR}/LICENSE.txt"
-        "${SOURCE_DIR}/README.md"
+        "${SOURCE_DIR}/win/README.rtf"
         "${SOURCE_DIR}/win/tenacity.ico"
+        "${SOURCE_DIR}/win/darktenacity.ico"
     DESTINATION
         "${OUTPUT_DIR}/Additional"
 )
@@ -70,7 +71,7 @@ execute_process(
 
 execute_process(
     COMMAND
-        ${INNO_SETUP_COMPILER} /Sbyparam=$p "tenacity.iss"
+        ${INNO_SETUP_COMPILER} /Sbyparam=$p "tenacity.iss" /Qp
     WORKING_DIRECTORY
         ${OUTPUT_DIR}
 )
