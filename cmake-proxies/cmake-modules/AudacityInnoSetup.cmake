@@ -23,11 +23,12 @@ if( INNO_SETUP_COMPILER )
                 -DOUTPUT_DIR=${TEMP_PACKAGE_PATH}
                 -DINNO_SETUP_COMPILER=${INNO_SETUP_COMPILER}
                 -DEMBED_MANUAL=${${_OPT}package_manual}
-                -DBUILDING_64_BIT=${IS_64BIT}
+                -DIS_64_BIT=${IS_64BIT}
                 -DSIGN=${${_OPT}perform_codesign}
                 -DWINDOWS_CERTIFICATE=${WINDOWS_CERTIFICATE}
                 -D WINDOWS_CERTIFICATE_PASSWORD=${WINDOWS_CERTIFICATE_PASSWORD}
                 -P "${CMAKE_SOURCE_DIR}/win/Inno_Setup_Wizard/BuildInnoSetupInstaller.cmake"
+                -D CMAKE_BUILD_TYPE=${CMAKE_BUILD_TYPE}
                 -parallel ${CMAKE_BUILD_PARALLEL_LEVEL}
         VERBATIM
     )
