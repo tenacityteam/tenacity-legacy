@@ -8,18 +8,18 @@
 
 ; This requires that the ISS Preprocessor be installed
 
-#define AppExe "Package\tenacity.exe" 
+#define AppExe "Package\tenacity.exe"
 #define AppMajor ""
 #define AppMinor ""
 #define AppRev ""
 #define AppBuild ""
-#define FullVersion ParseVersion(AppExe, AppMajor, AppMinor, AppRev, AppBuild)
+#define FullVersion GetVersionComponents(AppExe, AppMajor, AppMinor, AppRev, AppBuild)
 #define AppVersion Str(AppMajor) + "." + Str(AppMinor) + "." + Str(AppRev)
 #define AppName GetStringFileInfo(AppExe, PRODUCT_NAME)
 
 [UninstallRun]
 ; Uninstall prior installations.
-Filename: "{app}\unins*.*"; 
+Filename: "{app}\unins*.*";
 
 [Setup]
 ; compiler-related directives
@@ -32,13 +32,13 @@ WizardSmallImageFile=".\tenacity_InnoWizardSmallImage_100.bmp"
 SolidCompression=yes
 
 ; installer-related directives
-; From Inno 5.5.7, Inno defaults to disabling the Welcome page as recommended 
+; From Inno 5.5.7, Inno defaults to disabling the Welcome page as recommended
 ; by Microsoft's desktop applications guideline, but we don't want to do that.
 DisableWelcomePage=no
 
 AppName={#AppName}
 AppVerName=Tenacity {#AppVersion}
-; Specify AppVersion as well, so it appears in the Add/Remove Programs entry. 
+; Specify AppVersion as well, so it appears in the Add/Remove Programs entry.
 AppVersion={#AppVersion}
 AppPublisher="Tenacity Team"
 AppPublisherURL=https://tenacityaudio.org/
@@ -52,10 +52,10 @@ DefaultDirName={commonpf}\Tenacity
 VersionInfoProductName={#AppName}
 VersionInfoProductTextVersion={#GetFileProductVersion(AppExe)}
 VersionInfoDescription={#AppName + " " + AppVersion + " Setup"}
-VersionInfoVersion={#GetFileVersion(AppExe)}
+VersionInfoVersion={#GetVersionNumbersString(AppExe)}
 VersionInfoCopyright={#GetFileCopyright(AppExe)}
 
-; Don't disable the "Select Destination Location" wizard, even if 
+; Don't disable the "Select Destination Location" wizard, even if
 ; Tenacity is already installed.
 DisableDirPage=no
 
@@ -68,9 +68,9 @@ UninstallDisplayIcon="{app}\tenacity.exe"
 InfoBeforeFile=".\tenacity_InnoWizard_InfoBefore.rtf"
 InfoAfterFile=Additional\README.md
 
-; We no longer produce new ANSI builds. 
-; As we use Inno Setup (u), the Unicode version, to build this script, 
-; the MinVersion will automatically be set to what we need. 
+; We no longer produce new ANSI builds.
+; As we use Inno Setup (u), the Unicode version, to build this script,
+; the MinVersion will automatically be set to what we need.
 ; We no longer explicitly set it.
 ;   MinVersion=4.0,5.0
 
@@ -217,7 +217,7 @@ Type: files; Name: "{app}\Plug-Ins\gverb_1216.dll"
 Type: files; Name: "{app}\Plug-Ins\crossfadein.ny"
 Type: files; Name: "{app}\Plug-Ins\crossfadeout.ny"
 Type: files; Name: "{app}\Plug-Ins\clicktrack.ny"
-                                            
+
 [Registry]
 ; No longer allow user to choose whether to associate AUP file type with Tenacity.
 ; Leaving this one commented out example of the old way.

@@ -48,21 +48,22 @@ configure_file("${OUTPUT_DIR}/tenacity.iss.in" "${OUTPUT_DIR}/tenacity.iss")
 
 file(COPY "${SOURCE_DIR}/presets" DESTINATION "${OUTPUT_DIR}/Additional")
 
-file(COPY 
+file(COPY
         "${SOURCE_DIR}/LICENSE.txt"
         "${SOURCE_DIR}/README.md"
         "${SOURCE_DIR}/win/tenacity.ico"
-    DESTINATION 
+    DESTINATION
         "${OUTPUT_DIR}/Additional"
 )
 
 # "Install" prebuilt package
 
 execute_process(
-    COMMAND 
+    COMMAND
         ${CMAKE_COMMAND}
             --install ${BUILD_DIR}
             --prefix "${OUTPUT_DIR}/Package"
+            --config ${CMAKE_BUILD_TYPE}
 )
 
 # Build the installer
