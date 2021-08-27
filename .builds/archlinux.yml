@@ -1,0 +1,40 @@
+image: archlinux
+packages:
+  - cmake
+  - ninja
+
+  - expat
+  - gcc-libs
+  - gdk-pixbuf2
+  - glibc
+  - flac
+  - gtk3
+  - glib2
+  - libid3tag
+  - lilv
+  - libmad
+  - libogg
+  - portaudio
+  - portmidi
+  - portsmf
+  - libsndfile
+  - libsoxr
+  - suil
+  - twolame
+  - vamp-plugin-sdk
+  - libvorbis
+  - soundtouch
+  - ffmpeg
+
+sources:
+  - https://git.sr.ht/~tenacity/tenacity
+tasks:
+  - wxwidgets3-1: |
+      git clone https://github.com/wxWidgets/wxWidgets.git
+      cd wxWidgets
+      git checkout v3.1.5
+      cmake -G Ninja -S . -B cmake_build
+      cmake --build cmake_build
+      sudo cmake --install cmake_build
+  - configure: cmake -G Ninja -S tenacity -B build
+  - build: cmake --build build
