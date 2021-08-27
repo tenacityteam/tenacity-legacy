@@ -83,8 +83,8 @@ Name: resetPrefs; Description:  "{cm:ResetPrefs}"; Flags: unchecked
 ; Prime the first time .ini file so the permissions can be set
 Source: ".\FirstTimeModel.ini"; DestDir: "{app}"; DestName: "FirstTime.ini"; Permissions: users-modify
 
-; Don't display in separate window, rather as InfoAfterFile.   Source: "..\README.md"; DestDir: "{app}"; Flags: ignoreversion isreadme
-Source: "Additional\README.md"; DestDir: "{app}"; Flags: ignoreversion
+; Manually create RTF version of README
+Source: "Additional\README.rtf"; DestDir: "{app}"; Flags: ignoreversion
 
 Source: "Additional\LICENSE.txt"; DestDir: "{app}"; Flags: ignoreversion
 Source: "{#AppExe}"; DestDir: "{app}"; Flags: ignoreversion
