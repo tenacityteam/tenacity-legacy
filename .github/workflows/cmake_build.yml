@@ -81,7 +81,7 @@ jobs:
       WINDOWS_CERTIFICATE: ${{ secrets.WINDOWS_CERTIFICATE }}
       WINDOWS_CERTIFICATE_PASSWORD: ${{ secrets.WINDOWS_CERTIFICATE_PASSWORD }}
 
-      # WxWidgets info for linux builds
+      # WxWidgets info for Linux and macOS builds
       WX_GIT_URL: https://github.com/wxWidgets/wxWidgets.git
       WX_GIT_REF: v3.1.5
 
@@ -143,14 +143,14 @@ jobs:
     - name: "[On Push] Authenticate CI to Github Packages"
       if: github.event_name == 'push' && github.repository_owner == 'tenacityteam'
       run: |
-        nuget sources Add -Name Github -Source https://nuget.pkg.github.com/tenacityteam/index.json --username tenacityteam --password ${{ secrets.GITHUB_TOKEN }}
+        nuget sources Add -Name Github -Source https://nuget.pkg.github.com/tenacityteam/index.json -storepasswordincleartext --username tenacityteam --password ${{ secrets.GITHUB_TOKEN }}
         nuget setapikey tenacityteam:${{ secrets.GITHUB_TOKEN }} -Source Github -ForceEnglishOutput -NonInteractive
 
     - name: Install dependencies
       run: |
         exec bash "${{ github.workspace }}/scripts/ci/dependencies.sh"
 
-    # Cache the vcpkg executable to avoid having to bootstrap vcpkg every time
+    # Cache the vcpkg cache and the vcpkg executable to avoid bootstrapping each time
     - name: Setup vcpkg cache
       uses: actions/cache@v2
       with:
@@ -183,7 +183,6 @@ jobs:
         cmake  -D CMAKE_BUILD_TYPE=${{ env.CMAKE_BUILD_TYPE }}  -D CMAKE_INSTALL_PREFIX=${{ env.WX_INSTALL_DIR }} -B cmake_build
         cmake --build cmake_build
         cmake --install cmake_build
-        cd ../
 
     - name: Set up compiler cache
       uses: actions/cache@v2
@@ -199,11 +198,13 @@ jobs:
     - name: "[Windows] Install yasm"
       if: runner.os == 'Windows'
       run: |
-        mkdir -p "vcpkg/downloads/tools/yasm/1.3.0.6"
-        curl -k -o "vcpkg/downloads/tools/yasm/1.3.0.6/yasm.exe" "http://www.tortall.net/projects/yasm/snapshots/v1.3.0.6.g1962/yasm-1.3.0.6.g1962.exe"
+        mkdir -p "${YASM_OUTPUT_DIR}"
+        curl -k -o "${YASM_OUTPUT_DIR}/yasm.exe" "http://www.tortall.net/projects/yasm/snapshots/v1.3.0.6.g1962/yasm-1.3.0.6.g1962.exe"
+      env:
+        YASM_OUTPUT_DIR: vcpkg/downloads/tools/yasm/1.3.0.6
 
     - name: Configure
-      run: cmake -D CMAKE_BUILD_TYPE=${{ env.CMAKE_BUILD_TYPE }} -D CMAKE_INSTALL_PREFIX=${{ github.workspace }}/build/install -D VCPKG=ON -B build
+      run: cmake -B build -D VCPKG=ON -D CMAKE_BUILD_TYPE=${{ env.CMAKE_BUILD_TYPE }} -D CMAKE_INSTALL_PREFIX=${{ github.workspace }}/build/install
 
     - name: Build
       run: cmake --build build --config ${{ env.CMAKE_BUILD_TYPE }} --verbose
