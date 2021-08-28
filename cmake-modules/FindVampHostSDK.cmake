@@ -49,23 +49,35 @@ find_path(VampHostSDK_INCLUDE_DIR
   DOC "VampHostSDK include directory")
 mark_as_advanced(VampHostSDK_INCLUDE_DIR)
 
-find_library(VampHostSDK_LIBRARY
-  NAMES vamp-hostsdk
+find_library(VampHostSDK_LIBRARY_RELEASE
+  NAMES vamp-hostsdk libvamp-hostsdk
   PATHS ${PC_VampHostSDK_LIBRARY_DIRS}
-  DOC "VampHostSDK library"
+  DOC "VampHostSDK release library"
 )
-mark_as_advanced(VampHostSDK_LIBRARY)
+
+find_library(VampHostSDK_LIBRARY_DEBUG
+  NAMES vamp-hostsdkd libvamp-hostsdkd vamp-hostsdk libvamp-hostsdk
+  PATHS ${PC_VampHostSDK_LIBRARY_DIRS}
+  DOC "VampHostSDK debug library"
+)
 
 include(FindPackageHandleStandardArgs)
+
 find_package_handle_standard_args(
   VampHostSDK
   DEFAULT_MSG
-  VampHostSDK_LIBRARY
+  VampHostSDK_LIBRARY_DEBUG
+  VampHostSDK_INCLUDE_DIR
+)
+
+find_package_handle_standard_args(
+  VampHostSDK
+  DEFAULT_MSG
+  VampHostSDK_LIBRARY_RELEASE
   VampHostSDK_INCLUDE_DIR
 )
 
 if(VampHostSDK_FOUND)
-  set(VampHostSDK_LIBRARIES "${VampHostSDK_LIBRARY}")
   set(VampHostSDK_INCLUDE_DIRS "${VampHostSDK_INCLUDE_DIR}")
   set(VampHostSDK_DEFINITIONS ${PC_VampHostSDK_CFLAGS_OTHER})
 
@@ -73,7 +85,8 @@ if(VampHostSDK_FOUND)
     add_library(VampHostSDK::VampHostSDK UNKNOWN IMPORTED)
     set_target_properties(VampHostSDK::VampHostSDK
       PROPERTIES
-        IMPORTED_LOCATION "${VampHostSDK_LIBRARY}"
+        IMPORTED_LOCATION_DEBUG "${VampHostSDK_LIBRARY_DEBUG}"
+        IMPORTED_LOCATION ${VampHostSDK_LIBRARY_RELEASE}
         INTERFACE_COMPILE_OPTIONS "${PC_VampHostSDK_CFLAGS_OTHER}"
         INTERFACE_INCLUDE_DIRECTORIES "${VampHostSDK_INCLUDE_DIR}"
     )
