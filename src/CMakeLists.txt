@@ -1113,7 +1113,7 @@ if( CMAKE_SYSTEM_NAME MATCHES "Windows" )
   add_custom_command(
     TARGET ${TARGET}
     COMMAND ${CMAKE_COMMAND}
-            -D SRC="${_EXEDIR}/Tenacity.exe"
+            -D SRC="${_EXEDIR}/${AUDACITY_NAME}.exe"
             -D DST="${_EXEDIR}"
             -D WXWIN="${_SHARED_PROXY_BASE_PATH}/$<CONFIG>/"
             -P "${AUDACITY_MODULE_PATH}/CopyLibs.cmake"
@@ -1191,7 +1191,7 @@ elseif( CMAKE_SYSTEM_NAME MATCHES "Darwin" )
   add_custom_command(
     TARGET ${TARGET}
     COMMAND ${CMAKE_COMMAND}
-      -D SRC="${_EXEDIR}/Tenacity"
+      -D SRC="${_EXEDIR}/${AUDACITY_NAME}Z"
       -D DST="${_PKGLIB}"
       -D WXWIN="${_SHARED_PROXY_BASE_PATH}/$<CONFIG>"
       -P "${AUDACITY_MODULE_PATH}/CopyLibs.cmake"
@@ -1273,7 +1273,7 @@ else()
   add_custom_command(
     TARGET ${TARGET}
     COMMAND ${CMAKE_COMMAND}
-           -D SRC="${_EXEDIR}/tenacity"
+           -D SRC="${_EXEDIR}/${AUDACITY_NAME}"
            -D DST="${_DEST}/${_PKGLIB}"
            -D WXWIN="${_SHARED_PROXY_BASE_PATH}/$<CONFIG>"
            -P "${AUDACITY_MODULE_PATH}/CopyLibs.cmake"
@@ -1297,8 +1297,8 @@ source_group(
   TREE "${_INTDIR}"
   PREFIX "CMake"
   FILES
-    ${_INTDIR}/CMakeFiles/Tenacity.dir/cmake_pch.cxx
-    ${_INTDIR}/CMakeFiles/Tenacity.dir/cmake_pch.hxx
+    ${_INTDIR}/CMakeFiles/${CMAKE_PROJECT_NAME}.dir/cmake_pch.cxx
+    ${_INTDIR}/CMakeFiles/${CMAKE_PROJECT_NAME}.dir/cmake_pch.hxx
 )
 
 # Define TENACITY_DLL_API

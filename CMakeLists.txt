@@ -40,10 +40,10 @@ cmake_policy( SET CMP0075 NEW )
 set( AUDACITY_BUILD_LEVEL 0 )
 
 # Define Tenacity's build output name
-if( CMAKE_SYSTEM_NAME MATCHES "Darwin|Windows" )
-  set( AUDACITY_NAME "Tenacity" )
+if( APPLE OR WIN32 )
+  set( AUDACITY_NAME "Tenacity")
 else()
-  set( AUDACITY_NAME "tenacity" )
+  set( AUDACITY_NAME "tenacity")
 endif()
 
 if(NOT GIT_FOUND)
