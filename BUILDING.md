@@ -83,9 +83,9 @@ Then install Tenacity's dependencies:
 sudo dnf install alsa-lib-devel cmake expat-devel flac-devel gcc-g++ gettext-devel lame-devel libid3tag-devel libmad-devel libogg-devel libsndfile-devel libvorbis-devel lilv-devel lv2-devel portaudio-devel portmidi-devel serd-devel sord-devel soundtouch-devel soxr-devel sqlite-devel sratom-devel suil-devel taglib-devel twolame-devel vamp-plugin-sdk-devel wxGTK-devel zlib-devel ccache ninja-build git ffmpeg-devel
 ```
 
-If you use a high DPI screen, the wxWidgets 3.1.4 package in Fedora does
-not work well for that. You can compile wxWidgets 3.1.5 instead of using
-the Fedora package. Refer to the
+If you use a high DPI screen, the wxWidgets 3.1.4 package in Fedora 34
+does not work well for that. You can compile wxWidgets 3.1.5 instead of
+using the Fedora package. Refer to the
 [wxWidgets documentation](https://docs.wxwidgets.org/3.1/overview_cmake.html)
 for details. If you install wxWidgets somewhere other than the default
 /usr/local, you need to set the `WX_CONFIG` environment variable to

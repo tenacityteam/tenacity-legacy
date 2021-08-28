@@ -1,0 +1,35 @@
+image: alpine/latest
+packages:
+  - cmake
+  - ffmpeg-dev
+  - lame-dev
+  - libid3tag-dev
+  - libmad-dev
+  - libsndfile-dev
+  - portaudio-dev
+  - portmidi-dev
+  - samurai
+  - soundtouch-dev
+  - soxr-dev
+  - sqlite-dev
+
+  - expat-dev
+  - gtk+3.0-dev
+  - libjpeg-turbo-dev
+  - libpng-dev
+  - tiff-dev
+  - zlib-dev
+sources:
+  - https://git.sr.ht/~tenacity/tenacity
+tasks:
+  - wxwidgets3-1: |
+      git clone https://github.com/wxWidgets/wxWidgets.git
+      cd wxWidgets
+      git checkout v3.1.5
+      git submodule update --init 3rdparty/catch
+      mkdir buildgtk && cd buildgtk
+      ../configure --with-gtk --disable-xlocale
+      make -j2
+      sudo make install
+  - configure: cmake -G Ninja -S tenacity -B build
+  - build: cmake --build build
