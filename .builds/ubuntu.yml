@@ -1,0 +1,48 @@
+image: ubuntu/focal
+packages:
+  - build-essential
+  - libavcodec-dev
+  - libavformat-dev
+  - libavutil-dev
+  - libflac++-dev
+  - libglib2.0-dev
+  - libgtk-3-dev
+  - libid3tag0-dev
+  - libjack-dev 
+  - liblilv-dev
+  - libmad0-dev
+  - libmp3lame-dev
+  - libogg-dev
+  - libpng-dev
+  - portaudio19-dev
+  - libportmidi-dev
+  - libserd-dev
+  - libsndfile1-dev
+  - libsord-dev
+  - libsoundtouch-dev
+  - libsoxr-dev
+  - libsuil-dev
+  - libtwolame-dev
+  - vamp-plugin-sdk
+  - libvorbis-dev
+  - lv2-dev
+  - zlib1g-dev
+  - cmake
+  - ninja-build
+  - libjpeg-dev
+  - libtiff-dev
+  - liblzma-dev
+  - libsqlite3-dev
+
+sources:
+  - https://git.sr.ht/~tenacity/tenacity
+tasks:
+  - wxwidgets3-1: |
+      git clone https://github.com/wxWidgets/wxWidgets.git
+      cd wxWidgets
+      git checkout v3.1.5
+      cmake -G Ninja -S . -B cmake_build
+      cmake --build cmake_build
+      sudo cmake --install cmake_build
+  - configure: cmake -G Ninja -S tenacity -B build
+  - build: cmake --build build
