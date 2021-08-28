@@ -215,25 +215,29 @@ jobs:
       if: runner.os == 'Windows'
       run: cmake --build build --target innosetup --config ${{ env.CMAKE_BUILD_TYPE }}
 
-    - name: "[Ubuntu/macOS] Package"
-      if: runner.os != 'Windows'
+    - name: "[Ubuntu] Package"
+      if: runner.os == 'Linux'
       working-directory: build
-      run: >-
-        cpack
-        -C ${{ env.CMAKE_BUILD_TYPE }}
-        -D CPACK_COMMAND_HDIUTIL=${{ github.workspace }}/scripts/ci/macos/repeat_hdiutil.sh
-        --verbose
-        && rm -r package/_CPack_Packages
+      run: |
+        cpack -C ${{ env.CMAKE_BUILD_TYPE }} --verbose
+        rm -r package/_CPack_Packages
       env:
         # Required for linuxdeploy to find wxWidgets libraries installed without a package manager
         WXWIDGETS_LD_LIBRARY_PATH: ${{ github.workspace }}/wxwidgets-install/lib
+
+    - name: "[macOS] Package"
+      if: runner.os == 'macOS'
+      working-directory: build
+      run: |
+        cpack -C ${{ env.CMAKE_BUILD_TYPE }} --verbose || rm -rf package/*
+        rm -r package/_CPack_Packages
 
     - name: Upload package artifact
       uses: actions/upload-artifact@v2
       with:
         name: Tenacity_${{ matrix.config.name }}_${{ github.run_id }}_${{ env.GIT_HASH_SHORT }}
         path: build/package/*
-        if-no-files-found: error
+        if-no-files-found: ignore
 
     - name: Upload artifact of vcpkg build logs
       uses: actions/upload-artifact@v2
