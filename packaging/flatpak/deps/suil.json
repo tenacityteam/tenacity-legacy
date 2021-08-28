@@ -1,0 +1,29 @@
+{
+      "name": "suil",
+      "buildsystem": "simple",
+      "build-commands": [
+        "python3 ./waf configure --prefix=/app",
+        "python3 ./waf build -j $FLATPAK_BUILDER_N_JOBS",
+        "python3 ./waf install"
+      ],
+      "cleanup": [
+        "/include",
+        "/lib/pkgconfig"
+      ],
+      "sources": [
+        {
+          "type": "archive",
+          "url": "http://download.drobilla.net/suil-0.10.10.tar.bz2",
+          "sha256": "750f08e6b7dc941a5e694c484aab02f69af5aa90edcc9fb2ffb4fb45f1574bfb"
+        }
+      ],
+      "post-install": [
+        "install -Dm644 -t /app/share/licenses/suil COPYING"
+      ],
+      "cleanup": [
+        "/bin",
+        "/etc",
+        "/include",
+        "/share/man"
+      ]
+}

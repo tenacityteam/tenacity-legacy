@@ -1,0 +1,218 @@
+{
+  "app-id": "org.tenacityaudio.Tenacity",
+  "runtime": "org.gnome.Platform",
+  "runtime-version": "40",
+  "sdk": "org.gnome.Sdk",
+  "command": "tenacity",
+  "rename-desktop-file": "tenacity.desktop",
+  "rename-icon": "tenacity",
+  "rename-appdata-file": "tenacity.metainfo.xml",
+  "finish-args": [
+    "--share=ipc",
+    "--socket=x11",
+    "--socket=pulseaudio",
+    "--filesystem=xdg-run/pipewire-0",
+    "--system-talk-name=org.freedesktop.RealtimeKit1",
+    "--device=all",
+    "--filesystem=host",
+    "--env=ALSA_CONFIG_PATH=",
+    "--env=LADSPA_PATH=/app/extensions/Plugins/ladspa",
+    "--env=LV2_PATH=/app/extensions/Plugins/lv2",
+    "--env=VST_PATH=/app/extensions/Plugins/lxvst"
+  ],
+  "add-extensions": {
+    "org.freedesktop.LinuxAudio.Plugins": {
+      "directory": "extensions/Plugins",
+      "version": "20.08",
+      "add-ld-path": "lib",
+      "merge-dirs": "ladspa;lv2;lxvst",
+      "subdirectories": true,
+      "no-autodownload": true
+    }
+  },
+  "cleanup": [
+    "/include",
+    "/lib/pkgconfig",
+    "/share/aclocal",
+    "/share/man",
+    "*.la",
+    "*.a"
+  ],
+  "modules": [
+    {
+      "name": "wxwidgets",
+      "rm-configure": true,
+      "config-opts": [
+        "--with-libpng",
+        "--with-zlib",
+        "--with-cxx=17",
+        "--disable-sdltest",
+        "--disable-webview",
+        "--disable-webviewwebkit",
+        "--disable-ribbon",
+        "--disable-propgrid",
+        "--disable-richtext",
+        "--with-expat=builtin",
+        "--with-libiconv=/usr"
+      ],
+      "cleanup": [
+        "/share/bakefile"
+      ],
+      "sources": [
+        {
+          "type": "git",
+          "url": "https://github.com/wxWidgets/wxWidgets",
+          "tag": "v3.1.5",
+          "commit": "9c0a8be1dc32063d91ed1901fd5fcd54f4f955a1"
+        }
+      ]
+    },
+    "deps/lame-3.100.json",
+    {
+      "name": "libid3tag",
+      "buildsystem": "cmake-ninja",
+      "sources": [
+        {
+          "type": "git",
+          "url": "https://github.com/tenacityteam/libid3tag.git",
+          "tag": "0.16.1",
+          "commit": "1cc101e90dda1fb6e8cc57a0c707a3305bf674f9"
+        }
+      ]
+    },
+    "shared-modules/libmad/libmad.json",
+    "shared-modules/linux-audio/jack2.json",
+    "shared-modules/linux-audio/lv2.json",
+    "shared-modules/linux-audio/lilv.json",
+    "deps/suil.json",
+    {
+      "name": "portaudio",
+      "buildsystem": "cmake-ninja",
+      "sources": [
+        {
+          "type": "git",
+          "url": "https://github.com/PortAudio/portaudio.git",
+          "tag": "v19.7.0",
+          "commit": "147dd722548358763a8b649b3e4b41dfffbcfbb6"
+        }
+      ]
+    },
+    {
+      "name": "portsmf",
+      "buildsystem": "cmake-ninja",
+      "sources": [
+        {
+          "type": "git",
+          "url": "https://github.com/tenacityteam/portsmf.git",
+          "tag": "239",
+          "commit": "951b636f7d0cba370d483a91f1897c71f3d98530"
+        }
+      ]
+    },
+    {
+      "name": "portmidi-mixxxdj",
+      "buildsystem": "cmake-ninja",
+      "sources": [
+        {
+          "type": "git",
+          "url": "https://github.com/mixxxdj/portmidi.git",
+          "tag": "236",
+          "commit": "fda97c3be2baf10438574d10bb2a6b8b4f1140c4"
+        }
+      ]
+    },
+    {
+      "name": "soxr",
+      "buildsystem": "cmake-ninja",
+      "sources": [
+        {
+          "type": "git",
+          "url": "https://github.com/chirlu/soxr.git",
+          "tag": "0.1.3",
+          "commit": "945b592b70470e29f917f4de89b4281fbbd540c0"
+        }
+      ]
+    },
+    {
+      "name": "libsbsms",
+      "buildsystem": "cmake-ninja",
+      "sources": [
+        {
+          "type": "git",
+          "url": "https://github.com/claytonotey/libsbsms.git",
+          "tag": "2.3.0",
+          "commit": "e99cd7e6c6367e476577be34d2fdbe2023904d7e"
+        }
+      ]
+    },
+    {
+      "name": "vamp-plugin-sdk",
+      "sources": [
+        {
+          "type": "git",
+          "url": "https://github.com/c4dm/vamp-plugin-sdk.git",
+          "tag": "vamp-plugin-sdk-v2.10",
+          "commit": "67adfc2bf9486912a0fce5123cf54360ea2678bc"
+        }
+      ],
+      "cleanup": [
+        "/bin"
+      ]
+    },
+    {
+      "name": "soundtouch",
+      "sources": [
+        {
+          "type": "git",
+          "url": "https://gitlab.com/soundtouch/soundtouch.git",
+          "tag": "2.3.0",
+          "commit": "c65afe49f697fcea87d9a134870c8d115d7700cc"
+        }
+      ]
+    },
+    {
+      "name": "twolame",
+      "sources": [
+        {
+          "type": "archive",
+          "url": "https://downloads.sourceforge.net/twolame/twolame-0.4.0.tar.gz",
+          "sha256": "cc35424f6019a88c6f52570b63e1baf50f62963a3eac52a03a800bb070d7c87d"
+        }
+      ]
+    },
+    {
+      "name": "tenacity",
+      "buildsystem": "cmake-ninja",
+      "builddir": true,
+      "config-opts": [
+        "-DCMAKE_BUILD_TYPE=RelWithDebInfo",
+        "-DWX_CONFIG=/app/bin/wx-config"
+      ],
+      "post-install": [
+        "install -Dm644 ../help/tenacity.metainfo.xml -t /app/share/metainfo",
+        "install -d /app/extensions/Plugins"
+      ],
+      "cleanup": [
+        "/share/tenacity/include",
+        "/share/audacity/include",
+        "/share/pixmaps"
+      ],
+      "sources": [
+        {
+          "type": "dir",
+          "path": "../../"
+        },
+        {
+          "type": "patch",
+          "path": "patches/audacity-suil-fix.patch"
+        },
+        {
+          "type": "shell",
+          "commands": [
+            "sed -e '42i <release version=\"master\" date=\"2021-08-12\"/>' -i help/tenacity.metainfo.xml"
+          ]
+        }
+      ]
+    }
+  ]
+}

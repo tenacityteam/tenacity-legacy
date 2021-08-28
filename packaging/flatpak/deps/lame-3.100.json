@@ -1,0 +1,38 @@
+{
+  "name": "lame",
+  "rm-configure": true,
+  "config-opts": [
+    "--disable-static"
+  ],
+  "sources": [
+    {
+      "type": "archive",
+      "url": "https://downloads.sourceforge.net/lame/lame-3.100.tar.gz",
+      "sha256": "ddfe36cab873794038ae2c1210557ad34857a4b6bdc515785d1da9e175b1da1e"
+    },
+    {
+      "type": "patch",
+      "path": "../shared-modules/lame/lame-msse.patch"
+    },
+    {
+      "type": "patch",
+      "path": "../shared-modules/lame/lame-tinfo.patch",
+      "strip-components": 0
+    },
+    {
+      "type": "script",
+      "dest-filename": "autogen.sh",
+      "commands": [
+        "autoreconf -vfi"
+      ]
+    }
+  ],
+  "cleanup": [
+    "/bin",
+    "/include",
+    "/lib/pkgconfig",
+    "/share/doc",
+    "/share/man",
+    "*.la"
+  ]
+}
