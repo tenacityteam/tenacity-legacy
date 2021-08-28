@@ -724,7 +724,6 @@ void ScreenshotBigDialog::OnCaptureSomething(wxCommandEvent &  event)
       ScreenshotCommand::ktimer,
       ScreenshotCommand::ktools,
       ScreenshotCommand::ktransport,
-      ScreenshotCommand::kmeter,
       ScreenshotCommand::kplaymeter,
       ScreenshotCommand::krecordmeter,
       ScreenshotCommand::kedit,

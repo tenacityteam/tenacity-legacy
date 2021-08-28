@@ -54,7 +54,6 @@ public:
       ktimer,
       ktools,
       ktransport,
-      kmeter,
       kplaymeter,
       krecordmeter,
       kedit,
