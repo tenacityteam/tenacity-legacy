@@ -4,22 +4,7 @@
 
 set -euxo pipefail
 
-if [[ "${OSTYPE}" == msys* ]]; then # Windows
-
-    if which choco; then
-
-        # Chocolatey packages
-        choco_packages=(
-            sccache
-        )
-
-        choco install "${choco_packages[@]}" -y
-    else
-        echo >&2 "$0: Error: You don't have a recognized package manager installed."
-        exit 1
-    fi
-
-elif [[ "${OSTYPE}" == darwin* ]]; then # macOS
+if [[ "${OSTYPE}" == darwin* ]]; then # macOS
 
     # Homebrew packages
     brew_packages=(
