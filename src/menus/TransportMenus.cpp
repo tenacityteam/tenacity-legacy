@@ -700,19 +700,6 @@ void OnToggleSWPlaythrough(const CommandContext &WXUNUSED(context) )
    MenuManager::ModifyAllProjectToolbarMenus();
 }
 
-#ifdef EXPERIMENTAL_AUTOMATED_INPUT_LEVEL_ADJUSTMENT
-void OnToggleAutomatedInputLevelAdjustment(
-   const CommandContext &WXUNUSED(context) )
-{
-   bool AVEnabled;
-   gPrefs->Read(
-      wxT("/AudioIO/AutomatedInputLevelAdjustment"), &AVEnabled, false);
-   gPrefs->Write(wxT("/AudioIO/AutomatedInputLevelAdjustment"), !AVEnabled);
-   gPrefs->Flush();
-   MenuManager::ModifyAllProjectToolbarMenus();
-}
-#endif
-
 void OnStop(const CommandContext &context)
 {
    ProjectAudioManager::Get( context.project ).Stop();
@@ -1164,16 +1151,6 @@ BaseItemSharedPtr TransportMenu()
                   AudioIONotBusyFlag() | CanStopAudioStreamFlag(),
                   Options{}.CheckTest( wxT("/AudioIO/SWPlaythrough"), false ) )
 
-
-      #ifdef EXPERIMENTAL_AUTOMATED_INPUT_LEVEL_ADJUSTMENT
-               ,
-               Command( wxT("AutomatedInputLevelAdjustmentOnOff"),
-                  XXO("A&utomated Recording Level Adjustment (on/off)"),
-                  FN(OnToggleAutomatedInputLevelAdjustment),
-                  AudioIONotBusyFlag() | CanStopAudioStreamFlag(),
-                  Options{}.CheckTest(
-                     wxT("/AudioIO/AutomatedInputLevelAdjustment"), false ) )
-      #endif
             )
          )
       )

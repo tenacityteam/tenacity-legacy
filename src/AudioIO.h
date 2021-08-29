@@ -428,23 +428,6 @@ public:
    NoteTrackConstArray mMidiPlaybackTracks;
 #endif
 
-#ifdef EXPERIMENTAL_AUTOMATED_INPUT_LEVEL_ADJUSTMENT
-   bool           mAILAActive;
-   bool           mAILAClipped;
-   int            mAILATotalAnalysis;
-   int            mAILAAnalysisCounter;
-   double         mAILAMax;
-   double         mAILAGoalPoint;
-   double         mAILAGoalDelta;
-   double         mAILAAnalysisTime;
-   double         mAILALastStartTime;
-   double         mAILAChangeFactor;
-   double         mAILATopLevel;
-   double         mAILAAnalysisEndTime;
-   double         mAILAAbsolutStartTime;
-   unsigned short mAILALastChangeType;  //0 - no change, 1 - increase change, 2 - decrease change
-#endif
-
    std::unique_ptr<AudioThread> mThread;
 #ifdef EXPERIMENTAL_MIDI_OUT
 #ifdef USE_MIDI_THREAD
@@ -661,14 +644,6 @@ public:
    /** \brief Function to automatically set an acceptable volume
     *
     */
-   #ifdef EXPERIMENTAL_AUTOMATED_INPUT_LEVEL_ADJUSTMENT
-      void AILAInitialize();
-      void AILADisable();
-      bool AILAIsActive();
-      void AILAProcess(double maxPeak);
-      void AILASetStartTime();
-      double AILAGetLastDecisionTime();
-   #endif
 
    bool IsAvailable(AudacityProject *projecT) const;
 
