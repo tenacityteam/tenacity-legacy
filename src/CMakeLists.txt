@@ -1089,7 +1089,6 @@ list( APPEND LIBRARIES
       $<$<BOOL:${USE_MIDI}>:PortMidi::PortMidi>
       $<$<BOOL:${USE_MIDI}>:PortSMF::PortSMF>
       libnyquist
-      $<$<BOOL:${USE_PORTMIXER}>:portmixer>
       $<$<BOOL:${USE_SBSMS}>:sbsms::sbsms>
       $<$<BOOL:${USE_SOUNDTOUCH}>:SoundTouch::SoundTouch>
       $<$<BOOL:${USE_VAMP}>:VampHostSDK::VampHostSDK>

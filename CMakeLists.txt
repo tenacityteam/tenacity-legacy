@@ -628,17 +628,6 @@ else()
     message(STATUS "FLAC codec support disabled. Requires libflac and libflac++ C++ bindings.")
 endif()
 
-# FIXME: requires vendored fork of PortMixer which requires vendored fork of PortAudio
-# https://github.com/audacity/audacity/issues/840#issuecomment-837795388
-#find_package(PortMixer)
-#cmake_dependent_option(PORTMIXER "PortMixer support" ON "PortMixer_FOUND" OFF)
-#if(PORTMIXER)
-    #set(USE_PORTMIXER ON)
-    #message(STATUS "PortMixer support enabled.")
-#else()
-    #message(STATUS "PortMixer support disabled.")
-#endif()
-
 find_package(sbsms)
 cmake_dependent_option(SBSMS "SBSMS timestretching" ON "sbsms_FOUND" OFF)
 if(SBSMS)

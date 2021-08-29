@@ -708,40 +708,6 @@ void DeviceToolBar::ShowComboDialog(wxChoice *combo, const TranslatableString &t
       return;
    }
 
-#if USE_PORTMIXER
-   wxArrayStringEx inputSources = combo->GetStrings();
-
-   wxDialogWrapper dlg(nullptr, wxID_ANY, title);
-   dlg.SetName();
-   ShuttleGui S(&dlg, eIsCreating);
-   wxChoice *c;
-
-   S.StartVerticalLay(true);
-   {
-      S.StartHorizontalLay(wxCENTER, false);
-      {
-         c = S.AddChoice( Verbatim( combo->GetName() ),
-            transform_container<TranslatableStrings>( inputSources, Verbatim ),
-            combo->GetSelection());
-         c->SetMinSize(c->GetBestSize());
-      }
-      S.EndHorizontalLay();
-   }
-   S.EndVerticalLay();
-   S.AddStandardButtons();
-
-   dlg.GetSizer()->SetSizeHints(&dlg);
-   dlg.Center();
-
-   if (dlg.ShowModal() == wxID_OK)
-   {
-      wxCommandEvent dummyEvent;
-      dummyEvent.SetEventObject(combo);
-      // SetSelection() doesn't send an event, so we call OnChoice explicitly
-      combo->SetSelection(c->GetSelection());
-      OnChoice(dummyEvent);
-   }
-#endif
 }
 
 static RegisteredToolbarFactory factory{ DeviceBarID,

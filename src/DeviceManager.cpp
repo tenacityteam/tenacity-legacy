@@ -19,10 +19,6 @@
 #include "pa_win_wasapi.h"
 #endif
 
-#ifdef USE_PORTMIXER
-#include "portmixer.h"
-#endif
-
 #ifndef WX_PRECOMP
 #include <wx/choice.h>
 #include <wx/event.h>
@@ -130,9 +126,6 @@ static void FillHostDeviceInfo(DeviceSourceMap *map, const PaDeviceInfo *info, i
 
 static void AddSourcesFromStream(int deviceIndex, const PaDeviceInfo *info, std::vector<DeviceSourceMap> *maps, PaStream *stream)
 {
-#ifdef USE_PORTMIXER
-   int i;
-#endif
    DeviceSourceMap map;
 
    map.sourceIndex  = -1;
@@ -140,36 +133,10 @@ static void AddSourcesFromStream(int deviceIndex, const PaDeviceInfo *info, std:
    // Only inputs have sources, so we call FillHostDeviceInfo with a 1 to indicate this
    FillHostDeviceInfo(&map, info, deviceIndex, 1);
 
-#ifdef USE_PORTMIXER
-   PxMixer *portMixer = Px_OpenMixer(stream, 0);
-   if (!portMixer) {
-      maps->push_back(map);
-      return;
-   }
-
-   //if there is only one source, we don't need to concatenate the source
-   //or enumerate, because it is something meaningless like 'master'
-   //(as opposed to 'mic in' or 'line in'), and the user doesn't have any choice.
-   //note that some devices have no input sources at all but are still valid.
-   //the behavior we do is the same for 0 and 1 source cases.
-   map.totalSources = Px_GetNumInputSources(portMixer);
-#endif
-
    if (map.totalSources <= 1) {
       map.sourceIndex = 0;
       maps->push_back(map);
    }
-#ifdef USE_PORTMIXER
-     else {
-      //open up a stream with the device so portmixer can get the info out of it.
-      for (i = 0; i < map.totalSources; i++) {
-         map.sourceIndex  = i;
-         map.sourceString = wxString(wxSafeConvertMB2WX(Px_GetInputSourceName(portMixer, i)));
-         maps->push_back(map);
-      }
-   }
-   Px_CloseMixer(portMixer);
-#endif
 }
 
 static bool IsInputDeviceAMapperDevice(const PaDeviceInfo *info)

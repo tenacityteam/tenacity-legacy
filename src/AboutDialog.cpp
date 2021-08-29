@@ -246,9 +246,6 @@ void AboutDialog::CreateInformationTab(ShuttleGui& AboutDialogGUI) {
     #ifndef USE_LV2
     #define USE_LV2 0
     #endif
-    #ifndef USE_PORTMIXER
-    #define USE_PORTMIXER 0
-    #endif
     #ifndef USE_SOUNDTOUCH
     #define USE_SOUNDTOUCH 0
     #endif
@@ -317,9 +314,6 @@ void AboutDialog::CreateInformationTab(ShuttleGui& AboutDialogGUI) {
     #endif
     #ifdef USE_LV2
         AddBuildInfoRow(&informationStr, wxT("LV2"), buildInfo_pluginSupport, USE_LV2 ? enabled : disabled);
-    #endif
-    #ifdef USE_PORTMIXER
-        AddBuildInfoRow(&informationStr, wxT("PortMixer"), buildInfo_soundCardMixerSupport, USE_PORTMIXER ? enabled : disabled);
     #endif
     #ifdef USE_SOUNDTOUCH
         AddBuildInfoRow(&informationStr, wxT("SoundTouch"), buildInfo_pitchTempoSupport, USE_SOUNDTOUCH ? enabled : disabled);
