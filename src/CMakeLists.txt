@@ -1179,13 +1179,13 @@ elseif( CMAKE_SYSTEM_NAME MATCHES "Darwin" )
    # Define Mac specific resources
    #TODO Remove Audacity from Mac resources
    list( APPEND MAC_RESOURCES
-      ../mac/Resources/Audacity.icns
-      ../mac/Resources/AudacityAIFF.icns
-      ../mac/Resources/AudacityAU.icns
-      ../mac/Resources/AudacityMP3.icns
-      ../mac/Resources/AudacityOGG.icns
-      ../mac/Resources/AudacityProject.icns
-      ../mac/Resources/AudacityWAV.icns
+      ../mac/Resources/Tenacity.icns
+      ../mac/Resources/TenacityAIFF.icns
+      ../mac/Resources/TenacityAU.icns
+      ../mac/Resources/TenacityMP3.icns
+      ../mac/Resources/TenacityOGG.icns
+      ../mac/Resources/TenacityProject.icns
+      ../mac/Resources/TenacityWAV.icns
    )
 
    set_target_properties(
