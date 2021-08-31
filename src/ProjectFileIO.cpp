@@ -2389,6 +2389,12 @@ int64_t ProjectFileIO::GetDiskUsage(DBConnection &conn, SampleBlockID blockid /*
    int64_t right = 0;
    int rc;
 
+   // "sqlite_dbpage" is a compile-time defined option
+   if(!sqlite3_compileoption_used("SQLITE_ENABLE_DBPAGE_VTAB"))
+   {
+       return 0;
+   }
+
    // Get the rootpage for the sampleblocks table.
    sqlite3_stmt *stmt =
       conn.Prepare(DBConnection::GetRootPage,
