@@ -157,7 +157,7 @@ jobs:
       if: runner.os != 'Windows'
       with:
         path: ${{ github.workspace }}/wxwidgets-install
-        key: ${{ matrix.config.os }}-${{ matrix.config.arch }}-${{ matrix.config.wxwidgets_git_url }}-${{ matrix.config.wxwidgets_git_ref }}
+        key: ${{ matrix.config.os }}-${{ matrix.config.arch }}-${{ matrix.config.wxwidgets_git_url }}-${{ matrix.config.wxwidgets_git_ref }}-
 
     # FIXME: use wxWidgets from vcpkg for all OSes when bugs are fixed for Linux and macOS
     # https://github.com/microsoft/vcpkg/pull/17111
@@ -168,7 +168,8 @@ jobs:
         git clone --recurse-submodules ${{ matrix.config.wxwidgets_git_url }}
         cd wxWidgets
         git checkout ${{ matrix.config.wxwidgets_git_ref }}
-        cmake -G Ninja -D CMAKE_INSTALL_PREFIX=${{ github.workspace }}/wxwidgets-install \
+        # vcpkg builds libraries statically, so build wxWidgets statically too.
+        cmake -G Ninja -D BUILD_SHARED_LIBS=OFF -D CMAKE_INSTALL_PREFIX=${{ github.workspace }}/wxwidgets-install \
           -S . -B cmake_build
         cmake --build cmake_build
         cmake --install cmake_build
