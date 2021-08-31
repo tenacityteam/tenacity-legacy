@@ -63,7 +63,10 @@ void FileConfig::Init()
       // because we don't use the wxFileConfig::Flush() method and so the wxFileConfig dirty
       // flag never gets reset. During deletion, the dirty flag is checked and a Flush()
       // performed. This can (and probably will) create bogus temporary files.
+      // TODO: Fix the problem for wx3.0
+#if wxCHECK_VERSION(3, 1, 3)
       mConfig->DisableAutoSave();
+#endif
 
       bool canRead = false;
       bool canWrite = false;

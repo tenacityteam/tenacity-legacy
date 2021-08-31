@@ -52,12 +52,12 @@ public:
       mMessage = message;
    }
 
-   virtual wxObject* Clone() const wxOVERRIDE
+   virtual wxObject* Clone() const override
    {
       return safenew FilesystemValidator(mMessage);
    }
 
-   virtual bool Validate(wxWindow* WXUNUSED(parent)) wxOVERRIDE
+   virtual bool Validate(wxWindow* WXUNUSED(parent)) override
    {
       wxTextCtrl* tc = wxDynamicCast(GetWindow(), wxTextCtrl);
       if (!tc) {
@@ -71,12 +71,12 @@ public:
       return true;
    }
 
-   virtual bool TransferToWindow() wxOVERRIDE
+   virtual bool TransferToWindow() override
    {
       return true;
    }
 
-   virtual bool TransferFromWindow() wxOVERRIDE
+   virtual bool TransferFromWindow() override
    {
       return true;
    }
