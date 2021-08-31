@@ -107,10 +107,35 @@ jobs:
         JFROG_ARTIFACTORY_NUGET_PASS: ${{secrets.JFROG_ARTIFACTORY_NUGET_PASS}}
         JFROG_ARTIFACTORY_NUGET_TOKEN: ${{secrets.JFROG_ARTIFACTORY_NUGET_TOKEN}}
 
-    - name: Install dependencies
-      if: runner.os != 'Windows'
-      run: |
-        exec bash "scripts/ci/dependencies.sh"
+    - name: "[Linux] Install dependencies"
+      if: runner.os == 'Linux'
+      run: >-
+        sudo apt-get update &&
+        sudo apt-get install -y --no-install-recommends
+        file
+        g++
+        ninja-build 
+        nasm 
+        git 
+        wget
+        bash
+        scdoc
+        ccache
+        debhelper-compat
+        gettext
+        libasound2-dev
+        libgtk-3-dev
+        libsuil-dev
+        gettext
+
+    - name: "[MacOS] Install dependencies"
+      if: runner.os == 'macOS'
+      run: >-
+        brew install
+        bash
+        ccache
+        ninja
+        nasm
 
     - name: "[Windows] Install dependencies"
       if: runner.os == 'Windows'
