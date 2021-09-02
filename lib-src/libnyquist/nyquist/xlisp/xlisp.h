@@ -21,7 +21,7 @@ extern "C" {
 #endif
 
 #include <stdlib.h> /* needed for getenv(); note that this was a problem
-    for PMAX implementation, but I assume PMAX is obsolete now. 
+    for PMAX implementation, but I assume PMAX is obsolete now.
     - RBD 16apr04 */
 #include <stdio.h>
 #include <ctype.h>
@@ -55,7 +55,7 @@ extern "C" {
 // #define IFMT        "%ld"
 // #endif
 /* #define SAVERESTORE */
-#define XL_LITTLE_ENDIAN 
+#define XL_LITTLE_ENDIAN
 #define _longjmp longjmp
 #define _setjmp setjmp
 #endif
@@ -188,6 +188,16 @@ extern long ptrtoabs();
 #endif
 #endif
 
+/* BSD */
+#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__)
+#include <stdint.h>
+#if defined(__LITTLE_ENDIAN__)
+#define XL_LITTLE_ENDIAN
+#else
+#define XL_BIG_ENDIAN
+#endif
+#endif
+
 /* default important definitions */
 #ifndef NNODES
 #define NNODES		1000
@@ -283,7 +293,7 @@ extern long ptrtoabs();
 #define FT_OBCLASS	14
 #define FT_OBSHOW	15
 #define FT_OBISA        16
-        
+
 /* macro to push a value onto the argument stack */
 #define pusharg(x)	{if (xlsp >= xlargstktop) xlargstkoverflow();\
                          *xlsp++ = (x);}
@@ -337,7 +347,7 @@ void dbg_gc_xlsave(LVAL *n);
 #define xlunbind(e)	{for (; xldenv != (e); xldenv = cdr(xldenv))\
                            setvalue(car(car(xldenv)),cdr(car(xldenv)));}
 
-/* type predicates */			       
+/* type predicates */
 #define atomp(x)		((x) == NIL || ntype(x) != CONS)
 #define null(x)		((x) == NIL)
 #define listp(x)	((x) == NIL || ntype(x) == CONS)

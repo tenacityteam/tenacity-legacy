@@ -1,0 +1,25 @@
+image: freebsd/latest
+packages:
+  - x11-toolkits/wxgtk31
+  - devel/cmake
+  - devel/ninja
+  - devel/pkgconf
+  - audio/lame
+  - audio/libsndfile
+  - audio/libsoxr
+  - audio/portaudio
+  - audio/lv2
+  - audio/lilv
+  - audio/suil
+  - audio/vamp-plugin-sdk
+  - audio/portmidi
+  - audio/libid3tag
+  - audio/twolame
+  - audio/libmad
+  - audio/soundtouch
+  - multimedia/ffmpeg
+sources:
+  - https://git.sr.ht/~tenacity/tenacity
+tasks:
+  - configure: cmake -G Ninja -S tenacity -B build
+  - build: cmake --build build
