@@ -31,5 +31,5 @@ tasks:
       ../configure --with-gtk --disable-xlocale
       make -j2
       sudo make install
-  - configure: cmake -G Ninja -S tenacity -B build
+  - configure: cmake -G Ninja -S tenacity -B build -D USE_VAMP=OFF
   - build: cmake --build build
