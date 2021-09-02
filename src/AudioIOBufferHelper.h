@@ -3,7 +3,13 @@
 
 #include "AudioIO.h"
 #include "../libraries/lib-utility/MemoryX.h"
+#include <string>
 
+/**
+\class AudioIOBufferHelper
+\brief AudioIOBufferHelper is a class that hides the implementation details of exactly how buffers are allocated and managed
+when they are used inside of the PortAudio callback in AudioIO.
+**/
 class AudioIOBufferHelper
 {
 
@@ -23,20 +29,21 @@ class AudioIOBufferHelper
             this->chans = safenew WaveTrack * [numPlaybackChannels];
             this->tempBufs = safenew float* [numPlaybackChannels];
 
-            for (unsigned int c = 0; c < numPlaybackChannels; c++) {
-                tempBufs[c] = safenew float[framesPerBuffer];
+
+            tempBufs[0] = safenew float[(size_t)numPlaybackChannels * framesPerBuffer];
+            const auto tempBufs_size = (size_t)numPlaybackChannels * (size_t)framesPerBuffer * sizeof(float);
+            memset(tempBufs[0], 0, tempBufs_size);
+
+            for (unsigned int c = 1; c < numPlaybackChannels; c++) {
+                tempBufs[c] = tempBufs[c - 1] + framesPerBuffer;
             }
-        }
+       }
 
-        ~AudioIOBufferHelper() {
-            for (unsigned int c = 0; c < numPlaybackChannels; c++) {
-                delete[] tempBufs[c];
-            }
-
-            delete[] tempBufs;
-
-            delete[] chans;
-        }
+       ~AudioIOBufferHelper() {
+           delete[] tempBufs[0];
+           delete[] tempBufs;
+           delete[] chans;
+       }
 };
 
 #endif
