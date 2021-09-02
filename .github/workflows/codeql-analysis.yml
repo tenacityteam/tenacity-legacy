@@ -75,9 +75,26 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
 
-    - name: Install dependencies
-      run: |
-        exec bash "scripts/ci/dependencies.sh"
+    - name: [Linux] Install dependencies
+      if: runner.os == 'Linux'
+      run: >-
+        sudo apt-get update &&
+        sudo apt-get install -y --no-install-recommends
+        file
+        g++
+        ninja-build
+        nasm
+        git
+        wget
+        bash
+        scdoc
+        ccache
+        debhelper-compat
+        gettext
+        libasound2-dev
+        libgtk-3-dev
+        libsuil-dev
+        gettext
 
     - name: Get Git commit of vcpkg submodule
       run: echo VCPKG_COMMIT=$(git ls-tree HEAD vcpkg | awk '{print $3}') >> ${GITHUB_ENV}
