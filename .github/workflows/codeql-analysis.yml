@@ -75,9 +75,46 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
 
-    - name: Install dependencies
+    - name: "[Linux] Install dependencies"
+      if: runner.os == 'Linux'
+      run: >-
+        sudo apt-get update &&
+        sudo apt-get install -y --no-install-recommends
+        file
+        g++
+        ninja-build
+        nasm
+        git
+        wget
+        bash
+        scdoc
+        ccache
+        debhelper-compat
+        gettext
+        libasound2-dev
+        libgtk-3-dev
+        libsuil-dev
+        gettext
+
+    - name: "[MacOS] Install dependencies"
+      if: runner.os == 'macOS'
+      run: >-
+        brew install
+        bash
+        ccache
+        ninja
+        nasm
+
+    - name: "[Windows] Install dependencies"
+      if: runner.os == 'Windows'
+      shell: pwsh
+      env:
+        # Install path of scoop
+        SCOOP: C:\Scoop\
       run: |
-        exec bash "scripts/ci/dependencies.sh"
+        echo "C:\Scoop\shims" | Out-File -FilePath $env:GITHUB_PATH -Encoding utf8 -Append
+        iwr -useb get.scoop.sh | iex
+        scoop install sccache
 
     - name: Get Git commit of vcpkg submodule
       run: echo VCPKG_COMMIT=$(git ls-tree HEAD vcpkg | awk '{print $3}') >> ${GITHUB_ENV}
