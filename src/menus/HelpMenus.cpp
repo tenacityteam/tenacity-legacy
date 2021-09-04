@@ -347,31 +347,6 @@ void OnShowLog( const CommandContext &context )
    }
 }
 
-#ifdef IS_ALPHA
-void OnSegfault(const CommandContext &)
-{
-   unsigned *p = nullptr;
-   *p = 0xDEADBEEF;
-}
-   
-void OnException(const CommandContext &)
-{
-   // Throw an exception that can be caught only as (...)
-   // The intent is to exercise detection of unhandled exceptions by the
-   // crash reporter
-   struct Unique{};
-   throw Unique{};
-}
-   
-void OnAssertion(const CommandContext &)
-{
-   // We don't use assert() much directly, but Breakpad does detect it
-   // This may crash the program only in debug builds
-   // See also wxSetAssertHandler, and wxApp::OnAssertFailure()
-   assert(false);
-}
-#endif
-
 void OnMenuTree(const CommandContext &context)
 {
    auto &project = context.project;
@@ -533,15 +508,6 @@ BaseItemSharedPtr HelpMenu()
       #ifdef IS_ALPHA
             // alpha-only items don't need to internationalize, so use
             // Verbatim for labels
-
-            Command( wxT("RaiseSegfault"), Verbatim("Test segfault report"),
-               FN(OnSegfault), AlwaysEnabledFlag ),
-
-            Command( wxT("ThrowException"), Verbatim("Test exception report"),
-               FN(OnException), AlwaysEnabledFlag ),
-
-            Command( wxT("ViolateAssertion"), Verbatim("Test assertion report"),
-               FN(OnAssertion), AlwaysEnabledFlag ),
 
             // Menu explorer.  Perhaps this should become a macro command
             Command( wxT("MenuTree"), Verbatim("Menu Tree..."),
