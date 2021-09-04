@@ -18,8 +18,19 @@ jobs:
     - uses: actions/checkout@v2
       with:
         submodules: true
-    - uses: bilelmoussaoui/flatpak-github-actions/flatpak-builder@v3
+    # Emulate to provide ARM support
+    - name: Install deps
+      run: |
+        dnf -y install docker ninja-build
+    - name: Set up QEMU
+      id: qemu
+      uses: docker/setup-qemu-action@v1
+      with:
+        image: tonistiigi/binfmt:latest
+        platforms: arm64
+    - uses: bilelmoussaoui/flatpak-github-actions/flatpak-builder@v4
       with:
         bundle: tenacity.flatpak
         manifest-path: packaging/flatpak/org.tenacity.Tenacity.json
         cache-key: flatpak-builder-${{ github.sha }}
+        arch: ${{ matrix.arch }}
