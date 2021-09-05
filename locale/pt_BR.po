@@ -11,13 +11,14 @@
 # William Weber Berrutti <wwberrutti@protonmail.ch>, 2021.
 # Humberto Rocha <humrochagf@gmail.com>, 2021.
 # Adolfo Jayme Barrientos <fitojb@ubuntu.com>, 2021.
+# SC <lalocas@protonmail.com>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: tenacity 3.0.4\n"
 "Report-Msgid-Bugs-To: emabrey@tenacityaudio.org\n"
 "POT-Creation-Date: 2021-07-25 03:44-0400\n"
-"PO-Revision-Date: 2021-08-16 11:55+0000\n"
-"Last-Translator: Adolfo Jayme Barrientos <fitojb@ubuntu.com>\n"
+"PO-Revision-Date: 2021-08-30 17:56+0000\n"
+"Last-Translator: SC <lalocas@protonmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/"
 "tenacity/tenacity/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -25,7 +26,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.8-dev\n"
+"X-Generator: Weblate 4.8.1-dev\n"
 
 #: libraries/lib-strings/FutureStrings.h
 msgctxt "update dialog"
@@ -1181,7 +1182,7 @@ msgid ""
 "You will not be able to play or record audio.\n"
 "\n"
 msgstr ""
-"Não será possível reproduzir ou gravar áudio\n"
+"Não será possível reproduzir ou gravar áudio.\n"
 "\n"
 
 #: src/AudioIO.cpp
@@ -2076,6 +2077,7 @@ msgid ""
 "%s"
 msgstr ""
 "Falha na criação do ponto de salvamento.\n"
+"\n"
 "%s"
 
 #: src/DBConnection.cpp
@@ -2122,8 +2124,10 @@ msgid ""
 msgstr ""
 "\n"
 "\n"
-"Arquivos marcados como Em Falta foram movidos ou excluídos e não podem ser copiados.\n"
-"Recoloque os arquivos na sua localização original para poder copiá-los para o projeto."
+"Arquivos marcados como Em Falta foram movidos ou excluídos e não podem ser "
+"copiados.\n"
+"Recoloque os arquivos na sua localização original para poder copiá-los para "
+"o projeto."
 
 #: src/Dependencies.cpp
 msgid "Project Dependencies"
@@ -2451,7 +2455,7 @@ msgid "Specify New Filename:"
 msgstr "Especifique o Novo Nome para o Arquivo:"
 
 #: src/FileNames.cpp
-#, c-format
+#, c-format, fuzzy
 msgid "Directory %s does not have write permissions"
 msgstr "A pasta %s não existe. Deseja criá-la?"
 
@@ -2587,6 +2591,7 @@ msgid "Lag (seconds)\tFrequency (Hz)\tLevel"
 msgstr "Atraso (segundos)\tFrequência (Hz)\tNível"
 
 #: src/FreqWindow.cpp
+#, fuzzy
 msgid "Plot Spectrum..."
 msgstr "Espectro de Frequência..."
 
@@ -3049,13 +3054,13 @@ msgstr ""
 "Ele não será carregado."
 
 #: src/ModuleManager.cpp
-#, c-format
+#, c-format, fuzzy
 msgid ""
 "The module \"%s\" failed to initialize.\n"
 "\n"
 "It will not be loaded."
 msgstr ""
-"O módulo \"%s\" não fornece uma chave da versão. \n"
+"O módulo \"%s\" falhou ao inicializar.\n"
 "\n"
 "Ele não será carregado."
 
@@ -3961,7 +3966,7 @@ msgid ""
 "\"%s\"\n"
 "   will be irreversibly overwritten."
 msgstr ""
-" Deseja substituir o projeto:\n"
+"   Deseja substituir o projeto:\n"
 "\"%s\"?\n"
 "\n"
 "Se você selecionar \"Sim\" o projeto \n"
@@ -4169,7 +4174,7 @@ msgstr ""
 #: src/ProjectManager.cpp
 #, c-format
 msgid "Disk space remaining for recording: %s"
-msgstr "Espaço em disco suficiente para gravar: %s"
+msgstr "Espaço em disco restante para gravar: %s"
 
 #: src/ProjectManager.cpp
 msgid "Less than 1 minute"
@@ -8244,7 +8249,7 @@ msgstr "Ganh&o de saída (dB):"
 
 #: src/effects/Phaser.cpp src/effects/Wahwah.cpp
 msgid "Output gain (dB)"
-msgstr "Ganho úmido (dB):"
+msgstr "Ganho de saída (dB)"
 
 #: src/effects/Repair.cpp
 msgid "Repair"
@@ -9968,8 +9973,9 @@ msgid ""
 "0 - automatic\n"
 "Recommended - 192000"
 msgstr ""
-"Taxa de bits  (bits/segundo) - influencia o tamanho e qualidade do arquivo \n"
-"Alguns codificadores podem aceitar apenas valores específicos (128k, 192k, 256k, etc) \n"
+"Taxa de bits (bits/segundo) - influencia o tamanho e qualidade do ficheiro \n"
+"Alguns codificadores podem aceitar apenas valores específicos (128k, 192k, "
+"256k, etc.) \n"
 "0 - automático \n"
 "Recomendado - 192000"
 
@@ -14443,7 +14449,7 @@ msgstr ""
 #. i18n-hint preserve the leading spaces
 #: src/prefs/ModulePrefs.cpp
 msgid "  'New' means no choice has been made yet."
-msgstr " 'Novo' significa que nenhuma opção foi selecionada."
+msgstr "  'Novo' significa que nenhuma opção foi selecionada."
 
 #: src/prefs/ModulePrefs.cpp
 msgid "Changes to these settings only take effect when Audacity starts up."
@@ -18416,7 +18422,7 @@ msgstr "Valor (linear)"
 
 #: plug-ins/sample-data-export.ny
 msgid "Value (dB)"
-msgstr "Valor (dB):"
+msgstr "Valor (dB)"
 
 #: plug-ins/sample-data-export.ny
 msgid "audio sample value analysis"
