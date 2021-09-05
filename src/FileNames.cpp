@@ -244,7 +244,7 @@ FilePath FileNames::ConfigDir()
          gConfigDir = portablePrefsPath.GetFullPath();
       } else {
          // Use OS-provided user data dir folder
-#if defined(__WSMSW__)
+#if defined(__WXMSW__)
          wxString configDir(wxStandardPaths::Get().GetUserConfigDir() + wxT("\\Tenacity"));
 #else
          wxString configDir(wxStandardPaths::Get().GetUserConfigDir() + wxT("/tenacity"));
