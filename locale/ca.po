@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: tenacity 3.0.4\n"
 "Report-Msgid-Bugs-To: emabrey@tenacityaudio.org\n"
 "POT-Creation-Date: 2021-07-25 03:44-0400\n"
-"PO-Revision-Date: 2021-07-26 06:19+0000\n"
-"Last-Translator: Emily Mabrey <emilymabrey93@gmail.com>\n"
+"PO-Revision-Date: 2021-08-08 05:10+0000\n"
+"Last-Translator: Adolfo Jayme Barrientos <fitojb@ubuntu.com>\n"
 "Language-Team: Catalan <https://hosted.weblate.org/projects/tenacity/"
 "tenacity/ca/>\n"
 "Language: ca\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.7.2-dev\n"
+"X-Generator: Weblate 4.8-dev\n"
 
 #: libraries/lib-strings/FutureStrings.h
 msgctxt "update dialog"
@@ -672,9 +672,10 @@ msgstr "%s (incorpora %s, %s, %s, %s i %s)"
 
 #. i18n-hint: The program's name substitutes for %s
 #: src/AboutDialog.cpp
-#, fuzzy
 msgid "Free, open source, cross-platform audio recorder and editor."
-msgstr "El %s és el programari gratuït, de codi obert i multiplataforma per a enregistrar i editar sons."
+msgstr ""
+"Un programari gratuït, de codi obert i multiplataforma per a enregistrar i "
+"editar sons."
 
 #: src/AboutDialog.cpp
 msgid "Credits"
@@ -686,14 +687,13 @@ msgstr "Personalització del DarkTenacity"
 
 #. i18n-hint: The program's name substitutes for %s
 #: src/AboutDialog.cpp
-#, fuzzy, c-format
+#, c-format
 msgid "%s Contributors"
-msgstr "Contribuïdors"
+msgstr "Contribuïdors del Tenacity"
 
 #: src/AboutDialog.cpp
-#, fuzzy
 msgid "Tenacity Special thanks:"
-msgstr "Agraïments especials:"
+msgstr "Agraïments especials del projecte Tenacity:"
 
 #: src/AboutDialog.cpp src/prefs/LibraryPrefs.cpp
 msgid "Libraries"
@@ -905,7 +905,7 @@ msgstr "&Nou"
 #. i18n-hint: (verb)
 #: src/AudacityApp.cpp src/menus/FileMenus.cpp
 msgid "&Open..."
-msgstr "&Obre..."
+msgstr "&Obre…"
 
 #: src/AudacityApp.cpp
 msgid "Open &Recent..."
@@ -3292,11 +3292,11 @@ msgstr "Advertència: Hi ha hagut problemes durant la recuperació automàtica"
 
 #: src/ProjectFileIO.cpp src/menus/WindowMenus.cpp
 msgid "<untitled>"
-msgstr "<sense nom>"
+msgstr "<projecte sense nom>"
 
 #: src/ProjectFileIO.cpp
 msgid "Failed to open the project's database"
-msgstr "No es pot llegir el fitxer dels valors predefinits."
+msgstr "No s’ha pogut obrir la base de dades del projecte"
 
 #: src/ProjectFileIO.cpp
 #, c-format
@@ -3304,15 +3304,18 @@ msgid ""
 "Failed to open database file:\n"
 "\n"
 "%s"
-msgstr "No s'ha pogut suprimir %s"
+msgstr ""
+"No s’ha pogut obrir el fitxer de la base de dades:\n"
+"\n"
+"%s"
 
 #: src/ProjectFileIO.cpp
 msgid "Failed to discard connection"
-msgstr "No s'ha trobat el còdec"
+msgstr "No s’ha pogut descartar la connexió"
 
 #: src/ProjectFileIO.cpp
 msgid "Failed to restore connection"
-msgstr "No es pot obtenir la descripció del flux de dades"
+msgstr "No s’ha pogut restaurar la connexió"
 
 #: src/ProjectFileIO.cpp
 #, c-format
@@ -3334,11 +3337,11 @@ msgstr "No es pot llegir el fitxer dels valors predefinits."
 
 #: src/ProjectFileIO.cpp
 msgid "This is not an Audacity project file"
-msgstr "Desament d'un projecte d'Audacity"
+msgstr "Aquest no és un fitxer de projecte del Tenacity"
 
 #: src/ProjectFileIO.cpp
 msgid "Unable to initialize the project file"
-msgstr "No es pot iniciar el flux de dades MP3"
+msgstr "No s’ha pogut inicialitzar el fitxer del projecte"
 
 #. i18n-hint: An error message.  Don't translate blockfiles.
 #: src/ProjectFileIO.cpp
@@ -3646,7 +3649,7 @@ msgstr "Espai de disc restant per a l'enregistrament: %s"
 
 #: src/ProjectManager.cpp
 msgid "Less than 1 minute"
-msgstr "Menys d'1 minut"
+msgstr "Menys d’1 minut"
 
 #: src/ProjectManager.cpp
 #, c-format
@@ -15889,7 +15892,7 @@ msgstr "Opció de sortida"
 
 #: plug-ins/vocoder.ny
 msgid "Both Channels"
-msgstr "Ambdós canals"
+msgstr "Tots dos canals"
 
 #: plug-ins/vocoder.ny
 msgid "Right Only"
@@ -16674,3 +16677,34 @@ msgstr "Error.~%Es requereix la pista estèreo."
 
 #~ msgid "[Project %02i] Audacity "
 #~ msgstr "[Projecte %02i] Tenacity "
+
+#: src/ProjectFileIO.cpp
+msgid ""
+"This project was created with a newer version of Audacity.\n"
+"\n"
+"You will need to upgrade to open it."
+msgstr ""
+"El projecte s’ha creat amb una versió més recent del Tenacity.\n"
+"\n"
+"Haureu d’actualitzar el programa per a obrir-lo."
+
+#. i18n-hint: Abbreviation for Giga bytes
+#: libraries/lib-strings/Internat.cpp
+#, c-format
+msgid "%s GB"
+msgstr "%s GB"
+
+#. i18n-hint: Abbreviation for Mega bytes
+#: libraries/lib-strings/Internat.cpp
+#, c-format
+msgid "%s MB"
+msgstr "%s MB"
+
+#: src/ProjectFileIO.cpp
+#, c-format
+msgid "[Project %02i] "
+msgstr "[Projecte %02i] "
+
+#: plug-ins/vocoder.ny
+msgid "Edgar-RFT"
+msgstr "Edgar-RFT"
