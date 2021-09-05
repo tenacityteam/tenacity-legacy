@@ -8,20 +8,22 @@
 # Diego Medeiros (2016-2017), Thomas De Rocker (2017), Bruno Ramalhete (2019),
 # Aline Furlanetto Viero (2021)
 # Heitor Rocha <heitor@riseup.net>, 2021.
+# William Weber Berrutti <wwberrutti@protonmail.ch>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: tenacity 3.0.4\n"
 "Report-Msgid-Bugs-To: emabrey@tenacityaudio.org\n"
 "POT-Creation-Date: 2021-07-25 03:44-0400\n"
-"PO-Revision-Date: 2021-07-24 09:31+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/tenacity/tenacity/pt_BR/>\n"
+"PO-Revision-Date: 2021-07-31 19:33+0000\n"
+"Last-Translator: William Weber Berrutti <wwberrutti@protonmail.ch>\n"
+"Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/"
+"tenacity/tenacity/pt_BR/>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.7.2-dev\n"
+"X-Generator: Weblate 4.8-dev\n"
 
 #: libraries/lib-strings/FutureStrings.h
 msgctxt "update dialog"
@@ -2767,8 +2769,8 @@ msgid ""
 "Internal error at %s line %d.\n"
 "Please inform the Audacity team at https://forum.audacityteam.org/."
 msgstr ""
-"Erro interno em %s linha %d.\n"
-"Por favor, nos informe do erro em https://forum.audacityteam.org/."
+"Erro interno em %s, em %s, linha %d.\n"
+"Por favor, informe ao time do Tenacity em https://tenacityaudio.org/."
 
 #: src/InconsistencyException.h
 msgid "Internal Error"
@@ -16970,9 +16972,9 @@ msgstr "Confirma sair"
 
 #. i18n-hint: %s is replaced with a directory path.
 #: src/widgets/UnwritableLocationErrorDialog.cpp
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to write files to directory: %s."
-msgstr "Não foi possível ler o arquivo de predefinições em \"%s\""
+msgstr "Não foi possível inicializar o arquivo do projeto"
 
 #. i18n-hint: %s is replaced with 'Preferences > Directories'.
 #: src/widgets/UnwritableLocationErrorDialog.cpp
@@ -18822,3 +18824,40 @@ msgstr "Erro.~%Requer faixa estéreo."
 
 #~ msgid "Select any uncompressed audio file"
 #~ msgstr "Selecione áudio sem compactação"
+
+#. i18n-hint: In most languages OK is to be translated as OK.  It appears on a button.
+#: src/AboutDialog.cpp src/Dependencies.cpp src/SplashDialog.cpp src/effects/nyquist/Nyquist.cpp src/widgets/MultiDialog.cpp
+msgid "OK"
+msgstr "OK"
+
+#: modules/mod-nyq-bench/NyqBench.cpp
+msgid "Script"
+msgstr "Script"
+
+#. i18n-hint: Abbreviation for Giga bytes
+#: libraries/lib-strings/Internat.cpp
+#, c-format
+msgid "%s GB"
+msgstr "%s GB"
+
+#. i18n-hint: Abbreviation for Mega bytes
+#: libraries/lib-strings/Internat.cpp
+#, c-format
+msgid "%s MB"
+msgstr "%s MB"
+
+#. i18n-hint: Abbreviation for Kilo bytes
+#: libraries/lib-strings/Internat.cpp
+#, c-format
+msgid "%s KB"
+msgstr "%s kB"
+
+#: libraries/lib-strings/Internat.cpp
+#, c-format
+msgid "%s bytes"
+msgstr "%s bytes"
+
+#: libraries/lib-strings/FutureStrings.h
+msgctxt "update dialog"
+msgid "Changelog"
+msgstr "Histórico de mudanças"
