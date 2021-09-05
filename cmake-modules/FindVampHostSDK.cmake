@@ -50,7 +50,9 @@ find_path(VampHostSDK_INCLUDE_DIR
 mark_as_advanced(VampHostSDK_INCLUDE_DIR)
 
 find_library(VampHostSDK_LIBRARY
-  NAMES vamp-hostsdk
+  # The library has different file names on Windows (VampHostSDK) compared
+  # to Linux and macOS (vamp-hostsdk).
+  NAMES vamp-hostsdk VampHostSDK
   PATHS ${PC_VampHostSDK_LIBRARY_DIRS}
   DOC "VampHostSDK library"
 )
