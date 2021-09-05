@@ -11,13 +11,14 @@
 # Liu Tao <lyuutau@outlook.com>, 2021.
 # Eric <spice2wolf@gmail.com>, 2021.
 # XiaoPanPanKevinPan <sn00151200@gmail.com>, 2021.
+# Liu Wenyuan <15816141883@163.com>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: tenacity 3.0.4\n"
 "Report-Msgid-Bugs-To: emabrey@tenacityaudio.org\n"
 "POT-Creation-Date: 2021-07-25 03:44-0400\n"
-"PO-Revision-Date: 2021-08-18 00:42+0000\n"
-"Last-Translator: Liu Tao <lyuutau@outlook.com>\n"
+"PO-Revision-Date: 2021-08-25 10:55+0000\n"
+"Last-Translator: Liu Wenyuan <15816141883@163.com>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
 "tenacity/tenacity/zh_Hans/>\n"
 "Language: zh\n"
@@ -25,7 +26,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.8-dev\n"
+"X-Generator: Weblate 4.8.1-dev\n"
 
 #: libraries/lib-strings/FutureStrings.h
 msgctxt "update dialog"
@@ -21363,42 +21364,44 @@ msgid "+/- 1"
 msgstr "+/- 1"
 
 #: src/import/ImportPCM.cpp
+#, fuzzy
 msgid "IFF (Amiga IFF/SVX8/SV16)"
-msgstr "IFF (Amiga IFF/SVX8/SV16)"
+msgstr "IFF（Amiga IFF/SVX8/SV16）"
 
 #: src/import/ImportPCM.cpp
 #, fuzzy
 msgid "HTK (HMM Tool Kit)"
-msgstr "HTK (HMM Tool Kit)"
+msgstr "HTK（HMM Tool Kit）"
 
 #. i18n-hint: "codec" is short for a "coder-decoder" algorithm
 #: src/import/ImportPCM.cpp
 #, fuzzy
 msgid "FLAC (FLAC Lossless Audio Codec)"
-msgstr "FLAC (FLAC Lossless Audio Codec)"
+msgstr "FLAC（FLAC Lossless Audio Codec）"
 
 #: src/import/ImportPCM.cpp
 #, fuzzy
 msgid "CAF (Apple Core Audio File)"
-msgstr "CAF (Apple Core Audio File)"
+msgstr "CAF（Apple Core Audio File）"
 
 #: src/import/ImportPCM.cpp
 #, fuzzy
 msgid "AVR (Audio Visual Research)"
-msgstr "AVR (Audio Visual Research)"
+msgstr "AVR（Audio Visual Research）"
 
 #: src/import/ImportPCM.cpp
 msgid "AU (Sun/NeXT)"
 msgstr "AU (Sun/NeXT)"
 
 #: src/export/ExportPCM.cpp src/import/ImportPCM.cpp
+#, fuzzy
 msgid "WAV (Microsoft)"
-msgstr "WAV (Microsoft)"
+msgstr "WAV（Microsoft）"
 
 #: src/export/ExportPCM.cpp src/import/ImportPCM.cpp
 #, fuzzy
 msgid "AIFF (Apple/SGI)"
-msgstr "AIFF (Apple/SGI)"
+msgstr "AIFF（Apple/SGI）"
 
 #: src/export/ExportMP3.cpp
 msgid "65-105 kbps"
@@ -21959,6 +21962,7 @@ msgid "6 dB"
 msgstr "6 dB"
 
 #: plug-ins/StudioFadeOut.ny plug-ins/adjustable-fade.ny plug-ins/crossfadeclips.ny plug-ins/crossfadetracks.ny plug-ins/delay.ny plug-ins/eq-xml-to-txt-converter.ny plug-ins/equalabel.ny plug-ins/label-sounds.ny plug-ins/limiter.ny plug-ins/noisegate.ny plug-ins/sample-data-export.ny plug-ins/sample-data-import.ny plug-ins/spectral-delete.ny plug-ins/tremolo.ny
+#, fuzzy
 msgid "Steve Daulton"
 msgstr "Steve Daulton"
 
@@ -22036,6 +22040,7 @@ msgid "Vorbis"
 msgstr "Vorbis"
 
 #: src/import/ImportPCM.cpp
+#, fuzzy
 msgid "U-Law"
 msgstr "U-Law"
 
@@ -22044,12 +22049,14 @@ msgid "RF64 (RIFF 64)"
 msgstr "RF64 (RIFF 64)"
 
 #: src/import/ImportPCM.cpp
+#, fuzzy
 msgid "PAF (Ensoniq PARIS)"
-msgstr "PAF (Ensoniq PARIS)"
+msgstr "PAF（Ensoniq PARIS）"
 
 #: src/import/ImportPCM.cpp
+#, fuzzy
 msgid "MPC (Akai MPC 2k)"
-msgstr "MPC (Akai MPC 2k)"
+msgstr "MPC（Akai MPC 2k）"
 
 #: src/import/ImportPCM.cpp
 msgid "MAT5 (GNU Octave 2.1 / Matlab 5.0)"
@@ -22062,3 +22069,308 @@ msgstr "MAT4 (GNU Octave 2.0 / Matlab 4.2)"
 #: plug-ins/highpass.ny plug-ins/lowpass.ny
 msgid "48 dB"
 msgstr "48 dB"
+
+#. i18n-hint:
+#. first number identifies one of a sequence of clips,
+#. last number counts the clips,
+#. string names a track
+#: src/menus/ClipMenus.cpp
+#, c-format, fuzzy
+msgid "%d of %d clip %s"
+msgid_plural "%d of %d clips %s"
+msgstr[0] "第 %d 个片段，共 %d 个，在 %s 中"
+
+#. i18n-hint:
+#. First two %s are each replaced with the noun "start"
+#. or with "end", identifying and end of a clip,
+#. first and second numbers give the position of those clips in
+#. a sequence of clips,
+#. last number counts all clips,
+#. and the last string is the name of the track containing the
+#. clips.
+#: src/menus/ClipMenus.cpp
+#, c-format, fuzzy
+msgid "%s %d and %s %d of %d clip %s"
+msgid_plural "%s %d and %s %d of %d clips %s"
+msgstr[0] "第 %s %d 和 %s %d 个片段，共 %d 个，在 %s 中"
+
+#. i18n-hint:
+#. First %s is replaced with the noun "start" or "end"
+#. identifying one end of a clip,
+#. first number gives the position of that clip in a sequence
+#. of clips,
+#. last number counts all clips,
+#. and the last string is the name of the track containing the
+#. clips.
+#: src/menus/ClipMenus.cpp
+#, c-format, fuzzy
+msgid "%s %d of %d clip %s"
+msgid_plural "%s %d of %d clips %s"
+msgstr[0] "第 %s %d 个片段，共 %d 个，在 %s 中"
+
+#: plug-ins/vocoder.ny
+#, fuzzy
+msgid "Edgar-RFT"
+msgstr "Edgar-RFT"
+
+#: plug-ins/vocalrediso.ny
+#, fuzzy
+msgid "Robert Haenggi"
+msgstr "Robert Haenggi"
+
+#: plug-ins/rissetdrum.ny
+#, fuzzy
+msgid "Steven Jones"
+msgstr "Steven Jones"
+
+#: plug-ins/pluck.ny
+#, fuzzy
+msgid "David R.Sky"
+msgstr "David R.Sky"
+
+#. i18n-hint: hours and minutes. Do not translate "~a".
+#: plug-ins/noisegate.ny
+#, fuzzy, lisp-format
+msgid "~ah ~am"
+msgstr "~a时~a分"
+
+#: plug-ins/highpass.ny plug-ins/lowpass.ny plug-ins/rhythmtrack.ny
+#, fuzzy
+msgid "Dominic Mazzoni"
+msgstr "Dominic Mazzoni"
+
+#: plug-ins/SpectralEditMulti.ny plug-ins/SpectralEditParametricEQ.ny plug-ins/SpectralEditShelves.ny
+#, fuzzy
+msgid "Paul Licameli"
+msgstr "Paul Licameli"
+
+#: src/widgets/numformatter.cpp
+#, fuzzy
+msgid "NaN"
+msgstr "NaN"
+
+#: src/widgets/PopupMenuTable.h
+#, c-format
+msgid "%s (%s)"
+msgstr "%s（%s）"
+
+#. i18n-hint: Name of time display format that shows time in days, hours,
+#. * minutes and seconds
+#: src/widgets/NumericTextCtrl.cpp
+msgid "dd:hh:mm:ss"
+msgstr "日:时:分:秒"
+
+#. i18n-hint: Name of time display format that shows time in hours, minutes
+#. * and seconds
+#: src/widgets/NumericTextCtrl.cpp
+#, fuzzy
+msgid "hh:mm:ss"
+msgstr "时:分:秒"
+
+#. i18n-hint arrowhead meaning forward movement
+#: src/widgets/HelpSystem.cpp
+#, fuzzy
+msgid ">"
+msgstr ">"
+
+#. i18n-hint arrowhead meaning backward movement
+#: src/widgets/HelpSystem.cpp
+#, fuzzy
+msgid "<"
+msgstr "<"
+
+#. i18n-hint: "x" suggests a multiplicative factor
+#: src/widgets/ASlider.cpp
+#, c-format
+msgid "%.2fx"
+msgstr "%.2fx"
+
+#: src/toolbars/ControlToolBar.cpp
+#, c-format
+msgid "%s."
+msgstr "%s。"
+
+#. i18n-hint: The name of a frequency scale in psychoacoustics, abbreviates Equivalent Rectangular Bandwidth
+#: src/prefs/SpectrogramSettings.cpp
+#, fuzzy
+msgid "ERB"
+msgstr "ERB"
+
+#. i18n-hint: The name of a frequency scale in psychoacoustics, named for Heinrich Barkhausen
+#: src/prefs/SpectrogramSettings.cpp
+#, fuzzy
+msgid "Bark"
+msgstr "Bark"
+
+#. i18n-hint: Abbreviates Virtual Studio Technology, an audio software protocol
+#. developed by Steinberg GmbH
+#: src/prefs/EffectsPrefs.cpp
+#, fuzzy
+msgid "V&ST"
+msgstr "V&ST"
+
+#. i18n-hint: Vamp is the proper name of a software protocol for sound analysis.
+#. It is not an abbreviation for anything.  See http://vamp-plugins.org
+#: src/prefs/EffectsPrefs.cpp
+#, fuzzy
+msgid "&Vamp"
+msgstr "&Vamp"
+
+#. i18n-hint: "Nyquist" is an embedded interpreted programming language in
+#. Audacity, named in honor of the Swedish-American Harry Nyquist (or Nyqvist).
+#. In the translations of this and other strings, you may transliterate the
+#. name into another alphabet.
+#: src/prefs/EffectsPrefs.cpp
+#, fuzzy
+msgid "N&yquist"
+msgstr "N&yquist"
+
+#. i18n-hint: abbreviates
+#. "Linux Audio Developer's Simple Plugin API (LADSPA) version 2"
+#: src/prefs/EffectsPrefs.cpp
+#, fuzzy
+msgid "LV&2"
+msgstr "LV&2"
+
+#. i18n-hint: abbreviates "Linux Audio Developer's Simple Plugin API"
+#. (Application programming interface)
+#: src/prefs/EffectsPrefs.cpp
+#, fuzzy
+msgid "&LADSPA"
+msgstr "&LADSPA"
+
+#: src/menus/PluginMenus.cpp
+#, fuzzy
+msgid "..."
+msgstr "..."
+
+#: src/import/ImportPCM.cpp
+#, fuzzy
+msgid "8 bit DPCM"
+msgstr "8 位 DPCM"
+
+#: src/import/ImportPCM.cpp
+#, fuzzy
+msgid "24kbs G723 ADPCM"
+msgstr "24kbs G723 ADPCM"
+
+#: src/import/ImportPCM.cpp
+#, fuzzy
+msgid "SF (Berkeley/IRCAM/CARL)"
+msgstr "SF（Berkeley/IRCAM/CARL）"
+
+#: src/import/ImportPCM.cpp
+#, fuzzy
+msgid "SDS (Midi Sample Dump Standard)"
+msgstr "SDS（Midi Sample Dump Standard）"
+
+#: src/import/ImportPCM.cpp
+#, fuzzy
+msgid "SD2 (Sound Designer II)"
+msgstr "SD2（Sound Designer II）"
+
+#: src/import/ImportPCM.cpp
+#, fuzzy
+msgid "RAW (header-less)"
+msgstr "RAW（无文件头）"
+
+#. i18n-hint: track name and R abbreviating Right channel
+#: src/export/Export.cpp
+#, c-format, fuzzy
+msgid "%s - R"
+msgstr "%s - 右"
+
+#. i18n-hint: track name and L abbreviating Left channel
+#: src/export/Export.cpp
+#, c-format, fuzzy
+msgid "%s - L"
+msgstr "%s - 左"
+
+#. i18n-hint: "Nyquist" is an embedded interpreted programming language in
+#. Audacity, named in honor of the Swedish-American Harry Nyquist (or Nyqvist).
+#. In the translations of this and other strings, you may transliterate the
+#. name into another alphabet.
+#: src/effects/Effect.h
+#, fuzzy
+msgid "Nyquist"
+msgstr "Nyquist"
+
+#: src/import/ImportPCM.cpp
+#, fuzzy
+msgid "16 bit DPCM"
+msgstr "16 位 DPCM"
+
+#: src/import/ImportPCM.cpp
+#, fuzzy
+msgid "VOX ADPCM"
+msgstr "VOX ADPCM"
+
+#: src/import/ImportPCM.cpp
+#, fuzzy
+msgid "24 bit DWVW"
+msgstr "24 位 DWVW"
+
+#: src/import/ImportPCM.cpp
+#, fuzzy
+msgid "16 bit DWVW"
+msgstr "16 位 DWVW"
+
+#: src/import/ImportPCM.cpp
+#, fuzzy
+msgid "32kbs G721 ADPCM"
+msgstr "32kbs G721 ADPCM"
+
+#: src/import/ImportPCM.cpp
+#, fuzzy
+msgid "GSM 6.10"
+msgstr "GSM 6.10"
+
+#: src/import/ImportPCM.cpp
+#, fuzzy
+msgid "Microsoft ADPCM"
+msgstr "Microsoft ADPCM"
+
+#: src/import/ImportPCM.cpp
+#, fuzzy
+msgid "IMA ADPCM"
+msgstr "IMA ADPCM"
+
+#: src/import/ImportPCM.cpp
+#, fuzzy
+msgid "A-Law"
+msgstr "A-Law"
+
+#: src/import/ImportPCM.cpp
+#, fuzzy
+msgid "XI (FastTracker 2)"
+msgstr "XI（FastTracker 2）"
+
+#: src/import/ImportPCM.cpp
+#, fuzzy
+msgid "WVE (Psion Series 3)"
+msgstr "WVE（Psion Series 3）"
+
+#: src/import/ImportPCM.cpp
+#, fuzzy
+msgid "WAVEX (Microsoft)"
+msgstr "WAVEX（Microsoft）"
+
+#: src/import/ImportPCM.cpp
+#, fuzzy
+msgid "WAV (NIST Sphere)"
+msgstr "WAV（NIST Sphere）"
+
+#: src/import/ImportPCM.cpp
+#, fuzzy
+msgid "W64 (SoundFoundry WAVE 64)"
+msgstr "W64（SoundFoundry WAVE 64）"
+
+#: src/import/ImportPCM.cpp
+#, fuzzy
+msgid "VOC (Creative Labs)"
+msgstr "VOC（Creative Labs）"
+
+#: src/import/ImportPCM.cpp
+#, fuzzy
+msgid "PVF (Portable Voice Format)"
+msgstr "PVF（Portable Voice Format）"
