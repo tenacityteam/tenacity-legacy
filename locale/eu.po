@@ -5,13 +5,16 @@
 # Translators:
 # Xabier Aramendi <azpidatziak@gmail.com> 2011-2020
 # Emily Mabrey <emilymabrey93@gmail.com>, 2021.
+# Sergio Varela <sergitroll9@gmail.com>, 2021.
+# mondstern <mondstern@snopyta.org>, 2021.
+# Adolfo Jayme Barrientos <fitojb@ubuntu.com>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: tenacity 3.0.4\n"
 "Report-Msgid-Bugs-To: emabrey@tenacityaudio.org\n"
 "POT-Creation-Date: 2021-07-25 03:44-0400\n"
-"PO-Revision-Date: 2021-07-26 06:19+0000\n"
-"Last-Translator: Emily Mabrey <emilymabrey93@gmail.com>\n"
+"PO-Revision-Date: 2021-09-05 05:22+0000\n"
+"Last-Translator: Sergio Varela <sergitroll9@gmail.com>\n"
 "Language-Team: Basque <https://hosted.weblate.org/projects/tenacity/tenacity/"
 "eu/>\n"
 "Language: eu\n"
@@ -19,7 +22,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.7.2-dev\n"
+"X-Generator: Weblate 4.8.1-dev\n"
 
 #: libraries/lib-strings/FutureStrings.h
 msgctxt "update dialog"
@@ -39,7 +42,7 @@ msgstr "Akatsa agiria dekodeatzerakoan"
 #: libraries/lib-strings/FutureStrings.h
 msgctxt "update dialog"
 msgid "Error downloading update."
-msgstr "Akatsa Metadatuak Gertatzerakoan"
+msgstr "Akatsa Metadatuak Gertatzerakoan."
 
 #. i18n-hint Substitution of version number for %s.
 #: libraries/lib-strings/FutureStrings.h
@@ -76,7 +79,7 @@ msgstr "Sistema"
 
 #: modules/mod-null/ModNullCallback.cpp
 msgid "1st Experimental Command..."
-msgstr "Agindu Berezia"
+msgstr "Agindu Berezia..."
 
 #: modules/mod-null/ModNullCallback.cpp
 msgid "2nd Experimental Command"
@@ -1329,7 +1332,8 @@ msgid ""
 "After recovery, save the projects to ensure changes are written to disk."
 msgstr ""
 "Egitasmo batzuk ez ziren egoki gorde Audacity azken aldiz abiarazi zenean.\n"
-"Zorionez, hurrengo egitasmoak berezgaitasunez berreskuratu daitezke:"
+"\n"
+"Zorionez, hurrengo egitasmoak berezgaitasunez berreskuratu daitezke."
 
 #: src/AutoRecoveryDialog.cpp
 msgid "Recoverable &projects"
@@ -2312,7 +2316,7 @@ msgstr "Adierazi Agirizen Berria:"
 #: src/FileNames.cpp
 #, c-format
 msgid "Directory %s does not have write permissions"
-msgstr "%s zuzebidea ez dago. Sortu?"
+msgstr "%s zuzebidea ez dago. Sortu"
 
 #: src/FreqWindow.cpp
 msgid "Frequency Analysis"
@@ -3147,7 +3151,9 @@ msgstr ""
 
 #: src/ProjectAudioManager.cpp src/menus/TransportMenus.cpp
 msgid "The tracks selected for recording must all have the same sampling rate"
-msgstr "Grabaketarako hautatutako bide guztiek laginketa neurri berdina izan behar dute."
+msgstr ""
+"Grabaketarako hautatutako bide guztiek laginketa neurri berdina izan behar "
+"dute"
 
 #: src/ProjectAudioManager.cpp src/menus/TransportMenus.cpp
 msgid "Mismatched Sampling Rates"
@@ -3427,7 +3433,10 @@ msgid ""
 "Unable to prepare project file command:\n"
 "\n"
 "%s"
-msgstr "Ezinezkoa aurrezarpen agiria irakurtzea."
+msgstr ""
+"Ezinezkoa aurrezarpen agiria irakurtzea.\n"
+"\n"
+"%s"
 
 #: src/ProjectFileIO.cpp
 msgid "This is not an Audacity project file"
@@ -3449,7 +3458,7 @@ msgstr "Bloke agiri umezurtza: '%s'"
 
 #: src/ProjectFileIO.cpp
 msgid "Unable to attach destination database"
-msgstr "Ezinezkoa jario egoera pausatuan ezartzea."
+msgstr "Ezinezkoa jario egoera pausatuan ezartzea"
 
 #: src/ProjectFileIO.cpp
 msgid "Failed to bind SQL parameter"
@@ -3533,7 +3542,8 @@ msgid ""
 "It has been recovered to the last snapshot."
 msgstr ""
 "Egitasmo batzuk ez ziren egoki gorde Audacity azken aldiz abiarazi zenean.\n"
-"Zorionez, hurrengo egitasmoak berezgaitasunez berreskuratu daitezke:"
+"\n"
+"Zorionez, hurrengo egitasmoak berezgaitasunez berreskuratu daitezke."
 
 #: src/ProjectFileManager.cpp
 msgid "Project Recovered"
@@ -19852,3 +19862,152 @@ msgstr "Akatsa.~%Estereo bidea beharrezkoa."
 #: src/ProjectFileIO.cpp src/commands/AudacityCommand.cpp src/effects/Effect.cpp src/effects/nyquist/Nyquist.cpp src/prefs/PrefsPanel.cpp plug-ins/beat.ny
 msgid "Audacity"
 msgstr "Tenacity"
+
+#: src/HistoryWindow.cpp src/ProjectFileManager.cpp
+#, c-format
+msgid "Compacting actually freed %s of disk space."
+msgstr "Trinkotzeak disko-espazioaren %s askatu du."
+
+#: src/DBConnection.cpp
+msgid "Database error.  Sorry, but we don't have more details."
+msgstr "Datu-basearen errorea. Barkatu, baina ez dugu xehetasun gehiago."
+
+#: src/DBConnection.cpp
+#, c-format
+msgid ""
+"Disk is full.\n"
+"%s\n"
+"For tips on freeing up space, click the help button."
+msgstr ""
+"Diskoa beteta dago.\n"
+"%s\n"
+"Espazioa askatzeko aholkuak lortzeko, egin klik laguntza-botoian."
+
+#: src/DBConnection.cpp src/ProjectFileIO.cpp
+msgid "This may take several seconds"
+msgstr "Honek segundo batzuk behar izan ditzake"
+
+#. i18n-hint: Benchmark means a software speed test;
+#. leave untranslated file extension .txt
+#: src/Benchmark.cpp
+msgid "benchmark.txt"
+msgstr "benchmark.txt"
+
+#. i18n-hint: Benchmark means a software speed test
+#: src/Benchmark.cpp
+msgid "Benchmark"
+msgstr "Benchmark"
+
+#: src/AudacityApp.cpp
+msgid ""
+"Unable to create semaphores.\n"
+"\n"
+"This is likely due to a resource shortage\n"
+"and a reboot may be required."
+msgstr ""
+"Ezin da semafororik sortu.\n"
+"\n"
+"Hori, ziurrenik, baliabide-eskasia dela eta gertatu da.\n"
+"Eta baliteke berriz hasi behar izatea."
+
+#: src/AudacityApp.cpp
+msgid ""
+"Unable to acquire semaphores.\n"
+"\n"
+"This is likely due to a resource shortage\n"
+"and a reboot may be required."
+msgstr ""
+"Ezin da semafororik erosi.\n"
+"\n"
+"Hori, ziurrenik, baliabide-eskasia dela eta gertatu da.\n"
+"Eta baliteke berriz hasi behar izatea."
+
+#: src/AboutDialog.cpp
+msgid "Tenacity is not produced or endorsed by MuseCY SM Ltd. or Dominic M Mazzoni."
+msgstr ""
+"Tenacity ez dute MuseCY SM Ltd. eta Dominic m Mazzoni-k ekoizten eta "
+"bermatzen."
+
+#. i18n-hint The registered trademark symbol (r) is substituted at %s
+#: src/AboutDialog.cpp
+#, c-format
+msgid "The Audacity%s trademark is used within this software for descriptive and informational purposes only."
+msgstr ""
+"Audacity%s marka komertziala helburu deskribatzaile eta informatiboetarako "
+"soilik erabiltzen da software honetan."
+
+#. i18n-hint Tenacity's name substitutes for first and fourth %s, and the second and third %s are the copyright symbol and final year of copyright
+#: src/AboutDialog.cpp
+#, c-format
+msgid "%s %s 1999-%s %s contributors"
+msgstr "%s %s 1999-%s %s zergadunak"
+
+#: src/AboutDialog.cpp
+msgid "Please note that names are sorted in alphabetical order, not in order of importance."
+msgstr ""
+"Kontuan izan izenak alfabetoaren arabera ordenatuta daudela, ez "
+"garrantziaren arabera."
+
+#. i18n-hint: Abbreviation for Giga bytes
+#: libraries/lib-strings/Internat.cpp
+#, c-format
+msgid "%s GB"
+msgstr "%s GB"
+
+#. i18n-hint: Abbreviation for Mega bytes
+#: libraries/lib-strings/Internat.cpp
+#, c-format
+msgid "%s MB"
+msgstr "%s MB"
+
+#. i18n-hint: Abbreviation for Kilo bytes
+#: libraries/lib-strings/Internat.cpp
+#, c-format
+msgid "%s KB"
+msgstr "%s kB"
+
+#: libraries/lib-strings/FutureStrings.h
+msgctxt "update dialog"
+msgid "Can't open the Audacity download link."
+msgstr "Ezin izan zen ireki Tenacity deskargatzeko esteka."
+
+#: libraries/lib-strings/FutureStrings.h
+msgctxt "update dialog"
+msgid "Update data was corrupted."
+msgstr "Eguneratze-datuak usteldu egin dira."
+
+#: libraries/lib-strings/FutureStrings.h
+msgctxt "update dialog"
+msgid "Unable to connect to Audacity update server."
+msgstr "Ezin da konektatu Tenacity eguneratzeko zerbitzariarekin."
+
+#: libraries/lib-strings/FutureStrings.h
+msgctxt "update dialog"
+msgid "Read more on GitHub"
+msgstr "Informazio gehiago GitHub-en"
+
+#: src/menus/PluginMenus.cpp
+msgid "..."
+msgstr "…"
+
+#: src/AudacityApp.cpp
+msgid "SQLite library failed to initialize.  Audacity cannot continue."
+msgstr "Ezin izan zen SQLite liburutegia hasi. Tenacityk ezin du jarraitu."
+
+#: src/AboutDialog.cpp
+msgid "<h3>"
+msgstr "<h3>"
+
+#: modules/mod-nyq-bench/NyqBench.cpp
+msgid "Leland Lucius"
+msgstr "Leland Lucius"
+
+#: libraries/lib-strings/FutureStrings.h
+msgctxt "update dialog"
+msgid "&Install update"
+msgstr "&Instalatu eguneratzea"
+
+#: libraries/lib-strings/FutureStrings.h
+msgctxt "update dialog"
+msgid "&Skip"
+msgstr "&Saltatu"

@@ -19,13 +19,14 @@
 # Adolfo Jayme Barrientos <fitojb@ubuntu.com>, 2021.
 # Emily Mabrey <emilymabrey93@gmail.com>, 2021.
 # frais64 <louis2555@orange.fr>, 2021.
+# A-d-r-i <a-d-r-i@outlook.fr>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: tenacity 3.0.4\n"
 "Report-Msgid-Bugs-To: emabrey@tenacityaudio.org\n"
 "POT-Creation-Date: 2021-07-25 03:44-0400\n"
-"PO-Revision-Date: 2021-07-26 15:57+0000\n"
-"Last-Translator: frais64 <louis2555@orange.fr>\n"
+"PO-Revision-Date: 2021-09-02 18:11+0000\n"
+"Last-Translator: J. Lavoie <j.lavoie@net-c.ca>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/tenacity/tenacity/"
 "fr/>\n"
 "Language: fr\n"
@@ -33,7 +34,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.7.2-dev\n"
+"X-Generator: Weblate 4.8.1-dev\n"
 
 #: libraries/lib-strings/FutureStrings.h
 msgctxt "update dialog"
@@ -96,7 +97,6 @@ msgstr "Tenacity %s est disponible !"
 #. to one of them (one is enough)
 #. i18n-hint: modifier as in "Recording preferences", not progressive verb
 #: libraries/lib-strings/FutureStrings.h
-#, fuzzy
 msgctxt "preference"
 msgid "Recording"
 msgstr "Enregistrement"
@@ -281,7 +281,7 @@ msgstr "Scripts Nyquist (*.ny)|*.ny|scripts Lisp (*.lsp)|*.lsp|Tous les fichiers
 
 #: modules/mod-nyq-bench/NyqBench.cpp
 msgid "Script was not saved."
-msgstr "Le script n’a pas été sauvé."
+msgstr "Le script n’a pas été sauvegardé."
 
 #: modules/mod-nyq-bench/NyqBench.cpp src/AudacityLogger.cpp src/DBConnection.cpp src/Project.cpp src/ProjectFileIO.cpp src/ProjectHistory.cpp src/SqliteSampleBlock.cpp src/WaveClip.cpp src/WaveTrack.cpp src/export/Export.cpp src/export/ExportCL.cpp src/export/ExportMultiple.cpp src/import/RawAudioGuess.cpp src/menus/EditMenus.cpp src/prefs/KeyConfigPrefs.cpp src/widgets/Warning.cpp
 msgid "Warning"
@@ -469,7 +469,7 @@ msgstr "Aller au S-expr suivant"
 #. i18n-hint noun
 #: modules/mod-nyq-bench/NyqBench.cpp src/effects/Contrast.cpp src/effects/ToneGen.cpp src/toolbars/SelectionBar.cpp
 msgid "Start"
-msgstr "Début"
+msgstr "Démarrer"
 
 #: modules/mod-nyq-bench/NyqBench.cpp
 msgid "Start script"
@@ -477,7 +477,7 @@ msgstr "Démarrer le script"
 
 #: modules/mod-nyq-bench/NyqBench.cpp src/effects/EffectUI.cpp src/toolbars/ControlToolBar.cpp src/widgets/ProgressDialog.cpp
 msgid "Stop"
-msgstr "Arrêt"
+msgstr "Arrêter"
 
 #: modules/mod-nyq-bench/NyqBench.cpp
 msgid "Stop script"
@@ -496,7 +496,7 @@ msgstr "Valider"
 
 #: src/AboutDialog.cpp
 msgid "Build Information"
-msgstr "Informations de construction"
+msgstr "Informations de version"
 
 #: src/AboutDialog.cpp src/PluginRegistrationDialog.cpp src/prefs/ModulePrefs.cpp
 msgid "Enabled"
@@ -509,20 +509,20 @@ msgstr "Désactivé"
 #. i18n-hint: Information about when audacity was compiled follows
 #: src/AboutDialog.cpp
 msgid "The Build"
-msgstr "La construction"
+msgstr "Informations de compilation"
 
 # trebmuh to check (vérifier dans un contexte graphique)
 #: src/AboutDialog.cpp
 msgid "Commit Id:"
-msgstr "Identifiant de commit :"
+msgstr "Identifiant de commit :"
 
 #: src/AboutDialog.cpp
 msgid "Build type:"
-msgstr "Type de construction :"
+msgstr "Type de version :"
 
 #: src/AboutDialog.cpp
 msgid "Compiler:"
-msgstr "Compilateur :"
+msgstr "Compilateur :"
 
 #. i18n-hint: The directory audacity is installed into (on *nix systems)
 #: src/AboutDialog.cpp
@@ -535,11 +535,11 @@ msgstr "Répertoire de paramètres :"
 
 #: src/AboutDialog.cpp
 msgid "File Format Support"
-msgstr "Support de format de fichier"
+msgstr "Prise en charge de format de fichier"
 
 #: src/AboutDialog.cpp
 msgid "Cross-platform GUI library"
-msgstr "Bibliothèque graphique multi-plateforme"
+msgstr "Bibliothèque graphique multiplateforme"
 
 #: src/AboutDialog.cpp
 msgid "Audio playback and recording"
@@ -589,19 +589,19 @@ msgstr "Fonctionnalités"
 
 #: src/AboutDialog.cpp
 msgid "Plug-in support"
-msgstr "Support de greffon"
+msgstr "Prise en charge de greffons"
 
 #: src/AboutDialog.cpp
 msgid "Sound card mixer support"
-msgstr "Support du mixeur de carte-son"
+msgstr "Prise en charge du mixeur de carte-son"
 
 #: src/AboutDialog.cpp
 msgid "Pitch and Tempo Change support"
-msgstr "Support du changement de hauteur et de tempo"
+msgstr "Prise en charge du changement de hauteur et de tempo"
 
 #: src/AboutDialog.cpp
 msgid "Extreme Pitch and Tempo Change support"
-msgstr "Support du changement extrême de hauteur et de tempo"
+msgstr "Prise en charge du changement extrême de hauteur et de tempo"
 
 #: src/AboutDialog.cpp
 msgid "GPL License"
@@ -609,63 +609,63 @@ msgstr "Licence GPL (en anglais)"
 
 #. i18n-hint: For "About Tenacity..." credits, substituting a person's proper name
 #: src/AboutDialog.cpp
-#, fuzzy, c-format
+#, c-format
 msgid "%s, lead Tenacity developer"
-msgstr "%s, développeur web"
+msgstr "%s, développeur principal de Tenacity"
 
 #. i18n-hint: For "About Tenacity..." credits, substituting a person's proper name
 #: src/AboutDialog.cpp
-#, fuzzy, c-format
+#, c-format
 msgid "%s, Tenacity developer"
-msgstr "%s, développeur web"
+msgstr "%s, développeur de Tenacity"
 
 #. i18n-hint: For "About Tenacity..." credits, substituting a person's proper name
 #: src/AboutDialog.cpp
-#, fuzzy, c-format
+#, c-format
 msgid "%s, Tenacity contributor"
-msgstr "%s, développeur web"
+msgstr "%s, développeur de Tenacity"
 
 #. i18n-hint: For "About Tenacity..." credits, substituting a person's proper name
 #: src/AboutDialog.cpp
 #, c-format
 msgid "%s, system administration"
-msgstr "%s, administration système"
+msgstr "%s, administration système d'Audacity"
 
 #. i18n-hint: For "About Tenacity..." credits, substituting a person's proper name
 #: src/AboutDialog.cpp
 #, c-format
 msgid "%s, co-founder and developer"
-msgstr "%s, co-fondateur et développeur"
+msgstr "%s, co-fondateur et développeur d'Audacity"
 
 #. i18n-hint: For "About Tenacity..." credits, substituting a person's proper name
 #: src/AboutDialog.cpp
 #, c-format
 msgid "%s, developer"
-msgstr "%s, développeur"
+msgstr "%s, développeur d'Audacity"
 
 #. i18n-hint: For "About Tenacity..." credits, substituting a person's proper name
 #: src/AboutDialog.cpp
 #, c-format
 msgid "%s, developer and support"
-msgstr "%s, développeur et support"
+msgstr "%s, développeur et support d'Audacity"
 
 #. i18n-hint: For "About Tenacity..." credits, substituting a person's proper name
 #: src/AboutDialog.cpp
 #, c-format
 msgid "%s, documentation and support"
-msgstr "%s, documentation et support"
+msgstr "%s, documentation et support d'Audacity"
 
 #. i18n-hint: For "About Tenacity..." credits, substituting a person's proper name
 #: src/AboutDialog.cpp
 #, c-format
 msgid "%s, QA tester, documentation and support"
-msgstr "%s, testeur qualité, documentation et support"
+msgstr "%s, testeur qualité, documentation et assistance"
 
 #. i18n-hint: For "About Tenacity..." credits, substituting a person's proper name
 #: src/AboutDialog.cpp
 #, c-format
 msgid "%s, documentation and support, French"
-msgstr "%s, documentation et support, français"
+msgstr "%s, documentation et assistance, français"
 
 #. i18n-hint: For "About Tenacity..." credits, substituting a person's proper name
 #: src/AboutDialog.cpp
@@ -722,9 +722,10 @@ msgstr "%s (incorporaant %s, %s, %s, %s et %s)"
 
 #. i18n-hint: The program's name substitutes for %s
 #: src/AboutDialog.cpp
-#, fuzzy
 msgid "Free, open source, cross-platform audio recorder and editor."
-msgstr "%s est un logiciel libre, à source ouverte, multi-plateformes pour l’enregistrement et l’édition de sons."
+msgstr ""
+"%s est un logiciel libre, à source ouverte, multiplateformes pour l’"
+"enregistrement et l’édition de sons."
 
 #: src/AboutDialog.cpp
 msgid "Credits"
@@ -754,7 +755,7 @@ msgstr "Bibliothèques"
 #: src/AboutDialog.cpp
 #, c-format
 msgid "%s includes code from the following projects:"
-msgstr "%s inclut du code des projets suivants :"
+msgstr "%s inclut du code des projets suivants :"
 
 #. i18n-hint: The program's name substitutes for %s
 #: src/AboutDialog.cpp
@@ -798,13 +799,13 @@ msgstr "Traducteurs"
 
 #: src/AboutDialog.cpp
 msgid "Special thanks:"
-msgstr "Remerciements particuliers :"
+msgstr "Remerciements particuliers :"
 
 #. i18n-hint: The program's name substitutes for %s
 #: src/AboutDialog.cpp
 #, c-format
 msgid "%s website: "
-msgstr "Site ouèbe d’%s : "
+msgstr "Site web de %s : "
 
 #. i18n-hint Tenacity's name substitutes for first and fourth %s, and the second and third %s are the copyright symbol and final year of copyright
 #: src/AboutDialog.cpp
@@ -2799,7 +2800,10 @@ msgstr "Voici nos différentes méthodes d’assistance :"
 #. i18n-hint: Preserve '[[help:Quick_Help|' as it's the name of a link.
 #: src/HelpText.cpp
 msgid "[[help:Quick_Help|Quick Help]] - if not installed locally, [[https://manual.audacityteam.org/quick_help.html|view online]]"
-msgstr " [[help:Quick_Help|Aide rapide (en anglais)]] - si non-installé localement, [[https://manual.audacityteam.org/quick_help.html|voir en ligne (en anglais également)]]"
+msgstr ""
+"[[help:Quick_Help|Aide rapide (en anglais)]] - si non installé localement, "
+"[[https://manual.audacityteam.org/quick_help.html|voir en ligne (en anglais "
+"également)]]"
 
 #. i18n-hint: Preserve '[[help:Main_Page|' as it's the name of a link.
 #: src/HelpText.cpp
@@ -4637,7 +4641,7 @@ msgstr "Première piste"
 
 #: src/Screenshot.cpp src/commands/ScreenshotCommand.cpp
 msgid "Second Track"
-msgstr "Seconde piste "
+msgstr "Seconde piste"
 
 #: src/Screenshot.cpp src/prefs/SpectrumPrefs.cpp
 msgid "Scale"
@@ -5269,11 +5273,11 @@ msgstr "Export automatique"
 
 #: src/TimerRecordDialog.cpp
 msgid "Enable Automatic &Export?"
-msgstr "Activer l’&export automatique ?"
+msgstr "Activer l’&export automatique ?"
 
 #: src/TimerRecordDialog.cpp
 msgid "Export Project As:"
-msgstr "Exporter le projet sous :"
+msgstr "Exporter le projet sous :"
 
 #: src/TimerRecordDialog.cpp
 msgid "After Recording completes:"
@@ -5361,19 +5365,19 @@ msgstr "Piste %d"
 #. this track is muted. (The mute button is on.)
 #: src/TrackPanelAx.cpp
 msgid " Muted"
-msgstr "Silencié"
+msgstr " Silencié"
 
 #. i18n-hint: This is for screen reader software and indicates that
 #. this track is soloed. (The Solo button is on.)
 #: src/TrackPanelAx.cpp
 msgid " Soloed"
-msgstr "Solo"
+msgstr " Solo"
 
 #. i18n-hint: This is for screen reader software and indicates that
 #. this track is selected.
 #: src/TrackPanelAx.cpp
 msgid " Selected"
-msgstr "Sélectionné"
+msgstr " Sélectionné"
 
 #. i18n-hint: This is for screen reader software and indicates that
 #. this track is shown with a sync-locked icon.
@@ -5385,15 +5389,15 @@ msgstr " Verrouillage de synchronisation"
 
 #: src/TrackPanelAx.cpp
 msgid " Mute On"
-msgstr "Rendre muet"
+msgstr " Rendre muet"
 
 #: src/TrackPanelAx.cpp
 msgid " Solo On"
-msgstr "Solo"
+msgstr " Solo"
 
 #: src/TrackPanelAx.cpp
 msgid " Select On"
-msgstr "Sélection"
+msgstr " Sélection"
 
 #: src/TrackPanelResizeHandle.cpp
 msgid "Click and drag to adjust relative size of stereo tracks, double-click to make heights equal"
@@ -5414,7 +5418,7 @@ msgstr "Supprimer la piste"
 #: src/TrackUtilities.cpp
 #, c-format
 msgid "Removed track '%s.'"
-msgstr "piste '%s' supprimée"
+msgstr "piste « %s » supprimée"
 
 #: src/TrackUtilities.cpp
 msgid "Track Remove"
@@ -5424,7 +5428,7 @@ msgstr "Supprimer la piste"
 #: src/TrackUtilities.cpp
 #, c-format
 msgid "Moved '%s' to Top"
-msgstr "'%s' déplacé tout en haut"
+msgstr "« %s » déplacé tout en haut"
 
 #: src/TrackUtilities.cpp
 msgid "Move Track to Top"
@@ -5434,7 +5438,7 @@ msgstr "Déplacer la piste tout en haut"
 #: src/TrackUtilities.cpp
 #, c-format
 msgid "Moved '%s' to Bottom"
-msgstr "'%s' déplacé tout en bas"
+msgstr "« %s » déplacé tout en bas"
 
 # trebmuh to check (accélérateur)
 #: src/TrackUtilities.cpp
@@ -5445,12 +5449,12 @@ msgstr "Déplacer la piste tout en bas"
 #: src/TrackUtilities.cpp
 #, c-format
 msgid "Moved '%s' Up"
-msgstr "'%s' déplacé vers le haut"
+msgstr "« %s » déplacé vers le haut"
 
 #: src/TrackUtilities.cpp
 #, c-format
 msgid "Moved '%s' Down"
-msgstr "'%s' déplacé vers le bas"
+msgstr "« %s » déplacé vers le bas"
 
 #. i18n-hint: Past tense of 'to move', as in 'moved audio track up'.
 #: src/TrackUtilities.cpp
@@ -10028,8 +10032,9 @@ msgid ""
 "The project sample rate (%d) is not supported by the current output\n"
 "file format. "
 msgstr ""
-"Le taux d’échantillonnage du projet (%d) n’est pas supporté par le format\n"
-"de fichier de sortie actuel.  "
+"Le taux d’échantillonnage du projet (%d) n’est pas pris en charge par le "
+"format\n"
+"de fichier de sortie actuel. "
 
 #: src/export/ExportFFmpeg.cpp
 #, c-format
@@ -16594,7 +16599,7 @@ msgstr "Traitement…   %i%%"
 #: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp src/tracks/playabletrack/wavetrack/ui/WaveformView.cpp
 #, c-format
 msgid "Changed '%s' to %s"
-msgstr " '%s' changé en %s"
+msgstr "« %s » changé en %s"
 
 #: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
 msgid "Format Change"
@@ -16856,7 +16861,7 @@ msgstr "Paramétrer le nom de la piste"
 #: src/tracks/ui/CommonTrackControls.cpp
 #, c-format
 msgid "Renamed '%s' to '%s'"
-msgstr " '%s' renommé en '%s'"
+msgstr "« %s » renommé en « %s »"
 
 #: src/tracks/ui/CommonTrackControls.cpp
 msgid "Name Change"
@@ -17233,7 +17238,7 @@ msgstr " Crête %.2f "
 # trebmuh to check (clip comme ’partie audio’ ou ’saturation’ ?)
 #: src/widgets/Meter.cpp
 msgid " Clipped "
-msgstr "Saturé "
+msgstr " Saturé "
 
 #: src/widgets/MultiDialog.cpp
 msgid "Show Log for Details"
@@ -17572,9 +17577,7 @@ msgstr "Incapable de lire le préréglages depuis \"%s\""
 #: src/widgets/UnwritableLocationErrorDialog.cpp
 #, c-format
 msgid "You can change the directory in %s."
-msgstr ""
-"Impossible de créer le répertoire :\n"
-"  %s"
+msgstr "Impossible de créer le répertoire : %s"
 
 #. i18n-hint: Hyperlink title that opens Preferences dialog on Directories page.
 #: src/widgets/UnwritableLocationErrorDialog.cpp
@@ -19461,3 +19464,162 @@ msgid "Please note that names are sorted in alphabetical order, not in order of 
 msgstr ""
 "Veuillez noter que les noms sont classés par ordre alphabétique et non par "
 "ordre d'importance."
+
+#: modules/mod-nyq-bench/NyqBench.cpp
+msgid "Leland Lucius"
+msgstr "Leland Lucius"
+
+#: modules/mod-nyq-bench/NyqBench.cpp
+msgid "Harvey Lubin (logo)"
+msgstr "Harvey Lubin (logo)"
+
+#: modules/mod-nyq-bench/NyqBench.cpp
+msgid "Script"
+msgstr "Script"
+
+#: src/TimerRecordDialog.cpp src/prefs/GUIPrefs.cpp src/prefs/PlaybackPrefs.cpp src/prefs/RecordingPrefs.cpp
+msgid "Options"
+msgstr "Options"
+
+#: src/Tags.cpp
+msgid "Genres"
+msgstr "Genres"
+
+#: src/Tags.cpp
+msgid "Genre"
+msgstr "Genre"
+
+#: src/Screenshot.cpp src/commands/ScreenshotCommand.cpp src/toolbars/ControlToolBar.cpp
+msgid "Transport"
+msgstr "Transport"
+
+#: src/ProjectFileIO.cpp src/commands/AudacityCommand.cpp src/effects/Effect.cpp src/effects/nyquist/Nyquist.cpp src/prefs/PrefsPanel.cpp plug-ins/beat.ny
+msgid "Audacity"
+msgstr "Tenacity"
+
+#: src/ProjectFileIO.cpp
+#, c-format
+msgid "[Project %02i] "
+msgstr "[Projet %02i] "
+
+#. i18n-hint: This is on a button that will silence all the other tracks.
+#: src/MixerBoard.cpp src/commands/SetTrackInfoCommand.cpp src/tracks/playabletrack/ui/PlayableTrackButtonHandles.cpp src/tracks/playabletrack/ui/PlayableTrackControls.cpp
+msgid "Solo"
+msgstr "Solo"
+
+#. i18n-hint: title of the Gain slider, used to adjust the volume
+#. i18n-hint: Title of the Gain slider, used to adjust the volume
+#: src/MixerBoard.cpp src/menus/TrackMenus.cpp src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp src/tracks/playabletrack/wavetrack/ui/WaveTrackSliderHandles.cpp
+msgid "Gain"
+msgstr "Gain"
+
+#: src/HistoryWindow.cpp src/effects/TruncSilence.cpp plug-ins/vocalrediso.ny
+msgid "Action"
+msgstr "Action"
+
+#. i18n-hint: The %d's are replaced by numbers, the %s by musical notes, e.g. A#
+#: src/FreqWindow.cpp
+#, c-format
+msgid "%d Hz (%s) = %.1f dB"
+msgstr "%d Hz (%s) = %.1f dB"
+
+#. i18n-hint: The %d's are replaced by numbers, the %s by musical notes, e.g. A#
+#: src/FreqWindow.cpp
+#, c-format
+msgid "%d Hz (%s) = %d dB"
+msgstr "%d Hz (%s) = %d dB"
+
+#. i18n-hint: short form of 'seconds'.
+#: src/FreqWindow.cpp src/effects/AutoDuck.cpp
+msgid "s"
+msgstr "s"
+
+#. i18n-hint: This is the abbreviation for "Hertz", or
+#. cycles per second.
+#. i18n-hint: Name of display format that shows frequency in hertz
+#: src/FreqWindow.cpp src/effects/ChangePitch.cpp src/effects/Equalization.cpp src/effects/ScienFilter.cpp src/import/ImportRaw.cpp src/widgets/NumericTextCtrl.cpp
+msgid "Hz"
+msgstr "Hz"
+
+#: src/FreqWindow.cpp src/prefs/MousePrefs.cpp
+msgid "Zoom"
+msgstr "Zoom"
+
+#. i18n-hint: abbreviates decibels
+#. i18n-hint: short form of 'decibels'.
+#: src/FreqWindow.cpp src/commands/SetTrackInfoCommand.cpp src/effects/AutoDuck.cpp src/effects/Compressor.cpp src/effects/Equalization.cpp src/effects/Loudness.cpp src/effects/Normalize.cpp src/effects/ScienFilter.cpp src/effects/TruncSilence.cpp src/prefs/WaveformSettings.cpp src/widgets/Meter.cpp plug-ins/sample-data-export.ny
+msgid "dB"
+msgstr "dB"
+
+#: src/FileNames.cpp
+msgid ", "
+msgstr ", "
+
+#. i18n-hint a proper name
+#: src/FFT.cpp
+msgid "Welch"
+msgstr "Welch"
+
+#. i18n-hint two proper names
+#: src/FFT.cpp
+msgid "Blackman-Harris"
+msgstr "Blackman-Harris"
+
+#. i18n-hint a proper name
+#: src/FFT.cpp
+msgid "Blackman"
+msgstr "Blackman"
+
+#. i18n-hint a proper name
+#: src/FFT.cpp
+msgid "Hann"
+msgstr "Hann"
+
+#. i18n-hint a proper name
+#: src/FFT.cpp
+msgid "Hamming"
+msgstr "Hamming"
+
+#. i18n-hint a proper name
+#: src/FFT.cpp
+msgid "Bartlett"
+msgstr "Bartlett"
+
+#: src/Dither.cpp plug-ins/tremolo.ny
+msgid "Triangle"
+msgstr "Triangle"
+
+#. i18n-hint: This is the heading for a column in the edit macros dialog
+#: src/BatchProcessDialog.cpp
+msgid "Macro"
+msgstr "Macro"
+
+#: src/BatchCommands.cpp src/FileNames.cpp
+#, c-format
+msgid "(%s)"
+msgstr "(%s)"
+
+#: src/AudioIOBase.cpp
+#, c-format
+msgid "%d - %s\n"
+msgstr "%d - %s\n"
+
+#: src/AudacityLogger.cpp
+msgid "log.txt"
+msgstr "journal.txt"
+
+#: src/AudacityException.h src/commands/MessageCommand.cpp src/widgets/AudacityMessageBox.cpp
+msgid "Message"
+msgstr "Message"
+
+#. i18n-hint The registered trademark symbol (r) is substituted at %s
+#: src/AboutDialog.cpp
+#, c-format
+msgid "The Audacity%s trademark is used within this software for descriptive and informational purposes only."
+msgstr ""
+"La marque Audacity%s est utilisée dans ce logiciel à des fins descriptives "
+"et informatives uniquement."
+
+#: src/AboutDialog.cpp
+msgid "<h3>"
+msgstr "<h3>"

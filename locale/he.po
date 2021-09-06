@@ -11,8 +11,8 @@ msgstr ""
 "Project-Id-Version: tenacity 3.0.4\n"
 "Report-Msgid-Bugs-To: emabrey@tenacityaudio.org\n"
 "POT-Creation-Date: 2021-07-25 03:44-0400\n"
-"PO-Revision-Date: 2021-07-26 06:19+0000\n"
-"Last-Translator: Emily Mabrey <emilymabrey93@gmail.com>\n"
+"PO-Revision-Date: 2021-08-24 19:27+0000\n"
+"Last-Translator: Omer I.S. <omeritzicschwartz@gmail.com>\n"
 "Language-Team: Hebrew <https://hosted.weblate.org/projects/tenacity/tenacity/"
 "he/>\n"
 "Language: he\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Weblate 4.7.2-dev\n"
+"X-Generator: Weblate 4.8.1-dev\n"
 
 #: libraries/lib-strings/FutureStrings.h
 msgctxt "update dialog"
@@ -305,11 +305,11 @@ msgstr "...Nyquist פקודת"
 
 #: modules/mod-nyq-bench/NyqBench.cpp
 msgid "Save As"
-msgstr "...שמור בשם"
+msgstr "שמירה בשם"
 
 #: modules/mod-nyq-bench/NyqBench.cpp
 msgid "Save script as..."
-msgstr "...שמור פרויקט &בתור"
+msgstr "שמירת התסריט בשם..."
 
 #: modules/mod-nyq-bench/NyqBench.cpp src/toolbars/EditToolBar.cpp
 msgid "Copy"
@@ -460,7 +460,7 @@ msgstr ":תחביר התקנה"
 
 #: src/AboutDialog.cpp
 msgid "Settings folder:"
-msgstr ":תיקיית הגדרות"
+msgstr "תיקיית ההגדרות:"
 
 #: src/AboutDialog.cpp
 msgid "File Format Support"
@@ -468,7 +468,7 @@ msgstr "סוגי קבצים נתמכים"
 
 #: src/AboutDialog.cpp
 msgid "Audio playback and recording"
-msgstr "השמעה והקלטה של אודיו"
+msgstr "השמעה והקלטה של שמע"
 
 #: src/AboutDialog.cpp
 msgid "Sample rate conversion"
@@ -498,7 +498,7 @@ msgstr "MP2 -ייצוא ל"
 
 #: src/AboutDialog.cpp
 msgid "Import via QuickTime"
-msgstr "QuickTime ייבא דרך "
+msgstr "ייבוא דרך QuickTime"
 
 #: src/AboutDialog.cpp
 msgid "FFmpeg Import/Export"
@@ -526,13 +526,13 @@ msgstr "תמיכה בשינוי קצב וגובה צליל"
 
 #: src/AboutDialog.cpp
 msgid "GPL License"
-msgstr "GPL רשיון"
+msgstr "רישיון GPL"
 
 #. i18n-hint: For "About Tenacity..." credits, substituting a person's proper name
 #: src/AboutDialog.cpp
-#, fuzzy, c-format
+#, c-format
 msgid "%s, lead Tenacity developer"
-msgstr "מעטפת"
+msgstr "‏%s, מנהיגת פיתוח Tenacity"
 
 #. i18n-hint: For "About Tenacity..." credits, substituting a person's proper name
 #: src/AboutDialog.cpp
@@ -556,7 +556,7 @@ msgstr "%s, ניהול מערכת טרום-פיצול"
 #: src/AboutDialog.cpp
 #, c-format
 msgid "%s, co-founder and developer"
-msgstr "%s, מייסד שותף ומפתח טרום-פיצול"
+msgstr "‏%s, מייסד שותף ומפתח של Audacity"
 
 #. i18n-hint: For "About Tenacity..." credits, substituting a person's proper name
 #: src/AboutDialog.cpp
@@ -590,9 +590,9 @@ msgstr "%s, תיעוד ותמיכה בצרפתית טרום-פיצול"
 
 #. i18n-hint: For "About Tenacity..." credits, substituting a person's proper name
 #: src/AboutDialog.cpp
-#, c-format
+#, c-format, fuzzy
 msgid "%s, quality assurance"
-msgstr "בקרת איכות"
+msgstr "‏%s, בקרת האיכות של Audacity"
 
 #. i18n-hint: For "About Tenacity..." credits, substituting a person's proper name
 #: src/AboutDialog.cpp
@@ -608,9 +608,8 @@ msgstr "מעטפת"
 
 #. i18n-hint: The program's name substitutes for %s
 #: src/AboutDialog.cpp
-#, fuzzy
 msgid "Free, open source, cross-platform audio recorder and editor."
-msgstr "%s התכנה החופשית להקלטת ועריכת צלילים ."
+msgstr "התכנה החופשית, פתוחת הקוד וחוצת הפלטפורמות להקלטה ולעריכת צלילים."
 
 #: src/AboutDialog.cpp
 msgid "Credits"
@@ -623,13 +622,14 @@ msgstr "קומבינציית מפתחות"
 
 #. i18n-hint: The program's name substitutes for %s
 #: src/AboutDialog.cpp
-#, fuzzy, c-format
+#, c-format
 msgid "%s Contributors"
-msgstr ": אחרים תורמים"
+msgstr "התורמים ל־Tenacity"
 
 #: src/AboutDialog.cpp
+#, fuzzy
 msgid "Tenacity Special thanks:"
-msgstr ":מיוחדות תודות"
+msgstr "תודות מיוחדות מ־Tenacity:"
 
 #: src/AboutDialog.cpp src/prefs/LibraryPrefs.cpp
 msgid "Libraries"
@@ -639,13 +639,13 @@ msgstr "ספריות"
 #: src/AboutDialog.cpp
 #, c-format
 msgid "%s includes code from the following projects:"
-msgstr "‏%s מכילה קוד מהמיזמים הבאים:"
+msgstr "%s מכילה קוד מהמיזמים הבאים:"
 
 #. i18n-hint: The program's name substitutes for %s
 #: src/AboutDialog.cpp
 #, c-format
 msgid "%s Team Members"
-msgstr "נוספים Emeritus צוות חברי"
+msgstr "חברי צוות %s"
 
 #: src/AboutDialog.cpp
 msgid "Contributors"
@@ -658,21 +658,22 @@ msgstr ": אחרים תורמים"
 #. *  For example:  "English translation by Dominic Mazzoni."
 #: src/AboutDialog.cpp
 msgid "translator_credits"
-msgstr "רני :למתרגם קרדיט"
+msgstr "תודות למתרגמים: רני, עומר א״ש"
 
 #: src/AboutDialog.cpp
 msgid "Translators"
-msgstr "רני :למתרגם קרדיט"
+msgstr "מתרגמי Tenacity"
 
 #: src/AboutDialog.cpp
+#, fuzzy
 msgid "Special thanks:"
-msgstr ":מיוחדות תודות"
+msgstr "תודות מיוחדות מ־Audacity:"
 
 #. i18n-hint: The program's name substitutes for %s
 #: src/AboutDialog.cpp
 #, c-format
 msgid "%s website: "
-msgstr "Audacity ריצה ראשונה של"
+msgstr "האתר של %s:‏ "
 
 #: src/AdornedRulerPanel.cpp
 msgid "Timeline actions disabled during recording"
@@ -712,7 +713,7 @@ msgstr "חסום"
 
 #: src/AdornedRulerPanel.cpp
 msgid "Timeline Options"
-msgstr "הגדרות התוספים"
+msgstr "הגדרות ציר הזמן"
 
 #: src/AdornedRulerPanel.cpp
 msgid "Enable dragging selection"
@@ -737,7 +738,7 @@ msgstr ".'%s' לא ניתן למחוק את"
 
 #: src/AudacityApp.cpp
 msgid "Failed!"
-msgstr "Fallo"
+msgstr "כישלון!"
 
 #: src/AudacityApp.cpp
 msgid ""
@@ -765,9 +766,8 @@ msgstr ""
 "הוסר מרשימת הקבצים האחרונים."
 
 #: src/AudacityApp.cpp
-#, fuzzy
 msgid "Tenacity is starting up..."
-msgstr " כבר מופעלת Audacity תוכנת "
+msgstr "‏Tenacity בטעינה..."
 
 #. i18n-hint: "New" is an action (verb) to create a NEW project
 #: src/AudacityApp.cpp src/BatchProcessDialog.cpp src/menus/FileMenus.cpp
@@ -777,20 +777,19 @@ msgstr "&חדש"
 #. i18n-hint: (verb)
 #: src/AudacityApp.cpp src/menus/FileMenus.cpp
 msgid "&Open..."
-msgstr "&...פתח"
+msgstr "&פתיחה..."
 
 #: src/AudacityApp.cpp
 msgid "Open &Recent..."
 msgstr "...פתח &אחרונים"
 
 #: src/AudacityApp.cpp
-#, fuzzy
 msgid "&About Tenacity..."
 msgstr "על &אודות Tenacity..."
 
 #: src/AudacityApp.cpp
 msgid "&Preferences..."
-msgstr "...העד&פות"
+msgstr "העד&פות..."
 
 #: src/AudacityApp.cpp src/menus/FileMenus.cpp
 msgid "&File"
@@ -815,7 +814,9 @@ msgstr ""
 
 #: src/AudacityApp.cpp
 msgid "Audacity is now going to exit. Please launch Audacity again to use the new temporary directory."
-msgstr ".התוכנה עומדת להיסגר. אנא פתח אותה שוב בכדי להשתמש בספריה הזמנית החדשה"
+msgstr ""
+"‏Tenacity עומדת להיסגר. נא להפעיל שוב את Tenacity כדי להשתמש בתיקייה הזמנית "
+"החדשה."
 
 #: src/AudacityApp.cpp
 msgid ""
@@ -837,7 +838,7 @@ msgstr ""
 
 #: src/AudacityApp.cpp
 msgid "Do you still want to start Audacity?"
-msgstr "? Audacity האם תרצה להפעיל את"
+msgstr "האם עדיין ברצונך להפעיל את Tenacity?"
 
 #: src/AudacityApp.cpp
 msgid "Error Locking Temporary Folder"
@@ -857,11 +858,11 @@ msgstr ""
 
 #: src/AudacityApp.cpp
 msgid "Audacity is already running"
-msgstr " כבר מופעלת Audacity תוכנת "
+msgstr "‏Tenacity כבר פועלת"
 
 #: src/AudacityApp.cpp
 msgid "Audacity Startup Failure"
-msgstr "Audacity קבצי פרוייקט של"
+msgstr "הפעלת Tenacity נכשלה"
 
 #. i18n-hint: This controls the number of bytes that Audacity will
 #. *           use when writing files to the disk
@@ -888,7 +889,7 @@ msgstr "\t-version (מציג את גרסת התוכנה)"
 #. *           should open upon startup
 #: src/AudacityApp.cpp
 msgid "audio or project file name"
-msgstr "לא יכול לפתוח קובץ פרויקט"
+msgstr "שם קובץ לשמע או למיזם"
 
 #: src/AudacityApp.cpp
 msgid ""
@@ -920,11 +921,11 @@ msgstr "Audacity - צא מ"
 
 #: src/AudacityLogger.cpp
 msgid "Audacity Log"
-msgstr "Audacity פרוייקטים של"
+msgstr "קובץ היומן של Tenacity"
 
 #: src/AudacityLogger.cpp src/Tags.cpp
 msgid "&Save..."
-msgstr "...ש&מור"
+msgstr "ש&מירה..."
 
 #: src/AudacityLogger.cpp src/ShuttleGui.cpp src/effects/Contrast.cpp src/menus/FileMenus.cpp
 msgid "&Close"
@@ -937,7 +938,7 @@ msgstr ":לא יכול לכתוב קובץ"
 
 #: src/AudioIO.cpp
 msgid "Could not find any audio devices.\n"
-msgstr "לא נמצאו התקני אודיו.\n"
+msgstr "לא נמצאו התקני שמע.\n"
 
 #: src/AudioIO.cpp
 msgid ""
@@ -950,7 +951,7 @@ msgstr ""
 #: src/AudioIO.cpp
 #, c-format
 msgid "Error: %s"
-msgstr ":שגיאה"
+msgstr "שגיאה: %s"
 
 #: src/AudioIO.cpp
 msgid "Error Initializing Audio"
@@ -974,7 +975,7 @@ msgstr "Midi שגיאה באתחול אודיו"
 
 #: src/AudioIO.cpp
 msgid "Audacity Audio"
-msgstr "Audacity פרוייקטים של"
+msgstr "עורך השמע Tenacity"
 
 #: src/AudioIO.cpp src/ProjectAudioManager.cpp
 #, c-format
@@ -985,16 +986,11 @@ msgstr ".שגיאה בפתיחת התקן שמע"
 
 #: src/AudioIO.cpp
 msgid "Out of memory!"
-msgstr "!אין זיכרון פנוי"
+msgstr "אין זיכרון פנוי!"
 
 #: src/AudioIO.cpp
 msgid "Automated Recording Level Adjustment stopped. It was not possible to optimize it more. Still too high."
 msgstr ".כוונון עוצמת כניסה אוטומטית הופסקה. לא ניתן למטב יותר. עדיין הרמה גבוהה מדי"
-
-#: src/AudioIO.cpp
-#, c-format
-msgid "Automated Recording Level Adjustment decreased the volume to %f."
-msgstr ".%f כוונון עוצמת כניסה אוטומטי הפחית לעוצמה ברמה"
 
 #: src/AudioIO.cpp
 msgid "Automated Recording Level Adjustment stopped. It was not possible to optimize it more. Still too low."
@@ -1031,12 +1027,12 @@ msgstr ".מידע על ההתקן אינו זמין\n"
 #: src/AudioIOBase.cpp
 #, c-format
 msgid "Device ID: %d\n"
-msgstr "התקן\n"
+msgstr "מזהה התקן: %d\n"
 
 #: src/AudioIOBase.cpp
 #, c-format
 msgid "Device name: %s\n"
-msgstr "התקנים\n"
+msgstr "שם ההתקן: %s\n"
 
 #: src/AudioIOBase.cpp
 #, c-format
@@ -1194,7 +1190,7 @@ msgstr "Fade In - כניסה "
 
 #: src/BatchCommands.cpp
 msgid "Import Macro"
-msgstr "MIDI ייבא "
+msgstr "ייבוא מאקרו"
 
 #: src/BatchCommands.cpp
 msgid "Export Macro"
@@ -1231,7 +1227,7 @@ msgstr "%s :יושם אפקט"
 #: src/BatchCommands.cpp
 #, c-format
 msgid "Apply '%s'"
-msgstr "%s יישם "
+msgstr "החלת \"%s\""
 
 #: src/BatchCommands.cpp
 #, c-format
@@ -1251,7 +1247,7 @@ msgstr "מצב נסיון (TEST MODE)"
 #: src/BatchCommands.cpp
 #, c-format
 msgid "Apply %s"
-msgstr "%s יישם "
+msgstr "החלת %s"
 
 #. i18n-hint: A macro is a sequence of commands that can be applied
 #. * to one or more audio files.
@@ -1265,11 +1261,11 @@ msgstr "יישם &בפרוייקט נוכחי"
 
 #: src/BatchProcessDialog.cpp
 msgid "&Project"
-msgstr "&שמור פרויקט"
+msgstr "מי&זם"
 
 #: src/BatchProcessDialog.cpp
 msgid "Apply macro to files..."
-msgstr "&...יישם לקבצים"
+msgstr "החלת המאקרו על הקבצים..."
 
 #: src/BatchProcessDialog.cpp
 msgid "&Files..."
@@ -1287,7 +1283,7 @@ msgstr "לא נבחר שרשור פקודות"
 #: src/BatchProcessDialog.cpp
 #, c-format
 msgid "Applying '%s' to current project"
-msgstr "לפרוייקט הנוכחי '%s' מבצע"
+msgstr "החלת \"%s\" מתבצעת על המיזם הנוכחי"
 
 #: src/BatchProcessDialog.cpp
 msgid "Please save and close the current project first."
@@ -1299,7 +1295,7 @@ msgstr "...בחר קובץ (קבצים) לעיבוד אצווה "
 
 #: src/BatchProcessDialog.cpp
 msgid "Applying..."
-msgstr "...מיישם"
+msgstr "ההחלה מתבצעת..."
 
 #: src/BatchProcessDialog.cpp
 msgid "File"
@@ -1324,7 +1320,7 @@ msgstr "NUM"
 
 #: src/BatchProcessDialog.cpp
 msgid "Command  "
-msgstr "פקודה"
+msgstr "פקודה  "
 
 #: src/BatchProcessDialog.cpp src/effects/Contrast.cpp
 msgid "Parameters"
@@ -1336,7 +1332,7 @@ msgstr "&הכנס"
 
 #: src/BatchProcessDialog.cpp
 msgid "&Edit..."
-msgstr "&עריכה"
+msgstr "&עריכה..."
 
 #: src/BatchProcessDialog.cpp src/LabelDialog.cpp
 msgid "De&lete"
@@ -1352,7 +1348,7 @@ msgstr "הזז &למטה"
 
 #: src/BatchProcessDialog.cpp src/effects/nyquist/Nyquist.cpp src/menus/HelpMenus.cpp
 msgid "&Save"
-msgstr "שמור"
+msgstr "&שמירה"
 
 #. i18n-hint: This is the last item in a list.
 #: src/BatchProcessDialog.cpp
@@ -1399,7 +1395,7 @@ msgstr "&...הרץ מבחן השוואה"
 
 #: src/Benchmark.cpp
 msgid "Number of Edits:"
-msgstr ":מספר פעמים לחזרה"
+msgstr "מספר עריכות:"
 
 #. i18n-hint verb
 #: src/Benchmark.cpp src/tracks/ui/TrackButtonHandles.cpp src/widgets/HelpSystem.cpp
@@ -1428,7 +1424,7 @@ msgstr "\"מבצע \"חזרה על\n"
 #: src/Benchmark.cpp
 #, c-format
 msgid "Paste: %lld\n"
-msgstr "הדבק\n"
+msgstr "הדבקה: %lld\n"
 
 #: src/Benchmark.cpp
 msgid "Reading data again...\n"
@@ -1439,9 +1435,8 @@ msgid "No revision identifier was provided"
 msgstr "מזהה רויזיה לא סופק"
 
 #: src/BuildInfo.h
-#, fuzzy
 msgid "Unknown date and time"
-msgstr "תאריך וזמן סיום"
+msgstr "תאריך ושעה בלתי־ידועים"
 
 #: src/BuildInfo.h
 #, c-format
@@ -1449,9 +1444,8 @@ msgid "Release build (debug level %d)"
 msgstr "הפצת שחרור"
 
 #: src/BuildInfo.h
-#, fuzzy
 msgid ", 64 bits"
-msgstr "%s, 64 בתים"
+msgstr ", 64 סיביות"
 
 #. i18n-hint: %s will be replaced by the name of an action, such as Normalize, Cut, Fade.
 #: src/CommonCommandFlags.cpp
@@ -1519,7 +1513,7 @@ msgstr "מוחק תלויות"
 
 #: src/Dependencies.cpp
 msgid "Copying audio data into project..."
-msgstr "...מעתיק נתוני אודיו בפרוייקט"
+msgstr "נתוני השמע מועתקים לתוך המיזם..."
 
 #: src/Dependencies.cpp
 msgid "Project Depends on Other Audio Files"
@@ -1547,11 +1541,11 @@ msgstr ""
 
 #: src/Dependencies.cpp
 msgid "Project Dependencies"
-msgstr "תלויות הפרוייקט"
+msgstr "תלויות המיזם"
 
 #: src/Dependencies.cpp
 msgid "Audio File"
-msgstr "קובץ אודיו"
+msgstr "קובץ שמע"
 
 #: src/Dependencies.cpp
 msgid "Disk Space"
@@ -1614,7 +1608,7 @@ msgstr "קבצים חסרים"
 
 #: src/Dependencies.cpp
 msgid "If you proceed, your project will not be saved to disk. Is this what you want?"
-msgstr "?אם תמשיך, הפרוייקט לא יישמר בדיסק. זה מה שאתה רוצה"
+msgstr "אם ממשיכים, המיזם שלך לא יישמר בכונן. האם זהו רצונך?"
 
 #: src/Dependencies.cpp
 msgid ""
@@ -1776,7 +1770,7 @@ msgstr "תיקון עצמי מוגדש"
 #: src/FreqWindow.cpp
 #, c-format
 msgid "%s window"
-msgstr " חלון "
+msgstr "חלון %s"
 
 #: src/FreqWindow.cpp
 msgid "Linear frequency"
@@ -1802,7 +1796,7 @@ msgstr "סטריאו אופקי"
 
 #: src/FreqWindow.cpp
 msgid "Cursor:"
-msgstr "סמן שמאלה"
+msgstr "סמן:"
 
 #: src/FreqWindow.cpp
 msgid "&Grids"
@@ -1814,11 +1808,11 @@ msgstr "אלגוריתם:"
 
 #: src/FreqWindow.cpp
 msgid "&Size:"
-msgstr "גודל"
+msgstr "&גודל:"
 
 #: src/FreqWindow.cpp src/LabelDialog.cpp src/prefs/KeyConfigPrefs.cpp
 msgid "&Export..."
-msgstr "...ייצוא&"
+msgstr "יי&צוא..."
 
 #: src/FreqWindow.cpp
 msgid "&Function:"
@@ -1841,7 +1835,7 @@ msgstr ""
 
 #: src/FreqWindow.cpp
 msgid "Not enough data selected."
-msgstr "לא מספיק מידע נבחר"
+msgstr "לא נבחרו מספיק נתונים."
 
 #: src/FreqWindow.cpp
 msgid "Export Spectral Data As:"
@@ -1953,7 +1947,7 @@ msgstr "&פקודה"
 #. that have been taken.
 #: src/HistoryWindow.cpp
 msgid "&History..."
-msgstr "&...הסטוריה"
+msgstr "הי&סטוריה..."
 
 #: src/InconsistencyException.h
 msgid "Internal Error"
@@ -1995,7 +1989,7 @@ msgstr "(Hz) תדר"
 
 #: src/LabelDialog.cpp
 msgid "New..."
-msgstr "...חדש"
+msgstr "חדש..."
 
 #: src/LabelDialog.cpp src/menus/FileMenus.cpp
 msgid "Select a text file containing labels"
@@ -2008,11 +2002,11 @@ msgstr "\"%s\" :לא יכול לפתוח קובץ"
 
 #: src/LabelDialog.cpp
 msgid "No labels to export."
-msgstr ".אין תוויות לייצא"
+msgstr "אין תוויות לייצוא."
 
 #: src/LabelDialog.cpp src/menus/FileMenus.cpp
 msgid "Export Labels As:"
-msgstr ":ייצא תויות בתור"
+msgstr "ייצוא התוויות בשם:"
 
 #: src/LabelDialog.cpp
 msgid "New Label Track"
@@ -2020,7 +2014,7 @@ msgstr "תוית רצועה חדשה"
 
 #: src/LabelDialog.cpp
 msgid "Enter track name"
-msgstr "הכנס שם רצועה "
+msgstr "נא לתת שם לרצועה"
 
 #. i18n-hint: Title on a dialog indicating that this is the first
 #. * time Audacity has been run.
@@ -2030,7 +2024,7 @@ msgstr "Audacity ריצה ראשונה של"
 
 #: src/LangChoice.cpp
 msgid "Choose Language for Audacity to use:"
-msgstr ":Audacity בחר שפה לשימוש"
+msgstr "נא לבחור שפה לשימוש ב־Tenacity:"
 
 #: src/LangChoice.cpp src/effects/VST/VSTEffect.cpp src/widgets/FileDialog/gtk/FileDialogPrivate.cpp
 msgid "Confirm"
@@ -2046,8 +2040,8 @@ msgid ""
 "Converted a 1.0 project file to the new format.\n"
 "The old file has been saved as '%s'"
 msgstr ""
-".ממיר פרויקט מגרסב 1.0 לפורמט החדש\n"
-"'%s' הקובץ הישן נשמר בתור"
+"הומר מיזם מגרסה 1.0 לפורמט החדש.\n"
+"הקובץ הישן נשמר בשם \"%s\""
 
 #: src/Legacy.cpp
 msgid "Opening Audacity Project"
@@ -2154,8 +2148,8 @@ msgstr ".'%s' לא ניתן למחוק את"
 msgctxt "plug-ins"
 msgid "Enable this plug-in?\n"
 msgid_plural "Enable these plug-ins?\n"
-msgstr[0] "Vamp מצטער, כישלון בטעינת תוסף\n"
-msgstr[1] "Vamp מצטער, כישלון בטעינת תוסף\n"
+msgstr[0] "להפעיל תוסף זה?\n"
+msgstr[1] "להפעיל תוספים אלו?\n"
 
 #: src/PluginManager.cpp
 msgid "Enable new plug-ins"
@@ -2361,7 +2355,7 @@ msgstr "קובץ זה אינו מיזם Tenacity"
 
 #: src/ProjectFileIO.cpp
 msgid "Unable to initialize the project file"
-msgstr "MP3 לא יכול לאתחל זרם "
+msgstr "אין אפשרות לפתוח את קובץ המיזם"
 
 #. i18n-hint: An error message.  Don't translate blockfiles.
 #: src/ProjectFileIO.cpp
@@ -2400,7 +2394,7 @@ msgstr "שומר פרוייקטים"
 
 #: src/ProjectFileIO.cpp src/commands/AudacityCommand.cpp src/effects/Effect.cpp src/effects/nyquist/Nyquist.cpp src/prefs/PrefsPanel.cpp plug-ins/beat.ny
 msgid "Audacity"
-msgstr "Tenacity פרוייקטים של"
+msgstr "Tenacity"
 
 #. i18n-hint: E.g this is recovered audio that had been lost.
 #: src/ProjectFileIO.cpp
@@ -2545,11 +2539,11 @@ msgstr "לא יכול לפתוח קובץ פרויקט"
 
 #: src/ProjectHistory.cpp
 msgid "Created new project"
-msgstr "פרויקט חדש נוצר"
+msgstr "נוצר מיזם חדש"
 
 #: src/ProjectHistory.cpp
 msgid "Automatic database backup failed."
-msgstr "התאוששות שגיאה אוטומטית "
+msgstr "התאוששות שגיאה אוטומטית"
 
 #: src/ProjectManager.cpp
 #, c-format
@@ -2564,7 +2558,7 @@ msgstr "לשמור שינויים?"
 
 #: src/ProjectManager.cpp
 msgid "Save project before closing?"
-msgstr "לשמור שינויים לפני סגירה?"
+msgstr "לשמור את המיזם לפני הסגירה?"
 
 #: src/ProjectManager.cpp
 #, c-format
@@ -2614,7 +2608,7 @@ msgstr "(איכות מיטבית)"
 
 #: src/Screenshot.cpp src/export/ExportMultiple.cpp
 msgid "Choose..."
-msgstr "...בחר"
+msgstr "בחירה..."
 
 #: src/Screenshot.cpp
 msgid "All Effects"
@@ -2708,7 +2702,7 @@ msgstr "מאבחן נתוני קובץ הפרוייקט"
 
 #: src/Tags.cpp
 msgid "Artist Name"
-msgstr " שם האומן"
+msgstr "שם האומן/ית"
 
 #: src/Tags.cpp
 msgid "Track Title"
@@ -2756,7 +2750,7 @@ msgstr "תבנית"
 
 #: src/Tags.cpp
 msgid "&Load..."
-msgstr "&...טען"
+msgstr "טעי&נה..."
 
 #: src/Tags.cpp
 msgid "Don't show this when exporting audio"
@@ -2772,7 +2766,7 @@ msgstr "אפס סגנון"
 
 #: src/Tags.cpp
 msgid "Are you sure you want to reset the genre list to defaults?"
-msgstr "?האם אתה בטוח שאתה רוצה לאפס את קובץ רשימת הסגנונות לערכי המחדל"
+msgstr "לשחזר את רשימת הסוגות לברירת המחדל?"
 
 #: src/Tags.cpp
 msgid "Unable to open genre file."
@@ -2875,7 +2869,7 @@ msgstr "שגיאה בשמירה אוטומטית"
 
 #: src/TimerRecordDialog.cpp
 msgid "Current Project"
-msgstr "יישם &בפרוייקט נוכחי"
+msgstr "המיזם הנוכחי"
 
 #: src/TimerRecordDialog.cpp
 msgid "Recording start:"
@@ -2957,11 +2951,11 @@ msgstr "התאוששות שגיאה אוטומטית "
 
 #: src/TimerRecordDialog.cpp
 msgid "Save Project As:"
-msgstr "...שמור פרויקט &בתור"
+msgstr "שמירת המיזם בשם:"
 
 #: src/TimerRecordDialog.cpp src/menus/PluginMenus.cpp
 msgid "Select..."
-msgstr "בחר"
+msgstr "בחירה..."
 
 #: src/TimerRecordDialog.cpp
 msgid "Automatic Export"
@@ -2969,7 +2963,7 @@ msgstr "התאוששות שגיאה אוטומטית "
 
 #: src/TimerRecordDialog.cpp
 msgid "Enable Automatic &Export?"
-msgstr "לא מסוגל לייצא"
+msgstr "להפעיל את היי&צוא האוטומטי?"
 
 #: src/TimerRecordDialog.cpp
 msgid "Export Project As:"
@@ -3025,7 +3019,7 @@ msgstr "מבט רצועות"
 #. this track is muted. (The mute button is on.)
 #: src/TrackPanelAx.cpp
 msgid " Muted"
-msgstr "השתק"
+msgstr " מושתק"
 
 #. i18n-hint: This is for screen reader software and indicates that
 #. this track is soloed. (The Solo button is on.)
@@ -3037,7 +3031,7 @@ msgstr "יחיד"
 #. this track is selected.
 #: src/TrackPanelAx.cpp
 msgid " Selected"
-msgstr "בחר"
+msgstr " נבחר"
 
 #. i18n-hint: This is for screen reader software and indicates that
 #. this track is shown with a sync-locked icon.
@@ -3152,7 +3146,7 @@ msgstr "אין מספיק מקום להרחיב את השורה שנחתכה"
 #: src/commands/AudacityCommand.cpp src/effects/Effect.cpp
 #, c-format
 msgid "Applying %s..."
-msgstr "...מיישם"
+msgstr "החלת %s מתבצעת..."
 
 #: src/commands/BatchEvalCommand.cpp
 msgid "Batch Command"
@@ -3175,7 +3169,7 @@ msgstr " העתק תוויות"
 
 #: src/commands/CompareAudioCommand.cpp
 msgid "Threshold:"
-msgstr ":רמת סף"
+msgstr "סף:"
 
 #: src/commands/Demo.cpp
 msgid "Delay time (seconds):"
@@ -3207,7 +3201,7 @@ msgstr "ערוץ"
 
 #: src/commands/DragCommand.cpp
 msgid "Window Name:"
-msgstr ":סוג חלון"
+msgstr "שם החלון:"
 
 #: src/commands/GetInfoCommand.cpp
 msgid "Get Info"
@@ -3251,7 +3245,7 @@ msgstr "הערות"
 
 #: src/commands/HelpCommand.cpp src/export/ExportCL.cpp
 msgid "Command:"
-msgstr ":פקודה"
+msgstr "פקודה:"
 
 #: src/commands/ImportExportCommands.cpp
 msgid "Import2"
@@ -3259,7 +3253,7 @@ msgstr "ייבא"
 
 #: src/commands/ImportExportCommands.cpp src/commands/OpenSaveCommands.cpp
 msgid "File Name:"
-msgstr "סוג רעש"
+msgstr "שם הקובץ:"
 
 #: src/commands/ImportExportCommands.cpp
 msgid "Export2"
@@ -3267,7 +3261,7 @@ msgstr "ייצא"
 
 #: src/commands/ImportExportCommands.cpp
 msgid "Number of Channels:"
-msgstr ":מספר פעמים לחזרה"
+msgstr "מספר ערוצים:"
 
 #: src/commands/ImportExportCommands.h
 msgid "Exports to a file."
@@ -3291,7 +3285,7 @@ msgstr " חדשפרויקט"
 
 #: src/commands/OpenSaveCommands.cpp
 msgid "Add to History"
-msgstr " הסטוריית ביטול-ביצוע"
+msgstr "הוספה להיסטורייה"
 
 #: src/commands/OpenSaveCommands.cpp
 msgid "Save Project2"
@@ -3327,7 +3321,7 @@ msgstr ":העדפות"
 
 #: src/commands/PreferenceCommands.cpp src/commands/SetProjectCommand.cpp src/commands/SetTrackInfoCommand.cpp src/tracks/labeltrack/ui/LabelTrackView.cpp src/tracks/ui/CommonTrackControls.cpp
 msgid "Name:"
-msgstr "שם"
+msgstr "שם:"
 
 #: src/commands/PreferenceCommands.cpp
 msgid "Set Preference"
@@ -3335,7 +3329,7 @@ msgstr ":העדפות"
 
 #: src/commands/PreferenceCommands.cpp src/commands/SetEnvelopeCommand.cpp
 msgid "Value:"
-msgstr "ערך"
+msgstr "ערך:"
 
 #: src/commands/ScreenshotCommand.cpp
 msgid "Screenshot"
@@ -3343,11 +3337,11 @@ msgstr "&...כלי לכידת תמונת מסך"
 
 #: src/commands/ScreenshotCommand.cpp
 msgid "Window"
-msgstr " חלון "
+msgstr "חלון"
 
 #: src/commands/ScreenshotCommand.cpp
 msgid "Full Window"
-msgstr " חלון "
+msgstr "חלון מלא"
 
 #: src/commands/ScreenshotCommand.cpp
 msgid "Window Plus"
@@ -3418,7 +3412,7 @@ msgstr ":(Hz) קצב פרוייקט"
 
 #: src/commands/SelectCommand.cpp src/commands/SetProjectCommand.cpp
 msgid "Project"
-msgstr "התאם פרויקט"
+msgstr "מיזם"
 
 #: src/commands/SelectCommand.cpp
 msgid "Project End"
@@ -3438,11 +3432,11 @@ msgstr "לסוף קטע נבחר"
 
 #: src/commands/SelectCommand.cpp
 msgid "Start Time:"
-msgstr "זמן התחלה"
+msgstr "זמן התחלה:"
 
 #: src/commands/SelectCommand.cpp
 msgid "End Time:"
-msgstr "זמן סיום"
+msgstr "זמן סיום:"
 
 #: src/commands/SelectCommand.cpp
 msgid "Select Frequencies"
@@ -3471,7 +3465,7 @@ msgstr ":מידת ההתחמקות"
 
 #: src/commands/SelectCommand.cpp
 msgid "Mode:"
-msgstr "מצבים"
+msgstr "מצב:"
 
 #: src/commands/SelectCommand.h
 msgid "Selects a time range."
@@ -3499,7 +3493,7 @@ msgstr "מעטפת"
 
 #: src/commands/SetEnvelopeCommand.cpp
 msgid "Time:"
-msgstr "זמן סיום"
+msgstr "זמן:"
 
 #: src/commands/SetEnvelopeCommand.cpp src/menus/EditMenus.cpp
 msgid "Delete"
@@ -3540,11 +3534,11 @@ msgstr "קבע קצב"
 
 #: src/commands/SetProjectCommand.cpp
 msgid "Resize:"
-msgstr "גודל"
+msgstr "שינוי גודל:"
 
 #: src/commands/SetProjectCommand.cpp src/commands/SetTrackInfoCommand.cpp
 msgid "Height:"
-msgstr "קל"
+msgstr "גובה:"
 
 #: src/commands/SetTrackInfoCommand.cpp
 msgid "Track Index:"
@@ -4024,7 +4018,7 @@ msgstr "(עוצמה (0-1"
 
 #: src/effects/DtmfGen.cpp src/effects/Noise.cpp src/effects/Silence.cpp src/effects/ToneGen.cpp src/effects/TruncSilence.cpp src/effects/lv2/LV2Effect.cpp
 msgid "&Duration:"
-msgstr "משך זמן"
+msgstr "מש&ך זמן:"
 
 #: src/effects/DtmfGen.cpp
 msgid "&Tone/silence ratio:"
@@ -4142,7 +4136,7 @@ msgstr "&אפקטים"
 
 #: src/effects/EffectUI.cpp
 msgid "&Apply"
-msgstr "%s יישם "
+msgstr "ה&חלה"
 
 #: src/effects/EffectUI.cpp
 msgid "Latency: 0"
@@ -4204,25 +4198,25 @@ msgstr "&ערכי ברירת המחדל"
 
 #: src/effects/EffectUI.cpp src/menus/PluginMenus.cpp
 msgid "Import..."
-msgstr "...ייבא&"
+msgstr "ייבוא..."
 
 #: src/effects/EffectUI.cpp src/menus/PluginMenus.cpp
 msgid "Export..."
-msgstr "...ייצוא&"
+msgstr "ייצוא..."
 
 #: src/effects/EffectUI.cpp src/widgets/Meter.cpp
 msgid "Options..."
-msgstr "...אפשרויות"
+msgstr "אפשרויות..."
 
 #: src/effects/EffectUI.cpp
 #, c-format
 msgid "Name: %s"
-msgstr "שם"
+msgstr "שם: %s"
 
 #: src/effects/EffectUI.cpp
 #, c-format
 msgid "Description: %s"
-msgstr "תעתיק"
+msgstr "תיאור: %s"
 
 #: src/effects/EffectUI.cpp
 #, c-format
@@ -4235,7 +4229,7 @@ msgstr "ערכים קבועים מראש"
 
 #: src/effects/EffectUI.cpp
 msgid "You must specify a name"
-msgstr ".ראשית צריך לבחור ברצועה "
+msgstr "חובה לציין שם"
 
 #: src/effects/EffectUI.cpp
 msgid ""
@@ -4252,7 +4246,7 @@ msgstr "ניגון"
 
 #: src/effects/EffectUI.cpp src/toolbars/ControlToolBar.cpp
 msgid "Play"
-msgstr "נגן "
+msgstr "ניגון"
 
 #: src/effects/Equalization.cpp
 msgid "Cubic"
@@ -4370,7 +4364,7 @@ msgstr ".דרוך על קבצים קיימים"
 #: src/effects/Equalization.cpp
 #, c-format
 msgid "Delete '%s'?"
-msgstr "מחק"
+msgstr "למחוק את \"%s\"?"
 
 #: src/effects/Equalization.cpp src/export/ExportFFmpegDialogs.cpp
 msgid "Confirm Deletion"
@@ -4379,7 +4373,7 @@ msgstr "אשר מחיקה"
 #: src/effects/Equalization.cpp
 #, c-format
 msgid "Delete %d items?"
-msgstr "פעמים %d בוצעה חזרה "
+msgstr "למחוק %d פריטים?"
 
 #: src/effects/Equalization.cpp
 msgid "You cannot export 'unnamed' curve, it is special."
@@ -4391,7 +4385,7 @@ msgstr "%s לא יכול ליצא שמע אל"
 
 #: src/effects/Fade.cpp
 msgid "Fade In"
-msgstr "Fade In - כניסה "
+msgstr "כניסה בהדרגה"
 
 #: src/effects/Fade.cpp
 msgid "Fade Out"
@@ -5145,11 +5139,11 @@ msgstr "&אפקטים"
 
 #: src/effects/nyquist/LoadNyquist.cpp
 msgid "Nyquist Effects"
-msgstr "...Nyquist מיישם אפקט"
+msgstr "אפקט Nyquist"
 
 #: src/effects/nyquist/Nyquist.cpp
 msgid "Applying Nyquist Effect..."
-msgstr "...Nyquist מיישם אפקט"
+msgstr "אפקט Nyquist חל"
 
 #. i18n-hint: It is acceptable to translate this the same as for "Nyquist Prompt"
 #: src/effects/nyquist/Nyquist.cpp
@@ -5178,7 +5172,7 @@ msgstr ":Nyquist פלט"
 
 #: src/effects/nyquist/Nyquist.cpp
 msgid "Processing complete."
-msgstr "...מעבד"
+msgstr "העיבוד הושלם."
 
 #. i18n-hint: "%s" is replaced by name of plug-in.
 #: src/effects/nyquist/Nyquist.cpp
@@ -5269,7 +5263,7 @@ msgstr "...MIDI בחר קובץ"
 
 #: src/effects/nyquist/Nyquist.cpp
 msgid "Save file as"
-msgstr "שמור קובץ"
+msgstr "שמירת הקובץ בשם"
 
 #: src/effects/vamp/LoadVamp.cpp
 msgid "Vamp Effects"
@@ -5309,11 +5303,11 @@ msgstr "ייצא"
 
 #: src/export/Export.cpp
 msgid "All selected audio is muted."
-msgstr "הושתק קטע אודיו נבחר"
+msgstr "כל השמע הנבחר מושתק."
 
 #: src/export/Export.cpp src/export/ExportMultiple.cpp
 msgid "All audio is muted."
-msgstr "הושתק כל האודיו."
+msgstr "כל השמע מושתק."
 
 #: src/export/Export.cpp
 #, c-format
@@ -5329,11 +5323,12 @@ msgid ""
 "\n"
 "Are you sure you want to export the file under this name?"
 msgstr ""
-".%s את הקובץ %s הינך מתעתד לשמור תחת השם.\n"
+"ייצוא קובץ %s בשם \"%s\" עומד להתבצע.\n"
 "\n"
-".ומספר תוכנות לא יוכלו לפתוח קבצים בעלי סיומת לא סטנדרטית ,%s-בדרך כלל קבצים אלו מסתימים ב\n"
+"לרוב יש לקבצים הללו סיומת \"‎.%s\"‏, ומספר תוכניות אינן פותחות קבצים בעלי "
+"סיומות שאינן שגורות.\n"
 "\n"
-"?האם אתה בטוח ברצונך לשמור את הקובץ בשם זה"
+"האם לייצא את הקובץ בשם הזה?"
 
 #: src/export/Export.cpp
 msgid "Sorry, pathnames longer than 256 characters not supported."
@@ -5342,7 +5337,7 @@ msgstr ".מצטער, מסלול מיקום הקובץ הגדול מ256 תווי�
 #: src/export/Export.cpp
 #, c-format
 msgid "A file named \"%s\" already exists. Replace?"
-msgstr "?כבר קיים. להחליף אותו \"%s\" קובץ בשם"
+msgstr "כבר קיים קובץ בשם \"%s\". להחליפו?"
 
 #: src/export/Export.cpp
 msgid "Your tracks will be mixed down and exported as one mono file."
@@ -5429,7 +5424,7 @@ msgstr "ציינת שם קובץ בלי סיומת. להמשיך?"
 #: src/export/ExportCL.cpp
 #, c-format
 msgid "\"%s\" couldn't be found."
-msgstr "לא נמצא עיקום"
+msgstr "‏\"%s\" לא נמצא."
 
 #: src/export/ExportFFmpeg.cpp
 msgid "FFmpeg Error"
@@ -5651,7 +5646,7 @@ msgstr "MP3 ליצירת %s זקוק לקובץ  Audacity"
 #: src/export/ExportMP3.cpp
 #, c-format
 msgid "Where is %s?"
-msgstr "?%s היכן "
+msgstr "היכן %s?"
 
 #: src/export/ExportMP3.cpp
 msgid "Extended libraries"
@@ -5663,15 +5658,15 @@ msgstr "MP3 קובץ"
 
 #: src/export/ExportMP3.cpp
 msgid "Could not open MP3 encoding library!"
-msgstr "!MP3 לא יכול לפתוח ספריית קידוד של "
+msgstr "לא היה ניתן לפתוח את ספריית קידוד MP3!"
 
 #: src/export/ExportMP3.cpp
 msgid "Could not initialize MP3 encoding library!"
-msgstr "!MP3 לא יכול לפתוח ספריית קידוד של "
+msgstr "לא היה ניתן לפתוח את ספריית קידוד MP3!"
 
 #: src/export/ExportMP3.cpp
 msgid "Not a valid or supported MP3 encoding library!"
-msgstr "!ללא חוקית או לא נתמכתMP3 ספריית קידוד "
+msgstr "לא ספרייה תקינה או נתמכת לקידוד MP3!"
 
 #: src/export/ExportMP3.cpp
 msgid "Unable to initialize MP3 stream"
@@ -5777,11 +5772,11 @@ msgstr "בחר מיקום עבור קבצים מיוצאים"
 
 #: src/export/ExportMultiple.cpp
 msgid "Continue to export remaining files?"
-msgstr ".לא ניתן לפתוח או ליצור קובץ נסיון"
+msgstr "להמשיך בייצוא הקבצים הנותרים?"
 
 #: src/export/ExportMultiple.cpp
 msgid "Save As..."
-msgstr "...שמור בשם"
+msgstr "שמירה בשם..."
 
 #: src/export/ExportOGG.cpp
 msgid "Ogg Vorbis Files"
@@ -5881,7 +5876,7 @@ msgstr ""
 #: src/import/Import.cpp
 #, c-format
 msgid "File \"%s\" not found."
-msgstr "לא נמצא עיקום"
+msgstr "הקובץ \"%s\" לא נמצא."
 
 #: src/import/ImportAUP.cpp
 #, c-format
@@ -5997,7 +5992,7 @@ msgstr ":לא יכול לפתוח קובץ"
 #: src/import/ImportMIDI.cpp
 #, c-format
 msgid "Could not open file %s."
-msgstr "\"%s\" :לא יכול לפתוח קובץ"
+msgstr "לא היה ניתן לפתוח את הקובץ \"%s\"."
 
 #: src/import/ImportMP3.cpp
 msgid "MP3 files"
@@ -6496,7 +6491,7 @@ msgstr "כל הקבצים (*)|*"
 
 #: src/menus/FileMenus.cpp
 msgid "&Dangerous Reset..."
-msgstr "...שמור בשם"
+msgstr "איפוס מסוכ&ן..."
 
 #. i18n-hint: This is the name of the menu item on Mac OS X only
 #: src/menus/FileMenus.cpp
@@ -6514,11 +6509,11 @@ msgstr "&שמור פרויקט"
 
 #: src/menus/FileMenus.cpp
 msgid "Save Project &As..."
-msgstr "...שמור פרויקט &בתור"
+msgstr "שמירת המיזם ב&שם..."
 
 #: src/menus/FileMenus.cpp
 msgid "&Backup Project..."
-msgstr "...פתח &אחרונים"
+msgstr "&גיבוי המיזם..."
 
 #: src/menus/FileMenus.cpp
 msgid "&Export"
@@ -6538,7 +6533,7 @@ msgstr "ייצא"
 
 #: src/menus/FileMenus.cpp
 msgid "&Export Audio..."
-msgstr "...ייצוא&"
+msgstr "יי&צוא המיזם..."
 
 #: src/menus/FileMenus.cpp
 msgid "Expo&rt Selected Audio..."
@@ -6558,7 +6553,7 @@ msgstr "...MIDI ייצא"
 
 #: src/menus/FileMenus.cpp
 msgid "&Audio..."
-msgstr "&...שמע"
+msgstr "&שמע..."
 
 #: src/menus/FileMenus.cpp
 msgid "&Labels..."
@@ -6566,7 +6561,7 @@ msgstr "תוויות&"
 
 #: src/menus/FileMenus.cpp
 msgid "&MIDI..."
-msgstr "&...MIDI"
+msgstr "‏MIDI&..."
 
 #: src/menus/FileMenus.cpp
 msgid "&Raw Data..."
@@ -6602,7 +6597,7 @@ msgstr ".'%s' לא ניתן למחוק את"
 
 #: src/menus/HelpMenus.cpp
 msgid "Do you have these problems?"
-msgstr "?האם אתה רוצה לשמור שינויים"
+msgstr "האם חווית בעיות אלו?"
 
 #: src/menus/HelpMenus.cpp
 msgid "Fix"
@@ -6646,7 +6641,7 @@ msgstr "Audacity פרוייקטים של"
 
 #: src/menus/HelpMenus.cpp
 msgid "&Quick Help..."
-msgstr "&עזרה"
+msgstr "עזרה &מהירה"
 
 #: src/menus/HelpMenus.cpp
 msgid "&Diagnostics"
@@ -6662,7 +6657,7 @@ msgstr "...מידע על התקן אודיו"
 
 #: src/menus/HelpMenus.cpp src/widgets/ErrorDialog.cpp
 msgid "Show &Log..."
-msgstr "...הצג דו''ח"
+msgstr "הצגת קובץ ה&יומן..."
 
 #: src/menus/HelpMenus.cpp
 msgid "&About Audacity..."
@@ -6966,7 +6961,7 @@ msgstr "(Hz) תדר"
 
 #: src/menus/PluginMenus.cpp
 msgid "Select Tracks..."
-msgstr "בחר"
+msgstr "בחירת רצועות..."
 
 #: src/menus/PluginMenus.cpp
 msgid "Set Track Status..."
@@ -7006,15 +7001,15 @@ msgstr "&...דגימה מחדש"
 
 #: src/menus/PluginMenus.cpp
 msgid "Help..."
-msgstr "עזרה"
+msgstr "עזרה..."
 
 #: src/menus/PluginMenus.cpp
 msgid "Open Project..."
-msgstr "...פתח &אחרונים"
+msgstr "פתיחת מיזם..."
 
 #: src/menus/PluginMenus.cpp
 msgid "Save Project..."
-msgstr "...שמור פרויקט &בתור"
+msgstr "שמירת המיזם..."
 
 #: src/menus/PluginMenus.cpp
 msgid "Move Mouse..."
@@ -7693,7 +7688,7 @@ msgstr "הס&ר רצועה"
 
 #: src/menus/TransportMenus.cpp
 msgid "R&escan Audio Devices"
-msgstr "חפש מחדש התקני אודיו"
+msgstr "סריקה &חוזרת אחר התקני שמע"
 
 #: src/menus/TransportMenus.cpp
 msgid "Transport &Options"
@@ -7888,14 +7883,12 @@ msgid "Preferences for Application"
 msgstr ":העדפות"
 
 #: src/prefs/ApplicationPrefs.cpp
-#, fuzzy
 msgid "Update Audacity"
 msgstr "עדכון Tenacity"
 
 #: src/prefs/ApplicationPrefs.cpp
-#, fuzzy
 msgid "&Check for Updates"
-msgstr "...בדו&ק קישוריות"
+msgstr "שגיאה בבדיקה אחר העדכונים"
 
 #: src/prefs/BatchPrefs.cpp src/prefs/BatchPrefs.h
 msgid "Batch"
@@ -7982,7 +7975,7 @@ msgstr "...עיין"
 
 #: src/prefs/DirectoriesPrefs.cpp
 msgid "B&rowse..."
-msgstr "...עיין"
+msgstr "עיו&ן"
 
 #: src/prefs/DirectoriesPrefs.cpp
 msgid "&Import:"
@@ -7990,7 +7983,7 @@ msgstr "&ייבוא"
 
 #: src/prefs/DirectoriesPrefs.cpp
 msgid "Br&owse..."
-msgstr "...עיין"
+msgstr "עי&ון"
 
 #: src/prefs/DirectoriesPrefs.cpp
 msgid "&Export:"
@@ -7998,7 +7991,7 @@ msgstr "ייצא"
 
 #: src/prefs/DirectoriesPrefs.cpp
 msgid "Bro&wse..."
-msgstr "...עיין"
+msgstr "&עיון"
 
 #: src/prefs/DirectoriesPrefs.cpp
 msgid "&Macro output:"
@@ -8018,7 +8011,7 @@ msgstr "תקיה לקבצים זמניים"
 
 #: src/prefs/DirectoriesPrefs.cpp
 msgid "Brow&se..."
-msgstr "...עיין"
+msgstr "עיו&ן"
 
 #: src/prefs/DirectoriesPrefs.cpp
 msgid "&Free Space:"
@@ -8035,7 +8028,7 @@ msgstr "ב&חר פקודה"
 #: src/prefs/DirectoriesPrefs.cpp
 #, c-format
 msgid "Directory %s does not exist. Create it?"
-msgstr "? אינה קיימת. האם ליצור אותה %s ספריה "
+msgstr "התיקייה %s אינה קיימת. ליצור אותה?"
 
 #: src/prefs/DirectoriesPrefs.cpp
 msgid "New Temporary Directory"
@@ -8217,7 +8210,7 @@ msgstr "הערה: לחיצה על Cmd+Q תסגור את התוכנה. כל המ�
 
 #: src/prefs/KeyConfigPrefs.cpp
 msgid "&Import..."
-msgstr "...ייבא&"
+msgstr "יי&בוא..."
 
 #: src/prefs/KeyConfigPrefs.cpp src/prefs/ThemePrefs.cpp
 msgid "&Defaults"
@@ -8266,7 +8259,7 @@ msgstr ":FFmpeg ספריית"
 
 #: src/prefs/LibraryPrefs.cpp
 msgid "Loca&te..."
-msgstr "...אתר"
+msgstr "אי&תור"
 
 #: src/prefs/LibraryPrefs.cpp
 msgid "Dow&nload"
@@ -9348,7 +9341,7 @@ msgstr "דלג להתחלה"
 
 #: src/tracks/labeltrack/ui/LabelTrackControls.cpp
 msgid "&Font..."
-msgstr "...גופן"
+msgstr "&גופן..."
 
 #. i18n-hint: (noun) This is the font for the label track.
 #: src/tracks/labeltrack/ui/LabelTrackControls.cpp
@@ -9402,7 +9395,7 @@ msgstr "...להקטנה, גרור לקביעת גודל ההגדלה Shift בח�
 
 #: src/tracks/playabletrack/notetrack/ui/NoteTrackVZoomHandle.cpp src/tracks/playabletrack/wavetrack/ui/WaveTrackVZoomHandle.cpp src/tracks/timetrack/ui/TimeTrackVZoomHandle.cpp
 msgid "Right-click for menu."
-msgstr "קליק-ימני"
+msgstr "לחיצה ימנית תפתח תפריט."
 
 #: src/tracks/playabletrack/notetrack/ui/NoteTrackVZoomHandle.cpp src/tracks/playabletrack/wavetrack/ui/SpectrumVZoomHandle.cpp src/tracks/playabletrack/wavetrack/ui/WaveformVZoomHandle.cpp
 msgid "Zoom Reset"
@@ -9513,7 +9506,7 @@ msgstr "קבע קצב"
 
 #: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
 msgid "&Other..."
-msgstr "...אחר"
+msgstr "שו&נות"
 
 #. i18n-hint: The string names a track
 #: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
@@ -9871,7 +9864,7 @@ msgstr "פקודה"
 
 #: src/tracks/ui/TrackButtonHandles.cpp
 msgid "Open menu..."
-msgstr "...פתח &אחרונים"
+msgstr "פתיחת תפריט..."
 
 #. i18n-hint: Command names a modifier key on Macintosh keyboards
 #: src/tracks/ui/TrackSelectHandle.cpp
@@ -10090,9 +10083,9 @@ msgstr "אשר"
 
 #. i18n-hint: %s is replaced with a directory path.
 #: src/widgets/UnwritableLocationErrorDialog.cpp
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to write files to directory: %s."
-msgstr ".לא ניתן לפתוח או ליצור קובץ נסיון"
+msgstr "לא ניתן לפתוח את קובץ המיזם"
 
 #. i18n-hint: %s is replaced with 'Preferences > Directories'.
 #: src/widgets/UnwritableLocationErrorDialog.cpp
@@ -10137,7 +10130,7 @@ msgstr ".התחלה וסיום חייבים להיות גדולים מ-0"
 
 #: src/widgets/wxPanelWrapper.h
 msgid "Select a directory"
-msgstr "פרויקט חדש נוצר"
+msgstr "נא לבחור תיקייה"
 
 #: src/widgets/wxPanelWrapper.h
 msgid "Directory Dialog"
@@ -10193,7 +10186,7 @@ msgstr "Fade Out - יציאה"
 
 #: plug-ins/StudioFadeOut.ny plug-ins/adjustable-fade.ny
 msgid "Applying Fade..."
-msgstr "...מיישם"
+msgstr "ההדרגה חלה..."
 
 #: plug-ins/StudioFadeOut.ny plug-ins/adjustable-fade.ny plug-ins/crossfadeclips.ny plug-ins/crossfadetracks.ny plug-ins/delay.ny plug-ins/eq-xml-to-txt-converter.ny plug-ins/equalabel.ny plug-ins/label-sounds.ny plug-ins/limiter.ny plug-ins/noisegate.ny plug-ins/sample-data-export.ny plug-ins/sample-data-import.ny plug-ins/spectral-delete.ny plug-ins/tremolo.ny
 msgid "Steve Daulton"
@@ -10350,7 +10343,7 @@ msgstr "סוג מקש"
 
 #: plug-ins/delay.ny
 msgid "Applying Delay Effect..."
-msgstr "...Nyquist מיישם אפקט"
+msgstr "אפקט ההשהיה חל..."
 
 #: plug-ins/delay.ny
 msgid "Delay type"
@@ -10899,7 +10892,7 @@ msgstr ":(deg.) LFO פאזת התחלה של"
 
 #: plug-ins/vocalrediso.ny
 msgid "Applying Action..."
-msgstr "...מיישם"
+msgstr "הפעולה חלה..."
 
 #: plug-ins/vocalrediso.ny
 msgid "Remove Vocals: to mono"
@@ -12743,3 +12736,15 @@ msgstr "(Hz) תדר"
 
 #~ msgid "This is a Beta version of the program. It may contain bugs and unfinished features. We depend on your feedback: please send bug reports and feature requests to our <a href=\"mailto:feedback@audacityteam.org\">Feedback</a> address. For help, use the Help menu in the program, view the tips and tricks on our <a href=\"http://wiki.audacityteam.org/\">Wiki</a> or visit our <a href=\"http://forum.audacityteam.org/\">Forum</a>."
 #~ msgstr "תוכנה זו היא גירסת פיתוח. ועלול להכיל שגיאות ותכונות שלא הושלמו. אנו זקוקים למשוב שלכם: נא שלח דיווחי קריסה ובקשת תכונות לכתובת שלנו <a href=\"mailto:feedback@audacityteam.org\">Feedback</a>. לעזרה, נא העזר בפתריט העזרה דרך התוכנה, עיין בעצות וטריקים בדף הויקי שלנו <a href=\"http://wiki.audacityteam.org/\">Wiki</a> או בקר בפורום שלנו <a href=\"http://forum.audacityteam.org/\">Forum</a>."
+
+#: src/AboutDialog.cpp
+msgid "Website and Graphics"
+msgstr "האתר והעיצוב הגרפי של Audacity"
+
+#: src/AboutDialog.cpp
+msgid "<h3>"
+msgstr "<h3>"
+
+#: src/ProjectFileIO.cpp src/ProjectFileManager.cpp
+msgid "Error Saving Project"
+msgstr "שגיאה בשמירת המיזם"

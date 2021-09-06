@@ -4,20 +4,25 @@
 # Translators:
 #
 # Yuri Chornoivan <yurchor@ukr.net>, 2021.
+# mondstern <mondstern@snopyta.org>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: tenacity 3.0.4\n"
 "Report-Msgid-Bugs-To: emabrey@tenacityaudio.org\n"
 "POT-Creation-Date: 2021-07-25 03:44-0400\n"
-"PO-Revision-Date: 2021-07-24 09:29+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Ukrainian <https://hosted.weblate.org/projects/tenacity/tenacity/uk/>\n"
+"PO-Revision-Date: 2021-08-12 13:54+0000\n"
+"Last-Translator: mondstern <mondstern@snopyta.org>\n"
+"Language-Team: Ukrainian <https://hosted.weblate.org/projects/tenacity/"
+"tenacity/uk/>\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != 11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || (n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
-"X-Generator: Weblate 4.7.2-dev\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != 11 "
+"? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > "
+"14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || (n % "
+"100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
+"X-Generator: Weblate 4.8-dev\n"
 
 #: libraries/lib-strings/FutureStrings.h
 msgctxt "update dialog"
@@ -19664,3 +19669,55 @@ msgstr "Помилка.~%Потрібна стереодоріжка."
 
 #~ msgid "Select any uncompressed audio file"
 #~ msgstr "Виберіть будь-який нестиснений звуковий файл"
+
+#. i18n-hint: Refers to byte-order.  Don't translate this if you don't
+#. know the correct technical word.
+#: src/import/ImportRaw.cpp
+msgid "Big-endian"
+msgstr "Біг-эндиан"
+
+#. i18n-hint: Refers to byte-order.  Don't translate this if you don't
+#. know the correct technical word.
+#: src/import/ImportRaw.cpp
+msgid "Little-endian"
+msgstr "Літтл-эндиан"
+
+#: src/DBConnection.cpp
+#, c-format
+msgid "(%d): %s"
+msgstr "(%d): %s"
+
+#: src/BatchCommands.cpp src/FileNames.cpp
+#, c-format
+msgid "(%s)"
+msgstr "(%s)"
+
+#: src/AboutDialog.cpp
+msgid "Tenacity is not produced or endorsed by MuseCY SM Ltd. or Dominic M Mazzoni."
+msgstr ""
+"Завзятість не виробляється і не схвалено MuseCY SM Ltd. або Домініком м. "
+"Маццоні."
+
+#. i18n-hint The registered trademark symbol (r) is substituted at %s
+#: src/AboutDialog.cpp
+#, c-format
+msgid "The Audacity%s trademark is used within this software for descriptive and informational purposes only."
+msgstr ""
+"Торгова марка Audacity %s використовується в цьому програмному забезпеченні "
+"тільки в описових та інформаційних цілях."
+
+#. i18n-hint Tenacity's name substitutes for first and fourth %s, and the second and third %s are the copyright symbol and final year of copyright
+#: src/AboutDialog.cpp
+#, c-format
+msgid "%s %s 1999-%s %s contributors"
+msgstr "%s %s 1999-%s %s вкладники"
+
+#: src/AboutDialog.cpp
+msgid "Please note that names are sorted in alphabetical order, not in order of importance."
+msgstr ""
+"Будь ласка, зверніть увагу, що імена відсортовані в алфавітному порядку, а "
+"не в порядку важливості."
+
+#: modules/mod-nyq-bench/NyqBench.cpp
+msgid "Leland Lucius"
+msgstr "Ліланд Люціус"
