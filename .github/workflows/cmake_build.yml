@@ -114,9 +114,6 @@ jobs:
       with:
         submodules: true
 
-    - name: Get Git commit of vcpkg submodule
-      run: echo VCPKG_COMMIT=$(git ls-tree HEAD vcpkg | awk '{print $3}') >> ${GITHUB_ENV}
-
     - name: Setup platform specific environmental variables
       run: |
         if [[ "${{runner.os}}" == "Windows" ]]; then
@@ -210,6 +207,9 @@ jobs:
         echo "C:\Scoop\shims" | Out-File -FilePath $env:GITHUB_PATH -Encoding utf8 -Append
         iwr -useb get.scoop.sh | iex
         scoop install sccache
+
+    - name: Get Git commit of vcpkg submodule
+      run: echo VCPKG_COMMIT=$(git ls-tree HEAD vcpkg | awk '{print $3}') >> ${GITHUB_ENV}
 
     # Cache the vcpkg cache and the vcpkg executable to avoid bootstrapping each time
     - name: Setup vcpkg cache
