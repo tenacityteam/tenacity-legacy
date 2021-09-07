@@ -80,7 +80,7 @@ jobs:
       MACOSX_DEPLOYMENT_TARGET: 10.12
 
       # CMake settings
-      CMAKE_BUILD_TYPE: MinSizeRel
+      CMAKE_BUILD_TYPE: RelWithDebInfo
       CMAKE_GENERATOR: ${{matrix.config.CMAKE_GENERATOR}}
       CMAKE_GENERATOR_PLATFORM: ${{matrix.config.CMAKE_GENERATOR_PLATFORM}}
 
