@@ -58,7 +58,7 @@ set( GIT_DESCRIBE "unknown" )
 
 if( GIT_FOUND )
   execute_process(
-    COMMAND ${GIT_EXECUTABLE} describe --abbrev=7
+    COMMAND ${GIT_EXECUTABLE} describe --tags --abbrev=7
     WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
     OUTPUT_VARIABLE GIT_DESCRIBE
     OUTPUT_STRIP_TRAILING_WHITESPACE ERROR_QUIET
