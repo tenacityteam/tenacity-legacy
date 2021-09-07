@@ -17,6 +17,7 @@ on run argv
               close
               open
               update without registering applications
+              close
         end tell
    end tell
 end run

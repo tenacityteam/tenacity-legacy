@@ -41,10 +41,12 @@
 **	process and the values HAVE_LRINT and HAVE_LRINTF are set accordingly in
 **	the config.h file.
 */
-#if (defined (WIN32) || defined (_WIN32)) && defined(_MSC_VER) && defined(_M_IX86)
+#if (defined (WIN32) || defined (_WIN32)) && defined(_MSC_VER) && defined(_M_IX86) && !defined(HAVE_IPO)
 	// As of Visual Studio 2019 16.9, these functions have been made intrinsic and the build
 	// will fail. Unfortunately, the intrinsic versions run a LOT slower than the ones
-   // below, so force the compiler to use ours instead.
+    // below, so force the compiler to use ours instead. However, we cannot do this if
+    // interprocedural optimization is turned on, because that will break the build because we are
+    // redefining a compiler library helper
 	#pragma function( lrint, lrintf )
 
    // Including math.h allows us to use the inline assembler versions without
@@ -53,7 +55,7 @@
    // Without the inline assembler versions, these functions are VERY slow.
    // I also see that the include was part of the original source for this file:
    //    http://www.mega-nerd.com/FPcast/
-   
+
    #include <math.h>
 
    /*	Win32 doesn't seem to have these functions.
@@ -146,6 +148,6 @@
    #include	<math.h>
 
    #define	lrint(dbl)		((int)rint(dbl))
-	#define	lrintf(flt)		((int)rint(flt))
+   #define	lrintf(flt)		((int)rint(flt))
 
 #endif
