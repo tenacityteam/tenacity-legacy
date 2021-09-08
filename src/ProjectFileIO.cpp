@@ -79,10 +79,10 @@ static const int ProjectFileVersion = PACK(3, 0, 0, 0);
 
 // Navigation:
 //
-// Bindings are marked out in the code by, e.g. 
+// Bindings are marked out in the code by, e.g.
 // BIND SQL sampleblocks
 // A search for "BIND SQL" will find all bindings.
-// A search for "SQL sampleblocks" will find all SQL related 
+// A search for "SQL sampleblocks" will find all SQL related
 // to sampleblocks.
 
 static const char *ProjectFileSchema =
@@ -103,7 +103,7 @@ static const char *ProjectFileSchema =
    // This is all opaque to SQLite.  It just sees two
    // big binary blobs.
    // There is no limit to document blob size.
-   // dict will be smallish, with an entry for each 
+   // dict will be smallish, with an entry for each
    // kind of field.
    "CREATE TABLE IF NOT EXISTS <schema>.project"
    "("
@@ -123,7 +123,7 @@ static const char *ProjectFileSchema =
    // This is all opaque to SQLite.  It just sees two
    // big binary blobs.
    // There is no limit to document blob size.
-   // dict will be smallish, with an entry for each 
+   // dict will be smallish, with an entry for each
    // kind of field.
    "CREATE TABLE IF NOT EXISTS <schema>.autosave"
    "("
@@ -137,7 +137,7 @@ static const char *ProjectFileSchema =
    // The blocks may be partially empty.
    // The quantity of valid data in the blocks is
    // provided in the project blob.
-   // 
+   //
    // sampleformat specifies the format of the samples stored.
    //
    // blockID is a 64 bit number.
@@ -247,7 +247,7 @@ TitleRestorer::TitleRestorer(
          sProjNumber.Printf(
             _("[Project %02i] "), project.GetProjectNumber() + 1 );
          RefreshAllTitles( true );
-      } 
+      }
    }
    else
       UnnamedCount = 0;
@@ -642,7 +642,7 @@ bool ProjectFileIO::CheckVersion()
    // It's a database that SQLite recognizes, but it's not one of ours
    if (wxStrtoul<char **>(result, nullptr, 10) != ProjectFileID)
    {
-      SetError(XO("This is not an Audacity project file"));
+      SetError(XO("This is not an Tenacity project file"));
       return false;
    }
 
@@ -659,11 +659,11 @@ bool ProjectFileIO::CheckVersion()
    if (version > ProjectFileVersion)
    {
       SetError(
-         XO("This project was created with a newer version of Audacity.\n\nYou will need to upgrade to open it.")
+         XO("This project was created with a newer version of Tenacity.\n\nYou will need to upgrade to open it.")
       );
       return false;
    }
-   
+
    // Project file is older than ours, ask the user if it's okay to
    // upgrade.
    if (version < ProjectFileVersion)
@@ -868,7 +868,7 @@ bool ProjectFileIO::CopyTo(const FilePath &destpath,
       }
    });
 
-   // Attach the destination database 
+   // Attach the destination database
    wxString sql;
    wxString dbName = destpath;
    // Bug 2793: Quotes in name need escaping for sqlite3.
@@ -1036,7 +1036,7 @@ bool ProjectFileIO::ShouldCompact(const std::vector<const TrackList *> &tracks)
    // Get the number of blocks and total length from the project file.
    unsigned long long total = GetTotalUsage();
    unsigned long long blockcount = 0;
-   
+
    auto cb = [&blockcount](int cols, char **vals, char **)
    {
       // Convert
@@ -1151,7 +1151,7 @@ bool ProjectFileIO::RenameOrWarn(const FilePath &src, const FilePath &dst)
       ShowError(
          &window,
          XO("Error Writing to File"),
-         XO("Audacity failed to write file %s.\n"
+         XO("Tenacity failed to write file %s.\n"
             "Perhaps disk is full or not writable.\n"
             "For tips on freeing up space, click the help button.")
             .Format(dst),
@@ -1275,7 +1275,7 @@ void ProjectFileIO::Compact(
             // PRL:  not clear what to do if the following fails, but the worst should
             // be, the project may reopen in its present state as a recovery file, not
             // at the last saved state.
-            // REVIEW: Could the autosave file be corrupt though at that point, and so 
+            // REVIEW: Could the autosave file be corrupt though at that point, and so
             // prevent recovery?
             // LLL: I believe Paul is correct since it's deleted with a single SQLite
             // transaction. The next time the file opens will just invoke recovery.
@@ -1418,7 +1418,7 @@ void ProjectFileIO::SetProjectTitle(int number)
    {
       name =
       /* i18n-hint: The %02i is the project number. This is followed by the project name in quotes as a %s.*/
-      XO("[Project %02i] Audacity \"%s\"")
+      XO("[Project %02i] Tenacity \"%s\"")
          .Format( number + 1,
                  name.empty() ? XO("<untitled>") : Verbatim((const char *)name))
          .Translation();
@@ -1426,7 +1426,7 @@ void ProjectFileIO::SetProjectTitle(int number)
    // If we are not showing numbers, then <untitled> shows as 'Audacity'.
    else if (name.empty())
    {
-      name = XO("Audacity").Translation();
+      name = XO("Tenacity").Translation();
    }
 
    if (mRecovered)
@@ -1591,13 +1591,13 @@ bool ProjectFileIO::HandleXMLTag(const wxChar *tag, const wxChar **attrs)
    if (codeVer<fileVer)
    {
       /* i18n-hint: %s will be replaced by the version number.*/
-      auto msg = XO("This file was saved using Audacity %s.\nYou are using Audacity %s. You may need to upgrade to a newer version to open this file.")
+      auto msg = XO("This file was saved using Tenacity %s.\nYou are using Tenacity %s. You may need to upgrade to a newer version to open this file.")
          .Format(audacityVersion, AUDACITY_VERSION_STRING);
 
       ShowError(
          &window,
          XO("Can't open project file"),
-         msg, 
+         msg,
          "FAQ:Errors_opening_an_Audacity_project"
          );
 
@@ -1834,7 +1834,7 @@ bool ProjectFileIO::LoadProject(const FilePath &fileName, bool ignoreAutosave)
       // Error already set
       return false;
    }
- 
+
    // If we didn't have an autosave doc, load the project doc instead
    if (buffer.GetDataLen() == 0)
    {
@@ -1878,7 +1878,7 @@ bool ProjectFileIO::LoadProject(const FilePath &fileName, bool ignoreAutosave)
       }
 
       // Check for orphans blocks...sets mRecovered if any were deleted
-      
+
       auto blockids = WaveTrackFactory::Get( mProject )
          .GetSampleBlockFactory()
             ->GetActiveBlockIDs();
@@ -1890,7 +1890,7 @@ bool ProjectFileIO::LoadProject(const FilePath &fileName, bool ignoreAutosave)
             return false;
          }
       }
-   
+
       // Remember if we used autosave or not
       if (usedAutosave)
       {
@@ -1945,7 +1945,7 @@ bool ProjectFileIO::UpdateSaved(const TrackList *tracks)
    return true;
 }
 
-// REVIEW: This function is believed to report an error to the user in all cases 
+// REVIEW: This function is believed to report an error to the user in all cases
 // of failure.  Callers are believed not to need to do so if they receive 'false'.
 // LLL: All failures checks should now be displaying an error.
 bool ProjectFileIO::SaveProject(
@@ -2125,7 +2125,7 @@ bool ProjectFileIO::SaveProject(
       // saved database below.
       CloseProject();
 
-      // And make it the active project file 
+      // And make it the active project file
       UseConnection(std::move(newConn), fileName);
    }
    else

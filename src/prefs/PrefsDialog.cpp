@@ -81,12 +81,12 @@ namespace {
             if ( !!( id = ctrl.GetNextSibling( id ) ) )
                break;
          } while ( stack.pop_back(), !stack.empty() );
-         
+
          ++position;
       }
       return {};
    }
-   
+
    unsigned FindItemPosition( const wxTreeCtrl &ctrl, wxTreeItemId id )
    {
       // Return the 1-based count of the item's position in the pre-order
@@ -96,7 +96,7 @@ namespace {
          [=]( wxTreeItemId itemId, unsigned position ){
             return std::make_pair( itemId == id, position ); } );
    }
-   
+
    wxTreeItemId FindItem( const wxTreeCtrl &ctrl, int nn )
    {
       // The inverse of the function above
@@ -446,7 +446,7 @@ PrefsDialog::PrefsDialog(
    wxWindow * parent, AudacityProject *pProject,
    const TranslatableString &titlePrefix,
    PrefsPanel::Factories &factories)
-:  wxDialogWrapper(parent, wxID_ANY, XO("Audacity Preferences"),
+:  wxDialogWrapper(parent, wxID_ANY, XO("Tenacity Preferences"),
             wxDefaultPosition,
             wxDefaultSize,
             wxDEFAULT_DIALOG_STYLE | wxRESIZE_BORDER)
@@ -640,7 +640,7 @@ void PrefsDialog::OnCancel(wxCommandEvent & WXUNUSED(event))
 
 PrefsPanel * PrefsDialog::GetCurrentPanel()
 {
-   if( mCategories) 
+   if( mCategories)
       return static_cast<PrefsPanel*>(mCategories->GetCurrentPage());
    else
    {

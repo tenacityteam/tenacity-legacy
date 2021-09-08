@@ -476,7 +476,7 @@ public:
       {
          S.AddTitle(
             XO(
-"Audacity needs the file '%s' to import and export audio via FFmpeg.")
+"Tenacity needs the file '%s' to import and export audio via FFmpeg.")
                .Format( mName ) );
 
          S.SetBorder(3);

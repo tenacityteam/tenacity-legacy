@@ -373,10 +373,10 @@ void KeyConfigPrefs::ClearAllKeys()
 }
 
 // Checks if the given vector of keys contains illegal duplicates.
-// In case it does, stores the prefixed labels of operations 
+// In case it does, stores the prefixed labels of operations
 // with illegal key duplicates in fMatching and sMatching.
-// Search for duplicates fully implemented here 
-// to avoid possible problems with legal shortcut duplicates.  
+// Search for duplicates fully implemented here
+// to avoid possible problems with legal shortcut duplicates.
 bool KeyConfigPrefs::ContainsIllegalDups(
    TranslatableString & fMatching, TranslatableString & sMatching) const
 {
@@ -411,11 +411,11 @@ bool KeyConfigPrefs::ContainsIllegalDups(
 }
 
 
-// This function tries to add the given shortcuts(keys) "toAdd" 
-// to the already existing shortcuts(keys). Shortcuts are added only if 
+// This function tries to add the given shortcuts(keys) "toAdd"
+// to the already existing shortcuts(keys). Shortcuts are added only if
 //      1. the shortcut for the operation isn't defined already
 //      2. the added shortcut doesn't create illegal shortcut duplicate
-// The names of operations for which the second condition was violated 
+// The names of operations for which the second condition was violated
 // are returned in a single error message
 TranslatableString KeyConfigPrefs::MergeWithExistingKeys(
    const std::vector<NormalizedKeyString> &toAdd)
@@ -434,7 +434,7 @@ TranslatableString KeyConfigPrefs::MergeWithExistingKeys(
 
       return -1;
    };
-   
+
    const NormalizedKeyString noKey{ EMPTY_SHORTCUT };
 
    for (size_t i{ 0 }; i < toAdd.size(); i++)
@@ -452,7 +452,7 @@ TranslatableString KeyConfigPrefs::MergeWithExistingKeys(
          else
          {
             TranslatableString name{ mManager->GetKeyFromName(mNames[sRes]).GET(), {} };
-            
+
             disabledShortcuts +=
                XO(
 "\n   *   \"%s\"  (because the shortcut \'%s\' is used by \"%s\")\n")
@@ -460,7 +460,7 @@ TranslatableString KeyConfigPrefs::MergeWithExistingKeys(
                      mManager->GetPrefixedLabelFromName(mNames[i]),
                      name,
                      mManager->GetPrefixedLabelFromName(mNames[sRes]) );
-            
+
             mManager->SetKeyFromIndex(i, noKey);
          }
       }
@@ -486,7 +486,7 @@ void KeyConfigPrefs::OnImport(wxCommandEvent & WXUNUSED(event))
    wxString file = wxT("Audacity-keys.xml");
 
    file = FileNames::SelectFile(FileNames::Operation::Open,
-      XO("Select an XML file containing Audacity keyboard shortcuts..."),
+      XO("Select an XML file containing Tenacity keyboard shortcuts..."),
       wxEmptyString,
       file,
       wxT(""),
@@ -498,7 +498,7 @@ void KeyConfigPrefs::OnImport(wxCommandEvent & WXUNUSED(event))
       return;
    }
 
-   // this RefreshKeyInfo is here to account for 
+   // this RefreshKeyInfo is here to account for
    // potential OnSet() function executions before importing
    RefreshKeyInfo();
 
@@ -548,8 +548,8 @@ void KeyConfigPrefs::OnImport(wxCommandEvent & WXUNUSED(event))
    TranslatableString disabledShortcuts{ MergeWithExistingKeys(oldKeys) };
 
    RefreshBindings(true);
-   
-   TranslatableString message{ 
+
+   TranslatableString message{
       XO("Loaded %d keyboard shortcuts\n").Format(mManager->GetNumberOfKeysRead()) };
 
    if (disabledShortcuts.Translation() != (""))
@@ -768,7 +768,7 @@ void KeyConfigPrefs::OnSet(wxCommandEvent & WXUNUSED(event))
 
    CommandID newCommand{ mView->GetName(mCommandSelected) };
    NormalizedKeyString enteredKey{ mKey->GetValue() };
-   NormalizedKeyString newComDefaultKey{ 
+   NormalizedKeyString newComDefaultKey{
       mManager->GetDefaultKeyFromName(newCommand) };
    CommandIDs oldCommands;
 
@@ -805,7 +805,7 @@ void KeyConfigPrefs::OnSet(wxCommandEvent & WXUNUSED(event))
          Verbatim(wxT("'%s - %s'")).Format(
             mManager->GetCategoryFromName(oldCommands[i]),
             mManager->GetPrefixedLabelFromName(oldCommands[i]));
-      
+
       if (wxCANCEL == AudacityMessageBox(
             XO(
 "The keyboard shortcut '%s' is already assigned to:\n\n\t%s\n\n\nClick OK to assign the shortcut to\n\n\t%s\n\ninstead. Otherwise, click Cancel.")
@@ -820,7 +820,7 @@ void KeyConfigPrefs::OnSet(wxCommandEvent & WXUNUSED(event))
       {
          return;
       }
-      
+
       for (const auto & command : oldCommands)
       {
          mView->SetKeyByName(command, {});

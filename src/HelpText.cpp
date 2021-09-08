@@ -186,7 +186,7 @@ TranslatableString TitleText( const wxString & Key )
    if(Key ==wxT("save") )
    {
       /* i18n-hint: Title for a topic.*/
-      return XO("Saving an Audacity Project");
+      return XO("Saving an Tenacity Project");
    }
    if(Key ==wxT("wma-proprietary") )
    {
@@ -210,9 +210,9 @@ static wxString HelpTextBuiltIn( const wxString & Key )
 {
    // PRL:  Is it necessary to define these outside of conditional compilation so that both get into the .pot file?
    const auto alphamsg = XO(
-"<br><br>The version of Audacity you are using is an <b>Alpha test version</b>.");
+"<br><br>The version of Tenacity you are using is an <b>Alpha test version</b>.");
    const auto betamsg = XO(
-"<br><br>The version of Audacity you are using is a <b>Beta test version</b>.");
+"<br><br>The version of Tenacity you are using is a <b>Beta test version</b>.");
 
    if (Key == wxT("welcome"))
    {
@@ -228,7 +228,7 @@ static wxString HelpTextBuiltIn( const wxString & Key )
          << XO(
 "We strongly recommend that you use our latest stable released version, which has full documentation and support.<br><br>")
          << XO(
-"You can help us get Audacity ready for release by joining our [[https://www.audacityteam.org/community/|community]].<hr><br><br>")
+"You can help us get Tenacity ready for release by joining our [[https://www.audacityteam.org/community/|community]].<hr><br><br>")
 
 // DA: Support methods text.
 #ifdef EXPERIMENTAL_DA
@@ -361,7 +361,7 @@ wxString FormatHtmlText( const wxString & Text ){
 
    wxString localeStr = wxLocale::GetSystemEncodingName();
 
-   return 
+   return
       wxT("<html><head><META http-equiv=\"Content-Type\" content=\"text/html; charset=") +
       localeStr +
       wxT("\"></head>") +

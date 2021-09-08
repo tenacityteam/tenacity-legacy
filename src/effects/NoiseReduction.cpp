@@ -1113,7 +1113,7 @@ bool EffectNoiseReduction::Worker::Classify(const Statistics &statistics, int ba
       // avoid being fooled by up and down excursions into
       // either the mistake of classifying noise as not noise
       // (leaving a musical noise chime), or the opposite
-      // (distorting the signal with a drop out). 
+      // (distorting the signal with a drop out).
       if (mNWindowsToExamine == 3)
          // No different from second greatest.
          goto secondGreatest;
@@ -1181,7 +1181,7 @@ void EffectNoiseReduction::Worker::ReduceNoise
          pGain += mBinLow;
          for (int jj = mBinLow; jj < mBinHigh; ++jj) {
             const bool isNoise = Classify(statistics, jj);
-            if (!isNoise) 
+            if (!isNoise)
                *pGain = 1.0;
             ++pGain;
          }
@@ -1337,7 +1337,7 @@ bool EffectNoiseReduction::Worker::ProcessOne
       ProcessSamples(statistics, outputTrack.get(), blockSize, &buffer[0]);
 
       // Update the Progress meter, let user cancel
-      bLoopSuccess = 
+      bLoopSuccess =
          !effect.TrackProgress(count,
                                ( samplePos - start ).as_double() /
                                len.as_double() );
@@ -1621,8 +1621,8 @@ void EffectNoiseReduction::Dialog::DisableControlsIfIsolating()
 #endif
    };
    static const int nToDisable = sizeof(toDisable) / sizeof(toDisable[0]);
-   
-   bool bIsolating = 
+
+   bool bIsolating =
 #ifdef ISOLATE_CHOICE
       mKeepNoise->GetValue();
 #else
@@ -1717,7 +1717,7 @@ void EffectNoiseReduction::Dialog::PopulateOrExchange(ShuttleGui & S)
    S.StartStatic(XO("Step 1"));
    {
       S.AddVariableText(XO(
-"Select a few seconds of just noise so Audacity knows what to filter out,\nthen click Get Noise Profile:"));
+"Select a few seconds of just noise so Tenacity knows what to filter out,\nthen click Get Noise Profile:"));
       //m_pButton_GetProfile =
       S.Id(ID_BUTTON_GETPROFILE).AddButton(XXO("&Get Noise Profile"));
    }

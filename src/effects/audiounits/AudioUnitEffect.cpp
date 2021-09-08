@@ -132,7 +132,7 @@ public:
                                     kAudioUnitScope_Global,
                                     parmID,
                                     &info,
-                                    &dataSize);  
+                                    &dataSize);
       if (result != noErr)
       {
          return false;
@@ -191,7 +191,7 @@ public:
                                        kAudioUnitScope_Global,
                                        0,
                                        &clumpInfo,
-                                       &dataSize);  
+                                       &dataSize);
          if (result == noErr)
          {
             clumpName =  wxCFStringRef::AsString(clumpInfo.outName);
@@ -272,7 +272,7 @@ ComponentInterfaceSymbol AudioUnitEffectsModule::GetSymbol()
 
 VendorSymbol AudioUnitEffectsModule::GetVendor()
 {
-   return XO("The Audacity Team");
+   return XO("The Tenacity Team");
 }
 
 wxString AudioUnitEffectsModule::GetVersion()
@@ -283,7 +283,7 @@ wxString AudioUnitEffectsModule::GetVersion()
 
 TranslatableString AudioUnitEffectsModule::GetDescription()
 {
-   return XO("Provides Audio Unit Effects support to Audacity");
+   return XO("Provides Audio Unit Effects support to Tenacity");
 }
 
 // ============================================================================
@@ -471,7 +471,7 @@ wxString AudioUnitEffectsModule::FromOSType(OSType type)
                 (type & 0x00ff0000) >> 8  |
                 (type & 0x0000ff00) << 8  |
                 (type & 0x000000ff) << 24;
-   
+
    return wxString::FromUTF8((char *)&rev, 4);
 }
 
@@ -540,7 +540,7 @@ AudioUnitEffectOptionsDialog::~AudioUnitEffectOptionsDialog()
 
 void AudioUnitEffectOptionsDialog::PopulateOrExchange(ShuttleGui & S)
 {
-   
+
    S.SetBorder(5);
    S.StartHorizontalLay(wxEXPAND, 1);
    {
@@ -550,7 +550,7 @@ void AudioUnitEffectOptionsDialog::PopulateOrExchange(ShuttleGui & S)
          {
             S.AddVariableText(XO(
 "As part of their processing, some Audio Unit effects must delay returning "
-"audio to Audacity. When not compensating for this delay, you will "
+"audio to Tenacity. When not compensating for this delay, you will "
 "notice that small silences have been inserted into the audio. "
 "Enabling this option will provide that compensation, but it may "
 "not work for all Audio Unit effects."),
@@ -698,7 +698,7 @@ void AudioUnitEffectImportDialog::PopulateOrExchange(ShuttleGui & S)
                mEffect->mName);
    fn = path;
    fn.Normalize();
-   
+
    // Get all presets in the local domain for this effect
    wxDir::GetAllFiles(fn.GetFullPath(), &presets, wxT("*.aupreset"));
 
@@ -712,7 +712,7 @@ void AudioUnitEffectImportDialog::PopulateOrExchange(ShuttleGui & S)
 
    // Get all presets in the user domain for this effect
    wxDir::GetAllFiles(fn.GetFullPath(), &presets, wxT("*.aupreset"));
-   
+
    presets.Sort();
 
    for (size_t i = 0, cnt = presets.size(); i < cnt; i++)
@@ -784,7 +784,7 @@ TranslatableString AudioUnitEffectImportDialog::Import(
 void AudioUnitEffectImportDialog::OnOk(wxCommandEvent & evt)
 {
    evt.Skip();
-   
+
    // Import all selected presets
    long sel = -1;
    while ((sel = mList->GetNextItem(sel, wxLIST_NEXT_ALL, wxLIST_STATE_SELECTED)) >= 0)
@@ -809,7 +809,7 @@ void AudioUnitEffectImportDialog::OnOk(wxCommandEvent & evt)
          return;
       }
    }
-  
+
    EndModal(wxID_OK);
 }
 
@@ -832,7 +832,7 @@ AudioUnitEffect::AudioUnitEffect(const PluginPath & path,
 
    mpControl = NULL;
    mUnit = NULL;
-   
+
    mBlockSize = 0.0;
    mInteractive = false;
    mIsGraphical = false;
@@ -977,7 +977,7 @@ bool AudioUnitEffect::SupportsAutomation()
                                  kAudioUnitScope_Global,
                                  0,
                                  array.get(),
-                                 &dataSize);  
+                                 &dataSize);
    if (result != noErr)
    {
       return false;
@@ -1007,9 +1007,9 @@ bool AudioUnitEffect::SupportsAutomation()
 bool AudioUnitEffect::SetHost(EffectHostInterface *host)
 {
    OSStatus result;
-   
+
    mHost = host;
- 
+
    mSampleRate = 44100;
    result = AudioComponentInstanceNew(mComponent, &mUnit);
    if (!mUnit)
@@ -1046,7 +1046,7 @@ bool AudioUnitEffect::SetHost(EffectHostInterface *host)
       }
 
       LoadPreset(mHost->GetCurrentSettingsGroup());
-   } 
+   }
 
    if (!mMaster)
    {
@@ -1063,7 +1063,7 @@ bool AudioUnitEffect::SetHost(EffectHostInterface *host)
       }
 
       AudioUnitEvent event;
- 
+
       event.mEventType = kAudioUnitEvent_ParameterValueChange;
       event.mArgument.mParameter.mAudioUnit = mUnit;
       event.mArgument.mParameter.mScope = kAudioUnitScope_Global;
@@ -1095,7 +1095,7 @@ bool AudioUnitEffect::SetHost(EffectHostInterface *host)
                                        kAudioUnitScope_Global,
                                        0,
                                        array.get(),
-                                       &dataSize);  
+                                       &dataSize);
          if (result != noErr)
          {
             return false;
@@ -1131,7 +1131,7 @@ bool AudioUnitEffect::SetHost(EffectHostInterface *host)
 
       AudioUnitCocoaViewInfo cocoaViewInfo;
       dataSize = sizeof(AudioUnitCocoaViewInfo);
-   
+
       // Check for a Cocoa UI
       result = AudioUnitGetProperty(mUnit,
                                     kAudioUnitProperty_CocoaUI,
@@ -1208,7 +1208,7 @@ sampleCount AudioUnitEffect::GetLatency()
                            kAudioUnitScope_Global,
                            0,
                            &latency,
-                           &dataSize);  
+                           &dataSize);
 
       return sampleCount(latency * mSampleRate);
    }
@@ -1226,7 +1226,7 @@ size_t AudioUnitEffect::GetTailSize()
                         kAudioUnitScope_Global,
                         0,
                         &tailTime,
-                        &dataSize);  
+                        &dataSize);
 
    return tailTime * mSampleRate;
 }
@@ -1242,7 +1242,7 @@ bool AudioUnitEffect::ProcessInitialize(sampleCount WXUNUSED(totalLen), ChannelN
 
    mInputList.reinit(mAudioIns);
    mInputList[0].mNumberBuffers = mAudioIns;
-   
+
    mOutputList.reinit(mAudioOuts);
    mOutputList[0].mNumberBuffers = mAudioOuts;
 
@@ -1519,7 +1519,7 @@ bool AudioUnitEffect::GetAutomationParameters(CommandParameters & parms)
                                  kAudioUnitScope_Global,
                                  0,
                                  array.get(),
-                                 &dataSize);  
+                                 &dataSize);
    if (result != noErr)
    {
       return false;
@@ -1582,7 +1582,7 @@ bool AudioUnitEffect::SetAutomationParameters(CommandParameters & parms)
                                  kAudioUnitScope_Global,
                                  0,
                                  array.get(),
-                                 &dataSize);  
+                                 &dataSize);
    if (result != noErr)
    {
       return false;
@@ -1697,7 +1697,7 @@ RegistryPaths AudioUnitEffect::GetFactoryPresets()
          presets.push_back(wxCFStringRef::AsString(preset->presetName));
       }
    }
-                        
+
    return presets;
 }
 
@@ -1982,7 +1982,7 @@ bool AudioUnitEffect::LoadPreset(const RegistryPath & group)
       //wxLogError(wxT("Preset key \"%s\" not found in group \"%s\""), PRESET_KEY, group);
       return false;
    }
-   
+
    // Decode it
    wxMemoryBuffer buf = wxBase64Decode(parms);
    size_t bufLen = buf.GetDataLen();
@@ -2210,7 +2210,7 @@ bool AudioUnitEffect::SetRateAndChannels()
                GetSymbol().Internal().wx_str());
          return false;
       }
-   
+
       streamFormat.mChannelsPerFrame = mAudioOuts;
       result = AudioUnitSetProperty(mUnit,
                                     kAudioUnitProperty_StreamFormat,
@@ -2218,7 +2218,7 @@ bool AudioUnitEffect::SetRateAndChannels()
                                     0,
                                     &streamFormat,
                                     sizeof(AudioStreamBasicDescription));
-   
+
       if (result != noErr)
       {
          wxPrintf("%ls didn't accept stream format on output\n",
@@ -2498,7 +2498,7 @@ void AudioUnitEffect::EventListener(const AudioUnitEvent *inEvent,
    }
    else
    {
-      // We're the master, so propagate 
+      // We're the master, so propagate
       for (size_t i = 0, cnt = mSlaves.size(); i < cnt; i++)
       {
          mSlaves[i]->EventListener(inEvent, inParameterValue);
@@ -2606,7 +2606,7 @@ void AudioUnitEffect::GetChannelCounts()
       else if (ic == 1 && oc == 1)
       {
          havem2m = true;
-      }   
+      }
       else if (ic == 1 && oc == 2)
       {
          havem2s = true;

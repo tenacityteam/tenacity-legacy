@@ -304,7 +304,7 @@ bool ConvertLegacyProjectFile(const wxFileName &filename)
          XO(
 "Converted a 1.0 project file to the new format.\nThe old file has been saved as '%s'")
             .Format( xmlFile.GetBackupName() ),
-         XO("Opening Audacity Project"));
+         XO("Opening Tenacity Project"));
 
       return true;
    } );

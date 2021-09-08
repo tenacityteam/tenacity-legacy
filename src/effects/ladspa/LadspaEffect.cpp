@@ -126,7 +126,7 @@ ComponentInterfaceSymbol LadspaEffectsModule::GetSymbol()
 
 VendorSymbol LadspaEffectsModule::GetVendor()
 {
-   return XO("The Audacity Team");
+   return XO("The Tenacity Team");
 }
 
 wxString LadspaEffectsModule::GetVersion()
@@ -237,7 +237,7 @@ PluginPaths LadspaEffectsModule::FindPluginPaths(PluginManagerInterface & pm)
    pm.FindFilesInPathList(wxT("*.dll"), pathList, files, true);
 
 #else
-   
+
    // Recursively scan for all shared objects
    pm.FindFilesInPathList(wxT("*.so"), pathList, files, true);
 
@@ -255,7 +255,7 @@ unsigned LadspaEffectsModule::DiscoverPluginsAtPath(
    // causes duplicate menu entries to appear.
    wxFileName ff(path);
    if (ff.GetName().CmpNoCase(wxT("vst-bridge")) == 0) {
-      errMsg = XO("Audacity no longer uses vst-bridge");
+      errMsg = XO("Tenacity no longer uses vst-bridge");
       return 0;
    }
 
@@ -439,7 +439,7 @@ void LadspaEffectOptionsDialog::PopulateOrExchange(ShuttleGui & S)
          {
             S.AddVariableText( XO(
 "As part of their processing, some LADSPA effects must delay returning "
-"audio to Audacity. When not compensating for this delay, you will "
+"audio to Tenacity. When not compensating for this delay, you will "
 "notice that small silences have been inserted into the audio. "
 "Enabling this option will provide that compensation, but it may "
 "not work for all LADSPA effects."),
@@ -738,7 +738,7 @@ bool LadspaEffect::SetHost(EffectHostInterface *host)
       // Collect the audio ports
       if (LADSPA_IS_PORT_AUDIO(d))
       {
-         if (LADSPA_IS_PORT_INPUT(d)) 
+         if (LADSPA_IS_PORT_INPUT(d))
          {
             mInputPorts[mAudioIns++] = p;
          }
@@ -1796,7 +1796,7 @@ void LadspaEffect::RefreshControls(bool outputOnly)
          forceint = true;
       }
 
-      if (LADSPA_IS_PORT_OUTPUT(d)) 
+      if (LADSPA_IS_PORT_OUTPUT(d))
       {
          continue;
       }

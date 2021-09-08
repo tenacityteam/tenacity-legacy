@@ -550,7 +550,7 @@ void ExtImportPrefs::OnRuleTableEdit (wxGridEvent& event)
 "There are space characters (spaces, newlines, tabs or linefeeds) in one of \
 the items. They are likely to break the pattern matching. Unless you know \
 what you are doing, it is recommended to trim spaces. Do you want \
-Audacity to trim spaces for you?"),
+Tenacity to trim spaces for you?"),
                XO("Spaces detected"),
                wxYES_NO);
             askedAboutSpaces = true;

@@ -195,7 +195,7 @@ void LibraryPrefs::OnFFmpegFindButton(wxCommandEvent & WXUNUSED(event))
    if (!locate) {
       int response = AudacityMessageBox(
          XO(
-"Audacity has automatically detected valid FFmpeg libraries.\nDo you still want to locate them manually?"),
+"Tenacity has automatically detected valid FFmpeg libraries.\nDo you still want to locate them manually?"),
          XO("Success"),
          wxCENTRE | wxYES_NO | wxNO_DEFAULT |wxICON_QUESTION);
       if (response == wxYES) {

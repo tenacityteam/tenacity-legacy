@@ -71,7 +71,7 @@ void SplashDialog::DoHelpWelcome( AudacityProject &project )
 }
 
 SplashDialog::SplashDialog(wxWindow * parent)
-   :  wxDialogWrapper(parent, -1, XO("Welcome to Audacity!"),
+   :  wxDialogWrapper(parent, -1, XO("Welcome to Tenacity!"),
       wxPoint( -1, 60 ), // default x position, y position 60 pixels from top of screen.
       wxDefaultSize, wxDEFAULT_DIALOG_STYLE | wxRESIZE_BORDER)
 {
@@ -107,9 +107,9 @@ void SplashDialog::Populate( ShuttleGui & S )
    // It also makes it easier to revert to full size if we decide to.
    const float fScale=0.5f;// smaller size.
    wxImage RescaledImage( m_pLogo->ConvertToImage() );
-   wxColour MainColour( 
-      RescaledImage.GetRed(1,1), 
-      RescaledImage.GetGreen(1,1), 
+   wxColour MainColour(
+      RescaledImage.GetRed(1,1),
+      RescaledImage.GetGreen(1,1),
       RescaledImage.GetBlue(1,1));
    this->SetBackgroundColour(MainColour);
 

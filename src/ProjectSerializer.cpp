@@ -83,15 +83,15 @@ wxMemoryBuffer ProjectSerializer::mDict;
 
 TranslatableString ProjectSerializer::FailureMessage( const FilePath &/*filePath*/ )
 {
-   return 
-XO("This recovery file was saved by Audacity 2.3.0 or before.\n"
-   "You need to run that version of Audacity to recover the project." );
+   return
+XO("This recovery file was saved by Tenacity 2.3.0 or before.\n"
+   "You need to run that version of Tenacity to recover the project." );
 }
 
 namespace {
    // Aliases for the FIXED-WIDTH integer types that are used in the file
    // format.
-   
+
    // Chosen so that among the four build types (32 bit Windows, 64
    // bit Windows, 64 bit Mac clang, Linux g++) presently done (3.0.0
    // development), we use the narrowest width of the type on any of them, so

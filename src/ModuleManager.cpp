@@ -11,7 +11,7 @@
 *******************************************************************//*!
 
 \file ModuleManager.cpp
-\brief Based on LoadLadspa, this code loads pluggable Audacity 
+\brief Based on LoadLadspa, this code loads pluggable Audacity
 extension modules.  It also has the code to
 invoke a function returning a replacement window,
 i.e. an alternative to the usual interface, for Audacity.
@@ -106,10 +106,10 @@ bool Module::Load(wxString &deferredErrorMessage)
    wxString moduleVersion = versionFn();
    if( moduleVersion != AUDACITY_VERSION_STRING) {
       AudacityMessageBox(
-         XO("The module \"%s\" is matched with Audacity version \"%s\".\n\nIt will not be loaded.")
+         XO("The module \"%s\" is matched with Tenacity version \"%s\".\n\nIt will not be loaded.")
             .Format(ShortName, moduleVersion),
          XO("Module Unsuitable"));
-      wxLogMessage(wxT("The module \"%s\" is matched with Audacity version \"%s\". It will not be loaded."), mName, moduleVersion);
+      wxLogMessage(wxT("The module \"%s\" is matched with Tenacity version \"%s\". It will not be loaded."), mName, moduleVersion);
       mLib->Unload();
       return false;
    }
@@ -120,7 +120,7 @@ bool Module::Load(wxString &deferredErrorMessage)
       return true;
    }
 
-   // However if we do have it and it does not work, 
+   // However if we do have it and it does not work,
    // then the module is bad.
    bool res = ((mDispatch(ModuleInitialize))!=0);
    if (res) {
@@ -291,7 +291,7 @@ void ModuleManager::TryLoadModules(
             XO("Yes"), XO("No"),
          };  // could add a button here for 'yes and remember that', and put it into the cfg file.  Needs more thought.
          int action;
-         action = ShowMultiDialog(msg, XO("Audacity Module Loader"),
+         action = ShowMultiDialog(msg, XO("Tenacity Module Loader"),
             buttons,
             "",
             XO("Try and load this module?"),
@@ -422,7 +422,7 @@ bool ModuleManager::DiscoverProviders()
    InitializeBuiltins();
 
 // The commented out code loads modules whether or not they are enabled.
-// none of our modules is a 'provider' of effects, so this code commented out. 
+// none of our modules is a 'provider' of effects, so this code commented out.
 #if 0
    FilePaths provList;
    FilePaths pathList;
@@ -468,7 +468,7 @@ void ModuleManager::InitializeBuiltins()
          ModuleInterface *pInterface = module.get();
          auto id = GetID(pInterface);
 
-         // Need to remember it 
+         // Need to remember it
          mDynModules[id] = std::move(module);
       }
       else
@@ -527,7 +527,7 @@ bool ModuleManager::IsProviderValid(const PluginID & WXUNUSED(providerID),
    // Builtin modules do not have a path
    if (path.empty())
    {
-      return true;  
+      return true;
    }
 
    wxFileName lib(path);

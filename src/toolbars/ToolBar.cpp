@@ -64,8 +64,8 @@ in which buttons can be placed.
 //
 #define RWIDTH 4
 
-/// \brief a wxWindow that provides the resizer for a toolbar on the 
-/// right hand side.  Responsible for drawing the resizer appearance, 
+/// \brief a wxWindow that provides the resizer for a toolbar on the
+/// right hand side.  Responsible for drawing the resizer appearance,
 /// resizing mouse events and constraining the resizing.
 class ToolBarResizer final : public wxWindow
 {
@@ -168,7 +168,7 @@ void ToolBarResizer::OnLeftDown( wxMouseEvent & event )
    event.Skip();
 
    // Retrieve the mouse position
-   // Bug 1896: This is at time of processing the event, rather than at time 
+   // Bug 1896: This is at time of processing the event, rather than at time
    // of generation of event.  Works around event.GetPosition() giving
    // incorrect values if position of resizer is changing.
    mResizeOffset = wxGetMousePosition()-mBar->GetRect().GetBottomRight();
@@ -220,7 +220,7 @@ void ToolBarResizer::OnMotion( wxMouseEvent & event )
    if( HasCapture() && event.Dragging() )
    {
       // Retrieve the mouse position
-      // Bug 1896: This is at time of processing the event, rather than at time 
+      // Bug 1896: This is at time of processing the event, rather than at time
       // of generation of event.  Works around event.GetPosition() giving
       // incorrect values if position of resizer is changing.
       wxPoint pos = wxGetMousePosition();
@@ -366,7 +366,7 @@ ToolBar::~ToolBar()
 TranslatableString ToolBar::GetTitle()
 {
    /* i18n-hint: %s will be replaced by the name of the kind of toolbar.*/
-   return XO("Audacity %s Toolbar").Format( GetLabel() );
+   return XO("Tenacity %s Toolbar").Format( GetLabel() );
 }
 
 //
@@ -508,7 +508,7 @@ wxSize ToolBar::GetSmartDockedSize()
    // 46 is the size where we switch from expanded to compact.
    if( sz.y < 46 )
       sz.y = tbs-1;
-   else 
+   else
       sz.y = 2 * tbs -1;
    return sz;
 }
@@ -561,7 +561,7 @@ void ToolBar::ReCreateButtons()
          ms->Add(mResizer, 0, wxEXPAND | wxALIGN_TOP | wxLEFT, 1);
          mResizer->SetToolTip(_("Click and drag to resize toolbar"));
       }
-      
+
       // Set dock after possibly creating resizer.
       // (Re)Establish dock state
       SetDocked(GetDock(), false);
@@ -584,7 +584,7 @@ void ToolBar::ReCreateButtons()
       sz2.SetWidth(GetMinToolbarWidth());
       sz2.y = tbs -1;
       SetMinSize(sz2);
-      
+
       // sz2 is now the minimum size.
       // sz3 is the size we were.
 

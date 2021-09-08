@@ -33,7 +33,7 @@
    #include <Carbon/Carbon.h>
 #endif
 
-#define AudacityKaraokeTitle XO("Audacity Karaoke%s")
+#define AudacityKaraokeTitle XO("Tenacity Karaoke%s")
 
 enum {
    kID_RadioButton_BouncingBall = 10101,

@@ -102,7 +102,7 @@ ComponentInterfaceSymbol LV2EffectsModule::GetSymbol()
 
 VendorSymbol LV2EffectsModule::GetVendor()
 {
-   return XO("The Audacity Team");
+   return XO("The Tenacity Team");
 }
 
 wxString LV2EffectsModule::GetVersion()
@@ -113,7 +113,7 @@ wxString LV2EffectsModule::GetVersion()
 
 TranslatableString LV2EffectsModule::GetDescription()
 {
-   return XO("Provides LV2 Effects support to Audacity");
+   return XO("Provides LV2 Effects support to Tenacity");
 }
 
 // ============================================================================
@@ -153,7 +153,7 @@ bool LV2EffectsModule::Initialize()
    // Look in ~/Library/Audio/Plug-Ins/lv2 and /Library/Audio/Plug-Ins/lv2
    newVar += wxT(":$HOME") LV2PATH;
    newVar += wxT(":") LV2PATH;
-   
+
    newVar += wxT(":/usr/local/lib/lv2");
    newVar += wxT(":/usr/lib/lv2");
    newVar += wxT(":") + libdir.GetPath();

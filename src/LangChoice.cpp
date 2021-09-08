@@ -57,7 +57,7 @@ wxString ChooseLanguage(wxWindow *parent)
 
    /* i18n-hint: Title on a dialog indicating that this is the first
     * time Audacity has been run. */
-   LangChoiceDialog dlog(parent, -1, XO("Audacity First Run"));
+   LangChoiceDialog dlog(parent, -1, XO("Tenacity First Run"));
    dlog.CentreOnParent();
    dlog.ShowModal();
    returnVal = dlog.GetLang();
@@ -87,7 +87,7 @@ LangChoiceDialog::LangChoiceDialog(wxWindow * parent,
       S.StartHorizontalLay();
       {
          S.SetBorder(15);
-         mChoice = S.AddChoice(XXO("Choose Language for Audacity to use:"),
+         mChoice = S.AddChoice(XXO("Choose Language for Tenacity to use:"),
             mLangNames,
             lang);
       }

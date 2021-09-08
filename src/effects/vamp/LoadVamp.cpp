@@ -76,7 +76,7 @@ ComponentInterfaceSymbol VampEffectsModule::GetSymbol()
 
 VendorSymbol VampEffectsModule::GetVendor()
 {
-   return XO("The Audacity Team");
+   return XO("The Tenacity Team");
 }
 
 wxString VampEffectsModule::GetVersion()
@@ -87,7 +87,7 @@ wxString VampEffectsModule::GetVersion()
 
 TranslatableString VampEffectsModule::GetDescription()
 {
-   return XO("Provides Vamp Effects support to Audacity");
+   return XO("Provides Vamp Effects support to Tenacity");
 }
 
 // ============================================================================

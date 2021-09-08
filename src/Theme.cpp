@@ -54,7 +54,7 @@ and use it for toolbar and window layouts too.
 *//*****************************************************************//**
 
 \class auStaticText
-\brief is like wxStaticText, except it can be themed.  wxStaticText 
+\brief is like wxStaticText, except it can be themed.  wxStaticText
 can't be.
 
 *//*****************************************************************/
@@ -311,8 +311,8 @@ void ThemeBase::LoadTheme( teThemeType Theme )
    int TextColourDifference =  ColourDistance( CurrentText, DesiredText );
 
    bIsUsingSystemTextColour = ( TextColourDifference == 0 );
-   // Theming is very accepting of alternative text colours.  They just need to 
-   // have decent contrast to the background colour, if we're blending themes. 
+   // Theming is very accepting of alternative text colours.  They just need to
+   // have decent contrast to the background colour, if we're blending themes.
    if( !bIsUsingSystemTextColour ){
       int ContrastLevel        =  ColourDistance( Back, DesiredText );
       bIsUsingSystemTextColour = bRecolourOnLoad && (ContrastLevel > 250);
@@ -336,7 +336,7 @@ void ThemeBase::RecolourBitmap( int iIndex, wxColour From, wxColour To )
 }
 
 int ThemeBase::ColourDistance( wxColour & From, wxColour & To ){
-   return 
+   return
       abs( From.Red() - To.Red() )
       + abs( From.Green() - To.Green() )
       + abs( From.Blue() - To.Blue() );
@@ -415,7 +415,7 @@ wxImage ThemeBase::MaskedImage( char const ** pXpm, char const ** pMask )
 
 // Legacy function to allow use of an XPM where no theme image was defined.
 // Bit depth and mask needs review.
-// Note that XPMs don't offer translucency, so unsuitable for a round shape overlay, 
+// Note that XPMs don't offer translucency, so unsuitable for a round shape overlay,
 // for example.
 void ThemeBase::RegisterImage( int &iIndex, char const ** pXpm, const wxString & Name )
 {
@@ -657,8 +657,8 @@ void ThemeBase::CreateImageCache( bool bBinarySave )
          mFlow.GetNextPosition( SrcImage.GetWidth(), SrcImage.GetHeight());
          ImageCache.SetRGB( mFlow.Rect(), 0xf2, 0xb0, 0x27 );
          if( (mFlow.mFlags & resFlagSkip) == 0 )
-            PasteSubImage( &ImageCache, &SrcImage, 
-               mFlow.mxPos + mFlow.mBorderWidth, 
+            PasteSubImage( &ImageCache, &SrcImage,
+               mFlow.mxPos + mFlow.mBorderWidth,
                mFlow.myPos + mFlow.mBorderWidth);
          else
             ImageCache.SetRGB( mFlow.RectInner(), 1,1,1);
@@ -739,7 +739,7 @@ void ThemeBase::CreateImageCache( bool bBinarySave )
 #if 0
       // Deliberate policy to use the fast/cheap blocky pixel-multiplication
       // algorithm, as this introduces no artifacts on repeated scale up/down.
-      ImageCache.Rescale( 
+      ImageCache.Rescale(
          ImageCache.GetWidth()*4,
          ImageCache.GetHeight()*4,
          wxIMAGE_QUALITY_NEAREST );
@@ -747,7 +747,7 @@ void ThemeBase::CreateImageCache( bool bBinarySave )
       if( !ImageCache.SaveFile( FileName, wxBITMAP_TYPE_PNG ))
       {
          AudacityMessageBox(
-            XO("Audacity could not write file:\n  %s.")
+            XO("Tenacity could not write file:\n  %s.")
                .Format( FileName ));
          return;
       }
@@ -767,14 +767,14 @@ void ThemeBase::CreateImageCache( bool bBinarySave )
       if( !OutStream.OpenFile( FileName ))
       {
          AudacityMessageBox(
-            XO("Audacity could not open file:\n  %s\nfor writing.")
+            XO("Tenacity could not open file:\n  %s\nfor writing.")
                .Format( FileName ));
          return;
       }
       if( !ImageCache.SaveFile(OutStream, wxBITMAP_TYPE_PNG ) )
       {
          AudacityMessageBox(
-            XO("Audacity could not write images to file:\n  %s.")
+            XO("Tenacity could not write images to file:\n  %s.")
                .Format( FileName ));
          return;
       }
@@ -934,7 +934,7 @@ bool ThemeBase::ReadImageCache( teThemeType type, bool bOkIfNotFound)
          if( bOkIfNotFound )
             return false; // did not load the images, so return false.
          AudacityMessageBox(
-            XO("Audacity could not find file:\n  %s.\nTheme not loaded.")
+            XO("Tenacity could not find file:\n  %s.\nTheme not loaded.")
                .Format( FileName ));
          return false;
       }
@@ -942,7 +942,7 @@ bool ThemeBase::ReadImageCache( teThemeType type, bool bOkIfNotFound)
       {
          AudacityMessageBox(
             /* i18n-hint: Do not translate png.  It is the name of a file format.*/
-            XO("Audacity could not load file:\n  %s.\nBad png format perhaps?")
+            XO("Tenacity could not load file:\n  %s.\nBad png format perhaps?")
                .Format( FileName ));
          return false;
       }
@@ -953,20 +953,20 @@ bool ThemeBase::ReadImageCache( teThemeType type, bool bOkIfNotFound)
       size_t ImageSize = 0;
       const unsigned char * pImage = nullptr;
       switch( type ){
-         default: 
-         case themeClassic : 
+         default:
+         case themeClassic :
             ImageSize = sizeof(ClassicImageCacheAsData);
             pImage = ClassicImageCacheAsData;
             break;
-         case themeLight : 
+         case themeLight :
             ImageSize = sizeof(LightImageCacheAsData);
             pImage = LightImageCacheAsData;
             break;
-         case themeDark : 
+         case themeDark :
             ImageSize = sizeof(DarkImageCacheAsData);
             pImage = DarkImageCacheAsData;
             break;
-         case themeHiContrast : 
+         case themeHiContrast :
             ImageSize = sizeof(HiContrastImageCacheAsData);
             pImage = HiContrastImageCacheAsData;
             break;
@@ -982,7 +982,7 @@ bool ThemeBase::ReadImageCache( teThemeType type, bool bOkIfNotFound)
          // Or some experiment is being tried with NEW formats for it.
          AudacityMessageBox(
             XO(
-"Audacity could not read its default theme.\nPlease report the problem."));
+"Tenacity could not read its default theme.\nPlease report the problem."));
          return false;
       }
       //wxLogDebug("Read %i by %i", ImageCache.GetWidth(), ImageCache.GetHeight() );
@@ -1067,7 +1067,7 @@ void ThemeBase::LoadComponents( bool bOkIfNotFound )
                AudacityMessageBox(
                   XO(
                /* i18n-hint: Do not translate png.  It is the name of a file format.*/
-"Audacity could not load file:\n  %s.\nBad png format perhaps?")
+"Tenacity could not load file:\n  %s.\nBad png format perhaps?")
                      .Format( FileName ));
                return;
             }
@@ -1158,7 +1158,7 @@ void ThemeBase::SaveComponents()
          if( !mImages[i].SaveFile( FileName, wxBITMAP_TYPE_PNG ))
          {
             AudacityMessageBox(
-               XO("Audacity could not save file:\n  %s")
+               XO("Tenacity could not save file:\n  %s")
                   .Format( FileName ));
             return;
          }
@@ -1263,7 +1263,7 @@ BEGIN_EVENT_TABLE(auStaticText, wxWindow)
     EVT_ERASE_BACKGROUND(auStaticText::OnErase)
 END_EVENT_TABLE()
 
- 
+
 auStaticText::auStaticText(wxWindow* parent, wxString textIn) :
  wxWindow(parent, wxID_ANY)
 {
@@ -1283,7 +1283,7 @@ auStaticText::auStaticText(wxWindow* parent, wxString textIn) :
    SetName(textIn);
    SetLabel(textIn);
 }
- 
+
 void auStaticText::OnPaint(wxPaintEvent & WXUNUSED(evt))
 {
    wxPaintDC dc(this);

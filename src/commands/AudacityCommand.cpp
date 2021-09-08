@@ -14,7 +14,7 @@
 *//****************************************************************//**
 
 \class AudacityCommandDialog
-\brief Default dialog used for commands.  Is populated using 
+\brief Default dialog used for commands.  Is populated using
 ShuttleGui.
 
 *//*******************************************************************/
@@ -82,7 +82,7 @@ AudacityCommand::~AudacityCommand()
 
 
 PluginPath AudacityCommand::GetPath(){        return BUILTIN_GENERIC_COMMAND_PREFIX + GetSymbol().Internal(); }
-VendorSymbol AudacityCommand::GetVendor(){      return XO("Audacity");}
+VendorSymbol AudacityCommand::GetVendor(){      return XO("Tenacity");}
 wxString AudacityCommand::GetVersion(){     return AUDACITY_VERSION_STRING;}
 
 
@@ -105,7 +105,7 @@ bool AudacityCommand::ShowInterface(wxWindow *parent, bool WXUNUSED(forceModal))
 
    // mUIDialog is null
    auto cleanup = valueRestorer( mUIDialog );
-   
+
    mUIDialog = CreateUI(parent, this);
    if (!mUIDialog)
       return false;
@@ -189,7 +189,7 @@ bool AudacityCommand::DoAudacityCommand(wxWindow *parent,
       return false;
    }
 
-   // Prompting will be bypassed when applying a command that has already 
+   // Prompting will be bypassed when applying a command that has already
    // been configured, e.g. repeating the last effect on a different selection.
    // Prompting may call AudacityCommand::Preview
    if (shouldPrompt && /*IsInteractive() && */!PromptUser(parent))

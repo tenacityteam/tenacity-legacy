@@ -62,7 +62,7 @@
 
 #include "commands/CommandManager.h"
 
-#define AudacityMixerBoardTitle XO("Audacity Mixer Board%s")
+#define AudacityMixerBoardTitle XO("Tenacity Mixer Board%s")
 
 // class MixerTrackSlider
 

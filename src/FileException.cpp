@@ -1,7 +1,7 @@
 /*!
   @file FileException.cpp
   @brief implements FileException
-  
+
 
   Created by Paul Licameli on 11/22/16.
 
@@ -22,16 +22,16 @@ TranslatableString FileException::ErrorMessage() const
    TranslatableString format;
    switch (cause) {
       case Cause::Open:
-         format = XO("Audacity failed to open a file in %s.");
+         format = XO("Tenacity failed to open a file in %s.");
          break;
       case Cause::Read:
-         format = XO("Audacity failed to read from a file in %s.");
+         format = XO("Tenacity failed to read from a file in %s.");
          break;
       case Cause::Write:
          return WriteFailureMessage(fileName);
       case Cause::Rename:
          format =
-XO("Audacity successfully wrote a file in %s but failed to rename it as %s.");
+XO("Tenacity successfully wrote a file in %s but failed to rename it as %s.");
       default:
          break;
    }
@@ -60,7 +60,7 @@ wxString FileException::ErrorHelpUrl() const
 TranslatableString
 FileException::WriteFailureMessage(const wxFileName &fileName)
 {
-   return XO("Audacity failed to write to a file.\n"
+   return XO("Tenacity failed to write to a file.\n"
      "Perhaps %s is not writable or the disk is full.\n"
      "For tips on freeing up space, click the help button."
    ).Format(FileNames::AbbreviatePath(fileName));
