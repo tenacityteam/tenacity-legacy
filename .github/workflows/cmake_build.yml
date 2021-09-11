@@ -119,7 +119,6 @@ jobs:
           echo COMPILER_CACHE_PATH=C:\Users\runneradmin\AppData\Local\Mozilla\sccache\cache >> ${GITHUB_ENV}
           echo COMPILER_CACHE=sccache >> ${GITHUB_ENV}
           echo EXE_SUFFIX=.exe >> ${GITHUB_ENV}
-          echo VCPKG_CACHE_PATH=C:\Users\runneradmin\AppData\Local\vcpkg >> ${GITHUB_ENV}
           echo CMAKE_C_COMPILER_LAUNCHER=sccache >> ${GITHUB_ENV}
           echo CMAKE_CXX_COMPILER_LAUNCHER=sccache >> ${GITHUB_ENV}
           if [[ "${{ env.CMAKE_GENERATOR }}" == "Ninja" ]]; then
@@ -131,7 +130,6 @@ jobs:
           echo COMPILER_CACHE_PATH= ~/Library/Caches/ccache >> ${GITHUB_ENV}
           echo COMPILER_CACHE=ccache >> ${GITHUB_ENV}
           echo EXE_SUFFIX= >> ${GITHUB_ENV}
-          echo VCPKG_CACHE_PATH=~/.cache/vcpkg >> ${GITHUB_ENV}
           echo CMAKE_C_COMPILER_LAUNCHER=ccache >> ${GITHUB_ENV}
           echo CMAKE_CXX_COMPILER_LAUNCHER=ccache >> ${GITHUB_ENV}
           if [[ "${{runner.os}}" == "Linux" ]]; then
@@ -214,17 +212,16 @@ jobs:
         iwr -useb get.scoop.sh | iex
         scoop install sccache
 
-    # Cache the vcpkg cache and the vcpkg executable to avoid bootstrapping each time
+    - name: Get Git commit of vcpkg submodule
+      run: echo VCPKG_COMMIT=$(git ls-tree HEAD vcpkg | awk '{print $3}') >> ${GITHUB_ENV}
+
+    # Cache the vcpkg executable to avoid bootstrapping each time
     - name: Setup vcpkg cache
       uses: actions/cache@v2
       with:
-        path: |
-          ${{ github.workspace }}/vcpkg/vcpkg${{ env.EXE_SUFFIX }}
-          ${{ env.VCPKG_CACHE_PATH }}
-        key: ${{ matrix.config.id }}-${{ hashFiles('**/vcpkg.json') }}-${{ env.VCPKG_COMMIT }}-${{ github.run_number }}
+        path: ${{ github.workspace }}/vcpkg/vcpkg${{ env.EXE_SUFFIX }}
+        key: ${{ matrix.config.id }}-${{ env.VCPKG_COMMIT }}
         restore-keys: |
-          ${{ matrix.config.id }}-${{ hashFiles(' **/vcpkg.json') }}-${{ env.VCPKG_COMMIT }}-
-          ${{ matrix.config.id }}-${{ hashFiles(' **/vcpkg.json') }}-
           ${{ matrix.config.id }}-
 
     - name: "[Linux/macOS] Set up wxWidgets cache"
