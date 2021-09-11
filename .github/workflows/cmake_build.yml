@@ -27,14 +27,12 @@ jobs:
           os: ubuntu-20.04
           arch: x86_64
           vcpkg_triplet: x64-linux
-          CMAKE_GENERATOR: Ninja
 
         - name: macOS - Big Sur 11 (Intel) - Ninja
           id: macos-bigsur-1100-intel-x64_osx_1012min-ninja
           os: macos-11
           arch: Intel
           vcpkg_triplet: x64-osx-10.12min
-          CMAKE_GENERATOR: Ninja
 
         - name: Windows - Server 2019 (amd64) - Visual Studio 2019
           id: windows-server-2019-amd64-x64_windows-vs2019_x64
@@ -57,14 +55,12 @@ jobs:
           os: windows-2019
           arch: amd64
           vcpkg_triplet: x64-windows
-          CMAKE_GENERATOR: Ninja
 
         - name: Windows - Server 2019 (win32) - Ninja
           id: windows-server-2019-x86-x86_windows-ninja
           os: windows-2019
           arch: x86
           vcpkg_triplet: x86-windows
-          CMAKE_GENERATOR: Ninja
 
 
     env:
@@ -74,18 +70,13 @@ jobs:
 
       # CMake settings
       CMAKE_BUILD_TYPE: MinSizeRel
-      CMAKE_GENERATOR: ${{matrix.config.CMAKE_GENERATOR}}
+      CMAKE_GENERATOR: Ninja
       CMAKE_GENERATOR_PLATFORM: ${{matrix.config.CMAKE_GENERATOR_PLATFORM}}
 
       # vcpkg settings
       VCPKG_DISABLE_METRICS: true
       VCPKG_DEFAULT_TRIPLET: ${{ matrix.config.vcpkg_triplet }}
-      VCPKG_BINARY_SOURCES: "clear;default,readwrite;nuget,https://tenacityteam.jfrog.io/artifactory/api/nuget/tenacity-nuget,readwrite"
-
-      # Artifactory cache settings
-      JFROG_ARTIFACTORY_NUGET_USER: ${{secrets.JFROG_ARTIFACTORY_NUGET_USER}}
-      JFROG_ARTIFACTORY_NUGET_PASS: ${{secrets.JFROG_ARTIFACTORY_NUGET_PASS}}
-      JFROG_ARTIFACTORY_NUGET_TOKEN: ${{secrets.JFROG_ARTIFACTORY_NUGET_TOKEN}}
+      NUGET_PACKAGES: ${{ github.workspace }}/vcpkg/packages/
 
       # Apple codesigning
       APPLE_CODESIGN_IDENTITY: ${{ secrets.APPLE_CODESIGN_IDENTITY }}
@@ -106,9 +97,6 @@ jobs:
       uses: actions/checkout@v2
       with:
         submodules: true
-
-    - name: Get Git commit of vcpkg submodule
-      run: echo VCPKG_COMMIT=$(git ls-tree HEAD vcpkg | awk '{print $3}') >> ${GITHUB_ENV}
 
     - name: Setup platform specific environmental variables
       run: |
@@ -159,11 +147,17 @@ jobs:
       with:
         nuget-version: 5.10.0
 
-    - name: "[On Push] Authenticate CI to Artifactory"
-      if: github.event_name == 'push' && github.repository_owner == 'tenacityteam'
+    - name: "Authenticate CI to Github Packages"
+      if: github.repository_owner == 'tenacityteam'
       run: |
-        nuget sources Add -Name Artifactory -Source https://tenacityteam.jfrog.io/artifactory/api/nuget/tenacity-nuget -username ${JFROG_ARTIFACTORY_NUGET_USER} -password ${JFROG_ARTIFACTORY_NUGET_PASS} -ForceEnglishOutput -NonInteractive
-        nuget setapikey ${JFROG_ARTIFACTORY_NUGET_USER}:${JFROG_ARTIFACTORY_NUGET_TOKEN} -Source Artifactory -ForceEnglishOutput -NonInteractive
+        rm ./nuget.config
+        nuget sources add -Name tenacityteam_github_auto -Source https://nuget.pkg.github.com/tenacityteam/index.json -Username tenacityteam -Password ${{ secrets.GITHUB_TOKEN }} -StorePasswordInClearText -ForceEnglishOutput -NonInteractive
+        nuget setapikey ${{ secrets.GITHUB_TOKEN }} -Source tenacityteam_github_auto -ForceEnglishOutput -NonInteractive
+        if [[ ${{ github.event_name }} == 'push' ]]; then
+          echo "VCPKG_BINARY_SOURCES=clear;nuget,tenacityteam_github_auto,readwrite;" >> ${GITHUB_ENV}
+        else
+          echo "VCPKG_BINARY_SOURCES=clear;nuget,tenacityteam_github_auto,read;" >> ${GITHUB_ENV}
+        fi
 
     - name: "[Linux] Install dependencies"
       if: runner.os == 'Linux'
@@ -185,6 +179,7 @@ jobs:
         libgtk-3-dev
         libsuil-dev
         gettext
+
     - name: "[MacOS] Install dependencies"
       if: runner.os == 'macOS'
       run: >-
@@ -193,6 +188,7 @@ jobs:
         ccache
         ninja
         nasm
+
     - name: "[Windows] Install dependencies"
       if: runner.os == 'Windows'
       shell: pwsh
@@ -203,6 +199,9 @@ jobs:
         echo "C:\Scoop\shims" | Out-File -FilePath $env:GITHUB_PATH -Encoding utf8 -Append
         iwr -useb get.scoop.sh | iex
         scoop install sccache
+
+    - name: Get Git commit of vcpkg submodule
+      run: echo VCPKG_COMMIT=$(git ls-tree HEAD vcpkg | awk '{print $3}') >> ${GITHUB_ENV}
 
     # Cache the vcpkg cache and the vcpkg executable to avoid bootstrapping each time
     - name: Setup vcpkg cache
