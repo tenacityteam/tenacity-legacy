@@ -27,12 +27,21 @@ jobs:
           os: ubuntu-20.04
           arch: x86_64
           vcpkg_triplet: x64-linux
+          CMAKE_GENERATOR: Ninja
 
         - name: macOS - Big Sur 11 (Intel) - Ninja
           id: macos-bigsur-1100-intel-x64_osx_1012min-ninja
           os: macos-11
           arch: Intel
           vcpkg_triplet: x64-osx-10.12min
+          CMAKE_GENERATOR: Ninja
+
+        - name: macOS - Catalina 10.15 (Intel) - Ninja
+          id: macos-catalina-1015-intel-x64_osx_1012min-ninja
+          os: macos-10.15
+          arch: Intel
+          vcpkg_triplet: x64-osx-10.12min
+          CMAKE_GENERATOR: Ninja
 
         - name: Windows - Server 2019 (amd64) - Visual Studio 2019
           id: windows-server-2019-amd64-x64_windows-vs2019_x64
@@ -55,12 +64,14 @@ jobs:
           os: windows-2019
           arch: amd64
           vcpkg_triplet: x64-windows
+          CMAKE_GENERATOR: Ninja
 
         - name: Windows - Server 2019 (win32) - Ninja
           id: windows-server-2019-x86-x86_windows-ninja
           os: windows-2019
           arch: x86
           vcpkg_triplet: x86-windows
+          CMAKE_GENERATOR: Ninja
 
 
     env:
@@ -70,7 +81,7 @@ jobs:
 
       # CMake settings
       CMAKE_BUILD_TYPE: MinSizeRel
-      CMAKE_GENERATOR: Ninja
+      CMAKE_GENERATOR: ${{matrix.config.CMAKE_GENERATOR}}
       CMAKE_GENERATOR_PLATFORM: ${{matrix.config.CMAKE_GENERATOR_PLATFORM}}
 
       # vcpkg settings
@@ -97,6 +108,9 @@ jobs:
       uses: actions/checkout@v2
       with:
         submodules: true
+
+    - name: Get Git commit of vcpkg submodule
+      run: echo VCPKG_COMMIT=$(git ls-tree HEAD vcpkg | awk '{print $3}') >> ${GITHUB_ENV}
 
     - name: Setup platform specific environmental variables
       run: |
@@ -199,9 +213,6 @@ jobs:
         echo "C:\Scoop\shims" | Out-File -FilePath $env:GITHUB_PATH -Encoding utf8 -Append
         iwr -useb get.scoop.sh | iex
         scoop install sccache
-
-    - name: Get Git commit of vcpkg submodule
-      run: echo VCPKG_COMMIT=$(git ls-tree HEAD vcpkg | awk '{print $3}') >> ${GITHUB_ENV}
 
     # Cache the vcpkg cache and the vcpkg executable to avoid bootstrapping each time
     - name: Setup vcpkg cache
