@@ -12,7 +12,38 @@ defaults:
     shell: bash
 
 jobs:
+
+  skip_test:
+    name: "CI Build Skipping Logic"
+    runs-on: ubuntu-latest
+    permissions:
+      actions: write
+      checks: read
+      contents: read
+      deployments: read
+      issues: read
+      discussions: read
+      packages: read
+      pull-requests: read
+      repository-projects: read
+      security-events: read
+      statuses: read
+    outputs:
+      should_skip: ${{ steps.skip_check.outputs.should_skip }}
+    steps:
+      - id: skip_check
+        uses: fkirc/skip-duplicate-actions@master
+        with:
+          paths: '[]'
+          paths_ignore: '["**/**.md", "**/**.dox2", "**/**.dox", "**/**.dox.in", "**/LICENSE.txt", "/.builds/**", "/.github/ISSUE_TEMPLATE/**", "/.github/funding.yml", "/.vscode/**"]'
+          do_not_skip: '["workflow_dispatch", "schedule"]'
+          cancel_others: 'true'
+          skip_after_successful_duplicate: 'true'
+          concurrent_skipping: 'same_content_newer'
+
   build:
+    needs: skip_test
+    if: ${{ needs.skip_test.outputs.should_skip != 'true' }}
     name: ${{ matrix.config.name }}
     runs-on: ${{ matrix.config.os }}
     strategy:
