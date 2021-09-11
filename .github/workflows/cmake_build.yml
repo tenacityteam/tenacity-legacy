@@ -34,21 +34,11 @@ jobs:
           arch: Intel
           vcpkg_triplet: x64-osx-10.12min
 
-        - name: Windows - Server 2019 (amd64) - Visual Studio 2019
-          id: windows-server-2019-amd64-x64_windows-vs2019_x64
-          os: windows-2019
-          arch: amd64
-          vcpkg_triplet: x64-windows
-          CMAKE_GENERATOR: Visual Studio 16 2019
-          CMAKE_GENERATOR_PLATFORM: x64
-
-        - name: Windows - Server 2019 (win32) - Visual Studio 2019
-          id: windows-server-2019-x86-x86_windows-vs2019_win32
-          os: windows-2019
-          arch: x86
-          vcpkg_triplet: x86-windows
-          CMAKE_GENERATOR: Visual Studio 16 2019
-          CMAKE_GENERATOR_PLATFORM: win32
+        - name: macOS - Catalina 10.15 (Intel) - Ninja
+          id: macos-catalina-1015-intel-x64_osx_1012min-ninja
+          os: macos-10.15
+          arch: Intel
+          vcpkg_triplet: x64-osx-10.12min
 
         - name: Windows - Server 2019 (amd64) - Ninja
           id: windows-server-2019-amd64-x64_windows-ninja
