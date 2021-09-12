@@ -62,8 +62,6 @@ can't be.
 
 #include "Theme.h"
 
-
-
 #include <wx/wxprec.h>
 #include <wx/dcclient.h>
 #include <wx/image.h>
@@ -79,6 +77,16 @@ can't be.
 #include "Internat.h"
 #include "MemoryX.h"
 #include "widgets/AudacityMessageBox.h"
+
+#ifdef EXPERIMENTAL_DA
+bool useDATheme = true;
+#else
+bool useDATheme = false;
+#endif
+
+#ifdef __WXMSW__
+#include <wx/msw/registry.h>
+#endif
 
 // JKC: First get the MAC specific images.
 // As we've disabled USE_AQUA_THEME, we need to name each file we use.
@@ -210,6 +218,41 @@ Theme::~Theme(void)
 {
 }
 
+#ifdef __WXMSW__
+int Theme::CheckWindowsAppTheme() {
+    int defaultTheme;
+    long value;
+
+    wxRegKey key(
+        wxRegKey::HKCU,
+        "Software\\Microsoft\\Windows\\CurrentVersion\\Themes\\Personalize"
+    );
+
+    bool valueAccessed = key.QueryValue("AppsUseLightTheme", &value);
+
+    defaultTheme = 1; // "light" until proven "dark"
+
+    if (valueAccessed == true && value == 0) {
+        // System uses dark theme
+        defaultTheme = 2; // "dark"
+    }
+
+    return defaultTheme;
+}
+#endif
+
+int Theme::ChooseDefaultTheme()
+{
+    if (useDATheme = true) {
+        return 2;
+    }
+
+#ifdef __WXMSW__
+    return CheckWindowsAppTheme();
+#else
+    return 1;
+#endif
+}
 
 void Theme::EnsureInitialised()
 {
@@ -1292,39 +1335,30 @@ void auStaticText::OnPaint(wxPaintEvent & WXUNUSED(evt))
    dc.DrawText( GetLabel(), 0,0);
 }
 
-constexpr int defaultTheme =
-#ifdef EXPERIMENTAL_DA
-   2 // "dark"
-#else
-   1 // "light"
-#endif
-;
-
 ChoiceSetting GUITheme{
-   wxT("/GUI/Theme"),
-   {
-      ByColumns,
-      {
-         /* i18n-hint: describing the "classic" or traditional
-            appearance of older versions of Audacity */
-         XO("Classic")  ,
-         /* i18n-hint: Light meaning opposite of dark */
-         XO("Light")  ,
-         XO("Dark")  ,
-         /* i18n-hint: greater difference between foreground and
-            background colors */
-         XO("High Contrast")  ,
-         /* i18n-hint: user defined */
-         XO("Custom")  ,
-      },
-      {
-         wxT("classic")  ,
-         wxT("light")  ,
-         wxT("dark")  ,
-         wxT("high-contrast")  ,
-         wxT("custom")  ,
-      }
-   },
-   defaultTheme
+    wxT("/GUI/Theme"),
+    {
+        ByColumns,
+        {
+            /* i18n-hint: describing the "classic" or traditional
+               appearance of older versions of Audacity */
+            XO("Classic"),
+            /* i18n-hint: Light meaning opposite of dark */
+            XO("Light"),
+            XO("Dark"),
+            /* i18n-hint: greater difference between foreground and
+             background colors */
+            XO("High Contrast"),
+            /* i18n-hint: user defined */
+            XO("Custom"),
+        },
+        {
+            wxT("classic"),
+            wxT("light"),
+            wxT("dark"),
+            wxT("high-contrast"),
+            wxT("custom"),
+        }
+    },
+    theTheme.ChooseDefaultTheme()
 };
-
