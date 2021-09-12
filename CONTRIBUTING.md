@@ -238,7 +238,7 @@ important:
   other websites and/or the command line will show the full hyperlink.
   This is good, because it reduces our dependency on GitHub.
 
-###### Proposed changes
+###### Merging branches
 
 * If a proposed change is running behind a certain amount of commits that affect
   the same "parts" of the project that the patch also affects, make sure to
