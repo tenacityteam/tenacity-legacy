@@ -47,6 +47,10 @@ used throughout Audacity into this one place.
 #include <windows.h>
 #endif
 
+#if defined(__WXGTK__) && !wxCHECK_VERSION(3, 1, 1)
+#include <glib.h>
+#endif
+
 static wxString gConfigDir;
 static wxString gDataDir;
 
@@ -244,8 +248,10 @@ FilePath FileNames::ConfigDir()
          gConfigDir = portablePrefsPath.GetFullPath();
       } else {
          // Use OS-provided user data dir folder
-#if defined(__WSMSW__)
+#if defined(__WXMSW__)
          wxString configDir(wxStandardPaths::Get().GetUserConfigDir() + wxT("\\Tenacity"));
+#elif defined(__WXGTK__) && !wxCHECK_VERSION(3, 1, 1)
+         wxString configDir = wxString::Format(wxT("%s/tenacity"), g_get_user_config_dir());
 #else
          wxString configDir(wxStandardPaths::Get().GetUserConfigDir() + wxT("/tenacity"));
 #endif
