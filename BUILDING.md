@@ -251,7 +251,7 @@ You will also need to install a few build tools and dependencies, which can be
 installed from [Homebrew](https://brew.sh/):
 
 ```
-brew install cmake ccache ninja nasm wxwidgets
+brew install cmake ccache ninja nasm mono wxwidgets
 ```
 
 The rest of the dependencies will be built automatically with vcpkg when
