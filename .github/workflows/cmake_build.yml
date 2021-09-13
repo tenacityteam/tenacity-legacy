@@ -247,18 +247,12 @@ jobs:
         iwr -useb get.scoop.sh | iex
         scoop install sccache
 
-    # Cache the vcpkg cache and the vcpkg executable to avoid bootstrapping each time
-    - name: Setup vcpkg cache
+    # Cache the vcpkg executable to avoid bootstrapping each time
+    - name: "Setup vcpkg executable cache"
       uses: actions/cache@v2
       with:
-        path: |
-          ${{ github.workspace }}/vcpkg/vcpkg${{ env.EXE_SUFFIX }}
-          ${{ env.VCPKG_CACHE_PATH }}
-        key: ${{ matrix.config.id }}-${{ hashFiles('**/vcpkg.json') }}-${{ env.VCPKG_COMMIT }}-${{ github.run_number }}
-        restore-keys: |
-          ${{ matrix.config.id }}-${{ hashFiles(' **/vcpkg.json') }}-${{ env.VCPKG_COMMIT }}-
-          ${{ matrix.config.id }}-${{ hashFiles(' **/vcpkg.json') }}-
-          ${{ matrix.config.id }}-
+        path: ${{ github.workspace }}/vcpkg/vcpkg${{ env.EXE_SUFFIX }}
+        key: ${{ matrix.config.id }}-${{ env.VCPKG_COMMIT }}
 
     - name: "[Linux/macOS] Set up wxWidgets cache"
       uses: actions/cache@v2
@@ -329,5 +323,7 @@ jobs:
       if: always()
       with:
         name: vcpkg-logs-${{ runner.os }}
-        path: ${{ github.workspace }}/vcpkg/buildtrees/**/*.log
+        path: |
+          ${{ github.workspace }}/vcpkg/buildtrees/**/*.log
+          ${{ github.workspace }}/build/vcpkg-bootstrap.log
         if-no-files-found: ignore
