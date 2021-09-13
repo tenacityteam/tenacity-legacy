@@ -1349,6 +1349,13 @@ else()
       DESTINATION "."
       RESOURCE DESTINATION "${_APPDIR}/Resources"
     )
+
+    set_target_properties(${TARGET} PROPERTIES
+        MACOSX_BUNDLE true
+    )
+    install(CODE "
+        include(BundleUtilities)
+        fixup_bundle( \${CMAKE_INSTALL_PREFIX}/Tenacity.app \"\" \"${CMAKE_PREFIX_PATH}/lib\" )")
   elseif( WIN32 )
     install(
       DIRECTORY "${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/"
