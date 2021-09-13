@@ -161,7 +161,7 @@ public:
 #include "../FileNames.h" // for FileTypes
 
 class TENACITY_DLL_API FileDialogWrapper
-   : public wxTabTraversalWrapper<FileDialog>
+   : public wxTabTraversalWrapper<tenacity::FileDialog>
 {
 public:
    FileDialogWrapper() {}
@@ -178,7 +178,7 @@ public:
       const wxSize& sz = wxDefaultSize,
       // Important:  default window name localizes!
       const TranslatableString& name = XO("File Dialog"))
-   : wxTabTraversalWrapper<FileDialog>(
+   : wxTabTraversalWrapper<tenacity::FileDialog>(
       parent, message.Translation(), defaultDir, defaultFile,
       FileNames::FormatWildcard( fileTypes ),
       style, pos, sz, name.Translation() )
@@ -197,7 +197,7 @@ public:
       // Important:  default window name localizes!
       const TranslatableString& name = XO("File Dialog"))
    {
-      wxTabTraversalWrapper<FileDialog>::Create(
+      wxTabTraversalWrapper<tenacity::FileDialog>::Create(
          parent, message.Translation(), defaultDir, defaultFile,
          FileNames::FormatWildcard( fileTypes ),
          style, pos, sz, name.Translation()

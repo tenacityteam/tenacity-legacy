@@ -84,7 +84,7 @@ wxString FileSelector(const wxString& title,
     else if ( !filter.empty() )
         filter2 = filter;
 
-    FileDialog fileDialog(parent, title, defaultDir,
+    tenacity::FileDialog fileDialog(parent, title, defaultDir,
                             defaultFileName, filter2,
                             flags, wxPoint(x, y));
 
@@ -133,7 +133,7 @@ wxString FileSelectorEx(const wxString& title,
                         int             y)
 
 {
-    FileDialog fileDialog(parent,
+    tenacity::FileDialog fileDialog(parent,
                             title,
                             defaultDir,
                             defaultFileName,

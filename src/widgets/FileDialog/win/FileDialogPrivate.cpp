@@ -78,6 +78,8 @@ static wxRect gs_rectDialog(0, 0, 428, 266);
 // implementation
 // ============================================================================
 
+namespace tenacity {
+
 IMPLEMENT_CLASS(FileDialog, wxFileDialogBase)
 
 // ----------------------------------------------------------------------------
@@ -1222,3 +1224,5 @@ bool FileDialog::Disabler::IsChild(const wxDialog *dialog) const
 
    return false;
 }
+
+} // namespace tenacity

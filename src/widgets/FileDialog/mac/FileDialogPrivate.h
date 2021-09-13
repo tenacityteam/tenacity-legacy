@@ -22,6 +22,8 @@ class wxChoice;
 // wxFileDialog
 //-------------------------------------------------------------------------
 
+namespace tenacity {
+
 class TENACITY_DLL_API FileDialog: public FileDialogBase
 {
 DECLARE_DYNAMIC_CLASS(FileDialog)
@@ -103,5 +105,7 @@ private:
     // Common part of all ctors.
     void Init();
 };
+
+} // namespace tenacity
 
 #endif

@@ -241,6 +241,8 @@ void FileDialog::AddChildGTK(wxWindowGTK* child)
 // FileDialog
 //-----------------------------------------------------------------------------
 
+namespace tenacity {
+
 IMPLEMENT_DYNAMIC_CLASS(FileDialog,FileDialogBase)
 
 BEGIN_EVENT_TABLE(FileDialog,FileDialogBase)
@@ -660,3 +662,4 @@ void FileDialog::GTKFilterChanged()
     GetEventHandler()->ProcessEvent(event);
 }
 
+} // namespace tenacity

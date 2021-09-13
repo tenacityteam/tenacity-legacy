@@ -19,6 +19,8 @@
 // FileDialog
 //-------------------------------------------------------------------------
 
+namespace tenacity {
+
 class WXDLLIMPEXP_CORE FileDialog: public FileDialogBase
 {
 public:
@@ -87,5 +89,7 @@ private:
     DECLARE_DYNAMIC_CLASS(FileDialog)
     DECLARE_EVENT_TABLE()
 };
+
+} // namespace tenacity
 
 #endif

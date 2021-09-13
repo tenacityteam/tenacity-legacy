@@ -44,11 +44,11 @@
 
 @interface OSPanelDelegate : NSObject <NSOpenSavePanelDelegate>
 {
-    FileDialog* _dialog;
+    tenacity::FileDialog* _dialog;
 }
 
-- (FileDialog*) fileDialog;
-- (void) setFileDialog:(FileDialog*) dialog;
+- (tenacity::FileDialog*) fileDialog;
+- (void) setFileDialog:(tenacity::FileDialog*) dialog;
 
 - (void)panel:(id)sender didChangeToDirectoryURL:(NSURL *)url;
 - (void)panelSelectionDidChange:(id)sender;
@@ -73,12 +73,12 @@
     return self;
 }
 
-- (FileDialog*) fileDialog
+- (tenacity::FileDialog*) fileDialog
 {
     return _dialog;
 }
 
-- (void) setFileDialog:(FileDialog*) dialog
+- (void) setFileDialog:(tenacity::FileDialog*) dialog
 {
     _dialog = dialog;
 }
@@ -106,6 +106,8 @@
 }
 
 @end
+
+namespace tenacity {
 
 wxIMPLEMENT_CLASS(FileDialog, FileDialogBase)
 
@@ -719,3 +721,4 @@ void FileDialog::SetFileExtension(const wxString& extension)
     [sPanel setAllowedFileTypes:types];
 }
 
+} // namespace tenacity
