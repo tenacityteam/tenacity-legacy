@@ -41,19 +41,18 @@
   "modules": [
     {
       "name": "wxwidgets",
-      "rm-configure": true,
+      "buildsystem": "cmake-ninja",
       "config-opts": [
-        "--with-libpng",
-        "--with-zlib",
-        "--with-cxx=17",
-        "--disable-sdltest",
-        "--disable-webview",
-        "--disable-webviewwebkit",
-        "--disable-ribbon",
-        "--disable-propgrid",
-        "--disable-richtext",
-        "--with-expat=builtin",
-        "--with-libiconv=/usr"
+        "-D wxUSE_LIBPNG=builtin",
+        "-D wxUSE_ZLIB=builtin",
+        "-D wxBUILD_CXX_STANDARD=17",
+        "-D wxBUILD_TESTS=OFF",
+        "-D wxUSE_WEBVIEW=OFF",
+        "-D wxUSE_WEBVIEW_WEBKIT=OFF",
+        "-D wxUSE_RIBBON=OFF",
+        "-D wxUSE_PROPGRID=OFF",
+        "-D wxUSE_RICHTEXT=OFF",
+        "-D wxUSE_EXPAT=builtin"
       ],
       "cleanup": [
         "/share/bakefile"
@@ -161,6 +160,7 @@
     },
     {
       "name": "soundtouch",
+      "buildsystem": "cmake-ninja",
       "sources": [
         {
           "type": "git",
@@ -185,8 +185,8 @@
       "buildsystem": "cmake-ninja",
       "builddir": true,
       "config-opts": [
-        "-DCMAKE_BUILD_TYPE=RelWithDebInfo",
-        "-DWX_CONFIG=/app/bin/wx-config"
+        "-D CMAKE_BUILD_TYPE=RelWithDebInfo",
+        "-D WX_CONFIG=/app/bin/wx-config"
       ],
       "post-install": [
         "install -Dm644 ../help/tenacity.metainfo.xml -t /app/share/metainfo",
