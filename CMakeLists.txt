@@ -94,7 +94,7 @@ if( VCPKG )
   set( ENV{VCPKG_DISABLE_METRICS} true )
 
   if( NOT DEFINED ENV{VCPKG_BINARY_SOURCES} )
-    set( ENV{VCPKG_BINARY_SOURCES} "clear;nuget,tenacityteam_github_auto,read;" )
+    set( ENV{VCPKG_BINARY_SOURCES} "clear;nuget,tenacityteam_github_auto,read;default" )
   endif()
 
   set( ENV{VCPKG_FEATURE_FLAGS} "-compilertracking,manifests,registries,versions" )
