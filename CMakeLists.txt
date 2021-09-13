@@ -798,6 +798,13 @@ endif()
 if( NOT CMAKE_SYSTEM_NAME MATCHES "Darwin|Windows" )
   find_package( GLIB REQUIRED )
   find_package( GTK 3.0 REQUIRED )
+  pkg_check_modules(GDK3_X11 gdk-x11-3.0)
+endif()
+
+if( NOT CMAKE_SYSTEM_NAME MATCHES "Darwin|Windows" )
+  cmake_dependent_option( USE_VST "Use VST2 plug-in support [ON, OFF]" ON "GDK3_X11_FOUND" OFF)
+else()
+  cmd_option( USE_VST "Use VST2 plug-in support [ON, OFF]" ON)
 endif()
 
 if( NOT WIN32 )
