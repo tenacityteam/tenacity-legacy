@@ -1191,7 +1191,7 @@ elseif( CMAKE_SYSTEM_NAME MATCHES "Darwin" )
   add_custom_command(
     TARGET ${TARGET}
     COMMAND ${CMAKE_COMMAND}
-      -D SRC="${_EXEDIR}/${AUDACITY_NAME}Z"
+      -D SRC="${_EXEDIR}/${AUDACITY_NAME}"
       -D DST="${_PKGLIB}"
       -D WXWIN="${_SHARED_PROXY_BASE_PATH}/$<CONFIG>"
       -P "${AUDACITY_MODULE_PATH}/CopyLibs.cmake"
