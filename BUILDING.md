@@ -254,6 +254,13 @@ installed from [Homebrew](https://brew.sh/):
 brew install cmake ccache ninja nasm wxwidgets
 ```
 
+You must set the `WX_CONFIG` environment variable for CMake to find wxWidgets
+installed from Homebrew:
+
+```
+export WX_CONFIG=/usr/local/bin/wx-config
+```
+
 The rest of the dependencies will be built automatically with vcpkg when
 configuring CMake. You turn off vcpkg by passing `-D VCPKG=OFF` to the CMake
 configuration command, but then it is up to you to install all of Tenacity's
