@@ -114,7 +114,6 @@ jobs:
     env:
 
       AUDACITY_ARCH_LABEL: ${{ matrix.config.arch }}
-      MACOSX_DEPLOYMENT_TARGET: 10.12
 
       # CMake settings
       CMAKE_BUILD_TYPE: MinSizeRel
@@ -271,7 +270,7 @@ jobs:
         git clone --recurse-submodules ${{ env.WX_GIT_URL }}
         cd wxWidgets
         git checkout ${{ env.WX_GIT_REF }}
-        cmake -S . -B cmake_build -D CMAKE_BUILD_TYPE=${{ env.CMAKE_BUILD_TYPE }}  -D CMAKE_INSTALL_PREFIX=${{ env.WX_INSTALL_DIR }}
+        cmake -S . -B cmake_build -D CMAKE_BUILD_TYPE=${{ env.CMAKE_BUILD_TYPE }}  -D CMAKE_INSTALL_PREFIX=${{ env.WX_INSTALL_DIR }} -D CMAKE_OSX_DEPLOYMENT_TARGET=10.12
         cmake --build cmake_build
         cmake --install cmake_build
 
