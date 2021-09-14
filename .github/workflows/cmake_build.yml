@@ -322,7 +322,7 @@ jobs:
       uses: actions/upload-artifact@v2
       if: always()
       with:
-        name: vcpkg-logs-${{ runner.os }}
+        name: vcpkg-logs-${{ matrix.config.id }}
         path: |
           ${{ github.workspace }}/vcpkg/buildtrees/**/*.log
           ${{ github.workspace }}/build/vcpkg-bootstrap.log
