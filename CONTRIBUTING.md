@@ -159,6 +159,13 @@ important:
    - Correct: `Add support for the Commodore 64`
    - Incorrect: `Added support for the Commodore 64.`
 
+* The first character of the commit message should be capitalized.
+
+   Example:
+
+   - `GH Actions: Buy celebratory Margaretha Pizza`
+   - `Have Tenacity eat more veggies`
+
 * If you are using changes that were made by another person, make sure to
   properly credit them by using the `Co-authored-by: ` tag(s) in the end of
   the commit message before the `Signed-off-by:` tag(s), followed by the name
@@ -230,3 +237,54 @@ important:
   the #nnn format, GitHub will still show the #nnn format on the website, but
   other websites and/or the command line will show the full hyperlink.
   This is good, because it reduces our dependency on GitHub.
+
+###### Merging branches
+
+* If a proposed change is running behind a certain amount of commits that affect
+  the same "parts" of the project that the patch also affects, make sure to
+  rebase the patch on top of the `master` branch just to be sure that the most
+  recent changes do not cause the proposed patch to break.
+
+* If there are multiple proposed changes that affect the same parts of the
+  project, ***please wait*** for a while after initially merging a single
+  proposed change just to be sure that this will not break the build.
+
+The most basic way of evaluating whether two separate changes affect the same
+part of the project is checking whether the changes concern the same source
+or header files. For example, if both changes affect `src/Theme.cpp`, then
+they affect the same part of the project. However, this sort of evaluation
+can get trickier, as in large applications, different source and header files
+depend on each other.
+
+Rebasing patches on top of the `master` branch and making sure that they work
+as intended is the safest and fastest way to make sure that everything will be
+okay.
+
+###### Reverting
+
+Mistakes can happen, and that's okay. After all, we're here to learn and
+help others. However, reverting can impose a large amount of work on yourself
+or other maintainers later down the line, as well as frustrate
+contributors -- particularly those who are contributing for the first-time
+or are thinking about contributing to the project.
+
+A change that breaks Tenacity should be reverted under at least some of the
+following conditions:
+
+* There is no obvious or fast way (up to a couple of hours) to fix the mistake
+  that caused Tenacity to break. **Fixing is better than reverting most of the
+  time.**
+* There is a high amount of activity on the project and the change that got
+  merged is killing off that said activity.
+* There are maintainers and contributors that are aware of this and agree that
+  reverting is the best cause of action.
+* The community appears to heavily disagree with the change.
+* Another person, regardless of whether they are a well-established developer
+  or a community member, provides an additional perspective that the
+  contributors or maintainers were not previously aware of, which calls the
+  validity of the change into question.
+
+When reverting a change, you should be *at least* **just as careful** as when
+committing a change. Make sure to use your own judgement, communicate
+transparently and coordinate with other contributors -- especially the ones
+that worked on the change itself.
