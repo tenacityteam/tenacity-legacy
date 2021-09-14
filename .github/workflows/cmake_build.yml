@@ -44,7 +44,7 @@ jobs:
   build:
     needs: skip_test
     if: ${{ needs.skip_test.outputs.should_skip != 'true' }}
-    name: ${{ matrix.config.name }}
+    name: ${{ matrix.config.name || "Build Skipped" }}
     runs-on: ${{ matrix.config.os }}
     strategy:
       fail-fast: false
