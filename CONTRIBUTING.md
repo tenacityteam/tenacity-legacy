@@ -245,9 +245,29 @@ important:
   rebase the patch on top of the `master` branch just to be sure that the most
   recent changes do not cause the proposed patch to break.
 
+* In order to accommodate other reviewers that live in different timezones,
+  the rule of thumb is to wait for up to a day before merging a change that
+  has been approved by a reviewer, or wait around 12 hours before merging a
+  change that has been approved by multiple people. If possible, make sure to
+  check the change for yourself if possible, especially when a reviewer
+  approves a change reluctantly.
+
+* Before merging any change, make sure that all (or, at the very least, *most
+  of*) the tests have passed. If a change concerns a particular platform (e.g.
+  macOS), then wait for the tests for that said platform to complete.
+
+* If a change affects the user interface or the audio engine, you're generally
+  expected to use Tenacity with the included change on your machine and
+  evaluate it. Since it's very hard to answer whether a specific change
+  affecting the experience of the user is worth including or if the contributor
+  should adjust their change, you may want to ask for the help of other
+  contributors.
+
 * If there are multiple proposed changes that affect the same parts of the
   project, ***please wait*** for a while after initially merging a single
-  proposed change just to be sure that this will not break the build.
+  proposed change just to be sure that this will not break the build. This does
+  not apply to changes that do not affect the functionality of the program
+  (such as changes to a Markdown file).
 
 The most basic way of evaluating whether two separate changes affect the same
 part of the project is checking whether the changes concern the same source
