@@ -1191,7 +1191,7 @@ elseif( CMAKE_SYSTEM_NAME MATCHES "Darwin" )
   add_custom_command(
     TARGET ${TARGET}
     COMMAND ${CMAKE_COMMAND}
-      -D SRC="${_EXEDIR}/${AUDACITY_NAME}Z"
+      -D SRC="${_EXEDIR}/${AUDACITY_NAME}"
       -D DST="${_PKGLIB}"
       -D WXWIN="${_SHARED_PROXY_BASE_PATH}/$<CONFIG>"
       -P "${AUDACITY_MODULE_PATH}/CopyLibs.cmake"
@@ -1349,6 +1349,13 @@ else()
       DESTINATION "."
       RESOURCE DESTINATION "${_APPDIR}/Resources"
     )
+
+    set_target_properties(${TARGET} PROPERTIES
+        MACOSX_BUNDLE true
+    )
+    install(CODE "
+        include(BundleUtilities)
+        fixup_bundle( \${CMAKE_INSTALL_PREFIX}/Tenacity.app \"\" \"${CMAKE_PREFIX_PATH}/lib\" )")
   elseif( WIN32 )
     install(
       DIRECTORY "${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/"
