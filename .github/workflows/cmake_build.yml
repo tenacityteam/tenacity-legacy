@@ -11,6 +11,20 @@ defaults:
   run:
     shell: bash
 
+# See https://docs.github.com/en/rest/reference/permissions-required-for-github-apps
+# for information on what these individual permissions represent/control
+permissions:
+  actions: none
+  checks:  none
+  contents: read
+  deployments: none
+  issues: none
+  packages: read
+  pull-requests: none
+  repository-projects: none
+  security-events: none
+  statuses: read
+
 jobs:
 
   skip_test:
@@ -18,16 +32,6 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       actions: write
-      checks: read
-      contents: read
-      deployments: read
-      issues: read
-      discussions: read
-      packages: read
-      pull-requests: read
-      repository-projects: read
-      security-events: read
-      statuses: read
     outputs:
       should_skip: ${{ steps.skip_check.outputs.should_skip }}
     steps:
@@ -46,6 +50,8 @@ jobs:
     if: ${{ needs.skip_test.outputs.should_skip != 'true' }}
     name: ${{ matrix.config.name }}
     runs-on: ${{ matrix.config.os }}
+    permissions:
+      packages: write
     strategy:
       fail-fast: false
       matrix:
@@ -108,7 +114,6 @@ jobs:
     env:
 
       AUDACITY_ARCH_LABEL: ${{ matrix.config.arch }}
-      MACOSX_DEPLOYMENT_TARGET: 10.12
 
       # CMake settings
       CMAKE_BUILD_TYPE: MinSizeRel
@@ -198,11 +203,7 @@ jobs:
         rm ./nuget.config
         nuget sources add -Name tenacityteam_github_auto -Source https://nuget.pkg.github.com/tenacityteam/index.json -Username tenacityteam -Password ${{ secrets.GITHUB_TOKEN }} -StorePasswordInClearText -ForceEnglishOutput -NonInteractive
         nuget setapikey ${{ secrets.GITHUB_TOKEN }} -Source tenacityteam_github_auto -ForceEnglishOutput -NonInteractive
-        if [[ ${{ github.event_name }} == 'push' ]]; then
-          echo "VCPKG_BINARY_SOURCES=clear;nuget,tenacityteam_github_auto,readwrite;" >> ${GITHUB_ENV}
-        else
-          echo "VCPKG_BINARY_SOURCES=clear;nuget,tenacityteam_github_auto,read;" >> ${GITHUB_ENV}
-        fi
+        echo "VCPKG_BINARY_SOURCES=clear;nuget,tenacityteam_github_auto,readwrite;" >> ${GITHUB_ENV}
 
     - name: "[Linux] Install dependencies"
       if: runner.os == 'Linux'
@@ -245,18 +246,12 @@ jobs:
         iwr -useb get.scoop.sh | iex
         scoop install sccache
 
-    # Cache the vcpkg cache and the vcpkg executable to avoid bootstrapping each time
-    - name: Setup vcpkg cache
+    # Cache the vcpkg executable to avoid bootstrapping each time
+    - name: "Setup vcpkg executable cache"
       uses: actions/cache@v2
       with:
-        path: |
-          ${{ github.workspace }}/vcpkg/vcpkg${{ env.EXE_SUFFIX }}
-          ${{ env.VCPKG_CACHE_PATH }}
-        key: ${{ matrix.config.id }}-${{ hashFiles('**/vcpkg.json') }}-${{ env.VCPKG_COMMIT }}-${{ github.run_number }}
-        restore-keys: |
-          ${{ matrix.config.id }}-${{ hashFiles(' **/vcpkg.json') }}-${{ env.VCPKG_COMMIT }}-
-          ${{ matrix.config.id }}-${{ hashFiles(' **/vcpkg.json') }}-
-          ${{ matrix.config.id }}-
+        path: ${{ github.workspace }}/vcpkg/vcpkg${{ env.EXE_SUFFIX }}
+        key: ${{ matrix.config.id }}-${{ env.VCPKG_COMMIT }}
 
     - name: "[Linux/macOS] Set up wxWidgets cache"
       uses: actions/cache@v2
@@ -275,7 +270,7 @@ jobs:
         git clone --recurse-submodules ${{ env.WX_GIT_URL }}
         cd wxWidgets
         git checkout ${{ env.WX_GIT_REF }}
-        cmake -S . -B cmake_build -D CMAKE_BUILD_TYPE=${{ env.CMAKE_BUILD_TYPE }}  -D CMAKE_INSTALL_PREFIX=${{ env.WX_INSTALL_DIR }}
+        cmake -S . -B cmake_build -D CMAKE_BUILD_TYPE=${{ env.CMAKE_BUILD_TYPE }}  -D CMAKE_INSTALL_PREFIX=${{ env.WX_INSTALL_DIR }} -D CMAKE_OSX_DEPLOYMENT_TARGET=10.12
         cmake --build cmake_build
         cmake --install cmake_build
 
@@ -326,6 +321,8 @@ jobs:
       uses: actions/upload-artifact@v2
       if: always()
       with:
-        name: vcpkg-logs-${{ runner.os }}
-        path: ${{ github.workspace }}/vcpkg/buildtrees/**/*.log
+        name: vcpkg-logs-${{ matrix.config.id }}
+        path: |
+          ${{ github.workspace }}/vcpkg/buildtrees/**/*.log
+          ${{ github.workspace }}/build/vcpkg-bootstrap.log
         if-no-files-found: ignore
