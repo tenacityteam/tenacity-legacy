@@ -36,7 +36,7 @@ jobs:
       should_skip: ${{ steps.skip_check.outputs.should_skip }}
     steps:
       - id: skip_check
-        uses: fkirc/skip-duplicate-actions@master
+        uses: fkirc/skip-duplicate-actions@f75dd6564bb646f95277dc8c3b80612e46a4a1ea
         with:
           paths: '[]'
           paths_ignore: '["**/**.md", "**/**.dox2", "**/**.dox", "**/**.dox.in", "**/LICENSE.txt", "/.builds/**", "/.github/ISSUE_TEMPLATE/**", "/.github/funding.yml", "/.vscode/**"]'
