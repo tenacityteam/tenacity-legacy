@@ -81,7 +81,7 @@ public:
               #define __clang_minor__ 0
               #define __clang_patchlevel__ 0
             #endif
-            return wxString::Format( wxT("clang %s"), CUSTOM_wxMAKE_VERSION_DOT_STRING_T(__clang_major__, __clang_minor__, __clang_patchlevel__));
+            return wxString::Format( wxT("Clang %s"), CUSTOM_wxMAKE_VERSION_DOT_STRING_T(__clang_major__, __clang_minor__, __clang_patchlevel__));
 
           case BuildInfo::CompilerType::AppleClang:
             #if !defined(__clang_major__) || !defined (__clang_minor__) || !defined(__clang_patchlevel__)
@@ -90,7 +90,7 @@ public:
               #define __clang_minor__ 0
               #define __clang_patchlevel__ 0
             #endif
-            return wxString::Format( wxT("Apple clang %s"), CUSTOM_wxMAKE_VERSION_DOT_STRING_T(__clang_major__, __clang_minor__, __clang_patchlevel__));
+            return wxString::Format( wxT("Apple Clang %s"), CUSTOM_wxMAKE_VERSION_DOT_STRING_T(__clang_major__, __clang_minor__, __clang_patchlevel__));
 
           case BuildInfo::CompilerType::Unknown:
           default:
