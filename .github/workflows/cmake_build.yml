@@ -200,7 +200,6 @@ jobs:
     - name: "Authenticate CI to Github Packages"
       if: github.repository_owner == 'tenacityteam'
       run: |
-        rm ./nuget.config
         nuget sources add -Name tenacityteam_github_auto -Source https://nuget.pkg.github.com/tenacityteam/index.json -Username tenacityteam -Password ${{ secrets.GITHUB_TOKEN }} -StorePasswordInClearText -ForceEnglishOutput -NonInteractive
         nuget setapikey ${{ secrets.GITHUB_TOKEN }} -Source tenacityteam_github_auto -ForceEnglishOutput -NonInteractive
         echo "VCPKG_BINARY_SOURCES=clear;nuget,tenacityteam_github_auto,readwrite;" >> ${GITHUB_ENV}
