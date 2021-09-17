@@ -57,10 +57,6 @@ endif()
 cmd_option( use_ladspa "Use LADSPA plug-in support [ON, OFF]" ON )
 set( USE_LADSPA ${use_ladspa} CACHE INTERNAL "" )
 
-# Handle VST option
-cmd_option( use_vst "Use VST2 plug-in support [ON, OFF]" ON )
-set( USE_VST ${use_vst} CACHE INTERNAL "" )
-
 # ~~~
 # General source files
 # ~~~

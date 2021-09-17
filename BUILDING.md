@@ -340,5 +340,5 @@ has outdated libraries that do not build with Tenacity.
   * **VAMP** (ON|OFF): VAMP plugin hosting support. Requires VAMP host SDK.
   * **LV2** (ON|OFF): LV2 plugin hosting support. Requires LV2, lilv, and
     suil libraries.
-  * **VST2** (ON|OFF): VST2 plugin hosting support. No libraries are required.
-    ON by default.
+  * **VST2** (ON|OFF): VST2 plugin hosting support. Requires GTK with X11
+    support on non-Apple/Windows.

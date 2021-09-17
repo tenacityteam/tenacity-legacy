@@ -788,17 +788,18 @@ else()
   message( STATUS "LV2 plugin hosting disabled. Requires LV2, lilv, and suil libraries." )
 endif()
 
-option( VST2 "VST2 plugin host support" ON )
-if( VST2 )
-  message( STATUS "VST2 plugin host support enabled." )
-else()
-  message( STATUS "VST2 plugin host support disabled." )
-endif()
-
 if( NOT CMAKE_SYSTEM_NAME MATCHES "Darwin|Windows" )
   find_package( GLIB REQUIRED )
   find_package( GTK 3.0 REQUIRED )
+  pkg_check_modules(GDK3_X11 gdk-x11-3.0)
 endif()
+
+if( NOT CMAKE_SYSTEM_NAME MATCHES "Darwin|Windows" )
+  cmake_dependent_option( VST2 "Use VST2 plug-in support [ON, OFF]" ON "GDK3_X11_FOUND" OFF)
+else()
+  option( VST2 "Use VST2 plug-in support" ON)
+endif()
+set(USE_VST ${VST2} CACHE INTERNAL "")
 
 if( NOT WIN32 )
   # wxWidgets 3.1 can be explicitly selected if both 3.0 and 3.1 are installed by setting
