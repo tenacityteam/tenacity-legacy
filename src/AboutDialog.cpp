@@ -179,6 +179,7 @@ void AboutDialog::CreateInformationTab(ShuttleGui& AboutDialogGUI) {
     AddBuildInfoRow(&informationStr, XO("Version:"), BuildInfo::getRevisionIdentifier());
     AddBuildInfoRow(&informationStr, XO("Build type:"), BuildInfo::getBuildType());
     AddBuildInfoRow(&informationStr, XO("Compiler:"), BuildInfo::getCompilerVersionString());
+    AddBuildInfoRow(&informationStr, XO("wxWidgets:"), BuildInfo::getWxWidgetsVersion());
 
     // Install prefix
 #ifdef __WXGTK__
@@ -201,7 +202,6 @@ void AboutDialog::CreateInformationTab(ShuttleGui& AboutDialogGUI) {
     informationStr
         << wxT("<table>");   // start table of file formats supported
 
-    AddBuildInfoRow(&informationStr, wxT("wxWidgets"), XO("Cross-platform GUI library"), Verbatim(wxVERSION_NUM_DOT_STRING_T));
     AddBuildInfoRow(&informationStr, wxT("PortAudio"), XO("Audio playback and recording"), Verbatim(wxT("v19")));
     AddBuildInfoRow(&informationStr, wxT("libsoxr"), XO("Sample rate conversion"), enabled);
 
