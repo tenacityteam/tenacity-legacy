@@ -290,3 +290,9 @@ target_compile_options(libnyquist
    PRIVATE
       $<$<PLATFORM_ID:Darwin>:-fno-common>
 )
+
+install(
+   TARGETS libnyquist
+   LIBRARY
+   DESTINATION "${_LIBDIR}"
+)
