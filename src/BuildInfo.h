@@ -139,5 +139,15 @@ public:
 
             return o.GetString();
         }
+
+        static const wxString getWxWidgetsVersion() {
+            wxPlatformInfo info = wxPlatformInfo::Get();
+
+            return wxString::Format("v%s (%s v%d.%d)",
+                        wxVERSION_NUM_DOT_STRING_T,
+                        info.GetPortIdShortName(),
+                        info.GetToolkitMajorVersion(),
+                        info.GetToolkitMinorVersion());
+        }
 };
 #endif
