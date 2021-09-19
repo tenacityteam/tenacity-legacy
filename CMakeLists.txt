@@ -46,8 +46,88 @@ else()
   set( AUDACITY_NAME "tenacity")
 endif()
 
+if( WIN32 OR APPLE )
+  option( VCPKG "Use vcpkg for dependencies" ON )
+else()
+  option( VCPKG "Use vcpkg for dependencies" OFF )
+endif()
+
+# Make sure that we have actually attempted to find Git
 if(NOT GIT_FOUND)
   find_package( Git )
+endif()
+
+# Oops, our attempt failed
+if(NOT GIT_FOUND)
+  if( VCPKG )
+    message( FATAL_ERROR "Git NOT found."
+      "Please install Git from https://git-scm.com/ or your package manager."
+      "We use Git to detect the current version of Tenacity, as well as for"
+      "downloading a couple of dependencies that Tenacity depends on.")
+  else()
+    message( FATAL_ERROR "Git NOT found."
+      "Please install Git from https://git-scm.com/ or your package manager."
+      "We use Git to detect the current version of Tenacity.")
+  endif()
+endif()
+
+# ~~~~~~~
+#  Vcpkg
+# ~~~~~~~
+
+if( VCPKG )
+  set( ENV{VCPKG_DISABLE_METRICS} true )
+
+  if( NOT DEFINED ENV{VCPKG_BINARY_SOURCES} )
+    set( ENV{VCPKG_BINARY_SOURCES} "clear;nuget,tenacityteam_github_auto,read;" )
+  endif()
+
+  set( ENV{VCPKG_FEATURE_FLAGS} "-compilertracking,manifests,registries,versions" )
+
+  if( VCPKG_ROOT )
+    message( STATUS "Using dependencies from vcpkg repository at ${VCPKG_ROOT}" )
+
+    if( NOT EXISTS "${VCPKG_ROOT}/bootstrap-vcpkg.sh" )
+      message( FATAL_ERROR "${VCPKG_ROOT} is not a vcpkg Git repository." )
+    endif()
+
+  else()
+    message( STATUS "Using dependencies from vcpkg Git submodule" )
+    set( VCPKG_ROOT "${CMAKE_SOURCE_DIR}/vcpkg" )
+
+    if( NOT EXISTS "${VCPKG_ROOT}/bootstrap-vcpkg.sh" )
+
+      message( STATUS "Initializing vcpkg Git submodule" )
+      execute_process(
+        COMMAND ${GIT_EXECUTABLE} submodule init
+        WORKING_DIRECTORY "${CMAKE_SOURCE_DIR}"
+      )
+      execute_process(
+        COMMAND ${GIT_EXECUTABLE} submodule update
+        WORKING_DIRECTORY "${CMAKE_SOURCE_DIR}"
+      )
+    endif()
+  endif()
+
+  if( NOT DEFINED VCPKG_OVERLAY_PORTS )
+    set( VCPKG_OVERLAY_PORTS "${VCPKG_ROOT}/overlay/ports" )
+  endif()
+
+  if( NOT DEFINED VCPKG_OVERLAY_TRIPLETS )
+    set( VCPKG_OVERLAY_TRIPLETS "${VCPKG_ROOT}/overlay/triplets" )
+  endif()
+
+  if( NOT DEFINED ENV{VCPKG_DEFAULT_TRIPLET} AND NOT DEFINED VCPKG_TARGET_TRIPLET )
+    if( APPLE )
+      set( VCPKG_TARGET_TRIPLET "x64-osx-10.12min" )
+    endif()
+  elseif( DEFINED ENV{VCPKG_DEFAULT_TRIPLET} )
+    set( VCPKG_TARGET_TRIPLET "$ENV{VCPKG_DEFAULT_TRIPLET}" )
+  endif()
+
+  set( CMAKE_TOOLCHAIN_FILE "${VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake" )
+else()
+  message( STATUS "Searching for dependencies from system, not using vcpkg." )
 endif()
 
 # ~~~~~~~~~
@@ -89,80 +169,6 @@ if( GIT_FOUND )
     list( GET git_output 1 AUDACITY_RELEASE )
     list( GET git_output 2 AUDACITY_REVISION )
   endif()
-endif()
-
-# ~~~~~~~
-#  Vcpkg
-# ~~~~~~~
-
-if( WIN32 OR APPLE )
-  option( VCPKG "Use vcpkg for dependencies" ON )
-else()
-  option( VCPKG "Use vcpkg for dependencies" OFF )
-endif()
-
-if( VCPKG )
-  set( ENV{VCPKG_DISABLE_METRICS} true )
-
-  if( NOT DEFINED ENV{VCPKG_BINARY_SOURCES} )
-    set( ENV{VCPKG_BINARY_SOURCES} "clear;nuget,tenacityteam_github_auto,read;" )
-  endif()
-
-  set( ENV{VCPKG_FEATURE_FLAGS} "-compilertracking,manifests,registries,versions" )
-
-  if( VCPKG_ROOT )
-    message( STATUS "Using dependencies from vcpkg repository at ${VCPKG_ROOT}" )
-
-    if( NOT EXISTS "${VCPKG_ROOT}/bootstrap-vcpkg.sh" )
-      message( FATAL_ERROR "${VCPKG_ROOT} is not a vcpkg Git repository." )
-    endif()
-
-  else()
-    message( STATUS "Using dependencies from vcpkg Git submodule" )
-    set( VCPKG_ROOT "${CMAKE_SOURCE_DIR}/vcpkg" )
-
-    if( NOT EXISTS "${VCPKG_ROOT}/bootstrap-vcpkg.sh" )
-
-      # Make sure we have actually attempted to find Git
-      if( NOT GIT_FOUND )
-        find_package( Git )
-      endif()
-
-      if( GIT_FOUND )
-        message( STATUS "Initializing vcpkg Git submodule" )
-        execute_process(
-          COMMAND ${GIT_EXECUTABLE} submodule init
-          WORKING_DIRECTORY "${CMAKE_SOURCE_DIR}"
-        )
-        execute_process(
-          COMMAND ${GIT_EXECUTABLE} submodule update
-          WORKING_DIRECTORY "${CMAKE_SOURCE_DIR}"
-        )
-      else()
-        message( FATAL_ERROR "Unable to initialize vcpkg Git submodule because CMake was unable to find a git installation" )
-      endif()
-    endif()
-  endif()
-
-  if( NOT DEFINED VCPKG_OVERLAY_PORTS )
-    set( VCPKG_OVERLAY_PORTS "${VCPKG_ROOT}/overlay/ports" )
-  endif()
-
-  if( NOT DEFINED VCPKG_OVERLAY_TRIPLETS )
-    set( VCPKG_OVERLAY_TRIPLETS "${VCPKG_ROOT}/overlay/triplets" )
-  endif()
-
-  if( NOT DEFINED ENV{VCPKG_DEFAULT_TRIPLET} AND NOT DEFINED VCPKG_TARGET_TRIPLET )
-    if( APPLE )
-      set( VCPKG_TARGET_TRIPLET "x64-osx-10.12min" )
-    endif()
-  elseif( DEFINED ENV{VCPKG_DEFAULT_TRIPLET} )
-    set( VCPKG_TARGET_TRIPLET "$ENV{VCPKG_DEFAULT_TRIPLET}" )
-  endif()
-
-  set( CMAKE_TOOLCHAIN_FILE "${VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake" )
-else()
-  message( STATUS "Searching for dependencies from system, not using vcpkg." )
 endif()
 
 # ~~~~~~~~~~~~~~~~~~~~~~
