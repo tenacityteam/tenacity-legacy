@@ -50,10 +50,21 @@ if(NOT GIT_FOUND)
   find_package( Git )
 endif()
 
-set( AUDACITY_VERSION 0 ) # Major version
+# ~~~~~~~~~
+#  Version
+# ~~~~~~~~~
+
+# Audacity version that Tenacity is based on
+set( AUDACITY_VERSION 3 ) # Major version
 set( AUDACITY_RELEASE 0 ) # Minor version
-set( AUDACITY_REVISION 0 ) # Revision version
+set( AUDACITY_REVISION 4 ) # Revision version
 set( AUDACITY_MODLEVEL 0 ) # Additional version detail
+
+# Tenacity's version
+set( TENACITY_VERSION 0 ) # Major version
+set( TENACITY_RELEASE 1 ) # Minor version
+set( TENACITY_REVISION 0 ) # Revision version
+set( TENACITY_MODLEVEL 0 ) # Additional version detail
 set( GIT_DESCRIBE "unknown" )
 
 if( GIT_FOUND )
