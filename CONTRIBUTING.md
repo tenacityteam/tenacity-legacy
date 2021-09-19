@@ -43,9 +43,13 @@ only for those which need further looking into, and only when asked to._
 #### Sending patches through SourceHut
 
 SourceHut operates on an email-driven workflow, and uses
-[`git send-email`](https://git-send-email.io) for patch submission. Please send
-your patches to
-[`~tenacity/tenacity-dev@lists.sr.ht`](mailto:~tenacity/tenacity-dev@lists.sr.ht).
+[`git send-email`](https://git-send-email.io) for patch submission. Please
+configure the repository like so:
+
+```
+git config format.subjectprefix "PATCH tenacity"
+git config sendemail.to "~tenacity/tenacity-dev@lists.sr.ht"
+```
 
 When revising a patch, please use `git commit --amend` and add the `-v2`
 (increment every revision) flag.
