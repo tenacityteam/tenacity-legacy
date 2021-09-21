@@ -1220,7 +1220,7 @@ else()
   set( MIMETYPES "" )
 
   list( APPEND MIMETYPES
-    application/x-tenacity-project
+    application/x-audacity-project
   )
 
   if(USE_FFMPEG)
