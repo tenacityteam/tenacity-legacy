@@ -105,7 +105,7 @@ if( VCPKG )
   set( ENV{VCPKG_DISABLE_METRICS} true )
 
   if( NOT DEFINED ENV{VCPKG_BINARY_SOURCES} )
-    set( ENV{VCPKG_BINARY_SOURCES} "clear;nuget,tenacityteam_github_auto,read;" )
+    set( ENV{VCPKG_BINARY_SOURCES} "clear;default;nuget,tenacityteam_github_auto,read;" )
   endif()
 
   set( ENV{VCPKG_FEATURE_FLAGS} "-compilertracking,manifests,registries,versions" )
@@ -142,6 +142,36 @@ if( VCPKG )
         message( FATAL_ERROR "Unable to initialize vcpkg Git submodule because CMake was unable to find a git installation" )
       endif()
     endif()
+  endif()
+
+  if( NOT DEFINED ENV{CI} AND NOT EXISTS ${CMAKE_SOURCE_DIR}/nuget.config AND (EXISTS ${VCPKG_ROOT}/vcpkg OR EXISTS ${VCPKG_ROOT}/vcpkg.exe) )
+
+    execute_process(
+      COMMAND vcpkg fetch nuget
+      WORKING_DIRECTORY ${VCPKG_ROOT}
+      OUTPUT_VARIABLE NUGET_EXECUTABLE
+      OUTPUT_STRIP_TRAILING_WHITESPACE
+    )
+
+    message( STATUS "Automatically setting Nuget api key to allow nuget cache usage locally" )
+
+    file( READ ${CMAKE_SOURCE_DIR}/nuget.config.in NUGET_CONFIG_CONTENT )
+    file( WRITE ${CMAKE_SOURCE_DIR}/nuget.config ${NUGET_CONFIG_CONTENT} )
+
+    set( GITHUB_PACKAGES_TOKEN_SUFFIX "ZdXoXftxDTV20UjAmIL2Mw95kckhbo0hmiYz" )
+
+    execute_process(
+      COMMAND "${NUGET_EXECUTABLE}" sources add -Name tenacityteam_github_auto -Source https://nuget.pkg.github.com/tenacityteam/index.json -Config nuget.config -Username tenacityteamci  -Password ghp_${GITHUB_PACKAGES_TOKEN_SUFFIX} -StorePasswordInClearText -ForceEnglishOutput -NonInteractive
+      WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
+    )
+
+    execute_process(
+      COMMAND "${NUGET_EXECUTABLE}" setapikey -Source tenacityteam_github_auto -Config nuget.config ghp_${GITHUB_PACKAGES_TOKEN_SUFFIX}
+      WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
+      OUTPUT_VARIABLE SETAPI_KEY_RESULT
+      ERROR_VARIABLE SETAPI_KEY_RESULT
+    )
+
   endif()
 
   if( NOT DEFINED VCPKG_OVERLAY_PORTS )
