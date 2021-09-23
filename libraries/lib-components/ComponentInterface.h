@@ -1,6 +1,6 @@
 /**********************************************************************
 
-   Audacity: A Digital Audio Editor
+   Tenacity
 
    ComponentInterface.h
 
@@ -43,7 +43,7 @@
 #define __AUDACITY_COMPONENT_INTERFACE_H__
 
 #include "Identifier.h"
-#include "tenacity/Types.h"
+#include "Internat.h"
 #include <wx/string.h> // member variables
 
 class ComponentInterfaceSymbol;
@@ -58,10 +58,10 @@ plugins.  It is what makes a class a plug-in.  Additionally it provides an
 optional parameter definitions function, for those components such as commands,
 effects and (soon) preference pagess that define parameters.
 ********************************************************************************/
-class TENACITY_DLL_API ComponentInterface /* not final */
+class COMPONENTS_API ComponentInterface /* not final */
 {
 public:
-   virtual ~ComponentInterface() {};
+   virtual ~ComponentInterface();
 
    // These should return an untranslated value
    virtual PluginPath GetPath() = 0;

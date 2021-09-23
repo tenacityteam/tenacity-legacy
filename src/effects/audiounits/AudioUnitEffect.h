@@ -21,9 +21,9 @@
 #include <AudioUnit/AudioUnit.h>
 #include <AudioUnit/AudioUnitProperties.h>
 
-#include "tenacity/EffectInterface.h"
-#include "tenacity/ModuleInterface.h"
-#include "tenacity/PluginInterface.h"
+#include "EffectInterface.h"
+#include "ModuleInterface.h"
+#include "PluginInterface.h"
 
 #include "AUControl.h"
 

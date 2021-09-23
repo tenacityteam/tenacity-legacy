@@ -12,7 +12,7 @@
 #ifndef __AUDACITY_LOAD_COMMANDS__
 #define __AUDACITY_LOAD_COMMANDS__
 
-#include "tenacity/ModuleInterface.h"
+#include "ModuleInterface.h"
 
 #include <functional>
 #include <memory>

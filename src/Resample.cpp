@@ -25,7 +25,7 @@
 #include "Resample.h"
 #include "Prefs.h"
 #include "Internat.h"
-#include "../include/tenacity/ComponentInterface.h"
+#include "ComponentInterface.h"
 
 #include <soxr.h>
 

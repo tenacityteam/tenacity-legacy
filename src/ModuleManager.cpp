@@ -20,7 +20,7 @@ i.e. an alternative to the usual interface, for Audacity.
 
 
 #include "ModuleManager.h"
-#include "tenacity/ModuleInterface.h"
+#include "ModuleInterface.h"
 
 
 
@@ -32,7 +32,7 @@ i.e. an alternative to the usual interface, for Audacity.
 #include "FileNames.h"
 #include "MemoryX.h"
 
-#include "tenacity/PluginInterface.h"
+#include "PluginInterface.h"
 
 #ifdef EXPERIMENTAL_MODULE_PREFS
 #include "Prefs.h"

@@ -1,6 +1,6 @@
 /**********************************************************************
 
-   Audacity: A Digital Audio Editor
+   Tenacity
 
    ConfigInterface.h
 
@@ -53,10 +53,10 @@ differentiates between private and shared config.  It should probably be replace
 with a Shuttle.
 
 *******************************************************************************************/
-class TENACITY_DLL_API ConfigClientInterface /* not final */
+class COMPONENTS_API ConfigClientInterface /* not final */
 {
 public:
-   virtual ~ConfigClientInterface() {};
+   virtual ~ConfigClientInterface();
 
    virtual bool HasSharedConfigGroup(const RegistryPath & group) = 0;
    virtual bool GetSharedConfigSubgroups(const RegistryPath & group, RegistryPaths & subgroups) = 0;

@@ -16,8 +16,7 @@ Describes shared object that is used to access FFmpeg libraries.
 #if !defined(__AUDACITY_FFMPEG__)
 #define __AUDACITY_FFMPEG__
 
-
-
+#include "tenacity/Types.h"
 #include "widgets/wxPanelWrapper.h" // to inherit
 
 #if defined(__WXMSW__)

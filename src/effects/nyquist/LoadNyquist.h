@@ -8,9 +8,9 @@
 
 **********************************************************************/
 
-#include "tenacity/ModuleInterface.h"
-#include "tenacity/EffectInterface.h"
-#include "tenacity/PluginInterface.h"
+#include "ModuleInterface.h"
+#include "EffectInterface.h"
+#include "PluginInterface.h"
 
 ///////////////////////////////////////////////////////////////////////////////
 //

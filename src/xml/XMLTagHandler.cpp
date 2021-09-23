@@ -24,6 +24,8 @@
 
 #include "XMLTagHandler.h"
 
+#include "tenacity/Types.h"
+
 #ifdef _WIN32
    #include <windows.h>
    #include <wx/msw/winundef.h>

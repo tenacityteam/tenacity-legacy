@@ -9,7 +9,7 @@
 **********************************************************************/
 #include "PluginRegistrationDialog.h"
 
-#include "tenacity/EffectInterface.h"
+#include "EffectInterface.h"
 #include "ModuleManager.h"
 #include "PluginManager.h"
 #include "ShuttleGui.h"

@@ -1,6 +1,6 @@
 /**********************************************************************
 
-   Audacity: A Digital Audio Editor
+   Tenacity
 
    ModuleInterface.h
 
@@ -45,8 +45,8 @@
 #include <functional>
 #include <memory>
 #include "Identifier.h"
-#include "tenacity/ComponentInterface.h"
-#include "tenacity/PluginInterface.h"
+#include "ComponentInterface.h"
+#include "PluginInterface.h"
 
 // ============================================================================
 //
@@ -68,7 +68,7 @@
 class ModuleInterface  /* not final */ : public ComponentInterface
 {
 public:
-   virtual ~ModuleInterface() {};
+   virtual ~ModuleInterface();
 
    // Called immediately after creation to give the instance a chance to
    // initialize.  Return "true" if initialziation was successful.

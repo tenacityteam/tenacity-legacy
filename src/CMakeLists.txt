@@ -991,13 +991,7 @@ list( APPEND SOURCES PRIVATE Experimental.cmake )
 # General headers
 # ~~~
 list( APPEND HEADERS
-  ../include/tenacity/EffectInterface.h
   ../include/tenacity/Types.h
-  ../include/tenacity/ConfigInterface.h
-  ../include/tenacity/ModuleInterface.h
-  ../include/tenacity/PluginInterface.h
-  ../include/tenacity/ComponentInterface.h
-  ../include/tenacity/EffectAutomationParameters.h
 )
 
 # ~~~
