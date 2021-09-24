@@ -1057,7 +1057,7 @@ list( APPEND LDFLAGS PRIVATE
 list( APPEND LIBRARIES PUBLIC
   ${CMAKE_REQUIRED_LIBRARIES}
   ZLIB::ZLIB
-  wxWidgets::wxWidgets
+  wxBase
   EXPAT::EXPAT
   mp3lame::mp3lame
   SndFile::sndfile

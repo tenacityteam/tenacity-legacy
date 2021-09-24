@@ -885,6 +885,18 @@ endif()
 add_subdirectory( lib-src/libnyquist )
 set( USE_NYQUIST ON )
 
+if( NOT TARGET wxBase )
+  if(TARGET wxwidgets::wxwidgets)
+    add_library( wxBase ALIAS wxwidgets::wxwidgets )
+  else()
+    add_library( wxBase INTERFACE IMPORTED )
+    target_include_directories( wxBase INTERFACE ${wxWidgets_INCLUDE_DIRS} )
+    target_link_libraries( wxBase INTERFACE ${wxWidgets_LIBRARIES} )
+    target_compile_definitions( wxBase INTERFACE ${CXX_WARNINGS_SILENCE_DEFINES} )
+    target_compile_definitions( wxBase INTERFACE ${wxWidgets_DEFINITIONS} ${wxWidgets_DEFINITIONS_DEBUG} )
+  endif()
+endif()
+
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Tenacity source directories
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
