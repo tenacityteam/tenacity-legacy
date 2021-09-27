@@ -1,7 +1,11 @@
 name: Packaging
 on:
   push:
-    branches: [master]
+    branches:
+      - master
+  pull_request:
+    paths:
+      - /packaging/flatpak/**
   workflow_dispatch:
 
 jobs:
