@@ -1263,7 +1263,7 @@ else()
   endif()
 
   # Create the desktop file
-  configure_file( tenacity.desktop.in ${_INTDIR}/tenacity.desktop )
+  configure_file( org.tenacityaudio.Tenacity.desktop.in ${_INTDIR}/org.tenacityaudio.Tenacity.desktop )
 
   # Copy the required wxWidgets libs into the bundle
   add_custom_command(
@@ -1369,7 +1369,7 @@ else()
       PATTERN "*.so*"
     )
     install(
-      FILES "${_INTDIR}/tenacity.desktop"
+      FILES "${_INTDIR}/org.tenacityaudio.Tenacity.desktop"
       DESTINATION "${_DATADIR}/applications"
     )
     install(
@@ -1377,7 +1377,7 @@ else()
       DESTINATION "${_DATADIR}/doc/${AUDACITY_NAME}"
     )
     install(
-      FILES "${_SRCDIR}/tenacity.xml"
+      FILES "${_SRCDIR}/org.tenacityaudio.Tenacity.xml"
       DESTINATION "${_DATADIR}/mime/packages"
     )
     install(

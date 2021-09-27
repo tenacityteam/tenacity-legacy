@@ -51,8 +51,8 @@ if( NOT CMAKE_SYSTEM_NAME MATCHES "Darwin" )
    if( NOT WIN32)
       install( DIRECTORY "${dst}" OPTIONAL
                DESTINATION "${_DATADIR}/tenacity/help" )
-      
-      install( FILES "${_SRCDIR}/tenacity.metainfo.xml"
+
+      install( FILES "${_SRCDIR}/org.tenacityaudio.Tenacity.metainfo.xml"
                DESTINATION "${_DATADIR}/metainfo" )
    endif()
 endif()
@@ -64,7 +64,7 @@ cmake_dependent_option(BUILD_MANPAGE "Build manpage" ON "NOT SCDOC_CMD STREQUAL 
 
 if( BUILD_MANPAGE )
    add_custom_command( COMMENT "Generating manpage"
-      COMMAND ${SCDOC_CMD} < "${_SRCDIR}/tenacity.1.scd" > "${CMAKE_BINARY_DIR}/help/tenacity.1" 
+      COMMAND ${SCDOC_CMD} < "${_SRCDIR}/tenacity.1.scd" > "${CMAKE_BINARY_DIR}/help/tenacity.1"
       DEPENDS "${_SRCDIR}/tenacity.1.scd"
       OUTPUT "${CMAKE_BINARY_DIR}/help/tenacity.1" )
 
