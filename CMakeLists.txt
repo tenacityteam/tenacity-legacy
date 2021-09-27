@@ -97,9 +97,13 @@ if( GIT_FOUND )
     string( REGEX REPLACE "-.*" "" git_output "${git_output}" )
     string( REPLACE "." ";" git_output "${git_output}" )
 
-    list( GET git_output 0 AUDACITY_VERSION )
-    list( GET git_output 1 AUDACITY_RELEASE )
-    list( GET git_output 2 AUDACITY_REVISION )
+    list( LENGTH git_output GIT_OUTPUT_LIST_LENGTH )
+
+    if( GIT_OUTPUT_LIST_LENGTH GREATER_EQUAL 3 )
+      list( GET git_output 0 AUDACITY_VERSION )
+      list( GET git_output 1 AUDACITY_RELEASE )
+      list( GET git_output 2 AUDACITY_REVISION )
+    endif()
   endif()
 endif()
 
