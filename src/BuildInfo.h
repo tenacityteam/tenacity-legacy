@@ -26,17 +26,19 @@
 class BuildInfo {
 
 public:
-      enum class CompilerType { MSVC, MinGW, GCC, Clang, Unknown };
+      enum class CompilerType { MSVC, MinGW, GCC, Clang, AppleClang, Unknown };
 
       static constexpr auto CurrentBuildCompiler =
         #if defined(_MSC_FULL_VER)
               CompilerType::MSVC;
         #elif defined(__GNUC_PATCHLEVEL__) && defined(__MINGW32__)
               CompilerType::MinGW;
-        #elif defined(__GNUC_PATCHLEVEL__)
+        #elif defined(__GNUC_PATCHLEVEL__) && !defined(__llvm__) && !defined(__clang__)
               CompilerType::GCC;
-        #elif defined(__clang_version__)
+        #elif defined(__clang_version__) && !defined(__apple_build_version__)
               CompilerType::Clang;
+        #elif defined(__clang_version__) && defined(__apple_build_version__)
+              CompilerType::AppleClang;
         #else
               CompilerType::Unknown;
         #endif
@@ -79,7 +81,16 @@ public:
               #define __clang_minor__ 0
               #define __clang_patchlevel__ 0
             #endif
-            return wxString::Format( wxT("clang %s"), CUSTOM_wxMAKE_VERSION_DOT_STRING_T(__clang_major__, __clang_minor__, __clang_patchlevel__));
+            return wxString::Format( wxT("Clang %s"), CUSTOM_wxMAKE_VERSION_DOT_STRING_T(__clang_major__, __clang_minor__, __clang_patchlevel__));
+
+          case BuildInfo::CompilerType::AppleClang:
+            #if !defined(__clang_major__) || !defined (__clang_minor__) || !defined(__clang_patchlevel__)
+              // This should be unreachable, but it makes the compiler realize that they will always be defined
+              #define __clang_major__ 0
+              #define __clang_minor__ 0
+              #define __clang_patchlevel__ 0
+            #endif
+            return wxString::Format( wxT("Apple Clang %s"), CUSTOM_wxMAKE_VERSION_DOT_STRING_T(__clang_major__, __clang_minor__, __clang_patchlevel__));
 
           case BuildInfo::CompilerType::Unknown:
           default:
