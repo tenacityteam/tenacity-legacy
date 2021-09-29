@@ -68,26 +68,42 @@ set( TENACITY_MODLEVEL 0 ) # Additional version detail
 set( GIT_DESCRIBE "unknown" )
 
 if( GIT_FOUND )
+  # Attempt to first get "Tenacity-" tags
   execute_process(
-    COMMAND ${GIT_EXECUTABLE} describe --tags --abbrev=7
+    COMMAND ${GIT_EXECUTABLE} describe --tags --abbrev=7 --exclude="Audacity-*" --exclude="DarkAudacity-*"
     WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
     OUTPUT_VARIABLE GIT_DESCRIBE
     OUTPUT_STRIP_TRAILING_WHITESPACE ERROR_QUIET
   )
 
-  if( GIT_DESCRIBE )
+  if( DEFINED GIT_DESCRIBE AND GIT_DESCRIBE STREQUAL "" )
+    # Retry, this time accepting "Audacity-" tags
+    execute_process(
+      COMMAND ${GIT_EXECUTABLE} describe --tags --abbrev=7 --exclude="DarkAudacity-*"
+      WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
+      OUTPUT_VARIABLE GIT_DESCRIBE
+      OUTPUT_STRIP_TRAILING_WHITESPACE ERROR_QUIET
+    )
+  endif()
+
+  if( DEFINED GIT_DESCRIBE AND NOT GIT_DESCRIBE STREQUAL "" )
+
     # Copy to new variable for string manipulation
     set( git_output ${GIT_DESCRIBE} )
 
-    # TODO: Remove this after first Tenacity release
     string( REPLACE "Audacity-" "" git_output "${git_output}" )
+    string( REPLACE "DarkAudacity-" "" git_output "${git_output}" )
 
     string( REGEX REPLACE "-.*" "" git_output "${git_output}" )
     string( REPLACE "." ";" git_output "${git_output}" )
 
-    list( GET git_output 0 AUDACITY_VERSION )
-    list( GET git_output 1 AUDACITY_RELEASE )
-    list( GET git_output 2 AUDACITY_REVISION )
+    list( LENGTH git_output GIT_OUTPUT_LIST_LENGTH )
+
+    if( GIT_OUTPUT_LIST_LENGTH GREATER_EQUAL 3 )
+      list( GET git_output 0 AUDACITY_VERSION )
+      list( GET git_output 1 AUDACITY_RELEASE )
+      list( GET git_output 2 AUDACITY_REVISION )
+    endif()
   endif()
 endif()
 
