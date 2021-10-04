@@ -97,24 +97,6 @@ Some example strings are also given first, to document the syntax.
 #endif
 
 
-// Crash & error report window
-
-XO("Problem Report for Audacity"),
-XO("Click \"Send\" to submit the report to Audacity. This information is collected anonymously."),
-XO("Problem details"),
-XO("Comments"),
-XC("&Send",       "crash reporter button"),
-XC("&Don't send", "crash reporter button"),
-// i18n-hint C++ programming exception
-XO("Exception code 0x%x"),
-// i18n-hint C++ programming exception
-XO("Unknown exception"),
-// i18n-hint C++ programming assertion
-XO("Unknown assertion"),
-XO("Unknown error"),
-XO("Failed to send crash report"),
-
-
 // i18n-hint Scheme refers to a color scheme for spectrogram colors
 XC("Sche&me",            "spectrum prefs"),
 // i18n-hint Choice of spectrogram colors
@@ -125,22 +107,6 @@ XC("Color (classic)",   "spectrum prefs"),
 XC("Grayscale",         "spectrum prefs"),
 // i18n-hint Choice of spectrogram colors
 XC("Inverse grayscale", "spectrum prefs"),
-
-// Update version dialog
-XC("Update Audacity", "update dialog"),
-XC("&Skip", "update dialog"),
-XC("&Install update", "update dialog"),
-XC("Changelog", "update dialog"),
-XC("Read more on GitHub", "update dialog"),
-XC("Error checking for update", "update dialog"),
-XC("Unable to connect to Audacity update server.", "update dialog"),
-XC("Update data was corrupted.", "update dialog"),
-XC("Error downloading update.", "update dialog"),
-XC("Can't open the Audacity download link.", "update dialog"),
-// i18n-hint Substitution of version number for %s.
-XC("Audacity %s is available!", "update dialog"),
-
-// For after 3.0.3
 
 // See three occurrences of this XC in comments elsewhere;
 // to be uncommented, replacing an XO; and the i18n-hint comment to be moved
