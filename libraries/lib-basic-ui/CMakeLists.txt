@@ -17,7 +17,13 @@ set( SOURCES
    BasicUI.cpp
    BasicUI.h
 )
-audacity_library( lib-basic-ui "${SOURCES}"
-   ""
-   "" ""
+
+set( LIBRARIES
+  lib-strings-interface
+  PRIVATE
+  wxWidgets::wxWidgets
+)
+
+audacity_library( lib-basic-ui "${SOURCES}" "${LIBRARIES}"
+  "" ""
 )
