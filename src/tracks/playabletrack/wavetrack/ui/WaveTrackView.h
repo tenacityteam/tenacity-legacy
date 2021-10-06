@@ -52,6 +52,7 @@ protected:
 
 private:
    std::weak_ptr<UIHandle> mCloseHandle;
+   std::weak_ptr<UIHandle> mResizeHandle;
    std::weak_ptr<UIHandle> mAdjustHandle;
    std::weak_ptr<UIHandle> mRearrangeHandle;
    std::weak_ptr<CutlineHandle> mCutlineHandle;
@@ -77,6 +78,8 @@ class TENACITY_DLL_API WaveTrackView final
    WaveTrackView &operator=( const WaveTrackView& ) = delete;
 
 public:
+   static constexpr int kChannelSeparatorThickness{ 8 };
+
    using Display = WaveTrackViewConstants::Display;
 
    static WaveTrackView &Get( WaveTrack &track );
@@ -128,6 +131,15 @@ public:
 
    std::weak_ptr<WaveClip> GetSelectedClip();
 
+   // Returns a visible subset of subviews, sorted in the same 
+   // order as they are supposed to be displayed
+   
+
+   // Get the visible sub-views,
+   // if rect is provided then result will contain
+   // y coordinate for each subview within this rect
+   Refinement GetSubViews(const wxRect* rect = nullptr);
+
 private:
    void BuildSubViews() const;
    void DoSetDisplay(Display display, bool exclusive = true);
@@ -143,11 +155,10 @@ private:
       override;
 
    // TrackView implementation
-   // Get the visible sub-views with top y coordinates
-   Refinement GetSubViews( const wxRect &rect ) override;
+   Refinement GetSubViews(const wxRect& rect) override;
 
 protected:
-   std::shared_ptr<CommonTrackCell> DoGetAffordanceControls() override;
+   std::shared_ptr<CommonTrackCell> GetAffordanceControls() override;
 
    void DoSetMinimized( bool minimized ) override;
 
@@ -158,6 +169,11 @@ protected:
    mutable wxCoord mLastHeight{};
 
    bool mMultiView{ false };
+
+private:
+   std::shared_ptr<CommonTrackCell> DoGetAffordance(const std::shared_ptr<Track>& track);
+
+   std::shared_ptr<CommonTrackCell> mpAffordanceCellControl;
 };
 
 // Helper for drawing routines

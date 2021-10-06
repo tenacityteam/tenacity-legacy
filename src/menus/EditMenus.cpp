@@ -46,7 +46,7 @@ bool DoPasteText(AudacityProject &project)
    for (auto pLabelTrack : tracks.Any<LabelTrack>())
    {
       // Does this track have an active label?
-      if (LabelTrackView::Get( *pLabelTrack ).HasSelection( project )) {
+      if (LabelTrackView::Get( *pLabelTrack ).GetTextEditIndex(project) != -1) {
 
          // Yes, so try pasting into it
          auto &view = LabelTrackView::Get( *pLabelTrack );
@@ -607,6 +607,7 @@ void OnPaste(const CommandContext &context)
       if (ff) {
          TrackFocus::Get(project).Set(ff);
          ff->EnsureVisible();
+         ff->LinkConsistencyCheck();
       }
    }
 }
