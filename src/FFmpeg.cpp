@@ -103,7 +103,7 @@ void FFmpegStartup()
       {
          AudacityMessageBox(XO(
 "FFmpeg was configured in Preferences and successfully loaded before, \
-\nbut this time Audacity failed to load it at startup. \
+\nbut this time Tenacity failed to load it at startup. \
 \n\nYou may want to go back to Preferences > Libraries and re-configure it."),
             XO("FFmpeg startup failed"));
       }
@@ -476,7 +476,7 @@ public:
       {
          S.AddTitle(
             XO(
-"Audacity needs the file '%s' to import and export audio via FFmpeg.")
+"Tenacity needs the file '%s' to import and export audio via FFmpeg.")
                .Format( mName ) );
 
          S.SetBorder(3);
@@ -585,7 +585,7 @@ void FFmpegNotFoundDialog::PopulateOrExchange(ShuttleGui & S)
    S.StartVerticalLay(true);
    {
       S.AddFixedText(XO(
-"Audacity attempted to use FFmpeg to import an audio file,\n\
+"Tenacity attempted to use FFmpeg to import an audio file,\n\
 but the libraries were not found.\n\n\
 To use FFmpeg import, go to Edit > Preferences > Libraries\n\
 to download or locate the FFmpeg libraries."

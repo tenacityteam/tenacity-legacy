@@ -489,7 +489,7 @@ bool AUPImportFileHandle::Open()
             XO("This project was saved by Audacity version 1.0 or earlier. The format has\n"
                "changed and this version of Audacity is unable to import the project.\n\n"
                "Use a version of Audacity prior to v3.0.0 to upgrade the project and then\n"
-               "you may import it with this version of Audacity."),
+               "you may import it with this version of Tenacity."),
             XO("Import Project"),
             wxOK | wxCENTRE,
             &GetProjectFrame(mProject));
@@ -861,7 +861,7 @@ bool AUPImportFileHandle::HandleNoteTrack(XMLTagHandler *&handler)
    return true;
 #else
    AudacityMessageBox(
-      XO("MIDI tracks found in project file, but this build of Audacity does not include MIDI support, bypassing track."),
+      XO("MIDI tracks found in project file, but this build of Tenacity does not include MIDI support, bypassing track."),
       XO("Project Import"),
       wxOK | wxICON_EXCLAMATION | wxCENTRE,
       &GetProjectFrame(mProject));

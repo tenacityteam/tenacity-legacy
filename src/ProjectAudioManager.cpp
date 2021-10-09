@@ -507,7 +507,7 @@ void ProjectAudioManager::OnRecord(bool altAppearance)
             if (numberOfSelected > 0 && rateOfSelected != options.rate) {
                AudacityMessageBox(XO(
                   "Too few tracks are selected for recording at this sample rate.\n"
-                  "(Audacity requires two channels at the same sample rate for\n"
+                  "(Tenacity requires two channels at the same sample rate for\n"
                   "each stereo track)"),
                   XO("Too Few Compatible Tracks Selected"),
                   wxICON_ERROR | wxCENTRE);
@@ -521,7 +521,7 @@ void ProjectAudioManager::OnRecord(bool altAppearance)
             // If suitable tracks still not found, will record into NEW ones,
             // starting with t0
          }
-         
+
          // Whether we decided on NEW tracks or not:
          if (t1 <= selectedRegion.t0() && selectedRegion.t1() > selectedRegion.t0()) {
             t1 = selectedRegion.t1();   // record within the selection
@@ -904,7 +904,7 @@ void ProjectAudioManager::OnAudioIOStopRecording()
                ShowWarningDialog(&window, wxT("DropoutDetected"), XO("\
 Recorded audio was lost at the labeled locations. Possible causes:\n\
 \n\
-Other applications are competing with Audacity for processor time\n\
+Other applications are competing with Tenacity for processor time\n\
 \n\
 You are saving directly to a slow external storage device\n\
 "
@@ -1134,7 +1134,7 @@ static RegisteredMenuItemEnabler stopIfPaused{{
    }
 }};
 
-// GetSelectedProperties collects information about 
+// GetSelectedProperties collects information about
 // currently selected audio tracks
 PropertiesOfSelected
 GetPropertiesOfSelected(const AudacityProject &proj)
@@ -1144,10 +1144,10 @@ GetPropertiesOfSelected(const AudacityProject &proj)
    PropertiesOfSelected result;
    result.allSameRate = true;
 
-   const auto selectedTracks{ 
+   const auto selectedTracks{
       TrackList::Get(proj).Selected< const WaveTrack >() };
 
-   for (const auto & track : selectedTracks) 
+   for (const auto & track : selectedTracks)
    {
       if (rateOfSelection != RATE_NOT_SELECTED &&
          track->GetRate() != rateOfSelection)

@@ -68,7 +68,7 @@ void DoMixAndRender
       // But before removing, determine the first track after the removal
       auto last = *trackRange.rbegin();
       auto insertionPoint = * ++ tracks.Find( last );
-      
+
       auto selectedCount = (trackRange + &Track::IsLeader).size();
       wxString firstName;
       int firstColour = -1;
@@ -683,7 +683,7 @@ void OnNewTimeTrack(const CommandContext &context)
    if ( *tracks.Any<TimeTrack>().begin() ) {
       AudacityMessageBox(
          XO(
-"This version of Audacity only allows one time track for each project window.") );
+"This version of Tenacity only allows one time track for each project window.") );
       return;
    }
 
@@ -1293,7 +1293,7 @@ BaseItemSharedPtr TracksMenu()
 {
    // Tracks Menu (formerly Project Menu)
    using Options = CommandManager::Options;
-   
+
    static BaseItemSharedPtr menu{
    ( FinderScope{ findCommandHandler },
    Menu( wxT("Tracks"), XXO("&Tracks"),

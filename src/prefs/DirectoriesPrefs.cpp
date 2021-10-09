@@ -274,8 +274,8 @@ void DirectoriesPrefs::OnTempBrowse(wxCommandEvent &evt)
                                    DefaultTempDir());
 
    // Because we went through InitTemp() during initialisation,
-   // the old temp directory name in prefs should already be OK.  Just in case there is 
-   // some way we hadn't thought of for it to be not OK, 
+   // the old temp directory name in prefs should already be OK.  Just in case there is
+   // some way we hadn't thought of for it to be not OK,
    // we avoid prompting with it in that case and use the suggested default instead.
    if (!IsTempDirectoryNameOK(oldTemp))
    {
@@ -308,7 +308,7 @@ void DirectoriesPrefs::OnTempBrowse(wxCommandEvent &evt)
       wxString newDirName;
 #if defined(__WXMAC__)
       newDirName = wxT("SessionData");
-#elif defined(__WXMSW__) 
+#elif defined(__WXMSW__)
       // Clearing Bug 1271 residual issue.  Let's NOT have temp in the name.
       newDirName = wxT("SessionData");
 #else
@@ -442,7 +442,7 @@ bool DirectoriesPrefs::Validate()
    if (Temp != oldDir) {
       AudacityMessageBox(
          XO(
-"Changes to temporary directory will not take effect until Audacity is restarted"),
+"Changes to temporary directory will not take effect until Tenacity is restarted"),
          XO("Temp Directory Update"),
          wxOK | wxCENTRE | wxICON_INFORMATION);
    }

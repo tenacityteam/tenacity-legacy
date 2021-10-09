@@ -111,13 +111,13 @@ void ThemePrefs::PopulateOrExchange(ShuttleGui & S)
    {
       S.AddFixedText(
          XO(
-"Themability is an experimental feature.\n\nTo try it out, click \"Save Theme Cache\" then find and modify the images and colors in\nImageCacheVxx.png using an image editor such as the Gimp.\n\nClick \"Load Theme Cache\" to load the changed images and colors back into Audacity.\n\n(Only the Transport Toolbar and the colors on the wavetrack are currently affected, even\nthough the image file shows other icons too.)")
+"Themability is an experimental feature.\n\nTo try it out, click \"Save Theme Cache\" then find and modify the images and colors in\nImageCacheVxx.png using an image editor such as the Gimp.\n\nClick \"Load Theme Cache\" to load the changed images and colors back into Tenacity.\n\n(Only the Transport Toolbar and the colors on the wavetrack are currently affected, even\nthough the image file shows other icons too.)")
          );
 
 #ifdef _DEBUG
       S.AddFixedText(
          Verbatim(
-"This is a debug version of Audacity, with an extra button, 'Output Sourcery'. This will save a\nC version of the image cache that can be compiled in as a default.")
+"This is a debug version of Tenacity, with an extra button, 'Output Sourcery'. This will save a\nC version of the image cache that can be compiled in as a default.")
          );
 #endif
 

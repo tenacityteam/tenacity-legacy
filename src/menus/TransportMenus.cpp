@@ -411,7 +411,7 @@ void OnTimerRecord(const CommandContext &context)
       if (numberOfSelected > 0 && rateOfSelected != settings.GetRate()) {
          AudacityMessageBox(XO(
             "Too few tracks are selected for recording at this sample rate.\n"
-            "(Audacity requires two channels at the same sample rate for\n"
+            "(Tenacity requires two channels at the same sample rate for\n"
             "each stereo track)"),
             XO("Too Few Compatible Tracks Selected"),
             wxICON_ERROR | wxCENTRE);
@@ -419,7 +419,7 @@ void OnTimerRecord(const CommandContext &context)
          return;
       }
    }
-   
+
    // We use this variable to display "Current Project" in the Timer Recording
    // save project field
    bool bProjectSaved = !ProjectFileIO::Get( project ).IsModified();
@@ -615,7 +615,7 @@ void OnPunchAndRoll(const CommandContext &context)
       // play recording tracks only
       std::copy(tracks.begin(), tracks.end(),
          std::back_inserter(transportTracks.playbackTracks));
-      
+
    // Unlike with the usual recording, a track may be chosen both for playback
    // and recording.
    transportTracks.captureTracks = std::move(tracks);

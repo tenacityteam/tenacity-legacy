@@ -62,8 +62,8 @@ int ProjectFSCK(
          XO("Continue with repairs noted in log, and check for more errors. This will save the project in its current state, unless you \"Close project immediately\" on further error alerts.")
       };
       wxLog::FlushActive(); // MultiDialog has "Show Log..." button, so make sure log is current.
-      action = ShowMultiDialog(msg, 
-         XO("Warning - Problems Reading Sequence Tags"), 
+      action = ShowMultiDialog(msg,
+         XO("Warning - Problems Reading Sequence Tags"),
          buttons,"");
       if (action == 0)
          nResult = FSCKstatus_CLOSE_REQ;
@@ -101,7 +101,7 @@ int ProjectFSCK(
          auto msg =
 XO("Project check of \"%s\" folder \
 \ndetected %lld missing external audio file(s) \
-\n('aliased files'). There is no way for Audacity \
+\n('aliased files'). There is no way for Tenacity \
 \nto recover these files automatically. \
 \n\nIf you choose the first or second option below, \
 \nyou can try to find and restore the missing files \
@@ -120,8 +120,8 @@ XO("Project check of \"%s\" folder \
             XO("Replace missing audio with silence (permanent immediately)."),
          };
          wxLog::FlushActive(); // MultiDialog has "Show Log..." button, so make sure log is current.
-         action = ShowMultiDialog(msg, 
-            XO("Warning - Missing Aliased File(s)"), 
+         action = ShowMultiDialog(msg,
+            XO("Warning - Missing Aliased File(s)"),
             buttons,
             "");
       }
@@ -191,7 +191,7 @@ XO("Project check of \"%s\" folder \
          auto msg =
 XO("Project check of \"%s\" folder \
 \ndetected %lld missing alias (.auf) blockfile(s). \
-\nAudacity can fully regenerate these files \
+\nTenacity can fully regenerate these files \
 \nfrom the current audio in the project.")
             .Format(
                dm.GetProjectName(), (long long) missingAUFHash.size() );
@@ -201,8 +201,8 @@ XO("Project check of \"%s\" folder \
             XO("Close project immediately with no further changes"),
          };
          wxLog::FlushActive(); // MultiDialog has "Show Log..." button, so make sure log is current.
-         action = ShowMultiDialog(msg, 
-            XO("Warning - Missing Alias Summary File(s)"), 
+         action = ShowMultiDialog(msg,
+            XO("Warning - Missing Alias Summary File(s)"),
             buttons,
             "");
       }
@@ -262,7 +262,7 @@ XO("Project check of \"%s\" folder \
 XO("Project check of \"%s\" folder \
 \ndetected %lld missing audio data (.au) blockfile(s), \
 \nprobably due to a bug, system crash, or accidental \
-\ndeletion. There is no way for Audacity to recover \
+\ndeletion. There is no way for Tenacity to recover \
 \nthese missing files automatically. \
 \n\nIf you choose the first or second option below, \
 \nyou can try to find and restore the missing files \
@@ -277,9 +277,9 @@ XO("Project check of \"%s\" folder \
             XO("Replace missing audio with silence (permanent immediately)"),
          };
          wxLog::FlushActive(); // MultiDialog has "Show Log..." button, so make sure log is current.
-         action = ShowMultiDialog(msg, 
-            XO("Warning - Missing Audio Data Block File(s)"), 
-            buttons, 
+         action = ShowMultiDialog(msg,
+            XO("Warning - Missing Audio Data Block File(s)"),
+            buttons,
             "Warning_-_Missing_Audio_Data_Block_Files");
       }
 
@@ -352,8 +352,8 @@ other projects. \
             XO("Delete orphan files (permanent immediately)"),
          };
          wxLog::FlushActive(); // MultiDialog has "Show Log..." button, so make sure log is current.
-         action = ShowMultiDialog(msg, 
-            XO("Warning - Orphan Block File(s)"), 
+         action = ShowMultiDialog(msg,
+            XO("Warning - Orphan Block File(s)"),
             buttons,
             "Warning_-_Orphan_Block_Files"
          );

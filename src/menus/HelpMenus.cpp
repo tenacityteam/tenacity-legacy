@@ -274,7 +274,7 @@ void QuickFixDialog::OnFix(const PrefSetter &setter, wxWindowID id)
 {
    if ( setter )
       setter();
-   
+
    // Change the label after doing the fix, as the fix may take a second or two.
    auto pBtn = FindWindow(id);
    if( pBtn )
@@ -350,7 +350,7 @@ void OnShowLog( const CommandContext &context )
 void OnMenuTree(const CommandContext &context)
 {
    auto &project = context.project;
-   
+
    using namespace MenuTable;
    struct MyVisitor : ToolbarMenuVisitor
    {
@@ -476,7 +476,7 @@ BaseItemSharedPtr HelpMenu()
          Command( wxT("QuickHelp"), XXO("&Getting Started"), FN(OnQuickHelp),
             AlwaysEnabledFlag ),
          // DA: Emphasise it is the Audacity Manual (No separate DA manual).
-         Command( wxT("Manual"), XXO("Audacity &Manual"), FN(OnManual),
+         Command( wxT("Manual"), XXO("&Manual"), FN(OnManual),
             AlwaysEnabledFlag )
 
    #else
@@ -523,7 +523,7 @@ BaseItemSharedPtr HelpMenu()
       ,
 #endif
 
-         Command( wxT("About"), XXO("&About Audacity..."), FN(OnAbout),
+         Command( wxT("About"), XXO("&About Tenacity..."), FN(OnAbout),
             AlwaysEnabledFlag )
       )
    ) ) };

@@ -105,7 +105,7 @@ ComponentInterfaceSymbol NyquistEffectsModule::GetSymbol()
 
 VendorSymbol NyquistEffectsModule::GetVendor()
 {
-   return XO("The Audacity Team");
+   return XO("The Tenacity Team");
 }
 
 wxString NyquistEffectsModule::GetVersion()
@@ -116,7 +116,7 @@ wxString NyquistEffectsModule::GetVersion()
 
 TranslatableString NyquistEffectsModule::GetDescription()
 {
-   return XO("Provides Nyquist Effects support to Audacity");
+   return XO("Provides Nyquist Effects support to Tenacity");
 }
 
 // ============================================================================
@@ -198,7 +198,7 @@ bool NyquistEffectsModule::AutoRegisterPlugins(PluginManagerInterface & pm)
            TODO: Currently the names of Nyquist plug-ins cannot have
           context specific translations or internal names different from
           the visible English names.
-   
+
           This makes it unnecessary to pass a second argument to
           IsPluginRegistered for correction of the registry (as is needed
           in the case of built-in effects).

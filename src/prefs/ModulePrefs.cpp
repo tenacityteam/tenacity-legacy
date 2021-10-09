@@ -9,8 +9,8 @@
 *******************************************************************//**
 
 \class ModulePrefs
-\brief A PrefsPanel to enable/disable certain modules.  'Modules' are 
-dynamically linked libraries that modify Audacity.  They are plug-ins 
+\brief A PrefsPanel to enable/disable certain modules.  'Modules' are
+dynamically linked libraries that modify Audacity.  They are plug-ins
 with names like mod-script-pipe that add NEW features.
 
 *//*******************************************************************/
@@ -117,18 +117,18 @@ void ModulePrefs::PopulateOrExchange(ShuttleGui & S)
    S.StartStatic( {} );
    {
       S.AddFixedText(XO(
-"These are experimental modules. Enable them only if you've read the Audacity Manual\nand know what you are doing.") );
+"These are experimental modules. Enable them only if you've read the Tenacity Manual\nand know what you are doing.") );
       S.AddFixedText(XO(
 /* i18n-hint preserve the leading spaces */
-"  'Ask' means Audacity will ask if you want to load the module each time it starts.") );
+"  'Ask' means Tenacity will ask if you want to load the module each time it starts.") );
       S.AddFixedText(XO(
 /* i18n-hint preserve the leading spaces */
-"  'Failed' means Audacity thinks the module is broken and won't run it.") );
+"  'Failed' means Tenacity thinks the module is broken and won't run it.") );
       S.AddFixedText(XO(
 /* i18n-hint preserve the leading spaces */
 "  'New' means no choice has been made yet.") );
       S.AddFixedText(XO(
-"Changes to these settings only take effect when Audacity starts up."));
+"Changes to these settings only take effect when Tenacity starts up."));
       {
         S.StartMultiColumn( 2 );
         int i;

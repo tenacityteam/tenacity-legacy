@@ -188,7 +188,7 @@ void GUIPrefs::PopulateOrExchange(ShuttleGui & S)
                     {wxT("/GUI/ShowExtraMenus"),
                      false});
 #ifdef EXPERIMENTAL_THEME_PREFS
-      // We do not want to make this option mainstream.  It's a 
+      // We do not want to make this option mainstream.  It's a
       // convenience for developers.
       S.TieCheckBox(XXO("Show alternative &styling (Mac vs PC)"),
                     {wxT("/GUI/ShowMac"),
@@ -200,7 +200,7 @@ void GUIPrefs::PopulateOrExchange(ShuttleGui & S)
       S.TieCheckBox(XXO("Re&tain labels if selection snaps to a label"),
                     {wxT("/GUI/RetainLabels"),
                      false});
-      S.TieCheckBox(XXO("B&lend system and Audacity theme"),
+      S.TieCheckBox(XXO("B&lend system and Tenacity theme"),
                     {wxT("/GUI/BlendThemes"),
                      true});
 #ifndef __WXMAC__
