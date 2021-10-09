@@ -58,4 +58,4 @@ If you are planning to make a big change or if you are otherwise hesitant as to 
 
 ### Translations
 
-You can help us translate Tenacity and make it more accessible to the people that also speak your language on [Weblate](https://hosted.weblate.org/projects/tenacity).
+You can help us translate Tenacity and make it more accessible on [Weblate](https://hosted.weblate.org/projects/tenacity).
