@@ -344,6 +344,9 @@ void MeterToolBar::OnInputButton(wxCommandEvent &event)
    pos.y+=Button->GetMinHeight();
 
    ShowMenu(true, pos);
+
+   //Get button again to prevent crash if prefs has been shown
+   Button = static_cast<AButton*>(FindWindow(ID_INPUT_BUTTON));
    Button->InteractionOver();
 
 }
@@ -354,6 +357,9 @@ void MeterToolBar::OnOutputButton(wxCommandEvent &event)
    pos.y+=Button->GetMinHeight();
 
    ShowMenu(false, pos);
+
+   //Get button again to prevent crash if prefs has been shown
+   Button = static_cast<AButton*>(FindWindow(ID_OUTPUT_BUTTON));
    Button->InteractionOver();
 }
 
