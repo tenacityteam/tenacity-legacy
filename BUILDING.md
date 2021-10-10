@@ -204,7 +204,7 @@ for how to install it from source code, or see the [previous section](#wxwidgets
 ```
 sudo xbps-install wxWidgets-gtk3-devel
 ```
-If you do so, you will need to set `WX_CONFIG` environment variable:
+If you do so, you will need to set the `WX_CONFIG` environment variable:
 ```
 export WX_CONFIG=/usr/bin/wx-config-gtk3
 ```
