@@ -33,7 +33,7 @@ Nevertheless, the goal of this project is to pick up what the original developer
 
 ### Tenacity
 
-We have not released the first version of Tenacity yet, as it is still in early stages of development.
+We have not released the first version of Tenacity yet, as it is still in the early stages of development.
 
 Nevertheless, as a result of popular demand by the community, we decided to provide "nightly" downloads for Windows, macOS and Ubuntu Linux. These downloads are based on the latest version of Tenacity's code, and are not representative of our final product. Some features may be added, removed, or changed.
 
