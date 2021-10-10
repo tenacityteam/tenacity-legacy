@@ -184,6 +184,31 @@ of Tenacity's dependencies:
 sudo pkg install wx31-gtk3 cmake ninja pkgconf lame libsndfile libsoxr portaudio lv2 lilv suil vamp-plugin-sdk portmidi libid3tag twolame libmad soundtouch ffmpeg
 ```
 
+#### Void Linux
+
+To install Tenacity's dependencies, run:
+```
+sudo xbps-install cmake ninja lame-devel libsndfile-devel libsoxr-devel portaudio-devel gtk+3-devel wxWidgets-gtk3-devel portmidi-devel libid3tag-devel libmad-devel twolame-devel soundtouch-devel ffmpeg-devel lv2 lilv-devel
+```
+
+##### Notes
+
+- Void Linux does not package PortSMF and SBSMS. This means MIDI and SBSMS timestretching will not be available.
+If you need these features, it's recommended to build them from source.
+
+- wxWidgets 3.1 is suggested but not packaged in Void Linux. Refer to the
+[wxWidgets documentation](https://docs.wxwidgets.org/3.1/overview_cmake.html)
+for how to install it from source code, or see the [previous section](#wxwidgets-from-source).
+
+- Alternatively, you can skip installing wxWidgets 3.1 and use 3.0 instead:
+```
+sudo xbps-install wxWidgets-gtk3-devel
+```
+If you do so, you will need to set `WX_CONFIG` environment variable:
+```
+export WX_CONFIG=/usr/bin/wx-config-gtk3
+```
+
 #### vcpkg on Linux
 
 Optionally, you can build dependencies from source using vcpkg, with the
