@@ -56,6 +56,6 @@ To start contributing, please consult the [CONTRIBUTING.md file](CONTRIBUTING.md
 
 If you are planning to make a big change or if you are otherwise hesitant as to whether we want to incorporate something you want to work on in Tenacity itself, then just ask us about it in our [development mailing list](https://lists.sr.ht/~tenacity/tenacity-dev). We can discuss it and work together, so that neither our time or your time and hard effort goes to waste.
 
-### Translations
+### Translating
 
 You can help us translate Tenacity and make it more accessible on [Weblate](https://hosted.weblate.org/projects/tenacity).
