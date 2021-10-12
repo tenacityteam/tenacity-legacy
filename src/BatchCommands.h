@@ -14,9 +14,9 @@
 
 #include <wx/defs.h>
 
+#include "ComponentInterface.h" // for ComponentInterfaceSymbol
 #include "export/Export.h"
 #include "commands/CommandFlag.h"
-#include "tenacity/ComponentInterface.h" // for ComponentInterfaceSymbol
 
 class wxArrayString;
 class Effect;

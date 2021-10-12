@@ -84,7 +84,7 @@
 #include "../../widgets/WindowAccessible.h"
 #endif
 
-#include "tenacity/ConfigInterface.h"
+#include "ConfigInterface.h"
 
 #include <cstring>
 

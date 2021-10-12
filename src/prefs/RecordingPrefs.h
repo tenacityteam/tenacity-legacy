@@ -12,8 +12,6 @@
 #ifndef __AUDACITY_RECORDING_PREFS__
 #define __AUDACITY_RECORDING_PREFS__
 
-
-
 #include <wx/defs.h>
 
 #include "PrefsPanel.h"
@@ -23,7 +21,8 @@ class ShuttleGui;
 
 #define RECORDING_PREFS_PLUGIN_SYMBOL ComponentInterfaceSymbol{ \
    L"Recording", \
-   XO("Recording")  /* XC("Recording", "preference") */ \
+   /* i18n-hint: modifier as in "Recording preferences", not progressive verb */ \
+   XC("Recording", "preference") \
 }
 
 #define AUDIO_PRE_ROLL_KEY (wxT("/AudioIO/PreRoll"))

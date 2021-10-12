@@ -20,8 +20,8 @@
 
 #include "../widgets/wxPanelWrapper.h" // to inherit
 
-#include "../include/tenacity/ComponentInterface.h"
-#include "../include/tenacity/EffectAutomationParameters.h" // for command automation
+#include "ComponentInterface.h"
+#include "EffectAutomationParameters.h" // for command automation
 
 #include "../Registrar.h"
 

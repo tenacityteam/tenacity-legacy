@@ -1,6 +1,6 @@
 /**********************************************************************
 
-   Audacity: A Digital Audio Editor
+   Tenacity
 
    EffectAutomationParameters.h
    (defining CommandParameters)
@@ -64,7 +64,7 @@ wxWidget validators, and can create default dialogs.  However until that convers
 done, we need this class, and we use a pointer to one from within a Shuttle when interfacing
 with the code that still uses it.
 */
-class CommandParameters final : public wxFileConfig
+class COMPONENTS_API CommandParameters final : public wxFileConfig
 {
 public:
    CommandParameters(const wxString & parms = {})
@@ -78,9 +78,7 @@ public:
       SetParameters(parms);
    }
 
-   virtual ~CommandParameters()
-   {
-   }
+   virtual ~CommandParameters();
 
    virtual bool HasGroup(const wxString & strName) const override
    {

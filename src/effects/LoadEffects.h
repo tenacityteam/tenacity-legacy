@@ -11,7 +11,7 @@
 #ifndef __AUDACITY_LOAD_EFFECTS__
 #define __AUDACITY_LOAD_EFFECTS__
 
-#include "tenacity/ModuleInterface.h"
+#include "ModuleInterface.h"
 
 #include <functional>
 #include <memory>

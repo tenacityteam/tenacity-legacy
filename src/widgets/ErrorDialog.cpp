@@ -51,7 +51,7 @@ ErrorDialog::ErrorDialog(
    const TranslatableString & dlogTitle,
    const TranslatableString & message,
    const ManualPageID & helpPage,
-   const std::wstring & log,
+   const wxString & log,
    const bool Close, const bool modal)
 :  wxDialogWrapper(parent, wxID_ANY, dlogTitle,
                    wxDefaultPosition, wxDefaultSize,

@@ -31,9 +31,9 @@
 #include "lv2/uri-map/uri-map.h"
 #include "lv2/units/units.h"
 
-#include "tenacity/ModuleInterface.h"
-#include "tenacity/EffectInterface.h"
-#include "tenacity/PluginInterface.h"
+#include "ModuleInterface.h"
+#include "EffectInterface.h"
+#include "PluginInterface.h"
 
 #include "lv2_external_ui.h"
 

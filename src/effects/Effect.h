@@ -25,8 +25,8 @@ class wxChoice;
 class wxListBox;
 class wxWindow;
 
-#include "tenacity/ConfigInterface.h"
-#include "tenacity/EffectInterface.h"
+#include "ConfigInterface.h"
+#include "EffectInterface.h"
 
 #include "../SelectedRegion.h"
 

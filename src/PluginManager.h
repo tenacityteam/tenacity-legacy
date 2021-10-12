@@ -17,8 +17,8 @@
 #include <map>
 #include <memory>
 
-#include "tenacity/EffectInterface.h"
-#include "tenacity/PluginInterface.h"
+#include "EffectInterface.h"
+#include "PluginInterface.h"
 
 class wxArrayString;
 class FileConfig;

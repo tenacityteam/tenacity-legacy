@@ -13,7 +13,7 @@
 
 #include <wx/defs.h>
 
-#include "tenacity/ComponentInterface.h" // member variable
+#include "ComponentInterface.h" // member variable
 
 #include "widgets/wxPanelWrapper.h" // to inherit
 
