@@ -433,6 +433,8 @@ list( APPEND SOURCES PRIVATE
   effects/ClickRemoval.h
   effects/Compressor.cpp
   effects/Compressor.h
+  effects/Compressor2.cpp
+  effects/Compressor2.h
   effects/Contrast.cpp
   effects/Contrast.h
   effects/Distortion.cpp
@@ -948,6 +950,8 @@ list( APPEND SOURCES PRIVATE
   widgets/Overlay.h
   widgets/OverlayPanel.cpp
   widgets/OverlayPanel.h
+  widgets/Plot.cpp
+  widgets/Plot.h
   widgets/PopupMenuTable.cpp
   widgets/PopupMenuTable.h
   widgets/ProgressDialog.cpp
@@ -955,6 +959,8 @@ list( APPEND SOURCES PRIVATE
   widgets/ReadOnlyText.h
   widgets/Ruler.cpp
   widgets/Ruler.h
+  widgets/SliderTextCtrl.cpp
+  widgets/SliderTextCtrl.h
   widgets/UnwritableLocationErrorDialog.cpp
   widgets/UnwritableLocationErrorDialog.h
   widgets/Warning.cpp
