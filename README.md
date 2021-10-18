@@ -38,6 +38,7 @@ We have not released the first version of Tenacity yet, as it is still in the ea
 Nevertheless, as a result of popular demand by the community, we decided to provide "nightly" downloads for Windows, macOS and Ubuntu Linux. These downloads are based on the latest version of Tenacity's code, and are not representative of our final product. Some features may be added, removed, or changed.
 
 - [Nightly Downloads](https://tenacityaudio.org/very-early-builds)
+- [Nightly Flatpak builds](https://github.com/tenacityteam/tenacity-flatpak-nightly/blob/main/README.md)
 - [Unofficial Arch Linux (AUR) Package](https://aur.archlinux.org/packages/tenacity-git/)
 
 ### Audacity
