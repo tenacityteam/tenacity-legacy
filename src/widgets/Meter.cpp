@@ -473,7 +473,7 @@ void MeterPanel::OnErase(wxEraseEvent & WXUNUSED(event))
 
 static double GetColourLuminance(wxColour color)
 {
-#if wxCHECK_VERSION(3, 1, 0)
+#if wxCHECK_VERSION(3, 1, 3)
     return color.GetLuminance();
 #else
     // Standard RGB to YIQ conversion for the luma (Y) part, used also by wx3.1
