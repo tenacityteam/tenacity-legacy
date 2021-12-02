@@ -1,16 +1,13 @@
-#!/bin/bash
+#!/bin/sh
 
 # Run this script on a directory to handle PO files with no id
-
-shopt -s nullglob
-
-input_dirs="$*"
+DIRNAME=$(dirname "$0")
 
 if [ $# -eq 0 ]; then
-    input_dirs[0]="${BASH_SOURCE[0]}/../"
+    set -- "$DIRNAME/../"
 fi
 
-for dir in "${input_dirs[@]}"
+for dir in "$@"
 do
     for po_file in "${dir}"/*.po; do
        sed -i '/^Project/d' "$po_file"

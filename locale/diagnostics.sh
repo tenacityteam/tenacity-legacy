@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # Report how complete each translation catalog is
 
@@ -8,9 +8,11 @@ total=`grep '^msgid' audacity.pot | wc -l`
 #CSV header
 echo "Name,Completed,Pct. completed,Bad lines"
 
-declare -i badlines
+badlines=0
 
-for filename in `ls *.po`; do
+for filename in *.po; do
+	[ -e "$filename" ] || break
+
     # If there are errors from msgcmp, then the last line on standard error
     # contains a count of problematic messages; else it won't match the
     # pattern in awk, so assume no errors
@@ -20,7 +22,7 @@ for filename in `ls *.po`; do
 
     # detect whether this sequence occurs in any .po file.  It will break
     # msgfmt on Windows.
-    badlines=`fgrep '#~|' ${filename} | wc -l`
+	badlines=`grep -Fc '#~|' "${filename}"`
 
     # produce comma-separated values
     echo "$filename,$complete,$((complete*100/total)),$badlines"

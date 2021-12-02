@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/sh
 
 set -x
 objcopy --only-keep-debug --compress-debug-section=zlib "${1}" "${1}.debug"

@@ -1,8 +1,8 @@
-#!/usr/bin/env bash
+#!/bin/sh
 # The AppImage runtime sets some special environment variables. We provide
 # default values here in case the user tries to run this script outside an
 # AppImage where the variables would otherwise be undefined.
-if [[ ! "${APPIMAGE}" || ! "${APPDIR}" ]]; then
+if [ ! "${APPIMAGE}" ] || [ ! "${APPDIR}" ]; then
     export APPIMAGE="$(readlink -f "${0}")"
     export APPDIR="$(dirname "${APPIMAGE}")"
 fi
@@ -12,8 +12,7 @@ export LD_LIBRARY_PATH="${APPDIR}/lib:${LD_LIBRARY_PATH}"
 export AUDACITY_PATH="${AUDACITY_PATH}:${APPDIR}/share/tenacity"
 export AUDACITY_MODULES_PATH="${AUDACITY_MODULES_PATH}:${APPDIR}/lib/modules"
 
-function help()
-{
+help() {
     # Normal tenacity help
     "${APPDIR}/bin/tenacity" --help
     # Special options handled by this script

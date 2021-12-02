@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # Run this script on a directory to "degimpify" all XPM files
 # within that directory (meaning any file ending with .XPM)

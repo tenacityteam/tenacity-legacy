@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # Report how complete each translation catalog is
 

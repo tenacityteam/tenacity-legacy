@@ -14,26 +14,26 @@ resolve()
 
 update_paths()
 {
-   local indent="${1}"
-   local path=$(resolve "${2}")
-   local base="${path##*/}"
+   _indent="${1}"
+   _path=$(resolve "${2}")
+   _base="${_path##*/}"
 
-   if [ -e "${LIBPATH}/${base}" ]
+   if [ -e "${LIBPATH}/${_base}" ]
    then
       return
    fi
-   
-   printf "%${indent}.${indent}cCopying '${path}' into bundle\n" " "
-   cp -p "${path}" "${LIBPATH}"
 
-   for lib in $(otool -L "${path}" | awk '/libwx.*dylib /{print $1}')
+   printf "%${_indent}.${_indent}cCopying '${_path}' into bundle\n" " "
+   cp -p "${_path}" "${LIBPATH}"
+
+   for lib in $(otool -L "${_path}" | awk '/libwx.*dylib /{print $1}')
    do
-      path=$(resolve "${lib}")
+      _path=$(resolve "${lib}")
 
-      printf "%${indent}.${indent}cChanging '${lib}' to '@loader_path/../Frameworks/${path##*/}'\n" " "
-      install_name_tool -change "${lib}" "@loader_path/../Frameworks/${path##*/}" "${LIBPATH}/${base}"
+      printf "%${_indent}.${_indent}cChanging '${lib}' to '@loader_path/../Frameworks/${path##*/}'\n" " "
+      install_name_tool -change "${lib}" "@loader_path/../Frameworks/${path##*/}" "${LIBPATH}/${_base}"
 
-      update_paths $((indent + 2)) "${path}"
+      update_paths $((_indent + 2)) "${_path}"
    done
 }
 
