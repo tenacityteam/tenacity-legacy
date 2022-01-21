@@ -207,7 +207,7 @@ If you switch between system packages and vcpkg, you may need to delete
 
 Install
 [Microsoft Visual Studio](https://visualstudio.microsoft.com/vs/community/)
-with the **Desktop development with C++** installation option.
+with the **Desktop development with C++** installation option. Microsoft's ATL/MFC components are also needed to build the application.
 
 Installing [sccache](https://github.com/mozilla/sccache) is highly recommended
 for faster builds but not required. CMake will automatically use sccache if you
@@ -291,13 +291,13 @@ cmake -G Ninja -S . -B build
 Build Tenacity:
 
 ```
-cmake --build build
+cmake --build build --config Release
 ```
 
 Run Tenacity:
 
 ```
-build/bin/Debug/tenacity
+build/bin/Release/tenacity
 ```
 
 Optionally, install Tenacity:
