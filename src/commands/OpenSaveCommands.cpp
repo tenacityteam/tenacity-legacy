@@ -18,7 +18,7 @@
 #include "OpenSaveCommands.h"
 
 #include "LoadCommands.h"
-#include "../AudacityLogger.h"
+#include "../TenacityLogger.h"
 #include "../Project.h"
 #include "../ProjectFileIO.h"
 #include "../ProjectFileManager.h"
@@ -161,7 +161,7 @@ void SaveLogCommand::PopulateOrExchange(ShuttleGui & S)
 
 bool SaveLogCommand::Apply(const CommandContext &context)
 {
-   auto logger = AudacityLogger::Get();
+   auto logger = TenacityLogger::Get();
    return logger->SaveLog(mFileName);
 }
 
@@ -182,6 +182,6 @@ bool ClearLogCommand::PromptUser(wxWindow *parent)
 
 bool ClearLogCommand::Apply(const CommandContext &context)
 {
-   auto logger = AudacityLogger::Get();
+   auto logger = TenacityLogger::Get();
    return logger->ClearLog();
 }

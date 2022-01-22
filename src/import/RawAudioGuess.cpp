@@ -16,7 +16,7 @@
 
 #include "RawAudioGuess.h"
 
-#include "../AudacityException.h"
+#include "../TenacityException.h"
 
 #include <stdio.h>
 #include <stdlib.h>

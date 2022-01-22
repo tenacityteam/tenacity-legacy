@@ -156,7 +156,7 @@ XO("Project check of \"%s\" folder \
                   // error message for the user.
                   GuardedCall(
                      [&] { ab->Recover(); },
-                     [&] (AudacityException*) { action = 1; }
+                     [&] (TenacityException*) { action = 1; }
                   );
 
                   nResult = FSCKstatus_CHANGED | FSCKstatus_SAVE_AUP;
@@ -229,7 +229,7 @@ XO("Project check of \"%s\" folder \
                         b->Recover();
                         nResult |= FSCKstatus_CHANGED;
                      },
-                     [&] (AudacityException*) { action = 1; }
+                     [&] (TenacityException*) { action = 1; }
                   );
                }
 
@@ -307,7 +307,7 @@ XO("Project check of \"%s\" folder \
                         b->Recover();
                         nResult |= FSCKstatus_CHANGED;
                      },
-                     [&] (AudacityException*) { action = 1; }
+                     [&] (TenacityException*) { action = 1; }
                   );
                }
 

@@ -2521,7 +2521,7 @@ void AudioIO::FillBuffers()
 {
    unsigned int i;
 
-   auto delayedHandler = [this] ( AudacityException * pException ) {
+   auto delayedHandler = [this] ( TenacityException * pException ) {
       // In the main thread, stop recording
       // This is one place where the application handles disk
       // exhaustion exceptions from wave track operations, without rolling
@@ -2534,7 +2534,7 @@ void AudioIO::FillBuffers()
 
       // Note that the Flush in StopStream() may throw another exception,
       // but StopStream() contains that exception, and the logic in
-      // AudacityException::DelayedHandlerAction prevents redundant message
+      // TenacityException::DelayedHandlerAction prevents redundant message
       // boxes.
       StopStream();
       DefaultDelayedHandlerAction{}( pException );
@@ -2895,7 +2895,7 @@ void AudioIO::FillBuffers()
          // end of record buffering
       },
       // handler
-      [this] ( AudacityException *pException ) {
+      [this] ( TenacityException *pException ) {
          if ( pException ) {
             // So that we don't attempt to fill the recording buffer again
             // before the main thread stops recording

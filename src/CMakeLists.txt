@@ -73,17 +73,17 @@ list( APPEND SOURCES PRIVATE
   AllThemeResources.cpp
   AllThemeResources.h
   AttachedVirtualFunction.h
-  AudacityApp.cpp
-  AudacityApp.h
-  $<$<BOOL:${wxIS_MAC}>:AudacityApp.mm>
-  AudacityException.cpp
-  AudacityException.h
-  AudacityFileConfig.cpp
-  AudacityFileConfig.h
-  AudacityHeaders.cpp
-  AudacityHeaders.h
-  AudacityLogger.cpp
-  AudacityLogger.h
+  TenacityApp.cpp
+  TenacityApp.h
+  $<$<BOOL:${wxIS_MAC}>:TenacityApp.mm>
+  TenacityException.cpp
+  TenacityException.h
+  TenacityFileConfig.cpp
+  TenacityFileConfig.h
+  TenacityHeaders.cpp
+  TenacityHeaders.h
+  TenacityLogger.cpp
+  TenacityLogger.h
   AudioIO.cpp
   AudioIO.h
   AudioIOBase.cpp
@@ -1162,7 +1162,7 @@ elseif( CMAKE_SYSTEM_NAME MATCHES "Darwin" )
 
   # These sources must be compiled as Objective C++ and excluded from precompiled header usage
   set_source_files_properties(
-    AudacityApp.mm
+    TenacityApp.mm
     KeyboardCapture.cpp
     effects/EffectUI.cpp
     effects/VST/VSTControlOSX.mm
@@ -1331,7 +1331,7 @@ if( USE_PCH )
     ${TARGET} PRIVATE $<$<PLATFORM_ID:Windows>:${CMAKE_BINARY_DIR}/src/private/configwin.h>
     $<$<PLATFORM_ID:Darwin>:${CMAKE_BINARY_DIR}/src/private/configmac.h>
     $<$<NOT:$<PLATFORM_ID:Windows,Darwin>>:${CMAKE_BINARY_DIR}/src/private/configunix.h>
-    AudacityHeaders.h
+    TenacityHeaders.h
   )
 else()
   message( STATUS "Not using precompiled headers" )

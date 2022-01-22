@@ -9,7 +9,7 @@
 #ifndef __AUDACITY_INCONSISTENCY_EXCEPTION__
 #define __AUDACITY_INCONSISTENCY_EXCEPTION__
 
-#include "AudacityException.h"
+#include "TenacityException.h"
 
 //! Exception that should be impossible in production, thrown only from provably unreachable places
 /*!  Some errors that formerly were assertion violations now throw exceptions,

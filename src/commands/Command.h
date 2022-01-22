@@ -20,7 +20,7 @@
 #include "CommandSignature.h"
 #include "../commands/AudacityCommand.h"
 
-class AudacityApp;
+class TenacityApp;
 class CommandContext;
 class CommandOutputTargets;
 

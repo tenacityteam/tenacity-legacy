@@ -87,7 +87,7 @@ ProjectManager::ProjectManager( AudacityProject &project )
 
 ProjectManager::~ProjectManager() = default;
 
-// PRL:  This event type definition used to be in AudacityApp.h, which created
+// PRL:  This event type definition used to be in TenacityApp.h, which created
 // a bad compilation dependency.  The event was never emitted anywhere.  I
 // preserve it and its handler here but I move it to remove the dependency.
 // Asynchronous open

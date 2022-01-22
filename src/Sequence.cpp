@@ -123,7 +123,7 @@ namespace {
          if (!buffer.ptr() || (pSecondBuffer && !pSecondBuffer->ptr())) {
             // malloc failed
             // Perhaps required is a really crazy value,
-            // and perhaps we should throw an AudacityException, but that is
+            // and perhaps we should throw an TenacityException, but that is
             // a second-order concern
             THROW_INCONSISTENCY_EXCEPTION;
          }
