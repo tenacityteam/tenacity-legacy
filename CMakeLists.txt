@@ -713,9 +713,13 @@ endif()
 find_package( Python3 )
 if( Python3_FOUND )
   set( PYTHON "${Python3_EXECUTABLE}" )
+elseif( DEFINED NUGET_EXECUTABLE AND EXISTS "${NUGET_EXECUTABLE}" )
+  message( STATUS "Finding vcpkg nuget python" )
+  execute_process( COMMAND "${NUGET_EXECUTABLE}" install python -Version 3.9.7 -OutputDirectory "${CMAKE_BINARY_DIR}/packages/" )
+  file( TO_NATIVE_PATH "${CMAKE_BINARY_DIR}/packages/python.3.9.7/tools/python.exe" PYTHON )
 elseif( CMAKE_SYSTEM_NAME MATCHES "Windows" )
-  # This is an odd case now, as Conan requires Python as well
-  nuget_package( pkgdir "python3" "3.7.7" )
+  # This is defined in AudacityFunctions; maybe we can remove it by simply relying on vcpkg nuget?
+  nuget_package( pkgdir "python3" "3.9.7" )
   file( TO_NATIVE_PATH "${pkgdir}/tools/python.exe" PYTHON )
 endif()
 
