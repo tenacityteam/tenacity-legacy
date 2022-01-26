@@ -9,7 +9,7 @@ def_vars()
 # This isn't really a target...
 
 list( APPEND PIXMAPS
-   ${_SRCDIR}/gnome-mime-application-x-tenacity-project.xpm
+   ${_SRCDIR}/gnome-mime-application-x-audacity-project.xpm
    ${_SRCDIR}/icons/16x16/tenacity16.xpm
    ${_SRCDIR}/icons/32x32/tenacity32.xpm
    ${_SRCDIR}/icons/48x48/tenacity.xpm
