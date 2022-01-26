@@ -46,11 +46,14 @@ Comment[zh_CN]=录音和编辑音频文件
 Comment[zh_TW]=錄音和編輯音訊檔案
 
 Icon=@AUDACITY_NAME@
+StartupWMClass=@AUDACITY_NAME@
 
 Type=Application
-Categories=AudioVideo;Audio;AudioVideoEditing;
+Categories=AudioVideo;Audio;AudioVideoEditing;Midi;Recorder;
+Keywords=audio;editor;audacity;sound;ton;wave;
 
 Exec=env UBUNTU_MENUPROXY=0 @AUDACITY_NAME@ %F
 StartupNotify=false
 Terminal=false
 MimeType=@MIMETYPES@;
+X-Flatpak=com.tenacityaudio.Tenacity
