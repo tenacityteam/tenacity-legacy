@@ -36,6 +36,6 @@ jobs:
     - uses: bilelmoussaoui/flatpak-github-actions/flatpak-builder@v4
       with:
         bundle: tenacity.flatpak
-        manifest-path: packaging/flatpak/org.tenacity.Tenacity.json
+        manifest-path: packaging/flatpak/org.tenacityaudio.Tenacity.json
         cache-key: flatpak-builder-${{ github.sha }}
         arch: ${{ matrix.arch }}
