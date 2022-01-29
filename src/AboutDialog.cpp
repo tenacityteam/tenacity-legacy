@@ -1009,7 +1009,7 @@ void AboutDialog::GeneratePreforkWebsiteInfo(wxTextOutputStream& tos) {
         .Format(
             Verbatim("<b>%s</b>").Format(ProgramName),
             wxT("&copy;"),
-            wxT("2021"),
+            wxT("2022"),
             ProgramName)
         << wxT("<br>");
 #endif
