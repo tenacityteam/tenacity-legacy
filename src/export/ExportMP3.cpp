@@ -609,7 +609,7 @@ public:
       S.StartVerticalLay(true);
       {
          S.AddTitle(
-            XO("Audacity needs the file %s to create MP3s.")
+            XO("Tenacity needs the file %s to create MP3s.")
                .Format( mName ) );
 
          S.SetBorder(3);
@@ -1094,7 +1094,7 @@ bool MP3Exporter::InitLibraryInternal()
 
 // The global ::lame_something symbols only exist if LAME is built in.
 // So we don't reference them unless they are.
-#ifdef MP3_EXPORT_BUILT_IN 
+#ifdef MP3_EXPORT_BUILT_IN
 
    lame_init = ::lame_init;
    get_lame_version = ::get_lame_version;
@@ -1234,7 +1234,7 @@ bool MP3Exporter::InitLibraryExternal(wxString libpath)
          beVersion(&v);
 
          mBladeVersion = XO(
-"You are linking to lame_enc.dll v%d.%d. This version is not compatible with Audacity %d.%d.%d.\nPlease download the latest version of 'LAME for Audacity'.")
+"You are linking to lame_enc.dll v%d.%d. This version is not compatible with Tenacity %d.%d.%d.\nPlease download the latest version of 'LAME for Tenacity'.")
             .Format(
                v.byMajorVersion,
                v.byMinorVersion,
@@ -1543,7 +1543,7 @@ wxString MP3Exporter::GetLibraryPath()
    {
         return path;
    }
-    
+
    return wxT("/Library/Application Support/audacity/libs");
 }
 

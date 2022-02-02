@@ -221,7 +221,7 @@ VendorSymbol NyquistEffect::GetVendor()
 {
    if (mIsPrompt)
    {
-      return XO("Audacity");
+      return XO("Tenacity");
    }
 
    return mAuthor;

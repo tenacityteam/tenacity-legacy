@@ -152,7 +152,7 @@ END_EVENT_TABLE()
 
 TimerRecordDialog::TimerRecordDialog(
    wxWindow* parent, AudacityProject &project, bool bAlreadySaved)
-: wxDialogWrapper(parent, -1, XO("Audacity Timer Record"), wxDefaultPosition,
+: wxDialogWrapper(parent, -1, XO("Tenacity Timer Record"), wxDefaultPosition,
            wxDefaultSize, wxCAPTION)
 , mProject{ project }
 {
@@ -403,7 +403,7 @@ void TimerRecordDialog::OnOK(wxCommandEvent& WXUNUSED(event))
    // complete this Timer Recording.
    // If we dont think there is enough space then ask the user
    // if they want to continue.
-   // We don't stop the user from starting the recording 
+   // We don't stop the user from starting the recording
    // as its possible that they plan to free up some
    // space before the recording begins
    auto &projectManager = ProjectManager::Get( mProject );
@@ -519,7 +519,7 @@ int TimerRecordDialog::RunWaitDialog()
 
       TimerProgressDialog
          progress(m_TimeSpan_Duration.GetMilliseconds().GetValue(),
-                  XO("Audacity Timer Record Progress"),
+                  XO("Tenacity Timer Record Progress"),
                   columns,
                   pdlgHideCancelButton | pdlgConfirmStopCancel);
 
@@ -548,8 +548,8 @@ int TimerRecordDialog::RunWaitDialog()
 }
 
 int TimerRecordDialog::ExecutePostRecordActions(bool bWasStopped) {
-   // MY: We no longer automatically (and silently) call ->Save() when the 
-   // timer recording is completed.  We can now Save and/or Export depending 
+   // MY: We no longer automatically (and silently) call ->Save() when the
+   // timer recording is completed.  We can now Save and/or Export depending
    // on the options selected by the user.
    // Once completed, we can also close Audacity, restart the system or
    // shutdown the system.
@@ -789,7 +789,7 @@ void TimerRecordDialog::PopulateOrExchange(ShuttleGui& S)
                ID_DATEPICKER_END, // wxWindowID id,
                m_DateTime_End); // const wxDateTime& dt = wxDefaultDateTime,
             // const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxDefaultSize,
-            //                            long style = wxDP_DEFAULT | wxDP_SHOWCENTURY, 
+            //                            long style = wxDP_DEFAULT | wxDP_SHOWCENTURY,
             //                            const wxValidator& validator = wxDefaultValidator,
             //                            const wxString& name = "datectrl")
             m_pDatePickerCtrl_End->SetRange(m_DateTime_Start, wxInvalidDateTime); // No backdating.
@@ -888,7 +888,7 @@ void TimerRecordDialog::PopulateOrExchange(ShuttleGui& S)
                m_pTimerAfterCompleteChoiceCtrl = S.AddChoice(XXO("After Recording completes:"),
                      {
                         XO("Do nothing") ,
-                        XO("Exit Audacity") ,
+                        XO("Exit Tenacity") ,
                   #ifdef __WINDOWS__
                         XO("Restart system") ,
                         XO("Shutdown system") ,
@@ -972,13 +972,13 @@ void TimerRecordDialog::UpdateEnd()
 {
    //v Use remaining disk -> record time calcs from AudacityProject::OnTimer to set range?
    m_DateTime_End = m_DateTime_Start + m_TimeSpan_Duration;
-   //wxLogDebug( "Time start %s end %s", 
+   //wxLogDebug( "Time start %s end %s",
    //   m_DateTime_Start.FormatISOCombined(' '),
    //   m_DateTime_End.FormatISOCombined(' ') );
 
    // Disable the range limitation (to fix Bug 1749 and 1978)
    // Otherwise SetVallue asserts when going back in time.
-   m_pDatePickerCtrl_End->SetRange(wxInvalidDateTime, wxInvalidDateTime); 
+   m_pDatePickerCtrl_End->SetRange(wxInvalidDateTime, wxInvalidDateTime);
    m_pDatePickerCtrl_End->SetValue(m_DateTime_End);
    // Re-enable range limitation to constrain user input.
    m_pDatePickerCtrl_End->SetRange(m_DateTime_Start, wxInvalidDateTime); // No backdating.
@@ -1017,7 +1017,7 @@ ProgressResult TimerRecordDialog::WaitForStart()
    wxDateTime startWait_DateTime = wxDateTime::UNow();
    wxTimeSpan waitDuration = m_DateTime_Start - startWait_DateTime;
    TimerProgressDialog progress(waitDuration.GetMilliseconds().GetValue(),
-      XO("Audacity Timer Record - Waiting for Start"),
+      XO("Tenacity Timer Record - Waiting for Start"),
       columns,
       pdlgHideStopButton | pdlgConfirmStopCancel | pdlgHideElapsedTime,
       /* i18n-hint: "in" means after a duration of time,
@@ -1069,7 +1069,7 @@ ProgressResult TimerRecordDialog::PreActionDelay(int iActionIndex, TimerRecordCo
    wxDateTime dtActionTime = dtNow.Add(tsWait);
 
    TimerProgressDialog dlgAction(tsWait.GetMilliseconds().GetValue(),
-                          XO("Audacity Timer Record - Waiting"),
+                          XO("Tenacity Timer Record - Waiting"),
                           columns,
                           pdlgHideStopButton | pdlgHideElapsedTime,
                           sCountdownLabel);

@@ -69,7 +69,7 @@ PluginPath PrefsPanel::GetPath()
 { return BUILTIN_PREFS_PANEL_PREFIX + GetSymbol().Internal(); }
 
 VendorSymbol PrefsPanel::GetVendor()
-{  return XO("Audacity");}
+{  return XO("Tenacity");}
 
 wxString PrefsPanel::GetVersion()
 {     return AUDACITY_VERSION_STRING;}

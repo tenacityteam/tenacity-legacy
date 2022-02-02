@@ -94,7 +94,7 @@ ComponentInterfaceSymbol BuiltinCommandsModule::GetSymbol()
 
 VendorSymbol BuiltinCommandsModule::GetVendor()
 {
-   return XO("The Audacity Team");
+   return XO("The Tenacity Team");
 }
 
 wxString BuiltinCommandsModule::GetVersion()
@@ -105,7 +105,7 @@ wxString BuiltinCommandsModule::GetVersion()
 
 TranslatableString BuiltinCommandsModule::GetDescription()
 {
-   return XO("Provides builtin commands to Audacity");
+   return XO("Provides builtin commands to Tenacity");
 }
 
 // ============================================================================

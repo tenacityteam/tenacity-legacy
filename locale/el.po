@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tenacity 3.0.4\n"
 "Report-Msgid-Bugs-To: emabrey@tenacityaudio.org\n"
-"POT-Creation-Date: 2021-07-25 03:44-0400\n"
+"POT-Creation-Date: 2021-10-09 15:18+0200\n"
 "PO-Revision-Date: 2021-07-24 09:09+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Greek <https://hosted.weblate.org/projects/tenacity/tenacity/el/>\n"
@@ -19,75 +19,32 @@ msgstr ""
 "X-Generator: Weblate 4.7.2-dev\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
-#: libraries/lib-strings/FutureStrings.h
-msgctxt "update dialog"
-msgid "Update Audacity"
-msgstr "Ενημέρωση του Audacity"
-
-#: libraries/lib-strings/FutureStrings.h
-msgctxt "update dialog"
-msgid "&Skip"
-msgstr "&Παράλειψη"
-
-#: libraries/lib-strings/FutureStrings.h
-msgctxt "update dialog"
-msgid "&Install update"
-msgstr "Ε&γκατάσταση ενημέρωσης"
-
-#: libraries/lib-strings/FutureStrings.h
-msgctxt "update dialog"
-msgid "Changelog"
-msgstr "Αρχείο αλλαγών"
-
-#: libraries/lib-strings/FutureStrings.h
-msgctxt "update dialog"
-msgid "Read more on GitHub"
-msgstr "Διαβάστε περισσότερα στο GitHub"
-
-#: libraries/lib-strings/FutureStrings.h
-msgctxt "update dialog"
-msgid "Error checking for update"
-msgstr "Σφάλμα κατά τον έλεγχο για ενημέρωση"
-
-#: libraries/lib-strings/FutureStrings.h
-msgctxt "update dialog"
-msgid "Unable to connect to Audacity update server."
-msgstr "Αδυναμία σύνδεσης με τον διακομιστή ενημέρωσης του Audacity."
-
-#: libraries/lib-strings/FutureStrings.h
-msgctxt "update dialog"
-msgid "Update data was corrupted."
-msgstr "Τα δεδομένα ενημέρωσης ήταν κατεστραμμένα."
-
-#: libraries/lib-strings/FutureStrings.h
-msgctxt "update dialog"
-msgid "Error downloading update."
-msgstr "Σφάλμα κατά τη λήψη της ενημέρωσης."
-
-#: libraries/lib-strings/FutureStrings.h
-msgctxt "update dialog"
-msgid "Can't open the Audacity download link."
-msgstr "Αδυναμία ανοίγματος του συνδέσμου λήψης του Audacity."
-
-#. i18n-hint Substitution of version number for %s.
-#: libraries/lib-strings/FutureStrings.h
-#, c-format
-msgctxt "update dialog"
-msgid "Audacity %s is available!"
-msgstr "Το Audacity %s είναι διαθέσιμο!"
-
-#. i18n-hint comment to be moved
-#. to one of them (one is enough)
-#. i18n-hint: modifier as in "Recording preferences", not progressive verb
-#: libraries/lib-strings/FutureStrings.h
-#, fuzzy
-msgctxt "preference"
-msgid "Recording"
-msgstr "Ηχογράφηση"
-
 #: libraries/lib-strings/Internat.cpp
 msgid "Unable to determine"
 msgstr "Αδύνατη η διευκρίνηση"
+
+#: libraries/lib-strings/Internat.cpp
+#, c-format
+msgid "%s bytes"
+msgstr ""
+
+#. i18n-hint: Abbreviation for Kilo bytes
+#: libraries/lib-strings/Internat.cpp
+#, c-format
+msgid "%s KB"
+msgstr ""
+
+#. i18n-hint: Abbreviation for Mega bytes
+#: libraries/lib-strings/Internat.cpp
+#, c-format
+msgid "%s MB"
+msgstr ""
+
+#. i18n-hint: Abbreviation for Giga bytes
+#: libraries/lib-strings/Internat.cpp
+#, c-format
+msgid "%s GB"
+msgstr ""
 
 #: libraries/lib-strings/Languages.cpp
 msgid "Simplified"
@@ -214,7 +171,8 @@ msgid "Script"
 msgstr "Δέσμη ενεργειών"
 
 #. i18n-hint noun
-#: modules/mod-nyq-bench/NyqBench.cpp src/Benchmark.cpp src/effects/BassTreble.cpp
+#: modules/mod-nyq-bench/NyqBench.cpp src/Benchmark.cpp
+#: src/effects/BassTreble.cpp
 msgid "Output"
 msgstr "Έξοδος"
 
@@ -230,7 +188,12 @@ msgstr "Δέσμες ενεργειών Nyquist (*.ny)|*.ny|Δέσμες ενε�
 msgid "Script was not saved."
 msgstr "Η δέσμη ενεργειών δεν αποθηκεύτηκε."
 
-#: modules/mod-nyq-bench/NyqBench.cpp src/AudacityLogger.cpp src/DBConnection.cpp src/Project.cpp src/ProjectFileIO.cpp src/ProjectHistory.cpp src/SqliteSampleBlock.cpp src/WaveClip.cpp src/WaveTrack.cpp src/export/Export.cpp src/export/ExportCL.cpp src/export/ExportMultiple.cpp src/import/RawAudioGuess.cpp src/menus/EditMenus.cpp src/prefs/KeyConfigPrefs.cpp src/widgets/Warning.cpp
+#: modules/mod-nyq-bench/NyqBench.cpp src/AudacityLogger.cpp
+#: src/DBConnection.cpp src/Project.cpp src/ProjectFileIO.cpp
+#: src/ProjectHistory.cpp src/SqliteSampleBlock.cpp src/WaveClip.cpp
+#: src/WaveTrack.cpp src/export/Export.cpp src/export/ExportCL.cpp
+#: src/export/ExportMultiple.cpp src/import/RawAudioGuess.cpp
+#: src/menus/EditMenus.cpp src/prefs/KeyConfigPrefs.cpp src/widgets/Warning.cpp
 msgid "Warning"
 msgstr "Προειδοποίηση"
 
@@ -251,11 +214,17 @@ msgid "Tango Icon Gallery (toolbar icons)"
 msgstr "Συλλογή εικονιδίων Tango (εικονίδια γραμμής εργαλείων)"
 
 #: modules/mod-nyq-bench/NyqBench.cpp
+#, fuzzy
+msgid "Leland Lucius"
+msgstr "(C) 2009 από Leland Lucius"
+
+#: modules/mod-nyq-bench/NyqBench.cpp
 msgid "(C) 2009 by Leland Lucius"
 msgstr "(C) 2009 από Leland Lucius"
 
 #: modules/mod-nyq-bench/NyqBench.cpp
-msgid "External Audacity module which provides a simple IDE for writing effects."
+#, fuzzy
+msgid "External Tenacity module which provides a simple IDE for writing effects."
 msgstr "Εξωτερικό άρθρωμα του Audacity που παρέχει ένα απλό IDE για εφέ εγγραφής."
 
 #: modules/mod-nyq-bench/NyqBench.cpp
@@ -278,7 +247,8 @@ msgstr "Χωρίς τίτλο"
 msgid "Nyquist Effect Workbench - "
 msgstr "Πάγκος εργασίας εφέ Nyquist - "
 
-#: modules/mod-nyq-bench/NyqBench.cpp src/PluginRegistrationDialog.cpp src/prefs/ModulePrefs.cpp
+#: modules/mod-nyq-bench/NyqBench.cpp src/PluginRegistrationDialog.cpp
+#: src/prefs/ModulePrefs.cpp
 msgid "New"
 msgstr "Νέο"
 
@@ -318,7 +288,8 @@ msgstr "Αντιγραφή"
 msgid "Copy to clipboard"
 msgstr "Αντιγραφή στο πρόχειρο"
 
-#: modules/mod-nyq-bench/NyqBench.cpp src/menus/EditMenus.cpp src/toolbars/EditToolBar.cpp
+#: modules/mod-nyq-bench/NyqBench.cpp src/menus/EditMenus.cpp
+#: src/toolbars/EditToolBar.cpp
 msgid "Cut"
 msgstr "Αποκοπή"
 
@@ -326,7 +297,8 @@ msgstr "Αποκοπή"
 msgid "Cut to clipboard"
 msgstr "Αποκοπή στο πρόχειρο"
 
-#: modules/mod-nyq-bench/NyqBench.cpp src/menus/EditMenus.cpp src/toolbars/EditToolBar.cpp
+#: modules/mod-nyq-bench/NyqBench.cpp src/menus/EditMenus.cpp
+#: src/toolbars/EditToolBar.cpp
 msgid "Paste"
 msgstr "Επικόλληση"
 
@@ -351,7 +323,8 @@ msgstr "Επιλογή όλων"
 msgid "Select all text"
 msgstr "Επιλογή όλου του κειμένου"
 
-#: modules/mod-nyq-bench/NyqBench.cpp src/toolbars/EditToolBar.cpp src/widgets/KeyView.cpp
+#: modules/mod-nyq-bench/NyqBench.cpp src/toolbars/EditToolBar.cpp
+#: src/widgets/KeyView.cpp
 msgid "Undo"
 msgstr "Αναίρεση"
 
@@ -359,7 +332,8 @@ msgstr "Αναίρεση"
 msgid "Undo last change"
 msgstr "Αναίρεση τελευταίας αλλαγής"
 
-#: modules/mod-nyq-bench/NyqBench.cpp src/toolbars/EditToolBar.cpp src/widgets/KeyView.cpp
+#: modules/mod-nyq-bench/NyqBench.cpp src/toolbars/EditToolBar.cpp
+#: src/widgets/KeyView.cpp
 msgid "Redo"
 msgstr "Ακύρωση αναίρεσης"
 
@@ -416,7 +390,8 @@ msgid "Go to next S-expr"
 msgstr "Μετάβαση στην επόμενη S-expr"
 
 #. i18n-hint noun
-#: modules/mod-nyq-bench/NyqBench.cpp src/effects/Contrast.cpp src/effects/ToneGen.cpp src/toolbars/SelectionBar.cpp
+#: modules/mod-nyq-bench/NyqBench.cpp src/effects/Contrast.cpp
+#: src/effects/ToneGen.cpp src/toolbars/SelectionBar.cpp
 msgid "Start"
 msgstr "Έναρξη"
 
@@ -424,7 +399,8 @@ msgstr "Έναρξη"
 msgid "Start script"
 msgstr "Έναρξη δέσμης ενεργειών"
 
-#: modules/mod-nyq-bench/NyqBench.cpp src/effects/EffectUI.cpp src/toolbars/ControlToolBar.cpp src/widgets/ProgressDialog.cpp
+#: modules/mod-nyq-bench/NyqBench.cpp src/effects/EffectUI.cpp
+#: src/toolbars/ControlToolBar.cpp src/widgets/ProgressDialog.cpp
 msgid "Stop"
 msgstr "Διακοπή"
 
@@ -439,7 +415,8 @@ msgid "About %s"
 msgstr "Περί %s"
 
 #. i18n-hint: In most languages OK is to be translated as OK.  It appears on a button.
-#: src/AboutDialog.cpp src/Dependencies.cpp src/SplashDialog.cpp src/effects/nyquist/Nyquist.cpp src/widgets/MultiDialog.cpp
+#: src/AboutDialog.cpp src/Dependencies.cpp src/SplashDialog.cpp
+#: src/effects/nyquist/Nyquist.cpp src/widgets/MultiDialog.cpp
 msgid "OK"
 msgstr "Εντάξει"
 
@@ -447,11 +424,13 @@ msgstr "Εντάξει"
 msgid "Build Information"
 msgstr "Πληροφορίες έκδοσης"
 
-#: src/AboutDialog.cpp src/PluginRegistrationDialog.cpp src/prefs/ModulePrefs.cpp
+#: src/AboutDialog.cpp src/PluginRegistrationDialog.cpp
+#: src/prefs/ModulePrefs.cpp
 msgid "Enabled"
 msgstr "Ενεργοποιημένο"
 
-#: src/AboutDialog.cpp src/PluginRegistrationDialog.cpp src/export/ExportFFmpegDialogs.cpp src/prefs/ModulePrefs.cpp
+#: src/AboutDialog.cpp src/PluginRegistrationDialog.cpp
+#: src/export/ExportFFmpegDialogs.cpp src/prefs/ModulePrefs.cpp
 msgid "Disabled"
 msgstr "Απενεργοποιημένο"
 
@@ -461,8 +440,9 @@ msgid "The Build"
 msgstr "Η δόμηση"
 
 #: src/AboutDialog.cpp
-msgid "Commit Id:"
-msgstr "Αναγνωριστικό υποβολής:"
+#, fuzzy
+msgid "Version:"
+msgstr "Έκδοση"
 
 #: src/AboutDialog.cpp
 msgid "Build type:"
@@ -472,22 +452,28 @@ msgstr "Τύπος δόμησης:"
 msgid "Compiler:"
 msgstr "Μεταγλωττιστής:"
 
+#: src/AboutDialog.cpp
+msgid "wxWidgets:"
+msgstr ""
+
 #. i18n-hint: The directory audacity is installed into (on *nix systems)
 #: src/AboutDialog.cpp
 msgid "Installation Prefix:"
 msgstr "Πρόθεμα εγκατάστασης:"
 
 #: src/AboutDialog.cpp
-msgid "Settings folder:"
+#, fuzzy
+msgid "Config folder:"
+msgstr "Φάκελος ρυθμίσεων:"
+
+#: src/AboutDialog.cpp
+#, fuzzy
+msgid "Data folder:"
 msgstr "Φάκελος ρυθμίσεων:"
 
 #: src/AboutDialog.cpp
 msgid "File Format Support"
 msgstr "Μορφές αρχείων που υποστηρίζονται"
-
-#: src/AboutDialog.cpp
-msgid "Cross-platform GUI library"
-msgstr "Διαλειτουργική βιβλιοθήκη GUI"
 
 #: src/AboutDialog.cpp
 msgid "Audio playback and recording"
@@ -501,7 +487,6 @@ msgstr "Μετατροπή ρυθμού δειγματοληψίας"
 msgid "MP3 Importing"
 msgstr "Εισαγωγή Mp3"
 
-#. i18n-hint: Ogg is the container format. Vorbis is the compression codec. Both are proper nouns and shouldn't be translated
 #: src/AboutDialog.cpp
 msgid "Ogg Vorbis Import and Export"
 msgstr "Εισαγωγή και εξαγωγή Ogg Vorbis"
@@ -510,7 +495,6 @@ msgstr "Εισαγωγή και εξαγωγή Ogg Vorbis"
 msgid "ID3 tag support"
 msgstr "Υποστήριξη ετικέτας ID3"
 
-#. i18n-hint: FLAC stands for Free Lossless Audio Codec, but is effectively a proper noun and so shouldn't be translated
 #: src/AboutDialog.cpp
 msgid "FLAC import and export"
 msgstr "Εισαγωγή και εξαγωγή FLAC"
@@ -528,14 +512,6 @@ msgid "FFmpeg Import/Export"
 msgstr "Εισαγωγή/Εξαγωγή FFmpeg"
 
 #: src/AboutDialog.cpp
-msgid "Import via GStreamer"
-msgstr "Εισαγωγή μέσω GStreamer"
-
-#: src/AboutDialog.cpp
-msgid "Features"
-msgstr "Χαρακτηριστικά"
-
-#: src/AboutDialog.cpp
 msgid "Plug-in support"
 msgstr "Υποστήριξη προσθέτων"
 
@@ -550,6 +526,10 @@ msgstr "Υποστήριξη αλλαγής ρυθμού (τέμπο) και τ�
 #: src/AboutDialog.cpp
 msgid "Extreme Pitch and Tempo Change support"
 msgstr "Υποστήριξη ακραίας αλλαγής τόνου και ρυθμού (τέμπο)"
+
+#: src/AboutDialog.cpp
+msgid "Features"
+msgstr "Χαρακτηριστικά"
 
 #: src/AboutDialog.cpp
 msgid "GPL License"
@@ -668,6 +648,10 @@ msgstr "%s, γραφικά"
 msgid "%s (incorporating %s, %s, %s, %s and %s)"
 msgstr "%s (ενσωμάτωση %s, %s, %s, %s και %s)"
 
+#: src/AboutDialog.cpp
+msgid "<h3>"
+msgstr ""
+
 #. i18n-hint: The program's name substitutes for %s
 #: src/AboutDialog.cpp
 #, fuzzy
@@ -677,6 +661,10 @@ msgstr "Το %s είναι ελεύθερο, ανοικτού κώδικα, δι
 #: src/AboutDialog.cpp
 msgid "Credits"
 msgstr "Εύσημα"
+
+#: src/AboutDialog.cpp
+msgid "Please note that names are sorted in alphabetical order, not in order of importance."
+msgstr ""
 
 #: src/AboutDialog.cpp
 #, fuzzy
@@ -731,6 +719,7 @@ msgstr "Ιστότοπος και γραφικά"
 #. *  your own name(s) to the credits.
 #. *
 #. *  For example:  "English translation by Dominic Mazzoni."
+#.
 #: src/AboutDialog.cpp
 msgid "translator_credits"
 msgstr "Ελληνική μετάφραση από τους Δημήτρη Σπίγγο, Νίκο Παπαδόπουλο και hicaz"
@@ -748,6 +737,22 @@ msgstr "Ευχαριστούμε ιδιαίτερα:"
 #, c-format
 msgid "%s website: "
 msgstr "Ιστότοπος %s: "
+
+#. i18n-hint Tenacity's name substitutes for first and fourth %s, and the second and third %s are the copyright symbol and final year of copyright
+#: src/AboutDialog.cpp
+#, fuzzy, c-format
+msgid "%s %s 1999-%s %s contributors"
+msgstr "Συντελεστές"
+
+#. i18n-hint The registered trademark symbol (r) is substituted at %s
+#: src/AboutDialog.cpp
+#, c-format
+msgid "The Audacity%s trademark is used within this software for descriptive and informational purposes only."
+msgstr ""
+
+#: src/AboutDialog.cpp
+msgid "Tenacity is not produced or endorsed by MuseCY SM Ltd. or Dominic M Mazzoni."
+msgstr ""
 
 #: src/AdornedRulerPanel.cpp
 msgid "Timeline actions disabled during recording"
@@ -770,6 +775,7 @@ msgstr "Λωρίδα χρόνου"
 #. i18n-hint: These commands assist the user in finding a sound by ear. ...
 #. "Scrubbing" is variable-speed playback, ...
 #. "Seeking" is normal speed playback but with skips
+#.
 #: src/AdornedRulerPanel.cpp
 msgid "Click or drag to begin Seek"
 msgstr "Πάτημα ή μεταφορά για έναρξη αναζήτησης"
@@ -777,6 +783,7 @@ msgstr "Πάτημα ή μεταφορά για έναρξη αναζήτηση�
 #. i18n-hint: These commands assist the user in finding a sound by ear. ...
 #. "Scrubbing" is variable-speed playback, ...
 #. "Seeking" is normal speed playback but with skips
+#.
 #: src/AdornedRulerPanel.cpp
 msgid "Click or drag to begin Scrub"
 msgstr "Πάτημα ή μεταφορά για έναρξη τριψίματος"
@@ -784,6 +791,7 @@ msgstr "Πάτημα ή μεταφορά για έναρξη τριψίματο�
 #. i18n-hint: These commands assist the user in finding a sound by ear. ...
 #. "Scrubbing" is variable-speed playback, ...
 #. "Seeking" is normal speed playback but with skips
+#.
 #: src/AdornedRulerPanel.cpp
 msgid "Click & move to Scrub. Click & drag to Seek."
 msgstr "Πάτημα και μετακίνηση για τρίψιμο. Πάτημα και μεταφορά για αναζήτηση."
@@ -791,6 +799,7 @@ msgstr "Πάτημα και μετακίνηση για τρίψιμο. Πάτη
 #. i18n-hint: These commands assist the user in finding a sound by ear. ...
 #. "Scrubbing" is variable-speed playback, ...
 #. "Seeking" is normal speed playback but with skips
+#.
 #: src/AdornedRulerPanel.cpp
 msgid "Move to Seek"
 msgstr "Μετακίνηση για αναζήτηση"
@@ -798,6 +807,7 @@ msgstr "Μετακίνηση για αναζήτηση"
 #. i18n-hint: These commands assist the user in finding a sound by ear. ...
 #. "Scrubbing" is variable-speed playback, ...
 #. "Seeking" is normal speed playback but with skips
+#.
 #: src/AdornedRulerPanel.cpp
 msgid "Move to Scrub"
 msgstr "Μετακίνηση για τρίψιμο"
@@ -854,7 +864,17 @@ msgstr ""
 "Αδύνατο το κλείδωμα περιοχής πέρα από\n"
 "το τέλος του έργου."
 
-#: src/AdornedRulerPanel.cpp src/AudioIO.cpp src/FileNames.cpp src/ProjectAudioManager.cpp src/TimerRecordDialog.cpp src/effects/Contrast.cpp src/effects/Effect.cpp src/effects/Generator.cpp src/effects/nyquist/Nyquist.cpp src/export/ExportFFmpeg.cpp src/export/ExportMP2.cpp src/menus/TrackMenus.cpp src/menus/TransportMenus.cpp src/prefs/DirectoriesPrefs.cpp src/prefs/KeyConfigPrefs.cpp src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp src/widgets/FileDialog/gtk/FileDialogPrivate.cpp src/widgets/UnwritableLocationErrorDialog.cpp plug-ins/eq-xml-to-txt-converter.ny
+#: src/AdornedRulerPanel.cpp src/AudioIO.cpp src/FileNames.cpp
+#: src/ProjectAudioManager.cpp src/TimerRecordDialog.cpp
+#: src/effects/Contrast.cpp src/effects/Effect.cpp src/effects/Generator.cpp
+#: src/effects/nyquist/Nyquist.cpp src/export/ExportFFmpeg.cpp
+#: src/export/ExportMP2.cpp src/menus/TrackMenus.cpp
+#: src/menus/TransportMenus.cpp src/prefs/DirectoriesPrefs.cpp
+#: src/prefs/KeyConfigPrefs.cpp
+#: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
+#: src/widgets/FileDialog/gtk/FileDialogPrivate.cpp
+#: src/widgets/UnwritableLocationErrorDialog.cpp
+#: plug-ins/eq-xml-to-txt-converter.ny
 msgid "Error"
 msgstr "Σφάλμα"
 
@@ -878,7 +898,8 @@ msgstr ""
 "Αυτή είναι μια ερώτηση μιας φοράς, μετά από μια 'εγκατάσταση' όπου ζητήσατε να έχετε νέα ρύθμιση προτιμήσεων."
 
 #: src/AudacityApp.cpp
-msgid "Reset Audacity Preferences"
+#, fuzzy
+msgid "Reset Tenacity Preferences"
 msgstr "Επαναφορά στις αρχικές προτιμήσεις του Audacity"
 
 #: src/AudacityApp.cpp
@@ -893,7 +914,8 @@ msgstr ""
 "Έχει αφαιρεθεί από τον κατάλογο των πρόσφατων αρχείων."
 
 #: src/AudacityApp.cpp
-msgid "SQLite library failed to initialize.  Audacity cannot continue."
+#, fuzzy
+msgid "SQLite library failed to initialize.  Tenacity cannot continue."
 msgstr "Η βιβλιοθήκη του SQLite απέτυχε να ξεκινήσει. Το Audacity δεν μπορεί να συνεχίσει."
 
 #: src/AudacityApp.cpp
@@ -919,7 +941,7 @@ msgstr "&Άνοιγμα..."
 msgid "Open &Recent..."
 msgstr "Άνοιγμα &προσφάτου..."
 
-#: src/AudacityApp.cpp
+#: src/AudacityApp.cpp src/menus/HelpMenus.cpp
 #, fuzzy
 msgid "&About Tenacity..."
 msgstr "&Σχετικά με το Audacity..."
@@ -933,9 +955,10 @@ msgid "&File"
 msgstr "&Αρχείο"
 
 #: src/AudacityApp.cpp
+#, fuzzy
 msgid ""
-"Audacity could not find a safe place to store temporary files.\n"
-"Audacity needs a place where automatic cleanup programs won't delete the temporary files.\n"
+"Tenacity could not find a safe place to store temporary files.\n"
+"Tenacity needs a place where automatic cleanup programs won't delete the temporary files.\n"
 "Please enter an appropriate directory in the preferences dialog."
 msgstr ""
 "Το Audacity δεν μπόρεσε να βρει ασφαλή θέση για να αποθηκεύσει τα προσωρινά αρχεία.\n"
@@ -943,20 +966,23 @@ msgstr ""
 "Παρακαλούμε εισάγετε έναν κατάλληλο κατάλογο στον διάλογο προτιμήσεων."
 
 #: src/AudacityApp.cpp
+#, fuzzy
 msgid ""
-"Audacity could not find a place to store temporary files.\n"
+"Tenacity could not find a place to store temporary files.\n"
 "Please enter an appropriate directory in the preferences dialog."
 msgstr ""
 "Το Audacity δεν μπόρεσε να βρει τοποθεσία για να αποθηκεύσει τα προσωρινά αρχεία.\n"
 "Παρακαλώ προσθέστε μία κατάλληλη τοποθεσία στις προτιμήσεις."
 
 #: src/AudacityApp.cpp
-msgid "Audacity is now going to exit. Please launch Audacity again to use the new temporary directory."
+#, fuzzy
+msgid "Tenacity is now going to exit. Please launch Tenacity again to use the new temporary directory."
 msgstr "Το Audacity τώρα θα κλείσει. Παρακαλούμε επανεκκινήστε το Audacity για να χρησιμοποιήσετε τον νέο προσωρινό κατάλογο."
 
 #: src/AudacityApp.cpp
+#, fuzzy
 msgid ""
-"Running two copies of Audacity simultaneously may cause\n"
+"Running two copies of Tenacity simultaneously may cause\n"
 "data loss or cause your system to crash.\n"
 "\n"
 msgstr ""
@@ -965,15 +991,17 @@ msgstr ""
 "\n"
 
 #: src/AudacityApp.cpp
+#, fuzzy
 msgid ""
-"Audacity was not able to lock the temporary files directory.\n"
-"This folder may be in use by another copy of Audacity.\n"
+"Tenacity was not able to lock the temporary files directory.\n"
+"This folder may be in use by another copy of Tenacity.\n"
 msgstr ""
 "Το Audacity δεν μπόρεσε να κλειδώσει τον κατάλογο προσωρινών αρχείων.\n"
 "Ο φάκελος μπορεί να χρησιμοποιείται από άλλο αντίγραφο του Audacity.\n"
 
 #: src/AudacityApp.cpp
-msgid "Do you still want to start Audacity?"
+#, fuzzy
+msgid "Do you still want to start Tenacity?"
 msgstr "Θέλετε ακόμα να ξεκινήσετε το Audacity;"
 
 #: src/AudacityApp.cpp
@@ -981,19 +1009,22 @@ msgid "Error Locking Temporary Folder"
 msgstr "Σφάλμα κλειδώματος του προσωρινού φακέλου"
 
 #: src/AudacityApp.cpp
-msgid "The system has detected that another copy of Audacity is running.\n"
+#, fuzzy
+msgid "The system has detected that another copy of Tenacity is running.\n"
 msgstr "Το σύστημα ανέγνωσε ότι ένα άλλο αντίγραφο του Audacity βρρίσκεται σε λειτουργία.\n"
 
 #: src/AudacityApp.cpp
+#, fuzzy
 msgid ""
-"Use the New or Open commands in the currently running Audacity\n"
+"Use the New or Open commands in the currently running Tenacity\n"
 "process to open multiple projects simultaneously.\n"
 msgstr ""
 "Χρησιμοποιήστε τις εντολές Άνοιγμα ή Νέο από το Audacity που ήδη τρέχει\n"
 "για να ανοίξετε πολλά έργα συγχρόνως.\n"
 
 #: src/AudacityApp.cpp
-msgid "Audacity is already running"
+#, fuzzy
+msgid "Tenacity is already running"
 msgstr "Το Audacity είναι είδη σε λειτουργία"
 
 #: src/AudacityApp.cpp
@@ -1009,7 +1040,8 @@ msgstr ""
 "και μπορεί να χρειαστεί επανεκκίνηση."
 
 #: src/AudacityApp.cpp
-msgid "Audacity Startup Failure"
+#, fuzzy
+msgid "Tenacity Startup Failure"
 msgstr "Αποτυχία εκκίνησης Audacity"
 
 #: src/AudacityApp.cpp
@@ -1049,8 +1081,9 @@ msgstr ""
 "και μπορεί να χρειαστεί επανεκκίνηση."
 
 #: src/AudacityApp.cpp
+#, fuzzy
 msgid ""
-"The Audacity IPC server failed to initialize.\n"
+"The Tenacity IPC server failed to initialize.\n"
 "\n"
 "This is likely due to a resource shortage\n"
 "and a reboot may be required."
@@ -1082,7 +1115,8 @@ msgstr "εκτέλεση αυτοδιαγνωστικών"
 
 #. i18n-hint: This displays the Audacity version
 #: src/AudacityApp.cpp
-msgid "display Audacity version"
+#, fuzzy
+msgid "display Tenacity version"
 msgstr "εμφάνιση της έκδοσης του Audacity"
 
 #. i18n-hint: This is a list of one or more files that Audacity
@@ -1092,9 +1126,10 @@ msgid "audio or project file name"
 msgstr "όνομα αρχείου ήχου ή έργου"
 
 #: src/AudacityApp.cpp
+#, fuzzy
 msgid ""
 "Audacity project (.aup3) files are not currently \n"
-"associated with Audacity. \n"
+"associated with Tenacity. \n"
 "\n"
 "Associate them, so they open on double-click?"
 msgstr ""
@@ -1107,16 +1142,18 @@ msgstr ""
 msgid "Audacity Project Files"
 msgstr "Αρχεία έργου Audacity"
 
-#: src/AudacityException.h src/commands/MessageCommand.cpp src/widgets/AudacityMessageBox.cpp
+#: src/AudacityException.h src/commands/MessageCommand.cpp
+#: src/widgets/AudacityMessageBox.cpp
 msgid "Message"
 msgstr "Μήνυμα"
 
 #: src/AudacityFileConfig.cpp
-msgid "Audacity Configuration Error"
+#, fuzzy
+msgid "Tenacity Configuration Error"
 msgstr "Σφάλμα διαμόρφωσης του Audacity"
 
 #: src/AudacityFileConfig.cpp
-#, c-format
+#, fuzzy, c-format
 msgid ""
 "The following configuration file could not be accessed:\n"
 "\n"
@@ -1126,7 +1163,7 @@ msgid ""
 "\n"
 "You can attempt to correct the issue and then click \"Retry\" to continue.\n"
 "\n"
-"If you choose to \"Quit Audacity\", your project may be left in an unsaved state which will be recovered the next time you open it."
+"If you choose to \"Quit Tenacity\", your project may be left in an unsaved state which will be recovered the next time you open it."
 msgstr ""
 "Το παρακάτω αρχείο ρυθμίσεων δεν μπόρεσε να προσπελαστεί:\n"
 "\n"
@@ -1138,12 +1175,15 @@ msgstr ""
 "\n"
 "Εάν επιλέξετε \"Έξοδος από το Audacity\", το έργο σας μπορεί να αφεθεί σε αναποθήκευτη κατάσταση που θα ανακτηθεί την επόμενη φορά που θα το ανοίξετε."
 
-#: src/AudacityFileConfig.cpp src/ShuttleGui.cpp src/commands/HelpCommand.cpp src/effects/Equalization.cpp src/export/Export.cpp src/menus/HelpMenus.cpp src/widgets/MultiDialog.cpp
+#: src/AudacityFileConfig.cpp src/ShuttleGui.cpp src/commands/HelpCommand.cpp
+#: src/effects/Equalization.cpp src/export/Export.cpp src/menus/HelpMenus.cpp
+#: src/widgets/MultiDialog.cpp
 msgid "Help"
 msgstr "Βοήθεια"
 
 #: src/AudacityFileConfig.cpp src/AutoRecoveryDialog.cpp
-msgid "&Quit Audacity"
+#, fuzzy
+msgid "&Quit Tenacity"
 msgstr "Έ&ξοδος από το Audacity"
 
 #: src/AudacityFileConfig.cpp
@@ -1151,7 +1191,8 @@ msgid "&Retry"
 msgstr "Ε&πανάληψη"
 
 #: src/AudacityLogger.cpp
-msgid "Audacity Log"
+#, fuzzy
+msgid "Tenacity Log"
 msgstr "Ημερολόγιο Audacity"
 
 #: src/AudacityLogger.cpp src/Tags.cpp
@@ -1163,9 +1204,14 @@ msgstr "Απο&θήκευση..."
 msgid "Cl&ear"
 msgstr "Καθ&αρισμός"
 
-#: src/AudacityLogger.cpp src/ShuttleGui.cpp src/effects/Contrast.cpp src/menus/FileMenus.cpp
+#: src/AudacityLogger.cpp src/ShuttleGui.cpp src/effects/Contrast.cpp
+#: src/menus/FileMenus.cpp
 msgid "&Close"
 msgstr "&Κλείσιμο ανοιχτής εργασίας"
+
+#: src/AudacityLogger.cpp
+msgid "log.txt"
+msgstr ""
 
 #: src/AudacityLogger.cpp
 msgid "Save log to:"
@@ -1214,7 +1260,8 @@ msgid "Error Initializing Midi"
 msgstr "Σφάλμα στην αρχικοποίηση midi"
 
 #: src/AudioIO.cpp
-msgid "Audacity Audio"
+#, fuzzy
+msgid "Tenacity Audio"
 msgstr "Ήχος Audacity"
 
 #: src/AudioIO.cpp src/ProjectAudioManager.cpp
@@ -1229,37 +1276,6 @@ msgstr ""
 #: src/AudioIO.cpp
 msgid "Out of memory!"
 msgstr "Η μνήμη εξαντλήθηκε!"
-
-#: src/AudioIO.cpp
-msgid "Automated Recording Level Adjustment stopped. It was not possible to optimize it more. Still too high."
-msgstr "Η αυτόματη ρύθμιση επιπέδου εγγραφής σταμάτησε. Δεν ήταν δυνατό να βελτιωθεί περισσότερο. Εξακολουθεί να είναι υπερβολικά υψηλή."
-
-#: src/AudioIO.cpp
-#, c-format
-msgid "Automated Recording Level Adjustment decreased the volume to %f."
-msgstr "Η αυτόματη ρύθμιση επιπέδου εγγραφής μείωσε την ένταση σε %f."
-
-#: src/AudioIO.cpp
-msgid "Automated Recording Level Adjustment stopped. It was not possible to optimize it more. Still too low."
-msgstr "Η αυτόματη ρύθμιση επιπέδου εγγραφής σταμάτησε. Δεν ήταν δυνατό να βελτιωθεί περισσότερο. Εξακολουθεί να είναι υπερβολικά χαμηλή."
-
-#: src/AudioIO.cpp
-#, c-format
-msgid "Automated Recording Level Adjustment increased the volume to %.2f."
-msgstr "Η αυτόματη ρύθμιση επιπέδου εγγραφής αύξησε την ένταση σε %.2f."
-
-#: src/AudioIO.cpp
-msgid "Automated Recording Level Adjustment stopped. The total number of analyses has been exceeded without finding an acceptable volume. Still too high."
-msgstr "Η αυτόματη ρύθμιση επιπέδου εγγραφής σταμάτησε. Ο συνολικός αριθμός των αναλύσεων έχει ξεπεραστεί χωρίς να βρεθεί μια αποδεκτή ένταση. Εξακολουθεί να είναι υπερβολικά υψηλή."
-
-#: src/AudioIO.cpp
-msgid "Automated Recording Level Adjustment stopped. The total number of analyses has been exceeded without finding an acceptable volume. Still too low."
-msgstr "Η αυτόματη ρύθμιση επιπέδου εγγραφής σταμάτησε. Ο συνολικός αριθμός των αναλύσεων έχει ξεπεραστεί χωρίς να βρεθεί μια αποδεκτή ένταση. Εξακολουθεί να είναι υπερβολικά χαμηλή."
-
-#: src/AudioIO.cpp
-#, c-format
-msgid "Automated Recording Level Adjustment stopped. %.2f seems an acceptable volume."
-msgstr "Η αυτόματη ρύθμιση επιπέδου εγγραφής σταμάτησε. Το %.2f φαίνεται να είναι μια αποδεκτή ένταση."
 
 #: src/AudioIOBase.cpp
 msgid "Stream is active ... unable to gather information.\n"
@@ -1358,43 +1374,6 @@ msgstr "Δεν βρέθηκε συσκευή αναπαραγωγής για τ�
 msgid "Cannot check mutual sample rates without both devices.\n"
 msgstr "Αδυναμία ελέγχου κοινών ρυθμών δειγμάτων χωρίς και τις δύο συσκευές.\n"
 
-#: src/AudioIOBase.cpp
-#, c-format
-msgid "Received %d while opening devices\n"
-msgstr "Ελήφθησαν %d κατά το άνοιγμα των συσκευών\n"
-
-#: src/AudioIOBase.cpp
-msgid "Unable to open Portmixer\n"
-msgstr "Αδύνατο το άνοιγμα Portmixer\n"
-
-#: src/AudioIOBase.cpp
-msgid "Available mixers:\n"
-msgstr "Διαθέσιμοι μείκτες:\n"
-
-#: src/AudioIOBase.cpp
-msgid "Available recording sources:\n"
-msgstr "Διαθέσιμες πηγές ηχογράφησης:\n"
-
-#: src/AudioIOBase.cpp
-msgid "Available playback volumes:\n"
-msgstr "Διαθέσιμες εντάσεις αναπαραγωγής:\n"
-
-#: src/AudioIOBase.cpp
-msgid "Recording volume is emulated\n"
-msgstr "Η ένταση ηχογράφησης είναι προσομοιωμένη\n"
-
-#: src/AudioIOBase.cpp
-msgid "Recording volume is native\n"
-msgstr "Η ένταση ηχογράφησης είναι εγγενής\n"
-
-#: src/AudioIOBase.cpp
-msgid "Playback volume is emulated\n"
-msgstr "Η ένταση αναπαραγωγής είναι προσομοιωμένη\n"
-
-#: src/AudioIOBase.cpp
-msgid "Playback volume is native\n"
-msgstr "Η ένταση αναπαραγωγής είναι εγγενής\n"
-
 #. i18n-hint: Supported, meaning made available by the system
 #: src/AudioIOBase.cpp
 #, c-format
@@ -1437,8 +1416,9 @@ msgid "Automatic Crash Recovery"
 msgstr "Αυτόματη ανάκτηση δεδομένων κατάρρευσης"
 
 #: src/AutoRecoveryDialog.cpp
+#, fuzzy
 msgid ""
-"The following projects were not saved properly the last time Audacity was run and can be automatically recovered.\n"
+"The following projects were not saved properly the last time Tenacity was run and can be automatically recovered.\n"
 "\n"
 "After recovery, save the projects to ensure changes are written to disk."
 msgstr ""
@@ -1451,12 +1431,14 @@ msgid "Recoverable &projects"
 msgstr "Ανακτήσιμα έ&ργα"
 
 #. i18n-hint: (verb).  It instruct the user to select items.
-#: src/AutoRecoveryDialog.cpp src/TrackInfo.cpp src/commands/SelectCommand.cpp src/prefs/MousePrefs.cpp
+#: src/AutoRecoveryDialog.cpp src/TrackInfo.cpp src/commands/SelectCommand.cpp
+#: src/prefs/MousePrefs.cpp
 msgid "Select"
 msgstr "Επιλογή"
 
 #. i18n-hint: (noun).  It's the name of the project to recover.
-#: src/AutoRecoveryDialog.cpp src/PluginRegistrationDialog.cpp src/TrackInfo.cpp
+#: src/AutoRecoveryDialog.cpp src/PluginRegistrationDialog.cpp
+#: src/TrackInfo.cpp
 msgid "Name"
 msgstr "Όνομα"
 
@@ -1542,6 +1524,11 @@ msgstr "Εφέ"
 #: src/BatchCommands.cpp
 msgid "Menu Command (With Parameters)"
 msgstr "Εντολή μενού (με παραμέτρους)"
+
+#: src/BatchCommands.cpp src/FileNames.cpp
+#, c-format
+msgid "(%s)"
+msgstr ""
 
 #: src/BatchCommands.cpp
 msgid "Menu Command (No Parameters)"
@@ -1687,7 +1674,8 @@ msgstr "Επανα&φορά"
 msgid "I&mport..."
 msgstr "Ε&ισαγωγή..."
 
-#: src/BatchProcessDialog.cpp src/effects/Contrast.cpp src/effects/Equalization.cpp
+#: src/BatchProcessDialog.cpp src/effects/Contrast.cpp
+#: src/effects/Equalization.cpp
 msgid "E&xport..."
 msgstr "Ε&ξαγωγή..."
 
@@ -1728,7 +1716,8 @@ msgstr "Μετακίνηση &Πάνω"
 msgid "Move &Down"
 msgstr "Μετακίνηση &Κάτω"
 
-#: src/BatchProcessDialog.cpp src/effects/nyquist/Nyquist.cpp src/menus/HelpMenus.cpp
+#: src/BatchProcessDialog.cpp src/effects/nyquist/Nyquist.cpp
+#: src/menus/HelpMenus.cpp
 msgid "&Save"
 msgstr "Απο&θήκευση"
 
@@ -1811,9 +1800,17 @@ msgid "Run"
 msgstr "Εκτέλεση"
 
 #. i18n-hint verb
-#: src/Benchmark.cpp src/tracks/ui/TrackButtonHandles.cpp src/widgets/HelpSystem.cpp
+#: src/Benchmark.cpp src/tracks/ui/TrackButtonHandles.cpp
+#: src/widgets/HelpSystem.cpp
 msgid "Close"
 msgstr "Κλείσιμο"
+
+#. i18n-hint: Benchmark means a software speed test;
+#. leave untranslated file extension .txt
+#: src/Benchmark.cpp
+#, fuzzy
+msgid "benchmark.txt"
+msgstr "Έλεγχος επιδόσεων"
 
 #: src/Benchmark.cpp
 msgid "Export Benchmark Data as:"
@@ -1951,11 +1948,6 @@ msgid "No revision identifier was provided"
 msgstr "Δεν δόθηκε αναγνωριστικό αναθεώρησης"
 
 #: src/BuildInfo.h
-#, fuzzy
-msgid "Unknown date and time"
-msgstr "Ημερομηνία και ώρα λήξης"
-
-#: src/BuildInfo.h
 #, c-format
 msgid "Debug build (debug level %d)"
 msgstr "Δομή αποσφαλμάτωσης (επίπεδο αποσφαλμάτωσης %d)"
@@ -1964,6 +1956,10 @@ msgstr "Δομή αποσφαλμάτωσης (επίπεδο αποσφαλμά
 #, c-format
 msgid "Release build (debug level %d)"
 msgstr "Δομή έκδοσης (επίπεδο αποσφαλμάτωσης %d)"
+
+#: src/BuildInfo.h
+msgid ", 64 bits"
+msgstr ""
 
 #. i18n-hint: %s will be replaced by the name of an action, such as Normalize, Cut, Fade.
 #: src/CommonCommandFlags.cpp
@@ -2033,6 +2029,11 @@ msgid ""
 msgstr ""
 "Πρέπει πρώτα να επιλέξετε κάποιον ήχο για να εκτελέσετε αυτήν\n"
 "την ενέργεια. (Η επιλογή άλλων ειδών κομματιού δεν θα δουλέψει.)"
+
+#: src/DBConnection.cpp
+#, c-format
+msgid "(%d): %s"
+msgstr ""
 
 #: src/DBConnection.cpp
 #, c-format
@@ -2195,6 +2196,11 @@ msgid "&Copy Names to Clipboard"
 msgstr "Α&ντιγραφή ονομάτων στο πρόχειρο"
 
 #: src/Dependencies.cpp
+#, c-format
+msgid "\"%s\", \"%s\", \"%s\"\n"
+msgstr ""
+
+#: src/Dependencies.cpp
 msgid "Missing"
 msgstr "Λείπει"
 
@@ -2203,10 +2209,11 @@ msgid "If you proceed, your project will not be saved to disk. Is this what you 
 msgstr "Εάν συνεχίσετε, το έργο σας δεν θα αποθηκευθεί στον δίσκο. Είναι αυτό που θέλετε;"
 
 #: src/Dependencies.cpp
+#, fuzzy
 msgid ""
 "Your project is self-contained; it does not depend on any external audio files. \n"
 "\n"
-"Some older Audacity projects may not be self-contained, and care \n"
+"Some older Tenacity projects may not be self-contained, and care \n"
 "is needed to keep their external dependencies in the right place.\n"
 "New projects will be self-contained and are less risky."
 msgstr ""
@@ -2220,7 +2227,10 @@ msgstr ""
 msgid "Dependency Check"
 msgstr "Έλεγχος εξαρτήσεων"
 
-#: src/Dither.cpp src/commands/ScreenshotCommand.cpp src/effects/EffectManager.cpp src/effects/EffectUI.cpp src/prefs/TracksBehaviorsPrefs.cpp plug-ins/equalabel.ny plug-ins/sample-data-export.ny
+#: src/Dither.cpp src/commands/ScreenshotCommand.cpp
+#: src/effects/EffectManager.cpp src/effects/EffectUI.cpp
+#: src/prefs/TracksBehaviorsPrefs.cpp plug-ins/equalabel.ny
+#: plug-ins/sample-data-export.ny
 msgid "None"
 msgstr "Κανένα"
 
@@ -2228,7 +2238,7 @@ msgstr "Κανένα"
 msgid "Rectangle"
 msgstr "Ορθογώνιο"
 
-#: src/Dither.cpp plug-ins/tremolo.ny
+#: src/Dither.cpp src/effects/ToneGen.cpp plug-ins/tremolo.ny
 msgid "Triangle"
 msgstr "Τρίγωνο"
 
@@ -2239,6 +2249,38 @@ msgstr "Μορφοποιημένο"
 #: src/FFT.cpp
 msgid "Rectangular"
 msgstr "Ορθογώνιο"
+
+#. i18n-hint a proper name
+#: src/FFT.cpp
+msgid "Bartlett"
+msgstr ""
+
+#. i18n-hint a proper name
+#: src/FFT.cpp
+#, fuzzy
+msgid "Hamming"
+msgstr "Hamming, καμία"
+
+#. i18n-hint a proper name
+#: src/FFT.cpp
+msgid "Hann"
+msgstr ""
+
+#. i18n-hint a proper name
+#: src/FFT.cpp
+msgid "Blackman"
+msgstr ""
+
+#. i18n-hint two proper names
+#: src/FFT.cpp
+msgid "Blackman-Harris"
+msgstr ""
+
+#. i18n-hint a proper name
+#: src/FFT.cpp
+#, fuzzy
+msgid "Welch"
+msgstr "Καλωσήρθατε!"
 
 #. i18n-hint a mathematical function named for C. F. Gauss
 #: src/FFT.cpp
@@ -2260,9 +2302,10 @@ msgid "FFmpeg support not compiled in"
 msgstr "Η υποστήριξη FFmpeg δεν μεταγλωττίστηκε στο"
 
 #: src/FFmpeg.cpp
+#, fuzzy
 msgid ""
 "FFmpeg was configured in Preferences and successfully loaded before, \n"
-"but this time Audacity failed to load it at startup. \n"
+"but this time Tenacity failed to load it at startup. \n"
 "\n"
 "You may want to go back to Preferences > Libraries and re-configure it."
 msgstr ""
@@ -2284,8 +2327,8 @@ msgid "Locate FFmpeg"
 msgstr "Εντοπισμός FFmpeg"
 
 #: src/FFmpeg.cpp
-#, c-format
-msgid "Audacity needs the file '%s' to import and export audio via FFmpeg."
+#, fuzzy, c-format
+msgid "Tenacity needs the file '%s' to import and export audio via FFmpeg."
 msgstr "Το Audacity χρειάζεται το αρχείο '%s' για να εισαγάγει και να εξαγάγει ήχο μέσω του FFmpeg."
 
 #: src/FFmpeg.cpp
@@ -2298,7 +2341,8 @@ msgstr "Τοπθεσία του '%s':"
 msgid "To find '%s', click here -->"
 msgstr "Για να βρείτε το '%s', πατήστε εδώ -->"
 
-#: src/FFmpeg.cpp src/export/ExportCL.cpp src/export/ExportMP3.cpp plug-ins/nyquist-plug-in-installer.ny
+#: src/FFmpeg.cpp src/export/ExportCL.cpp src/export/ExportMP3.cpp
+#: plug-ins/nyquist-plug-in-installer.ny
 msgid "Browse..."
 msgstr "Αναζήτηση..."
 
@@ -2324,8 +2368,9 @@ msgid "FFmpeg not found"
 msgstr "To FFmpeg δεν βρέθηκε"
 
 #: src/FFmpeg.cpp
+#, fuzzy
 msgid ""
-"Audacity attempted to use FFmpeg to import an audio file,\n"
+"Tenacity attempted to use FFmpeg to import an audio file,\n"
 "but the libraries were not found.\n"
 "\n"
 "To use FFmpeg import, go to Edit > Preferences > Libraries\n"
@@ -2355,24 +2400,24 @@ msgid "Only libavformat.so"
 msgstr "Μόνο libavformat.so"
 
 #: src/FileException.cpp
-#, c-format
-msgid "Audacity failed to open a file in %s."
+#, fuzzy, c-format
+msgid "Tenacity failed to open a file in %s."
 msgstr "Το Audacity απέτυχε να ανοίξει ένα αρχείο στο %s."
 
 #: src/FileException.cpp
-#, c-format
-msgid "Audacity failed to read from a file in %s."
+#, fuzzy, c-format
+msgid "Tenacity failed to read from a file in %s."
 msgstr "Το Audacity απέτυχε να διαβάσει από αρχείο στο %s."
 
 #: src/FileException.cpp
-#, c-format
-msgid "Audacity successfully wrote a file in %s but failed to rename it as %s."
+#, fuzzy, c-format
+msgid "Tenacity successfully wrote a file in %s but failed to rename it as %s."
 msgstr "Το Audacity έγραψε με επιτυχία ένα αρχείο στο %s, αλλά απέτυχε να το μετονομάσει ως %s."
 
 #: src/FileException.cpp
-#, c-format
+#, fuzzy, c-format
 msgid ""
-"Audacity failed to write to a file.\n"
+"Tenacity failed to write to a file.\n"
 "Perhaps %s is not writable or the disk is full.\n"
 "For tips on freeing up space, click the help button."
 msgstr ""
@@ -2411,7 +2456,9 @@ msgstr "Να μην γίνεται αποθήκευση κανενός ακου�
 msgid "As&k"
 msgstr "Να γίνεται ε&ρώτηση"
 
-#: src/FileNames.cpp plug-ins/eq-xml-to-txt-converter.ny plug-ins/nyquist-plug-in-installer.ny plug-ins/sample-data-export.ny plug-ins/sample-data-import.ny
+#: src/FileNames.cpp plug-ins/eq-xml-to-txt-converter.ny
+#: plug-ins/nyquist-plug-in-installer.ny plug-ins/sample-data-export.ny
+#: plug-ins/sample-data-import.ny
 msgid "All files"
 msgstr "Όλα τα αρχεία"
 
@@ -2436,6 +2483,10 @@ msgstr "Αρχεία κειμένου"
 #: src/FileNames.cpp
 msgid "XML files"
 msgstr "Αρχεία XML"
+
+#: src/FileNames.cpp
+msgid ", "
+msgstr ""
 
 #. i18n-hint a type or types such as "txt" or "txt, xml" will be
 #. substituted for %s
@@ -2477,6 +2528,14 @@ msgstr "Αυτόματη συσχέτιση κυβικής ρίζας"
 msgid "Enhanced Autocorrelation"
 msgstr "Βελτιωμένη αυτόματη συσχέτιση"
 
+#. i18n-hint: This is a technical term, derived from the word
+#. * "spectrum".  Do not translate it unless you are sure you
+#. * know the correct technical word in your language.
+#: src/FreqWindow.cpp
+#, fuzzy
+msgid "Cepstrum"
+msgstr "Φάσμα"
+
 #  i18n-hint: This refers to a "window function", used in the
 #  Frequency analyze dialog box.
 #. i18n-hint: This refers to a "window function",
@@ -2495,6 +2554,17 @@ msgstr "Γραμμική συχνότητα"
 msgid "Log frequency"
 msgstr "Λογαριθμική συχνότητα"
 
+#. i18n-hint: abbreviates decibels
+#. i18n-hint: short form of 'decibels'.
+#: src/FreqWindow.cpp src/commands/SetTrackInfoCommand.cpp
+#: src/effects/AutoDuck.cpp src/effects/Compressor.cpp
+#: src/effects/Equalization.cpp src/effects/Loudness.cpp
+#: src/effects/Normalize.cpp src/effects/ScienFilter.cpp
+#: src/effects/TruncSilence.cpp src/prefs/WaveformSettings.cpp
+#: src/widgets/Meter.cpp plug-ins/sample-data-export.ny
+msgid "dB"
+msgstr ""
+
 #: src/FreqWindow.cpp
 msgid "Scroll"
 msgstr "Κύλιση"
@@ -2502,6 +2572,15 @@ msgstr "Κύλιση"
 #: src/FreqWindow.cpp src/prefs/MousePrefs.cpp
 msgid "Zoom"
 msgstr "Μεγέθυνση"
+
+#. i18n-hint: This is the abbreviation for "Hertz", or
+#. cycles per second.
+#. i18n-hint: Name of display format that shows frequency in hertz
+#: src/FreqWindow.cpp src/effects/ChangePitch.cpp src/effects/Equalization.cpp
+#: src/effects/ScienFilter.cpp src/import/ImportRaw.cpp
+#: src/widgets/NumericTextCtrl.cpp
+msgid "Hz"
+msgstr ""
 
 #: src/FreqWindow.cpp
 #, fuzzy
@@ -2562,6 +2641,37 @@ msgstr "Έχει επιλεχθεί πολύ μεγάλο μέρος ήχου. �
 msgid "Not enough data selected."
 msgstr "Δεν έχουν επιλεγεί αρκετά δεδομένα."
 
+#. i18n-hint: short form of 'seconds'.
+#: src/FreqWindow.cpp src/effects/AutoDuck.cpp
+msgid "s"
+msgstr ""
+
+#. i18n-hint: The %d's are replaced by numbers, the %s by musical notes, e.g. A#
+#: src/FreqWindow.cpp
+#, c-format
+msgid "%d Hz (%s) = %d dB"
+msgstr ""
+
+#. i18n-hint: The %d's are replaced by numbers, the %s by musical notes, e.g. A#
+#: src/FreqWindow.cpp
+#, c-format
+msgid "%d Hz (%s) = %.1f dB"
+msgstr ""
+
+#. i18n-hint: The %d's are replaced by numbers, the %s by musical notes, e.g. A#
+#. * the %.4f are numbers, and 'sec' should be an abbreviation for seconds
+#: src/FreqWindow.cpp
+#, c-format
+msgid "%.4f sec (%d Hz) (%s) = %f"
+msgstr ""
+
+#. i18n-hint: The %d's are replaced by numbers, the %s by musical notes, e.g. A#
+#. * the %.4f are numbers, and 'sec' should be an abbreviation for seconds
+#: src/FreqWindow.cpp
+#, c-format
+msgid "%.4f sec (%d Hz) (%s) = %.3f"
+msgstr ""
+
 #: src/FreqWindow.cpp
 msgid "spectrum.txt"
 msgstr "φάσμασυχνοτήτων.txt"
@@ -2570,7 +2680,8 @@ msgstr "φάσμασυχνοτήτων.txt"
 msgid "Export Spectral Data As:"
 msgstr "Εξαγωγή δεδομένων φάσματος ως:"
 
-#: src/FreqWindow.cpp src/LabelDialog.cpp src/effects/Contrast.cpp src/menus/FileMenus.cpp
+#: src/FreqWindow.cpp src/LabelDialog.cpp src/effects/Contrast.cpp
+#: src/menus/FileMenus.cpp
 #, c-format
 msgid "Couldn't write to file: %s"
 msgstr "Αδύνατη η εγγραφή στο αρχείο: %s"
@@ -2760,19 +2871,19 @@ msgid "&History..."
 msgstr "&Ιστορικό..."
 
 #: src/InconsistencyException.cpp
-#, c-format
+#, fuzzy, c-format
 msgid ""
 "Internal error in %s at %s line %d.\n"
-"Please inform the Audacity team at https://forum.audacityteam.org/."
+"Please inform the Tenacity team at https://tenacityaudio.org/#community-buttons."
 msgstr ""
 "Εσωτερικό σφάλμα στο %s του %s γραμμή %d.\n"
 "Παρακαλούμε, ειδοποιήστε την ομάδα Audacity στο https://forum.audacityteam.org/."
 
 #: src/InconsistencyException.cpp
-#, c-format
+#, fuzzy, c-format
 msgid ""
 "Internal error at %s line %d.\n"
-"Please inform the Audacity team at https://forum.audacityteam.org/."
+"Please inform the Tenacity team at https://tenacityaudio.org/#community-buttons."
 msgstr ""
 "Εσωτερικό σφάλμα στη %s γραμμή %d.\n"
 "Παρακαλούμε, ειδοποιήστε την ομάδα Audacity στο https://forum.audacityteam.org/."
@@ -2791,7 +2902,9 @@ msgid "Track"
 msgstr "Κομμάτι"
 
 #. i18n-hint: (noun)
-#: src/LabelDialog.cpp src/commands/SetLabelCommand.cpp src/menus/LabelMenus.cpp src/toolbars/TranscriptionToolBar.cpp src/tracks/labeltrack/ui/LabelTrackView.cpp plug-ins/equalabel.ny
+#: src/LabelDialog.cpp src/commands/SetLabelCommand.cpp
+#: src/menus/LabelMenus.cpp src/toolbars/TranscriptionToolBar.cpp
+#: src/tracks/labeltrack/ui/LabelTrackView.cpp plug-ins/equalabel.ny
 msgid "Label"
 msgstr "Ετικέτα"
 
@@ -2851,7 +2964,8 @@ msgstr "Εισάγετε το όνομα του ίχνους"
 #. i18n-hint: (noun) it's the name of a kind of track.
 #. i18n-hint: This is for screen reader software and indicates that
 #. this is a Label track.
-#: src/LabelDialog.cpp src/LabelDialog.h src/LabelTrack.cpp src/TrackPanelAx.cpp
+#: src/LabelDialog.cpp src/LabelDialog.h src/LabelTrack.cpp
+#: src/TrackPanelAx.cpp
 msgid "Label Track"
 msgstr "Κομμάτι ετικέτας"
 
@@ -2862,11 +2976,13 @@ msgstr "Μία ή περισσότερες αποθηκευμένες ετικέ
 #. i18n-hint: Title on a dialog indicating that this is the first
 #. * time Audacity has been run.
 #: src/LangChoice.cpp
-msgid "Audacity First Run"
+#, fuzzy
+msgid "Tenacity First Run"
 msgstr "Η πρώτη φορά λειτουργίας του Audacity"
 
 #: src/LangChoice.cpp
-msgid "Choose Language for Audacity to use:"
+#, fuzzy
+msgid "Choose Language for Tenacity to use:"
 msgstr "Επιλέξτε την γλώσσα που θα χρησιμοποιηθεί από το Audacity:"
 
 #. i18n-hint: The %s's are replaced by translated and untranslated
@@ -2876,7 +2992,8 @@ msgstr "Επιλέξτε την γλώσσα που θα χρησιμοποιη�
 msgid "The language you have chosen, %s (%s), is not the same as the system language, %s (%s)."
 msgstr "Η γλώσσα που έχετε επιλέξει, %s (%s), δεν είναι η ίδια με την γλώσσα του συστήματος, %s (%s)."
 
-#: src/LangChoice.cpp src/effects/VST/VSTEffect.cpp src/widgets/FileDialog/gtk/FileDialogPrivate.cpp
+#: src/LangChoice.cpp src/effects/VST/VSTEffect.cpp
+#: src/widgets/FileDialog/gtk/FileDialogPrivate.cpp
 msgid "Confirm"
 msgstr "Επιβεβαίωση"
 
@@ -2894,12 +3011,13 @@ msgstr ""
 "Το παλιό αρχείο έχει αποθηκευτεί ως '%s'"
 
 #: src/Legacy.cpp
-msgid "Opening Audacity Project"
+#, fuzzy
+msgid "Opening Tenacity Project"
 msgstr "Άνοιγμα έργου του Audacity"
 
 #: src/LyricsWindow.cpp
-#, c-format
-msgid "Audacity Karaoke%s"
+#, fuzzy, c-format
+msgid "Tenacity Karaoke%s"
 msgstr "Καρακόε%s του Audacity"
 
 #: src/LyricsWindow.cpp
@@ -2950,20 +3068,24 @@ msgid "Mixing and rendering tracks"
 msgstr "Μίξη κομματιών"
 
 #: src/MixerBoard.cpp
-#, c-format
-msgid "Audacity Mixer Board%s"
+#, fuzzy, c-format
+msgid "Tenacity Mixer Board%s"
 msgstr "Πίνακας μείκτη %s του Audacity"
 
 #  i18n-hint: Title of the Gain slider, used to adjust the volume
 #. i18n-hint: title of the Gain slider, used to adjust the volume
 #. i18n-hint: Title of the Gain slider, used to adjust the volume
-#: src/MixerBoard.cpp src/menus/TrackMenus.cpp src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp src/tracks/playabletrack/wavetrack/ui/WaveTrackSliderHandles.cpp
+#: src/MixerBoard.cpp src/menus/TrackMenus.cpp
+#: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
+#: src/tracks/playabletrack/wavetrack/ui/WaveTrackSliderHandles.cpp
 msgid "Gain"
 msgstr "Απολαβή"
 
 #. i18n-hint: title of the MIDI Velocity slider
 #. i18n-hint: Title of the Velocity slider, used to adjust the volume of note tracks
-#: src/MixerBoard.cpp src/tracks/playabletrack/notetrack/ui/NoteTrackControls.cpp src/tracks/playabletrack/notetrack/ui/NoteTrackSliderHandles.cpp
+#: src/MixerBoard.cpp
+#: src/tracks/playabletrack/notetrack/ui/NoteTrackControls.cpp
+#: src/tracks/playabletrack/notetrack/ui/NoteTrackSliderHandles.cpp
 msgid "Velocity"
 msgstr "Ταχύτητα"
 
@@ -2972,17 +3094,23 @@ msgid "Musical Instrument"
 msgstr "Μουσικό όργανο"
 
 #. i18n-hint: Title of the Pan slider, used to move the sound left or right
-#: src/MixerBoard.cpp src/menus/TrackMenus.cpp src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp src/tracks/playabletrack/wavetrack/ui/WaveTrackSliderHandles.cpp
+#: src/MixerBoard.cpp src/menus/TrackMenus.cpp
+#: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
+#: src/tracks/playabletrack/wavetrack/ui/WaveTrackSliderHandles.cpp
 msgid "Pan"
 msgstr "Μετατόπιση"
 
 #. i18n-hint: This is on a button that will silence this track.
-#: src/MixerBoard.cpp src/commands/SetTrackInfoCommand.cpp src/tracks/playabletrack/ui/PlayableTrackButtonHandles.cpp src/tracks/playabletrack/ui/PlayableTrackControls.cpp
+#: src/MixerBoard.cpp src/commands/SetTrackInfoCommand.cpp
+#: src/tracks/playabletrack/ui/PlayableTrackButtonHandles.cpp
+#: src/tracks/playabletrack/ui/PlayableTrackControls.cpp
 msgid "Mute"
 msgstr "Σιγή"
 
 #. i18n-hint: This is on a button that will silence all the other tracks.
-#: src/MixerBoard.cpp src/commands/SetTrackInfoCommand.cpp src/tracks/playabletrack/ui/PlayableTrackButtonHandles.cpp src/tracks/playabletrack/ui/PlayableTrackControls.cpp
+#: src/MixerBoard.cpp src/commands/SetTrackInfoCommand.cpp
+#: src/tracks/playabletrack/ui/PlayableTrackButtonHandles.cpp
+#: src/tracks/playabletrack/ui/PlayableTrackControls.cpp
 msgid "Solo"
 msgstr "Σόλο"
 
@@ -2990,15 +3118,18 @@ msgstr "Σόλο"
 msgid "Signal Level Meter"
 msgstr "Μετρητής επιπέδου σήματος"
 
-#: src/MixerBoard.cpp src/tracks/playabletrack/wavetrack/ui/WaveTrackSliderHandles.cpp
+#: src/MixerBoard.cpp
+#: src/tracks/playabletrack/wavetrack/ui/WaveTrackSliderHandles.cpp
 msgid "Moved gain slider"
 msgstr "Μετακινημένος ολισθητής απολαβής"
 
-#: src/MixerBoard.cpp src/tracks/playabletrack/notetrack/ui/NoteTrackSliderHandles.cpp
+#: src/MixerBoard.cpp
+#: src/tracks/playabletrack/notetrack/ui/NoteTrackSliderHandles.cpp
 msgid "Moved velocity slider"
 msgstr "Μετακινήθηκε ο ολισθητής ταχύτητας"
 
-#: src/MixerBoard.cpp src/tracks/playabletrack/wavetrack/ui/WaveTrackSliderHandles.cpp
+#: src/MixerBoard.cpp
+#: src/tracks/playabletrack/wavetrack/ui/WaveTrackSliderHandles.cpp
 msgid "Moved pan slider"
 msgstr "Μετακινήθηκε ο ολισθητής μετακίνησης"
 
@@ -3033,9 +3164,9 @@ msgstr ""
 "Δεν θα φορτωθεί."
 
 #: src/ModuleManager.cpp
-#, c-format
+#, fuzzy, c-format
 msgid ""
-"The module \"%s\" is matched with Audacity version \"%s\".\n"
+"The module \"%s\" is matched with Tenacity version \"%s\".\n"
 "\n"
 "It will not be loaded."
 msgstr ""
@@ -3069,16 +3200,19 @@ msgstr ""
 "\n"
 "Να χρησιμοποιηθούν αρθρώματα μόνο από έμπιστες πηγές"
 
-#: src/ModuleManager.cpp src/TimerRecordDialog.cpp plug-ins/delay.ny plug-ins/equalabel.ny plug-ins/limiter.ny plug-ins/sample-data-export.ny
+#: src/ModuleManager.cpp src/TimerRecordDialog.cpp plug-ins/delay.ny
+#: plug-ins/equalabel.ny plug-ins/limiter.ny plug-ins/sample-data-export.ny
 msgid "Yes"
 msgstr "Ναι"
 
-#: src/ModuleManager.cpp src/TimerRecordDialog.cpp plug-ins/delay.ny plug-ins/equalabel.ny plug-ins/limiter.ny
+#: src/ModuleManager.cpp src/TimerRecordDialog.cpp plug-ins/delay.ny
+#: plug-ins/equalabel.ny plug-ins/limiter.ny
 msgid "No"
 msgstr "Όχι"
 
 #: src/ModuleManager.cpp
-msgid "Audacity Module Loader"
+#, fuzzy
+msgid "Tenacity Module Loader"
 msgstr "Φορτωτής αρθρώματος του Audacity"
 
 #: src/ModuleManager.cpp
@@ -3101,6 +3235,116 @@ msgstr ""
 #: src/NoteTrack.cpp src/TrackPanelAx.cpp
 msgid "Note Track"
 msgstr "Κομμάτι με νότες"
+
+#. i18n-hint: Name of a musical note in the 12-tone chromatic scale
+#: src/PitchName.cpp
+msgid "C"
+msgstr ""
+
+#. i18n-hint: Name of a musical note in the 12-tone chromatic scale
+#: src/PitchName.cpp
+msgid "C♯"
+msgstr ""
+
+#. i18n-hint: Name of a musical note in the 12-tone chromatic scale
+#: src/PitchName.cpp
+msgid "D"
+msgstr ""
+
+#. i18n-hint: Name of a musical note in the 12-tone chromatic scale
+#: src/PitchName.cpp
+msgid "D♯"
+msgstr ""
+
+#. i18n-hint: Name of a musical note in the 12-tone chromatic scale
+#: src/PitchName.cpp
+msgid "E"
+msgstr ""
+
+#. i18n-hint: Name of a musical note in the 12-tone chromatic scale
+#: src/PitchName.cpp
+msgid "F"
+msgstr ""
+
+#. i18n-hint: Name of a musical note in the 12-tone chromatic scale
+#: src/PitchName.cpp
+msgid "F♯"
+msgstr ""
+
+#. i18n-hint: Name of a musical note in the 12-tone chromatic scale
+#: src/PitchName.cpp
+msgid "G"
+msgstr ""
+
+#. i18n-hint: Name of a musical note in the 12-tone chromatic scale
+#: src/PitchName.cpp
+msgid "G♯"
+msgstr ""
+
+#. i18n-hint: Name of a musical note in the 12-tone chromatic scale
+#: src/PitchName.cpp
+msgid "A"
+msgstr ""
+
+#. i18n-hint: Name of a musical note in the 12-tone chromatic scale
+#: src/PitchName.cpp
+msgid "A♯"
+msgstr ""
+
+#. i18n-hint: Name of a musical note in the 12-tone chromatic scale
+#: src/PitchName.cpp
+msgid "B"
+msgstr ""
+
+#. i18n-hint: Name of a musical note in the 12-tone chromatic scale
+#: src/PitchName.cpp
+msgid "D♭"
+msgstr ""
+
+#. i18n-hint: Name of a musical note in the 12-tone chromatic scale
+#: src/PitchName.cpp
+msgid "E♭"
+msgstr ""
+
+#. i18n-hint: Name of a musical note in the 12-tone chromatic scale
+#: src/PitchName.cpp
+msgid "G♭"
+msgstr ""
+
+#. i18n-hint: Name of a musical note in the 12-tone chromatic scale
+#: src/PitchName.cpp
+msgid "A♭"
+msgstr ""
+
+#. i18n-hint: Name of a musical note in the 12-tone chromatic scale
+#: src/PitchName.cpp
+msgid "B♭"
+msgstr ""
+
+#. i18n-hint: Two, alternate names of a musical note in the 12-tone chromatic scale
+#: src/PitchName.cpp
+msgid "C♯/D♭"
+msgstr ""
+
+#. i18n-hint: Two, alternate names of a musical note in the 12-tone chromatic scale
+#: src/PitchName.cpp
+msgid "D♯/E♭"
+msgstr ""
+
+#. i18n-hint: Two, alternate names of a musical note in the 12-tone chromatic scale
+#: src/PitchName.cpp
+msgid "F♯/G♭"
+msgstr ""
+
+#. i18n-hint: Two, alternate names of a musical note in the 12-tone chromatic scale
+#: src/PitchName.cpp
+msgid "G♯/A♭"
+msgstr ""
+
+#. i18n-hint: Two, alternate names of a musical note in the 12-tone chromatic scale
+#: src/PitchName.cpp
+msgid "A♯/B♭"
+msgstr ""
 
 #: src/PluginManager.cpp
 #, c-format
@@ -3210,7 +3454,8 @@ msgstr "Ε&πιλογή όλων"
 msgid "C&lear All"
 msgstr "&Καθαρισμός όλων"
 
-#: src/PluginRegistrationDialog.cpp src/effects/EffectUI.cpp src/prefs/RecordingPrefs.cpp
+#: src/PluginRegistrationDialog.cpp src/effects/EffectUI.cpp
+#: src/prefs/RecordingPrefs.cpp
 msgid "&Enable"
 msgstr "&Ενεργοποίηση"
 
@@ -3290,9 +3535,10 @@ msgid "Mismatched Sampling Rates"
 msgstr "Ασύμφωνοι ρυθμοί δειγματοληψίας"
 
 #: src/ProjectAudioManager.cpp src/menus/TransportMenus.cpp
+#, fuzzy
 msgid ""
 "Too few tracks are selected for recording at this sample rate.\n"
-"(Audacity requires two channels at the same sample rate for\n"
+"(Tenacity requires two channels at the same sample rate for\n"
 "each stereo track)"
 msgstr ""
 "Πολύ λίγα κομμάτια είναι επιλεγμένα για ηχογράφηση με αυτόν τον ρυθμό δειγματοληψίας.\n"
@@ -3321,10 +3567,11 @@ msgid "Dropouts"
 msgstr "Διακοπές"
 
 #: src/ProjectAudioManager.cpp
+#, fuzzy
 msgid ""
 "Recorded audio was lost at the labeled locations. Possible causes:\n"
 "\n"
-"Other applications are competing with Audacity for processor time\n"
+"Other applications are competing with Tenacity for processor time\n"
 "\n"
 "You are saving directly to a slow external storage device\n"
 msgstr ""
@@ -3364,11 +3611,11 @@ msgid "Inspecting project file data"
 msgstr "Επιθεώρηση δεδομένων αρχείου έργου"
 
 #: src/ProjectFSCK.cpp
-#, c-format
+#, fuzzy, c-format
 msgid ""
 "Project check of \"%s\" folder \n"
 "detected %lld missing external audio file(s) \n"
-"('aliased files'). There is no way for Audacity \n"
+"('aliased files'). There is no way for Tenacity \n"
 "to recover these files automatically. \n"
 "\n"
 "If you choose the first or second option below, \n"
@@ -3411,11 +3658,11 @@ msgid "Warning - Missing Aliased File(s)"
 msgstr "Προειδοποίηση - Λείπουν αρχεία με ψευδώνυμα"
 
 #: src/ProjectFSCK.cpp
-#, c-format
+#, fuzzy, c-format
 msgid ""
 "Project check of \"%s\" folder \n"
 "detected %lld missing alias (.auf) blockfile(s). \n"
-"Audacity can fully regenerate these files \n"
+"Tenacity can fully regenerate these files \n"
 "from the current audio in the project."
 msgstr ""
 "Ο έλεγχος έργου του φακέλου \"%s\" \n"
@@ -3440,12 +3687,12 @@ msgid "Warning - Missing Alias Summary File(s)"
 msgstr "Προειδοποίηση - Λείπουν αρχεία περίληψης ψευδωνύμων"
 
 #: src/ProjectFSCK.cpp
-#, c-format
+#, fuzzy, c-format
 msgid ""
 "Project check of \"%s\" folder \n"
 "detected %lld missing audio data (.au) blockfile(s), \n"
 "probably due to a bug, system crash, or accidental \n"
-"deletion. There is no way for Audacity to recover \n"
+"deletion. There is no way for Tenacity to recover \n"
 "these missing files automatically. \n"
 "\n"
 "If you choose the first or second option below, \n"
@@ -3503,7 +3750,8 @@ msgstr "Προειδοποίηση - Ορφανά αρχεία ομάδας"
 
 #. i18n-hint: This title appears on a dialog that indicates the progress
 #. in doing something.
-#: src/ProjectFSCK.cpp src/ProjectFileIO.cpp src/UndoManager.cpp src/menus/TransportMenus.cpp
+#: src/ProjectFSCK.cpp src/ProjectFileIO.cpp src/UndoManager.cpp
+#: src/menus/TransportMenus.cpp
 msgid "Progress"
 msgstr "Πρόοδος"
 
@@ -3528,6 +3776,11 @@ msgstr "Προειδοποίηση: Προβλήματα στην αυτόματ
 #: src/ProjectFileIO.cpp src/menus/WindowMenus.cpp
 msgid "<untitled>"
 msgstr "<χωρίς όνομα>"
+
+#: src/ProjectFileIO.cpp
+#, fuzzy, c-format
+msgid "[Project %02i] "
+msgstr "[Έργο %02i] Audacity \"%s\""
 
 #: src/ProjectFileIO.cpp
 msgid "Failed to open the project's database"
@@ -3597,12 +3850,14 @@ msgstr ""
 "(Αδυναμία δημιουργίας των απαιτούμενων προσωρινών αρχείων)"
 
 #: src/ProjectFileIO.cpp
-msgid "This is not an Audacity project file"
+#, fuzzy
+msgid "This is not an Tenacity project file"
 msgstr "Αυτό δεν είναι αρχείο έργου του Audacity"
 
 #: src/ProjectFileIO.cpp
+#, fuzzy
 msgid ""
-"This project was created with a newer version of Audacity.\n"
+"This project was created with a newer version of Tenacity.\n"
 "\n"
 "You will need to upgrade to open it."
 msgstr ""
@@ -3734,9 +3989,9 @@ msgid "Error Writing to File"
 msgstr "Σφάλμα κατά την εγγραφή στο αρχείο"
 
 #: src/ProjectFileIO.cpp
-#, c-format
+#, fuzzy, c-format
 msgid ""
-"Audacity failed to write file %s.\n"
+"Tenacity failed to write file %s.\n"
 "Perhaps disk is full or not writable.\n"
 "For tips on freeing up space, click the help button."
 msgstr ""
@@ -3750,9 +4005,16 @@ msgstr "Συμπύκνωση έργου"
 
 #. i18n-hint: The %02i is the project number. This is followed by the project name in quotes as a %s.
 #: src/ProjectFileIO.cpp
-#, c-format
-msgid "[Project %02i] Audacity \"%s\""
+#, fuzzy, c-format
+msgid "[Project %02i] Tenacity \"%s\""
 msgstr "[Έργο %02i] Audacity \"%s\""
+
+#: src/ProjectFileIO.cpp src/commands/AudacityCommand.cpp
+#: src/effects/Effect.cpp src/effects/nyquist/Nyquist.cpp
+#: src/prefs/PrefsPanel.cpp
+#, fuzzy
+msgid "Tenacity"
+msgstr "Ταχύτητα"
 
 #. i18n-hint: E.g this is recovered audio that had been lost.
 #: src/ProjectFileIO.cpp
@@ -3761,10 +4023,10 @@ msgstr "(Ανακτημένο)"
 
 #. i18n-hint: %s will be replaced by the version number.
 #: src/ProjectFileIO.cpp
-#, c-format
+#, fuzzy, c-format
 msgid ""
-"This file was saved using Audacity %s.\n"
-"You are using Audacity %s. You may need to upgrade to a newer version to open this file."
+"This file was saved using Tenacity %s.\n"
+"You are using Tenacity %s. You may need to upgrade to a newer version to open this file."
 msgstr ""
 "Αυτό το αρχείο αποθηκεύτηκε χρησιμοποιώντας το %s Audacity.\n"
 "Χρησιμοποιείτε %s Audacity. Μπορεί να χρειαστεί να αναβαθμίσετε σε μια νεότερη έκδοση για να ανοίξετε αυτό το αρχείο."
@@ -3836,8 +4098,9 @@ msgid "Backing up project"
 msgstr "Δημιουργία αντιγράφου ασφαλείας του έργου"
 
 #: src/ProjectFileManager.cpp
+#, fuzzy
 msgid ""
-"This project was not saved properly the last time Audacity ran.\n"
+"This project was not saved properly the last time Tenacity ran.\n"
 "\n"
 "It has been recovered to the last snapshot."
 msgstr ""
@@ -3846,8 +4109,9 @@ msgstr ""
 "Έχει ανακτηθεί στο τελευταίο στιγμιότυπο."
 
 #: src/ProjectFileManager.cpp
+#, fuzzy
 msgid ""
-"This project was not saved properly the last time Audacity ran.\n"
+"This project was not saved properly the last time Tenacity ran.\n"
 "\n"
 "It has been recovered to the last snapshot, but you must save it\n"
 "to preserve its contents."
@@ -3926,8 +4190,9 @@ msgid "%sSave Project \"%s\" As..."
 msgstr "%sΑποθήκευση έργου \"%s\" ως..."
 
 #: src/ProjectFileManager.cpp
+#, fuzzy
 msgid ""
-"'Save Project' is for an Audacity project, not an audio file.\n"
+"'Save Project' is for an Tenacity project, not an audio file.\n"
 "For an audio file that will open in other apps, use 'Export'.\n"
 msgstr ""
 "Το 'Αποθήκευση έργου' είναι για έργο του Audacity, όχι για αρχείο ήχου.\n"
@@ -4004,11 +4269,12 @@ msgid "Error Opening Project"
 msgstr "Σφάλμα κατά το άνοιγμα έργου"
 
 #: src/ProjectFileManager.cpp
+#, fuzzy
 msgid ""
 "You are trying to open an automatically created backup file.\n"
 "Doing this may result in severe data loss.\n"
 "\n"
-"Please open the actual Audacity project file instead."
+"Please open the actual Tenacity project file instead."
 msgstr ""
 "Προσπαθείτε να ανοίξετε ένα αυτόματα δημιουργημένο εφεδρικό αρχείο.\n"
 "Κάνοντας το αυτό μπορεί να καταλήξει σε σοβαρή απώλεια δεδομένων.\n"
@@ -4117,8 +4383,8 @@ msgid "Automatic database backup failed."
 msgstr "Αποτυχία αυτόματου αντιγράφου ασφαλείας της βάσης δεδομένων."
 
 #: src/ProjectManager.cpp
-#, c-format
-msgid "Welcome to Audacity version %s"
+#, fuzzy, c-format
+msgid "Welcome to Tenacity version %s"
 msgstr "Καλώς ήλθατε στην έκδοση %s του Audacity"
 
 #. i18n-hint: The first %s numbers the project, the second %s is the project name.
@@ -4333,7 +4599,8 @@ msgstr "Όλες οι προτιμήσεις"
 msgid "SelectionBar"
 msgstr "Γραμμή επιλογής"
 
-#: src/Screenshot.cpp src/commands/ScreenshotCommand.cpp src/toolbars/SpectralSelectionBar.cpp
+#: src/Screenshot.cpp src/commands/ScreenshotCommand.cpp
+#: src/toolbars/SpectralSelectionBar.cpp
 msgid "Spectral Selection"
 msgstr "Φασματική επιλογή"
 
@@ -4341,46 +4608,55 @@ msgstr "Φασματική επιλογή"
 msgid "Timer"
 msgstr "Χρονόμετρο"
 
-#: src/Screenshot.cpp src/commands/ScreenshotCommand.cpp src/toolbars/ToolsToolBar.cpp
+#: src/Screenshot.cpp src/commands/ScreenshotCommand.cpp
+#: src/toolbars/ToolsToolBar.cpp
 msgid "Tools"
 msgstr "Εργαλεία"
 
-#: src/Screenshot.cpp src/commands/ScreenshotCommand.cpp src/toolbars/ControlToolBar.cpp
+#: src/Screenshot.cpp src/commands/ScreenshotCommand.cpp
+#: src/toolbars/ControlToolBar.cpp
 msgid "Transport"
 msgstr "Μεταφορά"
 
-#: src/Screenshot.cpp src/commands/ScreenshotCommand.cpp src/toolbars/MixerToolBar.cpp
+#: src/Screenshot.cpp
 msgid "Mixer"
 msgstr "Μίκτης"
 
 #. i18n-hint: Noun (the meter is used for playback or record level monitoring)
-#: src/Screenshot.cpp src/commands/ScreenshotCommand.cpp src/toolbars/MeterToolBar.cpp src/widgets/Meter.cpp
+#: src/Screenshot.cpp src/commands/ScreenshotCommand.cpp
+#: src/toolbars/MeterToolBar.cpp src/widgets/Meter.cpp
 msgid "Meter"
 msgstr "Μετρητής"
 
 #. i18n-hint: (noun) The meter that shows the loudness of the audio playing.
-#: src/Screenshot.cpp src/commands/ScreenshotCommand.cpp src/toolbars/MeterToolBar.cpp
+#: src/Screenshot.cpp src/commands/ScreenshotCommand.cpp
+#: src/toolbars/MeterToolBar.cpp
 msgid "Play Meter"
 msgstr "Μετρητής αναπαραγωγής"
 
 #. i18n-hint: (noun) The meter that shows the loudness of the audio being recorded.
-#: src/Screenshot.cpp src/commands/ScreenshotCommand.cpp src/toolbars/MeterToolBar.cpp
+#: src/Screenshot.cpp src/commands/ScreenshotCommand.cpp
+#: src/toolbars/MeterToolBar.cpp
 msgid "Record Meter"
 msgstr "Μετρητής ηχογράφησης"
 
-#: src/Screenshot.cpp src/commands/ScreenshotCommand.cpp src/toolbars/EditToolBar.cpp
+#: src/Screenshot.cpp src/commands/ScreenshotCommand.cpp
+#: src/toolbars/EditToolBar.cpp
 msgid "Edit"
 msgstr "Επεξεργασία"
 
-#: src/Screenshot.cpp src/commands/ScreenshotCommand.cpp src/prefs/DevicePrefs.h src/toolbars/DeviceToolBar.cpp
+#: src/Screenshot.cpp src/commands/ScreenshotCommand.cpp
+#: src/prefs/DevicePrefs.h src/toolbars/DeviceToolBar.cpp
 msgid "Device"
 msgstr "Συσκευή"
 
-#: src/Screenshot.cpp src/commands/ScreenshotCommand.cpp src/toolbars/TranscriptionToolBar.cpp
+#: src/Screenshot.cpp src/commands/ScreenshotCommand.cpp
+#: src/toolbars/TranscriptionToolBar.cpp
 msgid "Play-at-Speed"
 msgstr "Αναπαραγωγή-με-ταχύτητα"
 
-#: src/Screenshot.cpp src/commands/ScreenshotCommand.cpp src/toolbars/ScrubbingToolBar.cpp
+#: src/Screenshot.cpp src/commands/ScreenshotCommand.cpp
+#: src/toolbars/ScrubbingToolBar.cpp
 msgid "Scrub"
 msgstr "Τρίψιμο (Scrub)"
 
@@ -4395,7 +4671,10 @@ msgstr "Χάρακας"
 #. i18n-hint: "Tracks" include audio recordings but also other collections of
 #. * data associated with a time line, such as sequences of labels, and musical
 #. * notes
-#: src/Screenshot.cpp src/commands/GetInfoCommand.cpp src/commands/GetTrackInfoCommand.cpp src/commands/ScreenshotCommand.cpp src/export/ExportMultiple.cpp src/prefs/TracksPrefs.cpp src/prefs/TracksPrefs.h
+#: src/Screenshot.cpp src/commands/GetInfoCommand.cpp
+#: src/commands/GetTrackInfoCommand.cpp src/commands/ScreenshotCommand.cpp
+#: src/export/ExportMultiple.cpp src/prefs/TracksPrefs.cpp
+#: src/prefs/TracksPrefs.h
 msgid "Tracks"
 msgstr "Κομμάτια"
 
@@ -4505,7 +4784,8 @@ msgid "Activation level (dB):"
 msgstr "Επίπεδο ήχου για καταγραφή (dB):"
 
 #: src/SplashDialog.cpp
-msgid "Welcome to Audacity!"
+#, fuzzy
+msgid "Welcome to Tenacity!"
 msgstr "Καλωσήρθατε στο Audacity!"
 
 #: src/SplashDialog.cpp
@@ -4652,9 +4932,9 @@ msgstr ""
 "Για συμβουλές κατάλληλων δίσκων, πατήστε το πλήκτρο της βοήθειας."
 
 #: src/Theme.cpp
-#, c-format
+#, fuzzy, c-format
 msgid ""
-"Audacity could not write file:\n"
+"Tenacity could not write file:\n"
 "  %s."
 msgstr ""
 "Το Audacity δεν μπόρεσε να γράψει το αρχείο:\n"
@@ -4674,9 +4954,9 @@ msgstr ""
 "  %s."
 
 #: src/Theme.cpp
-#, c-format
+#, fuzzy, c-format
 msgid ""
-"Audacity could not open file:\n"
+"Tenacity could not open file:\n"
 "  %s\n"
 "for writing."
 msgstr ""
@@ -4685,9 +4965,9 @@ msgstr ""
 "για εγγραφή."
 
 #: src/Theme.cpp
-#, c-format
+#, fuzzy, c-format
 msgid ""
-"Audacity could not write images to file:\n"
+"Tenacity could not write images to file:\n"
 "  %s."
 msgstr ""
 "Το Audacity δεν μπόρεσε να γράψει τις εικόνες στο αρχείο:\n"
@@ -4704,9 +4984,9 @@ msgstr ""
 "  %s."
 
 #: src/Theme.cpp
-#, c-format
+#, fuzzy, c-format
 msgid ""
-"Audacity could not find file:\n"
+"Tenacity could not find file:\n"
 "  %s.\n"
 "Theme not loaded."
 msgstr ""
@@ -4716,9 +4996,9 @@ msgstr ""
 
 #. i18n-hint: Do not translate png.  It is the name of a file format.
 #: src/Theme.cpp
-#, c-format
+#, fuzzy, c-format
 msgid ""
-"Audacity could not load file:\n"
+"Tenacity could not load file:\n"
 "  %s.\n"
 "Bad png format perhaps?"
 msgstr ""
@@ -4727,8 +5007,9 @@ msgstr ""
 "Ίσως κακή μορφή png;"
 
 #: src/Theme.cpp
+#, fuzzy
 msgid ""
-"Audacity could not read its default theme.\n"
+"Tenacity could not read its default theme.\n"
 "Please report the problem."
 msgstr ""
 "Το Audacity δεν μπόρεσε να διαβάσει το προεπιλεγμένο θέμα του.\n"
@@ -4766,9 +5047,9 @@ msgstr ""
 "ήταν ήδη παρόντα. Να αντικατασταθούν;"
 
 #: src/Theme.cpp
-#, c-format
+#, fuzzy, c-format
 msgid ""
-"Audacity could not save file:\n"
+"Tenacity could not save file:\n"
 "  %s"
 msgstr ""
 "Το Audacity δεν μπόρεσε να αποθηκεύσει το αρχείο:\n"
@@ -4807,7 +5088,11 @@ msgstr "Προσαρμοσμένο"
 #. * then the 'h' indicates the second number displayed is hours, the 'm' indicates the third
 #. * number displayed is minutes, and the 's' indicates that the fourth number displayed is
 #. * seconds.
-#: src/TimeDialog.h src/TimerRecordDialog.cpp src/effects/DtmfGen.cpp src/effects/Noise.cpp src/effects/Silence.cpp src/effects/ToneGen.cpp src/effects/VST/VSTEffect.cpp src/effects/ladspa/LadspaEffect.cpp src/effects/lv2/LV2Effect.cpp
+#.
+#: src/TimeDialog.h src/TimerRecordDialog.cpp src/effects/DtmfGen.cpp
+#: src/effects/Noise.cpp src/effects/Silence.cpp src/effects/ToneGen.cpp
+#: src/effects/VST/VSTEffect.cpp src/effects/ladspa/LadspaEffect.cpp
+#: src/effects/lv2/LV2Effect.cpp
 msgid "Duration"
 msgstr "Διάρκεια"
 
@@ -4818,7 +5103,8 @@ msgid "Time Track"
 msgstr "Κομμάτι χρόνου"
 
 #: src/TimerRecordDialog.cpp
-msgid "Audacity Timer Record"
+#, fuzzy
+msgid "Tenacity Timer Record"
 msgstr "Εγγραφή με χρονοδιακόπτη στο Audacity"
 
 #: src/TimerRecordDialog.cpp
@@ -4892,7 +5178,8 @@ msgstr "Τρέχον έργο"
 msgid "Recording start:"
 msgstr "Αρχή ηχογράφησης:"
 
-#: src/TimerRecordDialog.cpp src/effects/VST/VSTEffect.cpp src/effects/ladspa/LadspaEffect.cpp
+#: src/TimerRecordDialog.cpp src/effects/VST/VSTEffect.cpp
+#: src/effects/ladspa/LadspaEffect.cpp
 msgid "Duration:"
 msgstr "Διάρκεια:"
 
@@ -4913,7 +5200,8 @@ msgid "Action after Timer Recording:"
 msgstr "Ενεργεια μετά την ηχογράφηση με χρονοδιακόπτη:"
 
 #: src/TimerRecordDialog.cpp
-msgid "Audacity Timer Record Progress"
+#, fuzzy
+msgid "Tenacity Timer Record Progress"
 msgstr "Πρόοδος της προγραμματισμένης ηχογράφησης"
 
 #: src/TimerRecordDialog.cpp
@@ -5009,6 +5297,7 @@ msgstr "099 ημέρες 024 ω 060 λ 060 δ"
 #. * are translated, with the numbers left exactly as they are.
 #. * The 'h' indicates the first number displayed is hours, the 'm' indicates the second number
 #. * displayed is minutes, and the 's' indicates that the third number displayed is seconds.
+#.
 #: src/TimerRecordDialog.cpp
 msgid "Start Date and Time"
 msgstr "Ημερομηνία και ώρα εκκίνησης"
@@ -5053,7 +5342,8 @@ msgstr "Ενεργοποίηση αυτόματης ε&ξαγωγής;"
 msgid "Export Project As:"
 msgstr "Εξαγωγή έργου ως:"
 
-#: src/TimerRecordDialog.cpp src/prefs/GUIPrefs.cpp src/prefs/PlaybackPrefs.cpp src/prefs/RecordingPrefs.cpp
+#: src/TimerRecordDialog.cpp src/prefs/GUIPrefs.cpp src/prefs/PlaybackPrefs.cpp
+#: src/prefs/RecordingPrefs.cpp
 msgid "Options"
 msgstr "Επιλογές"
 
@@ -5066,7 +5356,8 @@ msgid "Do nothing"
 msgstr "Να μην κάνει τίποτα"
 
 #: src/TimerRecordDialog.cpp
-msgid "Exit Audacity"
+#, fuzzy
+msgid "Exit Tenacity"
 msgstr "Έξοδος από το Audacity"
 
 #: src/TimerRecordDialog.cpp
@@ -5090,7 +5381,8 @@ msgid "Scheduled to stop at:"
 msgstr "Προγραμματισμένο να σταματήσει στο:"
 
 #: src/TimerRecordDialog.cpp
-msgid "Audacity Timer Record - Waiting for Start"
+#, fuzzy
+msgid "Tenacity Timer Record - Waiting for Start"
 msgstr "Προγραμματισμένη ηχογράφηση - Αναμονή για την έναρξη"
 
 #. i18n-hint: "in" means after a duration of time,
@@ -5116,7 +5408,8 @@ msgid "Recording Exported:"
 msgstr "Ηχογράφηση που εξάχθηκε:"
 
 #: src/TimerRecordDialog.cpp
-msgid "Audacity Timer Record - Waiting"
+#, fuzzy
+msgid "Tenacity Timer Record - Waiting"
 msgstr "Ηχογράφηση με χρονοδιακόπτη στο Audacity - Αναμονή"
 
 #: src/TrackInfo.cpp
@@ -5312,6 +5605,16 @@ msgstr ""
 msgid "Applying %s..."
 msgstr "Εφαρμογή του %s..."
 
+#. i18n-hint: An item name followed by a value, with appropriate separating punctuation
+#: src/commands/AudacityCommand.cpp src/effects/Effect.cpp
+#: src/effects/vamp/VampEffect.cpp src/menus/PluginMenus.cpp
+#: src/tracks/playabletrack/notetrack/ui/NoteTrackSliderHandles.cpp
+#: src/tracks/playabletrack/wavetrack/ui/WaveTrackSliderHandles.cpp
+#: src/widgets/ASlider.cpp
+#, c-format
+msgid "%s: %s"
+msgstr ""
+
 #: src/commands/AudacityCommand.h
 msgid "FAIL"
 msgstr "ΑΠΟΤΥΧΙΑ"
@@ -5330,13 +5633,15 @@ msgstr "το %s δεν είναι αποδεκτή παράμετρος από �
 msgid "Invalid value for parameter '%s': should be %s"
 msgstr "Άκυρη τιμή για την παράμετρο '%s': πρέπει να είναι %s"
 
-#: src/commands/CommandManager.cpp src/prefs/MousePrefs.cpp src/widgets/KeyView.cpp
+#: src/commands/CommandManager.cpp src/prefs/MousePrefs.cpp
+#: src/widgets/KeyView.cpp
 msgid "Command"
 msgstr "Εντολή"
 
 #. i18n-hint: %s will be the name of the effect which will be
 #. * repeated if this menu item is chosen
-#: src/commands/CommandManager.cpp src/effects/EffectUI.cpp src/menus/PluginMenus.cpp
+#: src/commands/CommandManager.cpp src/effects/EffectUI.cpp
+#: src/menus/PluginMenus.cpp
 #, c-format
 msgid "Repeat %s"
 msgstr "Επανάληψη %s"
@@ -5463,13 +5768,24 @@ msgstr "Αποσπάσματα"
 msgid "Envelopes"
 msgstr "Καμπύλες ακουστότητας"
 
-#: src/commands/GetInfoCommand.cpp src/commands/GetTrackInfoCommand.cpp src/export/ExportMultiple.cpp
+#: src/commands/GetInfoCommand.cpp src/commands/GetTrackInfoCommand.cpp
+#: src/export/ExportMultiple.cpp
 msgid "Labels"
 msgstr "Ετικέτες"
 
 #: src/commands/GetInfoCommand.cpp
 msgid "Boxes"
 msgstr "Πλαίσια"
+
+#. i18n-hint JavaScript Object Notation
+#: src/commands/GetInfoCommand.cpp src/commands/HelpCommand.cpp
+msgid "JSON"
+msgstr ""
+
+#. i18n-hint name of a computer programming language
+#: src/commands/GetInfoCommand.cpp src/commands/HelpCommand.cpp
+msgid "LISP"
+msgstr ""
 
 #: src/commands/GetInfoCommand.cpp src/commands/HelpCommand.cpp
 msgid "Brief"
@@ -5479,7 +5795,8 @@ msgstr "Σύντομο"
 msgid "Type:"
 msgstr "Τύπος:"
 
-#: src/commands/GetInfoCommand.cpp src/commands/HelpCommand.cpp src/export/ExportFFmpegDialogs.cpp src/export/ExportMultiple.cpp
+#: src/commands/GetInfoCommand.cpp src/commands/HelpCommand.cpp
+#: src/export/ExportFFmpegDialogs.cpp src/export/ExportMultiple.cpp
 msgid "Format:"
 msgstr "Μορφή:"
 
@@ -5506,6 +5823,10 @@ msgstr "Σχόλιο"
 #: src/commands/HelpCommand.cpp src/export/ExportCL.cpp
 msgid "Command:"
 msgstr "Εντολή:"
+
+#: src/commands/HelpCommand.cpp
+msgid "_"
+msgstr ""
 
 #: src/commands/HelpCommand.h
 msgid "Gives help on a command."
@@ -5543,12 +5864,17 @@ msgstr "Εξαγωγή σε αρχείο."
 msgid "Builtin Commands"
 msgstr "Ενσωματωμένες εντολές"
 
-#: src/commands/LoadCommands.cpp src/effects/LoadEffects.cpp src/effects/VST/VSTEffect.cpp src/effects/audiounits/AudioUnitEffect.cpp src/effects/ladspa/LadspaEffect.cpp src/effects/lv2/LoadLV2.cpp src/effects/nyquist/LoadNyquist.cpp src/effects/vamp/LoadVamp.cpp
-msgid "The Audacity Team"
+#: src/commands/LoadCommands.cpp src/effects/LoadEffects.cpp
+#: src/effects/VST/VSTEffect.cpp src/effects/audiounits/AudioUnitEffect.cpp
+#: src/effects/ladspa/LadspaEffect.cpp src/effects/lv2/LoadLV2.cpp
+#: src/effects/nyquist/LoadNyquist.cpp src/effects/vamp/LoadVamp.cpp
+#, fuzzy
+msgid "The Tenacity Team"
 msgstr "Η ομάδα του Audacity"
 
 #: src/commands/LoadCommands.cpp
-msgid "Provides builtin commands to Audacity"
+#, fuzzy
+msgid "Provides builtin commands to Tenacity"
 msgstr "Παρέχει ενσωματωμένες εντολές στο Audacity"
 
 #: src/commands/LoadCommands.cpp
@@ -5611,7 +5937,10 @@ msgstr "Καθαρίζει τα περιεχόμενα του ημερολογί
 msgid "Get Preference"
 msgstr "Λήψη προτίμησης"
 
-#: src/commands/PreferenceCommands.cpp src/commands/SetProjectCommand.cpp src/commands/SetTrackInfoCommand.cpp src/tracks/labeltrack/ui/LabelTrackView.cpp src/tracks/ui/CommonTrackControls.cpp
+#: src/commands/PreferenceCommands.cpp src/commands/SetProjectCommand.cpp
+#: src/commands/SetTrackInfoCommand.cpp
+#: src/tracks/labeltrack/ui/LabelTrackView.cpp
+#: src/tracks/ui/CommonTrackControls.cpp
 msgid "Name:"
 msgstr "Όνομα:"
 
@@ -5661,7 +5990,8 @@ msgstr "Πλήρης οθόνη"
 msgid "Toolbars"
 msgstr "Γραμμές εργαλείων"
 
-#: src/commands/ScreenshotCommand.cpp src/prefs/EffectsPrefs.cpp src/prefs/EffectsPrefs.h
+#: src/commands/ScreenshotCommand.cpp src/prefs/EffectsPrefs.cpp
+#: src/prefs/EffectsPrefs.h
 msgid "Effects"
 msgstr "Εφέ"
 
@@ -5801,7 +6131,8 @@ msgstr "Ορισμός"
 msgid "Add"
 msgstr "Προσθήκη"
 
-#: src/commands/SelectCommand.cpp src/effects/EffectUI.cpp src/tracks/playabletrack/wavetrack/ui/CutlineHandle.cpp
+#: src/commands/SelectCommand.cpp src/effects/EffectUI.cpp
+#: src/tracks/playabletrack/wavetrack/ui/CutlineHandle.cpp
 msgid "Remove"
 msgstr "Αφαίρεση"
 
@@ -5886,7 +6217,8 @@ msgid "Edited Envelope"
 msgstr "Επεξεργασμένος φάκελος"
 
 #. i18n-hint: The envelope is a curve that controls the audio loudness.
-#: src/commands/SetEnvelopeCommand.cpp src/prefs/MousePrefs.cpp src/tracks/ui/EnvelopeHandle.cpp
+#: src/commands/SetEnvelopeCommand.cpp src/prefs/MousePrefs.cpp
+#: src/tracks/ui/EnvelopeHandle.cpp
 msgid "Envelope"
 msgstr "Καμπύλη ακουστότητας"
 
@@ -5987,7 +6319,10 @@ msgstr "Μετακίνηση:"
 msgid "Set Track Visuals"
 msgstr "Ορισμός οπτικών κομματιού"
 
-#: src/commands/SetTrackInfoCommand.cpp src/effects/ToneGen.cpp src/prefs/SpectrogramSettings.cpp src/prefs/TracksPrefs.cpp src/prefs/WaveformSettings.cpp src/widgets/Meter.cpp plug-ins/sample-data-export.ny
+#: src/commands/SetTrackInfoCommand.cpp src/effects/ToneGen.cpp
+#: src/prefs/SpectrogramSettings.cpp src/prefs/TracksPrefs.cpp
+#: src/prefs/WaveformSettings.cpp src/widgets/Meter.cpp
+#: plug-ins/sample-data-export.ny
 msgid "Linear"
 msgstr "Γραμμικό"
 
@@ -6091,12 +6426,18 @@ msgstr "Επιλέξατε ένα κομμάτι που δεν περιέχει 
 msgid "Auto Duck needs a control track which must be placed below the selected track(s)."
 msgstr "Η αυτόματη μείωση έντασης χρειάζεται ένα κομμάτι ελέγχου που πρέπει να τοποθετηθεί κάτω από τα επιλεγμένα κομμάτια."
 
+#: src/effects/AutoDuck.cpp src/effects/TruncSilence.cpp
+msgid "db"
+msgstr ""
+
 #: src/effects/AutoDuck.cpp
 msgid "Duck &amount:"
 msgstr "&Ποσότητα μείωσης:"
 
 #. i18n-hint: Name of time display format that shows time in seconds
-#: src/effects/AutoDuck.cpp src/effects/TruncSilence.cpp src/prefs/PlaybackPrefs.cpp src/prefs/RecordingPrefs.cpp src/widgets/NumericTextCtrl.cpp
+#: src/effects/AutoDuck.cpp src/effects/TruncSilence.cpp
+#: src/prefs/PlaybackPrefs.cpp src/prefs/RecordingPrefs.cpp
+#: src/widgets/NumericTextCtrl.cpp
 msgid "seconds"
 msgstr "δευτερόλεπτα"
 
@@ -6120,7 +6461,8 @@ msgstr "Διάρκεια εσωτερικού &σβησίματος:"
 msgid "Inner &fade up length:"
 msgstr "Διάρκεια εσωτερικής ενίσ&χυσης:"
 
-#: src/effects/AutoDuck.cpp src/effects/Compressor.cpp src/effects/TruncSilence.cpp
+#: src/effects/AutoDuck.cpp src/effects/Compressor.cpp
+#: src/effects/TruncSilence.cpp
 msgid "&Threshold:"
 msgstr "&Κατώφλι:"
 
@@ -6258,11 +6600,13 @@ msgstr "σε (Hz)"
 msgid "t&o"
 msgstr "σ&ε"
 
-#: src/effects/ChangePitch.cpp src/effects/ChangeSpeed.cpp src/effects/ChangeTempo.cpp
+#: src/effects/ChangePitch.cpp src/effects/ChangeSpeed.cpp
+#: src/effects/ChangeTempo.cpp
 msgid "Percent C&hange:"
 msgstr "Ποσοστιαία α&λλαγή:"
 
-#: src/effects/ChangePitch.cpp src/effects/ChangeSpeed.cpp src/effects/ChangeTempo.cpp
+#: src/effects/ChangePitch.cpp src/effects/ChangeSpeed.cpp
+#: src/effects/ChangeTempo.cpp
 msgid "Percent Change"
 msgstr "Ποσοστιαία αλλαγή"
 
@@ -6270,13 +6614,27 @@ msgstr "Ποσοστιαία αλλαγή"
 msgid "&Use high quality stretching (slow)"
 msgstr "&Χρήση επιμήκυνσης υψηλής ποιότητας (αργό)"
 
+#: src/effects/ChangeSpeed.cpp
+msgid "33⅓"
+msgstr ""
+
+#: src/effects/ChangeSpeed.cpp
+msgid "45"
+msgstr ""
+
+#: src/effects/ChangeSpeed.cpp
+msgid "78"
+msgstr ""
+
 #  i18n-hint: n/a is an English
 #  abbreviation meaning "not
 #  applicable" (in other words,
 #  unimportant, not relevant).
 #. i18n-hint: n/a is an English abbreviation meaning "not applicable".
 #. i18n-hint: Can mean "not available," "not applicable," "no answer"
-#: src/effects/ChangeSpeed.cpp src/effects/audiounits/AudioUnitEffect.cpp src/effects/ladspa/LadspaEffect.cpp src/effects/lv2/LV2Effect.cpp src/effects/nyquist/Nyquist.cpp
+#: src/effects/ChangeSpeed.cpp src/effects/audiounits/AudioUnitEffect.cpp
+#: src/effects/ladspa/LadspaEffect.cpp src/effects/lv2/LV2Effect.cpp
+#: src/effects/nyquist/Nyquist.cpp
 msgid "n/a"
 msgstr "μή εφαρμόσιμο"
 
@@ -6304,6 +6662,7 @@ msgstr "Τυπικές στροφές ανά λεπτό βινυλίου:"
 
 #. i18n-hint: changing speed of audio "from" one value "to" another
 #. "rpm" means "revolutions per minute" as on a vinyl record turntable
+#.
 #: src/effects/ChangeSpeed.cpp
 msgid "From rpm"
 msgstr "Από στροφές ανά λεπτό"
@@ -6316,6 +6675,7 @@ msgstr "α&πό"
 
 #. i18n-hint: changing speed of audio "from" one value "to" another
 #. "rpm" means "revolutions per minute" as on a vinyl record turntable
+#.
 #: src/effects/ChangeSpeed.cpp
 msgid "To rpm"
 msgstr "Σε στροφές ανά λεπτό"
@@ -6458,6 +6818,12 @@ msgstr "Συμπιεστής"
 msgid "Compresses the dynamic range of audio"
 msgstr "Συμπιέζει τη δυναμική περιοχή του ήχου"
 
+#. i18n-hint: usually leave this as is as dB doesn't get translated
+#: src/effects/Compressor.cpp
+#, c-format
+msgid "%3d dB"
+msgstr ""
+
 #: src/effects/Compressor.cpp src/effects/ScoreAlignDialog.cpp
 #, c-format
 msgid "%.2f secs"
@@ -6467,6 +6833,20 @@ msgstr "%.2f δευτερόλρπτα"
 #, c-format
 msgid "%.1f secs"
 msgstr "%.1f δευτερόλεπτα"
+
+#. i18n-hint: Unless your language has a different convention for ratios,
+#. * like 8:1, leave as is.
+#: src/effects/Compressor.cpp
+#, c-format
+msgid "%.0f:1"
+msgstr ""
+
+#. i18n-hint: Unless your language has a different convention for ratios,
+#. * like 8:1, leave as is.
+#: src/effects/Compressor.cpp
+#, c-format
+msgid "%.1f:1"
+msgstr ""
 
 #: src/effects/Compressor.cpp
 #, c-format
@@ -6583,7 +6963,8 @@ msgid "Contrast Analyzer, for measuring RMS volume differences between two selec
 msgstr "Ο αναλυτής αντίθεσης, για τη μέτρηση διαφορών έντασης RMS μεταξύ δύο επιλογών του ήχου."
 
 #. i18n-hint noun
-#: src/effects/Contrast.cpp src/effects/ToneGen.cpp src/toolbars/SelectionBar.cpp
+#: src/effects/Contrast.cpp src/effects/ToneGen.cpp
+#: src/toolbars/SelectionBar.cpp
 msgid "End"
 msgstr "Τέλος"
 
@@ -6643,6 +7024,18 @@ msgstr "&Διαφορά:"
 msgid "&Help"
 msgstr "&Βοήθεια"
 
+#. i18n-hint: RMS abbreviates root mean square, a certain averaging method
+#: src/effects/Contrast.cpp
+#, c-format
+msgid "RMS = %s."
+msgstr ""
+
+#. i18n-hint: dB abbreviates decibels
+#: src/effects/Contrast.cpp
+#, c-format
+msgid "%s dB"
+msgstr ""
+
 #: src/effects/Contrast.cpp
 msgid "zero"
 msgstr "μηδέν"
@@ -6650,6 +7043,13 @@ msgstr "μηδέν"
 #: src/effects/Contrast.cpp
 msgid "indeterminate"
 msgstr "ενδιάμεσο"
+
+#. i18n-hint: dB abbreviates decibels
+#. * RMS abbreviates root mean square, a certain averaging method
+#: src/effects/Contrast.cpp
+#, fuzzy, c-format
+msgid "%.2f dB RMS"
+msgstr "%.2f dB μέσος όρος RMS"
 
 #. i18n-hint: dB abbreviates decibels
 #: src/effects/Contrast.cpp
@@ -6703,6 +7103,12 @@ msgstr "Διαφορά ρεύματος"
 #: src/effects/Contrast.cpp
 msgid "Measured foreground level"
 msgstr "Το επίπεδο προσκηνίου μετρήθηκε"
+
+#. i18n-hint: short form of 'decibels'
+#: src/effects/Contrast.cpp
+#, fuzzy, c-format
+msgid "%.2f dB"
+msgstr "%.2f δευτερόλρπτα"
 
 #: src/effects/Contrast.cpp
 msgid "No foreground measured"
@@ -6771,6 +7177,12 @@ msgstr "Κριτήρια επιτυχίας 1.4.7 του WCAG 2.0: Αποτυχ�
 #: src/effects/Contrast.cpp
 msgid "Data gathered"
 msgstr "Συγκεντρωμένα δεδομένα"
+
+#. i18n-hint: day of month, month, year, hour, minute, second
+#: src/effects/Contrast.cpp
+#, c-format
+msgid "%d %s %02d %02dh %02dm %02ds"
+msgstr ""
 
 #: src/effects/Contrast.cpp
 msgid "Contrast Analysis (WCAG 2 compliance)"
@@ -6867,6 +7279,10 @@ msgid "2nd Harmonic (Octave)"
 msgstr "2η αρμονική (οκτάβα)"
 
 #: src/effects/Distortion.cpp
+msgid "Gated Expansion Distortion"
+msgstr ""
+
+#: src/effects/Distortion.cpp
 msgid "Leveller, Light, -70dB noise floor"
 msgstr "Ισοσταθμιστής, ελαφρύς, -70dB δάπεδο θορύβου"
 
@@ -6945,6 +7361,10 @@ msgstr "Έλεγχοι παραμέτρου"
 #: src/effects/Distortion.cpp
 msgid "Clipping level"
 msgstr "Επίπεδο ψαλιδίσματος"
+
+#: src/effects/Distortion.cpp
+msgid "Drive"
+msgstr ""
 
 #: src/effects/Distortion.cpp
 msgid "Make-up Gain"
@@ -7042,7 +7462,9 @@ msgstr "Α&κολουθία DTMF:"
 msgid "&Amplitude (0-1):"
 msgstr "&Πλάτος σήματος (0-1):"
 
-#: src/effects/DtmfGen.cpp src/effects/Noise.cpp src/effects/Silence.cpp src/effects/ToneGen.cpp src/effects/TruncSilence.cpp src/effects/lv2/LV2Effect.cpp
+#: src/effects/DtmfGen.cpp src/effects/Noise.cpp src/effects/Silence.cpp
+#: src/effects/ToneGen.cpp src/effects/TruncSilence.cpp
+#: src/effects/lv2/LV2Effect.cpp
 msgid "&Duration:"
 msgstr "&Διάρκεια:"
 
@@ -7055,12 +7477,29 @@ msgid "Duty cycle:"
 msgstr "Κύκλος δραστηριότητας:"
 
 #: src/effects/DtmfGen.cpp
+#, fuzzy, c-format
+msgid "%.1f %%"
+msgstr "%.1f δευτερόλεπτα"
+
+#: src/effects/DtmfGen.cpp
 msgid "Tone duration:"
 msgstr "Διάρκεια τόνου:"
+
+#. i18n-hint milliseconds
+#: src/effects/DtmfGen.cpp
+#, c-format
+msgid "%.0f ms"
+msgstr ""
 
 #: src/effects/DtmfGen.cpp
 msgid "Silence duration:"
 msgstr "Διάρκεια σιγής:"
+
+#. i18n-hint milliseconds
+#: src/effects/DtmfGen.cpp
+#, c-format
+msgid "%0.f ms"
+msgstr ""
 
 #: src/effects/Echo.cpp
 msgid "Echo"
@@ -7070,7 +7509,8 @@ msgstr "Ηχώ"
 msgid "Repeats the selected audio again and again"
 msgstr "Επαναλαμβάνει τον επιλεγμένο ήχο ξανά και ξανά"
 
-#: src/effects/Echo.cpp src/effects/FindClipping.cpp src/effects/Paulstretch.cpp
+#: src/effects/Echo.cpp src/effects/FindClipping.cpp
+#: src/effects/Paulstretch.cpp
 msgid "Requested value exceeds memory capacity."
 msgstr "Η ζητούμενη τιμή ξεπερνά την ικανότητα της μνήμης."
 
@@ -7094,7 +7534,8 @@ msgstr "Προρυθμίσεις"
 msgid "Export Effect Parameters"
 msgstr "Εξαγωγή παραμέτρων εφέ"
 
-#: src/effects/Effect.cpp src/effects/VST/VSTEffect.cpp src/xml/XMLFileReader.cpp
+#: src/effects/Effect.cpp src/effects/VST/VSTEffect.cpp
+#: src/xml/XMLFileReader.cpp
 #, c-format
 msgid "Could not open file: \"%s\""
 msgstr "Αδύνατο το άνοιγμα του αρχείου: \"%s\""
@@ -7131,6 +7572,15 @@ msgstr "Προετοιμασία προεπισκόπισης"
 #: src/effects/Effect.cpp
 msgid "Previewing"
 msgstr "Προεπισκόπηση"
+
+#. i18n-hint: "Nyquist" is an embedded interpreted programming language in
+#. Audacity, named in honor of the Swedish-American Harry Nyquist (or Nyqvist).
+#. In the translations of this and other strings, you may transliterate the
+#. name into another alphabet.
+#: src/effects/Effect.h
+#, fuzzy
+msgid "Nyquist"
+msgstr "Σφάλμα Nyquist"
 
 #: src/effects/EffectManager.cpp
 #, c-format
@@ -7203,6 +7653,11 @@ msgstr ""
 #: src/effects/EffectManager.cpp
 msgid "Command failed to initialize"
 msgstr "Αποτυχία αρχικοποίησης εντολής"
+
+#: src/effects/EffectUI.cpp
+#, fuzzy
+msgid "Effects Rack"
+msgstr "Εμφάνιση Effects Rack"
 
 #: src/effects/EffectUI.cpp
 msgid "&Apply"
@@ -7459,6 +7914,10 @@ msgid "Low rolloff for speech"
 msgstr "Χαμηλή εξασθένιση ομιλίας"
 
 #: src/effects/Equalization.cpp
+msgid "RIAA"
+msgstr ""
+
+#: src/effects/Equalization.cpp
 msgid "Telephone"
 msgstr "Τηλέφωνο"
 
@@ -7495,12 +7954,41 @@ msgid "Effect Unavailable"
 msgstr "Μη διαθέσιμο εφέ"
 
 #: src/effects/Equalization.cpp src/effects/ScienFilter.cpp
+msgid "+ dB"
+msgstr ""
+
+#: src/effects/Equalization.cpp src/effects/ScienFilter.cpp
 msgid "Max dB"
 msgstr "Μέγιστα dB"
 
 #: src/effects/Equalization.cpp src/effects/ScienFilter.cpp
+#, c-format
+msgid "%d dB"
+msgstr ""
+
+#: src/effects/Equalization.cpp src/effects/ScienFilter.cpp
 msgid "Min dB"
 msgstr "Ελάχιστα dB"
+
+#: src/effects/Equalization.cpp src/effects/ScienFilter.cpp
+msgid "- dB"
+msgstr ""
+
+#: src/effects/Equalization.cpp
+#, c-format
+msgid "%d Hz"
+msgstr ""
+
+#: src/effects/Equalization.cpp
+#, c-format
+msgid "%g kHz"
+msgstr ""
+
+#. i18n-hint k is SI abbreviation for x1,000.  Usually unchanged in translation.
+#: src/effects/Equalization.cpp
+#, c-format
+msgid "%gk"
+msgstr ""
 
 #: src/effects/Equalization.cpp
 msgid "&EQ Type:"
@@ -7575,8 +8063,26 @@ msgid "D&efault"
 msgstr "&Προεπιλεγμένα"
 
 #: src/effects/Equalization.cpp
+msgid "&SSE"
+msgstr ""
+
+#: src/effects/Equalization.cpp
 msgid "SSE &Threaded"
 msgstr "&Κατώφλι SSE"
+
+#: src/effects/Equalization.cpp
+msgid "A&VX"
+msgstr ""
+
+#: src/effects/Equalization.cpp
+#, fuzzy
+msgid "AV&X Threaded"
+msgstr "&Κατώφλι SSE"
+
+#: src/effects/Equalization.cpp
+#, fuzzy
+msgid "&Bench"
+msgstr "Έλεγχος επιδόσεων"
 
 #. i18n-hint: name of the 'unnamed' custom curve
 #: src/effects/Equalization.cpp
@@ -7813,7 +8319,8 @@ msgid "Builtin Effects"
 msgstr "Ενσωματωμένα εφέ"
 
 #: src/effects/LoadEffects.cpp
-msgid "Provides builtin effects to Audacity"
+#, fuzzy
+msgid "Provides builtin effects to Tenacity"
 msgstr "Παρέχει ενσωματωμένα εφέ στο Audacity"
 
 #: src/effects/LoadEffects.cpp
@@ -7823,6 +8330,10 @@ msgstr "Άγνωστο όνομα ενσωματωμένου εφέ"
 #: src/effects/Loudness.cpp
 msgid "perceived loudness"
 msgstr "αντιλαμβανόμενη ακουστότητας"
+
+#: src/effects/Loudness.cpp src/widgets/Meter.cpp
+msgid "RMS"
+msgstr ""
 
 #: src/effects/Loudness.cpp
 msgid "Loudness Normalization"
@@ -7854,6 +8365,14 @@ msgstr "&Κανονικοποίηση"
 #: src/effects/Loudness.cpp
 msgid "Loudness LUFS"
 msgstr "Ακουστότητα LUFS"
+
+#: src/effects/Loudness.cpp
+msgid "LUFS"
+msgstr ""
+
+#: src/effects/Loudness.cpp
+msgid "RMS dB"
+msgstr ""
 
 #: src/effects/Loudness.cpp
 msgid "Normalize &stereo channels independently"
@@ -7923,7 +8442,16 @@ msgid "Hann, Hann (default)"
 msgstr "Hann, Hann (προεπιλογή)"
 
 #: src/effects/NoiseReduction.cpp
+msgid "Blackman, Hann"
+msgstr ""
+
+#: src/effects/NoiseReduction.cpp
 msgid "Hamming, none"
+msgstr "Hamming, καμία"
+
+#: src/effects/NoiseReduction.cpp
+#, fuzzy
+msgid "Hamming, Hann"
 msgstr "Hamming, καμία"
 
 #: src/effects/NoiseReduction.cpp
@@ -8023,8 +8551,9 @@ msgid "Step 1"
 msgstr "Βήμα 1"
 
 #: src/effects/NoiseReduction.cpp src/effects/NoiseRemoval.cpp
+#, fuzzy
 msgid ""
-"Select a few seconds of just noise so Audacity knows what to filter out,\n"
+"Select a few seconds of just noise so Tenacity knows what to filter out,\n"
 "then click Get Noise Profile:"
 msgstr ""
 "Επιλέξτε μερικά δευτερόλεπτα θορύβου, ώστε το Audacity να γνωρίζει τι θα αποβάλει,\n"
@@ -8076,13 +8605,62 @@ msgstr "Τύποι &παραθύρου:"
 msgid "Window si&ze:"
 msgstr "Μέ&γεθος παραθύρου:"
 
+#: src/effects/NoiseReduction.cpp src/export/ExportFFmpegDialogs.cpp
+msgid "8"
+msgstr ""
+
+#: src/effects/NoiseReduction.cpp src/prefs/SpectrumPrefs.cpp
+msgid "16"
+msgstr ""
+
+#: src/effects/NoiseReduction.cpp src/prefs/SpectrumPrefs.cpp
+msgid "32"
+msgstr ""
+
+#: src/effects/NoiseReduction.cpp src/prefs/SpectrumPrefs.cpp
+msgid "64"
+msgstr ""
+
+#: src/effects/NoiseReduction.cpp src/prefs/SpectrumPrefs.cpp
+msgid "128"
+msgstr ""
+
+#: src/effects/NoiseReduction.cpp src/prefs/SpectrumPrefs.cpp
+msgid "256"
+msgstr ""
+
+#: src/effects/NoiseReduction.cpp src/prefs/SpectrumPrefs.cpp
+msgid "512"
+msgstr ""
+
+#: src/effects/NoiseReduction.cpp
+msgid "1024"
+msgstr ""
+
 #: src/effects/NoiseReduction.cpp
 msgid "2048 (default)"
 msgstr "2048 (προεπιλογή)"
 
+#: src/effects/NoiseReduction.cpp src/prefs/SpectrumPrefs.cpp
+msgid "4096"
+msgstr ""
+
+#: src/effects/NoiseReduction.cpp src/prefs/SpectrumPrefs.cpp
+msgid "8192"
+msgstr ""
+
+#: src/effects/NoiseReduction.cpp src/prefs/SpectrumPrefs.cpp
+msgid "16384"
+msgstr ""
+
 #: src/effects/NoiseReduction.cpp
 msgid "S&teps per window:"
 msgstr "&Βήματα ανά παράθυρο:"
+
+#: src/effects/NoiseReduction.cpp src/export/ExportFFmpegDialogs.cpp
+#: src/export/ExportFLAC.cpp
+msgid "2"
+msgstr ""
 
 #: src/effects/NoiseReduction.cpp
 msgid "4 (default)"
@@ -8198,12 +8776,18 @@ msgid "N&ormalize stereo channels independently"
 msgstr "Ανεξάρτητη κα&νονικοποίηση στερεοφωνικών καναλιών"
 
 #: src/effects/Paulstretch.cpp
+#, fuzzy
+msgid "Paulstretch"
+msgstr "Επέκταση"
+
+#: src/effects/Paulstretch.cpp
 msgid "Paulstretch is only for an extreme time-stretch or \"stasis\" effect"
 msgstr "Το Paulstretch είναι μόνο για ακραία επιμήκυνση χρόνου ή το εφέ \"στάση\""
 
 #. i18n-hint: This is how many times longer the sound will be, e.g. applying
 #. * the effect to a 1-second sample, with the default Stretch Factor of 10.0
 #. * will give an (approximately) 10 second sound
+#.
 #: src/effects/Paulstretch.cpp
 msgid "&Stretch Factor:"
 msgstr "Συντελεστής ε&πέκτασης:"
@@ -8485,6 +9069,11 @@ msgstr "Αντιστρέφει τον επιλεγμένο ήχο"
 msgid "SBSMS Time / Pitch Stretch"
 msgstr "Χρόνος SBSMS / Επιμήκυνση τονικού ύψους"
 
+#. i18n-hint: Butterworth is the name of the person after whom the filter type is named.
+#: src/effects/ScienFilter.cpp
+msgid "Butterworth"
+msgstr ""
+
 #. i18n-hint: Chebyshev is the name of the person after whom the filter type is named.
 #: src/effects/ScienFilter.cpp
 msgid "Chebyshev Type I"
@@ -8640,6 +9229,11 @@ msgstr "Χρήση προεπιλογών"
 #: src/effects/ScoreAlignDialog.cpp
 msgid "Restore Defaults"
 msgstr "Επαναφορά προεπιλογών"
+
+#: src/effects/ScoreAlignDialog.cpp
+#, c-format
+msgid "%.3f"
+msgstr ""
 
 #. i18n-hint: noun
 #: src/effects/Silence.cpp
@@ -8799,6 +9393,10 @@ msgstr "Αναγνώριση σιγής"
 msgid "Tr&uncate to:"
 msgstr "&Περικοπή σε:"
 
+#: src/effects/TruncSilence.cpp src/import/ImportRaw.cpp
+msgid "%"
+msgstr ""
+
 #: src/effects/TruncSilence.cpp
 msgid "C&ompress to:"
 msgstr "Σ&υμπίεση σε:"
@@ -8812,7 +9410,8 @@ msgid "VST Effects"
 msgstr "Εφέ VST"
 
 #: src/effects/VST/VSTEffect.cpp
-msgid "Adds the ability to use VST effects in Audacity."
+#, fuzzy
+msgid "Adds the ability to use VST effects in Tenacity."
 msgstr "Προσθέτει τη δυνατότητα χρήσης εφέ VST στο Audacity."
 
 #: src/effects/VST/VSTEffect.cpp
@@ -8824,7 +9423,8 @@ msgstr "Σάρωση των Shell VST"
 msgid "Registering %d of %d: %-64.64s"
 msgstr "Καταχωρούνται %d από %d: %-64.64s"
 
-#: src/effects/VST/VSTEffect.cpp src/effects/ladspa/LadspaEffect.cpp src/effects/lv2/LoadLV2.cpp src/effects/vamp/LoadVamp.cpp
+#: src/effects/VST/VSTEffect.cpp src/effects/ladspa/LadspaEffect.cpp
+#: src/effects/lv2/LoadLV2.cpp src/effects/vamp/LoadVamp.cpp
 msgid "Could not load the library"
 msgstr "Αδυναμία φόρτωσης της βιβλιοθήκης"
 
@@ -8844,7 +9444,8 @@ msgstr "Το μέγεθος βοηθητικής μνήμης ελέγχει τ�
 msgid "&Buffer Size (8 to 1048576 samples):"
 msgstr "Μέγεθος ε&νδιάμεσης μνήμης (8 έως 1048576 δείγματα):"
 
-#: src/effects/VST/VSTEffect.cpp src/effects/audiounits/AudioUnitEffect.cpp src/effects/ladspa/LadspaEffect.cpp src/effects/lv2/LV2Effect.cpp
+#: src/effects/VST/VSTEffect.cpp src/effects/audiounits/AudioUnitEffect.cpp
+#: src/effects/ladspa/LadspaEffect.cpp src/effects/lv2/LV2Effect.cpp
 msgid "Latency Compensation"
 msgstr "Αντιστάθμιση αναμονής"
 
@@ -8852,7 +9453,8 @@ msgstr "Αντιστάθμιση αναμονής"
 msgid "As part of their processing, some VST effects must delay returning audio to Audacity. When not compensating for this delay, you will notice that small silences have been inserted into the audio. Enabling this option will provide that compensation, but it may not work for all VST effects."
 msgstr "Ως μέρος της επεξεργασίας τους, κάποια εφέ VST πρέπει να καθυστερήσουν την επιστροφή ήχου στο Audacity. Όταν δεν αντισταθμίζεται αυτή η καθυστέρηση, θα σημειώσετε ότι θα έχουν εισαχθεί μικρές σιγάσεις στον ήχο. Ενεργοποιώντας αυτήν την επιλογή θα παράχεται αυτή η αντιστάθμιση, αλλά μπορεί να μην δουλεύει για όλα τα εφέ VST."
 
-#: src/effects/VST/VSTEffect.cpp src/effects/audiounits/AudioUnitEffect.cpp src/effects/ladspa/LadspaEffect.cpp src/effects/lv2/LV2Effect.cpp
+#: src/effects/VST/VSTEffect.cpp src/effects/audiounits/AudioUnitEffect.cpp
+#: src/effects/ladspa/LadspaEffect.cpp src/effects/lv2/LV2Effect.cpp
 msgid "Enable &compensation"
 msgstr "Ενεργοποίηση α&ντιστάθμισης"
 
@@ -8886,7 +9488,8 @@ msgid "Standard VST program file"
 msgstr "Αρχείου προγράμματος τυπικού VST"
 
 #: src/effects/VST/VSTEffect.cpp
-msgid "Audacity VST preset file"
+#, fuzzy
+msgid "Tenacity VST preset file"
 msgstr "Αρχείο προρύθμισης Audacity VST"
 
 #: src/effects/VST/VSTEffect.cpp
@@ -8913,7 +9516,8 @@ msgstr "Σφάλμα κατά τη φόρτωση των προεπιλογών 
 msgid "Unable to load presets file."
 msgstr "Αδύνατη η φόρτωση του αρχείου προεπιλογών."
 
-#: src/effects/VST/VSTEffect.cpp src/effects/ladspa/LadspaEffect.cpp src/effects/lv2/LV2Effect.cpp
+#: src/effects/VST/VSTEffect.cpp src/effects/ladspa/LadspaEffect.cpp
+#: src/effects/lv2/LV2Effect.cpp
 msgid "Effect Settings"
 msgstr "Ρυθμίσεις των εφέ"
 
@@ -8929,6 +9533,16 @@ msgstr "Αδύνατη η ανάγνωση του αρχείου προεπιλ�
 #, c-format
 msgid "This parameter file was saved from %s. Continue?"
 msgstr "Αυτό το αρχείο παραμέτρων αποθηκεύτηκε από το %s. Να συνεχιστεί;"
+
+#. i18n-hint: Abbreviates Virtual Studio Technology, an audio software protocol
+#. developed by Steinberg GmbH
+#: src/effects/VST/VSTEffect.h
+msgid "VST"
+msgstr ""
+
+#: src/effects/Wahwah.cpp
+msgid "Wahwah"
+msgstr ""
 
 #: src/effects/Wahwah.cpp
 msgid "Rapid tone quality variations, like that guitar sound so popular in the 1970's"
@@ -8960,7 +9574,8 @@ msgid "Audio Unit Effects"
 msgstr "Εφέ μονάδας ήχου"
 
 #: src/effects/audiounits/AudioUnitEffect.cpp
-msgid "Provides Audio Unit Effects support to Audacity"
+#, fuzzy
+msgid "Provides Audio Unit Effects support to Tenacity"
 msgstr "Παρέχει υποστήριξη εφέ μονάδας ήχου στο Audacity"
 
 #: src/effects/audiounits/AudioUnitEffect.cpp
@@ -8976,7 +9591,8 @@ msgid "Audio Unit Effect Options"
 msgstr "Επιλογές εφέ μονάδας ήχου"
 
 #: src/effects/audiounits/AudioUnitEffect.cpp
-msgid "As part of their processing, some Audio Unit effects must delay returning audio to Audacity. When not compensating for this delay, you will notice that small silences have been inserted into the audio. Enabling this option will provide that compensation, but it may not work for all Audio Unit effects."
+#, fuzzy
+msgid "As part of their processing, some Audio Unit effects must delay returning audio to Tenacity. When not compensating for this delay, you will notice that small silences have been inserted into the audio. Enabling this option will provide that compensation, but it may not work for all Audio Unit effects."
 msgstr "Ως μέρος της επεξεργασίας τους, κάποια εφέ μονάδας ήχου πρέπει να καθυστερούν την επιστροφή ήχου στο Audacity. Όταν δεν αντισταθμίζεται αυτή η καθυστέρηση, θα σημειώσετε ότι έχουν εισαχθεί στον ήχο μικρές σιγάσεις. Η ενεργοποίηση αυτής της επιλογής θα δώσει αυτήν την αντιστάθμιση, αλλά μπορεί να μην δουλεύει σε όλα τα εφέ μονάδας ήχου."
 
 #: src/effects/audiounits/AudioUnitEffect.cpp
@@ -9120,6 +9736,7 @@ msgstr "Μονάδα ήχου"
 
 #. i18n-hint: abbreviates "Linux Audio Developer's Simple Plugin API"
 #. (Application programming interface)
+#.
 #: src/effects/ladspa/LadspaEffect.cpp
 msgid "LADSPA Effects"
 msgstr "Εφέ LADSPA"
@@ -9129,7 +9746,8 @@ msgid "Provides LADSPA Effects"
 msgstr "Παρέχει τα εφέ LADSPA"
 
 #: src/effects/ladspa/LadspaEffect.cpp
-msgid "Audacity no longer uses vst-bridge"
+#, fuzzy
+msgid "Tenacity no longer uses vst-bridge"
 msgstr "Το Audacity δεν χρησιμοποιεί πια το vst-bridge"
 
 #: src/effects/ladspa/LadspaEffect.cpp
@@ -9137,12 +9755,30 @@ msgid "LADSPA Effect Options"
 msgstr "Επιλογές των εφέ LADSPA"
 
 #: src/effects/ladspa/LadspaEffect.cpp
-msgid "As part of their processing, some LADSPA effects must delay returning audio to Audacity. When not compensating for this delay, you will notice that small silences have been inserted into the audio. Enabling this option will provide that compensation, but it may not work for all LADSPA effects."
+#, fuzzy
+msgid "As part of their processing, some LADSPA effects must delay returning audio to Tenacity. When not compensating for this delay, you will notice that small silences have been inserted into the audio. Enabling this option will provide that compensation, but it may not work for all LADSPA effects."
 msgstr "Ως μέρος των επεξεργασιών τους, κάποια εφέ LADSPA πρέπει να καθυστερήσουν την επιστροφή ήχου στο Audacity. Όταν δεν αντισταθμίζεται αυτή η καθυστέρηση, θα σημειώσετε ότι έχουν εισαχθεί μικρές σιγάσεις στον ήχο. Ενεργοποιώντας αυτήν την επιλογή θα δίνεται αυτή η αντιστάθμιση, αλλά μπορεί να μην δουλεύει για όλα τα εφέ LADSPA."
+
+#. i18n-hint: An item name introducing a value, which is not part of the string but
+#. appears in a following text box window; translate with appropriate punctuation
+#: src/effects/ladspa/LadspaEffect.cpp src/effects/nyquist/Nyquist.cpp
+#: src/effects/vamp/VampEffect.cpp
+#: src/tracks/playabletrack/wavetrack/ui/SpectrumView.cpp
+#, fuzzy, c-format
+msgid "%s:"
+msgstr "το %s σε:"
 
 #: src/effects/ladspa/LadspaEffect.cpp
 msgid "Effect Output"
 msgstr "Έξοδος εφέ"
+
+#. i18n-hint: abbreviates "Linux Audio Developer's Simple Plugin API"
+#. (Application programming interface)
+#.
+#: src/effects/ladspa/LadspaEffect.h
+#, fuzzy
+msgid "LADSPA"
+msgstr "Εφέ LADSPA"
 
 #: src/effects/lv2/LV2Effect.cpp
 msgid "LV2 Effect Settings"
@@ -9154,7 +9790,8 @@ msgid "&Buffer Size (8 to %d) samples:"
 msgstr "Μέγεθος ε&νδιάμεσης μνήμης (8 έως %d δείγματα):"
 
 #: src/effects/lv2/LV2Effect.cpp
-msgid "As part of their processing, some LV2 effects must delay returning audio to Audacity. When not compensating for this delay, you will notice that small silences have been inserted into the audio. Enabling this setting will provide that compensation, but it may not work for all LV2 effects."
+#, fuzzy
+msgid "As part of their processing, some LV2 effects must delay returning audio to Tenacity. When not compensating for this delay, you will notice that small silences have been inserted into the audio. Enabling this setting will provide that compensation, but it may not work for all LV2 effects."
 msgstr "Ως μέρος των επεξεργασιών τους, κάποια εφέ LV2 μπορεί να καθυστερούν την επιστροφή ήχου στο Audacity. Όταν δεν αντισταθμίζεται αυτή η καθυστέρηση, θα σημειώσετε ότι έχουν εισαχθεί μικρές σιγάσεις στον ήχο. Ενεργοποιώντας αυτήν τη ρύθμιση θα δίνεται αυτή η αντιστάθμιση, αλλά μπορεί να μην δουλεύει για όλα τα εφέ LV2."
 
 #: src/effects/lv2/LV2Effect.cpp
@@ -9179,12 +9816,19 @@ msgstr "το %s απαιτεί τη μη υποστηριζόμενη επιλο
 msgid "Generator"
 msgstr "Δημιουργία"
 
+#. i18n-hint: abbreviates
+#. "Linux Audio Developer's Simple Plugin API (LADSPA) version 2"
+#: src/effects/lv2/LV2Effect.h
+msgid "LV2"
+msgstr ""
+
 #: src/effects/lv2/LoadLV2.cpp
 msgid "LV2 Effects"
 msgstr "Εφέ LV2"
 
 #: src/effects/lv2/LoadLV2.cpp
-msgid "Provides LV2 Effects support to Audacity"
+#, fuzzy
+msgid "Provides LV2 Effects support to Tenacity"
 msgstr "Παρέχει υποστήριξη στα εφέ LV2 για το Audacity"
 
 #: src/effects/nyquist/LoadNyquist.cpp
@@ -9192,7 +9836,8 @@ msgid "Nyquist Effects"
 msgstr "Εφέ Nyquist"
 
 #: src/effects/nyquist/LoadNyquist.cpp
-msgid "Provides Nyquist Effects support to Audacity"
+#, fuzzy
+msgid "Provides Nyquist Effects support to Tenacity"
 msgstr "Παρέχει υποστήριξη στα εφέ Nyquist για το Audacity"
 
 #: src/effects/nyquist/Nyquist.cpp
@@ -9421,7 +10066,8 @@ msgstr "Επιλογή αρχείου"
 msgid "Save file as"
 msgstr "Αποθήκευση αρχείου ως"
 
-#: src/effects/nyquist/Nyquist.cpp src/export/Export.cpp src/export/ExportMultiple.cpp
+#: src/effects/nyquist/Nyquist.cpp src/export/Export.cpp
+#: src/export/ExportMultiple.cpp
 msgid "untitled"
 msgstr "χωρίς τίτλο"
 
@@ -9430,7 +10076,8 @@ msgid "Vamp Effects"
 msgstr "Εφέ Vamp"
 
 #: src/effects/vamp/LoadVamp.cpp
-msgid "Provides Vamp Effects support to Audacity"
+#, fuzzy
+msgid "Provides Vamp Effects support to Tenacity"
 msgstr "Δίνει υποστήριξη στα εφέ Vamp για το Audacity"
 
 #: src/effects/vamp/VampEffect.cpp
@@ -9452,6 +10099,12 @@ msgstr "Ρυθμίσεις προσθέτων"
 #: src/effects/vamp/VampEffect.cpp
 msgid "Program"
 msgstr "Πρόγραμμα"
+
+#. i18n-hint: Vamp is the proper name of a software protocol for sound analysis.
+#. It is not an abbreviation for anything.  See http://vamp-plugins.org
+#: src/effects/vamp/VampEffect.h
+msgid "Vamp"
+msgstr ""
 
 #: src/export/Export.cpp
 msgid "No format specific options"
@@ -9530,6 +10183,18 @@ msgstr "Επιλογές μορφής"
 #, c-format
 msgid "Channel: %2d"
 msgstr "Κανάλι: %2d"
+
+#. i18n-hint: track name and L abbreviating Left channel
+#: src/export/Export.cpp
+#, c-format
+msgid "%s - L"
+msgstr ""
+
+#. i18n-hint: track name and R abbreviating Right channel
+#: src/export/Export.cpp
+#, c-format
+msgid "%s - R"
+msgstr ""
 
 #: src/export/Export.cpp
 #, c-format
@@ -9740,7 +10405,8 @@ msgstr "Εξαγωγή του ήχου ως %s"
 msgid "Invalid sample rate"
 msgstr "Μη αποδεκτός ρυθμός δειγματοληψίας"
 
-#: src/export/ExportFFmpeg.cpp src/export/ExportMP3.cpp src/menus/TrackMenus.cpp
+#: src/export/ExportFFmpeg.cpp src/export/ExportMP3.cpp
+#: src/menus/TrackMenus.cpp
 msgid "Resample"
 msgstr "Επαναδειγματοληψία"
 
@@ -9770,6 +10436,14 @@ msgstr "Μπορείτε να κάνετε επαναδειγματοληψία 
 msgid "Sample Rates"
 msgstr "Ρυθμοί δειγματοληψίας"
 
+#. i18n-hint kbps abbreviates "thousands of bits per second"
+#. i18n-hint: kbps is the bitrate of the MP3 file, kilobits per second
+#: src/export/ExportFFmpegDialogs.cpp src/export/ExportMP2.cpp
+#: src/export/ExportMP3.cpp
+#, c-format
+msgid "%d kbps"
+msgstr ""
+
 #: src/export/ExportFFmpegDialogs.cpp src/export/ExportMP2.cpp
 msgid "Bit Rate:"
 msgstr "Ρυθμός μεταφοράς δυαδικών ψηφίων:"
@@ -9778,6 +10452,48 @@ msgstr "Ρυθμός μεταφοράς δυαδικών ψηφίων:"
 msgid "Quality (kbps):"
 msgstr "Ποιότητα (kbps):"
 
+#. i18n-hint kbps abbreviates "thousands of bits per second"
+#: src/export/ExportFFmpegDialogs.cpp
+#, fuzzy, c-format
+msgid "%.2f kbps"
+msgstr "%.2f δευτερόλρπτα"
+
+#: src/export/ExportFFmpegDialogs.cpp
+msgid "0"
+msgstr ""
+
+#: src/export/ExportFFmpegDialogs.cpp src/export/ExportFLAC.cpp
+msgid "1"
+msgstr ""
+
+#: src/export/ExportFFmpegDialogs.cpp src/export/ExportFLAC.cpp
+msgid "3"
+msgstr ""
+
+#: src/export/ExportFFmpegDialogs.cpp src/export/ExportFLAC.cpp
+msgid "4"
+msgstr ""
+
+#: src/export/ExportFFmpegDialogs.cpp src/export/ExportFLAC.cpp
+msgid "5"
+msgstr ""
+
+#: src/export/ExportFFmpegDialogs.cpp src/export/ExportFLAC.cpp
+msgid "6"
+msgstr ""
+
+#: src/export/ExportFFmpegDialogs.cpp src/export/ExportFLAC.cpp
+msgid "7"
+msgstr ""
+
+#: src/export/ExportFFmpegDialogs.cpp
+msgid "9"
+msgstr ""
+
+#: src/export/ExportFFmpegDialogs.cpp
+msgid "10"
+msgstr ""
+
 #: src/export/ExportFFmpegDialogs.cpp
 msgid "On"
 msgstr "Άνοιγμα"
@@ -9785,6 +10501,10 @@ msgstr "Άνοιγμα"
 #: src/export/ExportFFmpegDialogs.cpp
 msgid "Constrained"
 msgstr "Περιορισμένος"
+
+#: src/export/ExportFFmpegDialogs.cpp
+msgid "VOIP"
+msgstr ""
 
 #: src/export/ExportFFmpegDialogs.cpp
 msgid "Audio"
@@ -9797,6 +10517,27 @@ msgstr "Μικρή καθυστέρηση"
 #: src/export/ExportFFmpegDialogs.cpp
 msgid "2.5 ms"
 msgstr "2,5 ms"
+
+#: src/export/ExportFFmpegDialogs.cpp
+#, fuzzy
+msgid "5 ms"
+msgstr "2,5 ms"
+
+#: src/export/ExportFFmpegDialogs.cpp
+msgid "10 ms"
+msgstr ""
+
+#: src/export/ExportFFmpegDialogs.cpp
+msgid "20 ms"
+msgstr ""
+
+#: src/export/ExportFFmpegDialogs.cpp
+msgid "40 ms"
+msgstr ""
+
+#: src/export/ExportFFmpegDialogs.cpp
+msgid "60 ms"
+msgstr ""
 
 #: src/export/ExportFFmpegDialogs.cpp
 msgid "Narrowband"
@@ -9883,8 +10624,17 @@ msgid "Replace preset '%s'?"
 msgstr "Να αντικατασταθεί η προεπιλογή '%s';"
 
 #: src/export/ExportFFmpegDialogs.cpp
+#, fuzzy
+msgid "LC"
+msgstr "Δ-Κ"
+
+#: src/export/ExportFFmpegDialogs.cpp
 msgid "Main"
 msgstr "Κύριο"
+
+#: src/export/ExportFFmpegDialogs.cpp
+msgid "LTP"
+msgstr ""
 
 #: src/export/ExportFFmpegDialogs.cpp
 msgid "M4A (AAC) Files (FFmpeg)"
@@ -9992,6 +10742,10 @@ msgstr "Γλώσσα:"
 #: src/export/ExportFFmpegDialogs.cpp
 msgid "Bit Reservoir"
 msgstr "Απόθεμα δυαδικών ψηφίων"
+
+#: src/export/ExportFFmpegDialogs.cpp
+msgid "VBL"
+msgstr ""
 
 #. i18n-hint: "codec" is short for a "coder-decoder" algorithm
 #: src/export/ExportFFmpegDialogs.cpp
@@ -10125,6 +10879,11 @@ msgstr ""
 "0 - προεπιλογή\n"
 "ελάχιστο - 1\n"
 "μέγιστο - 15"
+
+#: src/export/ExportFFmpegDialogs.cpp
+#, fuzzy
+msgid "LPC"
+msgstr "Δ-Κ"
 
 #: src/export/ExportFFmpegDialogs.cpp
 msgid ""
@@ -10305,6 +11064,14 @@ msgid "Failed to find the codec"
 msgstr "Αποτυχία εύρεσης κωδικοποιητή"
 
 #: src/export/ExportFLAC.cpp
+msgid "16 bit"
+msgstr ""
+
+#: src/export/ExportFLAC.cpp
+msgid "24 bit"
+msgstr ""
+
+#: src/export/ExportFLAC.cpp
 msgid "0 (fastest)"
 msgstr "0 (γρηγορότερο)"
 
@@ -10373,6 +11140,42 @@ msgid "220-260 kbps (Best Quality)"
 msgstr "220-260 kbps (Άριστη ποιότητα)"
 
 #: src/export/ExportMP3.cpp
+#, fuzzy
+msgid "200-250 kbps"
+msgstr "Ακραίο, 220-260 kbps"
+
+#: src/export/ExportMP3.cpp
+#, fuzzy
+msgid "170-210 kbps"
+msgstr "Τυπικό, 170-210 kbps"
+
+#: src/export/ExportMP3.cpp
+#, fuzzy
+msgid "155-195 kbps"
+msgstr "Μεσαίο, 145-185 kbps"
+
+#: src/export/ExportMP3.cpp
+#, fuzzy
+msgid "145-185 kbps"
+msgstr "Μεσαίο, 145-185 kbps"
+
+#: src/export/ExportMP3.cpp
+msgid "110-150 kbps"
+msgstr ""
+
+#: src/export/ExportMP3.cpp
+msgid "95-135 kbps"
+msgstr ""
+
+#: src/export/ExportMP3.cpp
+msgid "80-120 kbps"
+msgstr ""
+
+#: src/export/ExportMP3.cpp
+msgid "65-105 kbps"
+msgstr ""
+
+#: src/export/ExportMP3.cpp
 msgid "45-85 kbps (Smaller files)"
 msgstr "45-85 kbps (Μικρότερα αρχεία)"
 
@@ -10402,7 +11205,8 @@ msgstr "Εξωφρενικό"
 msgid "Extreme"
 msgstr "Ακραίο"
 
-#: src/export/ExportMP3.cpp src/prefs/KeyConfigPrefs.cpp plug-ins/sample-data-export.ny
+#: src/export/ExportMP3.cpp src/prefs/KeyConfigPrefs.cpp
+#: plug-ins/sample-data-export.ny
 msgid "Standard"
 msgstr "Τυπικό"
 
@@ -10453,8 +11257,8 @@ msgid "Locate LAME"
 msgstr "Εντοπισμός του LAME"
 
 #: src/export/ExportMP3.cpp
-#, c-format
-msgid "Audacity needs the file %s to create MP3s."
+#, fuzzy, c-format
+msgid "Tenacity needs the file %s to create MP3s."
 msgstr "Το Audacity χρειάζεται το αρχείο %s για να δημιουργήσει MP3."
 
 #: src/export/ExportMP3.cpp
@@ -10485,10 +11289,10 @@ msgid "Where is %s?"
 msgstr "Πού βρίσκεται το %s?"
 
 #: src/export/ExportMP3.cpp
-#, c-format
+#, fuzzy, c-format
 msgid ""
-"You are linking to lame_enc.dll v%d.%d. This version is not compatible with Audacity %d.%d.%d.\n"
-"Please download the latest version of 'LAME for Audacity'."
+"You are linking to lame_enc.dll v%d.%d. This version is not compatible with Tenacity %d.%d.%d.\n"
+"Please download the latest version of 'LAME for Tenacity'."
 msgstr ""
 "Συνδέεστε στο lame_enc.dll v%d.%d. Αυτή η έκδοση δεν είναι συμβατή με το Audacity %d.%d.%d.\n"
 "Παρακαλούμε μεταφορτώστε την τελευταία έκδοση του 'LAME for Audacity'."
@@ -10793,6 +11597,15 @@ msgstr "Εξαγωγή του επιλεγμένου ακουστικού σήμ
 msgid "Exporting the audio as Ogg Vorbis"
 msgstr "Εξαγωγή του ήχου ως Ogg Vorbis"
 
+#: src/export/ExportPCM.cpp src/import/ImportPCM.cpp
+msgid "AIFF (Apple/SGI)"
+msgstr ""
+
+#: src/export/ExportPCM.cpp src/import/ImportPCM.cpp
+#, fuzzy
+msgid "WAV (Microsoft)"
+msgstr "WAV (Microsoft) με υπογραφή 16 δυαδικών PCM"
+
 #: src/export/ExportPCM.cpp
 msgid "Header:"
 msgstr "Κεφαλίδα:"
@@ -10806,9 +11619,10 @@ msgid "Other uncompressed files"
 msgstr "Άλλα μη συμπιεσμένα αρχεία"
 
 #: src/export/ExportPCM.cpp
+#, fuzzy
 msgid ""
 "You have attempted to Export a WAV or AIFF file which would be greater than 4GB.\n"
-"Audacity cannot do this, the Export was abandoned."
+"Tenacity cannot do this, the Export was abandoned."
 msgstr ""
 "Προσπαθήσατε να εξάγετε ένα αρχείο WAV ή AIFF που μπορεί να είναι μεγαλύτερο από 4GB.\n"
 "Το Audacity δεν μπορεί να το κάνει αυτό, η εξαγωγή εγκαταλείφθηκε."
@@ -10818,8 +11632,9 @@ msgid "Error Exporting"
 msgstr "Σφάλμα εξαγωγής"
 
 #: src/export/ExportPCM.cpp
+#, fuzzy
 msgid ""
-"Your exported WAV file has been truncated as Audacity cannot export WAV\n"
+"Your exported WAV file has been truncated as Tenacity cannot export WAV\n"
 "files bigger than 4GB."
 msgstr ""
 "Το εξαγόμενο αρχείο σας WAV έχει περικοπεί επειδή το Audacity\n"
@@ -10859,11 +11674,11 @@ msgid "All supported files"
 msgstr "Όλα τα υποστηριζόμενα αρχεία"
 
 #: src/import/Import.cpp
-#, c-format
+#, fuzzy, c-format
 msgid ""
 "\"%s\" \n"
 "is a MIDI file, not an audio file. \n"
-"Audacity cannot open this type of file for playing, but you can\n"
+"Tenacity cannot open this type of file for playing, but you can\n"
 "edit it by clicking File > Import > MIDI."
 msgstr ""
 "Το \"%s\" \n"
@@ -10872,11 +11687,11 @@ msgstr ""
 "αναπαραγωγή, αλλά μπορείτε να το επεξεργαστείτε πατώντας Αρχείο > Εισαγωγή > MIDI."
 
 #: src/import/Import.cpp
-#, c-format
+#, fuzzy, c-format
 msgid ""
 "\"%s\" \n"
 "is a not an audio file. \n"
-"Audacity cannot open this type of file."
+"Tenacity cannot open this type of file."
 msgstr ""
 "Το \"%s\" \n"
 "δεν είναι αρχείο ήχου. \n"
@@ -10887,18 +11702,18 @@ msgid "Select stream(s) to import"
 msgstr "Επιλέξτε τις ροές για εισαγωγή"
 
 #: src/import/Import.cpp
-#, c-format
-msgid "This version of Audacity was not compiled with %s support."
+#, fuzzy, c-format
+msgid "This version of Tenacity was not compiled with %s support."
 msgstr "Αυτή η έκδοση του Audacity δεν μεταφράστηκε/προσαρμόστηκε με %s υποστήριξη."
 
 #. i18n-hint: %s will be the filename
 #: src/import/Import.cpp
-#, c-format
+#, fuzzy, c-format
 msgid ""
 "\"%s\" is an audio CD track. \n"
-"Audacity cannot open audio CDs directly. \n"
+"Tenacity cannot open audio CDs directly. \n"
 "Extract (rip) the CD tracks to an audio format that \n"
-"Audacity can import, such as WAV or AIFF."
+"Tenacity can import, such as WAV or AIFF."
 msgstr ""
 "Το \"%s\" είναι ένα κομμάτι ήχου CD. \n"
 "Το Audacity δεν μπορεί να ανοίξει άμεσα ηχητικά CDs. \n"
@@ -10907,10 +11722,10 @@ msgstr ""
 
 #. i18n-hint: %s will be the filename
 #: src/import/Import.cpp
-#, c-format
+#, fuzzy, c-format
 msgid ""
 "\"%s\" is a playlist file. \n"
-"Audacity cannot open this file because it only contains links to other files. \n"
+"Tenacity cannot open this file because it only contains links to other files. \n"
 "You may be able to open it in a text editor and download the actual audio files."
 msgstr ""
 "Το \"%s\" είναι ένα αρχείο καταλόγου αναπαραγωγής. \n"
@@ -10919,10 +11734,10 @@ msgstr ""
 
 #. i18n-hint: %s will be the filename
 #: src/import/Import.cpp
-#, c-format
+#, fuzzy, c-format
 msgid ""
 "\"%s\" is a Windows Media Audio file. \n"
-"Audacity cannot open this type of file due to patent restrictions. \n"
+"Tenacity cannot open this type of file due to patent restrictions. \n"
 "You need to convert it to a supported audio format, such as WAV or AIFF."
 msgstr ""
 "Το \"%s\" είναι ένα αρχείο ήχου πολυμέσων Windows. \n"
@@ -10931,10 +11746,10 @@ msgstr ""
 
 #. i18n-hint: %s will be the filename
 #: src/import/Import.cpp
-#, c-format
+#, fuzzy, c-format
 msgid ""
 "\"%s\" is an Advanced Audio Coding file.\n"
-"Without the optional FFmpeg library, Audacity cannot open this type of file.\n"
+"Without the optional FFmpeg library, Tenacity cannot open this type of file.\n"
 "Otherwise, you need to convert it to a supported audio format, such as WAV or AIFF."
 msgstr ""
 "Το \"%s\" είναι ένα προχωρημένο αρχείο κωδικοποίησης ήχου.\n"
@@ -10943,12 +11758,12 @@ msgstr ""
 
 #. i18n-hint: %s will be the filename
 #: src/import/Import.cpp
-#, c-format
+#, fuzzy, c-format
 msgid ""
 "\"%s\" is an encrypted audio file. \n"
 "These typically are from an online music store. \n"
-"Audacity cannot open this type of file due to the encryption. \n"
-"Try recording the file into Audacity, or burn it to audio CD then \n"
+"Tenacity cannot open this type of file due to the encryption. \n"
+"Try recording the file into Tenacity, or burn it to audio CD then \n"
 "extract the CD track to a supported audio format such as WAV or AIFF."
 msgstr ""
 "Το \"%s\" είναι ένα κρυπτογραφημένο αρχείο ήχου.\n"
@@ -10959,10 +11774,10 @@ msgstr ""
 
 #. i18n-hint: %s will be the filename
 #: src/import/Import.cpp
-#, c-format
+#, fuzzy, c-format
 msgid ""
 "\"%s\" is a RealPlayer media file. \n"
-"Audacity cannot open this proprietary format. \n"
+"Tenacity cannot open this proprietary format. \n"
 "You need to convert it to a supported audio format, such as WAV or AIFF."
 msgstr ""
 "Το \"%s\" είναι ένα αρχείο πολυμέσων RealPlayer.\n"
@@ -10971,12 +11786,12 @@ msgstr ""
 
 #. i18n-hint: %s will be the filename
 #: src/import/Import.cpp
-#, c-format
+#, fuzzy, c-format
 msgid ""
 "\"%s\" is a notes-based file, not an audio file. \n"
-"Audacity cannot open this type of file. \n"
+"Tenacity cannot open this type of file. \n"
 "Try converting it to an audio file such as WAV or AIFF and \n"
-"then import it, or record it into Audacity."
+"then import it, or record it into Tenacity."
 msgstr ""
 "Το \"%s\" είναι ένα αρχείο με βάση νότες, δεν είναι αρχείο ήχου.\n"
 "Το Audacity δεν μπορεί να ανοίξει αυτόν τον τύπο αρχείου.\n"
@@ -10985,10 +11800,10 @@ msgstr ""
 
 #. i18n-hint: %s will be the filename
 #: src/import/Import.cpp
-#, c-format
+#, fuzzy, c-format
 msgid ""
 "\"%s\" is a Musepack audio file. \n"
-"Audacity cannot open this type of file. \n"
+"Tenacity cannot open this type of file. \n"
 "If you think it might be an mp3 file, rename it to end with \".mp3\" \n"
 "and try importing it again. Otherwise you need to convert it to a supported audio \n"
 "format, such as WAV or AIFF."
@@ -11001,10 +11816,10 @@ msgstr ""
 
 #. i18n-hint: %s will be the filename
 #: src/import/Import.cpp
-#, c-format
+#, fuzzy, c-format
 msgid ""
 "\"%s\" is a Wavpack audio file. \n"
-"Audacity cannot open this type of file. \n"
+"Tenacity cannot open this type of file. \n"
 "You need to convert it to a supported audio format, such as WAV or AIFF."
 msgstr ""
 "Το \"%s\" είναι ένα αρχείο ήχου Wavpack.\n"
@@ -11013,10 +11828,10 @@ msgstr ""
 
 #. i18n-hint: %s will be the filename
 #: src/import/Import.cpp
-#, c-format
+#, fuzzy, c-format
 msgid ""
 "\"%s\" is a Dolby Digital audio file. \n"
-"Audacity cannot currently open this type of file. \n"
+"Tenacity cannot currently open this type of file. \n"
 "You need to convert it to a supported audio format, such as WAV or AIFF."
 msgstr ""
 "Το \"%s\" είναι ένα ψηφιακό αρχείο ήχου Dolby.\n"
@@ -11025,10 +11840,10 @@ msgstr ""
 
 #. i18n-hint: %s will be the filename
 #: src/import/Import.cpp
-#, c-format
+#, fuzzy, c-format
 msgid ""
 "\"%s\" is an Ogg Speex audio file. \n"
-"Audacity cannot currently open this type of file. \n"
+"Tenacity cannot currently open this type of file. \n"
 "You need to convert it to a supported audio format, such as WAV or AIFF."
 msgstr ""
 "Το \"%s\" είναι ένα αρχείο ήχου Ogg Speex.\n"
@@ -11037,10 +11852,10 @@ msgstr ""
 
 #. i18n-hint: %s will be the filename
 #: src/import/Import.cpp
-#, c-format
+#, fuzzy, c-format
 msgid ""
 "\"%s\" is a video file. \n"
-"Audacity cannot currently open this type of file. \n"
+"Tenacity cannot currently open this type of file. \n"
 "You need to extract the audio to a supported format, such as WAV or AIFF."
 msgstr ""
 "Το \"%s\" είναι ένα αρχείο βίντεο.\n"
@@ -11054,9 +11869,9 @@ msgstr "Δεν βρέθηκε το αρχείο \"%s\"."
 
 #. i18n-hint: %s will be the filename
 #: src/import/Import.cpp
-#, c-format
+#, fuzzy, c-format
 msgid ""
-"Audacity did not recognize the type of the file '%s'.\n"
+"Tenacity did not recognize the type of the file '%s'.\n"
 "\n"
 "%sFor uncompressed files, also try File > Import > Raw Data."
 msgstr ""
@@ -11072,11 +11887,16 @@ msgstr ""
 "Προσπαθήστε να εγκαταστήσετε το FFmpeg.\n"
 "\n"
 
+#: src/import/Import.cpp src/menus/ClipMenus.cpp
+#, fuzzy, c-format
+msgid "%s, %s"
+msgstr "%s, δοκιμαστής"
+
 #. i18n-hint: %s will be the filename
 #: src/import/Import.cpp
-#, c-format
+#, fuzzy, c-format
 msgid ""
-"Audacity recognized the type of the file '%s'.\n"
+"Tenacity recognized the type of the file '%s'.\n"
 "Importers supposedly supporting such files are:\n"
 "%s,\n"
 "but none of them understood this file format."
@@ -11106,12 +11926,13 @@ msgid "Import Project"
 msgstr "Εισαγωγή έργου"
 
 #: src/import/ImportAUP.cpp
+#, fuzzy
 msgid ""
 "This project was saved by Audacity version 1.0 or earlier. The format has\n"
 "changed and this version of Audacity is unable to import the project.\n"
 "\n"
 "Use a version of Audacity prior to v3.0.0 to upgrade the project and then\n"
-"you may import it with this version of Audacity."
+"you may import it with this version of Tenacity."
 msgstr ""
 "Αυτό το έργο αποθηκεύτηκε με την έκδοση 1.0 του Audacity ή παλιότερη. Η μορφή έχει\n"
 "αλλάξει και αυτή η έκδοση του Audacity δεν μπορεί να εισάγει το έργο.\n"
@@ -11162,7 +11983,8 @@ msgid "Couldn't find the project data folder: \"%s\""
 msgstr "Αδύνατη η εύρεση του φακέλου των δεδομένων έργου: \"%s\""
 
 #: src/import/ImportAUP.cpp
-msgid "MIDI tracks found in project file, but this build of Audacity does not include MIDI support, bypassing track."
+#, fuzzy
+msgid "MIDI tracks found in project file, but this build of Tenacity does not include MIDI support, bypassing track."
 msgstr "Τα κομμάτια MIDI βρέθηκαν σε αρχείο έργου, αλλά αυτή η έκδοση του Audacity δεν περιλαμβάνει υποστήριξη MIDI, παράκαμψη του κομματιού."
 
 #: src/import/ImportAUP.cpp
@@ -11266,40 +12088,6 @@ msgstr "Δείκτης[%02x] Κωδικοποιητής[%s], Γλώσσα[%s], �
 #: src/import/ImportFLAC.cpp
 msgid "FLAC files"
 msgstr "Αρχεία FLAC"
-
-#: src/import/ImportGStreamer.cpp
-msgid "GStreamer-compatible files"
-msgstr "Αρχεία συμβατά με GStreamer"
-
-#: src/import/ImportGStreamer.cpp
-msgid "Unable to add decoder to pipeline"
-msgstr "Αδύνατη η προσθήκη αποκωδικοποιητή στη διοχέτευση"
-
-#: src/import/ImportGStreamer.cpp
-msgid "GStreamer Importer"
-msgstr "Εισαγωγέας GStreamer"
-
-#: src/import/ImportGStreamer.cpp
-msgid "Unable to set stream state to paused."
-msgstr "Αδύνατη η ρύθμιση της κατάστασης ροής σε παύση."
-
-#: src/import/ImportGStreamer.cpp
-#, c-format
-msgid "Index[%02d], Type[%s], Channels[%d], Rate[%d]"
-msgstr "Δείκτης[%02d], Τύπος[%s], Κανάλια[%d], Ρυθμός[%d]"
-
-#: src/import/ImportGStreamer.cpp
-msgid "File doesn't contain any audio streams."
-msgstr "Το αρχείο δεν περιέχει ροές ήχου."
-
-#: src/import/ImportGStreamer.cpp
-msgid "Unable to import file, state change failed."
-msgstr "Αδύνατη η εισαγωγή αρχείου, αποτυχία αλλαγής κατάστασης."
-
-#: src/import/ImportGStreamer.cpp
-#, c-format
-msgid "GStreamer Error: %s"
-msgstr "Σφάλμα GStreamer: %s"
 
 #: src/import/ImportLOF.cpp
 msgid "List of Files in basic text format"
@@ -11407,8 +12195,120 @@ msgid "WAV, AIFF, and other uncompressed types"
 msgstr "WAV, AIFF, και άλλοι μη συμπιεσμένοι τύποι"
 
 #: src/import/ImportPCM.cpp
+msgid "AU (Sun/NeXT)"
+msgstr ""
+
+#: src/import/ImportPCM.cpp
 msgid "AVR (Audio Visual Research)"
 msgstr "AVR (Οπτικοακουστική αναζήτηση)"
+
+#: src/import/ImportPCM.cpp
+msgid "CAF (Apple Core Audio File)"
+msgstr ""
+
+#. i18n-hint: "codec" is short for a "coder-decoder" algorithm
+#: src/import/ImportPCM.cpp
+msgid "FLAC (FLAC Lossless Audio Codec)"
+msgstr ""
+
+#: src/import/ImportPCM.cpp
+msgid "HTK (HMM Tool Kit)"
+msgstr ""
+
+#: src/import/ImportPCM.cpp
+msgid "IFF (Amiga IFF/SVX8/SV16)"
+msgstr ""
+
+#: src/import/ImportPCM.cpp
+msgid "MAT4 (GNU Octave 2.0 / Matlab 4.2)"
+msgstr ""
+
+#: src/import/ImportPCM.cpp
+msgid "MAT5 (GNU Octave 2.1 / Matlab 5.0)"
+msgstr ""
+
+#: src/import/ImportPCM.cpp
+msgid "MPC (Akai MPC 2k)"
+msgstr ""
+
+#: src/import/ImportPCM.cpp
+msgid "OGG (OGG Container format)"
+msgstr ""
+
+#: src/import/ImportPCM.cpp
+msgid "PAF (Ensoniq PARIS)"
+msgstr ""
+
+#: src/import/ImportPCM.cpp
+msgid "PVF (Portable Voice Format)"
+msgstr ""
+
+#: src/import/ImportPCM.cpp
+msgid "RAW (header-less)"
+msgstr ""
+
+#: src/import/ImportPCM.cpp
+msgid "RF64 (RIFF 64)"
+msgstr ""
+
+#: src/import/ImportPCM.cpp
+msgid "SD2 (Sound Designer II)"
+msgstr ""
+
+#: src/import/ImportPCM.cpp
+msgid "SDS (Midi Sample Dump Standard)"
+msgstr ""
+
+#: src/import/ImportPCM.cpp
+msgid "SF (Berkeley/IRCAM/CARL)"
+msgstr ""
+
+#: src/import/ImportPCM.cpp
+msgid "VOC (Creative Labs)"
+msgstr ""
+
+#: src/import/ImportPCM.cpp
+msgid "W64 (SoundFoundry WAVE 64)"
+msgstr ""
+
+#: src/import/ImportPCM.cpp
+msgid "WAV (NIST Sphere)"
+msgstr ""
+
+#: src/import/ImportPCM.cpp
+#, fuzzy
+msgid "WAVEX (Microsoft)"
+msgstr "WAV (Microsoft) με υπογραφή 16 δυαδικών PCM"
+
+#: src/import/ImportPCM.cpp
+msgid "WVE (Psion Series 3)"
+msgstr ""
+
+#: src/import/ImportPCM.cpp
+msgid "XI (FastTracker 2)"
+msgstr ""
+
+#: src/import/ImportPCM.cpp
+msgid "Signed 8 bit PCM"
+msgstr ""
+
+#: src/import/ImportPCM.cpp
+#, fuzzy
+msgid "Signed 16 bit PCM"
+msgstr "PCM 16 δυαδικών"
+
+#: src/import/ImportPCM.cpp
+#, fuzzy
+msgid "Signed 24 bit PCM"
+msgstr "PCM 24 δυαδικών"
+
+#: src/import/ImportPCM.cpp
+msgid "Signed 32 bit PCM"
+msgstr ""
+
+#: src/import/ImportPCM.cpp
+msgid "Unsigned 8 bit PCM"
+msgstr ""
 
 #: src/import/ImportPCM.cpp
 msgid "32 bit float"
@@ -11417,6 +12317,64 @@ msgstr "κιν υποδ 32-bit"
 #: src/import/ImportPCM.cpp
 msgid "64 bit float"
 msgstr "κιν υποδ 32-bit"
+
+#: src/import/ImportPCM.cpp
+msgid "U-Law"
+msgstr ""
+
+#: src/import/ImportPCM.cpp
+msgid "A-Law"
+msgstr ""
+
+#: src/import/ImportPCM.cpp
+msgid "IMA ADPCM"
+msgstr ""
+
+#: src/import/ImportPCM.cpp
+msgid "Microsoft ADPCM"
+msgstr ""
+
+#: src/import/ImportPCM.cpp
+msgid "GSM 6.10"
+msgstr ""
+
+#: src/import/ImportPCM.cpp
+msgid "32kbs G721 ADPCM"
+msgstr ""
+
+#: src/import/ImportPCM.cpp
+msgid "24kbs G723 ADPCM"
+msgstr ""
+
+#: src/import/ImportPCM.cpp
+msgid "12 bit DWVW"
+msgstr ""
+
+#: src/import/ImportPCM.cpp
+msgid "16 bit DWVW"
+msgstr ""
+
+#: src/import/ImportPCM.cpp
+msgid "24 bit DWVW"
+msgstr ""
+
+#: src/import/ImportPCM.cpp
+msgid "VOX ADPCM"
+msgstr ""
+
+#: src/import/ImportPCM.cpp
+#, fuzzy
+msgid "16 bit DPCM"
+msgstr "PCM 16 δυαδικών"
+
+#: src/import/ImportPCM.cpp
+#, fuzzy
+msgid "8 bit DPCM"
+msgstr "PCM 16 δυαδικών"
+
+#: src/import/ImportPCM.cpp
+msgid "Vorbis"
+msgstr ""
 
 #: src/import/ImportPlugin.cpp src/import/ImportRaw.cpp
 #, c-format
@@ -11519,6 +12477,10 @@ msgid "Start offset:"
 msgstr "Ξεκίνημα μετατόπισης:"
 
 #: src/import/ImportRaw.cpp
+msgid "bytes"
+msgstr ""
+
+#: src/import/ImportRaw.cpp
 msgid "Amount to import:"
 msgstr "Μέγεθος προς εισαγωγή:"
 
@@ -11555,6 +12517,7 @@ msgstr "το %s δεξιά"
 #. last number counts all clips,
 #. and the last string is the name of the track containing the
 #. clips.
+#.
 #: src/menus/ClipMenus.cpp
 #, c-format
 msgid "%s %d of %d clip %s"
@@ -11578,6 +12541,7 @@ msgstr "τέλος"
 #. last number counts all clips,
 #. and the last string is the name of the track containing the
 #. clips.
+#.
 #: src/menus/ClipMenus.cpp
 #, c-format
 msgid "%s %d and %s %d of %d clip %s"
@@ -11604,7 +12568,8 @@ msgstr "Αποσπάσματα μετατοπισμένου χρόνου δεξ�
 msgid "Time shifted clips to the left"
 msgstr "Αποσπάσματα μετατοπισμένου χρόνου αριστερά"
 
-#: src/menus/ClipMenus.cpp src/prefs/MousePrefs.cpp src/tracks/ui/TimeShiftHandle.cpp
+#: src/menus/ClipMenus.cpp src/prefs/MousePrefs.cpp
+#: src/tracks/ui/TimeShiftHandle.cpp
 msgid "Time-Shift"
 msgstr "Χρονική μετατόπιση"
 
@@ -11742,7 +12707,8 @@ msgstr "Περικοπή επιλεγμένων κομματιών ήχου απ
 msgid "Trim Audio"
 msgstr "Περικοπή ήχου"
 
-#: src/menus/EditMenus.cpp src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
+#: src/menus/EditMenus.cpp
+#: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
 msgid "Split"
 msgstr "Διαχωρισμός"
 
@@ -11865,34 +12831,6 @@ msgstr "Πλήκτρο διαγραφής&2"
 #: src/menus/ExtraMenus.cpp
 msgid "Ext&ra"
 msgstr "Ε&πιπρόσθετα"
-
-#: src/menus/ExtraMenus.cpp
-msgid "Mi&xer"
-msgstr "Μεί&κτης"
-
-#: src/menus/ExtraMenus.cpp
-msgid "Ad&just Playback Volume..."
-msgstr "Ρύ&θμιση έντασης αναπαραγωγής..."
-
-#: src/menus/ExtraMenus.cpp
-msgid "&Increase Playback Volume"
-msgstr "Αύ&ξηση έντασης αναπαραγωγής"
-
-#: src/menus/ExtraMenus.cpp
-msgid "&Decrease Playback Volume"
-msgstr "Μεί&ωση έντασης αναπαραγωγής"
-
-#: src/menus/ExtraMenus.cpp
-msgid "Adj&ust Recording Volume..."
-msgstr "Ρύ&θμιση έντασης ηχογράφησης..."
-
-#: src/menus/ExtraMenus.cpp
-msgid "I&ncrease Recording Volume"
-msgstr "Αύξ&ηση έντασης ηχογράφησης"
-
-#: src/menus/ExtraMenus.cpp
-msgid "D&ecrease Recording Volume"
-msgstr "Μείω&ση έντασης ηχογράφησης"
 
 #: src/menus/ExtraMenus.cpp
 msgid "De&vice"
@@ -12068,6 +13006,11 @@ msgid "&Labels..."
 msgstr "&Ετικέτες..."
 
 #: src/menus/FileMenus.cpp
+#, fuzzy
+msgid "&MIDI..."
+msgstr "Εξαγωγή MI&DI..."
+
+#: src/menus/FileMenus.cpp
 msgid "&Raw Data..."
 msgstr "Ανεπεξέργαστα &δεδομένα(Raw)..."
 
@@ -12156,8 +13099,9 @@ msgid "&Getting Started"
 msgstr "&Ξεκίνημα"
 
 #: src/menus/HelpMenus.cpp
-msgid "Audacity &Manual"
-msgstr "Εγ&χειρίδιο του Audacity"
+#, fuzzy
+msgid "&Manual"
+msgstr "Εγ&χειρίδιο..."
 
 #: src/menus/HelpMenus.cpp
 msgid "&Quick Help..."
@@ -12183,11 +13127,8 @@ msgstr "Πληροφορίες συσκευής &MIDI..."
 msgid "Show &Log..."
 msgstr "Εμφάνιση &ημερολογίου..."
 
-#: src/menus/HelpMenus.cpp
-msgid "&About Audacity..."
-msgstr "&Σχετικά με το Audacity..."
-
-#: src/menus/LabelMenus.cpp src/toolbars/TranscriptionToolBar.cpp src/tracks/labeltrack/ui/LabelTrackView.cpp
+#: src/menus/LabelMenus.cpp src/toolbars/TranscriptionToolBar.cpp
+#: src/tracks/labeltrack/ui/LabelTrackView.cpp
 msgid "Added label"
 msgstr "Προστέθηκε ετικέτα"
 
@@ -12435,6 +13376,11 @@ msgstr "Εναλλαγή εστιασ&μένου κομματιού"
 #: src/menus/PluginMenus.cpp
 msgid "Uncategorized"
 msgstr "Χωρίς κατηγορία"
+
+#: src/menus/PluginMenus.cpp
+#, fuzzy
+msgid "..."
+msgstr "Νέο..."
 
 #: src/menus/PluginMenus.cpp
 msgid "Unknown"
@@ -12873,6 +13819,7 @@ msgstr "Μεγάλο άλ&μα δεξιά δρομέα"
 #. i18n-hint: These commands assist the user in finding a sound by ear. ...
 #. "Scrubbing" is variable-speed playback, ...
 #. "Seeking" is normal speed playback but with skips, ...
+#.
 #: src/menus/SelectMenus.cpp src/tracks/ui/Scrubbing.cpp
 msgid "See&k"
 msgstr "Ανα&ζήτηση"
@@ -13084,18 +14031,21 @@ msgid "Created new label track"
 msgstr "Δημιουργήθηκε νέο κομμάτι ετικέτας"
 
 #: src/menus/TrackMenus.cpp
-msgid "This version of Audacity only allows one time track for each project window."
+#, fuzzy
+msgid "This version of Tenacity only allows one time track for each project window."
 msgstr "Αυτή η έκδοση του Audacity επιτρέπει μόνο ένα κομμάτι χρόνου σε κάθε παράθυρο έργου."
 
 #: src/menus/TrackMenus.cpp
 msgid "Created new time track"
 msgstr "Δημιουργήθηκε νέο κομμάτι χρόνου"
 
-#: src/menus/TrackMenus.cpp src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
+#: src/menus/TrackMenus.cpp
+#: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
 msgid "New sample rate (Hz):"
 msgstr "Νέος ρυθμός δειγματοληψίας (Hz):"
 
-#: src/menus/TrackMenus.cpp src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
+#: src/menus/TrackMenus.cpp
+#: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
 msgid "The entered value is invalid"
 msgstr "Η τιμή που εισήγαγες δεν είναι έγκυρη"
 
@@ -13352,7 +14302,9 @@ msgstr "Αναπαράγεται"
 #. i18n-hint: These are strings for the status bar, and indicate whether Audacity
 #. is playing or recording or stopped, and whether it is paused;
 #. progressive verb form
-#: src/menus/TransportMenus.cpp src/prefs/DevicePrefs.cpp src/prefs/MidiIOPrefs.cpp src/prefs/RecordingPrefs.cpp src/prefs/RecordingPrefs.h src/toolbars/ControlToolBar.cpp
+#: src/menus/TransportMenus.cpp src/prefs/DevicePrefs.cpp
+#: src/prefs/MidiIOPrefs.cpp src/prefs/RecordingPrefs.cpp
+#: src/prefs/RecordingPrefs.h src/toolbars/ControlToolBar.cpp
 msgid "Recording"
 msgstr "Ηχογράφηση"
 
@@ -13501,10 +14453,6 @@ msgstr "&Προσθήκη ήχου (ναι/όχι)"
 #: src/menus/TransportMenus.cpp
 msgid "So&ftware Playthrough (on/off)"
 msgstr "Πλήρης αναπαραγωγή &λογισμικού (ναι/όχι)"
-
-#: src/menus/TransportMenus.cpp
-msgid "A&utomated Recording Level Adjustment (on/off)"
-msgstr "Α&υτόματη ρύθμιση επιπέδου ηχογράφησης (ναι/όχι)"
 
 #: src/menus/TransportMenus.cpp
 msgid "T&ransport"
@@ -13722,7 +14670,7 @@ msgstr "Προτιμήσεις για"
 
 #: src/prefs/ApplicationPrefs.cpp
 #, fuzzy
-msgid "Update Audacity"
+msgid "Update Tenacity"
 msgstr "Ενημέρωση του Audacity"
 
 #: src/prefs/ApplicationPrefs.cpp
@@ -13769,7 +14717,8 @@ msgstr "&Δέκτης:"
 msgid "Using:"
 msgstr "Χρησιμοποιεί:"
 
-#: src/prefs/DevicePrefs.cpp src/prefs/MidiIOPrefs.cpp src/prefs/PlaybackPrefs.cpp src/prefs/PlaybackPrefs.h
+#: src/prefs/DevicePrefs.cpp src/prefs/MidiIOPrefs.cpp
+#: src/prefs/PlaybackPrefs.cpp src/prefs/PlaybackPrefs.h
 msgid "Playback"
 msgstr "Αναπαραγωγή"
 
@@ -13789,7 +14738,8 @@ msgstr "Κα&νάλια:"
 msgid "Latency"
 msgstr "Καθυστέρηση"
 
-#: src/prefs/DevicePrefs.cpp src/prefs/RecordingPrefs.cpp src/widgets/NumericTextCtrl.cpp
+#: src/prefs/DevicePrefs.cpp src/prefs/RecordingPrefs.cpp
+#: src/widgets/NumericTextCtrl.cpp
 msgid "milliseconds"
 msgstr "χιλιοστοδευτερόλεπτα"
 
@@ -13818,7 +14768,8 @@ msgid "2 (Stereo)"
 msgstr "2 (Στέρεο)"
 
 #. i18n-hint:  Directories, also called directories, in computer file systems
-#: src/prefs/DirectoriesPrefs.cpp src/prefs/DirectoriesPrefs.h src/widgets/UnwritableLocationErrorDialog.cpp
+#: src/prefs/DirectoriesPrefs.cpp src/prefs/DirectoriesPrefs.h
+#: src/widgets/UnwritableLocationErrorDialog.cpp
 msgid "Directories"
 msgstr "Φάκελοι"
 
@@ -13926,7 +14877,8 @@ msgid "Directory %s is not writable"
 msgstr "Ο φάκελος %s δεν είναι εγγράψιμος"
 
 #: src/prefs/DirectoriesPrefs.cpp
-msgid "Changes to temporary directory will not take effect until Audacity is restarted"
+#, fuzzy
+msgid "Changes to temporary directory will not take effect until Tenacity is restarted"
 msgstr "Οι αλλαγές στο προσωρινό κατάλογο δεν θα εφαρμοστούν μέχρι να γίνει επανεκκίνηση του Audacity"
 
 #: src/prefs/DirectoriesPrefs.cpp
@@ -13957,6 +14909,40 @@ msgstr "Ομαδοποιημένο κατά δισκογραφική εταιρ�
 msgid "Grouped by Type"
 msgstr "Ομαδοποιημένο κατά τύπο"
 
+#. i18n-hint: abbreviates "Linux Audio Developer's Simple Plugin API"
+#. (Application programming interface)
+#.
+#: src/prefs/EffectsPrefs.cpp
+msgid "&LADSPA"
+msgstr ""
+
+#. i18n-hint: abbreviates
+#. "Linux Audio Developer's Simple Plugin API (LADSPA) version 2"
+#: src/prefs/EffectsPrefs.cpp
+msgid "LV&2"
+msgstr ""
+
+#. i18n-hint: "Nyquist" is an embedded interpreted programming language in
+#. Audacity, named in honor of the Swedish-American Harry Nyquist (or Nyqvist).
+#. In the translations of this and other strings, you may transliterate the
+#. name into another alphabet.
+#: src/prefs/EffectsPrefs.cpp
+#, fuzzy
+msgid "N&yquist"
+msgstr "Σφάλμα Nyquist"
+
+#. i18n-hint: Vamp is the proper name of a software protocol for sound analysis.
+#. It is not an abbreviation for anything.  See http://vamp-plugins.org
+#: src/prefs/EffectsPrefs.cpp
+msgid "&Vamp"
+msgstr ""
+
+#. i18n-hint: Abbreviates Virtual Studio Technology, an audio software protocol
+#. developed by Steinberg GmbH
+#: src/prefs/EffectsPrefs.cpp
+msgid "V&ST"
+msgstr ""
+
 #: src/prefs/EffectsPrefs.cpp
 msgid "Enable Effects"
 msgstr "Ενεργοποίηση εφέ"
@@ -13978,11 +14964,13 @@ msgid "Plugin Options"
 msgstr "Επιλογές προσθέτου"
 
 #: src/prefs/EffectsPrefs.cpp
-msgid "Check for updated plugins when Audacity starts"
+#, fuzzy
+msgid "Check for updated plugins when Tenacity starts"
 msgstr "Έλεγχος για ενημερωμένα πρόσθετα όταν ξεκινά το Audacity"
 
 #: src/prefs/EffectsPrefs.cpp
-msgid "Rescan plugins next time Audacity is started"
+#, fuzzy
+msgid "Rescan plugins next time Tenacity is started"
 msgstr "Να επανασαρώνονται τα πρόσθετα την επόμενη φορά που αρχίζει το Audacity"
 
 #: src/prefs/EffectsPrefs.cpp
@@ -14162,7 +15150,8 @@ msgid "Re&tain labels if selection snaps to a label"
 msgstr "&Διατήρηση των ετικετών εάν η επιλογή προσκολλάται σε ετικέτα"
 
 #: src/prefs/GUIPrefs.cpp
-msgid "B&lend system and Audacity theme"
+#, fuzzy
+msgid "B&lend system and Tenacity theme"
 msgstr "Α&νάμειξη θέματος συστήματος και Audacity"
 
 #. i18n-hint: RTL stands for 'Right to Left'
@@ -14340,7 +15329,8 @@ msgstr ""
 "   *   \"%s\"  (επειδή η συντόμευση '%s' χρησιμοποιείται από \"%s\")\n"
 
 #: src/prefs/KeyConfigPrefs.cpp
-msgid "Select an XML file containing Audacity keyboard shortcuts..."
+#, fuzzy
+msgid "Select an XML file containing Tenacity keyboard shortcuts..."
 msgstr "Επιλέξτε ένα αρχείο XML που να περιέχει συντομεύσεις πληκτρολογίου του Audacity..."
 
 #: src/prefs/KeyConfigPrefs.cpp
@@ -14472,8 +15462,9 @@ msgid "Dow&nload"
 msgstr "Λή&ψη"
 
 #: src/prefs/LibraryPrefs.cpp
+#, fuzzy
 msgid ""
-"Audacity has automatically detected valid FFmpeg libraries.\n"
+"Tenacity has automatically detected valid FFmpeg libraries.\n"
 "Do you still want to locate them manually?"
 msgstr ""
 "Το Audacity έχει ανιχνεύσει αυτόματα έγκυρες βιβλιοθήκες FFmpeg.\n"
@@ -14532,8 +15523,9 @@ msgid "Preferences for Module"
 msgstr "Προτιμήσεις για άρθρωμα"
 
 #: src/prefs/ModulePrefs.cpp
+#, fuzzy
 msgid ""
-"These are experimental modules. Enable them only if you've read the Audacity Manual\n"
+"These are experimental modules. Enable them only if you've read the Tenacity Manual\n"
 "and know what you are doing."
 msgstr ""
 "Αυτά είναι πειραματικά αρθρώματα. Ενεργοποιήστε τα μόνο αν έχετε διαβάσει\n"
@@ -14541,12 +15533,14 @@ msgstr ""
 
 #. i18n-hint preserve the leading spaces
 #: src/prefs/ModulePrefs.cpp
-msgid "  'Ask' means Audacity will ask if you want to load the module each time it starts."
+#, fuzzy
+msgid "  'Ask' means Tenacity will ask if you want to load the module each time it starts."
 msgstr "  'Ερώτηση' σημαίνει ότι το Audacity θα σας ζητήσει εάν θέλετε να φορτώσετε το άρθρωμα κάθε φορά που ξεκινά."
 
 #. i18n-hint preserve the leading spaces
 #: src/prefs/ModulePrefs.cpp
-msgid "  'Failed' means Audacity thinks the module is broken and won't run it."
+#, fuzzy
+msgid "  'Failed' means Tenacity thinks the module is broken and won't run it."
 msgstr "  'Αποτυχία' σημαίνει ότι το Audacity θεωρεί ότι το άρθρωμα έχει αλλοιωθεί και δεν θα το ξεκινήσει."
 
 #. i18n-hint preserve the leading spaces
@@ -14555,7 +15549,8 @@ msgid "  'New' means no choice has been made yet."
 msgstr "  'Νέο' σημαίνει ότι δεν έχει γίνει καμιά επιλογή ακόμα."
 
 #: src/prefs/ModulePrefs.cpp
-msgid "Changes to these settings only take effect when Audacity starts up."
+#, fuzzy
+msgid "Changes to these settings only take effect when Tenacity starts up."
 msgstr "Οι αλλαγές σε αυτές τις ρυθμίσεις θα γίνουν μόνο το Audacity ξεκινήσει."
 
 #: src/prefs/ModulePrefs.cpp
@@ -14573,6 +15568,10 @@ msgstr "Δεν βρέθηκαν αρθρώματα"
 #: src/prefs/ModulePrefs.h
 msgid "Module"
 msgstr "Άρθρωμα"
+
+#: src/prefs/MousePrefs.cpp
+msgid "Ctrl"
+msgstr ""
 
 #: src/prefs/MousePrefs.cpp src/prefs/MousePrefs.h
 msgid "Mouse"
@@ -14614,7 +15613,10 @@ msgstr "Αριστερό-σύρσιμο"
 msgid "Set Selection Range"
 msgstr "Ορισμός περιοχής επιλογής"
 
-#: src/prefs/MousePrefs.cpp src/tracks/playabletrack/notetrack/ui/NoteTrackVZoomHandle.cpp src/tracks/playabletrack/wavetrack/ui/SpectrumVZoomHandle.cpp src/tracks/playabletrack/wavetrack/ui/WaveformVZoomHandle.cpp
+#: src/prefs/MousePrefs.cpp
+#: src/tracks/playabletrack/notetrack/ui/NoteTrackVZoomHandle.cpp
+#: src/tracks/playabletrack/wavetrack/ui/SpectrumVZoomHandle.cpp
+#: src/tracks/playabletrack/wavetrack/ui/WaveformVZoomHandle.cpp
 msgid "Shift-Left-Click"
 msgstr "Shift-αριστερό-πάτημα"
 
@@ -14701,6 +15703,15 @@ msgstr "-Αριστερό-σύρσιμο"
 #: src/prefs/MousePrefs.cpp
 msgid "Move clip up/down between tracks"
 msgstr "Μετακίνηση αποσπάσματος πάνω/κάτω μεταξύ κομματιών"
+
+#: src/prefs/MousePrefs.cpp
+#, fuzzy
+msgid "Alt-Left-Drag"
+msgstr "-Αριστερό-σύρσιμο"
+
+#: src/prefs/MousePrefs.cpp
+msgid "Move clips ignoring Sync-lock"
+msgstr ""
 
 #. i18n-hint: The envelope is a curve that controls the audio loudness.
 #: src/prefs/MousePrefs.cpp
@@ -14825,7 +15836,8 @@ msgid "Always scrub un&pinned"
 msgstr "Πάντα &ξεκαρφιτσωμένο τρίψιμο"
 
 #: src/prefs/PrefsDialog.cpp
-msgid "Audacity Preferences"
+#, fuzzy
+msgid "Tenacity Preferences"
 msgstr "Προτιμήσεις του Audacity"
 
 #: src/prefs/PrefsDialog.cpp
@@ -14839,6 +15851,11 @@ msgstr "Προτιμήσεις:"
 #: src/prefs/QualityPrefs.cpp
 msgid "Preferences for Quality"
 msgstr "Προτιμήσεις για"
+
+#: src/prefs/QualityPrefs.cpp
+#, c-format
+msgid "%i Hz"
+msgstr ""
 
 #: src/prefs/QualityPrefs.cpp
 msgid "Other..."
@@ -14958,39 +15975,6 @@ msgid "System T&ime"
 msgstr "Ώ&ρα συστήματος"
 
 #: src/prefs/RecordingPrefs.cpp
-msgid "Automated Recording Level Adjustment"
-msgstr "Αυτόματη ρύθμιση επιπέδου ηχογράφησης"
-
-#: src/prefs/RecordingPrefs.cpp
-msgid "Enable Automated Recording Level Adjustment."
-msgstr "Ενεργοποίηση αυτόματης ρύθμισης επιπέδου ηχογράφησης."
-
-#. i18n-hint: Desired maximum (peak) volume for sound
-#: src/prefs/RecordingPrefs.cpp
-msgid "Target Peak:"
-msgstr "Κορυφή στόχου:"
-
-#: src/prefs/RecordingPrefs.cpp
-msgid "Within:"
-msgstr "Μέσα σε:"
-
-#: src/prefs/RecordingPrefs.cpp
-msgid "Analysis Time:"
-msgstr "Χρόνος ανάλυσης:"
-
-#: src/prefs/RecordingPrefs.cpp
-msgid "milliseconds (time of one analysis)"
-msgstr "ms (χρόνος μιας ανάλυσης)"
-
-#: src/prefs/RecordingPrefs.cpp
-msgid "Number of consecutive analysis:"
-msgstr "Αριθμός διαδοχικών αναλύσεων:"
-
-#: src/prefs/RecordingPrefs.cpp
-msgid "0 means endless"
-msgstr "0 σημαίνει ατελείωτο"
-
-#: src/prefs/RecordingPrefs.cpp
 msgid "Punch and Roll Recording"
 msgstr "Ηχογράφηση με σήμανση και διόρθωση (Punch and Roll)"
 
@@ -15001,6 +15985,21 @@ msgstr "Προε&κκίνηση:"
 #: src/prefs/RecordingPrefs.cpp
 msgid "Cross&fade:"
 msgstr "Ομαλή &μετάβαση:"
+
+#. i18n-hint: The name of a frequency scale in psychoacoustics
+#: src/prefs/SpectrogramSettings.cpp
+msgid "Mel"
+msgstr ""
+
+#. i18n-hint: The name of a frequency scale in psychoacoustics, named for Heinrich Barkhausen
+#: src/prefs/SpectrogramSettings.cpp
+msgid "Bark"
+msgstr ""
+
+#. i18n-hint: The name of a frequency scale in psychoacoustics, abbreviates Equivalent Rectangular Bandwidth
+#: src/prefs/SpectrogramSettings.cpp
+msgid "ERB"
+msgstr ""
 
 #. i18n-hint: Time units, that is Period = 1 / Frequency
 #: src/prefs/SpectrogramSettings.cpp
@@ -15135,6 +16134,10 @@ msgid "1024 - default"
 msgstr "1024 - προεπιλογή"
 
 #: src/prefs/SpectrumPrefs.cpp
+msgid "2048"
+msgstr ""
+
+#: src/prefs/SpectrumPrefs.cpp
 msgid "32768 - most narrowband"
 msgstr "32768 - περισσότερο περιορισμένη ζώνη"
 
@@ -15232,13 +16235,14 @@ msgid "Info"
 msgstr "Πληροφορίες"
 
 #: src/prefs/ThemePrefs.cpp
+#, fuzzy
 msgid ""
 "Themability is an experimental feature.\n"
 "\n"
 "To try it out, click \"Save Theme Cache\" then find and modify the images and colors in\n"
 "ImageCacheVxx.png using an image editor such as the Gimp.\n"
 "\n"
-"Click \"Load Theme Cache\" to load the changed images and colors back into Audacity.\n"
+"Click \"Load Theme Cache\" to load the changed images and colors back into Tenacity.\n"
 "\n"
 "(Only the Transport Toolbar and the colors on the wavetrack are currently affected, even\n"
 "though the image file shows other icons too.)"
@@ -15421,7 +16425,8 @@ msgstr "Δείγματα"
 msgid "4 Pixels per Sample"
 msgstr "4 εικονοστοιχεία ανά δείγμα"
 
-#: src/prefs/TracksPrefs.cpp src/tracks/playabletrack/notetrack/ui/NoteTrackVZoomHandle.cpp
+#: src/prefs/TracksPrefs.cpp
+#: src/tracks/playabletrack/notetrack/ui/NoteTrackVZoomHandle.cpp
 msgid "Max Zoom"
 msgstr "Μέγιστη εστίαση"
 
@@ -15543,16 +16548,24 @@ msgid "Stopped"
 msgstr "Σταματημένο"
 
 #: src/toolbars/ControlToolBar.cpp
-msgid "Pause"
-msgstr "Παύση"
-
-#: src/toolbars/ControlToolBar.cpp
 msgid "Skip to Start"
 msgstr "Μεταπήδηση στην αρχή"
 
 #: src/toolbars/ControlToolBar.cpp
 msgid "Skip to End"
 msgstr "Μεταπήδηση στο τέλος"
+
+#: src/toolbars/ControlToolBar.cpp
+msgid "Pause"
+msgstr "Παύση"
+
+#: src/toolbars/ControlToolBar.cpp
+msgid "Select to Start"
+msgstr "Επιλογή αρχής"
+
+#: src/toolbars/ControlToolBar.cpp
+msgid "Select to End"
+msgstr "Επιλογή τέλους"
 
 #: src/toolbars/ControlToolBar.cpp
 msgid "Loop Play"
@@ -15566,20 +16579,17 @@ msgstr "Ηχογράφηση νέου κομματιού"
 msgid "Append Record"
 msgstr "Προσάρτηση ηχογράφησης"
 
-#: src/toolbars/ControlToolBar.cpp
-msgid "Select to End"
-msgstr "Επιλογή τέλους"
-
-#: src/toolbars/ControlToolBar.cpp
-msgid "Select to Start"
-msgstr "Επιλογή αρχής"
-
 #. i18n-hint: These are strings for the status bar, and indicate whether Audacity
 #. is playing or recording or stopped, and whether it is paused.
 #: src/toolbars/ControlToolBar.cpp src/tracks/ui/Scrubbing.cpp
 #, c-format
 msgid "%s Paused."
 msgstr "Το %s σε παύση."
+
+#: src/toolbars/ControlToolBar.cpp
+#, c-format
+msgid "%s."
+msgstr ""
 
 #. i18n-hint: Clicking this menu item shows the toolbar
 #. with the big buttons on it (play record etc)
@@ -15659,11 +16669,17 @@ msgstr "Σίγαση επιλογής ακουστικού σήματος"
 msgid "Sync-Lock Tracks"
 msgstr "Κλείδωμα συγχρονισμού των κομματιών"
 
-#: src/toolbars/EditToolBar.cpp src/tracks/playabletrack/notetrack/ui/NoteTrackVZoomHandle.cpp src/tracks/playabletrack/wavetrack/ui/SpectrumVZoomHandle.cpp src/tracks/playabletrack/wavetrack/ui/WaveformVZoomHandle.cpp
+#: src/toolbars/EditToolBar.cpp
+#: src/tracks/playabletrack/notetrack/ui/NoteTrackVZoomHandle.cpp
+#: src/tracks/playabletrack/wavetrack/ui/SpectrumVZoomHandle.cpp
+#: src/tracks/playabletrack/wavetrack/ui/WaveformVZoomHandle.cpp
 msgid "Zoom In"
 msgstr "Μεγέθυνση"
 
-#: src/toolbars/EditToolBar.cpp src/tracks/playabletrack/notetrack/ui/NoteTrackVZoomHandle.cpp src/tracks/playabletrack/wavetrack/ui/SpectrumVZoomHandle.cpp src/tracks/playabletrack/wavetrack/ui/WaveformVZoomHandle.cpp
+#: src/toolbars/EditToolBar.cpp
+#: src/tracks/playabletrack/notetrack/ui/NoteTrackVZoomHandle.cpp
+#: src/tracks/playabletrack/wavetrack/ui/SpectrumVZoomHandle.cpp
+#: src/tracks/playabletrack/wavetrack/ui/WaveformVZoomHandle.cpp
 msgid "Zoom Out"
 msgstr "Σμίκρυνση"
 
@@ -15730,43 +16746,6 @@ msgstr "Γραμμή εργαλείων μετρητή &ηχογράφησης"
 msgid "&Playback Meter Toolbar"
 msgstr "Γραμμή εργαλείων μετρητή &αναπαραγωγής"
 
-#: src/toolbars/MixerToolBar.cpp
-msgid "Recording Volume"
-msgstr "Ένταση ηχογράφησης"
-
-#: src/toolbars/MixerToolBar.cpp
-msgid "Playback Volume"
-msgstr "Ένταση αναπαραγωγής"
-
-#: src/toolbars/MixerToolBar.cpp
-#, c-format
-msgid "Recording Volume: %.2f"
-msgstr "Ένταση ηχογράφησης: %.2f"
-
-#: src/toolbars/MixerToolBar.cpp
-msgid "Recording Volume (Unavailable; use system mixer.)"
-msgstr "Ένταση ηχογράφησης (μη διαθέσιμη; χρησιμοποίησε τον μείκτη του συστήματος.)"
-
-#: src/toolbars/MixerToolBar.cpp
-#, c-format
-msgid "Playback Volume: %.2f (emulated)"
-msgstr "Ένταση αναπαραγωγής: %.2f (προσομοιωμένη)"
-
-#: src/toolbars/MixerToolBar.cpp
-#, c-format
-msgid "Playback Volume: %.2f"
-msgstr "Ένταση αναπαραγωγής: %.2f"
-
-#: src/toolbars/MixerToolBar.cpp
-msgid "Playback Volume (Unavailable; use system mixer.)"
-msgstr "Ένταση αναπαραγωγής (μη διαθέσιμη; χρησιμοποίησε τον μείκτη του συστήματος.)"
-
-#. i18n-hint: Clicking this menu item shows the toolbar
-#. with the mixer
-#: src/toolbars/MixerToolBar.cpp
-msgid "Mi&xer Toolbar"
-msgstr "Γραμμή εργαλείων μεί&κτη"
-
 #: src/toolbars/ScrubbingToolBar.cpp
 msgid "Seek"
 msgstr "Αναζήτηση (Seek)"
@@ -15782,6 +16761,7 @@ msgstr "Τρίψιμο (Scrubbing)"
 #. i18n-hint: These commands assist the user in finding a sound by ear. ...
 #. "Scrubbing" is variable-speed playback, ...
 #. "Seeking" is normal speed playback but with skips
+#.
 #: src/toolbars/ScrubbingToolBar.cpp
 msgid "Stop Scrubbing"
 msgstr "Παύση τριψίματος"
@@ -15789,6 +16769,7 @@ msgstr "Παύση τριψίματος"
 #. i18n-hint: These commands assist the user in finding a sound by ear. ...
 #. "Scrubbing" is variable-speed playback, ...
 #. "Seeking" is normal speed playback but with skips
+#.
 #: src/toolbars/ScrubbingToolBar.cpp
 msgid "Start Scrubbing"
 msgstr "Έναρξη τριψίματος"
@@ -15796,6 +16777,7 @@ msgstr "Έναρξη τριψίματος"
 #. i18n-hint: These commands assist the user in finding a sound by ear. ...
 #. "Scrubbing" is variable-speed playback, ...
 #. "Seeking" is normal speed playback but with skips
+#.
 #: src/toolbars/ScrubbingToolBar.cpp
 msgid "Stop Seeking"
 msgstr "Παύση αναζήτησης"
@@ -15803,6 +16785,7 @@ msgstr "Παύση αναζήτησης"
 #. i18n-hint: These commands assist the user in finding a sound by ear. ...
 #. "Scrubbing" is variable-speed playback, ...
 #. "Seeking" is normal speed playback but with skips
+#.
 #: src/toolbars/ScrubbingToolBar.cpp
 msgid "Start Seeking"
 msgstr "Έναρξη αναζήτησης"
@@ -15857,7 +16840,9 @@ msgstr "Προσκόλληση σε"
 msgid "Length"
 msgstr "Διάρκεια"
 
-#: src/toolbars/SelectionBar.cpp src/tracks/playabletrack/wavetrack/ui/WaveTrackSliderHandles.cpp src/widgets/ASlider.cpp
+#: src/toolbars/SelectionBar.cpp
+#: src/tracks/playabletrack/wavetrack/ui/WaveTrackSliderHandles.cpp
+#: src/widgets/ASlider.cpp
 msgid "Center"
 msgstr "Κέντρο"
 
@@ -15921,8 +16906,8 @@ msgstr "Γραμμή εργαλείων &χρόνου"
 
 #. i18n-hint: %s will be replaced by the name of the kind of toolbar.
 #: src/toolbars/ToolBar.cpp
-#, c-format
-msgid "Audacity %s Toolbar"
+#, fuzzy, c-format
+msgid "Tenacity %s Toolbar"
 msgstr "Γραμμή εργαλείων %s του Audacity"
 
 #: src/toolbars/ToolBar.cpp
@@ -15949,7 +16934,8 @@ msgstr "Εργαλείο χρονικής μετατόπισης"
 msgid "Zoom Tool"
 msgstr "Εργαλείο μεγέθυνσης"
 
-#: src/toolbars/ToolsToolBar.cpp src/tracks/playabletrack/wavetrack/ui/SampleHandle.cpp
+#: src/toolbars/ToolsToolBar.cpp
+#: src/tracks/playabletrack/wavetrack/ui/SampleHandle.cpp
 msgid "Draw Tool"
 msgstr "Εργαλείο σχεδίασης"
 
@@ -16025,11 +17011,13 @@ msgstr "Μετακινήστε ένα ή περισσότερα όρια ετι�
 msgid "Drag label boundary."
 msgstr "Μετακινήστε το όριο ετικέτας."
 
-#: src/tracks/labeltrack/ui/LabelGlyphHandle.cpp src/tracks/labeltrack/ui/LabelTrackView.cpp
+#: src/tracks/labeltrack/ui/LabelGlyphHandle.cpp
+#: src/tracks/labeltrack/ui/LabelTrackView.cpp
 msgid "Modified Label"
 msgstr "Τροποποιημένη ετικέτα"
 
-#: src/tracks/labeltrack/ui/LabelGlyphHandle.cpp src/tracks/labeltrack/ui/LabelTrackView.cpp
+#: src/tracks/labeltrack/ui/LabelGlyphHandle.cpp
+#: src/tracks/labeltrack/ui/LabelTrackView.cpp
 msgid "Label Edit"
 msgstr "Επεξεργασία ετικέτας"
 
@@ -16084,31 +17072,42 @@ msgstr "Επεξεργασμένες ετικέτες"
 msgid "New label"
 msgstr "Νέα ετικέτα"
 
-#: src/tracks/playabletrack/notetrack/ui/NoteTrackControls.cpp src/tracks/playabletrack/notetrack/ui/NoteTrackVZoomHandle.cpp
+#: src/tracks/playabletrack/notetrack/ui/NoteTrackControls.cpp
+#: src/tracks/playabletrack/notetrack/ui/NoteTrackVZoomHandle.cpp
 msgid "Up &Octave"
 msgstr "Πάνω &οκτάβα"
 
-#: src/tracks/playabletrack/notetrack/ui/NoteTrackControls.cpp src/tracks/playabletrack/notetrack/ui/NoteTrackVZoomHandle.cpp
+#: src/tracks/playabletrack/notetrack/ui/NoteTrackControls.cpp
+#: src/tracks/playabletrack/notetrack/ui/NoteTrackVZoomHandle.cpp
 msgid "Down Octa&ve"
 msgstr "Κάτω ο&κτάβα"
 
-#: src/tracks/playabletrack/notetrack/ui/NoteTrackVZoomHandle.cpp src/tracks/playabletrack/wavetrack/ui/WaveTrackVZoomHandle.cpp
+#: src/tracks/playabletrack/notetrack/ui/NoteTrackVZoomHandle.cpp
+#: src/tracks/playabletrack/wavetrack/ui/WaveTrackVZoomHandle.cpp
 msgid "Click to vertically zoom in. Shift-click to zoom out. Drag to specify a zoom region."
 msgstr "Πάτημα για κάθετη μεγέθυνση. Shift-πάτημα για σμίκρυνση. Μεταφορά για ορισμό περιοχής εστίασης."
 
-#: src/tracks/playabletrack/notetrack/ui/NoteTrackVZoomHandle.cpp src/tracks/playabletrack/wavetrack/ui/WaveTrackVZoomHandle.cpp src/tracks/timetrack/ui/TimeTrackVZoomHandle.cpp
+#: src/tracks/playabletrack/notetrack/ui/NoteTrackVZoomHandle.cpp
+#: src/tracks/playabletrack/wavetrack/ui/WaveTrackVZoomHandle.cpp
+#: src/tracks/timetrack/ui/TimeTrackVZoomHandle.cpp
 msgid "Right-click for menu."
 msgstr "Δεξιό πάτημα για μενού."
 
-#: src/tracks/playabletrack/notetrack/ui/NoteTrackVZoomHandle.cpp src/tracks/playabletrack/wavetrack/ui/SpectrumVZoomHandle.cpp src/tracks/playabletrack/wavetrack/ui/WaveformVZoomHandle.cpp
+#: src/tracks/playabletrack/notetrack/ui/NoteTrackVZoomHandle.cpp
+#: src/tracks/playabletrack/wavetrack/ui/SpectrumVZoomHandle.cpp
+#: src/tracks/playabletrack/wavetrack/ui/WaveformVZoomHandle.cpp
 msgid "Zoom Reset"
 msgstr "Επαναφορά εστίασης"
 
-#: src/tracks/playabletrack/notetrack/ui/NoteTrackVZoomHandle.cpp src/tracks/playabletrack/wavetrack/ui/SpectrumVZoomHandle.cpp src/tracks/playabletrack/wavetrack/ui/WaveformVZoomHandle.cpp
+#: src/tracks/playabletrack/notetrack/ui/NoteTrackVZoomHandle.cpp
+#: src/tracks/playabletrack/wavetrack/ui/SpectrumVZoomHandle.cpp
+#: src/tracks/playabletrack/wavetrack/ui/WaveformVZoomHandle.cpp
 msgid "Shift-Right-Click"
 msgstr "Shift-δεξιό-πάτημα"
 
-#: src/tracks/playabletrack/notetrack/ui/NoteTrackVZoomHandle.cpp src/tracks/playabletrack/wavetrack/ui/SpectrumVZoomHandle.cpp src/tracks/playabletrack/wavetrack/ui/WaveformVZoomHandle.cpp
+#: src/tracks/playabletrack/notetrack/ui/NoteTrackVZoomHandle.cpp
+#: src/tracks/playabletrack/wavetrack/ui/SpectrumVZoomHandle.cpp
+#: src/tracks/playabletrack/wavetrack/ui/WaveformVZoomHandle.cpp
 msgid "Left-Click/Left-Drag"
 msgstr "Αριστερό πάτημα/αριστερή μεταφορά"
 
@@ -16150,7 +17149,8 @@ msgstr "Συγχώνευση"
 msgid "Expanded Cut Line"
 msgstr "Επέκταση της γραμμής αποκοπής"
 
-#: src/tracks/playabletrack/wavetrack/ui/CutlineHandle.cpp src/tracks/ui/TrackButtonHandles.cpp
+#: src/tracks/playabletrack/wavetrack/ui/CutlineHandle.cpp
+#: src/tracks/ui/TrackButtonHandles.cpp
 msgid "Expand"
 msgstr "Επέκταση"
 
@@ -16173,6 +17173,11 @@ msgstr "Μετακινήθηκαν δείγματα"
 #: src/tracks/playabletrack/wavetrack/ui/SampleHandle.cpp
 msgid "Sample Edit"
 msgstr "Επεξεργασία δείγματος"
+
+#. i18n-hint k abbreviating kilo meaning thousands
+#: src/tracks/playabletrack/wavetrack/ui/SpectrumVRulerControls.cpp
+msgid "k"
+msgstr ""
 
 #: src/tracks/playabletrack/wavetrack/ui/SpectrumVZoomHandle.cpp
 msgid "Zoom to Fit"
@@ -16218,7 +17223,8 @@ msgstr "Επεξεργασία...   %i%%"
 
 #. i18n-hint: The strings name a track and a format
 #. i18n-hint: The strings name a track and a channel choice (mono, left, or right)
-#: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp src/tracks/playabletrack/wavetrack/ui/WaveformView.cpp
+#: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
+#: src/tracks/playabletrack/wavetrack/ui/WaveformView.cpp
 #, c-format
 msgid "Changed '%s' to %s"
 msgstr "Αλλαγμένο '%s' σε %s"
@@ -16230,6 +17236,54 @@ msgstr "Αλλαγή μορφής"
 #: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
 msgid "Rat&e"
 msgstr "Ρ&υθμός"
+
+#: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
+msgid "8000 Hz"
+msgstr ""
+
+#: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
+msgid "11025 Hz"
+msgstr ""
+
+#: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
+msgid "16000 Hz"
+msgstr ""
+
+#: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
+msgid "22050 Hz"
+msgstr ""
+
+#: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
+msgid "44100 Hz"
+msgstr ""
+
+#: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
+msgid "48000 Hz"
+msgstr ""
+
+#: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
+msgid "88200 Hz"
+msgstr ""
+
+#: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
+msgid "96000 Hz"
+msgstr ""
+
+#: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
+msgid "176400 Hz"
+msgstr ""
+
+#: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
+msgid "192000 Hz"
+msgstr ""
+
+#: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
+msgid "352800 Hz"
+msgstr ""
+
+#: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
+msgid "384000 Hz"
+msgstr ""
 
 #: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
 msgid "&Other..."
@@ -16249,7 +17303,8 @@ msgstr "Αλλαγή ρυθμού δειγματοληψίας"
 msgid "Set Rate"
 msgstr "Ορισμός ρυθμού δειγματοληψίας"
 
-#: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp src/tracks/playabletrack/wavetrack/ui/WaveTrackViewConstants.cpp
+#: src/tracks/playabletrack/wavetrack/ui/WaveTrackControls.cpp
+#: src/tracks/playabletrack/wavetrack/ui/WaveTrackViewConstants.cpp
 msgid "&Multi-view"
 msgstr "&Πολλαπλή προβολή"
 
@@ -16341,14 +17396,23 @@ msgstr "Αριστερό, %dHz"
 msgid "Right, %dHz"
 msgstr "Δεξιό, %dHz"
 
+#. i18n-hint dB abbreviates decibels
+#: src/tracks/playabletrack/wavetrack/ui/WaveTrackSliderHandles.cpp
+#: src/widgets/ASlider.cpp
+#, c-format
+msgid "%+.1f dB"
+msgstr ""
+
 #. i18n-hint: Stereo pan setting
-#: src/tracks/playabletrack/wavetrack/ui/WaveTrackSliderHandles.cpp src/widgets/ASlider.cpp
+#: src/tracks/playabletrack/wavetrack/ui/WaveTrackSliderHandles.cpp
+#: src/widgets/ASlider.cpp
 #, c-format
 msgid "%.0f%% Left"
 msgstr "%.0f%% Αριστερά"
 
 #. i18n-hint: Stereo pan setting
-#: src/tracks/playabletrack/wavetrack/ui/WaveTrackSliderHandles.cpp src/widgets/ASlider.cpp
+#: src/tracks/playabletrack/wavetrack/ui/WaveTrackSliderHandles.cpp
+#: src/widgets/ASlider.cpp
 #, c-format
 msgid "%.0f%% Right"
 msgstr "%.0f%% Δεξιά"
@@ -16466,9 +17530,8 @@ msgstr "Λογαριθμικό &παρεμβολή"
 
 #. i18n-hint Appears on hovering mouse over clip affordance
 #: src/tracks/ui/AffordanceHandle.cpp
-#, fuzzy
-msgid "Click and drag to move a clip in time, or click to select"
-msgstr "Πατήστε και σύρετε για να μετακινήσετε ένα κομμάτι στο χρόνο"
+msgid "Drag clips to reposition them. Hold Shift and drag to move all clips on the same track."
+msgstr ""
 
 #: src/tracks/ui/CommonTrackControls.cpp
 msgid "&Name..."
@@ -16519,6 +17582,7 @@ msgstr "Ρυθμίστηκε η καμπύλη ακουστότητας."
 #. i18n-hint: These commands assist the user in finding a sound by ear. ...
 #. "Scrubbing" is variable-speed playback, ...
 #. "Seeking" is normal speed playback but with skips, ...
+#.
 #: src/tracks/ui/Scrubbing.cpp
 msgid "&Scrub"
 msgstr "&Τρίψιμο"
@@ -16530,6 +17594,7 @@ msgstr "Αναζήτηση"
 #. i18n-hint: These commands assist the user in finding a sound by ear. ...
 #. "Scrubbing" is variable-speed playback, ...
 #. "Seeking" is normal speed playback but with skips, ...
+#.
 #: src/tracks/ui/Scrubbing.cpp
 msgid "Scrub &Ruler"
 msgstr "&Χάρακας τριψίματος"
@@ -16713,6 +17778,24 @@ msgstr "Πατήστε"
 msgid "Button"
 msgstr "Κουμπί"
 
+#. i18n-hint: One-letter abbreviation for Left, in the Pan slider
+#. i18n-hint: One-letter abbreviation for Left, in VU Meter
+#: src/widgets/ASlider.cpp src/widgets/Meter.cpp
+msgid "L"
+msgstr ""
+
+#. i18n-hint: One-letter abbreviation for Right, in the Pan slider
+#. i18n-hint: One-letter abbreviation for Right, in VU Meter
+#: src/widgets/ASlider.cpp src/widgets/Meter.cpp
+msgid "R"
+msgstr ""
+
+#. i18n-hint: "x" suggests a multiplicative factor
+#: src/widgets/ASlider.cpp
+#, c-format
+msgid "%.2fx"
+msgstr ""
+
 #: src/widgets/FileDialog/gtk/FileDialogPrivate.cpp
 #, c-format
 msgid "File '%s' already exists, do you really want to overwrite it?"
@@ -16746,9 +17829,19 @@ msgstr "Άδειο"
 msgid "Backwards"
 msgstr "Προς τα πίσω"
 
+#. i18n-hint arrowhead meaning backward movement
+#: src/widgets/HelpSystem.cpp
+msgid "<"
+msgstr ""
+
 #: src/widgets/HelpSystem.cpp
 msgid "Forwards"
 msgstr "Μπροστά"
+
+#. i18n-hint arrowhead meaning forward movement
+#: src/widgets/HelpSystem.cpp
+msgid ">"
+msgstr ""
 
 #: src/widgets/HelpSystem.cpp
 msgid "Help on the Internet"
@@ -16961,6 +18054,7 @@ msgstr "0100 h 060 m 060 s+># δείγματα"
 #. i18n-hint: Name of time display format that shows time in samples (at the
 #. * current project sample rate).  For example the number of a sample at 1
 #. * second into a recording at 44.1KHz would be 44,100.
+#.
 #: src/widgets/NumericTextCtrl.cpp plug-ins/sample-data-export.ny
 msgid "samples"
 msgstr "δείγματα"
@@ -17114,6 +18208,24 @@ msgstr "CDDA καρέ (75 fps)"
 msgid "01000,01000 frames|75"
 msgstr "01000,01000 καρέ|75"
 
+#. i18n-hint: Format string for displaying frequency in hertz. Change
+#. * the decimal point for your locale. Don't change the numbers.
+#. * The decimal separator is specified using '<' if your language uses a ',' or
+#. * to '>' if your language uses a '.'.
+#: src/widgets/NumericTextCtrl.cpp
+#, fuzzy
+msgid "010,01000>0100 Hz"
+msgstr "01000<01000 kHz|0,001"
+
+#: src/widgets/NumericTextCtrl.cpp
+msgid "centihertz"
+msgstr ""
+
+#. i18n-hint: Name of display format that shows frequency in kilohertz
+#: src/widgets/NumericTextCtrl.cpp
+msgid "kHz"
+msgstr ""
+
 #. i18n-hint: Format string for displaying frequency in kilohertz. Change
 #. * the decimal point for your locale. Don't change the numbers.
 #. * The decimal separator is specified using '<' if your language uses a ',' or
@@ -17121,6 +18233,10 @@ msgstr "01000,01000 καρέ|75"
 #: src/widgets/NumericTextCtrl.cpp
 msgid "01000>01000 kHz|0.001"
 msgstr "01000<01000 kHz|0,001"
+
+#: src/widgets/NumericTextCtrl.cpp
+msgid "hertz"
+msgstr ""
 
 #. i18n-hint: Name of display format that shows log of frequency
 #. * in octaves
@@ -17186,6 +18302,11 @@ msgstr "(Χρησιμοποιήστε το μενού περιεχομένων �
 msgid "centiseconds"
 msgstr "εκατοστοδευτερόλεπτα"
 
+#: src/widgets/PopupMenuTable.h
+#, c-format
+msgid "%s (%s)"
+msgstr ""
+
 #: src/widgets/ProgressDialog.cpp
 msgid "Elapsed Time:"
 msgstr "Χρόνος που πέρασε:"
@@ -17228,6 +18349,11 @@ msgstr "Επιβεβαίωση κλεισίματος"
 msgid "Unable to write files to directory: %s."
 msgstr "Αδύνατη η ανάγνωση της προρύθμισης από το \"%s\""
 
+#. i18n-hint: This message describes the error in the Error dialog.
+#: src/widgets/UnwritableLocationErrorDialog.cpp
+msgid "Please check that the directory exists, has the necessary permissions, and the drive isn't full."
+msgstr ""
+
 #. i18n-hint: %s is replaced with 'Preferences > Directories'.
 #: src/widgets/UnwritableLocationErrorDialog.cpp
 #, c-format
@@ -17244,6 +18370,10 @@ msgstr "Προτιμήσεις καταλόγων"
 #: src/widgets/Warning.cpp
 msgid "Don't show this warning again"
 msgstr "Να μην εμφανιστεί ξανά"
+
+#: src/widgets/numformatter.cpp
+msgid "NaN"
+msgstr ""
 
 #: src/widgets/numformatter.cpp
 msgid "Infinity"
@@ -17327,15 +18457,27 @@ msgstr "Αδυναμία ανάλυσης του XML"
 msgid "Spectral edit multi tool"
 msgstr "Πολυεργαλείο φασματικής επεξεργασίας"
 
-#: plug-ins/SpectralEditMulti.ny plug-ins/SpectralEditParametricEQ.ny plug-ins/SpectralEditShelves.ny
+#: plug-ins/SpectralEditMulti.ny plug-ins/SpectralEditParametricEQ.ny
+#: plug-ins/SpectralEditShelves.ny
 msgid "Filtering..."
 msgstr "Φιλτράρισμα..."
 
-#: plug-ins/SpectralEditMulti.ny plug-ins/SpectralEditParametricEQ.ny plug-ins/SpectralEditShelves.ny plug-ins/StudioFadeOut.ny plug-ins/adjustable-fade.ny plug-ins/beat.ny plug-ins/crossfadeclips.ny plug-ins/crossfadetracks.ny plug-ins/delay.ny plug-ins/eq-xml-to-txt-converter.ny plug-ins/equalabel.ny plug-ins/highpass.ny plug-ins/limiter.ny plug-ins/lowpass.ny plug-ins/notch.ny plug-ins/nyquist-plug-in-installer.ny plug-ins/pluck.ny plug-ins/rhythmtrack.ny plug-ins/rissetdrum.ny plug-ins/sample-data-export.ny plug-ins/sample-data-import.ny plug-ins/spectral-delete.ny plug-ins/tremolo.ny plug-ins/vocalrediso.ny plug-ins/vocoder.ny
+#: plug-ins/SpectralEditMulti.ny plug-ins/SpectralEditParametricEQ.ny
+#: plug-ins/SpectralEditShelves.ny
+msgid "Paul Licameli"
+msgstr ""
+
+#: plug-ins/SpectralEditMulti.ny plug-ins/SpectralEditParametricEQ.ny
+#: plug-ins/SpectralEditShelves.ny plug-ins/beat.ny plug-ins/delay.ny
+#: plug-ins/equalabel.ny plug-ins/highpass.ny plug-ins/lowpass.ny
+#: plug-ins/notch.ny plug-ins/nyquist-plug-in-installer.ny plug-ins/pluck.ny
+#: plug-ins/rhythmtrack.ny plug-ins/rissetdrum.ny plug-ins/tremolo.ny
+#: plug-ins/vocalrediso.ny plug-ins/vocoder.ny
 msgid "Released under terms of the GNU General Public License version 2"
 msgstr "Εκδόθηκε με τους όρους της Γενικής Δημόσιας Άδειας GNU, έκδοσης 2"
 
-#: plug-ins/SpectralEditMulti.ny plug-ins/SpectralEditParametricEQ.ny plug-ins/SpectralEditShelves.ny
+#: plug-ins/SpectralEditMulti.ny plug-ins/SpectralEditParametricEQ.ny
+#: plug-ins/SpectralEditShelves.ny
 #, lisp-format
 msgid "~aPlease select frequencies."
 msgstr "~aΕπιλέξτε συχνότητες."
@@ -17362,7 +18504,8 @@ msgstr ""
 "                      Προσπαθήστε να αυξήσετε το κάτω όριο της συχνότητας~%~\n"
 "                      ή να μειώσετε το φίλτρο πλάτους ('Width')."
 
-#: plug-ins/SpectralEditMulti.ny plug-ins/SpectralEditParametricEQ.ny plug-ins/SpectralEditShelves.ny plug-ins/nyquist-plug-in-installer.ny
+#: plug-ins/SpectralEditMulti.ny plug-ins/SpectralEditParametricEQ.ny
+#: plug-ins/SpectralEditShelves.ny plug-ins/nyquist-plug-in-installer.ny
 #, lisp-format
 msgid "Error.~%"
 msgstr "Σφάλμα.~%"
@@ -17423,6 +18566,25 @@ msgstr "Σταδιακή εξασθένιση στούντιο"
 #: plug-ins/StudioFadeOut.ny plug-ins/adjustable-fade.ny
 msgid "Applying Fade..."
 msgstr "Εφαρμογή σταδιακής μεταβολής..."
+
+#: plug-ins/StudioFadeOut.ny plug-ins/adjustable-fade.ny
+#: plug-ins/crossfadeclips.ny plug-ins/crossfadetracks.ny plug-ins/delay.ny
+#: plug-ins/eq-xml-to-txt-converter.ny plug-ins/equalabel.ny
+#: plug-ins/label-sounds.ny plug-ins/limiter.ny plug-ins/noisegate.ny
+#: plug-ins/sample-data-export.ny plug-ins/sample-data-import.ny
+#: plug-ins/spectral-delete.ny plug-ins/tremolo.ny
+#, fuzzy
+msgid "Steve Daulton"
+msgstr "Ορισμός πρ&οεπιλογής"
+
+#: plug-ins/StudioFadeOut.ny plug-ins/adjustable-fade.ny
+#: plug-ins/crossfadeclips.ny plug-ins/crossfadetracks.ny
+#: plug-ins/eq-xml-to-txt-converter.ny plug-ins/label-sounds.ny
+#: plug-ins/limiter.ny plug-ins/noisegate.ny plug-ins/sample-data-export.ny
+#: plug-ins/sample-data-import.ny plug-ins/spectral-delete.ny
+#, fuzzy
+msgid "GNU General Public License v2.0 or later"
+msgstr "Εκδόθηκε με τους όρους της Γενικής Δημόσιας Άδειας GNU, έκδοσης 2 ή μεταγενέστερης."
 
 #: plug-ins/StudioFadeOut.ny
 #, lisp-format
@@ -17567,6 +18729,11 @@ msgstr "Εύρεση κτύπου (Beat)"
 #: plug-ins/beat.ny
 msgid "Finding beats..."
 msgstr "Εύρεση κτύπων (beats)..."
+
+#: plug-ins/beat.ny
+#, fuzzy
+msgid "Audacity"
+msgstr "Ημερολόγιο Audacity"
 
 #: plug-ins/beat.ny
 msgid "Threshold Percentage"
@@ -17891,13 +19058,38 @@ msgstr "Υψίσυχνο φίλτρο"
 msgid "Performing High-Pass Filter..."
 msgstr "Εκτελείται υψιπερατό φίλτρο..."
 
-#: plug-ins/highpass.ny plug-ins/lowpass.ny plug-ins/notch.ny plug-ins/rissetdrum.ny plug-ins/tremolo.ny
+#: plug-ins/highpass.ny plug-ins/lowpass.ny plug-ins/rhythmtrack.ny
+msgid "Dominic Mazzoni"
+msgstr ""
+
+#: plug-ins/highpass.ny plug-ins/lowpass.ny plug-ins/notch.ny
+#: plug-ins/rissetdrum.ny plug-ins/tremolo.ny
 msgid "Frequency (Hz)"
 msgstr "Συχνότητα (Hz)"
 
 #: plug-ins/highpass.ny plug-ins/lowpass.ny
 msgid "Roll-off (dB per octave)"
 msgstr "Απότομη εξασθένιση (Roll-off) (dB ανά οκτάβα)"
+
+#: plug-ins/highpass.ny plug-ins/lowpass.ny
+msgid "6 dB"
+msgstr ""
+
+#: plug-ins/highpass.ny plug-ins/lowpass.ny
+msgid "12 dB"
+msgstr ""
+
+#: plug-ins/highpass.ny plug-ins/lowpass.ny
+msgid "24 dB"
+msgstr ""
+
+#: plug-ins/highpass.ny plug-ins/lowpass.ny
+msgid "36 dB"
+msgstr ""
+
+#: plug-ins/highpass.ny plug-ins/lowpass.ny
+msgid "48 dB"
+msgstr ""
 
 #: plug-ins/highpass.ny plug-ins/lowpass.ny plug-ins/notch.ny
 msgid "Frequency must be at least 0.1 Hz."
@@ -17918,10 +19110,6 @@ msgstr ""
 #: plug-ins/label-sounds.ny
 msgid "Label Sounds"
 msgstr "Label Sounds (Ετικέτες ήχων)"
-
-#: plug-ins/label-sounds.ny plug-ins/noisegate.ny
-msgid "Released under terms of the GNU General Public License version 2 or later."
-msgstr "Εκδόθηκε με τους όρους της Γενικής Δημόσιας Άδειας GNU, έκδοσης 2 ή μεταγενέστερης."
 
 #: plug-ins/label-sounds.ny
 msgid "Threshold level (dB)"
@@ -17982,6 +19170,12 @@ msgstr "Μέγιστη σιγή τέλους"
 #: plug-ins/label-sounds.ny
 msgid "Sound ##1"
 msgstr "Ήχος ##1"
+
+#. i18n-hint: hours minutes and seconds. Do not translate "~a".
+#: plug-ins/label-sounds.ny
+#, lisp-format
+msgid "~ah ~am ~as"
+msgstr ""
 
 #: plug-ins/label-sounds.ny
 #, lisp-format
@@ -18161,6 +19355,12 @@ msgstr ""
 "Κορυφή βασισμένη στα πρώτα ~a δευτερόλεπτα ~a dB~%\n"
 "Προτεινόμενη ρύθμιση κατωφλίου ~a dB."
 
+#. i18n-hint: hours and minutes. Do not translate "~a".
+#: plug-ins/noisegate.ny
+#, lisp-format
+msgid "~ah ~am"
+msgstr ""
+
 #: plug-ins/notch.ny
 msgid "Notch Filter"
 msgstr "Φίλτρο εγκοπής (Notch Filter)"
@@ -18209,7 +19409,8 @@ msgstr "Αρχείο Lisp"
 msgid "HTML file"
 msgstr "Αρχείο HTML"
 
-#: plug-ins/nyquist-plug-in-installer.ny plug-ins/sample-data-export.ny plug-ins/sample-data-import.ny
+#: plug-ins/nyquist-plug-in-installer.ny plug-ins/sample-data-export.ny
+#: plug-ins/sample-data-import.ny
 msgid "Text file"
 msgstr "Αρχείο κειμένου"
 
@@ -18286,6 +19487,10 @@ msgid "MIDI values for C notes: 36, 48, 60 [middle C], 72, 84, 96."
 msgstr "Τιμές MIDI για νότες ντο (C): 36, 48, 60 [μεσαίο C], 72, 84, 96."
 
 #: plug-ins/pluck.ny
+msgid "David R.Sky"
+msgstr ""
+
+#: plug-ins/pluck.ny
 msgid "Pluck MIDI pitch"
 msgstr "Τονικό ύψος MIDI με τράβηγμα χορδών (Pluck)"
 
@@ -18334,12 +19539,20 @@ msgid "Swing amount"
 msgstr "Ποσότητα ταλάντωσης"
 
 #: plug-ins/rhythmtrack.ny
+msgid "+/- 1"
+msgstr ""
+
+#: plug-ins/rhythmtrack.ny
 msgid "Set 'Number of bars' to zero to enable the 'Rhythm track duration'."
 msgstr "Ορίστε το 'Αριθμός γραμμών' σε μηδέν για να ενεργοποιηθεί το 'Διάρκεια κομματιού ρυθμού'."
 
 #: plug-ins/rhythmtrack.ny
 msgid "Number of bars"
 msgstr "Αριθμός γραμμών"
+
+#: plug-ins/rhythmtrack.ny
+msgid "1 - 1000 bars"
+msgstr ""
 
 #: plug-ins/rhythmtrack.ny
 msgid "Rhythm track duration"
@@ -18398,6 +19611,10 @@ msgid "MIDI pitch of strong beat"
 msgstr "Τονικό ύψος MIDI του ισχυρού κτύπου (beat)"
 
 #: plug-ins/rhythmtrack.ny
+msgid "18 - 116"
+msgstr ""
+
+#: plug-ins/rhythmtrack.ny
 msgid "MIDI pitch of weak beat"
 msgstr "Τονικό ύψος MIDI του ασθενούς κτύπου (beat)"
 
@@ -18416,6 +19633,10 @@ msgstr "Τύμπανο Ρισέ (Risset Drum)"
 #: plug-ins/rissetdrum.ny
 msgid "Generating Risset Drum..."
 msgstr "Δημιουργία τύμπανου Risset..."
+
+#: plug-ins/rissetdrum.ny
+msgid "Steven Jones"
+msgstr ""
 
 #: plug-ins/rissetdrum.ny
 msgid "Decay (seconds)"
@@ -18823,6 +20044,10 @@ msgid "Applying Action..."
 msgstr "Εφαρμογή ενέργειας..."
 
 #: plug-ins/vocalrediso.ny
+msgid "Robert Haenggi"
+msgstr ""
+
+#: plug-ins/vocalrediso.ny
 msgid "Remove Vocals: to mono"
 msgstr "Αφαίρεση φωνητικών: σε μονοφωνικό"
 
@@ -18963,8 +20188,16 @@ msgid "This plug-in works only with stereo tracks."
 msgstr "Αυτό το πρόσθετο δουλεύει μόνο με στερεοφωνικά κομμάτια."
 
 #: plug-ins/vocoder.ny
+msgid "Vocoder"
+msgstr ""
+
+#: plug-ins/vocoder.ny
 msgid "Processing Vocoder..."
 msgstr "Επεξεργασία Vocoder..."
+
+#: plug-ins/vocoder.ny
+msgid "Edgar-RFT"
+msgstr ""
 
 #: plug-ins/vocoder.ny
 msgid "Distance: (1 to 120, default = 20)"
@@ -19006,6 +20239,232 @@ msgstr "Συχνότητα βελονών ραντάρ (Hz)"
 #, lisp-format
 msgid "Error.~%Stereo track required."
 msgstr "Σφάλμα. Απαιτείται ~%Stereo κομμάτι."
+
+#~ msgctxt "update dialog"
+#~ msgid "Update Audacity"
+#~ msgstr "Ενημέρωση του Audacity"
+
+#~ msgctxt "update dialog"
+#~ msgid "&Skip"
+#~ msgstr "&Παράλειψη"
+
+#~ msgctxt "update dialog"
+#~ msgid "&Install update"
+#~ msgstr "Ε&γκατάσταση ενημέρωσης"
+
+#~ msgctxt "update dialog"
+#~ msgid "Changelog"
+#~ msgstr "Αρχείο αλλαγών"
+
+#~ msgctxt "update dialog"
+#~ msgid "Read more on GitHub"
+#~ msgstr "Διαβάστε περισσότερα στο GitHub"
+
+#~ msgctxt "update dialog"
+#~ msgid "Error checking for update"
+#~ msgstr "Σφάλμα κατά τον έλεγχο για ενημέρωση"
+
+#~ msgctxt "update dialog"
+#~ msgid "Unable to connect to Audacity update server."
+#~ msgstr "Αδυναμία σύνδεσης με τον διακομιστή ενημέρωσης του Audacity."
+
+#~ msgctxt "update dialog"
+#~ msgid "Update data was corrupted."
+#~ msgstr "Τα δεδομένα ενημέρωσης ήταν κατεστραμμένα."
+
+#~ msgctxt "update dialog"
+#~ msgid "Error downloading update."
+#~ msgstr "Σφάλμα κατά τη λήψη της ενημέρωσης."
+
+#~ msgctxt "update dialog"
+#~ msgid "Can't open the Audacity download link."
+#~ msgstr "Αδυναμία ανοίγματος του συνδέσμου λήψης του Audacity."
+
+#, c-format
+#~ msgctxt "update dialog"
+#~ msgid "Audacity %s is available!"
+#~ msgstr "Το Audacity %s είναι διαθέσιμο!"
+
+#, fuzzy
+#~ msgctxt "preference"
+#~ msgid "Recording"
+#~ msgstr "Ηχογράφηση"
+
+#~ msgid "Commit Id:"
+#~ msgstr "Αναγνωριστικό υποβολής:"
+
+#~ msgid "Cross-platform GUI library"
+#~ msgstr "Διαλειτουργική βιβλιοθήκη GUI"
+
+#~ msgid "Import via GStreamer"
+#~ msgstr "Εισαγωγή μέσω GStreamer"
+
+#~ msgid "Automated Recording Level Adjustment stopped. It was not possible to optimize it more. Still too high."
+#~ msgstr "Η αυτόματη ρύθμιση επιπέδου εγγραφής σταμάτησε. Δεν ήταν δυνατό να βελτιωθεί περισσότερο. Εξακολουθεί να είναι υπερβολικά υψηλή."
+
+#, c-format
+#~ msgid "Automated Recording Level Adjustment decreased the volume to %f."
+#~ msgstr "Η αυτόματη ρύθμιση επιπέδου εγγραφής μείωσε την ένταση σε %f."
+
+#~ msgid "Automated Recording Level Adjustment stopped. It was not possible to optimize it more. Still too low."
+#~ msgstr "Η αυτόματη ρύθμιση επιπέδου εγγραφής σταμάτησε. Δεν ήταν δυνατό να βελτιωθεί περισσότερο. Εξακολουθεί να είναι υπερβολικά χαμηλή."
+
+#, c-format
+#~ msgid "Automated Recording Level Adjustment increased the volume to %.2f."
+#~ msgstr "Η αυτόματη ρύθμιση επιπέδου εγγραφής αύξησε την ένταση σε %.2f."
+
+#~ msgid "Automated Recording Level Adjustment stopped. The total number of analyses has been exceeded without finding an acceptable volume. Still too high."
+#~ msgstr "Η αυτόματη ρύθμιση επιπέδου εγγραφής σταμάτησε. Ο συνολικός αριθμός των αναλύσεων έχει ξεπεραστεί χωρίς να βρεθεί μια αποδεκτή ένταση. Εξακολουθεί να είναι υπερβολικά υψηλή."
+
+#~ msgid "Automated Recording Level Adjustment stopped. The total number of analyses has been exceeded without finding an acceptable volume. Still too low."
+#~ msgstr "Η αυτόματη ρύθμιση επιπέδου εγγραφής σταμάτησε. Ο συνολικός αριθμός των αναλύσεων έχει ξεπεραστεί χωρίς να βρεθεί μια αποδεκτή ένταση. Εξακολουθεί να είναι υπερβολικά χαμηλή."
+
+#, c-format
+#~ msgid "Automated Recording Level Adjustment stopped. %.2f seems an acceptable volume."
+#~ msgstr "Η αυτόματη ρύθμιση επιπέδου εγγραφής σταμάτησε. Το %.2f φαίνεται να είναι μια αποδεκτή ένταση."
+
+#, c-format
+#~ msgid "Received %d while opening devices\n"
+#~ msgstr "Ελήφθησαν %d κατά το άνοιγμα των συσκευών\n"
+
+#~ msgid "Unable to open Portmixer\n"
+#~ msgstr "Αδύνατο το άνοιγμα Portmixer\n"
+
+#~ msgid "Available mixers:\n"
+#~ msgstr "Διαθέσιμοι μείκτες:\n"
+
+#~ msgid "Available recording sources:\n"
+#~ msgstr "Διαθέσιμες πηγές ηχογράφησης:\n"
+
+#~ msgid "Available playback volumes:\n"
+#~ msgstr "Διαθέσιμες εντάσεις αναπαραγωγής:\n"
+
+#~ msgid "Recording volume is emulated\n"
+#~ msgstr "Η ένταση ηχογράφησης είναι προσομοιωμένη\n"
+
+#~ msgid "Recording volume is native\n"
+#~ msgstr "Η ένταση ηχογράφησης είναι εγγενής\n"
+
+#~ msgid "Playback volume is emulated\n"
+#~ msgstr "Η ένταση αναπαραγωγής είναι προσομοιωμένη\n"
+
+#~ msgid "Playback volume is native\n"
+#~ msgstr "Η ένταση αναπαραγωγής είναι εγγενής\n"
+
+#, fuzzy
+#~ msgid "Unknown date and time"
+#~ msgstr "Ημερομηνία και ώρα λήξης"
+
+#~ msgid "GStreamer-compatible files"
+#~ msgstr "Αρχεία συμβατά με GStreamer"
+
+#~ msgid "Unable to add decoder to pipeline"
+#~ msgstr "Αδύνατη η προσθήκη αποκωδικοποιητή στη διοχέτευση"
+
+#~ msgid "GStreamer Importer"
+#~ msgstr "Εισαγωγέας GStreamer"
+
+#~ msgid "Unable to set stream state to paused."
+#~ msgstr "Αδύνατη η ρύθμιση της κατάστασης ροής σε παύση."
+
+#, c-format
+#~ msgid "Index[%02d], Type[%s], Channels[%d], Rate[%d]"
+#~ msgstr "Δείκτης[%02d], Τύπος[%s], Κανάλια[%d], Ρυθμός[%d]"
+
+#~ msgid "File doesn't contain any audio streams."
+#~ msgstr "Το αρχείο δεν περιέχει ροές ήχου."
+
+#~ msgid "Unable to import file, state change failed."
+#~ msgstr "Αδύνατη η εισαγωγή αρχείου, αποτυχία αλλαγής κατάστασης."
+
+#, c-format
+#~ msgid "GStreamer Error: %s"
+#~ msgstr "Σφάλμα GStreamer: %s"
+
+#~ msgid "Mi&xer"
+#~ msgstr "Μεί&κτης"
+
+#~ msgid "Ad&just Playback Volume..."
+#~ msgstr "Ρύ&θμιση έντασης αναπαραγωγής..."
+
+#~ msgid "&Increase Playback Volume"
+#~ msgstr "Αύ&ξηση έντασης αναπαραγωγής"
+
+#~ msgid "&Decrease Playback Volume"
+#~ msgstr "Μεί&ωση έντασης αναπαραγωγής"
+
+#~ msgid "Adj&ust Recording Volume..."
+#~ msgstr "Ρύ&θμιση έντασης ηχογράφησης..."
+
+#~ msgid "I&ncrease Recording Volume"
+#~ msgstr "Αύξ&ηση έντασης ηχογράφησης"
+
+#~ msgid "D&ecrease Recording Volume"
+#~ msgstr "Μείω&ση έντασης ηχογράφησης"
+
+#~ msgid "Audacity &Manual"
+#~ msgstr "Εγ&χειρίδιο του Audacity"
+
+#~ msgid "&About Audacity..."
+#~ msgstr "&Σχετικά με το Audacity..."
+
+#~ msgid "A&utomated Recording Level Adjustment (on/off)"
+#~ msgstr "Α&υτόματη ρύθμιση επιπέδου ηχογράφησης (ναι/όχι)"
+
+#~ msgid "Automated Recording Level Adjustment"
+#~ msgstr "Αυτόματη ρύθμιση επιπέδου ηχογράφησης"
+
+#~ msgid "Enable Automated Recording Level Adjustment."
+#~ msgstr "Ενεργοποίηση αυτόματης ρύθμισης επιπέδου ηχογράφησης."
+
+#~ msgid "Target Peak:"
+#~ msgstr "Κορυφή στόχου:"
+
+#~ msgid "Within:"
+#~ msgstr "Μέσα σε:"
+
+#~ msgid "Analysis Time:"
+#~ msgstr "Χρόνος ανάλυσης:"
+
+#~ msgid "milliseconds (time of one analysis)"
+#~ msgstr "ms (χρόνος μιας ανάλυσης)"
+
+#~ msgid "Number of consecutive analysis:"
+#~ msgstr "Αριθμός διαδοχικών αναλύσεων:"
+
+#~ msgid "0 means endless"
+#~ msgstr "0 σημαίνει ατελείωτο"
+
+#~ msgid "Recording Volume"
+#~ msgstr "Ένταση ηχογράφησης"
+
+#~ msgid "Playback Volume"
+#~ msgstr "Ένταση αναπαραγωγής"
+
+#, c-format
+#~ msgid "Recording Volume: %.2f"
+#~ msgstr "Ένταση ηχογράφησης: %.2f"
+
+#~ msgid "Recording Volume (Unavailable; use system mixer.)"
+#~ msgstr "Ένταση ηχογράφησης (μη διαθέσιμη; χρησιμοποίησε τον μείκτη του συστήματος.)"
+
+#, c-format
+#~ msgid "Playback Volume: %.2f (emulated)"
+#~ msgstr "Ένταση αναπαραγωγής: %.2f (προσομοιωμένη)"
+
+#, c-format
+#~ msgid "Playback Volume: %.2f"
+#~ msgstr "Ένταση αναπαραγωγής: %.2f"
+
+#~ msgid "Playback Volume (Unavailable; use system mixer.)"
+#~ msgstr "Ένταση αναπαραγωγής (μη διαθέσιμη; χρησιμοποίησε τον μείκτη του συστήματος.)"
+
+#~ msgid "Mi&xer Toolbar"
+#~ msgstr "Γραμμή εργαλείων μεί&κτη"
+
+#, fuzzy
+#~ msgid "Click and drag to move a clip in time, or click to select"
+#~ msgstr "Πατήστε και σύρετε για να μετακινήσετε ένα κομμάτι στο χρόνο"
 
 #~ msgid "Program build date:"
 #~ msgstr "Ημερομηνία δημιουργίας του προγράμματος:"
@@ -19855,9 +21314,6 @@ msgstr "Σφάλμα. Απαιτείται ~%Stereo κομμάτι."
 #~ msgid "AIFF (Apple) signed 16-bit PCM"
 #~ msgstr "AIFF (Apple) με υπογραφή 16 δυαδικών PCM"
 
-#~ msgid "WAV (Microsoft) signed 16-bit PCM"
-#~ msgstr "WAV (Microsoft) με υπογραφή 16 δυαδικών PCM"
-
 #~ msgid "WAV (Microsoft) signed 24-bit PCM"
 #~ msgstr "WAV (Microsoft) με υπογραφή 24 δυαδικών PCM"
 
@@ -20364,9 +21820,6 @@ msgstr "Σφάλμα. Απαιτείται ~%Stereo κομμάτι."
 #~ msgid "L-E"
 #~ msgstr "Δ-Τ"
 
-#~ msgid "L-C"
-#~ msgstr "Δ-Κ"
-
 #~ msgid "Show start time and end time"
 #~ msgstr "Εμφάνιση χρόνου έναρξης και χρόνου λήξης"
 
@@ -20567,9 +22020,6 @@ msgstr "Σφάλμα. Απαιτείται ~%Stereo κομμάτι."
 #~ msgid "Offset"
 #~ msgstr "Μετατόπιση"
 
-#~ msgid "Version"
-#~ msgstr "Έκδοση"
-
 #~ msgid "Heavy"
 #~ msgstr "Έντονος"
 
@@ -20660,9 +22110,6 @@ msgstr "Σφάλμα. Απαιτείται ~%Stereo κομμάτι."
 
 #~ msgid "To use Draw, choose 'Waveform' in the Track Drop-down Menu."
 #~ msgstr "Για να χρησιμοποιήσετε σχεδίαση, επιλέξτε 'κυματομορφή' στο πτυσσόμενο μενού κομματιού."
-
-#~ msgid "%.2f dB Average RMS"
-#~ msgstr "%.2f dB μέσος όρος RMS"
 
 #~ msgid "Average RMS = %.2f dB."
 #~ msgstr "Μέσος όρος RMS = %.2f dB."

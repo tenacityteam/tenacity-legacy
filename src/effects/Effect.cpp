@@ -166,7 +166,7 @@ VendorSymbol Effect::GetVendor()
       return mClient->GetVendor();
    }
 
-   return XO("Audacity");
+   return XO("Tenacity");
 }
 
 wxString Effect::GetVersion()
@@ -499,7 +499,7 @@ bool Effect::ShowInterface(wxWindow &parent,
 
    // mUIDialog is null
    auto cleanup = valueRestorer( mUIDialog );
-   
+
    if ( factory )
       mUIDialog = factory(parent, this, this);
    if (!mUIDialog)
@@ -748,7 +748,7 @@ void Effect::ImportPresets()
          if (ident != commandId) {
             // effect identifiers are a sensible length!
             // must also have some params.
-            if ((params.Length() < 2 ) || (ident.Length() < 2) || (ident.Length() > 30)) 
+            if ((params.Length() < 2 ) || (ident.Length() < 2) || (ident.Length() > 30))
             {
                Effect::MessageBox(
                   /* i18n-hint %s will be replaced by a file name */

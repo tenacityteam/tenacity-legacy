@@ -152,7 +152,7 @@ auto ProjectFileManager::ReadProjectFile(
    /// Parse project file
    ///
    bool bParseSuccess = projectFileIO.LoadProject(fileName, discardAutosave);
-   
+
    bool err = false;
 
    if (bParseSuccess)
@@ -172,9 +172,9 @@ auto ProjectFileManager::ReadProjectFile(
 
          AudacityMessageBox(
             resaved
-               ? XO("This project was not saved properly the last time Audacity ran.\n\n"
+               ? XO("This project was not saved properly the last time Tenacity ran.\n\n"
                     "It has been recovered to the last snapshot.")
-               : XO("This project was not saved properly the last time Audacity ran.\n\n"
+               : XO("This project was not saved properly the last time Tenacity ran.\n\n"
                     "It has been recovered to the last snapshot, but you must save it\n"
                     "to preserve its contents."),
             XO("Project Recovered"),
@@ -436,7 +436,7 @@ bool ProjectFileManager::SaveAs(bool allowOverwrite /* = false */)
    TranslatableString title = XO("%sSave Project \"%s\" As...")
       .Format( Restorer.sProjNumber, Restorer.sProjName );
    TranslatableString message = XO("\
-'Save Project' is for an Audacity project, not an audio file.\n\
+'Save Project' is for an Tenacity project, not an audio file.\n\
 For an audio file that will open in other apps, use 'Export'.\n");
 
    if (ShowWarningDialog(&window, wxT("FirstProjectSave"), message, true) != wxID_OK) {
@@ -588,7 +588,7 @@ bool ProjectFileManager::SaveCopy(const FilePath &fileName /* = wxT("") */)
       {
          // JKC: I removed 'wxFD_OVERWRITE_PROMPT' because we are checking
          // for overwrite ourselves later, and we disallow it.
-         // Previously we disallowed overwrite because we would have had 
+         // Previously we disallowed overwrite because we would have had
          // to DELETE the many smaller files too, or prompt to move them.
          // Maybe we could allow it now that we have aup3 format?
          fName = FileNames::SelectFile(FileNames::Operation::Export,
@@ -751,7 +751,7 @@ void ProjectFileManager::CompactProjectOnClose()
          // without save.  Don't leave the document blob from the last
          // push of undo history, when that undo state may get purged
          // with deletion of some new sample blocks.
-         // REVIEW: UpdateSaved() might fail too.  Do we need to test 
+         // REVIEW: UpdateSaved() might fail too.  Do we need to test
          // for that and report it?
          projectFileIO.UpdateSaved( mLastSavedTracks.get() );
       }
@@ -777,9 +777,9 @@ bool ProjectFileManager::OpenNewProject()
       ShowExceptionDialog(
          nullptr,
          XO("Can't open new empty project"),
-         XO("Error opening a new empty project"), 
+         XO("Error opening a new empty project"),
          "FAQ:Errors_opening_a_new_empty_project",
-         true, 
+         true,
          audacity::ToWString(projectFileIO.GetLastLog()));
    }
    return bOK;
@@ -891,7 +891,7 @@ AudacityProject *ProjectFileManager::OpenFile( const ProjectChooserFn &chooser,
    {
       AudacityMessageBox(
          XO(
-"You are trying to open an automatically created backup file.\nDoing this may result in severe data loss.\n\nPlease open the actual Audacity project file instead."),
+"You are trying to open an automatically created backup file.\nDoing this may result in severe data loss.\n\nPlease open the actual Tenacity project file instead."),
          XO("Warning - Backup File Detected"),
          wxOK | wxCENTRE,
          nullptr);
@@ -1088,7 +1088,7 @@ ProjectFileManager::AddImportedTracks(const FilePath &fileName,
    double newRate = 0;
    wxString trackNameBase = fn.GetName();
    int i = -1;
-   
+
    // Fix the bug 2109.
    // In case the project had soloed tracks before importing,
    // all newly imported tracks are muted.
@@ -1116,7 +1116,7 @@ ProjectFileManager::AddImportedTracks(const FilePath &fileName,
       tracks.MakeMultiChannelTrack(*first, nChannels, true);
    }
    newTracks.clear();
-      
+
    // Now name them
 
    // Add numbers to track names only if there is more than one (mono or stereo)

@@ -8,7 +8,7 @@
 
 **************************************************************************//**
 \class BuiltinEffectsModule
-\brief Internal module to auto register all built in effects.  
+\brief Internal module to auto register all built in effects.
 *****************************************************************************/
 
 
@@ -92,7 +92,7 @@ ComponentInterfaceSymbol BuiltinEffectsModule::GetSymbol()
 
 VendorSymbol BuiltinEffectsModule::GetVendor()
 {
-   return XO("The Audacity Team");
+   return XO("The Tenacity Team");
 }
 
 wxString BuiltinEffectsModule::GetVersion()
@@ -103,7 +103,7 @@ wxString BuiltinEffectsModule::GetVersion()
 
 TranslatableString BuiltinEffectsModule::GetDescription()
 {
-   return XO("Provides builtin effects to Audacity");
+   return XO("Provides builtin effects to Tenacity");
 }
 
 // ============================================================================
@@ -208,7 +208,7 @@ std::unique_ptr<Effect> BuiltinEffectsModule::Instantiate(const PluginPath & pat
    auto iter = mEffects.find( path );
    if ( iter != mEffects.end() )
       return iter->second->factory();
- 
+
    wxASSERT( false );
    return nullptr;
 }

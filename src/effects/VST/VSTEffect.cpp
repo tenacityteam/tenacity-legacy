@@ -68,7 +68,7 @@
 #include <dlfcn.h>
 #endif
 
-// TODO:  Unfortunately we have some dependencies on Audacity provided 
+// TODO:  Unfortunately we have some dependencies on Audacity provided
 //        dialogs, widgets and other stuff.  This will need to be cleaned up.
 
 #include "../../FileNames.h"
@@ -139,7 +139,7 @@ DECLARE_MODULE_ENTRY(AudacityModule)
 // ============================================================================
 //
 // Register this as a builtin module
-// 
+//
 // We also take advantage of the fact that wxModules are initialized before
 // the wxApp::OnInit() method is called.  We check to see if Audacity was
 // executed to scan a VST effect in a different process.
@@ -320,7 +320,7 @@ ComponentInterfaceSymbol VSTEffectsModule::GetSymbol()
 
 VendorSymbol VSTEffectsModule::GetVendor()
 {
-   return XO("The Audacity Team");
+   return XO("The Tenacity Team");
 }
 
 wxString VSTEffectsModule::GetVersion()
@@ -331,7 +331,7 @@ wxString VSTEffectsModule::GetVersion()
 
 TranslatableString VSTEffectsModule::GetDescription()
 {
-   return XO("Adds the ability to use VST effects in Audacity.");
+   return XO("Adds the ability to use VST effects in Tenacity.");
 }
 
 // ============================================================================
@@ -395,7 +395,7 @@ PluginPaths VSTEffectsModule::FindPluginPaths(PluginManagerInterface & pm)
       }
    }
 
-#if defined(__WXMAC__)  
+#if defined(__WXMAC__)
 #define VSTPATH wxT("/Library/Audio/Plug-Ins/VST")
 
    // Look in ~/Library/Audio/Plug-Ins/VST and /Library/Audio/Plug-Ins/VST
@@ -1151,7 +1151,7 @@ VSTEffect::VSTEffect(const PluginPath & path, VSTEffect *master)
    mTimeInfo.flags = kVstTempoValid | kVstNanosValid;
 
    // UI
-   
+
    mGui = false;
    mContainer = NULL;
 
@@ -1850,7 +1850,7 @@ void VSTEffect::ExportPresets()
       {
         { XO("Standard VST bank file"), { wxT("fxb") }, true },
         { XO("Standard VST program file"), { wxT("fxp") }, true },
-        { XO("Audacity VST preset file"), { wxT("xml") }, true },
+        { XO("Tenacity VST preset file"), { wxT("xml") }, true },
       },
       wxFD_SAVE | wxFD_OVERWRITE_PROMPT | wxRESIZE_BORDER,
       NULL);
@@ -2081,7 +2081,7 @@ bool VSTEffect::Load()
 
       // Try to load the library
       auto lib = std::make_unique<wxDynamicLibrary>(realPath);
-      if (!lib) 
+      if (!lib)
          return false;
 
       // Bail if it wasn't successful
@@ -2107,7 +2107,7 @@ bool VSTEffect::Load()
    //
    // Spent a few days trying to figure out why some VSTs where running okay and
    // others were hit or miss.  The cause was that we export all of Audacity's
-   // symbols and some of the loaded libraries were picking up Audacity's and 
+   // symbols and some of the loaded libraries were picking up Audacity's and
    // not their own.
    //
    // So far, I've only seen this issue on Linux, but we might just be getting
@@ -2126,7 +2126,7 @@ bool VSTEffect::Load()
       (char*) dlopen((const char *)wxString(realPath).ToUTF8(),
                      RTLD_NOW | RTLD_LOCAL | RTLD_DEEPBIND)
    };
-   if (!lib) 
+   if (!lib)
    {
       return false;
    }
@@ -3340,7 +3340,7 @@ bool VSTEffect::LoadFXProgram(unsigned char **bptr, ssize_t & len, int index, bo
             return false;
          }
       }
-         
+
       // They look okay...time to start changing things
       if (!dryrun)
       {
@@ -3406,7 +3406,7 @@ bool VSTEffect::LoadFXProgram(unsigned char **bptr, ssize_t & len, int index, bo
       // Unknown type
       return false;
    }
-   
+
    if (!dryrun)
    {
       SetString(effSetProgramName, wxString(progName), index);

@@ -163,7 +163,7 @@ ExportPCMOptions::ExportPCMOptions(wxWindow *parent, int selformat)
    if (mSelFormat < FMT_OTHER)
    {
       mType = kFormats[selformat].format & SF_FORMAT_TYPEMASK;
-      GetEncodings(mType & SF_FORMAT_SUBMASK);   
+      GetEncodings(mType & SF_FORMAT_SUBMASK);
    }
    else
    {
@@ -267,7 +267,7 @@ void ExportPCMOptions::OnEncodingChoice(wxCommandEvent & evt)
    // And save it
    SaveEncoding(mType, sf_encoding_index_to_subtype(mEncodingIndexes[mEncodingFromChoice]));
 }
- 
+
 void ExportPCMOptions::GetTypes()
 {
    // Reset arrays
@@ -313,7 +313,7 @@ void ExportPCMOptions::GetTypes()
    // Refresh the current type
    mType = sf_header_index_to_type(mHeaderIndexes[mHeaderFromChoice]);
 }
- 
+
 void ExportPCMOptions::GetEncodings(int enc)
 {
    // Setup for queries
@@ -440,16 +440,16 @@ void ExportPCM::ReportTooBigError(wxWindow * pParent)
    //Temporary translation hack, to say 'WAV or AIFF' rather than 'WAV'
    auto message =
       XO("You have attempted to Export a WAV or AIFF file which would be greater than 4GB.\n"
-      "Audacity cannot do this, the Export was abandoned.");
+      "Tenacity cannot do this, the Export was abandoned.");
 
    ShowErrorDialog(pParent, XO("Error Exporting"), message,
                   wxT("Size_limits_for_WAV_and_AIFF_files"));
 
-// This alternative error dialog was to cover the possibility we could not 
+// This alternative error dialog was to cover the possibility we could not
 // compute the size in advance.
 #if 0
    ShowErrorDialog(pParent, XO("Error Exporting"),
-                  XO("Your exported WAV file has been truncated as Audacity cannot export WAV\n"
+                  XO("Your exported WAV file has been truncated as Tenacity cannot export WAV\n"
                     "files bigger than 4GB."),
                   wxT("Size_limits_for_WAV_files"));
 #endif
@@ -509,7 +509,7 @@ ProgressResult ExportPCM::Export(AudacityProject *project,
    }
 
    int fileFormat = sf_format & SF_FORMAT_TYPEMASK;
-   
+
    auto updateResult = ProgressResult::Success;
    {
       wxFile f;   // will be closed when it goes out of scope
@@ -548,7 +548,7 @@ ProgressResult ExportPCM::Export(AudacityProject *project,
 
       // If we can't export exactly the format they requested,
       // try the default format for that header type...
-      // 
+      //
       // LLL: I don't think this is valid since libsndfile checks
       // for all allowed subtypes explicitly and doesn't provide
       // for an unspecified subtype.
@@ -682,11 +682,11 @@ ProgressResult ExportPCM::Export(AudacityProject *project,
                updateResult = ProgressResult::Cancelled;
                break;
             }
-            
+
             updateResult = progress.Update(mixer->MixGetCurrentTime() - t0, t1 - t0);
          }
       }
-      
+
       // Install the WAV metata in a "LIST" chunk at the end of the file
       if (updateResult == ProgressResult::Success ||
           updateResult == ProgressResult::Stopped) {

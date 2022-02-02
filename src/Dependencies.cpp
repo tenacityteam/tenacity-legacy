@@ -29,7 +29,7 @@ data.
 *//*****************************************************************//**
 
 \class DependencyDialog
-\brief DependencyDialog shows dependencies of an AudacityProject on 
+\brief DependencyDialog shows dependencies of an AudacityProject on
 AliasedFile s.
 
 *//********************************************************************/
@@ -550,7 +550,7 @@ void DependencyDialog::OnCopyToClipboard( wxCommandEvent& )
       bool bOriginalExists = aliasedFile.mbOriginalExists;
       // All fields quoted, as e.g. size may contain a comma in the number.
       Files += XO( "\"%s\", \"%s\", \"%s\"\n").Format(
-         fileName.GetFullPath(), 
+         fileName.GetFullPath(),
          Internat::FormatSize( byteCount),
          bOriginalExists ? XO("OK") : XO("Missing") );
    }
@@ -611,7 +611,7 @@ bool ShowDependencyDialogIfNeeded(AudacityProject *project,
       {
          auto msg =
 XO("Your project is self-contained; it does not depend on any external audio files. \
-\n\nSome older Audacity projects may not be self-contained, and care \n\
+\n\nSome older Tenacity projects may not be self-contained, and care \n\
 is needed to keep their external dependencies in the right place.\n\
 New projects will be self-contained and are less risky.");
          AudacityMessageBox(

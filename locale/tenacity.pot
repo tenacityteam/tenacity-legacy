@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tenacity 3.0.4\n"
 "Report-Msgid-Bugs-To: emabrey@tenacityaudio.org\n"
-"POT-Creation-Date: 2021-07-25 03:44-0400\n"
+"POT-Creation-Date: 2021-10-09 15:18+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,71 +17,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
-
-#: libraries/lib-strings/FutureStrings.h
-msgctxt "update dialog"
-msgid "Update Audacity"
-msgstr ""
-
-#: libraries/lib-strings/FutureStrings.h
-msgctxt "update dialog"
-msgid "&Skip"
-msgstr ""
-
-#: libraries/lib-strings/FutureStrings.h
-msgctxt "update dialog"
-msgid "&Install update"
-msgstr ""
-
-#: libraries/lib-strings/FutureStrings.h
-msgctxt "update dialog"
-msgid "Changelog"
-msgstr ""
-
-#: libraries/lib-strings/FutureStrings.h
-msgctxt "update dialog"
-msgid "Read more on GitHub"
-msgstr ""
-
-#: libraries/lib-strings/FutureStrings.h
-msgctxt "update dialog"
-msgid "Error checking for update"
-msgstr ""
-
-#: libraries/lib-strings/FutureStrings.h
-msgctxt "update dialog"
-msgid "Unable to connect to Audacity update server."
-msgstr ""
-
-#: libraries/lib-strings/FutureStrings.h
-msgctxt "update dialog"
-msgid "Update data was corrupted."
-msgstr ""
-
-#: libraries/lib-strings/FutureStrings.h
-msgctxt "update dialog"
-msgid "Error downloading update."
-msgstr ""
-
-#: libraries/lib-strings/FutureStrings.h
-msgctxt "update dialog"
-msgid "Can't open the Audacity download link."
-msgstr ""
-
-#. i18n-hint Substitution of version number for %s.
-#: libraries/lib-strings/FutureStrings.h
-#, c-format
-msgctxt "update dialog"
-msgid "Audacity %s is available!"
-msgstr ""
-
-#. i18n-hint comment to be moved
-#. to one of them (one is enough)
-#. i18n-hint: modifier as in "Recording preferences", not progressive verb
-#: libraries/lib-strings/FutureStrings.h
-msgctxt "preference"
-msgid "Recording"
-msgstr ""
 
 #: libraries/lib-strings/Internat.cpp
 msgid "Unable to determine"
@@ -286,7 +221,7 @@ msgid "(C) 2009 by Leland Lucius"
 msgstr ""
 
 #: modules/mod-nyq-bench/NyqBench.cpp
-msgid "External Audacity module which provides a simple IDE for writing effects."
+msgid "External Tenacity module which provides a simple IDE for writing effects."
 msgstr ""
 
 #: modules/mod-nyq-bench/NyqBench.cpp
@@ -502,7 +437,7 @@ msgid "The Build"
 msgstr ""
 
 #: src/AboutDialog.cpp
-msgid "Commit Id:"
+msgid "Version:"
 msgstr ""
 
 #: src/AboutDialog.cpp
@@ -513,21 +448,25 @@ msgstr ""
 msgid "Compiler:"
 msgstr ""
 
+#: src/AboutDialog.cpp
+msgid "wxWidgets:"
+msgstr ""
+
 #. i18n-hint: The directory audacity is installed into (on *nix systems)
 #: src/AboutDialog.cpp
 msgid "Installation Prefix:"
 msgstr ""
 
 #: src/AboutDialog.cpp
-msgid "Settings folder:"
+msgid "Config folder:"
+msgstr ""
+
+#: src/AboutDialog.cpp
+msgid "Data folder:"
 msgstr ""
 
 #: src/AboutDialog.cpp
 msgid "File Format Support"
-msgstr ""
-
-#: src/AboutDialog.cpp
-msgid "Cross-platform GUI library"
 msgstr ""
 
 #: src/AboutDialog.cpp
@@ -542,7 +481,6 @@ msgstr ""
 msgid "MP3 Importing"
 msgstr ""
 
-#. i18n-hint: Ogg is the container format. Vorbis is the compression codec. Both are proper nouns and shouldn't be translated
 #: src/AboutDialog.cpp
 msgid "Ogg Vorbis Import and Export"
 msgstr ""
@@ -551,7 +489,6 @@ msgstr ""
 msgid "ID3 tag support"
 msgstr ""
 
-#. i18n-hint: FLAC stands for Free Lossless Audio Codec, but is effectively a proper noun and so shouldn't be translated
 #: src/AboutDialog.cpp
 msgid "FLAC import and export"
 msgstr ""
@@ -569,14 +506,6 @@ msgid "FFmpeg Import/Export"
 msgstr ""
 
 #: src/AboutDialog.cpp
-msgid "Import via GStreamer"
-msgstr ""
-
-#: src/AboutDialog.cpp
-msgid "Features"
-msgstr ""
-
-#: src/AboutDialog.cpp
 msgid "Plug-in support"
 msgstr ""
 
@@ -590,6 +519,10 @@ msgstr ""
 
 #: src/AboutDialog.cpp
 msgid "Extreme Pitch and Tempo Change support"
+msgstr ""
+
+#: src/AboutDialog.cpp
+msgid "Features"
 msgstr ""
 
 #: src/AboutDialog.cpp
@@ -947,7 +880,7 @@ msgid ""
 msgstr ""
 
 #: src/AudacityApp.cpp
-msgid "Reset Audacity Preferences"
+msgid "Reset Tenacity Preferences"
 msgstr ""
 
 #: src/AudacityApp.cpp
@@ -959,7 +892,7 @@ msgid ""
 msgstr ""
 
 #: src/AudacityApp.cpp
-msgid "SQLite library failed to initialize.  Audacity cannot continue."
+msgid "SQLite library failed to initialize.  Tenacity cannot continue."
 msgstr ""
 
 #: src/AudacityApp.cpp
@@ -984,7 +917,7 @@ msgstr ""
 msgid "Open &Recent..."
 msgstr ""
 
-#: src/AudacityApp.cpp
+#: src/AudacityApp.cpp src/menus/HelpMenus.cpp
 msgid "&About Tenacity..."
 msgstr ""
 
@@ -998,36 +931,36 @@ msgstr ""
 
 #: src/AudacityApp.cpp
 msgid ""
-"Audacity could not find a safe place to store temporary files.\n"
-"Audacity needs a place where automatic cleanup programs won't delete the temporary files.\n"
+"Tenacity could not find a safe place to store temporary files.\n"
+"Tenacity needs a place where automatic cleanup programs won't delete the temporary files.\n"
 "Please enter an appropriate directory in the preferences dialog."
 msgstr ""
 
 #: src/AudacityApp.cpp
 msgid ""
-"Audacity could not find a place to store temporary files.\n"
+"Tenacity could not find a place to store temporary files.\n"
 "Please enter an appropriate directory in the preferences dialog."
 msgstr ""
 
 #: src/AudacityApp.cpp
-msgid "Audacity is now going to exit. Please launch Audacity again to use the new temporary directory."
+msgid "Tenacity is now going to exit. Please launch Tenacity again to use the new temporary directory."
 msgstr ""
 
 #: src/AudacityApp.cpp
 msgid ""
-"Running two copies of Audacity simultaneously may cause\n"
+"Running two copies of Tenacity simultaneously may cause\n"
 "data loss or cause your system to crash.\n"
 "\n"
 msgstr ""
 
 #: src/AudacityApp.cpp
 msgid ""
-"Audacity was not able to lock the temporary files directory.\n"
-"This folder may be in use by another copy of Audacity.\n"
+"Tenacity was not able to lock the temporary files directory.\n"
+"This folder may be in use by another copy of Tenacity.\n"
 msgstr ""
 
 #: src/AudacityApp.cpp
-msgid "Do you still want to start Audacity?"
+msgid "Do you still want to start Tenacity?"
 msgstr ""
 
 #: src/AudacityApp.cpp
@@ -1035,17 +968,17 @@ msgid "Error Locking Temporary Folder"
 msgstr ""
 
 #: src/AudacityApp.cpp
-msgid "The system has detected that another copy of Audacity is running.\n"
+msgid "The system has detected that another copy of Tenacity is running.\n"
 msgstr ""
 
 #: src/AudacityApp.cpp
 msgid ""
-"Use the New or Open commands in the currently running Audacity\n"
+"Use the New or Open commands in the currently running Tenacity\n"
 "process to open multiple projects simultaneously.\n"
 msgstr ""
 
 #: src/AudacityApp.cpp
-msgid "Audacity is already running"
+msgid "Tenacity is already running"
 msgstr ""
 
 #: src/AudacityApp.cpp
@@ -1057,7 +990,7 @@ msgid ""
 msgstr ""
 
 #: src/AudacityApp.cpp
-msgid "Audacity Startup Failure"
+msgid "Tenacity Startup Failure"
 msgstr ""
 
 #: src/AudacityApp.cpp
@@ -1086,7 +1019,7 @@ msgstr ""
 
 #: src/AudacityApp.cpp
 msgid ""
-"The Audacity IPC server failed to initialize.\n"
+"The Tenacity IPC server failed to initialize.\n"
 "\n"
 "This is likely due to a resource shortage\n"
 "and a reboot may be required."
@@ -1114,7 +1047,7 @@ msgstr ""
 
 #. i18n-hint: This displays the Audacity version
 #: src/AudacityApp.cpp
-msgid "display Audacity version"
+msgid "display Tenacity version"
 msgstr ""
 
 #. i18n-hint: This is a list of one or more files that Audacity
@@ -1126,7 +1059,7 @@ msgstr ""
 #: src/AudacityApp.cpp
 msgid ""
 "Audacity project (.aup3) files are not currently \n"
-"associated with Audacity. \n"
+"associated with Tenacity. \n"
 "\n"
 "Associate them, so they open on double-click?"
 msgstr ""
@@ -1141,7 +1074,7 @@ msgid "Message"
 msgstr ""
 
 #: src/AudacityFileConfig.cpp
-msgid "Audacity Configuration Error"
+msgid "Tenacity Configuration Error"
 msgstr ""
 
 #: src/AudacityFileConfig.cpp
@@ -1155,7 +1088,7 @@ msgid ""
 "\n"
 "You can attempt to correct the issue and then click \"Retry\" to continue.\n"
 "\n"
-"If you choose to \"Quit Audacity\", your project may be left in an unsaved state which will be recovered the next time you open it."
+"If you choose to \"Quit Tenacity\", your project may be left in an unsaved state which will be recovered the next time you open it."
 msgstr ""
 
 #: src/AudacityFileConfig.cpp src/ShuttleGui.cpp src/commands/HelpCommand.cpp
@@ -1165,7 +1098,7 @@ msgid "Help"
 msgstr ""
 
 #: src/AudacityFileConfig.cpp src/AutoRecoveryDialog.cpp
-msgid "&Quit Audacity"
+msgid "&Quit Tenacity"
 msgstr ""
 
 #: src/AudacityFileConfig.cpp
@@ -1173,7 +1106,7 @@ msgid "&Retry"
 msgstr ""
 
 #: src/AudacityLogger.cpp
-msgid "Audacity Log"
+msgid "Tenacity Log"
 msgstr ""
 
 #: src/AudacityLogger.cpp src/Tags.cpp
@@ -1237,7 +1170,7 @@ msgid "Error Initializing Midi"
 msgstr ""
 
 #: src/AudioIO.cpp
-msgid "Audacity Audio"
+msgid "Tenacity Audio"
 msgstr ""
 
 #: src/AudioIO.cpp src/ProjectAudioManager.cpp
@@ -1249,37 +1182,6 @@ msgstr ""
 
 #: src/AudioIO.cpp
 msgid "Out of memory!"
-msgstr ""
-
-#: src/AudioIO.cpp
-msgid "Automated Recording Level Adjustment stopped. It was not possible to optimize it more. Still too high."
-msgstr ""
-
-#: src/AudioIO.cpp
-#, c-format
-msgid "Automated Recording Level Adjustment decreased the volume to %f."
-msgstr ""
-
-#: src/AudioIO.cpp
-msgid "Automated Recording Level Adjustment stopped. It was not possible to optimize it more. Still too low."
-msgstr ""
-
-#: src/AudioIO.cpp
-#, c-format
-msgid "Automated Recording Level Adjustment increased the volume to %.2f."
-msgstr ""
-
-#: src/AudioIO.cpp
-msgid "Automated Recording Level Adjustment stopped. The total number of analyses has been exceeded without finding an acceptable volume. Still too high."
-msgstr ""
-
-#: src/AudioIO.cpp
-msgid "Automated Recording Level Adjustment stopped. The total number of analyses has been exceeded without finding an acceptable volume. Still too low."
-msgstr ""
-
-#: src/AudioIO.cpp
-#, c-format
-msgid "Automated Recording Level Adjustment stopped. %.2f seems an acceptable volume."
 msgstr ""
 
 #: src/AudioIOBase.cpp
@@ -1379,48 +1281,6 @@ msgstr ""
 msgid "Cannot check mutual sample rates without both devices.\n"
 msgstr ""
 
-#: src/AudioIOBase.cpp
-#, c-format
-msgid "Received %d while opening devices\n"
-msgstr ""
-
-#: src/AudioIOBase.cpp
-msgid "Unable to open Portmixer\n"
-msgstr ""
-
-#: src/AudioIOBase.cpp
-msgid "Available mixers:\n"
-msgstr ""
-
-#: src/AudioIOBase.cpp
-#, c-format
-msgid "%d - %s\n"
-msgstr ""
-
-#: src/AudioIOBase.cpp
-msgid "Available recording sources:\n"
-msgstr ""
-
-#: src/AudioIOBase.cpp
-msgid "Available playback volumes:\n"
-msgstr ""
-
-#: src/AudioIOBase.cpp
-msgid "Recording volume is emulated\n"
-msgstr ""
-
-#: src/AudioIOBase.cpp
-msgid "Recording volume is native\n"
-msgstr ""
-
-#: src/AudioIOBase.cpp
-msgid "Playback volume is emulated\n"
-msgstr ""
-
-#: src/AudioIOBase.cpp
-msgid "Playback volume is native\n"
-msgstr ""
-
 #. i18n-hint: Supported, meaning made available by the system
 #: src/AudioIOBase.cpp
 #, c-format
@@ -1464,7 +1324,7 @@ msgstr ""
 
 #: src/AutoRecoveryDialog.cpp
 msgid ""
-"The following projects were not saved properly the last time Audacity was run and can be automatically recovered.\n"
+"The following projects were not saved properly the last time Tenacity was run and can be automatically recovered.\n"
 "\n"
 "After recovery, save the projects to ensure changes are written to disk."
 msgstr ""
@@ -1980,10 +1840,6 @@ msgid "No revision identifier was provided"
 msgstr ""
 
 #: src/BuildInfo.h
-msgid "Unknown date and time"
-msgstr ""
-
-#: src/BuildInfo.h
 #, c-format
 msgid "Debug build (debug level %d)"
 msgstr ""
@@ -2219,7 +2075,7 @@ msgstr ""
 msgid ""
 "Your project is self-contained; it does not depend on any external audio files. \n"
 "\n"
-"Some older Audacity projects may not be self-contained, and care \n"
+"Some older Tenacity projects may not be self-contained, and care \n"
 "is needed to keep their external dependencies in the right place.\n"
 "New projects will be self-contained and are less risky."
 msgstr ""
@@ -2239,7 +2095,7 @@ msgstr ""
 msgid "Rectangle"
 msgstr ""
 
-#: src/Dither.cpp plug-ins/tremolo.ny
+#: src/Dither.cpp src/effects/ToneGen.cpp plug-ins/tremolo.ny
 msgid "Triangle"
 msgstr ""
 
@@ -2303,7 +2159,7 @@ msgstr ""
 #: src/FFmpeg.cpp
 msgid ""
 "FFmpeg was configured in Preferences and successfully loaded before, \n"
-"but this time Audacity failed to load it at startup. \n"
+"but this time Tenacity failed to load it at startup. \n"
 "\n"
 "You may want to go back to Preferences > Libraries and re-configure it."
 msgstr ""
@@ -2322,7 +2178,7 @@ msgstr ""
 
 #: src/FFmpeg.cpp
 #, c-format
-msgid "Audacity needs the file '%s' to import and export audio via FFmpeg."
+msgid "Tenacity needs the file '%s' to import and export audio via FFmpeg."
 msgstr ""
 
 #: src/FFmpeg.cpp
@@ -2363,7 +2219,7 @@ msgstr ""
 
 #: src/FFmpeg.cpp
 msgid ""
-"Audacity attempted to use FFmpeg to import an audio file,\n"
+"Tenacity attempted to use FFmpeg to import an audio file,\n"
 "but the libraries were not found.\n"
 "\n"
 "To use FFmpeg import, go to Edit > Preferences > Libraries\n"
@@ -2389,23 +2245,23 @@ msgstr ""
 
 #: src/FileException.cpp
 #, c-format
-msgid "Audacity failed to open a file in %s."
+msgid "Tenacity failed to open a file in %s."
 msgstr ""
 
 #: src/FileException.cpp
 #, c-format
-msgid "Audacity failed to read from a file in %s."
+msgid "Tenacity failed to read from a file in %s."
 msgstr ""
 
 #: src/FileException.cpp
 #, c-format
-msgid "Audacity successfully wrote a file in %s but failed to rename it as %s."
+msgid "Tenacity successfully wrote a file in %s but failed to rename it as %s."
 msgstr ""
 
 #: src/FileException.cpp
 #, c-format
 msgid ""
-"Audacity failed to write to a file.\n"
+"Tenacity failed to write to a file.\n"
 "Perhaps %s is not writable or the disk is full.\n"
 "For tips on freeing up space, click the help button."
 msgstr ""
@@ -2853,14 +2709,14 @@ msgstr ""
 #, c-format
 msgid ""
 "Internal error in %s at %s line %d.\n"
-"Please inform the Audacity team at https://forum.audacityteam.org/."
+"Please inform the Tenacity team at https://tenacityaudio.org/#community-buttons."
 msgstr ""
 
 #: src/InconsistencyException.cpp
 #, c-format
 msgid ""
 "Internal error at %s line %d.\n"
-"Please inform the Audacity team at https://forum.audacityteam.org/."
+"Please inform the Tenacity team at https://tenacityaudio.org/#community-buttons."
 msgstr ""
 
 #: src/InconsistencyException.h
@@ -2951,11 +2807,11 @@ msgstr ""
 #. i18n-hint: Title on a dialog indicating that this is the first
 #. * time Audacity has been run.
 #: src/LangChoice.cpp
-msgid "Audacity First Run"
+msgid "Tenacity First Run"
 msgstr ""
 
 #: src/LangChoice.cpp
-msgid "Choose Language for Audacity to use:"
+msgid "Choose Language for Tenacity to use:"
 msgstr ""
 
 #. i18n-hint: The %s's are replaced by translated and untranslated
@@ -2982,12 +2838,12 @@ msgid ""
 msgstr ""
 
 #: src/Legacy.cpp
-msgid "Opening Audacity Project"
+msgid "Opening Tenacity Project"
 msgstr ""
 
 #: src/LyricsWindow.cpp
 #, c-format
-msgid "Audacity Karaoke%s"
+msgid "Tenacity Karaoke%s"
 msgstr ""
 
 #: src/LyricsWindow.cpp
@@ -3037,7 +2893,7 @@ msgstr ""
 
 #: src/MixerBoard.cpp
 #, c-format
-msgid "Audacity Mixer Board%s"
+msgid "Tenacity Mixer Board%s"
 msgstr ""
 
 #. i18n-hint: title of the Gain slider, used to adjust the volume
@@ -3127,7 +2983,7 @@ msgstr ""
 #: src/ModuleManager.cpp
 #, c-format
 msgid ""
-"The module \"%s\" is matched with Audacity version \"%s\".\n"
+"The module \"%s\" is matched with Tenacity version \"%s\".\n"
 "\n"
 "It will not be loaded."
 msgstr ""
@@ -3163,7 +3019,7 @@ msgid "No"
 msgstr ""
 
 #: src/ModuleManager.cpp
-msgid "Audacity Module Loader"
+msgid "Tenacity Module Loader"
 msgstr ""
 
 #: src/ModuleManager.cpp
@@ -3470,7 +3326,7 @@ msgstr ""
 #: src/ProjectAudioManager.cpp src/menus/TransportMenus.cpp
 msgid ""
 "Too few tracks are selected for recording at this sample rate.\n"
-"(Audacity requires two channels at the same sample rate for\n"
+"(Tenacity requires two channels at the same sample rate for\n"
 "each stereo track)"
 msgstr ""
 
@@ -3499,7 +3355,7 @@ msgstr ""
 msgid ""
 "Recorded audio was lost at the labeled locations. Possible causes:\n"
 "\n"
-"Other applications are competing with Audacity for processor time\n"
+"Other applications are competing with Tenacity for processor time\n"
 "\n"
 "You are saving directly to a slow external storage device\n"
 msgstr ""
@@ -3538,7 +3394,7 @@ msgstr ""
 msgid ""
 "Project check of \"%s\" folder \n"
 "detected %lld missing external audio file(s) \n"
-"('aliased files'). There is no way for Audacity \n"
+"('aliased files'). There is no way for Tenacity \n"
 "to recover these files automatically. \n"
 "\n"
 "If you choose the first or second option below, \n"
@@ -3570,7 +3426,7 @@ msgstr ""
 msgid ""
 "Project check of \"%s\" folder \n"
 "detected %lld missing alias (.auf) blockfile(s). \n"
-"Audacity can fully regenerate these files \n"
+"Tenacity can fully regenerate these files \n"
 "from the current audio in the project."
 msgstr ""
 
@@ -3596,7 +3452,7 @@ msgid ""
 "Project check of \"%s\" folder \n"
 "detected %lld missing audio data (.au) blockfile(s), \n"
 "probably due to a bug, system crash, or accidental \n"
-"deletion. There is no way for Audacity to recover \n"
+"deletion. There is no way for Tenacity to recover \n"
 "these missing files automatically. \n"
 "\n"
 "If you choose the first or second option below, \n"
@@ -3720,12 +3576,12 @@ msgid ""
 msgstr ""
 
 #: src/ProjectFileIO.cpp
-msgid "This is not an Audacity project file"
+msgid "This is not an Tenacity project file"
 msgstr ""
 
 #: src/ProjectFileIO.cpp
 msgid ""
-"This project was created with a newer version of Audacity.\n"
+"This project was created with a newer version of Tenacity.\n"
 "\n"
 "You will need to upgrade to open it."
 msgstr ""
@@ -3838,7 +3694,7 @@ msgstr ""
 #: src/ProjectFileIO.cpp
 #, c-format
 msgid ""
-"Audacity failed to write file %s.\n"
+"Tenacity failed to write file %s.\n"
 "Perhaps disk is full or not writable.\n"
 "For tips on freeing up space, click the help button."
 msgstr ""
@@ -3850,13 +3706,13 @@ msgstr ""
 #. i18n-hint: The %02i is the project number. This is followed by the project name in quotes as a %s.
 #: src/ProjectFileIO.cpp
 #, c-format
-msgid "[Project %02i] Audacity \"%s\""
+msgid "[Project %02i] Tenacity \"%s\""
 msgstr ""
 
 #: src/ProjectFileIO.cpp src/commands/AudacityCommand.cpp
 #: src/effects/Effect.cpp src/effects/nyquist/Nyquist.cpp
-#: src/prefs/PrefsPanel.cpp plug-ins/beat.ny
-msgid "Audacity"
+#: src/prefs/PrefsPanel.cpp
+msgid "Tenacity"
 msgstr ""
 
 #. i18n-hint: E.g this is recovered audio that had been lost.
@@ -3868,8 +3724,8 @@ msgstr ""
 #: src/ProjectFileIO.cpp
 #, c-format
 msgid ""
-"This file was saved using Audacity %s.\n"
-"You are using Audacity %s. You may need to upgrade to a newer version to open this file."
+"This file was saved using Tenacity %s.\n"
+"You are using Tenacity %s. You may need to upgrade to a newer version to open this file."
 msgstr ""
 
 #: src/ProjectFileIO.cpp
@@ -3932,14 +3788,14 @@ msgstr ""
 
 #: src/ProjectFileManager.cpp
 msgid ""
-"This project was not saved properly the last time Audacity ran.\n"
+"This project was not saved properly the last time Tenacity ran.\n"
 "\n"
 "It has been recovered to the last snapshot."
 msgstr ""
 
 #: src/ProjectFileManager.cpp
 msgid ""
-"This project was not saved properly the last time Audacity ran.\n"
+"This project was not saved properly the last time Tenacity ran.\n"
 "\n"
 "It has been recovered to the last snapshot, but you must save it\n"
 "to preserve its contents."
@@ -4002,7 +3858,7 @@ msgstr ""
 
 #: src/ProjectFileManager.cpp
 msgid ""
-"'Save Project' is for an Audacity project, not an audio file.\n"
+"'Save Project' is for an Tenacity project, not an audio file.\n"
 "For an audio file that will open in other apps, use 'Export'.\n"
 msgstr ""
 
@@ -4071,7 +3927,7 @@ msgid ""
 "You are trying to open an automatically created backup file.\n"
 "Doing this may result in severe data loss.\n"
 "\n"
-"Please open the actual Audacity project file instead."
+"Please open the actual Tenacity project file instead."
 msgstr ""
 
 #: src/ProjectFileManager.cpp
@@ -4166,7 +4022,7 @@ msgstr ""
 
 #: src/ProjectManager.cpp
 #, c-format
-msgid "Welcome to Audacity version %s"
+msgid "Welcome to Tenacity version %s"
 msgstr ""
 
 #. i18n-hint: The first %s numbers the project, the second %s is the project name.
@@ -4392,8 +4248,7 @@ msgstr ""
 msgid "Transport"
 msgstr ""
 
-#: src/Screenshot.cpp src/commands/ScreenshotCommand.cpp
-#: src/toolbars/MixerToolBar.cpp
+#: src/Screenshot.cpp
 msgid "Mixer"
 msgstr ""
 
@@ -4557,7 +4412,7 @@ msgid "Activation level (dB):"
 msgstr ""
 
 #: src/SplashDialog.cpp
-msgid "Welcome to Audacity!"
+msgid "Welcome to Tenacity!"
 msgstr ""
 
 #: src/SplashDialog.cpp
@@ -4701,7 +4556,7 @@ msgstr ""
 #: src/Theme.cpp
 #, c-format
 msgid ""
-"Audacity could not write file:\n"
+"Tenacity could not write file:\n"
 "  %s."
 msgstr ""
 
@@ -4719,7 +4574,7 @@ msgstr ""
 #: src/Theme.cpp
 #, c-format
 msgid ""
-"Audacity could not open file:\n"
+"Tenacity could not open file:\n"
 "  %s\n"
 "for writing."
 msgstr ""
@@ -4727,7 +4582,7 @@ msgstr ""
 #: src/Theme.cpp
 #, c-format
 msgid ""
-"Audacity could not write images to file:\n"
+"Tenacity could not write images to file:\n"
 "  %s."
 msgstr ""
 
@@ -4742,7 +4597,7 @@ msgstr ""
 #: src/Theme.cpp
 #, c-format
 msgid ""
-"Audacity could not find file:\n"
+"Tenacity could not find file:\n"
 "  %s.\n"
 "Theme not loaded."
 msgstr ""
@@ -4751,14 +4606,14 @@ msgstr ""
 #: src/Theme.cpp
 #, c-format
 msgid ""
-"Audacity could not load file:\n"
+"Tenacity could not load file:\n"
 "  %s.\n"
 "Bad png format perhaps?"
 msgstr ""
 
 #: src/Theme.cpp
 msgid ""
-"Audacity could not read its default theme.\n"
+"Tenacity could not read its default theme.\n"
 "Please report the problem."
 msgstr ""
 
@@ -4788,7 +4643,7 @@ msgstr ""
 #: src/Theme.cpp
 #, c-format
 msgid ""
-"Audacity could not save file:\n"
+"Tenacity could not save file:\n"
 "  %s"
 msgstr ""
 
@@ -4840,7 +4695,7 @@ msgid "Time Track"
 msgstr ""
 
 #: src/TimerRecordDialog.cpp
-msgid "Audacity Timer Record"
+msgid "Tenacity Timer Record"
 msgstr ""
 
 #: src/TimerRecordDialog.cpp
@@ -4927,7 +4782,7 @@ msgid "Action after Timer Recording:"
 msgstr ""
 
 #: src/TimerRecordDialog.cpp
-msgid "Audacity Timer Record Progress"
+msgid "Tenacity Timer Record Progress"
 msgstr ""
 
 #: src/TimerRecordDialog.cpp
@@ -5064,7 +4919,7 @@ msgid "Do nothing"
 msgstr ""
 
 #: src/TimerRecordDialog.cpp
-msgid "Exit Audacity"
+msgid "Exit Tenacity"
 msgstr ""
 
 #: src/TimerRecordDialog.cpp
@@ -5088,7 +4943,7 @@ msgid "Scheduled to stop at:"
 msgstr ""
 
 #: src/TimerRecordDialog.cpp
-msgid "Audacity Timer Record - Waiting for Start"
+msgid "Tenacity Timer Record - Waiting for Start"
 msgstr ""
 
 #. i18n-hint: "in" means after a duration of time,
@@ -5114,7 +4969,7 @@ msgid "Recording Exported:"
 msgstr ""
 
 #: src/TimerRecordDialog.cpp
-msgid "Audacity Timer Record - Waiting"
+msgid "Tenacity Timer Record - Waiting"
 msgstr ""
 
 #: src/TrackInfo.cpp
@@ -5568,11 +5423,11 @@ msgstr ""
 #: src/effects/VST/VSTEffect.cpp src/effects/audiounits/AudioUnitEffect.cpp
 #: src/effects/ladspa/LadspaEffect.cpp src/effects/lv2/LoadLV2.cpp
 #: src/effects/nyquist/LoadNyquist.cpp src/effects/vamp/LoadVamp.cpp
-msgid "The Audacity Team"
+msgid "The Tenacity Team"
 msgstr ""
 
 #: src/commands/LoadCommands.cpp
-msgid "Provides builtin commands to Audacity"
+msgid "Provides builtin commands to Tenacity"
 msgstr ""
 
 #: src/commands/LoadCommands.cpp
@@ -7973,7 +7828,7 @@ msgid "Builtin Effects"
 msgstr ""
 
 #: src/effects/LoadEffects.cpp
-msgid "Provides builtin effects to Audacity"
+msgid "Provides builtin effects to Tenacity"
 msgstr ""
 
 #: src/effects/LoadEffects.cpp
@@ -8204,7 +8059,7 @@ msgstr ""
 
 #: src/effects/NoiseReduction.cpp src/effects/NoiseRemoval.cpp
 msgid ""
-"Select a few seconds of just noise so Audacity knows what to filter out,\n"
+"Select a few seconds of just noise so Tenacity knows what to filter out,\n"
 "then click Get Noise Profile:"
 msgstr ""
 
@@ -9034,7 +8889,7 @@ msgid "VST Effects"
 msgstr ""
 
 #: src/effects/VST/VSTEffect.cpp
-msgid "Adds the ability to use VST effects in Audacity."
+msgid "Adds the ability to use VST effects in Tenacity."
 msgstr ""
 
 #: src/effects/VST/VSTEffect.cpp
@@ -9111,7 +8966,7 @@ msgid "Standard VST program file"
 msgstr ""
 
 #: src/effects/VST/VSTEffect.cpp
-msgid "Audacity VST preset file"
+msgid "Tenacity VST preset file"
 msgstr ""
 
 #: src/effects/VST/VSTEffect.cpp
@@ -9196,7 +9051,7 @@ msgid "Audio Unit Effects"
 msgstr ""
 
 #: src/effects/audiounits/AudioUnitEffect.cpp
-msgid "Provides Audio Unit Effects support to Audacity"
+msgid "Provides Audio Unit Effects support to Tenacity"
 msgstr ""
 
 #: src/effects/audiounits/AudioUnitEffect.cpp
@@ -9212,7 +9067,7 @@ msgid "Audio Unit Effect Options"
 msgstr ""
 
 #: src/effects/audiounits/AudioUnitEffect.cpp
-msgid "As part of their processing, some Audio Unit effects must delay returning audio to Audacity. When not compensating for this delay, you will notice that small silences have been inserted into the audio. Enabling this option will provide that compensation, but it may not work for all Audio Unit effects."
+msgid "As part of their processing, some Audio Unit effects must delay returning audio to Tenacity. When not compensating for this delay, you will notice that small silences have been inserted into the audio. Enabling this option will provide that compensation, but it may not work for all Audio Unit effects."
 msgstr ""
 
 #: src/effects/audiounits/AudioUnitEffect.cpp
@@ -9360,7 +9215,7 @@ msgid "Provides LADSPA Effects"
 msgstr ""
 
 #: src/effects/ladspa/LadspaEffect.cpp
-msgid "Audacity no longer uses vst-bridge"
+msgid "Tenacity no longer uses vst-bridge"
 msgstr ""
 
 #: src/effects/ladspa/LadspaEffect.cpp
@@ -9368,7 +9223,7 @@ msgid "LADSPA Effect Options"
 msgstr ""
 
 #: src/effects/ladspa/LadspaEffect.cpp
-msgid "As part of their processing, some LADSPA effects must delay returning audio to Audacity. When not compensating for this delay, you will notice that small silences have been inserted into the audio. Enabling this option will provide that compensation, but it may not work for all LADSPA effects."
+msgid "As part of their processing, some LADSPA effects must delay returning audio to Tenacity. When not compensating for this delay, you will notice that small silences have been inserted into the audio. Enabling this option will provide that compensation, but it may not work for all LADSPA effects."
 msgstr ""
 
 #. i18n-hint: An item name introducing a value, which is not part of the string but
@@ -9401,7 +9256,7 @@ msgid "&Buffer Size (8 to %d) samples:"
 msgstr ""
 
 #: src/effects/lv2/LV2Effect.cpp
-msgid "As part of their processing, some LV2 effects must delay returning audio to Audacity. When not compensating for this delay, you will notice that small silences have been inserted into the audio. Enabling this setting will provide that compensation, but it may not work for all LV2 effects."
+msgid "As part of their processing, some LV2 effects must delay returning audio to Tenacity. When not compensating for this delay, you will notice that small silences have been inserted into the audio. Enabling this setting will provide that compensation, but it may not work for all LV2 effects."
 msgstr ""
 
 #: src/effects/lv2/LV2Effect.cpp
@@ -9437,7 +9292,7 @@ msgid "LV2 Effects"
 msgstr ""
 
 #: src/effects/lv2/LoadLV2.cpp
-msgid "Provides LV2 Effects support to Audacity"
+msgid "Provides LV2 Effects support to Tenacity"
 msgstr ""
 
 #: src/effects/nyquist/LoadNyquist.cpp
@@ -9445,7 +9300,7 @@ msgid "Nyquist Effects"
 msgstr ""
 
 #: src/effects/nyquist/LoadNyquist.cpp
-msgid "Provides Nyquist Effects support to Audacity"
+msgid "Provides Nyquist Effects support to Tenacity"
 msgstr ""
 
 #: src/effects/nyquist/Nyquist.cpp
@@ -9663,7 +9518,7 @@ msgid "Vamp Effects"
 msgstr ""
 
 #: src/effects/vamp/LoadVamp.cpp
-msgid "Provides Vamp Effects support to Audacity"
+msgid "Provides Vamp Effects support to Tenacity"
 msgstr ""
 
 #: src/effects/vamp/VampEffect.cpp
@@ -10750,7 +10605,7 @@ msgstr ""
 
 #: src/export/ExportMP3.cpp
 #, c-format
-msgid "Audacity needs the file %s to create MP3s."
+msgid "Tenacity needs the file %s to create MP3s."
 msgstr ""
 
 #: src/export/ExportMP3.cpp
@@ -10780,8 +10635,8 @@ msgstr ""
 #: src/export/ExportMP3.cpp
 #, c-format
 msgid ""
-"You are linking to lame_enc.dll v%d.%d. This version is not compatible with Audacity %d.%d.%d.\n"
-"Please download the latest version of 'LAME for Audacity'."
+"You are linking to lame_enc.dll v%d.%d. This version is not compatible with Tenacity %d.%d.%d.\n"
+"Please download the latest version of 'LAME for Tenacity'."
 msgstr ""
 
 #: src/export/ExportMP3.cpp
@@ -11089,7 +10944,7 @@ msgstr ""
 #: src/export/ExportPCM.cpp
 msgid ""
 "You have attempted to Export a WAV or AIFF file which would be greater than 4GB.\n"
-"Audacity cannot do this, the Export was abandoned."
+"Tenacity cannot do this, the Export was abandoned."
 msgstr ""
 
 #: src/export/ExportPCM.cpp
@@ -11098,7 +10953,7 @@ msgstr ""
 
 #: src/export/ExportPCM.cpp
 msgid ""
-"Your exported WAV file has been truncated as Audacity cannot export WAV\n"
+"Your exported WAV file has been truncated as Tenacity cannot export WAV\n"
 "files bigger than 4GB."
 msgstr ""
 
@@ -11138,7 +10993,7 @@ msgstr ""
 msgid ""
 "\"%s\" \n"
 "is a MIDI file, not an audio file. \n"
-"Audacity cannot open this type of file for playing, but you can\n"
+"Tenacity cannot open this type of file for playing, but you can\n"
 "edit it by clicking File > Import > MIDI."
 msgstr ""
 
@@ -11147,7 +11002,7 @@ msgstr ""
 msgid ""
 "\"%s\" \n"
 "is a not an audio file. \n"
-"Audacity cannot open this type of file."
+"Tenacity cannot open this type of file."
 msgstr ""
 
 #: src/import/Import.cpp
@@ -11156,7 +11011,7 @@ msgstr ""
 
 #: src/import/Import.cpp
 #, c-format
-msgid "This version of Audacity was not compiled with %s support."
+msgid "This version of Tenacity was not compiled with %s support."
 msgstr ""
 
 #. i18n-hint: %s will be the filename
@@ -11164,9 +11019,9 @@ msgstr ""
 #, c-format
 msgid ""
 "\"%s\" is an audio CD track. \n"
-"Audacity cannot open audio CDs directly. \n"
+"Tenacity cannot open audio CDs directly. \n"
 "Extract (rip) the CD tracks to an audio format that \n"
-"Audacity can import, such as WAV or AIFF."
+"Tenacity can import, such as WAV or AIFF."
 msgstr ""
 
 #. i18n-hint: %s will be the filename
@@ -11174,7 +11029,7 @@ msgstr ""
 #, c-format
 msgid ""
 "\"%s\" is a playlist file. \n"
-"Audacity cannot open this file because it only contains links to other files. \n"
+"Tenacity cannot open this file because it only contains links to other files. \n"
 "You may be able to open it in a text editor and download the actual audio files."
 msgstr ""
 
@@ -11183,7 +11038,7 @@ msgstr ""
 #, c-format
 msgid ""
 "\"%s\" is a Windows Media Audio file. \n"
-"Audacity cannot open this type of file due to patent restrictions. \n"
+"Tenacity cannot open this type of file due to patent restrictions. \n"
 "You need to convert it to a supported audio format, such as WAV or AIFF."
 msgstr ""
 
@@ -11192,7 +11047,7 @@ msgstr ""
 #, c-format
 msgid ""
 "\"%s\" is an Advanced Audio Coding file.\n"
-"Without the optional FFmpeg library, Audacity cannot open this type of file.\n"
+"Without the optional FFmpeg library, Tenacity cannot open this type of file.\n"
 "Otherwise, you need to convert it to a supported audio format, such as WAV or AIFF."
 msgstr ""
 
@@ -11202,8 +11057,8 @@ msgstr ""
 msgid ""
 "\"%s\" is an encrypted audio file. \n"
 "These typically are from an online music store. \n"
-"Audacity cannot open this type of file due to the encryption. \n"
-"Try recording the file into Audacity, or burn it to audio CD then \n"
+"Tenacity cannot open this type of file due to the encryption. \n"
+"Try recording the file into Tenacity, or burn it to audio CD then \n"
 "extract the CD track to a supported audio format such as WAV or AIFF."
 msgstr ""
 
@@ -11212,7 +11067,7 @@ msgstr ""
 #, c-format
 msgid ""
 "\"%s\" is a RealPlayer media file. \n"
-"Audacity cannot open this proprietary format. \n"
+"Tenacity cannot open this proprietary format. \n"
 "You need to convert it to a supported audio format, such as WAV or AIFF."
 msgstr ""
 
@@ -11221,9 +11076,9 @@ msgstr ""
 #, c-format
 msgid ""
 "\"%s\" is a notes-based file, not an audio file. \n"
-"Audacity cannot open this type of file. \n"
+"Tenacity cannot open this type of file. \n"
 "Try converting it to an audio file such as WAV or AIFF and \n"
-"then import it, or record it into Audacity."
+"then import it, or record it into Tenacity."
 msgstr ""
 
 #. i18n-hint: %s will be the filename
@@ -11231,7 +11086,7 @@ msgstr ""
 #, c-format
 msgid ""
 "\"%s\" is a Musepack audio file. \n"
-"Audacity cannot open this type of file. \n"
+"Tenacity cannot open this type of file. \n"
 "If you think it might be an mp3 file, rename it to end with \".mp3\" \n"
 "and try importing it again. Otherwise you need to convert it to a supported audio \n"
 "format, such as WAV or AIFF."
@@ -11242,7 +11097,7 @@ msgstr ""
 #, c-format
 msgid ""
 "\"%s\" is a Wavpack audio file. \n"
-"Audacity cannot open this type of file. \n"
+"Tenacity cannot open this type of file. \n"
 "You need to convert it to a supported audio format, such as WAV or AIFF."
 msgstr ""
 
@@ -11251,7 +11106,7 @@ msgstr ""
 #, c-format
 msgid ""
 "\"%s\" is a Dolby Digital audio file. \n"
-"Audacity cannot currently open this type of file. \n"
+"Tenacity cannot currently open this type of file. \n"
 "You need to convert it to a supported audio format, such as WAV or AIFF."
 msgstr ""
 
@@ -11260,7 +11115,7 @@ msgstr ""
 #, c-format
 msgid ""
 "\"%s\" is an Ogg Speex audio file. \n"
-"Audacity cannot currently open this type of file. \n"
+"Tenacity cannot currently open this type of file. \n"
 "You need to convert it to a supported audio format, such as WAV or AIFF."
 msgstr ""
 
@@ -11269,7 +11124,7 @@ msgstr ""
 #, c-format
 msgid ""
 "\"%s\" is a video file. \n"
-"Audacity cannot currently open this type of file. \n"
+"Tenacity cannot currently open this type of file. \n"
 "You need to extract the audio to a supported format, such as WAV or AIFF."
 msgstr ""
 
@@ -11282,7 +11137,7 @@ msgstr ""
 #: src/import/Import.cpp
 #, c-format
 msgid ""
-"Audacity did not recognize the type of the file '%s'.\n"
+"Tenacity did not recognize the type of the file '%s'.\n"
 "\n"
 "%sFor uncompressed files, also try File > Import > Raw Data."
 msgstr ""
@@ -11302,7 +11157,7 @@ msgstr ""
 #: src/import/Import.cpp
 #, c-format
 msgid ""
-"Audacity recognized the type of the file '%s'.\n"
+"Tenacity recognized the type of the file '%s'.\n"
 "Importers supposedly supporting such files are:\n"
 "%s,\n"
 "but none of them understood this file format."
@@ -11330,7 +11185,7 @@ msgid ""
 "changed and this version of Audacity is unable to import the project.\n"
 "\n"
 "Use a version of Audacity prior to v3.0.0 to upgrade the project and then\n"
-"you may import it with this version of Audacity."
+"you may import it with this version of Tenacity."
 msgstr ""
 
 #: src/import/ImportAUP.cpp
@@ -11376,7 +11231,7 @@ msgid "Couldn't find the project data folder: \"%s\""
 msgstr ""
 
 #: src/import/ImportAUP.cpp
-msgid "MIDI tracks found in project file, but this build of Audacity does not include MIDI support, bypassing track."
+msgid "MIDI tracks found in project file, but this build of Tenacity does not include MIDI support, bypassing track."
 msgstr ""
 
 #: src/import/ImportAUP.cpp
@@ -11470,40 +11325,6 @@ msgstr ""
 
 #: src/import/ImportFLAC.cpp
 msgid "FLAC files"
-msgstr ""
-
-#: src/import/ImportGStreamer.cpp
-msgid "GStreamer-compatible files"
-msgstr ""
-
-#: src/import/ImportGStreamer.cpp
-msgid "Unable to add decoder to pipeline"
-msgstr ""
-
-#: src/import/ImportGStreamer.cpp
-msgid "GStreamer Importer"
-msgstr ""
-
-#: src/import/ImportGStreamer.cpp
-msgid "Unable to set stream state to paused."
-msgstr ""
-
-#: src/import/ImportGStreamer.cpp
-#, c-format
-msgid "Index[%02d], Type[%s], Channels[%d], Rate[%d]"
-msgstr ""
-
-#: src/import/ImportGStreamer.cpp
-msgid "File doesn't contain any audio streams."
-msgstr ""
-
-#: src/import/ImportGStreamer.cpp
-msgid "Unable to import file, state change failed."
-msgstr ""
-
-#: src/import/ImportGStreamer.cpp
-#, c-format
-msgid "GStreamer Error: %s"
 msgstr ""
 
 #: src/import/ImportLOF.cpp
@@ -12229,34 +12050,6 @@ msgid "Ext&ra"
 msgstr ""
 
 #: src/menus/ExtraMenus.cpp
-msgid "Mi&xer"
-msgstr ""
-
-#: src/menus/ExtraMenus.cpp
-msgid "Ad&just Playback Volume..."
-msgstr ""
-
-#: src/menus/ExtraMenus.cpp
-msgid "&Increase Playback Volume"
-msgstr ""
-
-#: src/menus/ExtraMenus.cpp
-msgid "&Decrease Playback Volume"
-msgstr ""
-
-#: src/menus/ExtraMenus.cpp
-msgid "Adj&ust Recording Volume..."
-msgstr ""
-
-#: src/menus/ExtraMenus.cpp
-msgid "I&ncrease Recording Volume"
-msgstr ""
-
-#: src/menus/ExtraMenus.cpp
-msgid "D&ecrease Recording Volume"
-msgstr ""
-
-#: src/menus/ExtraMenus.cpp
 msgid "De&vice"
 msgstr ""
 
@@ -12518,7 +12311,7 @@ msgid "&Getting Started"
 msgstr ""
 
 #: src/menus/HelpMenus.cpp
-msgid "Audacity &Manual"
+msgid "&Manual"
 msgstr ""
 
 #: src/menus/HelpMenus.cpp
@@ -12543,10 +12336,6 @@ msgstr ""
 
 #: src/menus/HelpMenus.cpp src/widgets/ErrorDialog.cpp
 msgid "Show &Log..."
-msgstr ""
-
-#: src/menus/HelpMenus.cpp
-msgid "&About Audacity..."
 msgstr ""
 
 #: src/menus/LabelMenus.cpp src/toolbars/TranscriptionToolBar.cpp
@@ -13452,7 +13241,7 @@ msgid "Created new label track"
 msgstr ""
 
 #: src/menus/TrackMenus.cpp
-msgid "This version of Audacity only allows one time track for each project window."
+msgid "This version of Tenacity only allows one time track for each project window."
 msgstr ""
 
 #: src/menus/TrackMenus.cpp
@@ -13869,10 +13658,6 @@ msgid "So&ftware Playthrough (on/off)"
 msgstr ""
 
 #: src/menus/TransportMenus.cpp
-msgid "A&utomated Recording Level Adjustment (on/off)"
-msgstr ""
-
-#: src/menus/TransportMenus.cpp
 msgid "T&ransport"
 msgstr ""
 
@@ -14085,7 +13870,7 @@ msgid "Preferences for Application"
 msgstr ""
 
 #: src/prefs/ApplicationPrefs.cpp
-msgid "Update Audacity"
+msgid "Update Tenacity"
 msgstr ""
 
 #: src/prefs/ApplicationPrefs.cpp
@@ -14289,7 +14074,7 @@ msgid "Directory %s is not writable"
 msgstr ""
 
 #: src/prefs/DirectoriesPrefs.cpp
-msgid "Changes to temporary directory will not take effect until Audacity is restarted"
+msgid "Changes to temporary directory will not take effect until Tenacity is restarted"
 msgstr ""
 
 #: src/prefs/DirectoriesPrefs.cpp
@@ -14374,11 +14159,11 @@ msgid "Plugin Options"
 msgstr ""
 
 #: src/prefs/EffectsPrefs.cpp
-msgid "Check for updated plugins when Audacity starts"
+msgid "Check for updated plugins when Tenacity starts"
 msgstr ""
 
 #: src/prefs/EffectsPrefs.cpp
-msgid "Rescan plugins next time Audacity is started"
+msgid "Rescan plugins next time Tenacity is started"
 msgstr ""
 
 #: src/prefs/EffectsPrefs.cpp
@@ -14558,7 +14343,7 @@ msgid "Re&tain labels if selection snaps to a label"
 msgstr ""
 
 #: src/prefs/GUIPrefs.cpp
-msgid "B&lend system and Audacity theme"
+msgid "B&lend system and Tenacity theme"
 msgstr ""
 
 #. i18n-hint: RTL stands for 'Right to Left'
@@ -14734,7 +14519,7 @@ msgid ""
 msgstr ""
 
 #: src/prefs/KeyConfigPrefs.cpp
-msgid "Select an XML file containing Audacity keyboard shortcuts..."
+msgid "Select an XML file containing Tenacity keyboard shortcuts..."
 msgstr ""
 
 #: src/prefs/KeyConfigPrefs.cpp
@@ -14849,7 +14634,7 @@ msgstr ""
 
 #: src/prefs/LibraryPrefs.cpp
 msgid ""
-"Audacity has automatically detected valid FFmpeg libraries.\n"
+"Tenacity has automatically detected valid FFmpeg libraries.\n"
 "Do you still want to locate them manually?"
 msgstr ""
 
@@ -14907,18 +14692,18 @@ msgstr ""
 
 #: src/prefs/ModulePrefs.cpp
 msgid ""
-"These are experimental modules. Enable them only if you've read the Audacity Manual\n"
+"These are experimental modules. Enable them only if you've read the Tenacity Manual\n"
 "and know what you are doing."
 msgstr ""
 
 #. i18n-hint preserve the leading spaces
 #: src/prefs/ModulePrefs.cpp
-msgid "  'Ask' means Audacity will ask if you want to load the module each time it starts."
+msgid "  'Ask' means Tenacity will ask if you want to load the module each time it starts."
 msgstr ""
 
 #. i18n-hint preserve the leading spaces
 #: src/prefs/ModulePrefs.cpp
-msgid "  'Failed' means Audacity thinks the module is broken and won't run it."
+msgid "  'Failed' means Tenacity thinks the module is broken and won't run it."
 msgstr ""
 
 #. i18n-hint preserve the leading spaces
@@ -14927,7 +14712,7 @@ msgid "  'New' means no choice has been made yet."
 msgstr ""
 
 #: src/prefs/ModulePrefs.cpp
-msgid "Changes to these settings only take effect when Audacity starts up."
+msgid "Changes to these settings only take effect when Tenacity starts up."
 msgstr ""
 
 #: src/prefs/ModulePrefs.cpp
@@ -15081,6 +14866,14 @@ msgstr ""
 msgid "Move clip up/down between tracks"
 msgstr ""
 
+#: src/prefs/MousePrefs.cpp
+msgid "Alt-Left-Drag"
+msgstr ""
+
+#: src/prefs/MousePrefs.cpp
+msgid "Move clips ignoring Sync-lock"
+msgstr ""
+
 #. i18n-hint: The envelope is a curve that controls the audio loudness.
 #: src/prefs/MousePrefs.cpp
 msgid "Change Amplification Envelope"
@@ -15204,7 +14997,7 @@ msgid "Always scrub un&pinned"
 msgstr ""
 
 #: src/prefs/PrefsDialog.cpp
-msgid "Audacity Preferences"
+msgid "Tenacity Preferences"
 msgstr ""
 
 #: src/prefs/PrefsDialog.cpp
@@ -15339,39 +15132,6 @@ msgstr ""
 
 #: src/prefs/RecordingPrefs.cpp
 msgid "System T&ime"
-msgstr ""
-
-#: src/prefs/RecordingPrefs.cpp
-msgid "Automated Recording Level Adjustment"
-msgstr ""
-
-#: src/prefs/RecordingPrefs.cpp
-msgid "Enable Automated Recording Level Adjustment."
-msgstr ""
-
-#. i18n-hint: Desired maximum (peak) volume for sound
-#: src/prefs/RecordingPrefs.cpp
-msgid "Target Peak:"
-msgstr ""
-
-#: src/prefs/RecordingPrefs.cpp
-msgid "Within:"
-msgstr ""
-
-#: src/prefs/RecordingPrefs.cpp
-msgid "Analysis Time:"
-msgstr ""
-
-#: src/prefs/RecordingPrefs.cpp
-msgid "milliseconds (time of one analysis)"
-msgstr ""
-
-#: src/prefs/RecordingPrefs.cpp
-msgid "Number of consecutive analysis:"
-msgstr ""
-
-#: src/prefs/RecordingPrefs.cpp
-msgid "0 means endless"
 msgstr ""
 
 #: src/prefs/RecordingPrefs.cpp
@@ -15641,7 +15401,7 @@ msgid ""
 "To try it out, click \"Save Theme Cache\" then find and modify the images and colors in\n"
 "ImageCacheVxx.png using an image editor such as the Gimp.\n"
 "\n"
-"Click \"Load Theme Cache\" to load the changed images and colors back into Audacity.\n"
+"Click \"Load Theme Cache\" to load the changed images and colors back into Tenacity.\n"
 "\n"
 "(Only the Transport Toolbar and the colors on the wavetrack are currently affected, even\n"
 "though the image file shows other icons too.)"
@@ -15936,15 +15696,23 @@ msgid "Stopped"
 msgstr ""
 
 #: src/toolbars/ControlToolBar.cpp
-msgid "Pause"
-msgstr ""
-
-#: src/toolbars/ControlToolBar.cpp
 msgid "Skip to Start"
 msgstr ""
 
 #: src/toolbars/ControlToolBar.cpp
 msgid "Skip to End"
+msgstr ""
+
+#: src/toolbars/ControlToolBar.cpp
+msgid "Pause"
+msgstr ""
+
+#: src/toolbars/ControlToolBar.cpp
+msgid "Select to Start"
+msgstr ""
+
+#: src/toolbars/ControlToolBar.cpp
+msgid "Select to End"
 msgstr ""
 
 #: src/toolbars/ControlToolBar.cpp
@@ -15957,14 +15725,6 @@ msgstr ""
 
 #: src/toolbars/ControlToolBar.cpp
 msgid "Append Record"
-msgstr ""
-
-#: src/toolbars/ControlToolBar.cpp
-msgid "Select to End"
-msgstr ""
-
-#: src/toolbars/ControlToolBar.cpp
-msgid "Select to Start"
 msgstr ""
 
 #. i18n-hint: These are strings for the status bar, and indicate whether Audacity
@@ -16134,43 +15894,6 @@ msgstr ""
 msgid "&Playback Meter Toolbar"
 msgstr ""
 
-#: src/toolbars/MixerToolBar.cpp
-msgid "Recording Volume"
-msgstr ""
-
-#: src/toolbars/MixerToolBar.cpp
-msgid "Playback Volume"
-msgstr ""
-
-#: src/toolbars/MixerToolBar.cpp
-#, c-format
-msgid "Recording Volume: %.2f"
-msgstr ""
-
-#: src/toolbars/MixerToolBar.cpp
-msgid "Recording Volume (Unavailable; use system mixer.)"
-msgstr ""
-
-#: src/toolbars/MixerToolBar.cpp
-#, c-format
-msgid "Playback Volume: %.2f (emulated)"
-msgstr ""
-
-#: src/toolbars/MixerToolBar.cpp
-#, c-format
-msgid "Playback Volume: %.2f"
-msgstr ""
-
-#: src/toolbars/MixerToolBar.cpp
-msgid "Playback Volume (Unavailable; use system mixer.)"
-msgstr ""
-
-#. i18n-hint: Clicking this menu item shows the toolbar
-#. with the mixer
-#: src/toolbars/MixerToolBar.cpp
-msgid "Mi&xer Toolbar"
-msgstr ""
-
 #: src/toolbars/ScrubbingToolBar.cpp
 msgid "Seek"
 msgstr ""
@@ -16332,7 +16055,7 @@ msgstr ""
 #. i18n-hint: %s will be replaced by the name of the kind of toolbar.
 #: src/toolbars/ToolBar.cpp
 #, c-format
-msgid "Audacity %s Toolbar"
+msgid "Tenacity %s Toolbar"
 msgstr ""
 
 #: src/toolbars/ToolBar.cpp
@@ -16953,7 +16676,7 @@ msgstr ""
 
 #. i18n-hint Appears on hovering mouse over clip affordance
 #: src/tracks/ui/AffordanceHandle.cpp
-msgid "Click and drag to move a clip in time, or click to select"
+msgid "Drag clips to reposition them. Hold Shift and drag to move all clips on the same track."
 msgstr ""
 
 #: src/tracks/ui/CommonTrackControls.cpp
@@ -17885,16 +17608,11 @@ msgid "Paul Licameli"
 msgstr ""
 
 #: plug-ins/SpectralEditMulti.ny plug-ins/SpectralEditParametricEQ.ny
-#: plug-ins/SpectralEditShelves.ny plug-ins/StudioFadeOut.ny
-#: plug-ins/adjustable-fade.ny plug-ins/beat.ny plug-ins/crossfadeclips.ny
-#: plug-ins/crossfadetracks.ny plug-ins/delay.ny
-#: plug-ins/eq-xml-to-txt-converter.ny plug-ins/equalabel.ny
-#: plug-ins/highpass.ny plug-ins/limiter.ny plug-ins/lowpass.ny
+#: plug-ins/SpectralEditShelves.ny plug-ins/beat.ny plug-ins/delay.ny
+#: plug-ins/equalabel.ny plug-ins/highpass.ny plug-ins/lowpass.ny
 #: plug-ins/notch.ny plug-ins/nyquist-plug-in-installer.ny plug-ins/pluck.ny
-#: plug-ins/rhythmtrack.ny plug-ins/rissetdrum.ny
-#: plug-ins/sample-data-export.ny plug-ins/sample-data-import.ny
-#: plug-ins/spectral-delete.ny plug-ins/tremolo.ny plug-ins/vocalrediso.ny
-#: plug-ins/vocoder.ny
+#: plug-ins/rhythmtrack.ny plug-ins/rissetdrum.ny plug-ins/tremolo.ny
+#: plug-ins/vocalrediso.ny plug-ins/vocoder.ny
 msgid "Released under terms of the GNU General Public License version 2"
 msgstr ""
 
@@ -17984,6 +17702,14 @@ msgstr ""
 #: plug-ins/sample-data-export.ny plug-ins/sample-data-import.ny
 #: plug-ins/spectral-delete.ny plug-ins/tremolo.ny
 msgid "Steve Daulton"
+msgstr ""
+
+#: plug-ins/StudioFadeOut.ny plug-ins/adjustable-fade.ny
+#: plug-ins/crossfadeclips.ny plug-ins/crossfadetracks.ny
+#: plug-ins/eq-xml-to-txt-converter.ny plug-ins/label-sounds.ny
+#: plug-ins/limiter.ny plug-ins/noisegate.ny plug-ins/sample-data-export.ny
+#: plug-ins/sample-data-import.ny plug-ins/spectral-delete.ny
+msgid "GNU General Public License v2.0 or later"
 msgstr ""
 
 #: plug-ins/StudioFadeOut.ny
@@ -18124,6 +17850,10 @@ msgstr ""
 
 #: plug-ins/beat.ny
 msgid "Finding beats..."
+msgstr ""
+
+#: plug-ins/beat.ny
+msgid "Audacity"
 msgstr ""
 
 #: plug-ins/beat.ny
@@ -18497,10 +18227,6 @@ msgstr ""
 #. i18n-hint: Name of effect that labels sounds
 #: plug-ins/label-sounds.ny
 msgid "Label Sounds"
-msgstr ""
-
-#: plug-ins/label-sounds.ny plug-ins/noisegate.ny
-msgid "Released under terms of the GNU General Public License version 2 or later."
 msgstr ""
 
 #: plug-ins/label-sounds.ny
