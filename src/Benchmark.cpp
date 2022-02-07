@@ -461,7 +461,7 @@ void BenchmarkDialog::OnRun( wxCommandEvent & WXUNUSED(event))
       try {
          tmp = t->Cut(double (x0 * chunkSize), double ((x0 + xlen) * chunkSize));
       }
-      catch (const AudacityException&) {
+      catch (const TenacityException&) {
          Printf( XO("Trial %d\n").Format( z ) );
          Printf( XO("Cut (%lld, %lld) failed.\n")
             .Format( (x0 * chunkSize), (x0 + xlen) * chunkSize) );
@@ -483,7 +483,7 @@ void BenchmarkDialog::OnRun( wxCommandEvent & WXUNUSED(event))
       try {
          t->Paste((double)(y0 * chunkSize), tmp.get());
       }
-      catch (const AudacityException&) {
+      catch (const TenacityException&) {
          Printf( XO("Trial %d\nFailed on Paste.\n").Format( z ) );
          goto fail;
       }

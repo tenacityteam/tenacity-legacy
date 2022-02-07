@@ -803,7 +803,7 @@ void WaveTrack::SetWaveformSettings(std::unique_ptr<WaveformSettings> &&pSetting
 // be pasted with visible split lines.  Normally, effects do not
 // want these extra lines, so they may be merged out.
 //
-/*! @excsafety{Weak} -- This WaveTrack remains destructible in case of AudacityException.
+/*! @excsafety{Weak} -- This WaveTrack remains destructible in case of TenacityException.
 But some of its cutline clips may have been destroyed. */
 void WaveTrack::ClearAndPaste(double t0, // Start of time to clear
                               double t1, // End of time to clear

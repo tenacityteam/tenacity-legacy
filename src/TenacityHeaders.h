@@ -2,7 +2,7 @@
 
   Tenacity
 
-  AudacityHeaders.h
+  TenacityHeaders.h
 
   Dominic Mazzoni
 
@@ -17,27 +17,23 @@
 
 **********************************************************************/
 
-
-
+#include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <math.h>
 #ifdef __WXMSW__
 #include <initializer_list>
 #endif
 
-
-
-#include <wx/wx.h>
 #include <wx/bitmap.h>
-#include <wx/filefn.h>
-#include <wx/image.h>
 #include <wx/ffile.h>
+#include <wx/filefn.h>
 #include <wx/filename.h>
+#include <wx/image.h>
 #include <wx/textfile.h>
 #include <wx/thread.h>
 #include <wx/tooltip.h>
+#include <wx/wx.h>
 
 #include "Identifier.h"
 
@@ -63,8 +59,8 @@
 
 // PRL:  These lines allow you to remove Project.h above.
 // They must be included before the definition of macro NEW below.
-#include <set>
 #include <map>
+#include <set>
 
 //#ifdef __WXMSW__
 // Enable this to diagnose memory leaks too!
@@ -76,7 +72,7 @@
 #define _CRTDBG_MAP_ALLOC
 #include <crtdbg.h>
 #undef new
-#define DEBUG_NEW new(_NORMAL_BLOCK, __FILE__, __LINE__)
+#define DEBUG_NEW new (_NORMAL_BLOCK, __FILE__, __LINE__)
 #define new DEBUG_NEW
 #endif
 #endif

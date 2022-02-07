@@ -36,7 +36,7 @@ for each problem encountered, since there can be many orphans.
 #include <wx/bmpbuttn.h>
 
 
-#include "../AudacityLogger.h"
+#include "../TenacityLogger.h"
 #include "wxPanelWrapper.h"
 #include "../Theme.h"
 #include "../AllThemeResources.h"
@@ -169,7 +169,7 @@ void MultiDialog::OnOK(wxCommandEvent & WXUNUSED(event))
 
 void MultiDialog::OnShowLog(wxCommandEvent & WXUNUSED(event))
 {
-   auto logger = AudacityLogger::Get();
+   auto logger = TenacityLogger::Get();
    if (logger) {
       logger->Show();
    }

@@ -258,7 +258,7 @@ msgstr "скрипти Nyquist (*.ny)|*.ny|скрипти Lisp (*.lsp)|*.lsp|у�
 msgid "Script was not saved."
 msgstr "Скрипти не збережено."
 
-#: modules/mod-nyq-bench/NyqBench.cpp src/AudacityLogger.cpp src/DBConnection.cpp src/Project.cpp src/ProjectFileIO.cpp src/ProjectHistory.cpp src/SqliteSampleBlock.cpp src/WaveClip.cpp src/WaveTrack.cpp src/export/Export.cpp src/export/ExportCL.cpp src/export/ExportMultiple.cpp src/import/RawAudioGuess.cpp src/menus/EditMenus.cpp src/prefs/KeyConfigPrefs.cpp src/widgets/Warning.cpp
+#: modules/mod-nyq-bench/NyqBench.cpp src/TenacityLogger.cpp src/DBConnection.cpp src/Project.cpp src/ProjectFileIO.cpp src/ProjectHistory.cpp src/SqliteSampleBlock.cpp src/WaveClip.cpp src/WaveTrack.cpp src/export/Export.cpp src/export/ExportCL.cpp src/export/ExportMultiple.cpp src/import/RawAudioGuess.cpp src/menus/EditMenus.cpp src/prefs/KeyConfigPrefs.cpp src/widgets/Warning.cpp
 msgid "Warning"
 msgstr "Попередження"
 
@@ -886,16 +886,16 @@ msgstr ""
 msgid "Error"
 msgstr "Помилка"
 
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 #, c-format
 msgid "Failed to remove %s"
 msgstr "Не вдалося вилучити «%s»"
 
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 msgid "Failed!"
 msgstr "Помилка!"
 
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 msgid ""
 "Reset Preferences?\n"
 "\n"
@@ -905,11 +905,11 @@ msgstr ""
 "\n"
 "Це питання буде задано лише один раз, після встановлення, де програма запитувала вас щодо відновлення початкових значень налаштувань."
 
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 msgid "Reset Audacity Preferences"
 msgstr "Відновити налаштування Audacity"
 
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 #, c-format
 msgid ""
 "%s could not be found.\n"
@@ -920,47 +920,47 @@ msgstr ""
 "\n"
 "Його вилучено зі списку нещодавніх файлів."
 
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 msgid "SQLite library failed to initialize.  Audacity cannot continue."
 msgstr "Не вдалося ініціалізувати бібліотеку SQLite. Неможливо продовжити роботу Audacity."
 
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 msgid "Block size must be within 256 to 100000000\n"
 msgstr "Розмір блоку має належати діапазону від 256 до 100000000\n"
 
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 #, fuzzy
 msgid "Tenacity is starting up..."
 msgstr "Триває запуск Audacity…"
 
 #. i18n-hint: "New" is an action (verb) to create a NEW project
-#: src/AudacityApp.cpp src/BatchProcessDialog.cpp src/menus/FileMenus.cpp
+#: src/TenacityApp.cpp src/BatchProcessDialog.cpp src/menus/FileMenus.cpp
 msgid "&New"
 msgstr "&Створити"
 
 #. i18n-hint: (verb)
-#: src/AudacityApp.cpp src/menus/FileMenus.cpp
+#: src/TenacityApp.cpp src/menus/FileMenus.cpp
 msgid "&Open..."
 msgstr "&Відкрити…"
 
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 msgid "Open &Recent..."
 msgstr "Відкрити &недавні…"
 
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 #, fuzzy
 msgid "&About Tenacity..."
 msgstr "&Про Audacity…"
 
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 msgid "&Preferences..."
 msgstr "&Параметри…"
 
-#: src/AudacityApp.cpp src/menus/FileMenus.cpp
+#: src/TenacityApp.cpp src/menus/FileMenus.cpp
 msgid "&File"
 msgstr "&Файл"
 
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 msgid ""
 "Audacity could not find a safe place to store temporary files.\n"
 "Audacity needs a place where automatic cleanup programs won't delete the temporary files.\n"
@@ -970,7 +970,7 @@ msgstr ""
 "Audacity потрібне місце, де програми для автоматичного вилучення файлів не пошкодять тимчасові файли.\n"
 "Вкажіть відповідний каталог у діалоговому вікні уподобань."
 
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 msgid ""
 "Audacity could not find a place to store temporary files.\n"
 "Please enter an appropriate directory in the preferences dialog."
@@ -978,11 +978,11 @@ msgstr ""
 "Програмі не вдається знайти каталог для зберігання тимчасових файлів.\n"
 "Вкажіть відповідний каталог у діалоговому вікні уподобань."
 
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 msgid "Audacity is now going to exit. Please launch Audacity again to use the new temporary directory."
 msgstr "Audacity готується до завершення. Повторно завантажте програму для використання нової теки тимчасових файлів."
 
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 msgid ""
 "Running two copies of Audacity simultaneously may cause\n"
 "data loss or cause your system to crash.\n"
@@ -992,7 +992,7 @@ msgstr ""
 "до втрати даних або краху системи.\n"
 "\n"
 
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 msgid ""
 "Audacity was not able to lock the temporary files directory.\n"
 "This folder may be in use by another copy of Audacity.\n"
@@ -1000,19 +1000,19 @@ msgstr ""
 "Audacity не може заблокувати теку з тимчасовими файлами.\n"
 "Можливо цю теку вже використовує інша копія Audacity.\n"
 
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 msgid "Do you still want to start Audacity?"
 msgstr "Досі бажаєте запустити Audacity?"
 
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 msgid "Error Locking Temporary Folder"
 msgstr "Помилка при блокуванні теки тимчасових фалів"
 
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 msgid "The system has detected that another copy of Audacity is running.\n"
 msgstr "Система визначила, що вже запущено іншу копію Audacity.\n"
 
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 msgid ""
 "Use the New or Open commands in the currently running Audacity\n"
 "process to open multiple projects simultaneously.\n"
@@ -1021,11 +1021,11 @@ msgstr ""
 "команди «Створити» або «Відкрити» у копії\n"
 "Audacity, що зараз виконується.\n"
 
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 msgid "Audacity is already running"
 msgstr "Audacity вже запущено"
 
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 msgid ""
 "Unable to acquire semaphores.\n"
 "\n"
@@ -1037,11 +1037,11 @@ msgstr ""
 "Ймовірною причиною є нестача ресурсів,\n"
 "і може знадобитися перезавантаження системи."
 
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 msgid "Audacity Startup Failure"
 msgstr "Помилка під час запуску Audacity"
 
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 msgid ""
 "Unable to create semaphores.\n"
 "\n"
@@ -1053,7 +1053,7 @@ msgstr ""
 "Ймовірною причиною є нестача ресурсів,\n"
 "і може знадобитися перезавантаження системи."
 
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 msgid ""
 "Unable to acquire lock semaphore.\n"
 "\n"
@@ -1065,7 +1065,7 @@ msgstr ""
 "Ймовірною причиною є нестача ресурсів,\n"
 "і може знадобитися перезавантаження системи."
 
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 msgid ""
 "Unable to acquire server semaphore.\n"
 "\n"
@@ -1077,7 +1077,7 @@ msgstr ""
 "Ймовірною причиною є нестача ресурсів,\n"
 "і може знадобитися перезавантаження системи."
 
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 msgid ""
 "The Audacity IPC server failed to initialize.\n"
 "\n"
@@ -1089,38 +1089,38 @@ msgstr ""
 "Ймовірною причиною є нестача ресурсів,\n"
 "і може знадобитися перезавантаження системи."
 
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 msgid "An unrecoverable error has occurred during startup"
 msgstr "Під час запуску сталася невиправна помилка"
 
 #. i18n-hint: This controls the number of bytes that Audacity will
 #. *           use when writing files to the disk
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 msgid "set max disk block size in bytes"
 msgstr "встановити максимальний розмір блоку диску у байтах"
 
 #. i18n-hint: This displays a list of available options
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 msgid "this help message"
 msgstr "це повідомлення"
 
 #. i18n-hint: This runs a set of automatic tests on Audacity itself
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 msgid "run self diagnostics"
 msgstr "запуск самодіагностики"
 
 #. i18n-hint: This displays the Audacity version
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 msgid "display Audacity version"
 msgstr "показати версію Audacity"
 
 #. i18n-hint: This is a list of one or more files that Audacity
 #. *           should open upon startup
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 msgid "audio or project file name"
 msgstr "назва файла звукових даних або проєкту"
 
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 msgid ""
 "Audacity project (.aup3) files are not currently \n"
 "associated with Audacity. \n"
@@ -1132,19 +1132,19 @@ msgstr ""
 "\n"
 "Пов'язати їх, щоб вони відкривались подвійним клацанням?"
 
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 msgid "Audacity Project Files"
 msgstr "Файли проєктів Audacity"
 
-#: src/AudacityException.h src/commands/MessageCommand.cpp src/widgets/AudacityMessageBox.cpp
+#: src/TenacityException.h src/commands/MessageCommand.cpp src/widgets/AudacityMessageBox.cpp
 msgid "Message"
 msgstr "Повідомлення"
 
-#: src/AudacityFileConfig.cpp
+#: src/TenacityFileConfig.cpp
 msgid "Audacity Configuration Error"
 msgstr "Помилка у налаштуваннях Audacity"
 
-#: src/AudacityFileConfig.cpp
+#: src/TenacityFileConfig.cpp
 #, c-format
 msgid ""
 "The following configuration file could not be accessed:\n"
@@ -1167,40 +1167,40 @@ msgstr ""
 "\n"
 "Якщо ви натиснете кнопку «Вийти з Audacity», ваш проєкт може залишитися у незбереженому стані — програма намагатиметься його відновити під час наступного запуску."
 
-#: src/AudacityFileConfig.cpp src/ShuttleGui.cpp src/commands/HelpCommand.cpp src/effects/Equalization.cpp src/export/Export.cpp src/menus/HelpMenus.cpp src/widgets/MultiDialog.cpp
+#: src/TenacityFileConfig.cpp src/ShuttleGui.cpp src/commands/HelpCommand.cpp src/effects/Equalization.cpp src/export/Export.cpp src/menus/HelpMenus.cpp src/widgets/MultiDialog.cpp
 msgid "Help"
 msgstr "Довідка"
 
-#: src/AudacityFileConfig.cpp src/AutoRecoveryDialog.cpp
+#: src/TenacityFileConfig.cpp src/AutoRecoveryDialog.cpp
 msgid "&Quit Audacity"
 msgstr "Ви&йти з Audacity"
 
-#: src/AudacityFileConfig.cpp
+#: src/TenacityFileConfig.cpp
 msgid "&Retry"
 msgstr "&Повторити"
 
-#: src/AudacityLogger.cpp
+#: src/TenacityLogger.cpp
 msgid "Audacity Log"
 msgstr "Журнал Audacity"
 
-#: src/AudacityLogger.cpp src/Tags.cpp
+#: src/TenacityLogger.cpp src/Tags.cpp
 msgid "&Save..."
 msgstr "З&берегти…"
 
 #. i18n-hint: (verb)
-#: src/AudacityLogger.cpp src/Tags.cpp src/prefs/KeyConfigPrefs.cpp
+#: src/TenacityLogger.cpp src/Tags.cpp src/prefs/KeyConfigPrefs.cpp
 msgid "Cl&ear"
 msgstr "Спорожн&ити"
 
-#: src/AudacityLogger.cpp src/ShuttleGui.cpp src/effects/Contrast.cpp src/menus/FileMenus.cpp
+#: src/TenacityLogger.cpp src/ShuttleGui.cpp src/effects/Contrast.cpp src/menus/FileMenus.cpp
 msgid "&Close"
 msgstr "&Закрити"
 
-#: src/AudacityLogger.cpp
+#: src/TenacityLogger.cpp
 msgid "Save log to:"
 msgstr "Зберігати журнал до:"
 
-#: src/AudacityLogger.cpp
+#: src/TenacityLogger.cpp
 #, c-format
 msgid "Couldn't save log to file: %s"
 msgstr "Не вдалося зберегти журнал до цього файла: %s"

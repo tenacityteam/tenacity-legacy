@@ -6,7 +6,7 @@
 
 #include "../AboutDialog.h"
 #include "../AllThemeResources.h"
-#include "../AudacityLogger.h"
+#include "../TenacityLogger.h"
 #include "../AudioIOBase.h"
 #include "../CommonCommandFlags.h"
 #include "../FileNames.h"
@@ -341,7 +341,7 @@ void OnMidiDeviceInfo(const CommandContext &context)
 
 void OnShowLog( const CommandContext &context )
 {
-   auto logger = AudacityLogger::Get();
+   auto logger = TenacityLogger::Get();
    if (logger) {
       logger->Show();
    }

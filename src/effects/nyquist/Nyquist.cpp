@@ -2239,7 +2239,7 @@ bool NyquistEffect::Parse(
                //       wxOK | wxICON_EXCLAMATION,
                //       XO("Nyquist Warning") );
 
-               // Note that the AudacityApp's mLogger has not yet been created,
+               // Note that the TenacityApp's mLogger has not yet been created,
                // so this brings up an alert box, but after the Audacity frame is up.
                wxLogWarning(str);
                return true;

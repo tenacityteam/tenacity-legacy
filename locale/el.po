@@ -230,7 +230,7 @@ msgstr "Δέσμες ενεργειών Nyquist (*.ny)|*.ny|Δέσμες ενε�
 msgid "Script was not saved."
 msgstr "Η δέσμη ενεργειών δεν αποθηκεύτηκε."
 
-#: modules/mod-nyq-bench/NyqBench.cpp src/AudacityLogger.cpp src/DBConnection.cpp src/Project.cpp src/ProjectFileIO.cpp src/ProjectHistory.cpp src/SqliteSampleBlock.cpp src/WaveClip.cpp src/WaveTrack.cpp src/export/Export.cpp src/export/ExportCL.cpp src/export/ExportMultiple.cpp src/import/RawAudioGuess.cpp src/menus/EditMenus.cpp src/prefs/KeyConfigPrefs.cpp src/widgets/Warning.cpp
+#: modules/mod-nyq-bench/NyqBench.cpp src/TenacityLogger.cpp src/DBConnection.cpp src/Project.cpp src/ProjectFileIO.cpp src/ProjectHistory.cpp src/SqliteSampleBlock.cpp src/WaveClip.cpp src/WaveTrack.cpp src/export/Export.cpp src/export/ExportCL.cpp src/export/ExportMultiple.cpp src/import/RawAudioGuess.cpp src/menus/EditMenus.cpp src/prefs/KeyConfigPrefs.cpp src/widgets/Warning.cpp
 msgid "Warning"
 msgstr "Προειδοποίηση"
 
@@ -858,16 +858,16 @@ msgstr ""
 msgid "Error"
 msgstr "Σφάλμα"
 
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 #, c-format
 msgid "Failed to remove %s"
 msgstr "Απέτυχε η απομάκρυνση του %s"
 
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 msgid "Failed!"
 msgstr "Απέτυχε!"
 
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 msgid ""
 "Reset Preferences?\n"
 "\n"
@@ -877,11 +877,11 @@ msgstr ""
 "\n"
 "Αυτή είναι μια ερώτηση μιας φοράς, μετά από μια 'εγκατάσταση' όπου ζητήσατε να έχετε νέα ρύθμιση προτιμήσεων."
 
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 msgid "Reset Audacity Preferences"
 msgstr "Επαναφορά στις αρχικές προτιμήσεις του Audacity"
 
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 #, c-format
 msgid ""
 "%s could not be found.\n"
@@ -892,47 +892,47 @@ msgstr ""
 "\n"
 "Έχει αφαιρεθεί από τον κατάλογο των πρόσφατων αρχείων."
 
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 msgid "SQLite library failed to initialize.  Audacity cannot continue."
 msgstr "Η βιβλιοθήκη του SQLite απέτυχε να ξεκινήσει. Το Audacity δεν μπορεί να συνεχίσει."
 
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 msgid "Block size must be within 256 to 100000000\n"
 msgstr "Το μέγεθος του μπλοκ πρέπει να είναι μεταξύ 256 έως 100000000\n"
 
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 #, fuzzy
 msgid "Tenacity is starting up..."
 msgstr "Εκκίνηση του Audacity ..."
 
 #. i18n-hint: "New" is an action (verb) to create a NEW project
-#: src/AudacityApp.cpp src/BatchProcessDialog.cpp src/menus/FileMenus.cpp
+#: src/TenacityApp.cpp src/BatchProcessDialog.cpp src/menus/FileMenus.cpp
 msgid "&New"
 msgstr "&Νέο έργο"
 
 #. i18n-hint: (verb)
-#: src/AudacityApp.cpp src/menus/FileMenus.cpp
+#: src/TenacityApp.cpp src/menus/FileMenus.cpp
 msgid "&Open..."
 msgstr "&Άνοιγμα..."
 
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 msgid "Open &Recent..."
 msgstr "Άνοιγμα &προσφάτου..."
 
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 #, fuzzy
 msgid "&About Tenacity..."
 msgstr "&Σχετικά με το Audacity..."
 
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 msgid "&Preferences..."
 msgstr "&Προτιμήσεις..."
 
-#: src/AudacityApp.cpp src/menus/FileMenus.cpp
+#: src/TenacityApp.cpp src/menus/FileMenus.cpp
 msgid "&File"
 msgstr "&Αρχείο"
 
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 msgid ""
 "Audacity could not find a safe place to store temporary files.\n"
 "Audacity needs a place where automatic cleanup programs won't delete the temporary files.\n"
@@ -942,7 +942,7 @@ msgstr ""
 "Το Audacity χρειάζεται μια θέση όπου τα προγράμματα αυτόματου καθαρισμού δεν θα διαγράψουν τα προσωρινά αρχεία.\n"
 "Παρακαλούμε εισάγετε έναν κατάλληλο κατάλογο στον διάλογο προτιμήσεων."
 
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 msgid ""
 "Audacity could not find a place to store temporary files.\n"
 "Please enter an appropriate directory in the preferences dialog."
@@ -950,11 +950,11 @@ msgstr ""
 "Το Audacity δεν μπόρεσε να βρει τοποθεσία για να αποθηκεύσει τα προσωρινά αρχεία.\n"
 "Παρακαλώ προσθέστε μία κατάλληλη τοποθεσία στις προτιμήσεις."
 
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 msgid "Audacity is now going to exit. Please launch Audacity again to use the new temporary directory."
 msgstr "Το Audacity τώρα θα κλείσει. Παρακαλούμε επανεκκινήστε το Audacity για να χρησιμοποιήσετε τον νέο προσωρινό κατάλογο."
 
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 msgid ""
 "Running two copies of Audacity simultaneously may cause\n"
 "data loss or cause your system to crash.\n"
@@ -964,7 +964,7 @@ msgstr ""
 "απόλει δεδομένων ή την κατάρρευση του συστήματος.\n"
 "\n"
 
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 msgid ""
 "Audacity was not able to lock the temporary files directory.\n"
 "This folder may be in use by another copy of Audacity.\n"
@@ -972,19 +972,19 @@ msgstr ""
 "Το Audacity δεν μπόρεσε να κλειδώσει τον κατάλογο προσωρινών αρχείων.\n"
 "Ο φάκελος μπορεί να χρησιμοποιείται από άλλο αντίγραφο του Audacity.\n"
 
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 msgid "Do you still want to start Audacity?"
 msgstr "Θέλετε ακόμα να ξεκινήσετε το Audacity;"
 
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 msgid "Error Locking Temporary Folder"
 msgstr "Σφάλμα κλειδώματος του προσωρινού φακέλου"
 
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 msgid "The system has detected that another copy of Audacity is running.\n"
 msgstr "Το σύστημα ανέγνωσε ότι ένα άλλο αντίγραφο του Audacity βρρίσκεται σε λειτουργία.\n"
 
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 msgid ""
 "Use the New or Open commands in the currently running Audacity\n"
 "process to open multiple projects simultaneously.\n"
@@ -992,11 +992,11 @@ msgstr ""
 "Χρησιμοποιήστε τις εντολές Άνοιγμα ή Νέο από το Audacity που ήδη τρέχει\n"
 "για να ανοίξετε πολλά έργα συγχρόνως.\n"
 
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 msgid "Audacity is already running"
 msgstr "Το Audacity είναι είδη σε λειτουργία"
 
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 msgid ""
 "Unable to acquire semaphores.\n"
 "\n"
@@ -1008,11 +1008,11 @@ msgstr ""
 "Αυτό μπορεί να οφείλεται σε έλλειψη πόρων\n"
 "και μπορεί να χρειαστεί επανεκκίνηση."
 
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 msgid "Audacity Startup Failure"
 msgstr "Αποτυχία εκκίνησης Audacity"
 
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 msgid ""
 "Unable to create semaphores.\n"
 "\n"
@@ -1024,7 +1024,7 @@ msgstr ""
 "Αυτό μπορεί να οφείλεται σε έλλειψη πόρων\n"
 "και μπορεί να χρειαστεί επανεκκίνηση."
 
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 msgid ""
 "Unable to acquire lock semaphore.\n"
 "\n"
@@ -1036,7 +1036,7 @@ msgstr ""
 "Αυτό μπορεί να οφείλεται σε έλλειψη πόρων\n"
 "και μπορεί να απαιτηθεί επανεκκίνηση."
 
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 msgid ""
 "Unable to acquire server semaphore.\n"
 "\n"
@@ -1048,7 +1048,7 @@ msgstr ""
 "Αυτό μπορεί να οφείλεται σε έλλειψη πόρων\n"
 "και μπορεί να χρειαστεί επανεκκίνηση."
 
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 msgid ""
 "The Audacity IPC server failed to initialize.\n"
 "\n"
@@ -1060,38 +1060,38 @@ msgstr ""
 "Αυτό μπορεί να οφείλεται σε έλλειψη πόρων\n"
 "και μπορεί να απαιτηθεί επανεκκίνηση."
 
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 msgid "An unrecoverable error has occurred during startup"
 msgstr "Κατά την εκκίνηση συνέβη ανεπανόρθωτο σφάλμα"
 
 #. i18n-hint: This controls the number of bytes that Audacity will
 #. *           use when writing files to the disk
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 msgid "set max disk block size in bytes"
 msgstr "ορισμός μέγιστου μεγέθους μπλοκ δίσκου σε ψηφιολέξεις (bytes)"
 
 #. i18n-hint: This displays a list of available options
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 msgid "this help message"
 msgstr "μήνυμα βοήθειας"
 
 #. i18n-hint: This runs a set of automatic tests on Audacity itself
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 msgid "run self diagnostics"
 msgstr "εκτέλεση αυτοδιαγνωστικών"
 
 #. i18n-hint: This displays the Audacity version
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 msgid "display Audacity version"
 msgstr "εμφάνιση της έκδοσης του Audacity"
 
 #. i18n-hint: This is a list of one or more files that Audacity
 #. *           should open upon startup
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 msgid "audio or project file name"
 msgstr "όνομα αρχείου ήχου ή έργου"
 
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 msgid ""
 "Audacity project (.aup3) files are not currently \n"
 "associated with Audacity. \n"
@@ -1103,19 +1103,19 @@ msgstr ""
 "\n"
 "Να συσχετισθούν, έτσι ώστε να ανοίγουν διπλοπατώντας;"
 
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 msgid "Audacity Project Files"
 msgstr "Αρχεία έργου Audacity"
 
-#: src/AudacityException.h src/commands/MessageCommand.cpp src/widgets/AudacityMessageBox.cpp
+#: src/TenacityException.h src/commands/MessageCommand.cpp src/widgets/AudacityMessageBox.cpp
 msgid "Message"
 msgstr "Μήνυμα"
 
-#: src/AudacityFileConfig.cpp
+#: src/TenacityFileConfig.cpp
 msgid "Audacity Configuration Error"
 msgstr "Σφάλμα διαμόρφωσης του Audacity"
 
-#: src/AudacityFileConfig.cpp
+#: src/TenacityFileConfig.cpp
 #, c-format
 msgid ""
 "The following configuration file could not be accessed:\n"
@@ -1138,40 +1138,40 @@ msgstr ""
 "\n"
 "Εάν επιλέξετε \"Έξοδος από το Audacity\", το έργο σας μπορεί να αφεθεί σε αναποθήκευτη κατάσταση που θα ανακτηθεί την επόμενη φορά που θα το ανοίξετε."
 
-#: src/AudacityFileConfig.cpp src/ShuttleGui.cpp src/commands/HelpCommand.cpp src/effects/Equalization.cpp src/export/Export.cpp src/menus/HelpMenus.cpp src/widgets/MultiDialog.cpp
+#: src/TenacityFileConfig.cpp src/ShuttleGui.cpp src/commands/HelpCommand.cpp src/effects/Equalization.cpp src/export/Export.cpp src/menus/HelpMenus.cpp src/widgets/MultiDialog.cpp
 msgid "Help"
 msgstr "Βοήθεια"
 
-#: src/AudacityFileConfig.cpp src/AutoRecoveryDialog.cpp
+#: src/TenacityFileConfig.cpp src/AutoRecoveryDialog.cpp
 msgid "&Quit Audacity"
 msgstr "Έ&ξοδος από το Audacity"
 
-#: src/AudacityFileConfig.cpp
+#: src/TenacityFileConfig.cpp
 msgid "&Retry"
 msgstr "Ε&πανάληψη"
 
-#: src/AudacityLogger.cpp
+#: src/TenacityLogger.cpp
 msgid "Audacity Log"
 msgstr "Ημερολόγιο Audacity"
 
-#: src/AudacityLogger.cpp src/Tags.cpp
+#: src/TenacityLogger.cpp src/Tags.cpp
 msgid "&Save..."
 msgstr "Απο&θήκευση..."
 
 #. i18n-hint: (verb)
-#: src/AudacityLogger.cpp src/Tags.cpp src/prefs/KeyConfigPrefs.cpp
+#: src/TenacityLogger.cpp src/Tags.cpp src/prefs/KeyConfigPrefs.cpp
 msgid "Cl&ear"
 msgstr "Καθ&αρισμός"
 
-#: src/AudacityLogger.cpp src/ShuttleGui.cpp src/effects/Contrast.cpp src/menus/FileMenus.cpp
+#: src/TenacityLogger.cpp src/ShuttleGui.cpp src/effects/Contrast.cpp src/menus/FileMenus.cpp
 msgid "&Close"
 msgstr "&Κλείσιμο ανοιχτής εργασίας"
 
-#: src/AudacityLogger.cpp
+#: src/TenacityLogger.cpp
 msgid "Save log to:"
 msgstr "Αποθήκευση ημερολογίου στο:"
 
-#: src/AudacityLogger.cpp
+#: src/TenacityLogger.cpp
 #, c-format
 msgid "Couldn't save log to file: %s"
 msgstr "Αδύνατη η αποθήκευση ημερολογίου στο αρχείο: %s"

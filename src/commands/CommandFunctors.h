@@ -10,7 +10,7 @@
 #define __AUDACITY_COMMAND_FUNCTORS__
 
 class AudacityProject;
-class AudacityApp;
+class TenacityApp;
 class CommandContext;
 class wxEvtHandler;
 

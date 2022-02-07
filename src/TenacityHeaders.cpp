@@ -2,10 +2,10 @@
 
   Tenacity
 
-  AudacityHeaders.cpp
+  TenacityHeaders.cpp
 
   Dominic Mazzoni
 
 **********************************************************************/
 
-#include "AudacityHeaders.h"
+#include "TenacityHeaders.h"

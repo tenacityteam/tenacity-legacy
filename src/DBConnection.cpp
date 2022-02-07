@@ -16,7 +16,7 @@ Paul Licameli -- split from ProjectFileIO.cpp
 #include <wx/progdlg.h>
 #include <wx/string.h>
 
-#include "AudacityLogger.h"
+#include "TenacityLogger.h"
 #include "FileNames.h"
 #include "Internat.h"
 #include "Project.h"
@@ -90,7 +90,7 @@ void DBConnection::SetError(
                  mpErrors->mLastError.Debug(),
                  mpErrors->mLibraryError.Debug());
 
-   auto logger = AudacityLogger::Get();
+   auto logger = TenacityLogger::Get();
    if (logger)
    {
       mpErrors->mLog = logger->GetLog(10);
@@ -122,7 +122,7 @@ void DBConnection::SetDBError(
                  mpErrors->mLastError.Debug(),
                  mpErrors->mLibraryError.Debug());
 
-   auto logger = AudacityLogger::Get();
+   auto logger = TenacityLogger::Get();
    if (logger)
    {
       mpErrors->mLog = logger->GetLog(10);
@@ -501,7 +501,7 @@ void DBConnection::CheckpointThread(sqlite3 *db, const FilePath &fileName)
             throw SimpleMessageBoxException{ rc != SQLITE_FULL ? ExceptionType::Internal : ExceptionType::BadEnvironment,
                message, XO("Warning"), "Error:_Disk_full_or_not_writable" }; },
             SimpleGuard<void>{},
-            [this](AudacityException * e) {
+            [this](TenacityException * e) {
                // This executes in the main thread.
                if (mCallback)
                   mCallback();

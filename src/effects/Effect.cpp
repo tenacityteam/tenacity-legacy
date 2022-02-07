@@ -1711,7 +1711,7 @@ bool Effect::ProcessTrack(int count,
       {
          processed = ProcessBlock(inBufPos.get(), outBufPos.get(), curBlockSize);
       }
-      catch( const AudacityException & WXUNUSED(e) )
+      catch( const TenacityException & WXUNUSED(e) )
       {
          // PRL: Bug 437:
          // Pass this along to our application-level handler

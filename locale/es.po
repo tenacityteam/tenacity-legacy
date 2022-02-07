@@ -232,7 +232,7 @@ msgstr "Secuencia Nyquist (*.ny)|*.ny|Secuencia Lisp (*.lsp)|*.lsp|Todos los arc
 msgid "Script was not saved."
 msgstr "No se guardó la secuencia."
 
-#: modules/mod-nyq-bench/NyqBench.cpp src/AudacityLogger.cpp src/DBConnection.cpp src/Project.cpp src/ProjectFileIO.cpp src/ProjectHistory.cpp src/SqliteSampleBlock.cpp src/WaveClip.cpp src/WaveTrack.cpp src/export/Export.cpp src/export/ExportCL.cpp src/export/ExportMultiple.cpp src/import/RawAudioGuess.cpp src/menus/EditMenus.cpp src/prefs/KeyConfigPrefs.cpp src/widgets/Warning.cpp
+#: modules/mod-nyq-bench/NyqBench.cpp src/TenacityLogger.cpp src/DBConnection.cpp src/Project.cpp src/ProjectFileIO.cpp src/ProjectHistory.cpp src/SqliteSampleBlock.cpp src/WaveClip.cpp src/WaveTrack.cpp src/export/Export.cpp src/export/ExportCL.cpp src/export/ExportMultiple.cpp src/import/RawAudioGuess.cpp src/menus/EditMenus.cpp src/prefs/KeyConfigPrefs.cpp src/widgets/Warning.cpp
 msgid "Warning"
 msgstr "Advertencia"
 
@@ -847,16 +847,16 @@ msgstr ""
 "No se puede bloquear la región más allá del\n"
 "final del proyecto."
 
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 #, c-format
 msgid "Failed to remove %s"
 msgstr "No se ha podido eliminar %s"
 
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 msgid "Failed!"
 msgstr "Fallo"
 
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 msgid ""
 "Reset Preferences?\n"
 "\n"
@@ -866,11 +866,11 @@ msgstr ""
 "\n"
 "Esto solo se preguntará esta vez, después de una instalación en la que se indicó que se restableciesen las preferencias."
 
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 msgid "Reset Audacity Preferences"
 msgstr "Restablecer preferencias de Tenacity"
 
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 #, c-format
 msgid ""
 "%s could not be found.\n"
@@ -881,45 +881,45 @@ msgstr ""
 "\n"
 "Ha sido eliminado de la lista de archivos recientes."
 
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 msgid "SQLite library failed to initialize.  Audacity cannot continue."
 msgstr "No se pudo inicializar la biblioteca SQLite. Tenacity no puede continuar."
 
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 msgid "Block size must be within 256 to 100000000\n"
 msgstr "El tamaño de bloque debe estar entre 256 y 100000000\n"
 
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 msgid "Tenacity is starting up..."
 msgstr "Iniciando Tenacity…"
 
 #. i18n-hint: "New" is an action (verb) to create a NEW project
-#: src/AudacityApp.cpp src/BatchProcessDialog.cpp src/menus/FileMenus.cpp
+#: src/TenacityApp.cpp src/BatchProcessDialog.cpp src/menus/FileMenus.cpp
 msgid "&New"
 msgstr "&Nuevo"
 
 #. i18n-hint: (verb)
-#: src/AudacityApp.cpp src/menus/FileMenus.cpp
+#: src/TenacityApp.cpp src/menus/FileMenus.cpp
 msgid "&Open..."
 msgstr "&Abrir..."
 
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 msgid "Open &Recent..."
 msgstr "Abrir &reciente..."
 
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 msgid "&About Tenacity..."
 msgstr "&Acerca de Tenacity…"
 
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 msgid "&Preferences..."
 msgstr "&Preferencias…"
 
-#: src/AudacityApp.cpp src/menus/FileMenus.cpp
+#: src/TenacityApp.cpp src/menus/FileMenus.cpp
 msgid "&File"
 msgstr "&Archivo"
 
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 msgid ""
 "Audacity could not find a safe place to store temporary files.\n"
 "Audacity needs a place where automatic cleanup programs won't delete the temporary files.\n"
@@ -929,7 +929,7 @@ msgstr ""
 "Se necesita un lugar donde los programas de limpieza automática no eliminen los archivos temporales.\n"
 "Indique una carpeta apropiada en el cuadro de diálogo de preferencias."
 
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 msgid ""
 "Audacity could not find a place to store temporary files.\n"
 "Please enter an appropriate directory in the preferences dialog."
@@ -937,11 +937,11 @@ msgstr ""
 "Tenacity no pudo encontrar un lugar donde almacenar los archivos temporales.\n"
 "Indique una carpeta apropiada en el cuadro de diálogo de preferencias."
 
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 msgid "Audacity is now going to exit. Please launch Audacity again to use the new temporary directory."
 msgstr "Tenacity se cerrará ahora. Inicie Tenacity otra vez para utilizar la carpeta temporal nueva."
 
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 msgid ""
 "Running two copies of Audacity simultaneously may cause\n"
 "data loss or cause your system to crash.\n"
@@ -951,7 +951,7 @@ msgstr ""
 "provocar pérdidas de datos o que el sistema cese inesperadamente.\n"
 "\n"
 
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 msgid ""
 "Audacity was not able to lock the temporary files directory.\n"
 "This folder may be in use by another copy of Audacity.\n"
@@ -959,19 +959,19 @@ msgstr ""
 "Tenacity no pudo bloquear el directorio de archivos temporales.\n"
 "Puede que otra copia de Tenacity esté utilizando esta carpeta.\n"
 
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 msgid "Do you still want to start Audacity?"
 msgstr "¿Aún quiere iniciar Tenacity?"
 
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 msgid "Error Locking Temporary Folder"
 msgstr "Error al bloquear la carpeta temporal"
 
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 msgid "The system has detected that another copy of Audacity is running.\n"
 msgstr "El sistema detectó que ya se está ejecutando otra copia de Tenacity.\n"
 
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 msgid ""
 "Use the New or Open commands in the currently running Audacity\n"
 "process to open multiple projects simultaneously.\n"
@@ -979,11 +979,11 @@ msgstr ""
 "Utilice la opción Nuevo o Abrir en la copia de Tenacity que ya se está \n"
 "ejecutando para abrir múltiples proyectos simultáneamente.\n"
 
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 msgid "Audacity is already running"
 msgstr "Tenacity ya se está ejecutando"
 
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 msgid ""
 "Unable to acquire semaphores.\n"
 "\n"
@@ -995,11 +995,11 @@ msgstr ""
 "Este error se produce por una falta de recursos\n"
 "que requiere un reinicio."
 
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 msgid "Audacity Startup Failure"
 msgstr "Fallo en el arranque de Tenacity"
 
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 msgid ""
 "Unable to create semaphores.\n"
 "\n"
@@ -1011,7 +1011,7 @@ msgstr ""
 "Este error se produce por una falta de recursos\n"
 "que requiere un reinicio."
 
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 msgid ""
 "Unable to acquire lock semaphore.\n"
 "\n"
@@ -1023,7 +1023,7 @@ msgstr ""
 "Este error se produce por una falta de recursos\n"
 "que requiere un reinicio."
 
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 msgid ""
 "Unable to acquire server semaphore.\n"
 "\n"
@@ -1035,7 +1035,7 @@ msgstr ""
 "Este error se produce por una falta de recursos\n"
 "que requiere un reinicio."
 
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 msgid ""
 "The Audacity IPC server failed to initialize.\n"
 "\n"
@@ -1047,38 +1047,38 @@ msgstr ""
 "Este error suele producirse por una falta de recursos\n"
 "que requiere un reinicio."
 
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 msgid "An unrecoverable error has occurred during startup"
 msgstr "Se ha producido un error irrecuperable durante el arranque"
 
 #. i18n-hint: This controls the number of bytes that Audacity will
 #. *           use when writing files to the disk
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 msgid "set max disk block size in bytes"
 msgstr "establecer el tamaño máximo de bloque de disco en bytes"
 
 #. i18n-hint: This displays a list of available options
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 msgid "this help message"
 msgstr "este mensaje"
 
 #. i18n-hint: This runs a set of automatic tests on Audacity itself
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 msgid "run self diagnostics"
 msgstr "ejecutar diagnósticos internos"
 
 #. i18n-hint: This displays the Audacity version
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 msgid "display Audacity version"
 msgstr "mostrar la versión de Tenacity"
 
 #. i18n-hint: This is a list of one or more files that Audacity
 #. *           should open upon startup
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 msgid "audio or project file name"
 msgstr "audio o nombre del archivo de proyecto"
 
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 msgid ""
 "Audacity project (.aup3) files are not currently \n"
 "associated with Audacity. \n"
@@ -1090,19 +1090,19 @@ msgstr ""
 "\n"
 "¿Quiere asociarlos para que se abran al pulsar dos veces sobre ellos?"
 
-#: src/AudacityApp.cpp
+#: src/TenacityApp.cpp
 msgid "Audacity Project Files"
 msgstr "Archivos de proyecto de Tenacity"
 
-#: src/AudacityException.h src/commands/MessageCommand.cpp src/widgets/AudacityMessageBox.cpp
+#: src/TenacityException.h src/commands/MessageCommand.cpp src/widgets/AudacityMessageBox.cpp
 msgid "Message"
 msgstr "Mensaje"
 
-#: src/AudacityFileConfig.cpp
+#: src/TenacityFileConfig.cpp
 msgid "Audacity Configuration Error"
 msgstr "Error en la configuración de Tenacity"
 
-#: src/AudacityFileConfig.cpp
+#: src/TenacityFileConfig.cpp
 #, c-format
 msgid ""
 "The following configuration file could not be accessed:\n"
@@ -1129,40 +1129,40 @@ msgstr ""
 "Si pulsa en «Cerrar Tenacity» el proyecto puede quedar en un estado no "
 "guardado, en cuyo caso se intentará recuperar la próxima vez que se abra."
 
-#: src/AudacityFileConfig.cpp src/ShuttleGui.cpp src/commands/HelpCommand.cpp src/effects/Equalization.cpp src/export/Export.cpp src/menus/HelpMenus.cpp src/widgets/MultiDialog.cpp
+#: src/TenacityFileConfig.cpp src/ShuttleGui.cpp src/commands/HelpCommand.cpp src/effects/Equalization.cpp src/export/Export.cpp src/menus/HelpMenus.cpp src/widgets/MultiDialog.cpp
 msgid "Help"
 msgstr "Ayuda"
 
-#: src/AudacityFileConfig.cpp src/AutoRecoveryDialog.cpp
+#: src/TenacityFileConfig.cpp src/AutoRecoveryDialog.cpp
 msgid "&Quit Audacity"
 msgstr "&Salir de Tenacity"
 
-#: src/AudacityFileConfig.cpp
+#: src/TenacityFileConfig.cpp
 msgid "&Retry"
 msgstr "&Reintentar"
 
-#: src/AudacityLogger.cpp
+#: src/TenacityLogger.cpp
 msgid "Audacity Log"
 msgstr "Registro de Tenacity"
 
-#: src/AudacityLogger.cpp src/Tags.cpp
+#: src/TenacityLogger.cpp src/Tags.cpp
 msgid "&Save..."
 msgstr "&Guardar..."
 
 #. i18n-hint: (verb)
-#: src/AudacityLogger.cpp src/Tags.cpp src/prefs/KeyConfigPrefs.cpp
+#: src/TenacityLogger.cpp src/Tags.cpp src/prefs/KeyConfigPrefs.cpp
 msgid "Cl&ear"
 msgstr "L&impiar"
 
-#: src/AudacityLogger.cpp src/ShuttleGui.cpp src/effects/Contrast.cpp src/menus/FileMenus.cpp
+#: src/TenacityLogger.cpp src/ShuttleGui.cpp src/effects/Contrast.cpp src/menus/FileMenus.cpp
 msgid "&Close"
 msgstr "&Cerrar"
 
-#: src/AudacityLogger.cpp
+#: src/TenacityLogger.cpp
 msgid "Save log to:"
 msgstr "Guardar registro en:"
 
-#: src/AudacityLogger.cpp
+#: src/TenacityLogger.cpp
 #, c-format
 msgid "Couldn't save log to file: %s"
 msgstr "No se ha podido escribir el registro en el archivo: %s"
@@ -22081,7 +22081,7 @@ msgstr "%s bytes"
 msgid "Error: %s"
 msgstr "Error: %s"
 
-#: src/AudacityLogger.cpp
+#: src/TenacityLogger.cpp
 msgid "log.txt"
 msgstr "registro.txt"
 
