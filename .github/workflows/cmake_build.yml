@@ -100,7 +100,7 @@ jobs:
       AUDACITY_ARCH_LABEL: ${{ matrix.config.arch }}
 
       # CMake settings
-      CMAKE_BUILD_TYPE: MinSizeRel
+      CMAKE_BUILD_TYPE: RelWithDebInfo
       CMAKE_GENERATOR: ${{matrix.config.CMAKE_GENERATOR}}
       CMAKE_GENERATOR_PLATFORM: ${{matrix.config.CMAKE_GENERATOR_PLATFORM}}
 
@@ -280,13 +280,9 @@ jobs:
 
     - name: Package
       run: |
-        if [[ "${{runner.os}}" == "Windows" ]]; then
-          cmake --build build --target innosetup --config ${{ env.CMAKE_BUILD_TYPE }}
-        else
-          cd build
-          cpack -C ${{ env.CMAKE_BUILD_TYPE }} -D CPACK_COMMAND_HDIUTIL=${{ env.CPACK_COMMAND_HDIUTIL }} --verbose
-          rm -r package/_CPack_Packages
-        fi
+        cd build
+        cpack -C ${{ env.CMAKE_BUILD_TYPE }} -D CPACK_COMMAND_HDIUTIL=${{ env.CPACK_COMMAND_HDIUTIL }} --verbose
+        rm -r package/_CPack_Packages
       env:
         # Workaround for CPack hdiutil/ finder service race condition bug
         CPACK_COMMAND_HDIUTIL: ${{ github.workspace }}/scripts/ci/macos/repeat_hdiutil.sh

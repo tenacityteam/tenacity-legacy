@@ -54,6 +54,8 @@ elseif( CMAKE_SYSTEM_NAME STREQUAL "Darwin" )
       # CPACK_POST_BUILD_SCRIPTS was added in 3.19, but we only need it on macOS
       SET( CPACK_POST_BUILD_SCRIPTS "${CMAKE_SOURCE_DIR}/scripts/build/macOS/DMGSign.cmake" )
    endif()
+elseif(WIN32)
+    set( CPACK_GENERATOR WIX )
 endif()
 
 include(CPack) # do this last
