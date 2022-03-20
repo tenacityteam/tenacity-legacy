@@ -45,7 +45,7 @@ Nevertheless, as a result of popular demand by the community, we decided to prov
 
 The latest official version of Audacity that does not implement telemetry is `3.0.2`. Some Linux-based operating systems also ship Audacity with telemetry and networking features disabled by default.
 
-Downloads for these versions can be found on the [Audacity website](https://www.audacityteam.org/download/). If you're looking for support regarding these versions, it may be worth consulting [Audacity's forum](https://forum.audacityteam.org/) or [Audacity's wiki](https://wiki.audacityteam.org/).
+Downloads for these versions can be found on the [Audacity website](https://www.audacityteam.org/download/) or [FossHub Audacity Older Versions page](https://www.fosshub.com/Audacity-old.html). If you're looking for support regarding these versions, it may be worth consulting [Audacity's forum](https://forum.audacityteam.org/) or [Audacity's wiki](https://wiki.audacityteam.org/).
 
 ## Getting Started
 
