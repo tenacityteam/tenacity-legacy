@@ -10,25 +10,11 @@ name: "CodeQL Analysis"
 
 on:
   push:
-    branches: [ master ] # Triggers on every actual push to master
+    branches: [master] # Triggers on every actual push to master
   pull_request:
-    branches: [ master ]
+    branches: [master]
     paths:
       - ".github/workflows/codeql-analysis.yml" # Only triggers on PRs that modify the configuration
-  schedule:
-    #         ┌───────────── minute (0 - 59)
-    #         │  ┌───────────── hour (0 - 23)
-    #         │  │ ┌───────────── day of the month (1 - 31)
-    #         │  │ │ ┌───────────── month (1 - 12 or JAN-DEC)
-    #         │  │ │ │ ┌───────────── day of the week (0 - 6 or SUN-SAT)
-    #         │  │ │ │ │
-    #         │  │ │ │ │
-    #         │  │ │ │ │
-    #         *  * * * *
-    - cron: '00 00 * * *'
-    - cron: '00 06 * * *'
-    - cron: '00 12 * * *'
-    - cron: '00 18 * * *'
 
 jobs:
   analyze:
@@ -36,13 +22,6 @@ jobs:
     runs-on: ubuntu-latest
     env:
       CMAKE_BUILD_TYPE: Release
-      # Windows codesigning
-      WINDOWS_CERTIFICATE: ${{ secrets.WINDOWS_CERTIFICATE }}
-      WINDOWS_CERTIFICATE_PASSWORD: ${{ secrets.WINDOWS_CERTIFICATE_PASSWORD }}
-      # Apple code signing
-      APPLE_CODESIGN_IDENTITY: ${{ secrets.APPLE_CODESIGN_IDENTITY }}
-      APPLE_NOTARIZATION_USER_NAME: ${{ secrets.APPLE_NOTARIZATION_USER_NAME }}
-      APPLE_NOTARIZATION_PASSWORD: ${{ secrets.APPLE_NOTARIZATION_PASSWORD }}
     permissions:
       actions: read
       contents: read
@@ -52,116 +31,96 @@ jobs:
       fail-fast: false
       matrix:
         config:
-        - name: Ubuntu_20.04
-          os: ubuntu-latest
-          arch: x86_64 # as reported by `arch` or `uname -m`
-          compiler_cache: ccache
-          compiler_cache_path: ~/.ccache
-          language: 'cpp'  # CodeQL supports [ 'cpp', 'csharp', 'go', 'java', 'javascript', 'python' ]
-          vcpkg_binary_cache: ~/.cache/vcpkg
-          vcpkg_triplet: x64-linux
-          wxwidgets_git_url: https://github.com/wxWidgets/wxWidgets.git
-          wxwidgets_git_ref: v3.1.5
-          WX_CONFIG: /home/runner/work/tenacity/tenacity/wxwidgets-install/bin/wx-config
+          - name: Ubuntu_20.04
+            os: ubuntu-latest
+            arch: x86_64 # as reported by `arch` or `uname -m`
+            compiler_cache: ccache
+            compiler_cache_path: ~/.ccache
+            language: "cpp" # CodeQL supports [ 'cpp', 'csharp', 'go', 'java', 'javascript', 'python' ]
+            vcpkg_binary_cache: ~/.cache/vcpkg
+            vcpkg_triplet: x64-linux
+            wxwidgets_git_url: https://github.com/wxWidgets/wxWidgets.git
+            wxwidgets_git_ref: v3.1.5
+            WX_CONFIG: /home/runner/work/tenacity/tenacity/wxwidgets-install/bin/wx-config
 
     steps:
-    # Setup 64-bit GCC 11
-    - name: Set up GCC
-      uses: egor-tensin/setup-gcc@v1
-      with:
-        platform: x64
-        version: 11
+      # Setup 64-bit GCC 11
+      - name: Set up GCC
+        uses: egor-tensin/setup-gcc@v1
+        with:
+          platform: x64
+          version: 11
 
-    - name: Checkout repository
-      uses: actions/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@v2
 
-    - name: "[Linux] Install dependencies"
-      if: runner.os == 'Linux'
-      run: >-
-        sudo apt-get update &&
-        sudo apt-get install -y --no-install-recommends
-        file
-        g++
-        ninja-build
-        nasm
-        git
-        wget
-        bash
-        scdoc
-        ccache
-        debhelper-compat
-        gettext
-        libasound2-dev
-        libgtk-3-dev
-        libsuil-dev
-        gettext
+      - name: "[Linux] Install dependencies"
+        if: runner.os == 'Linux'
+        run: >-
+          sudo apt-get update &&
+          sudo apt-get install -y --no-install-recommends
+          file
+          g++
+          ninja-build
+          nasm
+          git
+          wget
+          bash
+          scdoc
+          ccache
+          debhelper-compat
+          gettext
+          libasound2-dev
+          libgtk-3-dev
+          libsuil-dev
+          gettext
 
-    - name: "[MacOS] Install dependencies"
-      if: runner.os == 'macOS'
-      run: >-
-        brew install
-        bash
-        ccache
-        ninja
-        nasm
+      - name: Get Git commit of vcpkg submodule
+        run: echo VCPKG_COMMIT=$(git ls-tree HEAD vcpkg | awk '{print $3}') >> ${GITHUB_ENV}
 
-    - name: "[Windows] Install dependencies"
-      if: runner.os == 'Windows'
-      shell: pwsh
-      env:
-        # Install path of scoop
-        SCOOP: C:\Scoop\
-      run: |
-        echo "C:\Scoop\shims" | Out-File -FilePath $env:GITHUB_PATH -Encoding utf8 -Append
-        iwr -useb get.scoop.sh | iex
-        scoop install sccache
+      # FIXME: use wxWidgets from vcpkg for all OSes when bugs are fixed for Linux and macOS
+      # https://github.com/microsoft/vcpkg/pull/17111
+      - name: Build and install wxWidgets
+        if: steps.wxwidgets-cache.outputs.cache-hit != 'true' && runner.os != 'Windows'
+        run: |
+          # wxWidgets' build system does not find dependencies from vcpkg, so use its vendored Git submodules
+          wget https://github.com/wxWidgets/wxWidgets/releases/download/v3.1.5/wxWidgets-3.1.5.tar.bz2
+          tar xvf wxWidgets-3.1.5.tar.bz2
+          rm wxWidgets-3.1.5.tar.bz2
+          cd wxWidgets-3.1.5
+          cmake -G Ninja -D CMAKE_INSTALL_PREFIX=${{ github.workspace }}/wxwidgets-install \
+            -S . -B cmake_build
+          cmake --build cmake_build
+          cmake --install cmake_build
 
-    - name: Get Git commit of vcpkg submodule
-      run: echo VCPKG_COMMIT=$(git ls-tree HEAD vcpkg | awk '{print $3}') >> ${GITHUB_ENV}
+      - name: Configure
+        run: >-
+          cmake
+          -G Ninja
+          -D CMAKE_BUILD_TYPE=${{ env.CMAKE_BUILD_TYPE }}
+          -D CMAKE_INSTALL_PREFIX=${{ github.workspace }}/build/install
+          -D VCPKG=ON
+          -S .
+          -B build
+        env:
+          CC: ${{ matrix.config.cc }}
+          CXX: ${{ matrix.config.cxx }}
+          # hack to get CMake to find wxWidgets until vcpkg wxWidgets port is fixed
+          # https://github.com/microsoft/vcpkg/pull/17111
+          WX_CONFIG: ${{ matrix.config.WX_CONFIG }}
 
-    # FIXME: use wxWidgets from vcpkg for all OSes when bugs are fixed for Linux and macOS
-    # https://github.com/microsoft/vcpkg/pull/17111
-    - name: Build and install wxWidgets
-      if: steps.wxwidgets-cache.outputs.cache-hit != 'true' && runner.os != 'Windows'
-      run: |
-        # wxWidgets' build system does not find dependencies from vcpkg, so use its vendored Git submodules
-        git clone --recurse-submodules ${{ matrix.config.wxwidgets_git_url }}
-        cd wxWidgets
-        git checkout ${{ matrix.config.wxwidgets_git_ref }}
-        cmake -G Ninja -D CMAKE_INSTALL_PREFIX=${{ github.workspace }}/wxwidgets-install \
-          -S . -B cmake_build
-        cmake --build cmake_build
-        cmake --install cmake_build
+      # Initializes the CodeQL tools for scanning.
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v1
+        with:
+          languages: cpp
+          # If you wish to specify custom queries, you can do so here or in a config file.
+          # By default, queries listed here will override any specified in a config file.
+          # Prefix the list here with "+" to use these queries and those in the config file.
+          # queries: ./path/to/local/query, your-org/your-repo/queries@main
 
-    - name: Configure
-      run: >-
-        cmake
-        -G Ninja
-        -D CMAKE_BUILD_TYPE=${{ env.CMAKE_BUILD_TYPE }}
-        -D CMAKE_INSTALL_PREFIX=${{ github.workspace }}/build/install
-        -D VCPKG=ON
-        -S .
-        -B build
-      env:
-        CC: ${{ matrix.config.cc }}
-        CXX: ${{ matrix.config.cxx }}
-        # hack to get CMake to find wxWidgets until vcpkg wxWidgets port is fixed
-        # https://github.com/microsoft/vcpkg/pull/17111
-        WX_CONFIG: ${{ matrix.config.WX_CONFIG }}
+      - name: Build
+        run: cmake --build build --config ${{ env.CMAKE_BUILD_TYPE }} --verbose
 
-    # Initializes the CodeQL tools for scanning.
-    - name: Initialize CodeQL
-      uses: github/codeql-action/init@v1
-      with:
-        languages: cpp
-        # If you wish to specify custom queries, you can do so here or in a config file.
-        # By default, queries listed here will override any specified in a config file.
-        # Prefix the list here with "+" to use these queries and those in the config file.
-        # queries: ./path/to/local/query, your-org/your-repo/queries@main
-
-    - name: Build
-      run: cmake --build build --config ${{ env.CMAKE_BUILD_TYPE }} --verbose
-
-    - name: Perform CodeQL Analysis
-      uses: github/codeql-action/analyze@v1
-
+      - name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@v1
