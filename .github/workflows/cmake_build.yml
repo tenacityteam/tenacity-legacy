@@ -4,10 +4,32 @@ on:
   push:
     branches:
       - master
-    paths-ignore: ["**/**.md", "**/**.dox2", "**/**.dox", "**/**.dox.in", "**/LICENSE.txt", "/.builds/**", "/.github/ISSUE_TEMPLATE/**", "/.github/funding.yml", "/.vscode/**"]
+    paths-ignore:
+      [
+        "**/**.md",
+        "**/**.dox2",
+        "**/**.dox",
+        "**/**.dox.in",
+        "**/LICENSE.txt",
+        "/.builds/**",
+        "/.github/ISSUE_TEMPLATE/**",
+        "/.github/funding.yml",
+        "/.vscode/**",
+      ]
 
   pull_request:
-    paths-ignore: ["**/**.md", "**/**.dox2", "**/**.dox", "**/**.dox.in", "**/LICENSE.txt", "/.builds/**", "/.github/ISSUE_TEMPLATE/**", "/.github/funding.yml", "/.vscode/**"]
+    paths-ignore:
+      [
+        "**/**.md",
+        "**/**.dox2",
+        "**/**.dox",
+        "**/**.dox.in",
+        "**/LICENSE.txt",
+        "/.builds/**",
+        "/.github/ISSUE_TEMPLATE/**",
+        "/.github/funding.yml",
+        "/.vscode/**",
+      ]
 
   workflow_dispatch:
 
@@ -19,7 +41,7 @@ defaults:
 # for information on what these individual permissions represent/control
 permissions:
   actions: none
-  checks:  none
+  checks: none
   contents: read
   deployments: none
   issues: none
@@ -30,7 +52,6 @@ permissions:
   statuses: read
 
 jobs:
-
   build:
     name: ${{ matrix.config.name }}
     runs-on: ${{ matrix.config.os }}
@@ -43,60 +64,58 @@ jobs:
         # Replace - with _
         # Remove .
         config:
-        - name: Linux - Ubuntu 20.04 (x86_64) - Ninja
-          id: linux-ubuntu-2004-x86_64-x64_linux-ninja
-          os: ubuntu-20.04
-          arch: x86_64
-          vcpkg_triplet: x64-linux
-          CMAKE_GENERATOR: Ninja
+          - name: Linux - Ubuntu 20.04 (x86_64) - Ninja
+            id: linux-ubuntu-2004-x86_64-x64_linux-ninja
+            os: ubuntu-20.04
+            arch: x86_64
+            vcpkg_triplet: x64-linux
+            CMAKE_GENERATOR: Ninja
 
-        - name: macOS - Big Sur 11 (Intel) - Ninja
-          id: macos-bigsur-1100-intel-x64_osx_1012min-ninja
-          os: macos-11
-          arch: Intel
-          vcpkg_triplet: x64-osx-10.12min
-          CMAKE_GENERATOR: Ninja
+          - name: macOS - Big Sur 11 (Intel) - Ninja
+            id: macos-bigsur-1100-intel-x64_osx_1012min-ninja
+            os: macos-11
+            arch: Intel
+            vcpkg_triplet: x64-osx-10.12min
+            CMAKE_GENERATOR: Ninja
 
-        - name: macOS - Catalina 10.15 (Intel) - Ninja
-          id: macos-catalina-1015-intel-x64_osx_1012min-ninja
-          os: macos-10.15
-          arch: Intel
-          vcpkg_triplet: x64-osx-10.12min
-          CMAKE_GENERATOR: Ninja
+          - name: macOS - Catalina 10.15 (Intel) - Ninja
+            id: macos-catalina-1015-intel-x64_osx_1012min-ninja
+            os: macos-10.15
+            arch: Intel
+            vcpkg_triplet: x64-osx-10.12min
+            CMAKE_GENERATOR: Ninja
 
-        - name: Windows - Server 2019 (amd64) - Visual Studio 2019
-          id: windows-server-2019-amd64-x64_windows-vs2019_x64
-          os: windows-2019
-          arch: amd64
-          vcpkg_triplet: x64-windows
-          CMAKE_GENERATOR: Visual Studio 16 2019
-          CMAKE_GENERATOR_PLATFORM: x64
+          - name: Windows - Server 2019 (amd64) - Visual Studio 2019
+            id: windows-server-2019-amd64-x64_windows-vs2019_x64
+            os: windows-2019
+            arch: amd64
+            vcpkg_triplet: x64-windows
+            CMAKE_GENERATOR: Visual Studio 16 2019
+            CMAKE_GENERATOR_PLATFORM: x64
 
-        - name: Windows - Server 2019 (win32) - Visual Studio 2019
-          id: windows-server-2019-x86-x86_windows-vs2019_win32
-          os: windows-2019
-          arch: x86
-          vcpkg_triplet: x86-windows
-          CMAKE_GENERATOR: Visual Studio 16 2019
-          CMAKE_GENERATOR_PLATFORM: win32
+          - name: Windows - Server 2019 (win32) - Visual Studio 2019
+            id: windows-server-2019-x86-x86_windows-vs2019_win32
+            os: windows-2019
+            arch: x86
+            vcpkg_triplet: x86-windows
+            CMAKE_GENERATOR: Visual Studio 16 2019
+            CMAKE_GENERATOR_PLATFORM: win32
 
-        - name: Windows - Server 2019 (amd64) - Ninja
-          id: windows-server-2019-amd64-x64_windows-ninja
-          os: windows-2019
-          arch: amd64
-          vcpkg_triplet: x64-windows
-          CMAKE_GENERATOR: Ninja
+          - name: Windows - Server 2019 (amd64) - Ninja
+            id: windows-server-2019-amd64-x64_windows-ninja
+            os: windows-2019
+            arch: amd64
+            vcpkg_triplet: x64-windows
+            CMAKE_GENERATOR: Ninja
 
-        - name: Windows - Server 2019 (win32) - Ninja
-          id: windows-server-2019-x86-x86_windows-ninja
-          os: windows-2019
-          arch: x86
-          vcpkg_triplet: x86-windows
-          CMAKE_GENERATOR: Ninja
-
+          - name: Windows - Server 2019 (win32) - Ninja
+            id: windows-server-2019-x86-x86_windows-ninja
+            os: windows-2019
+            arch: x86
+            vcpkg_triplet: x86-windows
+            CMAKE_GENERATOR: Ninja
 
     env:
-
       AUDACITY_ARCH_LABEL: ${{ matrix.config.arch }}
 
       # CMake settings
@@ -119,193 +138,188 @@ jobs:
       WINDOWS_CERTIFICATE_PASSWORD: ${{ secrets.WINDOWS_CERTIFICATE_PASSWORD }}
 
       # WxWidgets info for Linux and macOS builds
-      WX_GIT_URL: https://github.com/wxWidgets/wxWidgets.git
-      WX_GIT_REF: v3.1.5
+      WX_VERSION: 3.1.5
 
     steps:
+      - name: Checkout Git repository
+        uses: actions/checkout@v2
+        with:
+          submodules: true
 
-    - name: Checkout Git repository
-      uses: actions/checkout@v2
-      with:
-        submodules: true
+      - name: Get Git commit of vcpkg submodule
+        run: echo VCPKG_COMMIT=$(git ls-tree HEAD vcpkg | awk '{print $3}') >> ${GITHUB_ENV}
 
-    - name: Get Git commit of vcpkg submodule
-      run: echo VCPKG_COMMIT=$(git ls-tree HEAD vcpkg | awk '{print $3}') >> ${GITHUB_ENV}
-
-    - name: Setup platform specific environmental variables
-      run: |
-        if [[ "${{runner.os}}" == "Windows" ]]; then
-          echo "Using Windows specific env vars"
-          echo COMPILER_CACHE_PATH=C:\Users\runneradmin\AppData\Local\Mozilla\sccache\cache >> ${GITHUB_ENV}
-          echo COMPILER_CACHE=sccache >> ${GITHUB_ENV}
-          echo EXE_SUFFIX=.exe >> ${GITHUB_ENV}
-          echo VCPKG_CACHE_PATH=C:\Users\runneradmin\AppData\Local\vcpkg >> ${GITHUB_ENV}
-          echo CMAKE_C_COMPILER_LAUNCHER=sccache >> ${GITHUB_ENV}
-          echo CMAKE_CXX_COMPILER_LAUNCHER=sccache >> ${GITHUB_ENV}
-          if [[ "${{ env.CMAKE_GENERATOR }}" == "Ninja" ]]; then
-            echo CC=cl >>  ${GITHUB_ENV}
-            echo CXX=cl >>  ${GITHUB_ENV}
-          fi
-        else
-          echo "Using non-Windows env vars"
-          echo COMPILER_CACHE_PATH= ~/Library/Caches/ccache >> ${GITHUB_ENV}
-          echo COMPILER_CACHE=ccache >> ${GITHUB_ENV}
-          echo EXE_SUFFIX= >> ${GITHUB_ENV}
-          echo VCPKG_CACHE_PATH=~/.cache/vcpkg >> ${GITHUB_ENV}
-          echo CMAKE_C_COMPILER_LAUNCHER=ccache >> ${GITHUB_ENV}
-          echo CMAKE_CXX_COMPILER_LAUNCHER=ccache >> ${GITHUB_ENV}
-          if [[ "${{runner.os}}" == "Linux" ]]; then
-            echo WX_INSTALL_DIR=/home/runner/work/tenacity/tenacity/wxwidgets-install >> ${GITHUB_ENV}
-            echo WX_CONFIG=/home/runner/work/tenacity/tenacity/wxwidgets-install/bin/wx-config >> ${GITHUB_ENV}
+      - name: Setup platform specific environmental variables
+        run: |
+          if [[ "${{runner.os}}" == "Windows" ]]; then
+            echo "Using Windows specific env vars"
+            echo COMPILER_CACHE_PATH=C:\Users\runneradmin\AppData\Local\Mozilla\sccache\cache >> ${GITHUB_ENV}
+            echo COMPILER_CACHE=sccache >> ${GITHUB_ENV}
+            echo EXE_SUFFIX=.exe >> ${GITHUB_ENV}
+            echo VCPKG_CACHE_PATH=C:\Users\runneradmin\AppData\Local\vcpkg >> ${GITHUB_ENV}
+            echo CMAKE_C_COMPILER_LAUNCHER=sccache >> ${GITHUB_ENV}
+            echo CMAKE_CXX_COMPILER_LAUNCHER=sccache >> ${GITHUB_ENV}
+            if [[ "${{ env.CMAKE_GENERATOR }}" == "Ninja" ]]; then
+              echo CC=cl >>  ${GITHUB_ENV}
+              echo CXX=cl >>  ${GITHUB_ENV}
+            fi
           else
-            echo WX_INSTALL_DIR=/Users/runner/work/tenacity/tenacity/wxwidgets-install >> ${GITHUB_ENV}
-            echo WX_CONFIG=/Users/runner/work/tenacity/tenacity/wxwidgets-install/bin/wx-config >> ${GITHUB_ENV}
+            echo "Using non-Windows env vars"
+            echo COMPILER_CACHE_PATH= ~/Library/Caches/ccache >> ${GITHUB_ENV}
+            echo COMPILER_CACHE=ccache >> ${GITHUB_ENV}
+            echo EXE_SUFFIX= >> ${GITHUB_ENV}
+            echo VCPKG_CACHE_PATH=~/.cache/vcpkg >> ${GITHUB_ENV}
+            echo CMAKE_C_COMPILER_LAUNCHER=ccache >> ${GITHUB_ENV}
+            echo CMAKE_CXX_COMPILER_LAUNCHER=ccache >> ${GITHUB_ENV}
+            if [[ "${{runner.os}}" == "Linux" ]]; then
+              echo WX_INSTALL_DIR=/home/runner/work/tenacity/tenacity/wxwidgets-install >> ${GITHUB_ENV}
+              echo WX_CONFIG=/home/runner/work/tenacity/tenacity/wxwidgets-install/bin/wx-config >> ${GITHUB_ENV}
+            else
+              echo WX_INSTALL_DIR=/Users/runner/work/tenacity/tenacity/wxwidgets-install >> ${GITHUB_ENV}
+              echo WX_CONFIG=/Users/runner/work/tenacity/tenacity/wxwidgets-install/bin/wx-config >> ${GITHUB_ENV}
+            fi
           fi
-        fi
 
-    - name: "[macOS] Install Apple codesigning certificates"
-      uses: apple-actions/import-codesign-certs@v1
-      if: startswith( matrix.config.os, 'macos' ) && github.repository_owner == 'tenacityteam' && github.event_name == 'create' && github.event.ref_type == 'tag'
-      with:
-        p12-file-base64: ${{ secrets.APPLE_CERTIFICATE }}
-        p12-password: ${{ secrets.APPLE_CERTIFICATE_PASSWORD }}
+      - name: "[macOS] Install Apple codesigning certificates"
+        uses: apple-actions/import-codesign-certs@v1
+        if: startswith( matrix.config.os, 'macos' ) && github.repository_owner == 'tenacityteam' && github.event_name == 'create' && github.event.ref_type == 'tag'
+        with:
+          p12-file-base64: ${{ secrets.APPLE_CERTIFICATE }}
+          p12-password: ${{ secrets.APPLE_CERTIFICATE_PASSWORD }}
 
-    - name: "[Windows] Set up MSVC Developer Command Prompt"
-      if: runner.os == 'Windows'
-      uses: seanmiddleditch/gha-setup-vsdevenv@v3
-      with:
-        arch: ${{ matrix.config.arch }}
+      - name: "[Windows] Set up MSVC Developer Command Prompt"
+        if: runner.os == 'Windows'
+        uses: seanmiddleditch/gha-setup-vsdevenv@v3
+        with:
+          arch: ${{ matrix.config.arch }}
 
-    - name: Install Nuget
-      uses: nuget/setup-nuget@v1
-      with:
-        nuget-version: 5.10.0
+      - name: Install Nuget
+        uses: nuget/setup-nuget@v1
+        with:
+          nuget-version: 5.10.0
 
-    - name: "Authenticate CI to Github Packages"
-      if: github.repository_owner == 'tenacityteam'
-      run: |
-        nuget sources add -Name tenacityteam_github_auto -Source https://nuget.pkg.github.com/tenacityteam/index.json -Username tenacityteam -Password ${{ secrets.GITHUB_TOKEN }} -StorePasswordInClearText -ForceEnglishOutput -NonInteractive
-        nuget setapikey ${{ secrets.GITHUB_TOKEN }} -Source tenacityteam_github_auto -ForceEnglishOutput -NonInteractive
-        echo "VCPKG_BINARY_SOURCES=clear;nuget,tenacityteam_github_auto,readwrite;" >> ${GITHUB_ENV}
+      - name: "Authenticate CI to Github Packages"
+        if: github.repository_owner == 'tenacityteam'
+        run: |
+          nuget sources add -Name tenacityteam_github_auto -Source https://nuget.pkg.github.com/tenacityteam/index.json -Username tenacityteam -Password ${{ secrets.GITHUB_TOKEN }} -StorePasswordInClearText -ForceEnglishOutput -NonInteractive
+          nuget setapikey ${{ secrets.GITHUB_TOKEN }} -Source tenacityteam_github_auto -ForceEnglishOutput -NonInteractive
+          echo "VCPKG_BINARY_SOURCES=clear;nuget,tenacityteam_github_auto,readwrite;" >> ${GITHUB_ENV}
 
-    - name: "[Linux] Install dependencies"
-      if: runner.os == 'Linux'
-      run: >-
-        sudo apt-get update &&
-        sudo apt-get install -y --no-install-recommends
-        file
-        g++
-        ninja-build
-        nasm
-        git
-        wget
-        bash
-        scdoc
-        ccache
-        debhelper-compat
-        gettext
-        libasound2-dev
-        libgtk-3-dev
-        libsuil-dev
-        gettext
+      - name: "[Linux] Install dependencies"
+        if: runner.os == 'Linux'
+        run: >-
+          sudo apt-get update &&
+          sudo apt-get install -y --no-install-recommends
+          file
+          g++
+          ninja-build
+          nasm
+          git
+          wget
+          bash
+          scdoc
+          ccache
+          debhelper-compat
+          gettext
+          libasound2-dev
+          libgtk-3-dev
+          libsuil-dev
+          gettext
 
-    - name: "[MacOS] Install dependencies"
-      if: runner.os == 'macOS'
-      run: >-
-        brew install
-        bash
-        ccache
-        ninja
-        nasm
+      - name: "[MacOS] Install dependencies"
+        if: runner.os == 'macOS'
+        run: >-
+          brew install
+          bash
+          ccache
+          ninja
+          nasm
 
-    - name: "[Windows] Install dependencies"
-      if: runner.os == 'Windows'
-      shell: pwsh
-      env:
-        # Install path of scoop
-        SCOOP: C:\Scoop\
-      run: |
-        echo "C:\Scoop\shims" | Out-File -FilePath $env:GITHUB_PATH -Encoding utf8 -Append
-        iwr -useb get.scoop.sh | iex
-        scoop install sccache
+      - name: "[Windows] Install dependencies"
+        if: runner.os == 'Windows'
+        shell: pwsh
+        run: |
+          choco install sccache -y
 
-    # Cache the vcpkg executable to avoid bootstrapping each time
-    - name: "Setup vcpkg executable cache"
-      uses: actions/cache@v2
-      with:
-        path: ${{ github.workspace }}/vcpkg/vcpkg${{ env.EXE_SUFFIX }}
-        key: ${{ matrix.config.id }}-${{ env.VCPKG_COMMIT }}
+      # Cache the vcpkg executable to avoid bootstrapping each time
+      - name: "Setup vcpkg executable cache"
+        uses: actions/cache@v2
+        with:
+          path: ${{ github.workspace }}/vcpkg/vcpkg${{ env.EXE_SUFFIX }}
+          key: ${{ matrix.config.id }}-${{ env.VCPKG_COMMIT }}
 
-    - name: "[Linux/macOS] Set up wxWidgets cache"
-      uses: actions/cache@v2
-      id: wxwidgets-cache
-      if: runner.os != 'Windows'
-      with:
-        path: ${{ env.WX_INSTALL_DIR }}
-        key: ${{ matrix.config.os }}-${{ matrix.config.arch }}-${{ env.WX_GIT_URL }}-${{ env.WX_GIT_REF }}
+      - name: "[Linux/macOS] Set up wxWidgets cache"
+        uses: actions/cache@v2
+        id: wxwidgets-cache
+        if: runner.os != 'Windows'
+        with:
+          path: ${{ env.WX_INSTALL_DIR }}
+          key: wx-${{ matrix.config.os }}-${{ matrix.config.arch }}-${{ env.WX_VERSION }}
 
-    # FIXME: use wxWidgets from vcpkg for all OSes when bugs are fixed for Linux and macOS
-    # https://github.com/microsoft/vcpkg/pull/17111
-    - name: "[Linux/macOS] Build and install wxWidgets"
-      if: steps.wxwidgets-cache.outputs.cache-hit != 'true' && runner.os != 'Windows'
-      run: |
-        # wxWidgets' build system does not find dependencies from vcpkg, so use its vendored Git submodules
-        git clone --recurse-submodules ${{ env.WX_GIT_URL }}
-        cd wxWidgets
-        git checkout ${{ env.WX_GIT_REF }}
-        cmake -S . -B cmake_build -D CMAKE_BUILD_TYPE=${{ env.CMAKE_BUILD_TYPE }}  -D CMAKE_INSTALL_PREFIX=${{ env.WX_INSTALL_DIR }} -D CMAKE_OSX_DEPLOYMENT_TARGET=10.12
-        cmake --build cmake_build
-        cmake --install cmake_build
+      # FIXME: use wxWidgets from vcpkg for all OSes when bugs are fixed for Linux and macOS
+      # https://github.com/microsoft/vcpkg/pull/17111
+      - name: "[Linux/macOS] Build and install wxWidgets"
+        if: steps.wxwidgets-cache.outputs.cache-hit != 'true' && runner.os != 'Windows'
+        run: |
+            # wxWidgets' build system does not find dependencies from vcpkg, so use its vendored Git submodules
+            wget https://github.com/wxWidgets/wxWidgets/releases/download/v${{ env.WX_VERSION }}/wxWidgets-${{ env.WX_VERSION }}.tar.bz2
+            tar xvf wxWidgets-${{ env.WX_VERSION }}.tar.bz2
+            rm wxWidgets-${{ env.WX_VERSION }}.tar.bz2
+            cd wxWidgets-${{ env.WX_VERSION }}
+            cmake -G Ninja -D CMAKE_INSTALL_PREFIX=${{ env.WX_INSTALL_DIR }} \
+              -S . -B cmake_build
+            cmake --build cmake_build
+            cmake --install cmake_build
 
-    - name: Set up compiler cache
-      uses: actions/cache@v2
-      with:
-        path: ${{ env.COMPILER_CACHE_PATH }}
-        key: ${{ matrix.config.os }}-${{ matrix.config.arch }}-${{ github.head_ref }}-${{ github.run_number }}
-        restore-keys: |
-          ${{ matrix.config.os }}-${{ matrix.config.arch }}-${{ github.head_ref }}-
-          ${{ matrix.config.os }}-${{ matrix.config.arch }}-
+      - name: Set up compiler cache
+        uses: actions/cache@v2
+        with:
+          path: ${{ env.COMPILER_CACHE_PATH }}
+          key: ${{ matrix.config.os }}-${{ matrix.config.arch }}-${{ github.head_ref }}-${{ github.run_number }}
+          restore-keys: |
+            ${{ matrix.config.os }}-${{ matrix.config.arch }}-${{ github.head_ref }}-
+            ${{ matrix.config.os }}-${{ matrix.config.arch }}-
 
-    - name: Configure
-      run: cmake -B build -D VCPKG=ON -D CMAKE_BUILD_TYPE=${{ env.CMAKE_BUILD_TYPE }} -D CMAKE_INSTALL_PREFIX=${{ github.workspace }}/build/install
+      - name: Configure
+        run: cmake -B build -D VCPKG=ON -D CMAKE_BUILD_TYPE=${{ env.CMAKE_BUILD_TYPE }} -D CMAKE_INSTALL_PREFIX=${{ github.workspace }}/build/install
 
-    - name: Build
-      run: cmake --build build --config ${{ env.CMAKE_BUILD_TYPE }} --verbose
+      - name: Build
+        run: cmake --build build --config ${{ env.CMAKE_BUILD_TYPE }} --verbose
 
-    - name: Print compiler cache stats
-      run: ${{ env.COMPILER_CACHE}} -s
+      - name: Print compiler cache stats
+        run: ${{ env.COMPILER_CACHE}} -s
 
-    - name: Install
-      run: cmake --install build --config ${{ env.CMAKE_BUILD_TYPE }} --verbose
+      - name: Install
+        run: cmake --install build --config ${{ env.CMAKE_BUILD_TYPE }} --verbose
 
-    - name: Package
-      run: |
-        if [[ "${{runner.os}}" == "Windows" ]]; then
-          cmake --build build --target innosetup --config ${{ env.CMAKE_BUILD_TYPE }}
-        else
-          cd build
-          cpack -C ${{ env.CMAKE_BUILD_TYPE }} -D CPACK_COMMAND_HDIUTIL=${{ env.CPACK_COMMAND_HDIUTIL }} --verbose
-          rm -r package/_CPack_Packages
-        fi
-      env:
-        # Workaround for CPack hdiutil/ finder service race condition bug
-        CPACK_COMMAND_HDIUTIL: ${{ github.workspace }}/scripts/ci/macos/repeat_hdiutil.sh
-        # Required on Linux to find wxWidgets libraries installed without a package manager
-        WXWIDGETS_LD_LIBRARY_PATH: ${{ env.WX_INSTALL_DIR }}/lib
+      - name: Package
+        run: |
+          if [[ "${{runner.os}}" == "Windows" ]]; then
+            cmake --build build --target innosetup --config ${{ env.CMAKE_BUILD_TYPE }}
+          else
+            cd build
+            cpack -C ${{ env.CMAKE_BUILD_TYPE }} -D CPACK_COMMAND_HDIUTIL=${{ env.CPACK_COMMAND_HDIUTIL }} --verbose
+            rm -r package/_CPack_Packages
+          fi
+        env:
+          # Workaround for CPack hdiutil/ finder service race condition bug
+          CPACK_COMMAND_HDIUTIL: ${{ github.workspace }}/scripts/ci/macos/repeat_hdiutil.sh
+          # Required on Linux to find wxWidgets libraries installed without a package manager
+          WXWIDGETS_LD_LIBRARY_PATH: ${{ env.WX_INSTALL_DIR }}/lib
 
-    - name: Upload package artifact
-      uses: actions/upload-artifact@v2
-      with:
-        name: Tenacity_${{ matrix.config.id }}_${{ github.run_id }}_${{ env.GIT_HASH_SHORT }}
-        path: build/package/*
-        if-no-files-found: error
+      - name: Upload package artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: Tenacity_${{ matrix.config.id }}_${{ github.run_id }}_${{ env.GIT_HASH_SHORT }}
+          path: build/package/*
+          if-no-files-found: error
 
-    - name: Upload artifact of vcpkg build logs
-      uses: actions/upload-artifact@v2
-      if: always()
-      with:
-        name: vcpkg-logs-${{ matrix.config.id }}
-        path: |
-          ${{ github.workspace }}/vcpkg/buildtrees/**/*.log
-          ${{ github.workspace }}/build/vcpkg-bootstrap.log
-        if-no-files-found: ignore
+      - name: Upload artifact of vcpkg build logs
+        uses: actions/upload-artifact@v2
+        if: always()
+        with:
+          name: vcpkg-logs-${{ matrix.config.id }}
+          path: |
+            ${{ github.workspace }}/vcpkg/buildtrees/**/*.log
+            ${{ github.workspace }}/build/vcpkg-bootstrap.log
+          if-no-files-found: ignore
