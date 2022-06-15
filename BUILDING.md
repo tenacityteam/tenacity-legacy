@@ -144,7 +144,7 @@ Alternatively, install `wxgtk3` with pacman to use wxWidgets 3.0, and set
 Install the rest of the build dependencies from the main Arch repository:
 
 ```
-sudo pacman -S cmake ninja ccache expat gcc-libs gdk-pixbuf2 glibc flac gtk3 glib2 libid3tag lilv libmad libogg portaudio portmidi libsndfile libsoxr suil twolame vamp-plugin-sdk libvorbis soundtouch ffmpeg
+sudo pacman -S --needed cmake ninja ccache expat gcc-libs gdk-pixbuf2 glibc flac gtk3 glib2 libid3tag lilv libmad libogg portaudio portmidi libsndfile libsoxr suil twolame vamp-plugin-sdk libvorbis soundtouch ffmpeg
 ```
 
 TODO: add portsmf and sbsms to this package list when those packages are updated.
