@@ -167,6 +167,8 @@ public:
 public:
    ~Theme(void);
 public:
+   int ChooseDefaultTheme();
+   int CheckWindowsAppTheme();
    void EnsureInitialised() override;
    void RegisterImages();
    void RegisterColours();
