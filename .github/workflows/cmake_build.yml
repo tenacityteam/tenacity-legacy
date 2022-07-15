@@ -119,7 +119,7 @@ jobs:
       AUDACITY_ARCH_LABEL: ${{ matrix.config.arch }}
 
       # CMake settings
-      CMAKE_BUILD_TYPE: MinSizeRel
+      CMAKE_BUILD_TYPE: RelWithDebInfo
       CMAKE_GENERATOR: ${{matrix.config.CMAKE_GENERATOR}}
       CMAKE_GENERATOR_PLATFORM: ${{matrix.config.CMAKE_GENERATOR_PLATFORM}}
 
