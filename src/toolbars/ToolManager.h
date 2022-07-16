@@ -173,6 +173,8 @@ public:
    void ClearBar() { mBar = nullptr; }
    void LockInMinSize(ToolBar * pBar);
 
+   wxSize CalcMinSize(ToolBar * bar);
+
    //
    // Transition a toolbar from float to dragging
    //

@@ -28,6 +28,7 @@
 #include "ToolManager.h"
 
 #include "../commands/CommandContext.h"
+#include "ToolBar.h"
 
 // For compilers that support precompilation, includes "wx/wx.h".
 #include <wx/wxprec.h>
@@ -134,9 +135,13 @@ ToolFrame::ToolFrame
    // Make sure resizable floaters don't get any smaller than initial size
    if( bar->IsResizable() )
    {
-      // Calc the minimum size of the frame
-      mMinSize = bar->GetMinSize() + ( GetSize() - bar->GetSize() );
+      mMinSize=CalcMinSize(bar);
    }
+}
+
+wxSize ToolFrame::CalcMinSize(ToolBar * bar) {
+   // Calc the minimum size of the frame
+   return bar->GetMinSize() + ( GetSize() - bar->GetSize() );
 }
 
 ToolFrame::~ToolFrame()
@@ -189,7 +194,6 @@ void ToolFrame::OnPaint( wxPaintEvent & WXUNUSED(event) )
    dc.SetBackground( wxBrush( theTheme.Colour( clrMedium ) ) );
    dc.Clear();
    dc.SetBrush( *wxTRANSPARENT_BRUSH );
-   dc.DrawRectangle( 0, 0, sz.GetWidth(), sz.GetHeight() );
 
    if( mBar && mBar->IsResizable() )
    {
@@ -213,6 +217,8 @@ void ToolFrame::OnMotion( wxMouseEvent & event )
    {
       return;
    }
+   // Calc the minimum size of the frame
+   mMinSize=CalcMinSize(mBar);
 
    // Retrieve the mouse position
    wxPoint pos = ClientToScreen( event.GetPosition() );
@@ -533,21 +539,17 @@ static struct DefaultConfigEntry {
    { ToolsBarID,             TransportBarID,         NoBarID                },
    { RecordMeterBarID,       ToolsBarID,             NoBarID                },
    { PlayMeterBarID,         RecordMeterBarID,       NoBarID                },
-   { EditBarID,              PlayMeterBarID,         NoBarID                },
+   { EditBarID,              ToolsBarID,             RecordMeterBarID       },
 
 // DA: Transcription Toolbar not docked, by default.
 #ifdef EXPERIMENTAL_DA
-   { TranscriptionBarID,     NoBarID,                NoBarID                },
+   { TranscriptionBarID,     EditBarID,              NoBarID                },
 #else
    { TranscriptionBarID,     EditBarID,              NoBarID                },
 #endif
 
    // start another top dock row
    { ScrubbingBarID,         NoBarID,                TransportBarID         },
-   { DeviceBarID,            ScrubbingBarID,         TransportBarID         },
-
-   // Hidden by default in top dock
-   { MeterBarID,             NoBarID,                NoBarID                },
 
    // Bottom dock
    { SelectionBarID,         NoBarID,                NoBarID                },
@@ -628,14 +630,12 @@ void ToolManager::Reset()
 #endif
 
       // Hide some bars.
-      if( ndx == MeterBarID
+      if(  ndx == ScrubbingBarID
 #ifdef EXPERIMENTAL_SPECTRAL_EDITING
          || ndx == SpectralSelectionBarID
 #endif
-         || ndx == ScrubbingBarID
 // DA: Hides three more toolbars.
 #ifdef EXPERIMENTAL_DA
-         || ndx == DeviceBarID
          || ndx == TranscriptionBarID
          || ndx == SelectionBarID
 #endif
@@ -769,8 +769,6 @@ void ToolManager::ReadConfig()
 
       if( ndx == SelectionBarID )
          defaultDock = BotDockID;
-      if( ndx == MeterBarID )
-         bShownByDefault = false;
       if( ndx == ScrubbingBarID )
          bShownByDefault = false;
       if( ndx == TimeBarID )

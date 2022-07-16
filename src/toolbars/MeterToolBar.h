@@ -35,7 +35,6 @@ class MeterToolBar final : public ToolBar {
 
    MeterToolBar(AudacityProject &project, int type);
    virtual ~MeterToolBar();
-
    void Create(wxWindow *parent) override;
 
    void Populate() override;
@@ -48,8 +47,9 @@ class MeterToolBar final : public ToolBar {
    bool Expose(bool show) override;
 
    int GetInitialWidth() override {return (mWhichMeters ==
-      (kWithRecordMeter + kWithPlayMeter)) ? 338 : 460;} // Separate bars used to be smaller.
-   int GetMinToolbarWidth()  override { return 150; }
+      (kWithRecordMeter + kWithPlayMeter)) ? 554 : 277;} // Separate bars used to be smaller.
+   int GetMinToolbarWidth() override {return  (bHorizontal) ? 145 : toolbarSingle+11; }
+   int GetMinToolbarHeight() {return  (bHorizontal) ? toolbarSingle : 145; }
    wxSize GetDockedSize() override {
       return GetSmartDockedSize();
    };
@@ -58,10 +58,41 @@ class MeterToolBar final : public ToolBar {
  private:
    void RegenerateTooltips() override;
 
+   void OnInputButton(wxCommandEvent & event);
+   void OnOutputButton(wxCommandEvent & event);
+
+   // Menu
+   void ShowMenu(bool InputMenu, wxPoint pos);
+   void BuildMenus(bool InputMenu);
+   void ClearMenus();
+   static void SetOutDevice(wxCommandEvent &);
+   static void SetInDevice(wxCommandEvent &);
+   static void SetChannelCount(wxCommandEvent &event);
+   void OnHost(wxCommandEvent &);
+   static void UpdateChannelCount();
+
+   void OnMonitor(wxCommandEvent &);
+   void OnPlayPreferences(wxCommandEvent &event);
+   void OnRecPreferences(wxCommandEvent &event);
+
+
+ bool bHorizontal;
    int mWhichMeters;
    wxGridBagSizer *mSizer;
    MeterPanel *mPlayMeter;
    MeterPanel *mRecordMeter;
+
+   wxMenu *mChannelsMenu;
+   wxMenu *mIOMenu;
+
+   enum
+   {
+      ID_INPUT_BUTTON = 14000,
+      ID_OUTPUT_BUTTON
+   };
+
+   AButton *mInButton;
+   AButton *mOutButton;
 
  public:
 
