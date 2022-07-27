@@ -1,15 +1,15 @@
-#!/bin/bash
+#!/bin/sh
 
 # Copyright 2003, 2004, 2005 Dominic Mazzoni and Matt Brubeck
 # Distributed under the GNU General Public License 2.0.
 # See the file LICENSE.txt for details.
 # Re-written in Bash by Richard Ash 2006 - 2013
 
-function myrmrvf {
+myrmrvf() {
    # a replacement for rm -rvf that has it's output controlled
    # by the value of the first argument
    # setting it to 1 makes it verbose, to anything else makes it quiet
-   if [ $1 -eq 1 ] ; then  #verbose mode
+   if [ "$1" -eq 1 ] ; then  #verbose mode
       shift
       echo "rm -rf $*"
       rm -rf $*
@@ -20,11 +20,11 @@ function myrmrvf {
    fi
 }
 
-function myrmvf {
+myrmvf() {
    # a replacement for rm -vf that has it's output controlled
    # by the value of the first argument
    # setting it to 1 makes it verbose, to anything else makes it quiet
-   if [ $1 -eq 1 ] ; then  #verbose mode
+   if [ "$1" -eq 1 ] ; then  #verbose mode
       shift
       echo "rm -f $*"
       rm -f $*
@@ -35,23 +35,23 @@ function myrmvf {
    fi
 }
 
-function myfindrm {
+myfindrm() {
    # search the file tree removing files that match the specified pattern in
    # the second argument, with output controlled by the value of the first
    # argument.
    # setting it to 1 makes it verbose, to anything else makes it quiet
-   if [ $1 -eq 1 ] ; then
+   if [ "$1" -eq 1 ] ; then
       find . -name "$2" -print -delete
    else
       find . -name "$2" -delete
    fi
 }
 
-function cleanfulltree {
+cleanfulltree() {
    # does the clean-up op on the full source tree prior to building the full
    # tarball
    printf "making distclean ... "
-   if [ $1 -eq 1 ] ; then
+   if [ "$1" -eq 1 ] ; then
       make distclean
    else
       make distclean 2>/dev/null > /dev/null
@@ -65,98 +65,98 @@ function cleanfulltree {
    fi
 
    printf "removing GIT directories ... "
-   myrmrvf $1 .git .gitignore
-   myrmrvf $1 .gitignore
-   myrmrvf $1 .gitattributes
+   myrmrvf "$1" .git .gitignore
+   myrmrvf "$1" .gitignore
+   myrmrvf "$1" .gitattributes
    printf "Done\n"
 
    printf "removing vim / emacs temp files ... "
-   myfindrm $1 "*~"
+   myfindrm "$1" "*~"
    printf "Done\n"
 
    printf "removing Python droppings ... "
-   myfindrm $1 "*.pyc"
+   myfindrm "$1" "*.pyc"
    printf "Done\n"
 
    printf "removing executable and other intermediate files ... "
-   myrmvf $1 src/tenacity src/.depend src/.gchdepend
-   myfindrm $1 config.status
-   myfindrm $1 config.log
-   myfindrm $1 config.cache
+   myrmvf "$1" src/tenacity src/.depend src/.gchdepend
+   myfindrm "$1" config.status
+   myfindrm "$1" config.log
+   myfindrm "$1" config.cache
    find . -depth -name 'autom4te.cache' -execdir rm -rf '{}' ';'
    find . -depth -name '.deps' -execdir rm -rf '{}' ';'
-   myfindrm $1 aclocal.m4
+   myfindrm "$1" aclocal.m4
    printf "Done\n"
 
    printf "removing orphaned symlinks in lib-src/ ... "
-   myrmvf $1 lib-src/*.a
+   myrmvf "$1" lib-src/*.a
    printf "Done\n"
 
    printf "removing doxygen output files ... "
-   myrmrvf $1 dox
+   myrmrvf "$1" dox
    printf "Done\n"
 
    printf "removing unused libraries from GIT tree ..."
-   myrmrvf $1 lib-src/libscorealign
+   myrmrvf "$1" lib-src/libscorealign
    printf "Done\n"
 }
 
 # remove all the things we have in GIT for convenience rather than being
 # necessary
-function slimtree {
+slimtree() {
    printf "removing todo lists ... "
-   myrmvf $1 todo.txt
+   myrmvf "$1" todo.txt
    printf "Done\n"
 
    # we cannot remove tests/ because subsequent builds fail ...
    printf "removing scripts and tests ... "
-   myrmrvf $1 scripts tests/ProjectCheckTests/
+   myrmrvf "$1" scripts tests/ProjectCheckTests/
    printf "Done\n"
 
    printf "removing libraries that should be installed locally ... "
-   myrmrvf $1 lib-src/expat lib-src/libid3tag
-   myrmrvf $1 lib-src/libmad lib-src/libogg
-   myrmrvf $1 lib-src/libvorbis lib-src/soundtouch
+   myrmrvf "$1" lib-src/expat lib-src/libid3tag
+   myrmrvf "$1" lib-src/libmad lib-src/libogg
+   myrmrvf "$1" lib-src/libvorbis lib-src/soundtouch
    # these bindings aren't built by default, we don't need them
-   myrmrvf $1 lib-src/portaudio-v19/bindings/
+   myrmrvf "$1" lib-src/portaudio-v19/bindings/
    printf "Done\n"
 
    printf "removing qa ... "
-   myrmrvf $1 qa
+   myrmrvf "$1" qa
    printf "Done\n"
 
    printf "removing unused portaudio-v19 directories ... "
-   myrmrvf $1 lib-src/portaudio-v19/docs
-   myrmrvf $1 lib-src/portaudio-v19/pa_asio
-   myrmrvf $1 lib-src/portaudio-v19/pa_sgi
-   myrmrvf $1 lib-src/portaudio-v19/pa_mac_sm
-   myrmrvf $1 lib-src/portaudio-v19/testcvs
+   myrmrvf "$1" lib-src/portaudio-v19/docs
+   myrmrvf "$1" lib-src/portaudio-v19/pa_asio
+   myrmrvf "$1" lib-src/portaudio-v19/pa_sgi
+   myrmrvf "$1" lib-src/portaudio-v19/pa_mac_sm
+   myrmrvf "$1" lib-src/portaudio-v19/testcvs
    printf "Done\n"
 
    printf "removing unused portmidi directories ... "
-   myrmrvf $1 lib-src/portmidi/pm_cl
-   myrmrvf $1 lib-src/portmidi/pm_csharp
-   myrmrvf $1 lib-src/portmidi/pm_dylib
-   myrmrvf $1 lib-src/portmidi/pm_java
-   myrmrvf $1 lib-src/portmidi/pm_mingw
-   myrmrvf $1 lib-src/portmidi/pm_python
-   myrmrvf $1 lib-src/portmidi/pm_qt
-   myrmrvf $1 lib-src/portmidi/pm_test
-   myrmrvf $1 lib-src/portmidi/portmidi_cdt.zip
+   myrmrvf "$1" lib-src/portmidi/pm_cl
+   myrmrvf "$1" lib-src/portmidi/pm_csharp
+   myrmrvf "$1" lib-src/portmidi/pm_dylib
+   myrmrvf "$1" lib-src/portmidi/pm_java
+   myrmrvf "$1" lib-src/portmidi/pm_mingw
+   myrmrvf "$1" lib-src/portmidi/pm_python
+   myrmrvf "$1" lib-src/portmidi/pm_qt
+   myrmrvf "$1" lib-src/portmidi/pm_test
+   myrmrvf "$1" lib-src/portmidi/portmidi_cdt.zip
    printf "Done\n"
 
    printf "removing Nyquist plug-ins that are just for show ... "
-   myrmvf $1 plug-ins/analyze.ny plug-ins/fadein.ny plug-ins/fadeout.ny
-   myrmvf $1 plug-ins/undcbias.ny
+   myrmvf "$1" plug-ins/analyze.ny plug-ins/fadein.ny plug-ins/fadeout.ny
+   myrmvf "$1" plug-ins/undcbias.ny
    printf "Done\n"
 
    printf "Removing developer scripts not needed to build tenacity ... "
-   myrmrvf $1 scripts/mw2html_audacity
+   myrmrvf "$1" scripts/mw2html_audacity
    printf "Done\n"
 
    printf "Removing Mac and Windows build files ... "
-   myrmrvf $1 mac
-   myrmrvf $1 win
+   myrmrvf "$1" mac
+   myrmrvf "$1" win
    printf "Done\n"
 }
 
@@ -209,7 +209,7 @@ if [ -f "lib-src/Makefile" ] ; then
    # we have a Makefile - is it new enough?
    t2=$(date +%s -r "lib-src/Makefile")
    t1=$(date +%s -r "lib-src/Makefile.in")
-   if [ $t1 -gt $t2 ] ; then
+   if [ "$t1" -gt "$t2" ] ; then
       # not new enough, reconfigure
       reconf=1
    fi
@@ -251,7 +251,7 @@ if [ ! -x "config.status" ] ; then
    exit 1
 fi
 
-echo -n "Getting program version ... "
+printf "Getting program version ... "
 # first off, find out what C++ pre-processor configure has found for us to use
 # (because we want the same one that will be used to build Audacity). This is a
 # neat trick using the config.status script left behind after configure has
@@ -260,7 +260,7 @@ cppprog="$(echo '@CXX@' | ./config.status --file=-)"
 
 # run the preprocessor, convert output to shell variables, and evaluate to
 # define them
-eval $(cpp -E <<CPPEOF | sed -e 's/wxT("//g' \
+eval "$(cpp -E <<CPPEOF | sed -e 's/wxT("//g' \
                              -e 's/")//g' \
                              -e 's/ //g' \
                              -e "s/__TDATE__/$(date +%Y%m%d)/" \
@@ -270,7 +270,7 @@ eval $(cpp -E <<CPPEOF | sed -e 's/wxT("//g' \
                              -e 'd'
 #include "src/Audacity.h"
 CPPEOF
-)
+)"
 
 version="${GIT_DESCRIBE}"
 printf "${version}\n"

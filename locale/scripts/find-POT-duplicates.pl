@@ -2,8 +2,7 @@
 
 use strict 'vars';
 
-open(my $fh, "<", "audacity.pot")
-    or die "Can't open < audacity.pot: $!";
+open(my $fh, "<", "../tenacity.pot") or die "Can't open < ../tenacity.pot: $!";
 
 my @sourcelines = ();
 

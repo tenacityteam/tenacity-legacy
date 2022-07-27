@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/sh
 
 ((${BASH_VERSION%%.*} >= 4)) || { echo >&2 "$0: Error: Please upgrade Bash."; exit 1; }
 
@@ -8,7 +8,7 @@ max_retry=12
 counter=0
 num_secs_await_retry=20
 
-echo "Trying: /usr/bin/hdiutil $@"
+echo "Trying: /usr/bin/hdiutil $*"
 
 until /usr/bin/hdiutil "$@"; do
    sleep $num_secs_await_retry

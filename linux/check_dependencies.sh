@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/sh
 
 version="@CPACK_PACKAGE_NAME@ v@CPACK_PACKAGE_VERSION@ @CPACK_AUDACITY_ARCH_LABEL@"
 

@@ -16,9 +16,9 @@ if( GETTEXT_FOUND )
    mark_as_advanced( FORCE GETTEXT_MSGMERGE_EXECUTABLE )
    set( msgfmt "${GETTEXT_MSGFMT_EXECUTABLE}" )
 elseif( PYTHON )
-   set( msgfmt "${PYTHON}" "${TARGET_ROOT}/msgfmt.py" )
+   set( msgfmt "${PYTHON}" "${TARGET_ROOT}/scripts/msgfmt.py" )
 elseif( CMAKE_SYSTEM_NAME MATCHES "Windows" )
-   nuget_package( pkgdir "Gettext.Tools" "0.20.1.1" )
+   nuget_package( pkgdir "Gettext.Tools" "0.21.0.1" )
    file( TO_NATIVE_PATH "${pkgdir}/tools/bin/msgfmt.exe" msgfmt )
 endif()
 
@@ -80,9 +80,8 @@ endforeach()
 add_custom_target( "${TARGET}" ALL DEPENDS ${OUTPUTS} SOURCES "${SOURCES}" )
 
 if( NOT CMAKE_SYSTEM_NAME MATCHES "Darwin" )
-   if( NOT WIN32)
-      install( DIRECTORY ${locale}/
-               TYPE LOCALE )
+   if( NOT WIN32 )
+      install( DIRECTORY ${locale} TYPE LOCALE )
    endif()
 endif()
 

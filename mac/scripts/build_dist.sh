@@ -1,19 +1,19 @@
-#!/bin/bash
+#!/bin/sh
 
 
 # Function to retrieve a value from a plist
-function plist
+plist()
 {
    /usr/libexec/PlistBuddy -c "Print ${2}" "${1}"
 }
 
-function realpath
+realpath()
 {
    python -c "import os; import sys; print(os.path.realpath(sys.argv[1]))" "${1}"
 }
 
 # Function to notarize a file (APP or DMG)
-function notarize
+notarize()
 {
    # Bail if not signing
    if [ -z "${SIGNING}" ]
@@ -80,7 +80,7 @@ function notarize
    rm "${OUTPUT}"
 }
 
-if [ -z "${SRCROOT}" -o -z "${DSTROOT}" ]
+if [ -z "${SRCROOT}" ] || [ -z "${DSTROOT}" ]
 then
    if [ "${#}" -ne 2 ]
    then
@@ -129,8 +129,9 @@ IDENT=$(plist "${DSTROOT}/Tenacity.app/Contents/Info.plist" "CFBundleIdentifier"
 SIGNING=
 if [ -r ~/.tenacity_signing ]
 then
-   source ~/.tenacity_signing
-   if [ -n "${CODESIGN_APP_IDENTITY}" -a -n "${NOTARIZE_USERNAME}" -a -n "${NOTARIZE_PASSWORD}" ]
+   . ~/.tenacity_signing
+   if [ -n "${CODESIGN_APP_IDENTITY}" ] && [ -n "${NOTARIZE_USERNAME}" ] &&
+	  [ -n "${NOTARIZE_PASSWORD}" ]
    then
       SIGNING="y"
    fi
@@ -144,7 +145,7 @@ cd "${DSTROOT}/.."
 
 # Make sure we have consistent ownership and permissions
 chmod -RH 755 "${DSTROOT}"
-chown -RH $(id -u):$(id -g) "${DSTROOT}"
+chown -RH "$(id -u):$(id -g)" "${DSTROOT}"
 
 # Preclean
 rm -rf "$DMG" "$DMG.dmg" TMP.dmg
